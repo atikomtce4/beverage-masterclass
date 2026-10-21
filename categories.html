@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore by category - Beverage Masterclass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mobile-style.css">
+</head>
+<body>
+
+  <header class="mobile-header">
+    <button class="back-btn" onclick="window.history.back()">←</button>
+    <h1 class="logo">Explore by category</h1>
+    <div style="width: 40px;"></div> <!-- Spacer -->
+  </header>
+
+  <main class="mobile-content">
+    <nav class="category-list">
+      <a href="#" class="category-item" onclick="showCategory('thai-herbs')">
+        <span>Thai herbs</span>
+        <span class="arrow">›</span>
+      </a>
+      <a href="#" class="category-item" onclick="showCategory('tea-hot')">
+        <span>Tea & Hot Drinks</span>
+        <span class="arrow">›</span>
+      </a>
+      <a href="#" class="category-item" onclick="showCategory('milk-cereals')">
+        <span>Milk & Cereals</span>
+        <span class="arrow">›</span>
+      </a>
+      <a href="#" class="category-item" onclick="showCategory('fermented')">
+        <span>Fermented beverages</span>
+        <span class="arrow">›</span>
+      </a>
+    </nav>
+  </main>
+
+  <script src="js/mobile-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Beverage Masterclass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mobile-style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="mobile-header">
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <h1 class="logo">Beverage Masterclass</h1>
+    <button class="search-icon" onclick="showSearch()">🔍</button>
+  </header>
+
+  <!-- Side Menu (Overlay) -->
+  <div class="side-menu" id="sideMenu">
+    <div class="menu-header">
+      <h2>เมนู</h2>
+      <button class="close-menu" onclick="toggleMenu()"></button>
+    </div>
+    <nav class="menu-nav">
+      <a href="index.html" class="menu-item active"> หน้าแรก</a>
+      <a href="#" class="menu-item" onclick="navigateTo('categories')">📂 หมวดหมู่</a>
+      <a href="#" class="menu-item" onclick="navigateTo('products')"> สินค้า & อุปกรณ์</a>
+      <a href="#" class="menu-item" onclick="navigateTo('news')">📰 ข่าวสาร</a>
+      <a href="#" class="menu-item" onclick="navigateTo('about')">ℹ️ เกี่ยวกับเรา</a>
+      <a href="https://atikomtce4.github.io/bevarageSystem/" class="menu-item">🔧 Beverage System</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-header">
+      <button onclick="hideSearch()">✕</button>
+      <input type="text" placeholder="What are you looking for?" class="search-input">
+      <button class="search-btn">🔍</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="mobile-content">
+    
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-icon">🟢</span>
+          <div>
+            <div class="stat-number">4</div>
+            <div class="stat-label">Beverage Recipes</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🟡</span>
+          <div>
+            <div class="stat-number">10</div>
+            <div class="stat-label">Rating & Reviews</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Images -->
+    <section class="featured-images">
+      <div class="image-grid">
+        <img src="https://via.placeholder.com/150x150/4CAF50/FFFFFF?text=Herbs" alt="Herbs">
+        <img src="https://via.placeholder.com/150x150/2196F3/FFFFFF?text=Tea" alt="Tea">
+        <img src="https://via.placeholder.com/150x150/FF9800/FFFFFF?text=Machine" alt="Machine">
+      </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="content-section">
+      <h2 class="section-title">HERBAL RECIPES</h2>
+      <div class="recipe-card" onclick="navigateTo('recipe-detail')">
+        <h3 class="recipe-title">Roselle Juice</h3>
+        <p class="recipe-desc">These easy recipes juice with easy drink it very fresh and healthy</p>
+      </div>
+    </section>
+
+    <!-- The Latest Section -->
+    <section class="content-section">
+      <h2 class="section-title with-border">The Latest</h2>
+      
+      <!-- News Item 1 -->
+      <article class="news-item">
+        <img src="https://via.placeholder.com/100x100/FFC107/FFFFFF?text=Juice" alt="News" class="news-thumb">
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-category">JUICE</span>
+            <span class="news-time">29 MINUTES AGO</span>
+          </div>
+          <h3 class="news-title">Mango Juice from Thailand New Taste</h3>
+        </div>
+      </article>
+
+      <!-- News Item 2 -->
+      <article class="news-item">
+        <img src="https://via.placeholder.com/100x100/9C27B0/FFFFFF?text=News" alt="News" class="news-thumb">
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-category">Business & Marketing News</span>
+            <span class="news-time">2 HOURS AGO</span>
+          </div>
+          <h3 class="news-title">Top 10 Best-Selling Herbal Drinks in 2026</h3>
+          <p class="news-excerpt">Do you know which herbal drinks are dominating the market this year?</p>
+        </div>
+      </article>
+
+      <!-- News Item 3 -->
+      <article class="news-item">
+        <img src="https://via.placeholder.com/100x100/607D8B/FFFFFF?text=STC" alt="News" class="news-thumb">
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-category">Product Overview</span>
+            <span class="news-time">4 HOURS AGO</span>
+          </div>
+          <h3 class="news-title">The STC-1000 comes pre-assembled in an enclosure</h3>
+          <p class="news-excerpt">Complete with an AC power cord,</p>
+        </div>
+      </article>
+
+      <button class="see-more-btn">See More</button>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mobile-footer">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Beverage Masterclass</p>
+  </footer>
+
+  <script src="js/mobile-app.js"></script>
+</body>
+</html>
