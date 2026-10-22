@@ -300,7 +300,7 @@
   <!-- Header -->
   <header class="mobile-header">
     <button class="back-btn" onclick="window.history.back()">←</button>
-    <h1 class="logo">สูตรเครื่องดื่ม</h1>
+    <h1 class="logo" id="headerTitle">สูตรเครื่องดื่ม</h1>
     <div style="width: 40px;"></div>
   </header>
 
@@ -327,10 +327,11 @@
       <!-- Mode Toggle -->
       <div class="mode-toggle-container">
         <div class="mode-toggle">
-          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')">
+           <!-- เพิ่ม id="btnModeManual" และ id="btnModeMachine" -->
+          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')" id="btnModeManual">
             🖐️ <span class="mode-text">ทำเอง</span>
           </button>
-          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')">
+          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')" id="btnModeMachine">
             🤖 <span class="mode-text">ใช้เครื่อง</span>
           </button>
         </div>
@@ -339,8 +340,9 @@
       <!-- Media Container (Gallery + Video) -->
       <div class="media-container">
         <div class="media-tabs">
-          <button class="tab-btn active" onclick="switchMediaTab('gallery')">📷 รูปภาพ</button>
-          <button class="tab-btn" onclick="switchMediaTab('video')">🎬 วิดีโอ</button>
+           <!-- เพิ่ม id="tabGallery" และ id="tabVideo" -->
+          <button class="tab-btn active" onclick="switchMediaTab('gallery')" id="tabGallery">📷 รูปภาพ</button>
+          <button class="tab-btn" onclick="switchMediaTab('video')" id="tabVideo">🎬 วิดีโอ</button>
         </div>
 
         <!-- Gallery View -->
