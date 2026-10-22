@@ -1,33 +1,26 @@
 /* ==========================================================
-   🧠 BEVERAGE MASTERCLASS - APP LOGIC (File-based Version)
+   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Bilingual Version)
    ========================================================== */
 
-// แปลงรหัสหมวดหมู่เป็นชื่อโฟลเดอร์
-const CATEGORY_MAP = {
-  'herbal': 'herbal',
-  'tea': 'tea',
-  'milk': 'milk',
-  'ferment': 'ferment'
-};
+// ตัวแปรเก็บภาษาปัจจุบัน (ค่าเริ่มต้น: ไทย)
+let currentLang = localStorage.getItem('preferredLang') || 'th';
 
+// แปลงรหัสหมวดหมู่เป็นชื่อ (2 ภาษา)
 const CATEGORY_NAMES = {
-  'herbal': 'สมุนไพรไทย',
-  'tea': 'ชา & เครื่องดื่มร้อน',
-  'milk': 'นม & ธัญพืช',
-  'ferment': 'เครื่องดื่มหมัก'
+  'herbal': { 'th': 'สมุนไพรไทย', 'en': 'Thai Herbs' },
+  'tea': { 'th': 'ชา & เครื่องดื่มร้อน', 'en': 'Tea & Hot Drinks' },
+  'milk': { 'th': 'นม & ธัญพืช', 'en': 'Milk & Cereals' },
+  'ferment': { 'th': 'เครื่องดื่มหมัก', 'en': 'Fermented Beverages' }
 };
 
 // ฟังก์ชันหลัก: โหลดสูตรจากไฟล์ JSON
 async function loadRecipe(recipeId) {
-  // ต้องมีรูปแบบ: "herbal/roselle_10L" หรือแค่ "roselle_10L" (จะเดาหมวดจากข้อมูล)
   let filePath;
   
   if (recipeId.includes('/')) {
-    // กรณีมี slash มาแล้ว เช่น "herbal/roselle_10L"
     filePath = `recipes/${recipeId}.json`;
   } else {
-    // กรณีมีแค่ ID ต้องค้นหาจากทุกหมวด (ช้ากว่านิดหน่อย)
-    const categories = Object.keys(CATEGORY_MAP);
+    const categories = Object.keys(CATEGORY_NAMES);
     for (const cat of categories) {
       try {
         const response = await fetch(`recipes/${cat}/${recipeId}.json`);
@@ -49,18 +42,42 @@ async function loadRecipe(recipeId) {
   return await response.json();
 }
 
-// ฟังก์ชันโหลดรายการสูตรจากหมวดหมู่ (ใช้ index.json)
+// ฟังก์ชันโหลดรายการสูตรจากหมวดหมู่
 async function loadCategoryIndex(category) {
   const response = await fetch(`recipes/${category}/index.json`);
   if (!response.ok) throw new Error('Failed to load category');
   return await response.json();
 }
 
+// ฟังก์ชันสลับภาษา
+function switchLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('preferredLang', lang); // จำภาษาที่ผู้ใช้เลือก
+  
+  // อัปเดตปุ่ม
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Render หน้าใหม่
+  renderRecipePage();
+}
+
+// ฟังก์ชันดึงข้อความตามภาษา
+function getText(obj, lang = currentLang) {
+  if (typeof obj === 'string') return obj; // กรณีเป็น string ธรรมดา
+  if (typeof obj === 'object' && obj !== null) {
+    return obj[lang] || obj['th'] || Object.values(obj)[0]; // ลองดึงตามภาษา, ถ้าไม่มีให้ใช้ th, ถ้าไม่มีอีกให้ใช้ค่าแรก
+  }
+  return '';
+}
+
 // ฟังก์ชันดาวน์โหลด JSON สำหรับเครื่อง
 function downloadRecipeJSON(recipe) {
   const machineData = {
     recipe_id: recipe.id,
-    recipe_name: recipe.name,
+    recipe_name: getText(recipe.name),
     total_volume: recipe.machineSteps.find(s => s.function === "Fill Water")?.target_value || 0,
     total_time: recipe.machineSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
     target_temp: recipe.machineSteps.find(s => s.function.includes("Heat") || s.function.includes("Hold"))?.target_value || 0,
@@ -79,10 +96,13 @@ function downloadRecipeJSON(recipe) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
   
-  alert(`ดาวน์โหลดสูตร "${recipe.name}" สำเร็จ!`);
+  const msg = currentLang === 'th' 
+    ? `ดาวน์โหลดสูตร "${getText(recipe.name)}" สำเร็จ!` 
+    : `Recipe "${getText(recipe.name)}" downloaded successfully!`;
+  alert(msg);
 }
 
-// ฟังก์ชันสลับแท็บหลัก (รูปภาพ vs วิดีโอ)
+// ฟังก์ชันสลับแท็บสื่อ (รูปภาพ/วิดีโอ)
 function switchMediaTab(tabName) {
   const tabs = document.querySelectorAll('.tab-btn');
   const views = document.querySelectorAll('.media-view');
@@ -99,18 +119,17 @@ function switchMediaTab(tabName) {
   }
 }
 
-// ฟังก์ชันเปลี่ยนรูปภาพหลักเมื่อกดที่รูปย่อ
+// ฟังก์ชันเปลี่ยนรูปภาพหลัก
 function changeMainImage(imageUrl, thumbnailElement) {
   document.getElementById('mainRecipeImage').src = imageUrl;
   
-  // จัดการ class active ของรูปย่อ
   document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
   if (thumbnailElement) {
     thumbnailElement.classList.add('active');
   }
 }
 
-// ฟังก์ชันแสดงสูตรบนหน้า recipe.html (ปรับปรุงใหม่)
+// ฟังก์ชันแสดงสูตรบนหน้า recipe.html
 async function renderRecipePage() {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('id');
@@ -125,31 +144,61 @@ async function renderRecipePage() {
     const recipe = await loadRecipe(recipeId);
     
     document.getElementById('recipeContainer').style.display = 'block';
-    document.title = `${recipe.name} | Beverage Masterclass`;
+    document.title = `${getText(recipe.name)} | Beverage Masterclass`;
     
-    document.getElementById('recipeCategory').textContent = CATEGORY_NAMES[recipe.category] || 'สูตรทั่วไป';
-    document.getElementById('recipeTitle').textContent = recipe.name;
-    document.getElementById('recipeIntro').textContent = recipe.intro;
-    document.getElementById('prepTime').textContent = recipe.prepTime;
-    document.getElementById('cookTime').textContent = recipe.cookTime;
-    document.getElementById('servings').textContent = recipe.servings;
+    // ข้อมูลพื้นฐาน
+    document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[recipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
+    document.getElementById('recipeTitle').textContent = getText(recipe.name);
+    document.getElementById('recipeIntro').textContent = getText(recipe.intro);
+    document.getElementById('prepTime').textContent = getText(recipe.prepTime);
+    document.getElementById('cookTime').textContent = getText(recipe.cookTime);
+    document.getElementById('servings').textContent = getText(recipe.servings);
     document.getElementById('rating').textContent = `${recipe.rating} / 5`;
     
-    document.getElementById('benefitBox').innerHTML = `<strong>🌿 สรรพคุณ:</strong> ${recipe.benefits}`;
-    document.getElementById('warningBox').innerHTML = recipe.warnings;
+    // รูปภาพและวิดีโอ
+    const images = recipe.images || [];
+    const mainImg = document.getElementById('mainRecipeImage');
+    const thumbStrip = document.getElementById('thumbnailStrip');
     
-    document.getElementById('ingredientsList').innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
+    if (images.length > 0) {
+      mainImg.src = images[0];
+      
+      if (images.length > 1) {
+        thumbStrip.innerHTML = images.map((imgUrl, index) => `
+          <div class="thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage('${imgUrl}', this)">
+            <img src="${imgUrl}" alt="Thumbnail ${index + 1}">
+          </div>
+        `).join('');
+      } else {
+        thumbStrip.innerHTML = '';
+      }
+    } else {
+      mainImg.src = 'https://via.placeholder.com/800x450/4CAF50/FFFFFF?text=No+Image';
+      thumbStrip.innerHTML = '';
+    }
+
+    document.getElementById('recipeVideo').src = recipe.videoUrl || '';
     
+    // ข้อมูลสุขภาพ
+    document.getElementById('benefitBox').innerHTML = `<strong> ${currentLang === 'th' ? 'สรรพคุณ' : 'Benefits'}:</strong> ${getText(recipe.benefits)}`;
+    document.getElementById('warningBox').innerHTML = getText(recipe.warnings);
+    
+    // วัตถุดิบ
+    const ingredients = recipe.ingredients;
+    const ingredientsList = Array.isArray(ingredients) ? ingredients : getText(ingredients);
+    document.getElementById('ingredientsList').innerHTML = ingredientsList.map(ing => `<li>${ing}</li>`).join('');
+    
+    // ขั้นตอนการทำ
     document.getElementById('stepsList').innerHTML = recipe.steps.map(step => `
       <div class="step-item">
         <div class="step-num">${step.step}</div>
         <div class="step-content">
-          <h4>${step.title}</h4>
-          <p>${step.desc}</p>
+          <h4>${getText(step.title)}</h4>
+          <p>${getText(step.desc)}</p>
           
           ${step.image ? `
             <img src="${step.image}" 
-                 alt="ขั้นตอนที่ ${step.step}: ${step.title}" 
+                 alt="${currentLang === 'th' ? 'ขั้นตอนที่' : 'Step'} ${step.step}: ${getText(step.title)}" 
                  class="step-image" 
                  loading="lazy">
           ` : ''}
@@ -158,44 +207,38 @@ async function renderRecipePage() {
       </div>
     `).join('');
     
-    const nutritionLabels = { calories: 'พลังงาน', carbs: 'คาร์โบไฮเดรต', sugar: 'น้ำตาล', protein: 'โปรตีน' };
+    // โภชนาการ
+    const nutritionLabels = {
+      calories: { th: 'พลังงาน', en: 'Calories' },
+      carbs: { th: 'คาร์โบไฮเดรต', en: 'Carbs' },
+      sugar: { th: 'น้ำตาล', en: 'Sugar' },
+      protein: { th: 'โปรตีน', en: 'Protein' }
+    };
+    
     document.getElementById('nutritionList').innerHTML = Object.entries(recipe.nutrition).map(([key, value]) => `
       <div class="nutrition-row">
-        <span>${nutritionLabels[key] || key}</span>
+        <span>${getText(nutritionLabels[key] || { th: key, en: key })}</span>
         <span>${value}</span>
       </div>
     `).join('');
 
-    // --- จัดการส่วนรูปภาพ (Gallery) ---
-    const images = recipe.images || []; // ป้องกันกรณีไม่มีข้อมูล images
-    const mainImg = document.getElementById('mainRecipeImage');
-    const thumbStrip = document.getElementById('thumbnailStrip');
-    
-    if (images.length > 0) {
-      mainImg.src = images[0]; // ตั้งรูปแรกเป็นรูปหลัก
-      
-      // ถ้ามีมากกว่า 1 รูป ให้สร้างแถบรูปย่อ
-      if (images.length > 1) {
-        thumbStrip.innerHTML = images.map((imgUrl, index) => `
-          <div class="thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage('${imgUrl}', this)">
-            <img src="${imgUrl}" alt="Thumbnail ${index + 1}">
-          </div>
-        `).join('');
-      } else {
-        thumbStrip.innerHTML = ''; // ซ่อนแถบถ้ามีรูปเดียว
-      }
-    } else {
-      mainImg.src = 'https://via.placeholder.com/800x450/4CAF50/FFFFFF?text=No+Image';
-      thumbStrip.innerHTML = '';
-    }
-
-    // --- จัดการส่วนวิดีโอ ---
-    document.getElementById('recipeVideo').src = recipe.videoUrl || '';
-
+    // ปุ่มดาวน์โหลด
+    const downloadText = currentLang === 'th' 
+      ? '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)' 
+      : '⬇ Download Recipe for Machine (.json)';
+    document.getElementById('downloadBtn').textContent = downloadText;
     document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe);
     
-    // ตั้งค่าเริ่มต้นให้แสดงแกลเลอรี
+    // ตั้งค่าเริ่มต้น
     switchMediaTab('gallery');
+    
+    // อัปเดตปุ่มภาษา
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.textContent.toLowerCase() === currentLang) {
+        btn.classList.add('active');
+      }
+    });
     
   } catch (error) {
     console.error('Error loading recipe:', error);
@@ -204,8 +247,7 @@ async function renderRecipePage() {
   }
 }
 
-
-// ฟังก์ชันแสดงรายการสูตรในหมวดหมู่ (ใช้กับหน้า category.html)
+// ฟังก์ชันแสดงรายการสูตรในหมวดหมู่
 async function renderCategoryPage(category) {
   try {
     const recipes = await loadCategoryIndex(category);
@@ -213,11 +255,11 @@ async function renderCategoryPage(category) {
     
     container.innerHTML = recipes.map(r => `
       <a href="recipe.html?id=${category}/${r.id}" class="recipe-card-item">
-        <img src="${r.image}" alt="${r.name}" class="recipe-card-img">
+        <img src="${r.image}" alt="${getText(r.name)}" class="recipe-card-img">
         <div class="recipe-card-body">
-          <div class="recipe-card-title">${r.name}</div>
+          <div class="recipe-card-title">${getText(r.name)}</div>
           <div class="recipe-card-meta">
-            <span>️ ${r.prepTime}</span>
+            <span>⏱️ ${getText(r.prepTime)}</span>
             <span>⭐ ${r.rating}</span>
           </div>
         </div>
@@ -236,28 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
     renderRecipePage();
   }
   
-  // ถ้าเป็นหน้าหมวดหมู่ (ต้องมี data-category ใน HTML)
+  // ถ้าเป็นหน้าหมวดหมู่
   const categoryContainer = document.getElementById('recipeList');
   if (categoryContainer) {
     const category = categoryContainer.dataset.category;
     if (category) renderCategoryPage(category);
   }
 });
-// เพิ่มฟังก์ชันนี้ต่อท้ายไฟล์ app.js
-function switchMedia(type) {
-  const img = document.getElementById('recipeImage');
-  const vid = document.getElementById('recipeVideoWrapper');
-  const btns = document.querySelectorAll('.tab-btn');
-
-  if (type === 'image') {
-    img.classList.add('active');
-    vid.classList.remove('active');
-    btns[0].classList.add('active');
-    btns[1].classList.remove('active');
-  } else {
-    img.classList.remove('active');
-    vid.classList.add('active');
-    btns[0].classList.remove('active');
-    btns[1].classList.add('active');
-  }
-}
