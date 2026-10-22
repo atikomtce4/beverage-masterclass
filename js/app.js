@@ -1,5 +1,5 @@
 /* ==========================================================
-   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Complete Version)
+   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Fixed & Optimized)
    ========================================================== */
 
 // Global Variables
@@ -22,11 +22,11 @@ const UI_LABELS = {
   servings: { 'th': 'ปริมาณ', 'en': 'Servings' },
   rating: { 'th': 'คะแนน', 'en': 'Rating' },
   ingredients: { 'th': '📝 วัตถุดิบ', 'en': '📝 Ingredients' },
-  steps: { 'th': '‍🍳 ขั้นตอนการทำ', 'en': '👩‍🍳 Instructions' },
-  nutrition: { 'th': ' ข้อมูลโภชนาการ (ต่อ 100 มล.)', 'en': ' Nutrition Facts (per 100ml)' },
+  steps: { 'th': '👩‍🍳 ขั้นตอนการทำ', 'en': '👩‍🍳 Instructions' },
+  nutrition: { 'th': '📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)', 'en': '📊 Nutrition Facts (per 100ml)' },
   backToHome: { 'th': 'ดูสูตรอื่นๆ', 'en': 'Browse More Recipes' },
-  copyLink: { 'th': '📋 คัดลอกลิงก์สูตรสำหรับเครื่อง', 'en': ' Copy Machine Recipe Link' },
-  downloadBtn: { 'th': '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)', 'en': ' Download Recipe for Machine (.json)' },
+  copyLink: { 'th': '📋 คัดลอกลิงก์สูตรสำหรับเครื่อง', 'en': '📋 Copy Machine Recipe Link' },
+  downloadBtn: { 'th': '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)', 'en': '⬇ Download Recipe for Machine (.json)' },
   benefits: { 'th': 'สรรพคุณ', 'en': 'Benefits' },
   calories: { 'th': 'พลังงาน', 'en': 'Calories' },
   carbs: { 'th': 'คาร์โบไฮเดรต', 'en': 'Carbs' },
@@ -34,23 +34,7 @@ const UI_LABELS = {
   protein: { 'th': 'โปรตีน', 'en': 'Protein' }
 };
 
-// ===== Language Functions =====
-
-function switchLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('preferredLang', lang);
-  
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.remove('active');
-    if (btn.textContent.toLowerCase() === lang) {
-      btn.classList.add('active');
-    }
-  });
-  
-  if (currentRecipe) {
-    renderRecipePage();
-  }
-}
+// ===== Helper Functions =====
 
 function getText(obj) {
   if (typeof obj === 'string') return obj;
@@ -69,7 +53,33 @@ function showToast(message) {
   }, 3000);
 }
 
-// ===== Mode Functions =====
+function showError() {
+  document.getElementById('errorContainer').style.display = 'block';
+  document.getElementById('recipeContainer').style.display = 'none';
+  document.getElementById('errorTitle').textContent = currentLang === 'th' ? 'ไม่พบสูตรนี้' : 'Recipe Not Found';
+  document.getElementById('errorMsg').textContent = currentLang === 'th' 
+    ? 'อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว' 
+    : 'The recipe may have been moved or deleted';
+}
+
+// ===== Language & Mode Functions =====
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('preferredLang', lang);
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.textContent.toLowerCase() === lang) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // ✅ แก้ไขจุดสำคัญ: ไม่ต้อง fetch ใหม่ แค่วาด UI ใหม่จากข้อมูลที่โหลดไว้แล้ว
+  if (currentRecipe) {
+    updateLanguageUI();
+  }
+}
 
 function switchMode(mode) {
   currentMode = mode;
@@ -114,7 +124,7 @@ function changeMainImage(imageUrl, thumbnailElement) {
   }
 }
 
-// ===== Data Loading Functions =====
+// ===== Data Loading =====
 
 async function loadRecipe(recipeId) {
   let filePath;
@@ -144,7 +154,7 @@ async function loadRecipe(recipeId) {
   return await response.json();
 }
 
-// ===== Render Functions =====
+// ===== Rendering Functions =====
 
 function renderSteps(recipe) {
   const stepsContainer = document.getElementById('stepsList');
@@ -157,21 +167,11 @@ function renderSteps(recipe) {
         <div class="step-content">
           <h4>${getText(step.title)}</h4>
           <p>${getText(step.desc)}</p>
-          
-          ${step.image ? `
-            <img src="${step.image}" 
-                 alt="${getText(step.title)}" 
-                 class="step-image" 
-                 loading="lazy">
-          ` : ''}
-          
-          ${step.tips ? `
-            <div class="tips-box">${getText(step.tips)}</div>
-          ` : ''}
+          ${step.image ? `<img src="${step.image}" alt="${getText(step.title)}" class="step-image" loading="lazy">` : ''}
+          ${step.tips ? `<div class="tips-box">${getText(step.tips)}</div>` : ''}
         </div>
       </div>
     `).join('');
-    
   } else {
     const machineSteps = recipe.machineSteps || [];
     stepsContainer.innerHTML = machineSteps.map((step) => `
@@ -181,9 +181,9 @@ function renderSteps(recipe) {
           <h4>${getText(step.title)}</h4>
           <p>${getText(step.desc)}</p>
           <div class="machine-info-box">
-            <strong>️ ${step.function}</strong>
-            ${step.target_value > 0 ? `| Target: ${step.target_value} ${step.unit}` : ''}
-            ${step.duration > 0 ? `| Duration: ${step.duration} min` : ''}
+            <strong>⚙️ ${step.function}</strong>
+            ${step.target_value > 0 ? ` | Target: ${step.target_value} ${step.unit}` : ''}
+            ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
           </div>
         </div>
       </div>
@@ -196,24 +196,57 @@ function updateActionButtons() {
   
   if (currentMode === 'manual') {
     container.innerHTML = `
-      <button id="copyLinkBtn" class="btn-copy-link">
-        📋 ${getText(UI_LABELS.copyLink)}
-      </button>
+      <button id="copyLinkBtn" class="btn-copy-link">📋 ${getText(UI_LABELS.copyLink)}</button>
       <a href="index.html" class="btn-back">${getText(UI_LABELS.backToHome)}</a>
     `;
-    
     document.getElementById('copyLinkBtn').onclick = () => copyMachineLink();
-    
   } else {
     container.innerHTML = `
-      <button id="downloadBtn" class="btn-download">
-        ${getText(UI_LABELS.downloadBtn)}
-      </button>
+      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
       <a href="index.html" class="btn-back">${getText(UI_LABELS.backToHome)}</a>
     `;
-    
     document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(currentRecipe);
   }
+}
+
+// ✅ ฟังก์ชันใหม่: อัปเดตเฉพาะข้อความบนหน้าจอโดยไม่ต้องโหลดข้อมูลใหม่
+function updateLanguageUI() {
+  if (!currentRecipe) return;
+
+  document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[currentRecipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
+  document.getElementById('recipeTitle').textContent = getText(currentRecipe.name);
+  document.getElementById('recipeIntro').textContent = getText(currentRecipe.intro);
+  document.getElementById('prepTime').textContent = getText(currentRecipe.prepTime);
+  document.getElementById('cookTime').textContent = getText(currentRecipe.cookTime);
+  document.getElementById('servings').textContent = getText(currentRecipe.servings);
+  document.getElementById('rating').textContent = `${currentRecipe.rating} / 5`;
+  
+  document.getElementById('labelPrepTime').textContent = getText(UI_LABELS.prepTime);
+  document.getElementById('labelCookTime').textContent = getText(UI_LABELS.cookTime);
+  document.getElementById('labelServings').textContent = getText(UI_LABELS.servings);
+  document.getElementById('labelRating').textContent = getText(UI_LABELS.rating);
+  document.getElementById('titleIngredients').textContent = getText(UI_LABELS.ingredients);
+  document.getElementById('titleSteps').textContent = getText(UI_LABELS.steps);
+  document.getElementById('titleNutrition').textContent = getText(UI_LABELS.nutrition);
+  document.getElementById('btnBackToHome').textContent = getText(UI_LABELS.backToHome);
+  
+  document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(currentRecipe.benefits)}`;
+  document.getElementById('warningBox').innerHTML = getText(currentRecipe.warnings);
+  
+  const ingredients = Array.isArray(currentRecipe.ingredients) ? currentRecipe.ingredients : getText(currentRecipe.ingredients);
+  document.getElementById('ingredientsList').innerHTML = ingredients.map(ing => `<li>${ing}</li>`).join('');
+  
+  renderSteps(currentRecipe);
+  
+  const nutritionLabels = { calories: UI_LABELS.calories, carbs: UI_LABELS.carbs, sugar: UI_LABELS.sugar, protein: UI_LABELS.protein };
+  document.getElementById('nutritionList').innerHTML = Object.entries(currentRecipe.nutrition).map(([key, value]) => `
+    <div class="nutrition-row">
+      <span>${getText(nutritionLabels[key] || { th: key, en: key })}</span>
+      <span>${value}</span>
+    </div>
+  `).join('');
+
+  updateActionButtons();
 }
 
 function copyMachineLink() {
@@ -222,29 +255,19 @@ function copyMachineLink() {
     return;
   }
   
-  // Construct the full URL
   const baseUrl = window.location.origin + window.location.pathname.replace(/recipe\.html.*/, '');
   const machineUrl = `${baseUrl}recipes/${currentRecipe.category}/${currentRecipe.machineFile}`;
   
-  // Copy to clipboard
   navigator.clipboard.writeText(machineUrl).then(() => {
-    const msg = currentLang === 'th' 
-      ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' 
-      : '✅ Link copied! Paste it in the machine control page';
-    showToast(msg);
-  }).catch(err => {
-    // Fallback for older browsers
+    showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' : '✅ Link copied! Paste it in the machine control page');
+  }).catch(() => {
     const textArea = document.createElement('textarea');
     textArea.value = machineUrl;
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
-    
-    const msg = currentLang === 'th' 
-      ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' 
-      : '✅ Link copied! Paste it in the machine control page';
-    showToast(msg);
+    showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' : '✅ Link copied! Paste it in the machine control page');
   });
 }
 
@@ -275,57 +298,37 @@ function downloadRecipeJSON(recipe) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
   
-  const msg = currentLang === 'th' 
-    ? `✅ ดาวน์โหลด "${getText(recipe.name)}" สำเร็จ!` 
-    : `✅ Recipe "${getText(recipe.name)}" downloaded successfully!`;
-  showToast(msg);
+  showToast(currentLang === 'th' ? `✅ ดาวน์โหลด "${getText(recipe.name)}" สำเร็จ!` : `✅ Recipe "${getText(recipe.name)}" downloaded!`);
 }
+
+// ===== Main Initialization =====
 
 async function renderRecipePage() {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('id');
 
   if (!recipeId) {
-    document.getElementById('errorContainer').style.display = 'block';
-    document.getElementById('recipeContainer').style.display = 'none';
+    showError();
     return;
   }
 
   try {
+    // 1. โหลดข้อมูลจากเครือข่าย (ทำแค่ครั้งเดียวตอนเปิดหน้า)
     const recipe = await loadRecipe(recipeId);
     currentRecipe = recipe;
     
+    // 2. แสดงคอนเทนเนอร์หลัก
     document.getElementById('recipeContainer').style.display = 'block';
     document.getElementById('errorContainer').style.display = 'none';
     document.title = `${getText(recipe.name)} | Beverage Masterclass`;
     
-    // Basic Info
-    document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[recipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
-    document.getElementById('recipeTitle').textContent = getText(recipe.name);
-    document.getElementById('recipeIntro').textContent = getText(recipe.intro);
-    document.getElementById('prepTime').textContent = getText(recipe.prepTime);
-    document.getElementById('cookTime').textContent = getText(recipe.cookTime);
-    document.getElementById('servings').textContent = getText(recipe.servings);
-    document.getElementById('rating').textContent = `${recipe.rating} / 5`;
-    
-    // Update Labels
-    document.getElementById('labelPrepTime').textContent = getText(UI_LABELS.prepTime);
-    document.getElementById('labelCookTime').textContent = getText(UI_LABELS.cookTime);
-    document.getElementById('labelServings').textContent = getText(UI_LABELS.servings);
-    document.getElementById('labelRating').textContent = getText(UI_LABELS.rating);
-    document.getElementById('titleIngredients').textContent = getText(UI_LABELS.ingredients);
-    document.getElementById('titleSteps').textContent = getText(UI_LABELS.steps);
-    document.getElementById('titleNutrition').textContent = getText(UI_LABELS.nutrition);
-    document.getElementById('btnBackToHome').textContent = getText(UI_LABELS.backToHome);
-    
-    // Images & Video
+    // 3. Render ส่วนที่ไม่เปลี่ยนตามภาษา (รูปภาพ/วิดีโอ)
     const images = recipe.images || [];
     const mainImg = document.getElementById('mainRecipeImage');
     const thumbStrip = document.getElementById('thumbnailStrip');
     
     if (images.length > 0) {
       mainImg.src = images[0];
-      
       if (images.length > 1) {
         thumbStrip.innerHTML = images.map((imgUrl, index) => `
           <div class="thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage('${imgUrl}', this)">
@@ -339,61 +342,19 @@ async function renderRecipePage() {
       mainImg.src = 'https://via.placeholder.com/800x450/4CAF50/FFFFFF?text=No+Image';
       thumbStrip.innerHTML = '';
     }
-
     document.getElementById('recipeVideo').src = recipe.videoUrl || '';
     
-    // Health Info
-    document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(recipe.benefits)}`;
-    document.getElementById('warningBox').innerHTML = getText(recipe.warnings);
+    // 4. Render ข้อความตามภาษาปัจจุบัน
+    updateLanguageUI();
     
-    // Ingredients
-    const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : getText(recipe.ingredients);
-    document.getElementById('ingredientsList').innerHTML = ingredients.map(ing => `<li>${ing}</li>`).join('');
-    
-    // Steps
-    renderSteps(recipe);
-    
-    // Nutrition
-    const nutritionLabels = {
-      calories: UI_LABELS.calories,
-      carbs: UI_LABELS.carbs,
-      sugar: UI_LABELS.sugar,
-      protein: UI_LABELS.protein
-    };
-    
-    document.getElementById('nutritionList').innerHTML = Object.entries(recipe.nutrition).map(([key, value]) => `
-      <div class="nutrition-row">
-        <span>${getText(nutritionLabels[key] || { th: key, en: key })}</span>
-        <span>${value}</span>
-      </div>
-    `).join('');
-
-    // Action Buttons
-    updateActionButtons();
-    
-    // Initialize views
+    // 5. ตั้งค่าเริ่มต้น
     switchMediaTab('gallery');
-    
-    // Update language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.remove('active');
-      if (btn.textContent.toLowerCase() === currentLang) {
-        btn.classList.add('active');
-      }
-    });
     
   } catch (error) {
     console.error('Error loading recipe:', error);
-    document.getElementById('errorContainer').style.display = 'block';
-    document.getElementById('recipeContainer').style.display = 'none';
-    document.getElementById('errorTitle').textContent = currentLang === 'th' ? 'ไม่พบสูตรนี้' : 'Recipe Not Found';
-    document.getElementById('errorMsg').textContent = currentLang === 'th' 
-      ? 'อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว' 
-      : 'The recipe may have been moved or deleted';
+    showError();
   }
 }
-
-// ===== Initialization =====
 
 document.addEventListener('DOMContentLoaded', () => {
   renderRecipePage();
