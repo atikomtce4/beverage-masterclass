@@ -141,6 +141,24 @@
     .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
     .btn-download { background: #4CAF50; color: white; border: none; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .btn-back { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+    
+    /* เพิ่มโค้ดนี้ต่อท้ายส่วน <style> ใน recipe.html */
+    
+    .step-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column; /* จัดเรียงข้อความและรูปเป็นแนวตั้ง */
+    }
+    
+    .step-image {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* ล็อกสัดส่วนให้สวยงามเหมือนวิดีโอ */
+      object-fit: cover; /* ตัดส่วนเกินออก ป้องกันรูปยืด/เบี้ยว */
+      border-radius: 12px; /* มุมโค้งสวยงาม */
+      margin-top: 12px; /* เว้นระยะห่างจากข้อความด้านบน */
+      border: 1px solid #f0f0f0; /* เส้นขอบบางๆ ให้ดูมีมิติ */
+      background-color: #f9f9f9; /* สีพื้นหลังกรณีรูปโหลดช้า */
+    }
   </style>
 </head>
 <body>
