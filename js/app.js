@@ -146,6 +146,14 @@ async function renderRecipePage() {
         <div class="step-content">
           <h4>${step.title}</h4>
           <p>${step.desc}</p>
+          
+          ${step.image ? `
+            <img src="${step.image}" 
+                 alt="ขั้นตอนที่ ${step.step}: ${step.title}" 
+                 class="step-image" 
+                 loading="lazy">
+          ` : ''}
+          
         </div>
       </div>
     `).join('');
