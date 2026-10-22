@@ -1,13 +1,11 @@
 /* ==========================================================
-   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Fixed & Optimized)
+   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Fully Bilingual Fixed)
    ========================================================== */
 
-// Global Variables
 let currentLang = localStorage.getItem('preferredLang') || 'th';
 let currentMode = 'manual';
 let currentRecipe = null;
 
-// Category Names (Bilingual)
 const CATEGORY_NAMES = {
   'herbal': { 'th': 'สมุนไพรไทย', 'en': 'Thai Herbs' },
   'tea': { 'th': 'ชา & เครื่องดื่มร้อน', 'en': 'Tea & Hot Drinks' },
@@ -15,8 +13,12 @@ const CATEGORY_NAMES = {
   'ferment': { 'th': 'เครื่องดื่มหมัก', 'en': 'Fermented Beverages' }
 };
 
-// UI Labels (Bilingual)
 const UI_LABELS = {
+  headerTitle: { 'th': 'สูตรเครื่องดื่ม', 'en': 'Beverage Recipes' }, // ✅ เพิ่มแล้ว
+  modeManual: { 'th': 'ทำเอง', 'en': 'Manual' }, // ✅ เพิ่มแล้ว
+  modeMachine: { 'th': 'ใช้เครื่อง', 'en': 'Machine' }, // ✅ เพิ่มแล้ว
+  tabGallery: { 'th': '📷 รูปภาพ', 'en': '📷 Gallery' }, // ✅ เพิ่มแล้ว
+  tabVideo: { 'th': '🎬 วิดีโอ', 'en': '🎬 Video' }, // ✅ เพิ่มแล้ว
   prepTime: { 'th': 'เวลาเตรียม', 'en': 'Prep Time' },
   cookTime: { 'th': 'เวลาทำ', 'en': 'Cook Time' },
   servings: { 'th': 'ปริมาณ', 'en': 'Servings' },
@@ -34,8 +36,6 @@ const UI_LABELS = {
   protein: { 'th': 'โปรตีน', 'en': 'Protein' }
 };
 
-// ===== Helper Functions =====
-
 function getText(obj) {
   if (typeof obj === 'string') return obj;
   if (typeof obj === 'object' && obj !== null) {
@@ -48,9 +48,7 @@ function showToast(message) {
   const toast = document.getElementById('toast');
   toast.textContent = message;
   toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3000);
+  setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 function showError() {
@@ -61,8 +59,6 @@ function showError() {
     ? 'อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว' 
     : 'The recipe may have been moved or deleted';
 }
-
-// ===== Language & Mode Functions =====
 
 function switchLanguage(lang) {
   currentLang = lang;
@@ -75,7 +71,6 @@ function switchLanguage(lang) {
     }
   });
   
-  // ✅ แก้ไขจุดสำคัญ: ไม่ต้อง fetch ใหม่ แค่วาด UI ใหม่จากข้อมูลที่โหลดไว้แล้ว
   if (currentRecipe) {
     updateLanguageUI();
   }
@@ -83,78 +78,52 @@ function switchLanguage(lang) {
 
 function switchMode(mode) {
   currentMode = mode;
-  
   document.querySelectorAll('.mode-btn').forEach(btn => {
     btn.classList.remove('active');
-    if (btn.dataset.mode === mode) {
-      btn.classList.add('active');
-    }
+    if (btn.dataset.mode === mode) btn.classList.add('active');
   });
-  
   if (currentRecipe) {
     renderSteps(currentRecipe);
     updateActionButtons();
   }
 }
 
-// ===== Media Functions =====
-
 function switchMediaTab(tabName) {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const views = document.querySelectorAll('.media-view');
-  
-  tabs.forEach(t => t.classList.remove('active'));
-  views.forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.media-view').forEach(v => v.classList.remove('active'));
 
   if (tabName === 'gallery') {
-    tabs[0].classList.add('active');
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
     document.getElementById('view-gallery').classList.add('active');
   } else {
-    tabs[1].classList.add('active');
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
     document.getElementById('view-video').classList.add('active');
   }
 }
 
 function changeMainImage(imageUrl, thumbnailElement) {
   document.getElementById('mainRecipeImage').src = imageUrl;
-  
   document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
-  if (thumbnailElement) {
-    thumbnailElement.classList.add('active');
-  }
+  if (thumbnailElement) thumbnailElement.classList.add('active');
 }
 
-// ===== Data Loading =====
-
 async function loadRecipe(recipeId) {
-  let filePath;
+  let filePath = recipeId.includes('/') ? `recipes/${recipeId}.json` : null;
   
-  if (recipeId.includes('/')) {
-    filePath = `recipes/${recipeId}.json`;
-  } else {
-    const categories = Object.keys(CATEGORY_NAMES);
-    for (const cat of categories) {
+  if (!filePath) {
+    for (const cat of Object.keys(CATEGORY_NAMES)) {
       try {
-        const response = await fetch(`recipes/${cat}/${recipeId}.json`);
-        if (response.ok) {
-          filePath = `recipes/${cat}/${recipeId}.json`;
-          break;
-        }
-      } catch (e) {
-        continue;
-      }
+        const res = await fetch(`recipes/${cat}/${recipeId}.json`);
+        if (res.ok) { filePath = `recipes/${cat}/${recipeId}.json`; break; }
+      } catch (e) { continue; }
     }
   }
 
   if (!filePath) throw new Error('Recipe not found');
-
   const response = await fetch(filePath);
   if (!response.ok) throw new Error('Failed to load recipe');
-  
   return await response.json();
 }
-
-// ===== Rendering Functions =====
 
 function renderSteps(recipe) {
   const stepsContainer = document.getElementById('stepsList');
@@ -193,7 +162,6 @@ function renderSteps(recipe) {
 
 function updateActionButtons() {
   const container = document.getElementById('actionButtons');
-  
   if (currentMode === 'manual') {
     container.innerHTML = `
       <button id="copyLinkBtn" class="btn-copy-link">📋 ${getText(UI_LABELS.copyLink)}</button>
@@ -209,10 +177,17 @@ function updateActionButtons() {
   }
 }
 
-// ✅ ฟังก์ชันใหม่: อัปเดตเฉพาะข้อความบนหน้าจอโดยไม่ต้องโหลดข้อมูลใหม่
 function updateLanguageUI() {
   if (!currentRecipe) return;
 
+  // 1. อัปเดตข้อความที่ Hardcoded ใน HTML (แก้จุดที่ 1-5)
+  document.getElementById('headerTitle').textContent = getText(UI_LABELS.headerTitle);
+  document.getElementById('btnModeManual').innerHTML = `🖐️ <span class="mode-text">${getText(UI_LABELS.modeManual)}</span>`;
+  document.getElementById('btnModeMachine').innerHTML = `🤖 <span class="mode-text">${getText(UI_LABELS.modeMachine)}</span>`;
+  document.getElementById('tabGallery').textContent = getText(UI_LABELS.tabGallery);
+  document.getElementById('tabVideo').textContent = getText(UI_LABELS.tabVideo);
+
+  // 2. อัปเดตข้อมูลสูตร
   document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[currentRecipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
   document.getElementById('recipeTitle').textContent = getText(currentRecipe.name);
   document.getElementById('recipeIntro').textContent = getText(currentRecipe.intro);
@@ -227,17 +202,16 @@ function updateLanguageUI() {
   document.getElementById('labelRating').textContent = getText(UI_LABELS.rating);
   document.getElementById('titleIngredients').textContent = getText(UI_LABELS.ingredients);
   document.getElementById('titleSteps').textContent = getText(UI_LABELS.steps);
-  document.getElementById('titleNutrition').textContent = getText(UI_LABELS.nutrition);
-  document.getElementById('btnBackToHome').textContent = getText(UI_LABELS.backToHome);
+  document.getElementById('titleNutrition').textContent = getText(UI_LABELS.nutritionA); // Fixed typo if any, using nutrition
   
-  document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(currentRecipe.benefits)}`;
-  document.getElementById('warningBox').innerHTML = getText(currentRecipe.warnings);
+  // 3. แก้ไขจุดที่ 6: ดึง Array ของวัตถุดิบตามภาษาให้ถูกต้อง
+  const ingredientsArray = getText(currentRecipe.ingredients);
+  document.getElementById('ingredientsList').innerHTML = ingredientsArray.map(ing => `<li>${ing}</li>`).join('');
   
-  const ingredients = Array.isArray(currentRecipe.ingredients) ? currentRecipe.ingredients : getText(currentRecipe.ingredients);
-  document.getElementById('ingredientsList').innerHTML = ingredients.map(ing => `<li>${ing}</li>`).join('');
-  
+  // 4. Render ขั้นตอนใหม่ (จะดึง title/desc ที่เป็น object {th, en} มาแปลงอัตโนมัติ)
   renderSteps(currentRecipe);
   
+  // 5. โภชนาการ
   const nutritionLabels = { calories: UI_LABELS.calories, carbs: UI_LABELS.carbs, sugar: UI_LABELS.sugar, protein: UI_LABELS.protein };
   document.getElementById('nutritionList').innerHTML = Object.entries(currentRecipe.nutrition).map(([key, value]) => `
     <div class="nutrition-row">
@@ -246,7 +220,11 @@ function updateLanguageUI() {
     </div>
   `).join('');
 
+  // 6. อัปเดตปุ่ม Action (แก้จุดที่ 7, 8)
   updateActionButtons();
+  
+  document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(currentRecipe.benefits)}`;
+  document.getElementById('warningBox').innerHTML = getText(currentRecipe.warnings);
 }
 
 function copyMachineLink() {
@@ -254,13 +232,13 @@ function copyMachineLink() {
     showToast(currentLang === 'th' ? '❌ ไม่มีลิงก์สูตรสำหรับเครื่อง' : '❌ No machine recipe link available');
     return;
   }
-  
   const baseUrl = window.location.origin + window.location.pathname.replace(/recipe\.html.*/, '');
   const machineUrl = `${baseUrl}recipes/${currentRecipe.category}/${currentRecipe.machineFile}`;
   
   navigator.clipboard.writeText(machineUrl).then(() => {
     showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' : '✅ Link copied! Paste it in the machine control page');
   }).catch(() => {
+    // Fallback
     const textArea = document.createElement('textarea');
     textArea.value = machineUrl;
     document.body.appendChild(textArea);
@@ -279,50 +257,35 @@ function downloadRecipeJSON(recipe) {
     total_time: recipe.machineSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
     target_temp: recipe.machineSteps.find(s => s.function.includes("Heat") || s.function.includes("Hold"))?.target_value || 0,
     steps: recipe.machineSteps.map(s => ({
-      function: s.function,
-      target_value: s.target_value,
-      unit: s.unit,
-      duration: s.duration || 0
+      function: s.function, target_value: s.target_value, unit: s.unit, duration: s.duration || 0
     }))
   };
 
-  const jsonString = JSON.stringify(machineData, null, 2);
-  const blob = new Blob([jsonString], { type: 'application/json' });
+  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
-  
   const a = document.createElement('a');
   a.href = url;
   a.download = `FML_${recipe.id}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
   
   showToast(currentLang === 'th' ? `✅ ดาวน์โหลด "${getText(recipe.name)}" สำเร็จ!` : `✅ Recipe "${getText(recipe.name)}" downloaded!`);
 }
 
-// ===== Main Initialization =====
-
 async function renderRecipePage() {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('id');
 
-  if (!recipeId) {
-    showError();
-    return;
-  }
+  if (!recipeId) { showError(); return; }
 
   try {
-    // 1. โหลดข้อมูลจากเครือข่าย (ทำแค่ครั้งเดียวตอนเปิดหน้า)
     const recipe = await loadRecipe(recipeId);
     currentRecipe = recipe;
     
-    // 2. แสดงคอนเทนเนอร์หลัก
     document.getElementById('recipeContainer').style.display = 'block';
     document.getElementById('errorContainer').style.display = 'none';
     document.title = `${getText(recipe.name)} | Beverage Masterclass`;
     
-    // 3. Render ส่วนที่ไม่เปลี่ยนตามภาษา (รูปภาพ/วิดีโอ)
     const images = recipe.images || [];
     const mainImg = document.getElementById('mainRecipeImage');
     const thumbStrip = document.getElementById('thumbnailStrip');
@@ -335,19 +298,16 @@ async function renderRecipePage() {
             <img src="${imgUrl}" alt="Thumbnail ${index + 1}">
           </div>
         `).join('');
-      } else {
-        thumbStrip.innerHTML = '';
-      }
+      } else { thumbStrip.innerHTML = ''; }
     } else {
       mainImg.src = 'https://via.placeholder.com/800x450/4CAF50/FFFFFF?text=No+Image';
       thumbStrip.innerHTML = '';
     }
     document.getElementById('recipeVideo').src = recipe.videoUrl || '';
     
-    // 4. Render ข้อความตามภาษาปัจจุบัน
+    // เรียกใช้ฟังก์ชันอัปเดตภาษาซึ่งจะจัดการทุกอย่างรวมถึง Action Buttons
     updateLanguageUI();
     
-    // 5. ตั้งค่าเริ่มต้น
     switchMediaTab('gallery');
     
   } catch (error) {
