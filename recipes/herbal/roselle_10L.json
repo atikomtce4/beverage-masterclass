@@ -2,12 +2,10 @@
   "id": "roselle_10L",
   "name": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร",
   "category": "herbal",
-  "images": [
-    "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80",
-    "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=800&q=80",
-    "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800&q=80",
-    "https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?w=800&q=80",
-    "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80"
+  "images":  [
+    "/images/herbal/roselle_10L/main_1.jpg",
+    "/images/herbal/roselle_10L/main_2.jpg",
+    "/images/herbal/roselle_10L/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/FhP7ooYzprc",
   "prepTime": "10 นาที",
@@ -30,10 +28,10 @@
     "เกลือป่น 1 ช้อนชา"
   ],
   "steps": [
-    { "step": 1, "title": "เตรียมน้ำ", "desc": "เติมน้ำ 10 ลิตร ตั้งค่าอุณหภูมิ 95°C","image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80" },
-    { "step": 2, "title": "ใส่กระเจี๊ยบ", "desc": "ใส่ดอกกระเจี๊ยบ เปิดระบบกวน","image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600&q=80" },
+    { "step": 1, "title": "เตรียมน้ำ", "desc": "เติมน้ำ 10 ลิตร ตั้งค่าอุณหภูมิ 95°C","image": "/images/herbal/roselle_10L/step_1.jpg" },
+    { "step": 2, "title": "ใส่กระเจี๊ยบ", "desc": "ใส่ดอกกระเจี๊ยบ เปิดระบบกวน", "image": "/images/herbal/roselle_10L/step_2.jpg" },
     { "step": 3, "title": "สกัด", "desc": "คงอุณหภูมิ 95°C นาน 15 นาที กรองกาก" },
-    { "step": 4, "title": "บรรจุ", "desc": "Cool Down เหลือ 40°C แล้วบรรจุขวด","image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&q=80" }
+    { "step": 4, "title": "บรรจุ", "desc": "Cool Down เหลือ 40°C แล้วบรรจุขวด", "image": "/images/herbal/roselle_10L/step_4.jpg" }
   ],
   "machineSteps": [
     { "function": "Fill Water", "target_value": 10, "unit": "Liter", "duration": 0 },
