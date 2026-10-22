@@ -135,6 +135,7 @@ async function renderRecipePage() {
     `).join('');
     
     document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe);
+    switchMedia('image'); 
     
   } catch (error) {
     console.error('Error loading recipe:', error);
@@ -181,3 +182,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (category) renderCategoryPage(category);
   }
 });
+// เพิ่มฟังก์ชันนี้ต่อท้ายไฟล์ app.js
+function switchMedia(type) {
+  const img = document.getElementById('recipeImage');
+  const vid = document.getElementById('recipeVideoWrapper');
+  const btns = document.querySelectorAll('.tab-btn');
+
+  if (type === 'image') {
+    img.classList.add('active');
+    vid.classList.remove('active');
+    btns[0].classList.add('active');
+    btns[1].classList.remove('active');
+  } else {
+    img.classList.remove('active');
+    vid.classList.add('active');
+    btns[0].classList.remove('active');
+    btns[1].classList.add('active');
+  }
+}

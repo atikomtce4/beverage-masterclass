@@ -7,16 +7,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mobile-style.css">
   
-  <!-- สไตล์เฉพาะสำหรับหน้ารายละเอียดสูตร -->
   <style>
-    .recipe-detail-container { display: none; } /* ซ่อนไว้ก่อนจนกว่าข้อมูลจะโหลดเสร็จ */
+    .recipe-detail-container { display: none; }
     .error-container { text-align: center; padding: 40px 20px; display: none; }
     .error-icon { font-size: 48px; margin-bottom: 16px; }
-    
-    .recipe-hero-img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; background: #e0e0e0; }
-    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 24px; background: #000; }
-    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    
+
+    /* --- 1. Header Info (อยู่ด้านบน) --- */
+    .recipe-header-info { margin-bottom: 20px; }
+    .recipe-category { color: #4CAF50; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .recipe-title { font-size: 26px; font-weight: 700; margin: 8px 0 12px; color: #212121; line-height: 1.3; }
+    .recipe-intro { font-size: 15px; color: #616161; line-height: 1.6; }
+
+    /* --- 2 & 3. Media Container (รูป+วิดีโอ ในกล่องเดียวกัน + Aspect Ratio 16:9) --- */
+    .media-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .media-tabs {
+      display: flex;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 14px;
+      background: #f9f9f9;
+      border: none;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      color: #757575;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .tab-btn.active {
+      background: white;
+      color: #4CAF50;
+      border-bottom: 3px solid #4CAF50;
+    }
+    .media-content {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9; /* ล็อกอัตราส่วน 16:9 เสมอ */
+      background: #000;
+    }
+    .media-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+    .media-item.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    /* ป้องกันรูปยืด/เบี้ยว */
+    #recipeImage {
+      object-fit: cover; 
+    }
+    #recipeVideoWrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* --- ส่วนอื่นๆ (คงเดิมแต่ปรับแต่งเล็กน้อย) --- */
     .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
     .info-box { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 1px solid #f0f0f0; }
     .info-box .label { font-size: 12px; color: #757575; margin-bottom: 4px; }
@@ -51,7 +117,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header class="mobile-header">
     <button class="back-btn" onclick="window.history.back()">←</button>
     <h1 class="logo">สูตรเครื่องดื่ม</h1>
@@ -60,7 +125,6 @@
 
   <main class="mobile-content">
     
-    <!-- กรณีไม่พบสูตร -->
     <div id="errorContainer" class="error-container">
       <div class="error-icon">😕</div>
       <h2>ไม่พบสูตรนี้</h2>
@@ -68,21 +132,27 @@
       <a href="index.html" class="btn-back">กลับสู่หน้าแรก</a>
     </div>
 
-    <!-- กรณีพบสูตร (จะแสดงข้อมูลตรงนี้) -->
     <div id="recipeContainer" class="recipe-detail-container">
       
-      <!-- Image & Video -->
-      <img id="recipeImage" src="" alt="Recipe Image" class="recipe-hero-img">
-      
-      <div class="video-wrapper">
-        <iframe id="recipeVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- 1. ชื่อและคำบรรยาย (ย้ายมาบนสุด) -->
+      <div class="recipe-header-info">
+        <span id="recipeCategory" class="recipe-category">หมวดหมู่</span>
+        <h1 id="recipeTitle" class="recipe-title">ชื่อสูตร</h1>
+        <p id="recipeIntro" class="recipe-intro">คำอธิบายสั้นๆ</p>
       </div>
 
-      <!-- Header Info -->
-      <div style="margin-bottom: 20px;">
-        <span id="recipeCategory" class="recipe-category" style="color: #4CAF50; font-size: 13px; font-weight: 600; text-transform: uppercase;">หมวดหมู่</span>
-        <h1 id="recipeTitle" style="font-size: 26px; font-weight: 700; margin: 8px 0 12px; color: #212121; line-height: 1.3;">ชื่อสูตร</h1>
-        <p id="recipeIntro" style="font-size: 15px; color: #616161; line-height: 1.6;">คำอธิบายสั้นๆ</p>
+      <!-- 2 & 3. กล่องสื่อผสม (รูป + วิดีโอ) อัตราส่วน 16:9 -->
+      <div class="media-container">
+        <div class="media-tabs">
+          <button class="tab-btn active" onclick="switchMedia('image')">📷 รูปภาพ</button>
+          <button class="tab-btn" onclick="switchMedia('video')">🎬 วิดีโอ</button>
+        </div>
+        <div class="media-content">
+          <img id="recipeImage" class="media-item active" src="" alt="Recipe Image">
+          <div id="recipeVideoWrapper" class="media-item">
+            <iframe id="recipeVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
 
       <!-- Meta Info Grid -->
@@ -105,39 +175,26 @@
         </div>
       </div>
 
-      <!-- Benefits & Warnings -->
       <div id="benefitBox" class="benefit-box"></div>
       <div id="warningBox" class="warning-box"></div>
 
-      <!-- Ingredients -->
       <div class="section-card">
         <h3 class="section-title-sm">📝 วัตถุดิบ</h3>
-        <ul id="ingredientsList" class="ingredient-list">
-          <!-- JS จะเติมข้อมูลตรงนี้ -->
-        </ul>
+        <ul id="ingredientsList" class="ingredient-list"></ul>
       </div>
 
-      <!-- Instructions -->
       <div class="section-card">
         <h3 class="section-title-sm">👩‍🍳 ขั้นตอนการทำ</h3>
-        <div id="stepsList">
-          <!-- JS จะเติมข้อมูลตรงนี้ -->
-        </div>
+        <div id="stepsList"></div>
       </div>
 
-      <!-- Nutrition -->
       <div class="section-card">
         <h3 class="section-title-sm">📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)</h3>
-        <div id="nutritionList">
-          <!-- JS จะเติมข้อมูลตรงนี้ -->
-        </div>
+        <div id="nutritionList"></div>
       </div>
 
-      <!-- Action Buttons -->
       <div class="action-buttons">
-        <button id="downloadBtn" class="btn-download">
-          ⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)
-        </button>
+        <button id="downloadBtn" class="btn-download">⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)</button>
         <a href="index.html" class="btn-back">ดูสูตรอื่นๆ</a>
       </div>
 
@@ -148,8 +205,6 @@
     <p>© 2026 Beverage Masterclass</p>
   </footer>
 
-  <!-- สำคัญ: ต้องโหลด data.js ก่อน app.js เสมอ -->
-  
   <script src="js/app.js"></script>
 </body>
 </html>
