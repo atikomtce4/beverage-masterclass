@@ -30,10 +30,10 @@
     "เกลือป่น 1 ช้อนชา"
   ],
   "steps": [
-    { "step": 1, "title": "เตรียมน้ำ", "desc": "เติมน้ำ 10 ลิตร ตั้งค่าอุณหภูมิ 95°C" },
-    { "step": 2, "title": "ใส่กระเจี๊ยบ", "desc": "ใส่ดอกกระเจี๊ยบ เปิดระบบกวน" },
+    { "step": 1, "title": "เตรียมน้ำ", "desc": "เติมน้ำ 10 ลิตร ตั้งค่าอุณหภูมิ 95°C","image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80" },
+    { "step": 2, "title": "ใส่กระเจี๊ยบ", "desc": "ใส่ดอกกระเจี๊ยบ เปิดระบบกวน","image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600&q=80" },
     { "step": 3, "title": "สกัด", "desc": "คงอุณหภูมิ 95°C นาน 15 นาที กรองกาก" },
-    { "step": 4, "title": "บรรจุ", "desc": "Cool Down เหลือ 40°C แล้วบรรจุขวด" }
+    { "step": 4, "title": "บรรจุ", "desc": "Cool Down เหลือ 40°C แล้วบรรจุขวด","image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&q=80" }
   ],
   "machineSteps": [
     { "function": "Fill Water", "target_value": 10, "unit": "Liter", "duration": 0 },
