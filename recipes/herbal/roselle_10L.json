@@ -1,40 +1,107 @@
 {
   "id": "roselle_10L",
-  "name": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร",
   "category": "herbal",
-  "images":  [
+  "name": {
+    "th": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร (ลดความดัน)",
+    "en": "10L Cold-Extract Roselle Juice (Blood Pressure Support)"
+  },
+  "images": [
     "images/herbal/roselle_10L/main_1.jpg",
     "images/herbal/roselle_10L/main_2.jpg",
     "images/herbal/roselle_10L/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/FhP7ooYzprc",
-  "prepTime": "10 นาที",
-  "cookTime": "15 นาที",
-  "servings": "10 ลิตร",
+  "prepTime": { "th": "10 นาที", "en": "10 mins" },
+  "cookTime": { "th": "15 นาที", "en": "15 mins" },
+  "servings": { "th": "10 ลิตร", "en": "10 Liters" },
   "rating": "4.8",
-  "intro": "สัมผัสความสดชื่นและคุณประโยชน์เต็มถ้วยกับ น้ำกระเจี๊ยบสกัดเย็นสูตรลดความดัน ปริมาณ 10 ลิตร สูตรนี้ผ่านการคำนวณสัดส่วนที่ลงตัวระหว่างกลีบกระเจี๊ยบแห้ง 120 กรัม และน้ำตาลทราย 1 กิโลกรัม เพื่อให้ได้รสชาติที่กลมกล่อม หอมลึก ไม่ฝาดคอ จุดเด่นของสูตรนี้คือการใช้ความร้อนคงที่ 95°C เป็นเวลา 10 นาที ซึ่งเป็นอุณหภูมิทองคำที่ช่วยสกัด สารแอนโทไซยานิน (Anthocyanin) และวิตามินซีออกมาได้สูงสุด โดยไม่ทำลายคุณค่าทางอาหาร มีงานวิจัยรองรับว่าช่วยในการลดความดันโลหิตและต้านอนุมูลอิสระได้อย่างดีเยี่ยม ทำดื่มเองที่บ้านหรือทำขายก็มั่นใจได้ในคุณภาพทุกหยด",
-  "benefits": "ช่วยลดความดันโลหิต ขับปัสสาวะ และอุดมด้วยแอนโทไซยานิน",
-  "warnings": "⚠️ ผู้ที่มีภาวะความดันโลหิตต่ำหรือโรคกระเพาะควรดื่มในปริมาณน้อย",
+  "intro": {
+    "th": "สัมผัสความสดชื่นและคุณประโยชน์เต็มถ้วยกับ น้ำกระเจี๊ยบสกัดเย็นสูตรลดความดัน ปริมาณ 10 ลิตร สูตรนี้ผ่านการคำนวณสัดส่วนที่ลงตัวระหว่างกลีบกระเจี๊ยบแห้ง 120 กรัม และน้ำตาลทราย 1 กิโลกรัม เพื่อให้ได้รสชาติที่กลมกล่อม หอมลึก ไม่ฝาดคอ จุดเด่นของสูตรนี้คือการใช้ความร้อนคงที่ 95°C เป็นเวลา 10 นาที ซึ่งเป็นอุณหภูมิทองคำที่ช่วยสกัดสารแอนโทไซยานิน (Anthocyanin) และวิตามินซีออกมาได้สูงสุด โดยไม่ทำลายคุณค่าทางอาหาร มีงานวิจัยรองรับว่าช่วยในการลดความดันโลหิตและต้านอนุมูลอิสระได้อย่างดีเยี่ยม",
+    "en": "Experience the refreshing taste and full benefits of our Cold-Extract Roselle Juice for Blood Pressure Support in a 10-liter batch. This recipe features a perfectly balanced ratio of 120g dried roselle calyxes and 1kg sugar, delivering a smooth, aromatic flavor without any astringency. The key highlight is maintaining a precise temperature of 95°C for 10 minutes - the golden temperature that maximizes the extraction of Anthocyanin and Vitamin C without destroying nutritional value. Research-backed to help lower blood pressure and provide powerful antioxidant benefits."
+  },
+  "benefits": {
+    "th": "ช่วยลดความดันโลหิต ขับปัสสาวะ และอุดมด้วยแอนโทไซยานินต้านอนุมูลอิสระ",
+    "en": "Helps lower blood pressure, acts as a diuretic, and rich in antioxidant Anthocyanin"
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีภาวะความดันโลหิตต่ำหรือโรคกระเพาะควรดื่มในปริมาณน้อย",
+    "en": "⚠️ People with low blood pressure or stomach ulcers should consume in moderation"
+  },
   "nutrition": {
     "calories": "45 kcal",
     "carbs": "11 g",
     "sugar": "8 g",
     "protein": "0.2 g"
   },
-  "ingredients": [
-    "น้ำสะอาด 10 ลิตร",
-    "ดอกกระเจี๊ยบแห้ง 500 กรัม",
-    "น้ำตาลทรายแดง 800 กรัม",
-    "เกลือป่น 1 ช้อนชา"
-  ],
+  "ingredients": {
+    "th": [
+      "น้ำสะอาด 10 ลิตร",
+      "กลีบกระเจี๊ยบแห้ง 120 กรัม",
+      "น้ำตาลทราย 1 กิโลกรัม"
+    ],
+    "en": [
+      "10 liters clean water",
+      "120g dried roselle calyxes",
+      "1kg sugar"
+    ]
+  },
   "steps": [
-    {"step": 1,"title": "เตรียมน้ำบริสุทธิ์","desc": "เริ่มด้วยการเติมน้ำสะอาด 10 ลิตรลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติและเตรียมพร้อมสำหรับกระบวนการต้ม","image": "images/herbal/roselle_10L/step_1.jpg"},
-    {"step": 2,"title": "ต้มน้ำพร้อมระบบวน","desc": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน (Circulation) เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วและแม่นยำจนถึง 95°C"},
-    {"step": 3,"title": "เติมความหวานจากธรรมชาติ","desc": "เมื่ออุณหภูมิพร้อม ระบบจะแจ้งเตือนให้ใส่น้ำตาลทราย 1 กิโลกรัม ลงไป พร้อมเปิดระบบกวน (Stir) เพื่อช่วยให้น้ำตาลละลายได้อย่างสมบูรณ์"},
-    {"step": 4,"title": "คงอุณหภูมิเพื่อละลายน้ำตาล","desc": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที เพื่อให้แน่ใจว่าน้ำตาลละลายหมดจด ไม่เหลือเกล็ดน้ำตาลที่ก้นถัง"},
-    {"step": 5,"title": "ใส่กระเจี๊ยบในตะกร้า","desc": "ระบบจะแจ้งเตือนให้ใส่กลีบกระเจี๊ยบแห้ง 120 กรัม (ที่บรรจุในตะกร้ากรองเรียบร้อยแล้ว) ลงไปแช่ในน้ำร้อน เพื่อเริ่มกระบวนการสกัด"},
-    {"step": 6,"title": "สกัดรสชาติและสี (10 นาที)","desc": "หัวใจสำคัญของสูตรนี้! เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 10 นาที พร้อมระบบวนน้ำและกวนเบาๆ เพื่อดึงสีแดงสวยและสรรพคุณทางยาออกมาให้มากที่สุด","image": "images/herbal/roselle_10L/step_6.jpg"},
-    {"step": 7,"title": "ยกออกและบรรจุขวด","desc": "เมื่อครบเวลา ระบบจะส่งเสียงแจ้งเตือน ให้คุณยกตะกร้ากระเจี๊ยบออกทันที เพื่อป้องกันรสฝาด จากนั้นสามารถบรรจุลงขวดและนำเข้าตู้เย็นเพื่อรสชาติที่สดชื่นยิ่งขึ้น"}
+    {
+      "step": 1,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด 10 ลิตรลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติและเตรียมพร้อมสำหรับกระบวนการต้ม",
+        "en": "Start by adding 10 liters of clean water into the tank. The system will automatically dispense water and prepare for the brewing process."
+      }
+    },
+    {
+      "step": 2,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน", "en": "Heat Water with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน (Circulation) เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วและแม่นยำจนถึง 95°C",
+        "en": "The machine will start heating the water while activating the circulation valve to ensure rapid and precise temperature distribution up to 95°C."
+      }
+    },
+    {
+      "step": 3,
+      "title": { "th": "เติมความหวานจากธรรมชาติ", "en": "Add Natural Sweetness" },
+      "desc": {
+        "th": "เมื่ออุณหภูมิพร้อม ระบบจะแจ้งเตือนให้ใส่น้ำตาลทราย 1 กิโลกรัม ลงไป พร้อมเปิดระบบกวน (Stir) เพื่อช่วยให้น้ำตาลละลายได้อย่างสมบูรณ์",
+        "en": "When the temperature is ready, the system will alert you to add 1kg of sugar, while activating the stirrer to ensure complete dissolution."
+      }
+    },
+    {
+      "step": 4,
+      "title": { "th": "คงอุณหภูมิเพื่อละลายน้ำตาล", "en": "Maintain Temperature for Sugar Dissolution" },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที เพื่อให้แน่ใจว่าน้ำตาลละลายหมดจด ไม่เหลือเกล็ดน้ำตาลที่ก้นถัง",
+        "en": "The machine will maintain the temperature at 95°C for 3 minutes to ensure the sugar is completely dissolved with no granules remaining at the bottom."
+      }
+    },
+    {
+      "step": 5,
+      "title": { "th": "ใส่กระเจี๊ยบในตะกร้า", "en": "Add Roselle in Basket" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่กลีบกระเจี๊ยบแห้ง 120 กรัม (ที่บรรจุในตะกร้ากรองเรียบร้อยแล้ว) ลงไปแช่ในน้ำร้อน เพื่อเริ่มกระบวนการสกัด",
+        "en": "The system will alert you to add 120g of dried roselle calyxes (pre-packed in a filter basket) into the hot water to begin the extraction process."
+      }
+    },
+    {
+      "step": 6,
+      "title": { "th": "สกัดรสชาติและสี (10 นาที)", "en": "Extract Flavor and Color (10 mins)" },
+      "desc": {
+        "th": "หัวใจสำคัญของสูตรนี้! เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 10 นาที พร้อมระบบวนน้ำและกวนเบาๆ เพื่อดึงสีแดงสวยและสรรพคุณทางยาออกมาให้มากที่สุด",
+        "en": "The heart of this recipe! The machine will precisely maintain 95°C for 10 minutes with circulation and gentle stirring to extract the beautiful red color and maximum medicinal benefits."
+      }
+    },
+    {
+      "step": 7,
+      "title": { "th": "ยกออกและบรรจุขวด", "en": "Remove and Bottle" },
+      "desc": {
+        "th": "เมื่อครบเวลา ระบบจะส่งเสียงแจ้งเตือน ให้คุณยกตะกร้ากระเจี๊ยบออกทันที เพื่อป้องกันรสฝาด จากนั้นสามารถบรรจุลงขวดและนำเข้าตู้เย็นเพื่อรสชาติที่สดชื่นยิ่งขึ้น",
+        "en": "When time is up, the system will sound an alert. Immediately remove the roselle basket to prevent astringency, then bottle and refrigerate for a more refreshing taste."
+      }
+    }
   ],
   "machineSteps": [
     { "function": "Fill Water", "target_value": 10, "unit": "Liter", "duration": 0 },
