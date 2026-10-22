@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/mobile-style.css">
   
   <style>
+    /* ===== Base Styles ===== */
     .recipe-detail-container { display: none; }
     .error-container { text-align: center; padding: 40px 20px; display: none; }
     .error-icon { font-size: 48px; margin-bottom: 16px; }
@@ -17,150 +18,7 @@
     .recipe-title { font-size: 26px; font-weight: 700; margin: 8px 0 12px; color: #212121; line-height: 1.3; }
     .recipe-intro { font-size: 15px; color: #616161; line-height: 1.6; }
 
-    /* --- Media Container (Gallery + Video) --- */
-    .media-container {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 24px;
-      border: 1px solid #f0f0f0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .media-tabs {
-      display: flex;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .tab-btn {
-      flex: 1;
-      padding: 14px;
-      background: #f9f9f9;
-      border: none;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 600;
-      color: #757575;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .tab-btn.active {
-      background: white;
-      color: #4CAF50;
-      border-bottom: 3px solid #4CAF50;
-    }
-    
-    .media-view { display: none; }
-    .media-view.active { display: block; }
-
-    /* Main Image Area (Locked 16:9) */
-    .main-image-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #f5f5f5;
-    }
-    .main-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* ป้องกันรูปยืด/เบี้ยว */
-    }
-
-    /* Thumbnail Strip (เลื่อนซ้าย-ขวาได้) */
-    .thumbnail-strip {
-      display: flex;
-      gap: 8px;
-      padding: 12px;
-      overflow-x: auto;
-      background: white;
-      scrollbar-width: none; /* Firefox */
-    }
-    .thumbnail-strip::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
-    
-    .thumbnail {
-      flex: 0 0 auto;
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: all 0.2s;
-      opacity: 0.6;
-    }
-    .thumbnail.active {
-      border-color: #4CAF50;
-      opacity: 1;
-      transform: scale(1.05);
-    }
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Video Wrapper */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #000;
-    }
-    .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* --- ส่วนอื่นๆ (คงเดิม) --- */
-    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
-    .info-box { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 1px solid #f0f0f0; }
-    .info-box .label { font-size: 12px; color: #757575; margin-bottom: 4px; }
-    .info-box .value { font-size: 18px; font-weight: 700; color: #212121; }
-    
-    .section-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #f0f0f0; }
-    .section-title-sm { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #212121; display: flex; align-items: center; gap: 8px; }
-    
-    .ingredient-list { list-style: none; padding: 0; }
-    .ingredient-list li { padding: 12px 0; border-bottom: 1px solid #f5f5f5; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
-    .ingredient-list li:last-child { border-bottom: none; }
-    .ingredient-list li::before { content: '•'; color: #4CAF50; font-weight: bold; font-size: 20px; line-height: 1; }
-    
-    .step-item { display: flex; gap: 16px; margin-bottom: 20px; }
-    .step-item:last-child { margin-bottom: 0; }
-    .step-num { width: 32px; height: 32px; background: #4CAF50; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
-    .step-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: #212121; }
-    .step-content p { font-size: 14px; color: #616161; line-height: 1.6; margin: 0; }
-
-    .nutrition-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #e0e0e0; font-size: 14px; }
-    .nutrition-row:last-child { border-bottom: none; }
-    .nutrition-row span:first-child { color: #757575; }
-    .nutrition-row span:last-child { font-weight: 600; color: #212121; }
-
-    .warning-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 16px; border-radius: 0 8px 8px 0; margin-top: 16px; font-size: 14px; color: #e65100; }
-    .benefit-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px; font-size: 14px; color: #2e7d32; }
-
-    .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
-    .btn-download { background: #4CAF50; color: white; border: none; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .btn-back { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; }
-    
-    /* เพิ่มโค้ดนี้ต่อท้ายส่วน <style> ใน recipe.html */
-    
-    .step-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column; /* จัดเรียงข้อความและรูปเป็นแนวตั้ง */
-    }
-    
-    .step-image {
-      width: 100%;
-      aspect-ratio: 16 / 9; /* ล็อกสัดส่วนให้สวยงามเหมือนวิดีโอ */
-      object-fit: cover; /* ตัดส่วนเกินออก ป้องกันรูปยืด/เบี้ยว */
-      border-radius: 12px; /* มุมโค้งสวยงาม */
-      margin-top: 12px; /* เว้นระยะห่างจากข้อความด้านบน */
-      border: 1px solid #f0f0f0; /* เส้นขอบบางๆ ให้ดูมีมิติ */
-      background-color: #f9f9f9; /* สีพื้นหลังกรณีรูปโหลดช้า */
-    }
-
-    /* Language Toggle Button */
+    /* ===== Language Toggle ===== */
     .lang-toggle {
       position: fixed;
       top: 12px;
@@ -194,14 +52,252 @@
     .lang-btn:hover:not(.active) {
       background: #f5f5f5;
     }
+
+    /* ===== Mode Toggle ===== */
+    .mode-toggle-container {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mode-toggle {
+      display: flex;
+      background: #f0f0f0;
+      border-radius: 25px;
+      padding: 4px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .mode-btn {
+      padding: 10px 20px;
+      border: none;
+      background: transparent;
+      border-radius: 20px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: #757575;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mode-btn.active {
+      background: #4CAF50;
+      color: white;
+      box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    }
+
+    .mode-btn:hover:not(.active) {
+      background: #e0e0e0;
+    }
+
+    .mode-text {
+      display: inline;
+    }
+
+    @media (max-width: 480px) {
+      .mode-text {
+        display: none;
+      }
+      .mode-btn {
+        padding: 10px 16px;
+      }
+    }
+
+    /* ===== Media Container ===== */
+    .media-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .media-tabs {
+      display: flex;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 14px;
+      background: #f9f9f9;
+      border: none;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      color: #757575;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: white;
+      color: #4CAF50;
+      border-bottom: 3px solid #4CAF50;
+    }
+    
+    .media-view { display: none; }
+    .media-view.active { display: block; }
+
+    .main-image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #f5f5f5;
+    }
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail-strip {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      overflow-x: auto;
+      background: white;
+      scrollbar-width: none;
+    }
+    .thumbnail-strip::-webkit-scrollbar { display: none; }
+    
+    .thumbnail {
+      flex: 0 0 auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      opacity: 0.6;
+    }
+    .thumbnail.active {
+      border-color: #4CAF50;
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== Info Grid ===== */
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+    .info-box { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 1px solid #f0f0f0; }
+    .info-box .label { font-size: 12px; color: #757575; margin-bottom: 4px; }
+    .info-box .value { font-size: 18px; font-weight: 700; color: #212121; }
+    
+    /* ===== Section Cards ===== */
+    .section-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #f0f0f0; }
+    .section-title-sm { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #212121; display: flex; align-items: center; gap: 8px; }
+    
+    .ingredient-list { list-style: none; padding: 0; }
+    .ingredient-list li { padding: 12px 0; border-bottom: 1px solid #f5f5f5; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
+    .ingredient-list li:last-child { border-bottom: none; }
+    .ingredient-list li::before { content: '•'; color: #4CAF50; font-weight: bold; font-size: 20px; line-height: 1; }
+    
+    .step-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .step-item:last-child { margin-bottom: 0; }
+    .step-num { width: 32px; height: 32px; background: #4CAF50; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .step-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .step-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: #212121; }
+    .step-content p { font-size: 14px; color: #616161; line-height: 1.6; margin: 0; }
+
+    .step-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-top: 12px;
+      border: 1px solid #f0f0f0;
+      background-color: #f9f9f9;
+    }
+
+    .tips-box {
+      background: #fff9c4;
+      border-left: 4px solid #fbc02d;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #5d4037;
+      line-height: 1.6;
+    }
+
+    .nutrition-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #e0e0e0; font-size: 14px; }
+    .nutrition-row:last-child { border-bottom: none; }
+    .nutrition-row span:first-child { color: #757575; }
+    .nutrition-row span:last-child { font-weight: 600; color: #212121; }
+
+    .warning-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 16px; border-radius: 0 8px 8px 0; margin-top: 16px; font-size: 14px; color: #e65100; }
+    .benefit-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px; font-size: 14px; color: #2e7d32; }
+
+    .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .btn-download { background: #4CAF50; color: white; border: none; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-copy-link { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-back { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+
+    .machine-info-box {
+      margin-top: 8px;
+      padding: 8px;
+      background: #f0f9ff;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #0369a1;
+    }
+
+    /* ===== Toast Notification ===== */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #212121;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 2000;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
+
   <!-- Language Toggle -->
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="switchLanguage('th')">TH</button>
     <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
   </div>
+
+  <!-- Header -->
   <header class="mobile-header">
     <button class="back-btn" onclick="window.history.back()">←</button>
     <h1 class="logo">สูตรเครื่องดื่ม</h1>
@@ -209,40 +305,55 @@
   </header>
 
   <main class="mobile-content">
+    
+    <!-- Error Container -->
     <div id="errorContainer" class="error-container">
       <div class="error-icon">😕</div>
-      <h2>ไม่พบสูตรนี้</h2>
-      <p style="color: #757575; margin-bottom: 20px;">อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว</p>
+      <h2 id="errorTitle">ไม่พบสูตรนี้</h2>
+      <p style="color: #757575; margin-bottom: 20px;" id="errorMsg">อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว</p>
       <a href="index.html" class="btn-back">กลับสู่หน้าแรก</a>
     </div>
 
+    <!-- Recipe Container -->
     <div id="recipeContainer" class="recipe-detail-container">
       
-      <!-- 1. ชื่อและคำบรรยาย -->
+      <!-- Recipe Header Info -->
       <div class="recipe-header-info">
         <span id="recipeCategory" class="recipe-category">หมวดหมู่</span>
         <h1 id="recipeTitle" class="recipe-title">ชื่อสูตร</h1>
         <p id="recipeIntro" class="recipe-intro">คำอธิบายสั้นๆ</p>
       </div>
 
-      <!-- 2. กล่องสื่อผสม (แกลเลอรี + วิดีโอ) -->
+      <!-- Mode Toggle -->
+      <div class="mode-toggle-container">
+        <div class="mode-toggle">
+          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')">
+            🖐️ <span class="mode-text">ทำเอง</span>
+          </button>
+          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')">
+            🤖 <span class="mode-text">ใช้เครื่อง</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Media Container (Gallery + Video) -->
       <div class="media-container">
         <div class="media-tabs">
           <button class="tab-btn active" onclick="switchMediaTab('gallery')">📷 รูปภาพ</button>
           <button class="tab-btn" onclick="switchMediaTab('video')">🎬 วิดีโอ</button>
         </div>
 
-        <!-- มุมมองแกลเลอรี -->
+        <!-- Gallery View -->
         <div id="view-gallery" class="media-view active">
           <div class="main-image-wrapper">
             <img id="mainRecipeImage" class="main-image" src="" alt="Recipe Image">
           </div>
           <div class="thumbnail-strip" id="thumbnailStrip">
-            <!-- JS จะสร้างรูปย่อตรงนี้ -->
+            <!-- Thumbnails will be generated by JS -->
           </div>
         </div>
 
-        <!-- มุมมองวิดีโอ -->
+        <!-- Video View -->
         <div id="view-video" class="media-view">
           <div class="video-wrapper">
             <iframe id="recipeVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -252,33 +363,52 @@
 
       <!-- Meta Info Grid -->
       <div class="info-grid">
-        <div class="info-box"><div class="label">เวลาเตรียม</div><div id="prepTime" class="value">- นาที</div></div>
-        <div class="info-box"><div class="label">เวลาทำ</div><div id="cookTime" class="value">- นาที</div></div>
-        <div class="info-box"><div class="label">ปริมาณ</div><div id="servings" class="value">- ลิตร</div></div>
-        <div class="info-box"><div class="label">คะแนน</div><div id="rating" class="value">- / 5</div></div>
+        <div class="info-box">
+          <div class="label" id="labelPrepTime">เวลาเตรียม</div>
+          <div id="prepTime" class="value">- นาที</div>
+        </div>
+        <div class="info-box">
+          <div class="label" id="labelCookTime">เวลาทำ</div>
+          <div id="cookTime" class="value">- นาที</div>
+        </div>
+        <div class="info-box">
+          <div class="label" id="labelServings">ปริมาณ</div>
+          <div id="servings" class="value">- ลิตร</div>
+        </div>
+        <div class="info-box">
+          <div class="label" id="labelRating">คะแนน</div>
+          <div id="rating" class="value">- / 5</div>
+        </div>
       </div>
 
+      <!-- Benefits & Warnings -->
       <div id="benefitBox" class="benefit-box"></div>
       <div id="warningBox" class="warning-box"></div>
 
+      <!-- Ingredients -->
       <div class="section-card">
-        <h3 class="section-title-sm">📝 วัตถุดิบ</h3>
+        <h3 class="section-title-sm" id="titleIngredients">📝 วัตถุดิบ</h3>
         <ul id="ingredientsList" class="ingredient-list"></ul>
       </div>
 
+      <!-- Steps -->
       <div class="section-card">
-        <h3 class="section-title-sm">👩‍🍳 ขั้นตอนการทำ</h3>
+        <h3 class="section-title-sm" id="titleSteps">👩‍🍳 ขั้นตอนการทำ</h3>
         <div id="stepsList"></div>
       </div>
 
+      <!-- Nutrition -->
       <div class="section-card">
-        <h3 class="section-title-sm">📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)</h3>
+        <h3 class="section-title-sm" id="titleNutrition">📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)</h3>
         <div id="nutritionList"></div>
       </div>
 
-      <div class="action-buttons">
-        <button id="downloadBtn" class="btn-download">⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)</button>
-        <a href="index.html" class="btn-back">ดูสูตรอื่นๆ</a>
+      <!-- Action Buttons -->
+      <div class="action-buttons" id="actionButtons">
+        <button id="copyLinkBtn" class="btn-copy-link">
+          📋 คัดลอกลิงก์สูตรสำหรับเครื่อง
+        </button>
+        <a href="index.html" class="btn-back" id="btnBackToHome">ดูสูตรอื่นๆ</a>
       </div>
 
     </div>
@@ -288,6 +418,10 @@
     <p>© 2026 Beverage Masterclass</p>
   </footer>
 
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
   <script src="js/app.js"></script>
 </body>
 </html>
