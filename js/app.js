@@ -82,7 +82,35 @@ function downloadRecipeJSON(recipe) {
   alert(`ดาวน์โหลดสูตร "${recipe.name}" สำเร็จ!`);
 }
 
-// ฟังก์ชันแสดงสูตรบนหน้า recipe.html
+// ฟังก์ชันสลับแท็บหลัก (รูปภาพ vs วิดีโอ)
+function switchMediaTab(tabName) {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const views = document.querySelectorAll('.media-view');
+  
+  tabs.forEach(t => t.classList.remove('active'));
+  views.forEach(v => v.classList.remove('active'));
+
+  if (tabName === 'gallery') {
+    tabs[0].classList.add('active');
+    document.getElementById('view-gallery').classList.add('active');
+  } else {
+    tabs[1].classList.add('active');
+    document.getElementById('view-video').classList.add('active');
+  }
+}
+
+// ฟังก์ชันเปลี่ยนรูปภาพหลักเมื่อกดที่รูปย่อ
+function changeMainImage(imageUrl, thumbnailElement) {
+  document.getElementById('mainRecipeImage').src = imageUrl;
+  
+  // จัดการ class active ของรูปย่อ
+  document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+  if (thumbnailElement) {
+    thumbnailElement.classList.add('active');
+  }
+}
+
+// ฟังก์ชันแสดงสูตรบนหน้า recipe.html (ปรับปรุงใหม่)
 async function renderRecipePage() {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('id');
@@ -96,7 +124,6 @@ async function renderRecipePage() {
   try {
     const recipe = await loadRecipe(recipeId);
     
-    // แสดงข้อมูล
     document.getElementById('recipeContainer').style.display = 'block';
     document.title = `${recipe.name} | Beverage Masterclass`;
     
@@ -107,9 +134,6 @@ async function renderRecipePage() {
     document.getElementById('cookTime').textContent = recipe.cookTime;
     document.getElementById('servings').textContent = recipe.servings;
     document.getElementById('rating').textContent = `${recipe.rating} / 5`;
-    
-    document.getElementById('recipeImage').src = recipe.image || 'https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=No+Image';
-    document.getElementById('recipeVideo').src = recipe.videoUrl || '';
     
     document.getElementById('benefitBox').innerHTML = `<strong>🌿 สรรพคุณ:</strong> ${recipe.benefits}`;
     document.getElementById('warningBox').innerHTML = recipe.warnings;
@@ -133,9 +157,37 @@ async function renderRecipePage() {
         <span>${value}</span>
       </div>
     `).join('');
+
+    // --- จัดการส่วนรูปภาพ (Gallery) ---
+    const images = recipe.images || []; // ป้องกันกรณีไม่มีข้อมูล images
+    const mainImg = document.getElementById('mainRecipeImage');
+    const thumbStrip = document.getElementById('thumbnailStrip');
     
+    if (images.length > 0) {
+      mainImg.src = images[0]; // ตั้งรูปแรกเป็นรูปหลัก
+      
+      // ถ้ามีมากกว่า 1 รูป ให้สร้างแถบรูปย่อ
+      if (images.length > 1) {
+        thumbStrip.innerHTML = images.map((imgUrl, index) => `
+          <div class="thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage('${imgUrl}', this)">
+            <img src="${imgUrl}" alt="Thumbnail ${index + 1}">
+          </div>
+        `).join('');
+      } else {
+        thumbStrip.innerHTML = ''; // ซ่อนแถบถ้ามีรูปเดียว
+      }
+    } else {
+      mainImg.src = 'https://via.placeholder.com/800x450/4CAF50/FFFFFF?text=No+Image';
+      thumbStrip.innerHTML = '';
+    }
+
+    // --- จัดการส่วนวิดีโอ ---
+    document.getElementById('recipeVideo').src = recipe.videoUrl || '';
+
     document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe);
-    switchMedia('image'); 
+    
+    // ตั้งค่าเริ่มต้นให้แสดงแกลเลอรี
+    switchMediaTab('gallery');
     
   } catch (error) {
     console.error('Error loading recipe:', error);
@@ -143,6 +195,7 @@ async function renderRecipePage() {
     document.getElementById('recipeContainer').style.display = 'none';
   }
 }
+
 
 // ฟังก์ชันแสดงรายการสูตรในหมวดหมู่ (ใช้กับหน้า category.html)
 async function renderCategoryPage(category) {
