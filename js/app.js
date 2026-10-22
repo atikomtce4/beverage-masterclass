@@ -319,3 +319,146 @@ async function renderRecipePage() {
 document.addEventListener('DOMContentLoaded', () => {
   renderRecipePage();
 });
+
+/* ==========================================================
+   📂 CATEGORIES & CATEGORY PAGE LOGIC
+   ========================================================== */
+
+// ข้อมูลหมวดหมู่ (สำหรับหน้า categories.html)
+const CATEGORIES_DATA = {
+  herbal: {
+    name: { th: 'สมุนไพรไทย', en: 'Thai Herbs' },
+    desc: { th: 'รวมสูตรเครื่องดื่มจากภูมิปัญญาไทย สรรพคุณเน้นๆ ทำง่าย ดื่มดีต่อสุขภาพ', en: 'Traditional Thai herbal drinks with health benefits, easy to make' },
+    image: 'https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?w=400&q=80',
+    count: 2
+  },
+  tea: {
+    name: { th: 'ชา & เครื่องดื่มร้อน', en: 'Tea & Hot Drinks' },
+    desc: { th: 'ชาไทย ชาเขียว และเครื่องดื่มร้อนหลากสไตล์', en: 'Thai tea, green tea, and various hot beverages' },
+    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80',
+    count: 0
+  },
+  milk: {
+    name: { th: 'นม & ธัญพืช', en: 'Milk & Cereals' },
+    desc: { th: 'นมถั่วเหลือง นมข้าวโพด และเครื่องดื่มธัญพืช', en: 'Soy milk, corn milk, and cereal-based drinks' },
+    image: 'https://images.unsplash.com/photo-1605202888635-1e331ec07b83?w=400&q=80',
+    count: 0
+  },
+  ferment: {
+    name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' },
+    desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' },
+    image: 'https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=400&q=80',
+    count: 0
+  }
+};
+
+// ฟังก์ชัน Render หน้า categories.html
+function renderCategoriesPage() {
+  const grid = document.getElementById('categoryGrid');
+  if (!grid) return; // ไม่ได้อยู่ในหน้า categories.html
+  
+  // อัปเดตหัวข้อตามภาษา
+  const pageTitle = document.getElementById('pageTitle');
+  const pageHeading = document.getElementById('pageHeading');
+  const pageSubheading = document.getElementById('pageSubheading');
+  
+  if (pageTitle) pageTitle.textContent = getText({ th: 'หมวดหมู่', en: 'Categories' });
+  if (pageHeading) pageHeading.textContent = getText({ th: 'หมวดหมู่เครื่องดื่ม', en: 'Beverage Categories' });
+  if (pageSubheading) pageSubheading.textContent = getText({ th: 'เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม', en: 'Choose a category to explore recipes' });
+  
+  // Render การ์ดหมวดหมู่
+  grid.innerHTML = Object.entries(CATEGORIES_DATA).map(([id, cat]) => `
+    <a href="category.html?id=${id}" class="category-card">
+      <img src="${cat.image}" alt="${getText(cat.name)}" class="category-card-img">
+      <div class="category-card-body">
+        <div class="category-card-title">${getText(cat.name)}</div>
+        <div class="category-card-desc">${getText(cat.desc)}</div>
+        <div class="category-card-count">${cat.count} ${getText({ th: 'สูตร', en: 'recipes' })}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+// ฟังก์ชัน Render หน้า category.html (Dynamic)
+async function renderCategoryPage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryId = urlParams.get('id');
+  
+  if (!categoryId) {
+    document.getElementById('errorContainer').style.display = 'block';
+    document.getElementById('categoryContainer').style.display = 'none';
+    return;
+  }
+  
+  try {
+    // โหลด index.json ของหมวดหมู่นั้น
+    const response = await fetch(`recipes/${categoryId}/index.json`);
+    if (!response.ok) throw new Error('Category not found');
+    const recipes = await response.json();
+    
+    const categoryInfo = CATEGORIES_DATA[categoryId];
+    if (!categoryInfo) throw new Error('Category info not found');
+    
+    // แสดง Container
+    document.getElementById('categoryContainer').style.display = 'block';
+    document.getElementById('errorContainer').style.display = 'none';
+    
+    // อัปเดต Hero Banner
+    document.getElementById('heroTitle').textContent = getText(categoryInfo.name);
+    document.getElementById('heroDesc').textContent = getText(categoryInfo.desc);
+    document.getElementById('headerTitle').textContent = getText(categoryInfo.name);
+    document.title = `${getText(categoryInfo.name)} | Beverage Masterclass`;
+    
+    // Render การ์ดสูตร
+    const grid = document.getElementById('recipeGrid');
+    if (recipes.length === 0) {
+      grid.innerHTML = `<div class="empty-state">${getText({ th: 'ยังไม่มีสูตรในหมวดหมู่นี้', en: 'No recipes in this category yet' })}</div>`;
+    } else {
+      grid.innerHTML = recipes.map(r => `
+        <a href="recipe.html?id=${categoryId}/${r.id}" class="recipe-card">
+          <img src="${r.image}" alt="${getText(r.name)}" class="recipe-card-img">
+          <div class="recipe-card-body">
+            <div class="recipe-card-title">${getText(r.name)}</div>
+            <div class="recipe-card-meta">
+              <span>️ ${getText(r.prepTime)}</span>
+              <span>⭐ ${r.rating}</span>
+            </div>
+            ${r.badges && r.badges[currentLang] ? `
+              <div class="recipe-card-badges">
+                ${r.badges[currentLang].map(b => `<span class="badge">${b}</span>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        </a>
+      `).join('');
+    }
+    
+    // อัปเดตปุ่มย้อนกลับ
+    document.getElementById('btnBackToCategories').textContent = getText({ th: '← กลับไปหน้าหมวดหมู่', en: '← Back to Categories' });
+    
+  } catch (error) {
+    console.error('Error loading category:', error);
+    document.getElementById('errorContainer').style.display = 'block';
+    document.getElementById('categoryContainer').style.display = 'none';
+    document.getElementById('errorTitle').textContent = getText({ th: 'ไม่พบหมวดหมู่', en: 'Category Not Found' });
+    document.getElementById('errorMsg').textContent = getText({ th: 'หมวดหมู่นี้อาจยังไม่มีข้อมูล', en: 'This category may not have data yet' });
+  }
+}
+
+// เพิ่มการเรียกฟังก์ชันใน DOMContentLoaded
+// หาบรรทัดนี้ใน app.js:
+// document.addEventListener('DOMContentLoaded', () => {
+//   renderRecipePage();
+// });
+// 
+// แล้วเปลี่ยนเป็น:
+document.addEventListener('DOMContentLoaded', () => {
+  // ตรวจสอบว่าอยู่หน้าไหน แล้วเรียกฟังก์ชันที่ถูกต้อง
+  if (document.getElementById('categoryGrid')) {
+    renderCategoriesPage();
+  } else if (document.getElementById('recipeGrid')) {
+    renderCategoryPage();
+  } else if (document.getElementById('recipeContainer')) {
+    renderRecipePage();
+  }
+});
