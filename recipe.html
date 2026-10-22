@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>กำลังโหลดสูตร... | Beverage Masterclass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mobile-style.css">
+  
+  <!-- สไตล์เฉพาะสำหรับหน้ารายละเอียดสูตร -->
+  <style>
+    .recipe-detail-container { display: none; } /* ซ่อนไว้ก่อนจนกว่าข้อมูลจะโหลดเสร็จ */
+    .error-container { text-align: center; padding: 40px 20px; display: none; }
+    .error-icon { font-size: 48px; margin-bottom: 16px; }
+    
+    .recipe-hero-img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; background: #e0e0e0; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 24px; background: #000; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+    .info-box { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 1px solid #f0f0f0; }
+    .info-box .label { font-size: 12px; color: #757575; margin-bottom: 4px; }
+    .info-box .value { font-size: 18px; font-weight: 700; color: #212121; }
+    
+    .section-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #f0f0f0; }
+    .section-title-sm { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #212121; display: flex; align-items: center; gap: 8px; }
+    
+    .ingredient-list { list-style: none; padding: 0; }
+    .ingredient-list li { padding: 12px 0; border-bottom: 1px solid #f5f5f5; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
+    .ingredient-list li:last-child { border-bottom: none; }
+    .ingredient-list li::before { content: '•'; color: #4CAF50; font-weight: bold; font-size: 20px; line-height: 1; }
+    
+    .step-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .step-item:last-child { margin-bottom: 0; }
+    .step-num { width: 32px; height: 32px; background: #4CAF50; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .step-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: #212121; }
+    .step-content p { font-size: 14px; color: #616161; line-height: 1.6; margin: 0; }
+
+    .nutrition-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #e0e0e0; font-size: 14px; }
+    .nutrition-row:last-child { border-bottom: none; }
+    .nutrition-row span:first-child { color: #757575; }
+    .nutrition-row span:last-child { font-weight: 600; color: #212121; }
+
+    .warning-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 16px; border-radius: 0 8px 8px 0; margin-top: 16px; font-size: 14px; color: #e65100; }
+    .benefit-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px; font-size: 14px; color: #2e7d32; }
+
+    .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .btn-download { background: #4CAF50; color: white; border: none; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-back { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="mobile-header">
+    <button class="back-btn" onclick="window.history.back()">←</button>
+    <h1 class="logo">สูตรเครื่องดื่ม</h1>
+    <div style="width: 40px;"></div>
+  </header>
+
+  <main class="mobile-content">
+    
+    <!-- กรณีไม่พบสูตร -->
+    <div id="errorContainer" class="error-container">
+      <div class="error-icon">😕</div>
+      <h2>ไม่พบสูตรนี้</h2>
+      <p style="color: #757575; margin-bottom: 20px;">อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว</p>
+      <a href="index.html" class="btn-back">กลับสู่หน้าแรก</a>
+    </div>
+
+    <!-- กรณีพบสูตร (จะแสดงข้อมูลตรงนี้) -->
+    <div id="recipeContainer" class="recipe-detail-container">
+      
+      <!-- Image & Video -->
+      <img id="recipeImage" src="" alt="Recipe Image" class="recipe-hero-img">
+      
+      <div class="video-wrapper">
+        <iframe id="recipeVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Header Info -->
+      <div style="margin-bottom: 20px;">
+        <span id="recipeCategory" class="recipe-category" style="color: #4CAF50; font-size: 13px; font-weight: 600; text-transform: uppercase;">หมวดหมู่</span>
+        <h1 id="recipeTitle" style="font-size: 26px; font-weight: 700; margin: 8px 0 12px; color: #212121; line-height: 1.3;">ชื่อสูตร</h1>
+        <p id="recipeIntro" style="font-size: 15px; color: #616161; line-height: 1.6;">คำอธิบายสั้นๆ</p>
+      </div>
+
+      <!-- Meta Info Grid -->
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="label">เวลาเตรียม</div>
+          <div id="prepTime" class="value">- นาที</div>
+        </div>
+        <div class="info-box">
+          <div class="label">เวลาทำ</div>
+          <div id="cookTime" class="value">- นาที</div>
+        </div>
+        <div class="info-box">
+          <div class="label">ปริมาณ</div>
+          <div id="servings" class="value">- ลิตร</div>
+        </div>
+        <div class="info-box">
+          <div class="label">คะแนน</div>
+          <div id="rating" class="value">- / 5</div>
+        </div>
+      </div>
+
+      <!-- Benefits & Warnings -->
+      <div id="benefitBox" class="benefit-box"></div>
+      <div id="warningBox" class="warning-box"></div>
+
+      <!-- Ingredients -->
+      <div class="section-card">
+        <h3 class="section-title-sm">📝 วัตถุดิบ</h3>
+        <ul id="ingredientsList" class="ingredient-list">
+          <!-- JS จะเติมข้อมูลตรงนี้ -->
+        </ul>
+      </div>
+
+      <!-- Instructions -->
+      <div class="section-card">
+        <h3 class="section-title-sm">👩‍🍳 ขั้นตอนการทำ</h3>
+        <div id="stepsList">
+          <!-- JS จะเติมข้อมูลตรงนี้ -->
+        </div>
+      </div>
+
+      <!-- Nutrition -->
+      <div class="section-card">
+        <h3 class="section-title-sm">📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)</h3>
+        <div id="nutritionList">
+          <!-- JS จะเติมข้อมูลตรงนี้ -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button id="downloadBtn" class="btn-download">
+          ⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)
+        </button>
+        <a href="index.html" class="btn-back">ดูสูตรอื่นๆ</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="mobile-footer">
+    <p>© 2026 Beverage Masterclass</p>
+  </footer>
+
+  <!-- สำคัญ: ต้องโหลด data.js ก่อน app.js เสมอ -->
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

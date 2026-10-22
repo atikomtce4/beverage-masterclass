@@ -1,0 +1,16 @@
+[
+  {
+    "id": "roselle_10L",
+    "name": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร",
+    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+    "prepTime": "25 นาที",
+    "rating": "4.8"
+  },
+  {
+    "id": "chrysanthemum_15L",
+    "name": "น้ำเก๊กฮวยดอกใหญ่ 15 ลิตร",
+    "image": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80",
+    "prepTime": "30 นาที",
+    "rating": "4.9"
+  }
+]
