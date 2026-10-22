@@ -12,13 +12,12 @@
     .error-container { text-align: center; padding: 40px 20px; display: none; }
     .error-icon { font-size: 48px; margin-bottom: 16px; }
 
-    /* --- 1. Header Info (อยู่ด้านบน) --- */
     .recipe-header-info { margin-bottom: 20px; }
     .recipe-category { color: #4CAF50; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
     .recipe-title { font-size: 26px; font-weight: 700; margin: 8px 0 12px; color: #212121; line-height: 1.3; }
     .recipe-intro { font-size: 15px; color: #616161; line-height: 1.6; }
 
-    /* --- 2 & 3. Media Container (รูป+วิดีโอ ในกล่องเดียวกัน + Aspect Ratio 16:9) --- */
+    /* --- Media Container (Gallery + Video) --- */
     .media-container {
       background: white;
       border-radius: 12px;
@@ -42,47 +41,76 @@
       color: #757575;
       cursor: pointer;
       transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
     }
     .tab-btn.active {
       background: white;
       color: #4CAF50;
       border-bottom: 3px solid #4CAF50;
     }
-    .media-content {
+    
+    .media-view { display: none; }
+    .media-view.active { display: block; }
+
+    /* Main Image Area (Locked 16:9) */
+    .main-image-wrapper {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9; /* ล็อกอัตราส่วน 16:9 เสมอ */
-      background: #000;
+      aspect-ratio: 16 / 9;
+      background: #f5f5f5;
     }
-    .media-item {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .main-image {
       width: 100%;
       height: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
+      object-fit: cover; /* ป้องกันรูปยืด/เบี้ยว */
     }
-    .media-item.active {
+
+    /* Thumbnail Strip (เลื่อนซ้าย-ขวาได้) */
+    .thumbnail-strip {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      overflow-x: auto;
+      background: white;
+      scrollbar-width: none; /* Firefox */
+    }
+    .thumbnail-strip::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
+    
+    .thumbnail {
+      flex: 0 0 auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      opacity: 0.6;
+    }
+    .thumbnail.active {
+      border-color: #4CAF50;
       opacity: 1;
-      visibility: visible;
+      transform: scale(1.05);
     }
-    /* ป้องกันรูปยืด/เบี้ยว */
-    #recipeImage {
-      object-fit: cover; 
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    #recipeVideoWrapper iframe {
+
+    /* Video Wrapper */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .video-wrapper iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
 
-    /* --- ส่วนอื่นๆ (คงเดิมแต่ปรับแต่งเล็กน้อย) --- */
+    /* --- ส่วนอื่นๆ (คงเดิม) --- */
     .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
     .info-box { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 1px solid #f0f0f0; }
     .info-box .label { font-size: 12px; color: #757575; margin-bottom: 4px; }
@@ -124,7 +152,6 @@
   </header>
 
   <main class="mobile-content">
-    
     <div id="errorContainer" class="error-container">
       <div class="error-icon">😕</div>
       <h2>ไม่พบสูตรนี้</h2>
@@ -134,22 +161,33 @@
 
     <div id="recipeContainer" class="recipe-detail-container">
       
-      <!-- 1. ชื่อและคำบรรยาย (ย้ายมาบนสุด) -->
+      <!-- 1. ชื่อและคำบรรยาย -->
       <div class="recipe-header-info">
         <span id="recipeCategory" class="recipe-category">หมวดหมู่</span>
         <h1 id="recipeTitle" class="recipe-title">ชื่อสูตร</h1>
         <p id="recipeIntro" class="recipe-intro">คำอธิบายสั้นๆ</p>
       </div>
 
-      <!-- 2 & 3. กล่องสื่อผสม (รูป + วิดีโอ) อัตราส่วน 16:9 -->
+      <!-- 2. กล่องสื่อผสม (แกลเลอรี + วิดีโอ) -->
       <div class="media-container">
         <div class="media-tabs">
-          <button class="tab-btn active" onclick="switchMedia('image')">📷 รูปภาพ</button>
-          <button class="tab-btn" onclick="switchMedia('video')">🎬 วิดีโอ</button>
+          <button class="tab-btn active" onclick="switchMediaTab('gallery')">📷 รูปภาพ</button>
+          <button class="tab-btn" onclick="switchMediaTab('video')">🎬 วิดีโอ</button>
         </div>
-        <div class="media-content">
-          <img id="recipeImage" class="media-item active" src="" alt="Recipe Image">
-          <div id="recipeVideoWrapper" class="media-item">
+
+        <!-- มุมมองแกลเลอรี -->
+        <div id="view-gallery" class="media-view active">
+          <div class="main-image-wrapper">
+            <img id="mainRecipeImage" class="main-image" src="" alt="Recipe Image">
+          </div>
+          <div class="thumbnail-strip" id="thumbnailStrip">
+            <!-- JS จะสร้างรูปย่อตรงนี้ -->
+          </div>
+        </div>
+
+        <!-- มุมมองวิดีโอ -->
+        <div id="view-video" class="media-view">
+          <div class="video-wrapper">
             <iframe id="recipeVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
@@ -157,22 +195,10 @@
 
       <!-- Meta Info Grid -->
       <div class="info-grid">
-        <div class="info-box">
-          <div class="label">เวลาเตรียม</div>
-          <div id="prepTime" class="value">- นาที</div>
-        </div>
-        <div class="info-box">
-          <div class="label">เวลาทำ</div>
-          <div id="cookTime" class="value">- นาที</div>
-        </div>
-        <div class="info-box">
-          <div class="label">ปริมาณ</div>
-          <div id="servings" class="value">- ลิตร</div>
-        </div>
-        <div class="info-box">
-          <div class="label">คะแนน</div>
-          <div id="rating" class="value">- / 5</div>
-        </div>
+        <div class="info-box"><div class="label">เวลาเตรียม</div><div id="prepTime" class="value">- นาที</div></div>
+        <div class="info-box"><div class="label">เวลาทำ</div><div id="cookTime" class="value">- นาที</div></div>
+        <div class="info-box"><div class="label">ปริมาณ</div><div id="servings" class="value">- ลิตร</div></div>
+        <div class="info-box"><div class="label">คะแนน</div><div id="rating" class="value">- / 5</div></div>
       </div>
 
       <div id="benefitBox" class="benefit-box"></div>

@@ -2,7 +2,13 @@
   "id": "roselle_10L",
   "name": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร",
   "category": "herbal",
-  "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+  "images": [
+    "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80",
+    "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=800&q=80",
+    "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800&q=80",
+    "https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?w=800&q=80",
+    "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80"
+  ],
   "videoUrl": "https://www.youtube.com/embed/FhP7ooYzprc",
   "prepTime": "10 นาที",
   "cookTime": "15 นาที",
