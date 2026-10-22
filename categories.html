@@ -2,40 +2,48 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore by category - Beverage Masterclass</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>หมวดหมู่ | Beverage Masterclass</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mobile-style.css">
+  <style>
+    .page-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: #212121; }
+    .page-subtitle { font-size: 14px; color: #757575; margin-bottom: 24px; }
+    .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .category-card {
+      background: white; border-radius: 16px; overflow: hidden;
+      border: 1px solid #f0f0f0; text-decoration: none; color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .category-card:active { transform: scale(0.98); }
+    .category-card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .category-card-body { padding: 12px; }
+    .category-card-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #212121; }
+    .category-card-desc { font-size: 12px; color: #757575; line-height: 1.4; margin-bottom: 8px; }
+    .category-card-count { font-size: 11px; color: #4CAF50; font-weight: 600; }
+  </style>
 </head>
 <body>
 
   <header class="mobile-header">
     <button class="back-btn" onclick="window.history.back()">←</button>
-    <h1 class="logo">Explore by category</h1>
-    <div style="width: 40px;"></div> <!-- Spacer -->
+    <h1 class="logo" id="pageTitle">หมวดหมู่</h1>
+    <div style="width: 40px;"></div>
   </header>
 
   <main class="mobile-content">
-    <nav class="category-list">
-      <a href="#" class="category-item" onclick="showCategory('thai-herbs')">
-        <span>Thai herbs</span>
-        <span class="arrow">›</span>
-      </a>
-      <a href="#" class="category-item" onclick="showCategory('tea-hot')">
-        <span>Tea & Hot Drinks</span>
-        <span class="arrow">›</span>
-      </a>
-      <a href="#" class="category-item" onclick="showCategory('milk-cereals')">
-        <span>Milk & Cereals</span>
-        <span class="arrow">›</span>
-      </a>
-      <a href="#" class="category-item" onclick="showCategory('fermented')">
-        <span>Fermented beverages</span>
-        <span class="arrow">›</span>
-      </a>
-    </nav>
+    <h2 class="page-title" id="pageHeading">หมวดหมู่เครื่องดื่ม</h2>
+    <p class="page-subtitle" id="pageSubheading">เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม</p>
+    
+    <div class="category-grid" id="categoryGrid">
+      <!-- JS จะ Render ตรงนี้ -->
+    </div>
   </main>
 
-  <script src="js/mobile-app.js"></script>
+  <footer class="mobile-footer">
+    <p>© 2026 Beverage Masterclass</p>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
