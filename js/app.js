@@ -329,25 +329,25 @@ const CATEGORIES_DATA = {
   herbal: {
     name: { th: 'สมุนไพรไทย', en: 'Thai Herbs' },
     desc: { th: 'รวมสูตรเครื่องดื่มจากภูมิปัญญาไทย สรรพคุณเน้นๆ ทำง่าย ดื่มดีต่อสุขภาพ', en: 'Traditional Thai herbal drinks with health benefits, easy to make' },
-    image: 'https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?w=400&q=80',
+    image: 'images/categories/herbal.jpg',
     count: 2
   },
   tea: {
     name: { th: 'ชา & เครื่องดื่มร้อน', en: 'Tea & Hot Drinks' },
     desc: { th: 'ชาไทย ชาเขียว และเครื่องดื่มร้อนหลากสไตล์', en: 'Thai tea, green tea, and various hot beverages' },
-    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80',
+    image: 'images/categories/tea.jpg',
     count: 0
   },
   milk: {
     name: { th: 'นม & ธัญพืช', en: 'Milk & Cereals' },
     desc: { th: 'นมถั่วเหลือง นมข้าวโพด และเครื่องดื่มธัญพืช', en: 'Soy milk, corn milk, and cereal-based drinks' },
-    image: 'https://images.unsplash.com/photo-1605202888635-1e331ec07b83?w=400&q=80',
+    image: 'images/categories/milk.jpg',
     count: 0
   },
   ferment: {
     name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' },
     desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' },
-    image: 'https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=400&q=80',
+    image: 'images/categories/ferment.jpg',
     count: 0
   }
 };
