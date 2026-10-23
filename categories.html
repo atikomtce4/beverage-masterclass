@@ -9,18 +9,65 @@
   <style>
     .page-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: #212121; }
     .page-subtitle { font-size: 14px; color: #757575; margin-bottom: 24px; }
-    .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .category-card {
-      background: white; border-radius: 16px; overflow: hidden;
-      border: 1px solid #f0f0f0; text-decoration: none; color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
+    
+    /* ✅ ปรับเป็น 1 คอลัมน์ */
+    .category-grid { 
+      display: grid; 
+      grid-template-columns: 1fr; /* 1 คอลัมน์เต็มความกว้าง */
+      gap: 20px; 
     }
-    .category-card:active { transform: scale(0.98); }
-    .category-card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-    .category-card-body { padding: 12px; }
-    .category-card-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #212121; }
-    .category-card-desc { font-size: 12px; color: #757575; line-height: 1.4; margin-bottom: 8px; }
-    .category-card-count { font-size: 11px; color: #4CAF50; font-weight: 600; }
+    
+    .category-card {
+      background: white; 
+      border-radius: 16px; 
+      overflow: hidden;
+      border: 1px solid #f0f0f0; 
+      text-decoration: none; 
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .category-card:active { 
+      transform: scale(0.98); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* ✅ รูปใหญ่เต็มความกว้าง อัตราส่วน 16:9 */
+    .category-card-img { 
+      width: 100%; 
+      aspect-ratio: 16/9; 
+      object-fit: cover; 
+    }
+    
+    .category-card-body { 
+      padding: 16px; 
+    }
+    
+    .category-card-title { 
+      font-size: 18px; 
+      font-weight: 700; 
+      margin-bottom: 6px; 
+      color: #212121; 
+    }
+    
+    .category-card-desc { 
+      font-size: 13px; 
+      color: #757575; 
+      line-height: 1.5; 
+      margin-bottom: 10px; 
+    }
+    
+    .category-card-count { 
+      font-size: 12px; 
+      color: #4CAF50; 
+      font-weight: 600;
+      display: inline-block;
+      padding: 4px 10px;
+      background: #E8F5E9;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
