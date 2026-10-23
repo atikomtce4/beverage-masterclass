@@ -196,21 +196,29 @@ function renderMachineSteps(recipe, volume) {
   if (!stepsContainer) return;
 
   const { scaledSteps } = scaleRecipe(recipe, volume);
-  stepsContainer.innerHTML = scaledSteps.map((step) => `
-    <div class="step-item">
-      <div class="step-num">${step.step}</div>
-      <div class="step-content">
-        <h4>${getText(step.title)}</h4>
-        <p>${getText(step.desc)}</p>
-        <div class="machine-info-box">
-          <strong>️ ${step.function}</strong>
-          ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
-          ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
-          ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
+  const baseVolume = recipe.baseVolume || 10;
+  const scaleFactor = volume / baseVolume;
+  
+  stepsContainer.innerHTML = scaledSteps.map((step) => {
+    // ประมวลผลข้อความแบบ Dynamic
+    const processedDesc = processDesc(step.desc, step.descVariables, scaleFactor);
+    
+    return `
+      <div class="step-item">
+        <div class="step-num">${step.step}</div>
+        <div class="step-content">
+          <h4>${getText(step.title)}</h4>
+          <p>${processedDesc}</p>
+          <div class="machine-info-box">
+            <strong>️ ${step.function}</strong>
+            ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
+            ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
+            ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
+          </div>
         </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   stepsContainer.innerHTML += `
     <div style="margin-top: 32px; text-align: center;">
@@ -302,25 +310,56 @@ function initVolumeSelector(recipe) {
   });
 }
 
-// ===== Rendering & UI Updates =====
 
+// ฟังก์ชันประมวลผลข้อความแบบ Dynamic (แทนที่ {placeholder} ด้วยค่าที่ scale แล้ว)
+function processDesc(descObj, variables, scaleFactor) {
+  if (!descObj) return '';
+  
+  const text = getText(descObj); // ได้ข้อความ th หรือ en
+  if (!variables || Object.keys(variables).length === 0) return text;
+  
+  let result = text;
+  
+  for (const [key, varInfo] of Object.entries(variables)) {
+    const scaledAmount = varInfo.scalable !== false ? varInfo.amount * scaleFactor : varInfo.amount;
+    const formatted = formatAmount(scaledAmount, varInfo.unit);
+    const placeholder = `{${key}}`;
+    
+    // แทนที่ทุก occurrence ของ placeholder
+    const regex = new RegExp(placeholder.replace(/[{}]/g, '\\$&'), 'g');
+    result = result.replace(regex, `${formatted} ${varInfo.unit}`);
+  }
+  
+  return result;
+}
+
+// ===== Rendering & UI Updates =====
 function renderSteps(recipe) {
   const stepsContainer = document.getElementById('stepsList');
   if (!stepsContainer) return;
   
   if (currentMode === 'manual') {
     const manualSteps = recipe.manualSteps || [];
-    stepsContainer.innerHTML = manualSteps.map(step => `
-      <div class="step-item">
-        <div class="step-num">${step.step}</div>
-        <div class="step-content">
-          <h4>${getText(step.title)}</h4>
-          <p>${getText(step.desc)}</p>
-          ${step.image ? `<img src="${step.image}" alt="${getText(step.title)}" class="step-image" loading="lazy">` : ''}
-          ${step.tips ? `<div class="tips-box">${getText(step.tips)}</div>` : ''}
+    const baseVolume = recipe.baseVolume || 10;
+    const scaleFactor = currentVolume / baseVolume;
+    
+    stepsContainer.innerHTML = manualSteps.map(step => {
+      // ประมวลผลข้อความแบบ Dynamic
+      const processedDesc = processDesc(step.desc, step.descVariables, scaleFactor);
+      const processedTips = step.tips ? processDesc(step.tips, step.descVariables, scaleFactor) : null;
+      
+      return `
+        <div class="step-item">
+          <div class="step-num">${step.step}</div>
+          <div class="step-content">
+            <h4>${getText(step.title)}</h4>
+            <p>${processedDesc}</p>
+            ${step.image ? `<img src="${step.image}" alt="${getText(step.title)}" class="step-image" loading="lazy">` : ''}
+            ${processedTips ? `<div class="tips-box">${processedTips}</div>` : ''}
+          </div>
         </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   } else {
     renderMachineSteps(recipe, currentVolume);
   }
