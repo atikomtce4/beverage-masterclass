@@ -74,8 +74,11 @@
       "scalable": true,
       "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
       "desc": {
-        "th": "เริ่มด้วยการเติมน้ำสะอาด 10 ลิตรลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
-        "en": "Start by adding 10 liters of clean water into the tank automatically."
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลิตรลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} liters of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
       }
     },
     {
