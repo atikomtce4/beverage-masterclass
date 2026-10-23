@@ -614,3 +614,160 @@ body {
     height: 150px;
   }
 }
+/* Mode Toggle Switch */
+.mode-toggle-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mode-toggle {
+  display: flex;
+  background: #f0f0f0;
+  border-radius: 25px;
+  padding: 4px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mode-btn {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #757575;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mode-btn.active {
+  background: #4CAF50;
+  color: white;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.mode-btn:hover:not(.active) {
+  background: #e0e0e0;
+}
+
+.mode-text {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .mode-text {
+    display: none; /* ซ่อนข้อความบนมือถือ เหลือแต่ไอคอน */
+  }
+  .mode-btn {
+    padding: 10px 16px;
+  }
+}
+
+/* Tips Box (สำหรับโหมด Manual) */
+.tips-box {
+  background: #fff9c4;
+  border-left: 4px solid #fbc02d;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #5d4037;
+  line-height: 1.6;
+}
+
+/* Volume Selector */
+.volume-selector-card {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #4CAF50;
+}
+
+.volume-presets {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  flex: 1;
+  min-width: 50px;
+  padding: 10px 8px;
+  background: white;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4CAF50;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-btn.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.preset-btn:hover:not(.active) {
+  background: #F1F8E9;
+}
+
+.volume-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.volume-slider {
+  flex: 1;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #C8E6C9;
+  border-radius: 4px;
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.volume-display {
+  min-width: 80px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2E7D32;
+}
+
+.volume-info {
+  text-align: center;
+  font-size: 12px;
+  color: #558B2F;
+}
