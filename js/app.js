@@ -1,10 +1,12 @@
 /* ==========================================================
-   🧠 BEVERAGE MASTERCLASS - APP LOGIC (Fully Bilingual Fixed)
+    BEVERAGE MASTERCLASS - APP LOGIC (Final Merged Version)
    ========================================================== */
 
+// Global Variables
 let currentLang = localStorage.getItem('preferredLang') || 'th';
 let currentMode = 'manual';
 let currentRecipe = null;
+let currentVolume = 10;
 
 const CATEGORY_NAMES = {
   'herbal': { 'th': 'สมุนไพรไทย', 'en': 'Thai Herbs' },
@@ -14,21 +16,21 @@ const CATEGORY_NAMES = {
 };
 
 const UI_LABELS = {
-  headerTitle: { 'th': 'สูตรเครื่องดื่ม', 'en': 'Beverage Recipes' }, // ✅ เพิ่มแล้ว
-  modeManual: { 'th': 'ทำเอง', 'en': 'Manual' }, // ✅ เพิ่มแล้ว
-  modeMachine: { 'th': 'ใช้เครื่อง', 'en': 'Machine' }, // ✅ เพิ่มแล้ว
-  tabGallery: { 'th': '📷 รูปภาพ', 'en': '📷 Gallery' }, // ✅ เพิ่มแล้ว
-  tabVideo: { 'th': '🎬 วิดีโอ', 'en': '🎬 Video' }, // ✅ เพิ่มแล้ว
+  headerTitle: { 'th': 'สูตรเครื่องดื่ม', 'en': 'Beverage Recipes' },
+  modeManual: { 'th': 'ทำเอง', 'en': 'Manual' },
+  modeMachine: { 'th': 'ใช้เครื่อง', 'en': 'Machine' },
+  tabGallery: { 'th': ' รูปภาพ', 'en': '📷 Gallery' },
+  tabVideo: { 'th': '🎬 วิดีโอ', 'en': ' Video' },
   prepTime: { 'th': 'เวลาเตรียม', 'en': 'Prep Time' },
   cookTime: { 'th': 'เวลาทำ', 'en': 'Cook Time' },
   servings: { 'th': 'ปริมาณ', 'en': 'Servings' },
   rating: { 'th': 'คะแนน', 'en': 'Rating' },
-  ingredients: { 'th': '📝 วัตถุดิบ', 'en': '📝 Ingredients' },
+  ingredients: { 'th': ' วัตถุดิบ', 'en': '📝 Ingredients' },
   steps: { 'th': '👩‍🍳 ขั้นตอนการทำ', 'en': '👩‍🍳 Instructions' },
-  nutrition: { 'th': '📊 ข้อมูลโภชนาการ (ต่อ 100 มล.)', 'en': '📊 Nutrition Facts (per 100ml)' },
+  nutrition: { 'th': ' ข้อมูลโภชนาการ (ต่อ 100 มล.)', 'en': '📊 Nutrition Facts (per 100ml)' },
   backToHome: { 'th': 'ดูสูตรอื่นๆ', 'en': 'Browse More Recipes' },
   copyLink: { 'th': '📋 คัดลอกลิงก์สูตรสำหรับเครื่อง', 'en': '📋 Copy Machine Recipe Link' },
-  downloadBtn: { 'th': '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)', 'en': '⬇ Download Recipe for Machine (.json)' },
+  downloadBtn: { 'th': '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)', 'en': ' Download Recipe for Machine (.json)' },
   benefits: { 'th': 'สรรพคุณ', 'en': 'Benefits' },
   calories: { 'th': 'พลังงาน', 'en': 'Calories' },
   carbs: { 'th': 'คาร์โบไฮเดรต', 'en': 'Carbs' },
@@ -36,8 +38,12 @@ const UI_LABELS = {
   protein: { 'th': 'โปรตีน', 'en': 'Protein' }
 };
 
+// ===== Helper Functions =====
+
 function getText(obj) {
+  if (!obj) return '';
   if (typeof obj === 'string') return obj;
+  if (Array.isArray(obj)) return obj; // ส่งคืน Array โดยตรงถ้าเป็น Array
   if (typeof obj === 'object' && obj !== null) {
     return obj[currentLang] || obj['th'] || Object.values(obj)[0];
   }
@@ -46,19 +52,25 @@ function getText(obj) {
 
 function showToast(message) {
   const toast = document.getElementById('toast');
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 function showError() {
-  document.getElementById('errorContainer').style.display = 'block';
-  document.getElementById('recipeContainer').style.display = 'none';
-  document.getElementById('errorTitle').textContent = currentLang === 'th' ? 'ไม่พบสูตรนี้' : 'Recipe Not Found';
-  document.getElementById('errorMsg').textContent = currentLang === 'th' 
-    ? 'อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว' 
-    : 'The recipe may have been moved or deleted';
+  const errContainer = document.getElementById('errorContainer');
+  const recContainer = document.getElementById('recipeContainer');
+  if(errContainer) errContainer.style.display = 'block';
+  if(recContainer) recContainer.style.display = 'none';
+  
+  const errTitle = document.getElementById('errorTitle');
+  const errMsg = document.getElementById('errorMsg');
+  if(errTitle) errTitle.textContent = currentLang === 'th' ? 'ไม่พบสูตรนี้' : 'Recipe Not Found';
+  if(errMsg) errMsg.textContent = currentLang === 'th' ? 'อาจมีการเปลี่ยนแปลงลิงก์ หรือสูตรนี้ถูกลบไปแล้ว' : 'The recipe may have been moved or deleted';
 }
+
+// ===== Language & Mode Functions =====
 
 function switchLanguage(lang) {
   currentLang = lang;
@@ -66,14 +78,10 @@ function switchLanguage(lang) {
   
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.remove('active');
-    if (btn.textContent.toLowerCase() === lang) {
-      btn.classList.add('active');
-    }
+    if (btn.textContent.toLowerCase().includes(lang)) btn.classList.add('active');
   });
   
-  if (currentRecipe) {
-    updateLanguageUI();
-  }
+  if (currentRecipe) updateLanguageUI();
 }
 
 function switchMode(mode) {
@@ -87,6 +95,8 @@ function switchMode(mode) {
     updateActionButtons();
   }
 }
+
+// ===== Media Functions =====
 
 function switchMediaTab(tabName) {
   document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
@@ -107,9 +117,10 @@ function changeMainImage(imageUrl, thumbnailElement) {
   if (thumbnailElement) thumbnailElement.classList.add('active');
 }
 
+// ===== Data Loading =====
+
 async function loadRecipe(recipeId) {
   let filePath = recipeId.includes('/') ? `recipes/${recipeId}.json` : null;
-  
   if (!filePath) {
     for (const cat of Object.keys(CATEGORY_NAMES)) {
       try {
@@ -118,15 +129,184 @@ async function loadRecipe(recipeId) {
       } catch (e) { continue; }
     }
   }
-
   if (!filePath) throw new Error('Recipe not found');
   const response = await fetch(filePath);
   if (!response.ok) throw new Error('Failed to load recipe');
   return await response.json();
 }
 
+// ===== 🧮 Dynamic Calculator Logic =====
+
+function formatAmount(amount, unit) {
+  const unitLower = unit.toLowerCase();
+  if (unitLower.includes('teaspoon') || unitLower.includes('tablespoon') || unitLower.includes('ช้อน')) {
+    const fractions = [{ v: 0.25, t: '¼' }, { v: 0.33, t: '⅓' }, { v: 0.5, t: '½' }, { v: 0.67, t: '' }, { v: 0.75, t: '¾' }];
+    for (const f of fractions) { if (Math.abs(amount - f.v) < 0.1) return f.t; }
+    return Math.round(amount).toString();
+  }
+  if (unitLower.includes('piece') || unitLower.includes('leaf') || unitLower.includes('ใบ') || unitLower.includes('ชิ้น')) {
+    return Math.round(amount).toString();
+  }
+  return amount % 1 === 0 ? amount.toString() : amount.toFixed(1);
+}
+
+function scaleRecipe(recipe, targetVolume) {
+  if (!recipe) return { scaledIngredients: [], scaledSteps: [] };
+  const baseVolume = recipe.baseVolume || 10;
+  const scaleFactor = targetVolume / baseVolume;
+
+  const scaledIngredients = (recipe.ingredients || []).map(ing => {
+    if (ing.scalable !== false && ing.amount) {
+      return { ...ing, scaledAmount: ing.amount * scaleFactor };
+    }
+    return { ...ing, scaledAmount: ing.amount };
+  });
+
+  const scaledSteps = (recipe.machineSteps || []).map(step => {
+    if (step.scalable !== false && step.function === 'Fill Water') {
+      return { ...step, scaledValue: step.target_value * scaleFactor };
+    }
+    return { ...step, scaledValue: step.target_value };
+  });
+
+  return { scaledIngredients, scaledSteps };
+}
+
+function renderIngredients(recipe, volume) {
+  const ingList = document.getElementById('ingredientsList');
+  if (!ingList) return;
+
+  // รองรับสูตรเก่า (Array ของ String)
+  if (Array.isArray(recipe.ingredients) && typeof recipe.ingredients[0] === 'string') {
+    ingList.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
+    return;
+  }
+
+  // สูตรใหม่ (Object)
+  const { scaledIngredients } = scaleRecipe(recipe, volume);
+  ingList.innerHTML = scaledIngredients.map(ing => {
+    const amount = formatAmount(ing.scaledAmount, ing.unit);
+    const scalableIcon = ing.scalable !== false ? '⚖️' : '📌';
+    return `<li>${scalableIcon} <strong>${getText(ing.name)}:</strong> ${amount} ${ing.unit}</li>`;
+  }).join('');
+}
+
+function renderMachineSteps(recipe, volume) {
+  const stepsContainer = document.getElementById('stepsList');
+  if (!stepsContainer) return;
+
+  const { scaledSteps } = scaleRecipe(recipe, volume);
+  stepsContainer.innerHTML = scaledSteps.map((step) => `
+    <div class="step-item">
+      <div class="step-num">${step.step}</div>
+      <div class="step-content">
+        <h4>${getText(step.title)}</h4>
+        <p>${getText(step.desc)}</p>
+        <div class="machine-info-box">
+          <strong>️ ${step.function}</strong>
+          ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
+          ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
+          ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  stepsContainer.innerHTML += `
+    <div style="margin-top: 32px; text-align: center;">
+      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
+    </div>
+  `;
+  document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe, volume);
+}
+
+function downloadRecipeJSON(recipe, volume) {
+  const { scaledSteps } = scaleRecipe(recipe, volume);
+  const machineData = {
+    recipe_id: recipe.id,
+    recipe_name: getText(recipe.name),
+    volume: volume,
+    total_volume: volume,
+    total_time: scaledSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
+    target_temp: scaledSteps.find(s => s.function.includes('Heat') || s.function.includes('Hold'))?.target_value || 0,
+    steps: scaledSteps.map(s => ({
+      function: s.function,
+      target_value: s.scaledValue,
+      unit: s.unit,
+      duration: s.duration || 0
+    }))
+  };
+
+  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  // เปลี่ยนชื่อไฟล์ตามปริมาณที่เลือก
+  a.download = `FML_${recipe.id.replace(/_\d+L$/, '')}_${volume}L.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  showToast(currentLang === 'th' ? `✅ ดาวน์โหลดสูตร ${volume}L สำเร็จ!` : `✅ Downloaded ${volume}L recipe!`);
+}
+
+function initVolumeSelector(recipe) {
+  const slider = document.getElementById('volumeSlider');
+  const volumeValue = document.getElementById('volumeValue');
+  const volumeUnit = document.getElementById('volumeUnit');
+  const volumeRange = document.getElementById('volumeRange');
+  const presetBtns = document.querySelectorAll('.preset-btn');
+  
+  if (!slider) return;
+  
+  const baseVolume = recipe.baseVolume || 10;
+  const minVolume = recipe.minVolume || 1;
+  const maxVolume = recipe.maxVolume || 20;
+  
+  slider.min = minVolume;
+  slider.max = maxVolume;
+  slider.value = baseVolume;
+  currentVolume = baseVolume;
+  
+  volumeValue.textContent = baseVolume;
+  volumeUnit.textContent = getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liter' });
+  volumeRange.textContent = `${minVolume} - ${maxVolume} ${getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liters' })}`;
+  
+  presetBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (parseInt(btn.dataset.volume) === baseVolume) btn.classList.add('active');
+  });
+  
+  slider.oninput = (e) => {
+    const newVolume = parseInt(e.target.value);
+    currentVolume = newVolume;
+    volumeValue.textContent = newVolume;
+    presetBtns.forEach(btn => {
+      btn.classList.remove('active');
+      if (parseInt(btn.dataset.volume) === newVolume) btn.classList.add('active');
+    });
+    if (currentMode === 'manual') renderIngredients(recipe, newVolume);
+    else renderMachineSteps(recipe, newVolume);
+  };
+  
+  presetBtns.forEach(btn => {
+    btn.onclick = () => {
+      const newVolume = parseInt(btn.dataset.volume);
+      currentVolume = newVolume;
+      slider.value = newVolume;
+      volumeValue.textContent = newVolume;
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (currentMode === 'manual') renderIngredients(recipe, newVolume);
+      else renderMachineSteps(recipe, newVolume);
+    };
+  });
+}
+
+// ===== Rendering & UI Updates =====
+
 function renderSteps(recipe) {
   const stepsContainer = document.getElementById('stepsList');
+  if (!stepsContainer) return;
   
   if (currentMode === 'manual') {
     const manualSteps = recipe.manualSteps || [];
@@ -142,26 +322,14 @@ function renderSteps(recipe) {
       </div>
     `).join('');
   } else {
-    const machineSteps = recipe.machineSteps || [];
-    stepsContainer.innerHTML = machineSteps.map((step) => `
-      <div class="step-item">
-        <div class="step-num">${step.step}</div>
-        <div class="step-content">
-          <h4>${getText(step.title)}</h4>
-          <p>${getText(step.desc)}</p>
-          <div class="machine-info-box">
-            <strong>⚙️ ${step.function}</strong>
-            ${step.target_value > 0 ? ` | Target: ${step.target_value} ${step.unit}` : ''}
-            ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
-          </div>
-        </div>
-      </div>
-    `).join('');
+    renderMachineSteps(recipe, currentVolume);
   }
 }
 
 function updateActionButtons() {
   const container = document.getElementById('actionButtons');
+  if (!container) return;
+  
   if (currentMode === 'manual') {
     container.innerHTML = `
       <button id="copyLinkBtn" class="btn-copy-link">📋 ${getText(UI_LABELS.copyLink)}</button>
@@ -173,21 +341,28 @@ function updateActionButtons() {
       <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
       <a href="index.html" class="btn-back">${getText(UI_LABELS.backToHome)}</a>
     `;
-    document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(currentRecipe);
+    document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(currentRecipe, currentVolume);
   }
 }
 
 function updateLanguageUI() {
   if (!currentRecipe) return;
 
-  // 1. อัปเดตข้อความที่ Hardcoded ใน HTML (แก้จุดที่ 1-5)
-  document.getElementById('headerTitle').textContent = getText(UI_LABELS.headerTitle);
-  document.getElementById('btnModeManual').innerHTML = `🖐️ <span class="mode-text">${getText(UI_LABELS.modeManual)}</span>`;
-  document.getElementById('btnModeMachine').innerHTML = `🤖 <span class="mode-text">${getText(UI_LABELS.modeMachine)}</span>`;
-  document.getElementById('tabGallery').textContent = getText(UI_LABELS.tabGallery);
-  document.getElementById('tabVideo').textContent = getText(UI_LABELS.tabVideo);
+  const setTxt = (id, labelKey) => { const el = document.getElementById(id); if (el) el.textContent = getText(UI_LABELS[labelKey]); };
 
-  // 2. อัปเดตข้อมูลสูตร
+  setTxt('headerTitle', 'headerTitle');
+  setTxt('labelPrepTime', 'prepTime'); setTxt('labelCookTime', 'cookTime');
+  setTxt('labelServings', 'servings'); setTxt('labelRating', 'rating');
+  setTxt('titleIngredients', 'ingredients'); setTxt('titleSteps', 'steps');
+  setTxt('titleNutrition', 'nutrition'); setTxt('btnBackToHome', 'backToHome');
+
+  const btnManual = document.getElementById('btnModeManual');
+  if (btnManual) btnManual.innerHTML = `🖐️ <span class="mode-text">${getText(UI_LABELS.modeManual)}</span>`;
+  const btnMachine = document.getElementById('btnModeMachine');
+  if (btnMachine) btnMachine.innerHTML = `🤖 <span class="mode-text">${getText(UI_LABELS.modeMachine)}</span>`;
+
+  setTxt('tabGallery', 'tabGallery'); setTxt('tabVideo', 'tabVideo');
+
   document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[currentRecipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
   document.getElementById('recipeTitle').textContent = getText(currentRecipe.name);
   document.getElementById('recipeIntro').textContent = getText(currentRecipe.intro);
@@ -196,35 +371,23 @@ function updateLanguageUI() {
   document.getElementById('servings').textContent = getText(currentRecipe.servings);
   document.getElementById('rating').textContent = `${currentRecipe.rating} / 5`;
   
-  document.getElementById('labelPrepTime').textContent = getText(UI_LABELS.prepTime);
-  document.getElementById('labelCookTime').textContent = getText(UI_LABELS.cookTime);
-  document.getElementById('labelServings').textContent = getText(UI_LABELS.servings);
-  document.getElementById('labelRating').textContent = getText(UI_LABELS.rating);
-  document.getElementById('titleIngredients').textContent = getText(UI_LABELS.ingredients);
-  document.getElementById('titleSteps').textContent = getText(UI_LABELS.steps);
-  document.getElementById('titleNutrition').textContent = getText(UI_LABELS.nutritionA); // Fixed typo if any, using nutrition
-  
-  // 3. แก้ไขจุดที่ 6: ดึง Array ของวัตถุดิบตามภาษาให้ถูกต้อง
-  const ingredientsArray = getText(currentRecipe.ingredients);
-  document.getElementById('ingredientsList').innerHTML = ingredientsArray.map(ing => `<li>${ing}</li>`).join('');
-  
-  // 4. Render ขั้นตอนใหม่ (จะดึง title/desc ที่เป็น object {th, en} มาแปลงอัตโนมัติ)
-  renderSteps(currentRecipe);
-  
-  // 5. โภชนาการ
-  const nutritionLabels = { calories: UI_LABELS.calories, carbs: UI_LABELS.carbs, sugar: UI_LABELS.sugar, protein: UI_LABELS.protein };
-  document.getElementById('nutritionList').innerHTML = Object.entries(currentRecipe.nutrition).map(([key, value]) => `
-    <div class="nutrition-row">
-      <span>${getText(nutritionLabels[key] || { th: key, en: key })}</span>
-      <span>${value}</span>
-    </div>
-  `).join('');
-
-  // 6. อัปเดตปุ่ม Action (แก้จุดที่ 7, 8)
-  updateActionButtons();
-  
   document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(currentRecipe.benefits)}`;
   document.getElementById('warningBox').innerHTML = getText(currentRecipe.warnings);
+  
+  // ✅ แก้ไขจุดที่ Error: ใช้ renderIngredients แทนการ map โดยตรง
+  renderIngredients(currentRecipe, currentVolume);
+  
+  renderSteps(currentRecipe);
+  
+  const nutritionLabels = { calories: UI_LABELS.calories, carbs: UI_LABELS.carbs, sugar: UI_LABELS.sugar, protein: UI_LABELS.protein };
+  const nutList = document.getElementById('nutritionList');
+  if (nutList) {
+    nutList.innerHTML = Object.entries(currentRecipe.nutrition).map(([key, value]) => `
+      <div class="nutrition-row"><span>${getText(nutritionLabels[key] || { th: key, en: key })}</span><span>${value}</span></div>
+    `).join('');
+  }
+
+  updateActionButtons();
 }
 
 function copyMachineLink() {
@@ -234,42 +397,9 @@ function copyMachineLink() {
   }
   const baseUrl = window.location.origin + window.location.pathname.replace(/recipe\.html.*/, '');
   const machineUrl = `${baseUrl}recipes/${currentRecipe.category}/${currentRecipe.machineFile}`;
-  
   navigator.clipboard.writeText(machineUrl).then(() => {
-    showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' : '✅ Link copied! Paste it in the machine control page');
-  }).catch(() => {
-    // Fallback
-    const textArea = document.createElement('textarea');
-    textArea.value = machineUrl;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว! นำไปวางในหน้าควบคุมเครื่องได้เลย' : '✅ Link copied! Paste it in the machine control page');
-  });
-}
-
-function downloadRecipeJSON(recipe) {
-  const machineData = {
-    recipe_id: recipe.id,
-    recipe_name: getText(recipe.name),
-    total_volume: recipe.machineSteps.find(s => s.function === "Fill Water")?.target_value || 0,
-    total_time: recipe.machineSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
-    target_temp: recipe.machineSteps.find(s => s.function.includes("Heat") || s.function.includes("Hold"))?.target_value || 0,
-    steps: recipe.machineSteps.map(s => ({
-      function: s.function, target_value: s.target_value, unit: s.unit, duration: s.duration || 0
-    }))
-  };
-
-  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `FML_${recipe.id}.json`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  
-  showToast(currentLang === 'th' ? `✅ ดาวน์โหลด "${getText(recipe.name)}" สำเร็จ!` : `✅ Recipe "${getText(recipe.name)}" downloaded!`);
+    showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว!' : '✅ Link copied!');
+  }).catch(() => showToast(currentLang === 'th' ? '✅ คัดลอกลิงก์แล้ว!' : '✅ Link copied!'));
 }
 
 async function renderRecipePage() {
@@ -281,6 +411,7 @@ async function renderRecipePage() {
   try {
     const recipe = await loadRecipe(recipeId);
     currentRecipe = recipe;
+    currentVolume = recipe.baseVolume || 10; // รีเซ็ตปริมาณเมื่อโหลดสูตรใหม่
     
     document.getElementById('recipeContainer').style.display = 'block';
     document.getElementById('errorContainer').style.display = 'none';
@@ -305,9 +436,8 @@ async function renderRecipePage() {
     }
     document.getElementById('recipeVideo').src = recipe.videoUrl || '';
     
-    // เรียกใช้ฟังก์ชันอัปเดตภาษาซึ่งจะจัดการทุกอย่างรวมถึง Action Buttons
     updateLanguageUI();
-    
+    initVolumeSelector(recipe); // ✅ เรียกใช้ Volume Selector หลังจากโหลดข้อมูลเสร็จ
     switchMediaTab('gallery');
     
   } catch (error) {
@@ -316,48 +446,19 @@ async function renderRecipePage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderRecipePage();
-});
+// ===== Categories Logic =====
 
-/* ==========================================================
-   📂 CATEGORIES & CATEGORY PAGE LOGIC
-   ========================================================== */
-
-// ข้อมูลหมวดหมู่ (สำหรับหน้า categories.html)
 const CATEGORIES_DATA = {
-  herbal: {
-    name: { th: 'สมุนไพรไทย', en: 'Thai Herbs' },
-    desc: { th: 'รวมสูตรเครื่องดื่มจากภูมิปัญญาไทย สรรพคุณเน้นๆ ทำง่าย ดื่มดีต่อสุขภาพ', en: 'Traditional Thai herbal drinks with health benefits, easy to make' },
-    image: 'images/categories/herbal.jpg',
-    count: 2
-  },
-  tea: {
-    name: { th: 'ชา & เครื่องดื่มร้อน', en: 'Tea & Hot Drinks' },
-    desc: { th: 'ชาไทย ชาเขียว และเครื่องดื่มร้อนหลากสไตล์', en: 'Thai tea, green tea, and various hot beverages' },
-    image: 'images/categories/tea.jpg',
-    count: 0
-  },
-  milk: {
-    name: { th: 'นม & ธัญพืช', en: 'Milk & Cereals' },
-    desc: { th: 'นมถั่วเหลือง นมข้าวโพด และเครื่องดื่มธัญพืช', en: 'Soy milk, corn milk, and cereal-based drinks' },
-    image: 'images/categories/milk.jpg',
-    count: 0
-  },
-  ferment: {
-    name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' },
-    desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' },
-    image: 'images/categories/ferment.jpg',
-    count: 0
-  }
+  herbal: { name: { th: 'สมุนไพรไทย', en: 'Thai Herbs' }, desc: { th: 'รวมสูตรเครื่องดื่มจากภูมิปัญญาไทย...', en: 'Traditional Thai herbal drinks...' }, image: 'images/categories/herbal.jpg', count: 2 },
+  tea: { name: { th: 'ชา & เครื่องดื่มร้อน', en: 'Tea & Hot Drinks' }, desc: { th: 'ชาไทย ชาเขียว และเครื่องดื่มร้อนหลากสไตล์', en: 'Thai tea, green tea, and various hot beverages' }, image: 'images/categories/tea.jpg', count: 0 },
+  milk: { name: { th: 'นม & ธัญพืช', en: 'Milk & Cereals' }, desc: { th: 'นมถั่วเหลือง นมข้าวโพด และเครื่องดื่มธัญพืช', en: 'Soy milk, corn milk, and cereal-based drinks' }, image: 'images/categories/milk.jpg', count: 0 },
+  ferment: { name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' }, desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' }, image: 'images/categories/ferment.jpg', count: 0 }
 };
 
-// ฟังก์ชัน Render หน้า categories.html
 function renderCategoriesPage() {
   const grid = document.getElementById('categoryGrid');
-  if (!grid) return; // ไม่ได้อยู่ในหน้า categories.html
+  if (!grid) return;
   
-  // อัปเดตหัวข้อตามภาษา
   const pageTitle = document.getElementById('pageTitle');
   const pageHeading = document.getElementById('pageHeading');
   const pageSubheading = document.getElementById('pageSubheading');
@@ -366,7 +467,6 @@ function renderCategoriesPage() {
   if (pageHeading) pageHeading.textContent = getText({ th: 'หมวดหมู่เครื่องดื่ม', en: 'Beverage Categories' });
   if (pageSubheading) pageSubheading.textContent = getText({ th: 'เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม', en: 'Choose a category to explore recipes' });
   
-  // Render การ์ดหมวดหมู่
   grid.innerHTML = Object.entries(CATEGORIES_DATA).map(([id, cat]) => `
     <a href="category.html?id=${id}" class="category-card">
       <img src="${cat.image}" alt="${getText(cat.name)}" class="category-card-img">
@@ -379,37 +479,28 @@ function renderCategoriesPage() {
   `).join('');
 }
 
-// ฟังก์ชัน Render หน้า category.html (Dynamic)
 async function renderCategoryPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const categoryId = urlParams.get('id');
-  
   if (!categoryId) {
     document.getElementById('errorContainer').style.display = 'block';
     document.getElementById('categoryContainer').style.display = 'none';
     return;
   }
-  
   try {
-    // โหลด index.json ของหมวดหมู่นั้น
     const response = await fetch(`recipes/${categoryId}/index.json`);
     if (!response.ok) throw new Error('Category not found');
     const recipes = await response.json();
-    
     const categoryInfo = CATEGORIES_DATA[categoryId];
     if (!categoryInfo) throw new Error('Category info not found');
     
-    // แสดง Container
     document.getElementById('categoryContainer').style.display = 'block';
     document.getElementById('errorContainer').style.display = 'none';
-    
-    // อัปเดต Hero Banner
     document.getElementById('heroTitle').textContent = getText(categoryInfo.name);
     document.getElementById('heroDesc').textContent = getText(categoryInfo.desc);
     document.getElementById('headerTitle').textContent = getText(categoryInfo.name);
     document.title = `${getText(categoryInfo.name)} | Beverage Masterclass`;
     
-    // Render การ์ดสูตร
     const grid = document.getElementById('recipeGrid');
     if (recipes.length === 0) {
       grid.innerHTML = `<div class="empty-state">${getText({ th: 'ยังไม่มีสูตรในหมวดหมู่นี้', en: 'No recipes in this category yet' })}</div>`;
@@ -419,319 +510,23 @@ async function renderCategoryPage() {
           <img src="${r.image}" alt="${getText(r.name)}" class="recipe-card-img">
           <div class="recipe-card-body">
             <div class="recipe-card-title">${getText(r.name)}</div>
-            <div class="recipe-card-meta">
-              <span>️ ${getText(r.prepTime)}</span>
-              <span>⭐ ${r.rating}</span>
-            </div>
-            ${r.badges && r.badges[currentLang] ? `
-              <div class="recipe-card-badges">
-                ${r.badges[currentLang].map(b => `<span class="badge">${b}</span>`).join('')}
-              </div>
-            ` : ''}
+            <div class="recipe-card-meta"><span>️ ${getText(r.prepTime)}</span><span>⭐ ${r.rating}</span></div>
+            ${r.badges && r.badges[currentLang] ? `<div class="recipe-card-badges">${r.badges[currentLang].map(b => `<span class="badge">${b}</span>`).join('')}</div>` : ''}
           </div>
         </a>
       `).join('');
     }
-    
-    // อัปเดตปุ่มย้อนกลับ
     document.getElementById('btnBackToCategories').textContent = getText({ th: '← กลับไปหน้าหมวดหมู่', en: '← Back to Categories' });
-    
   } catch (error) {
     console.error('Error loading category:', error);
     document.getElementById('errorContainer').style.display = 'block';
     document.getElementById('categoryContainer').style.display = 'none';
-    document.getElementById('errorTitle').textContent = getText({ th: 'ไม่พบหมวดหมู่', en: 'Category Not Found' });
-    document.getElementById('errorMsg').textContent = getText({ th: 'หมวดหมู่นี้อาจยังไม่มีข้อมูล', en: 'This category may not have data yet' });
   }
 }
 
-// เพิ่มการเรียกฟังก์ชันใน DOMContentLoaded
-// หาบรรทัดนี้ใน app.js:
-// document.addEventListener('DOMContentLoaded', () => {
-//   renderRecipePage();
-// });
-// 
-// แล้วเปลี่ยนเป็น:
+// ===== Initialization =====
 document.addEventListener('DOMContentLoaded', () => {
-  // ตรวจสอบว่าอยู่หน้าไหน แล้วเรียกฟังก์ชันที่ถูกต้อง
-  if (document.getElementById('categoryGrid')) {
-    renderCategoriesPage();
-  } else if (document.getElementById('recipeGrid')) {
-    renderCategoryPage();
-  } else if (document.getElementById('recipeContainer')) {
-    renderRecipePage();
-  }
+  if (document.getElementById('categoryGrid')) renderCategoriesPage();
+  else if (document.getElementById('recipeGrid')) renderCategoryPage();
+  else if (document.getElementById('recipeContainer')) renderRecipePage();
 });
-
-/* ==========================================================
-   🧮 DYNAMIC RECIPE CALCULATOR
-   ========================================================== */
-
-let currentVolume = 10; // ค่าเริ่มต้น
-
-// ฟังก์ชันปัดเศษตามหน่วย
-function formatAmount(amount, unit) {
-  const unitLower = unit.toLowerCase();
-  
-  // ช้อนชา/ช้อนโต๊ะ → เศษส่วน
-  if (unitLower.includes('teaspoon') || unitLower.includes('tablespoon')) {
-    const fractions = [
-      { value: 0.25, text: '¼' },
-      { value: 0.33, text: '⅓' },
-      { value: 0.5, text: '½' },
-      { value: 0.67, text: '⅔' },
-      { value: 0.75, text: '¾' }
-    ];
-    
-    for (const frac of fractions) {
-      if (Math.abs(amount - frac.value) < 0.1) {
-        return frac.text;
-      }
-    }
-    return Math.round(amount).toString();
-  }
-  
-  // ชิ้น/ใบ → จำนวนเต็ม
-  if (unitLower.includes('piece') || unitLower.includes('leaf') || unitLower.includes('ใบ') || unitLower.includes('ชิ้น')) {
-    return Math.round(amount).toString();
-  }
-  
-  // Gram/Liter → ทศนิยม 1 ตำแหน่ง
-  if (amount % 1 === 0) {
-    return amount.toString();
-  }
-  return amount.toFixed(1);
-}
-
-// ฟังก์ชันคำนวณสูตร
-function scaleRecipe(recipe, targetVolume) {
-  const baseVolume = recipe.baseVolume || 10;
-  const scaleFactor = targetVolume / baseVolume;
-  
-  const scaledIngredients = recipe.ingredients.map(ing => {
-    if (ing.scalable !== false && ing.amount) {
-      return {
-        ...ing,
-        scaledAmount: ing.amount * scaleFactor
-      };
-    }
-    return { ...ing, scaledAmount: ing.amount };
-  });
-  
-  const scaledSteps = recipe.machineSteps.map(step => {
-    if (step.scalable !== false && step.function === 'Fill Water') {
-      return {
-        ...step,
-        scaledValue: step.target_value * scaleFactor
-      };
-    }
-    return { ...step, scaledValue: step.target_value };
-  });
-  
-  return { scaledIngredients, scaledSteps };
-}
-
-// ฟังก์ชัน Render Ingredients แบบ Dynamic
-function renderIngredients(recipe, volume) {
-  const { scaledIngredients } = scaleRecipe(recipe, volume);
-  const ingList = document.getElementById('ingredientsList');
-  
-  if (!ingList) return;
-  
-  // ตรวจสอบว่าเป็นสูตรเก่า (Array ของ string) หรือสูตรใหม่ (Array ของ object)
-  const isOldFormat = Array.isArray(recipe.ingredients) && typeof recipe.ingredients[0] === 'string';
-  
-  if (isOldFormat) {
-    // สูตรเก่า: แสดงแบบเดิม ไม่ scale
-    ingList.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
-    return;
-  }
-  
-  // สูตรใหม่: แสดงแบบ scale
-  ingList.innerHTML = scaledIngredients.map(ing => {
-    const amount = formatAmount(ing.scaledAmount, ing.unit);
-    const unitText = ing.unit;
-    const name = getText(ing.name);
-    const scalableIcon = ing.scalable !== false ? '️' : '📌';
-    
-    return `<li>${scalableIcon} <strong>${name}:</strong> ${amount} ${unitText}</li>`;
-  }).join('');
-}
-
-// ฟังก์ชัน Render Machine Steps แบบ Dynamic
-function renderMachineSteps(recipe, volume) {
-  const { scaledSteps } = scaleRecipe(recipe, volume);
-  const stepsContainer = document.getElementById('stepsList');
-  
-  if (!stepsContainer) return;
-  
-  stepsContainer.innerHTML = scaledSteps.map((step) => `
-    <div class="step-item">
-      <div class="step-num">${step.step}</div>
-      <div class="step-content">
-        <h4>${getText(step.title)}</h4>
-        <p>${getText(step.desc)}</p>
-        <div class="machine-info-box">
-          <strong>️ ${step.function}</strong>
-          ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
-          ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
-          ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
-        </div>
-      </div>
-    </div>
-  `).join('');
-  
-  // เพิ่มปุ่มดาวน์โหลด JSON
-  stepsContainer.innerHTML += `
-    <div style="margin-top: 32px; text-align: center;">
-      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
-    </div>
-  `;
-  
-  document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe, volume);
-}
-
-// ฟังก์ชันดาวน์โหลด Machine JSON (ปรับตามปริมาณ)
-function downloadRecipeJSON(recipe, volume) {
-  const { scaledSteps } = scaleRecipe(recipe, volume);
-  
-  const machineData = {
-    recipe_id: recipe.id,
-    recipe_name: getText(recipe.name),
-    volume: volume,
-    total_volume: volume,
-    total_time: scaledSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
-    target_temp: scaledSteps.find(s => s.function.includes('Heat') || s.function.includes('Hold'))?.target_value || 0,
-    steps: scaledSteps.map(s => ({
-      function: s.function,
-      target_value: s.scaledValue,
-      unit: s.unit,
-      duration: s.duration || 0
-    }))
-  };
-
-  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `FML_${recipe.id.replace('_10L', '')}_${volume}L.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  
-  showToast(currentLang === 'th' ? `✅ ดาวน์โหลดสูตร ${volume}L สำเร็จ!` : `✅ Downloaded ${volume}L recipe!`);
-}
-
-// ฟังก์ชันจัดการ Volume Selector
-function initVolumeSelector(recipe) {
-  const slider = document.getElementById('volumeSlider');
-  const volumeValue = document.getElementById('volumeValue');
-  const volumeUnit = document.getElementById('volumeUnit');
-  const volumeRange = document.getElementById('volumeRange');
-  const presetBtns = document.querySelectorAll('.preset-btn');
-  
-  if (!slider) return;
-  
-  // ตั้งค่าเริ่มต้น
-  const baseVolume = recipe.baseVolume || 10;
-  const minVolume = recipe.minVolume || 1;
-  const maxVolume = recipe.maxVolume || 20;
-  
-  slider.min = minVolume;
-  slider.max = maxVolume;
-  slider.value = baseVolume;
-  currentVolume = baseVolume;
-  
-  volumeValue.textContent = baseVolume;
-  volumeUnit.textContent = getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liter' });
-  volumeRange.textContent = `${minVolume} - ${maxVolume} ${getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liters' })}`;
-  
-  // อัปเดตปุ่ม Preset
-  presetBtns.forEach(btn => {
-    btn.classList.remove('active');
-    if (parseInt(btn.dataset.volume) === baseVolume) {
-      btn.classList.add('active');
-    }
-  });
-  
-  // Event: Slider
-  slider.addEventListener('input', (e) => {
-    const newVolume = parseInt(e.target.value);
-    currentVolume = newVolume;
-    volumeValue.textContent = newVolume;
-    
-    presetBtns.forEach(btn => {
-      btn.classList.remove('active');
-      if (parseInt(btn.dataset.volume) === newVolume) {
-        btn.classList.add('active');
-      }
-    });
-    
-    // Render ใหม่
-    if (currentMode === 'manual') {
-      renderIngredients(recipe, newVolume);
-    } else {
-      renderMachineSteps(recipe, newVolume);
-    }
-  });
-  
-  // Event: Preset Buttons
-  presetBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const newVolume = parseInt(btn.dataset.volume);
-      currentVolume = newVolume;
-      slider.value = newVolume;
-      volumeValue.textContent = newVolume;
-      
-      presetBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      // Render ใหม่
-      if (currentMode === 'manual') {
-        renderIngredients(recipe, newVolume);
-      } else {
-        renderMachineSteps(recipe, newVolume);
-      }
-    });
-  });
-}
-
-// แก้ไขฟังก์ชัน updateLanguageUI() ให้เรียก renderIngredients
-// หาบรรทัดนี้ใน app.js:
-// const ingredientsArray = getText(currentRecipe.ingredients);
-// document.getElementById('ingredientsList').innerHTML = ingredientsArray.map(ing => `<li>${ing}</li>`).join('');
-// 
-// แล้วเปลี่ยนเป็น:
-renderIngredients(currentRecipe, currentVolume);
-
-// แก้ไขฟังก์ชัน renderSteps() ให้รองรับ Dynamic
-// หาฟังก์ชัน renderSteps() แล้วเปลี่ยนเป็น:
-function renderSteps(recipe) {
-  const stepsContainer = document.getElementById('stepsList');
-  if (!stepsContainer) return;
-  
-  if (currentMode === 'manual') {
-    const manualSteps = recipe.manualSteps || [];
-    stepsContainer.innerHTML = manualSteps.map(step => `
-      <div class="step-item">
-        <div class="step-num">${step.step}</div>
-        <div class="step-content">
-          <h4>${getText(step.title)}</h4>
-          <p>${getText(step.desc)}</p>
-          ${step.image ? `<img src="${step.image}" alt="${getText(step.title)}" class="step-image" loading="lazy">` : ''}
-          ${step.tips ? `<div class="tips-box">${getText(step.tips)}</div>` : ''}
-        </div>
-      </div>
-    `).join('');
-  } else {
-    renderMachineSteps(recipe, currentVolume);
-  }
-}
-
-// แก้ไขฟังก์ชัน renderRecipePage() ให้เรียก initVolumeSelector
-// หาบรรทัดนี้ใน renderRecipePage():
-// updateLanguageUI();
-// 
-// แล้วเพิ่มบรรทัดนี้ต่อท้าย:
-initVolumeSelector(recipe);
