@@ -1,9 +1,13 @@
 {
   "id": "roselle_10L",
   "category": "herbal",
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "volumeUnit": { "th": "ลิตร", "en": "Liter" },
   "name": {
-    "th": "น้ำกระเจี๊ยบสกัดเย็น 10 ลิตร (ลดความดัน)",
-    "en": "10L Cold-Extract Roselle Juice (Blood Pressure Support)"
+    "th": "น้ำกระเจี๊ยบสกัดเย็น (ลดความดัน)",
+    "en": "Cold-Extract Roselle Juice (Blood Pressure Support)"
   },
   "images": [
     "images/herbal/roselle_10L/main_1.jpg",
@@ -33,117 +37,33 @@
     "sugar": "8 g",
     "protein": "0.2 g"
   },
-  "ingredients": {
-    "th": [
-      "น้ำสะอาด 10 ลิตร",
-      "กลีบกระเจี๊ยบแห้ง 120 กรัม",
-      "น้ำตาลทราย 1 กิโลกรัม",
-      "เกลือป่น 1 ช้อนชา (เพื่อตัดรส)"
-    ],
-    "en": [
-      "10 liters clean water",
-      "120g dried roselle calyxes",
-      "1kg sugar",
-      "1 tsp salt (to enhance flavor)"
-    ]
-  },
-  
-  "machineFile": "FML_roselle_10L.json",
-
-  "manualSteps": [
+  "ingredients": [
     {
-      "step": 1,
-      "title": { "th": "เตรียมน้ำและหม้อต้ม", "en": "Prepare pot and water" },
-      "desc": { 
-        "th": "เตรียมน้ำสะอาด 10 ลิตร ใส่หม้อต้มขนาดใหญ่ (ควรใช้หม้อสแตนเลส ขนาดอย่างน้อย 12 ลิตร) เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด", 
-        "en": "Prepare 10 liters of clean water in a large pot (stainless steel, at least 12L capacity). Heat on medium-high until it starts to boil." 
-      },
-      "image": "images/herbal/roselle_10L/step_1.jpg",
-      "tips": { 
-        "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมวัตถุดิบอื่นๆ ได้ เช่น ชั่งน้ำตาลทราย และล้างดอกกระเจี๊ยบผ่านกระชอน 1 รอบ", 
-        "en": "💡 While waiting, you can prepare other ingredients like weighing sugar and rinsing roselle calyxes." 
-      }
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
     },
     {
-      "step": 2,
-      "title": { "th": "ต้มน้ำให้เดือดจัด", "en": "Boil the water" },
-      "desc": { 
-        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ", 
-        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing." 
-      },
-      "image": "images/herbal/roselle_10L/step_2.jpg",
-      "tips": { 
-        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว", 
-        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready." 
-      }
+      "name": { "th": "กลีบกระเจี๊ยบแห้ง", "en": "Dried roselle calyxes" },
+      "amount": 120,
+      "unit": "Gram",
+      "scalable": true
     },
     {
-      "step": 3,
-      "title": { "th": "เติมน้ำตาลและคนให้ละลาย", "en": "Add sugar and stir" },
-      "desc": { 
-        "th": "ใส่น้ำตาลทราย 1 กิโลกรัม ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีจนน้ำตาลละลายหมด", 
-        "en": "Add 1kg of sugar into the hot water. Stir continuously with a ladle until completely dissolved." 
-      },
-      "image": "images/herbal/roselle_10L/step_3.jpg",
-      "tips": { 
-        "th": "💡 ใช้ทัพพีด้ามยาวเพื่อป้องกันไอน้ำร้อนลวกมือ", 
-        "en": "💡 Use a long-handled ladle to avoid steam burns." 
-      }
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
     },
     {
-      "step": 4,
-      "title": { "th": "ตรวจสอบการละลายของน้ำตาล", "en": "Check sugar dissolution" },
-      "desc": { 
-        "th": "คนต่อไปอีก 2-3 นาที เพื่อให้แน่ใจว่าไม่มีเกล็ดน้ำตาลหลงเหลืออยู่ที่ก้นหม้อ ก่อนที่จะใส่กระเจี๊ยบ", 
-        "en": "Stir for another 2-3 minutes to ensure no sugar granules remain at the bottom before adding roselle." 
-      },
-      "image": "images/herbal/roselle_10L/step_4.jpg",
-      "tips": { 
-        "th": "💡 ลองตักมาชิมเล็กน้อย (ระวังร้อน) เพื่อเช็กระดับความหวานก่อนใส่กระเจี๊ยบ", 
-        "en": "💡 Taste a small amount (carefully) to check sweetness balance before adding roselle." 
-      }
-    },
-    {
-      "step": 5,
-      "title": { "th": "ใส่กลีบกระเจี๊ยบ", "en": "Add roselle calyxes" },
-      "desc": { 
-        "th": "นำกลีบกระเจี๊ยบแห้ง 120 กรัม ที่ใส่ในถุงกรองหรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน", 
-        "en": "Place 120g of dried roselle into a filter bag or basket, then submerge it in the hot water." 
-      },
-      "image": "images/herbal/roselle_10L/step_5.jpg",
-      "tips": { 
-        "th": "💡 ควรใส่ในถุงกรองเสมอ จะทำให้ขั้นตอนการแยกกากออกในตอนท้ายง่ายและสะอาดขึ้นมาก", 
-        "en": "💡 Always use a filter bag to make removing the residue at the end much easier and cleaner." 
-      }
-    },
-    {
-      "step": 6,
-      "title": { "th": "แช่สกัดรสชาติและสี (10 นาที)", "en": "Steep for extraction (10 mins)" },
-      "desc": { 
-        "th": "ปิดไฟหรือลดไฟให้อ่อนที่สุด แช่กระเจี๊ยบทิ้งไว้Exactly 10 นาที น้ำจะเปลี่ยนเป็นสีแดงเข้มสวยงาม", 
-        "en": "Turn off heat or keep it very low. Steep for exactly 10 minutes. The water will turn a beautiful deep red." 
-      },
-      "image": "images/herbal/roselle_10L/step_6.jpg",
-      "tips": { 
-        "th": "💡 ห้ามแช่นานเกิน 15 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสฝาดและขม", 
-        "en": "💡 Do not steep for more than 15 minutes, or the drink will become astringent and bitter." 
-      }
-    },
-    {
-      "step": 7,
-      "title": { "th": "ยกออกและบรรจุขวด", "en": "Remove and bottle" },
-      "desc": { 
-        "th": "ครบเวลาแล้วให้ยกถุงกระเจี๊ยบออกทันที บีบเอา น้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป รอให้เย็นก่อนบรรจุขวด", 
-        "en": "When time is up, remove the roselle bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling." 
-      },
-      "image": "images/herbal/roselle_10L/step_7.jpg",
-      "tips": { 
-        "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น และช่วยรักษาวิตามินซีไว้ได้นานขึ้น", 
-        "en": "💡 Refrigerating enhances the refreshing taste and helps preserve Vitamin C longer." 
-      }
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 1,
+      "unit": "Teaspoon",
+      "scalable": false
     }
   ],
-
+  "machineFile": "FML_roselle_10L.json",
   "machineSteps": [
     {
       "step": 1,
@@ -151,6 +71,7 @@
       "target_value": 10,
       "unit": "Liter",
       "duration": 0,
+      "scalable": true,
       "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
       "desc": {
         "th": "เริ่มด้วยการเติมน้ำสะอาด 10 ลิตรลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
@@ -163,6 +84,7 @@
       "target_value": 95,
       "unit": "°C",
       "duration": 0,
+      "scalable": false,
       "title": { "th": "ต้มน้ำพร้อมระบบวน", "en": "Heat Water with Circulation" },
       "desc": {
         "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
@@ -175,6 +97,7 @@
       "target_value": 0,
       "unit": "-",
       "duration": 0,
+      "scalable": false,
       "title": { "th": "เติมความหวานจากธรรมชาติ", "en": "Add Natural Sweetness" },
       "desc": {
         "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลทราย 1 กิโลกรัม ลงไป พร้อมเปิดระบบกวน",
@@ -187,6 +110,7 @@
       "target_value": 95,
       "unit": "°C",
       "duration": 3,
+      "scalable": false,
       "title": { "th": "คงอุณหภูมิเพื่อละลายน้ำตาล", "en": "Maintain Temp for Dissolution" },
       "desc": {
         "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
@@ -199,6 +123,7 @@
       "target_value": 0,
       "unit": "-",
       "duration": 0,
+      "scalable": false,
       "title": { "th": "ใส่กระเจี๊ยบในตะกร้า", "en": "Add Roselle in Basket" },
       "desc": {
         "th": "ระบบจะแจ้งเตือนให้ใส่กลีบกระเจี๊ยบแห้ง 120 กรัม (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
@@ -211,6 +136,7 @@
       "target_value": 95,
       "unit": "°C",
       "duration": 10,
+      "scalable": false,
       "title": { "th": "สกัดรสชาติและสี (10 นาที)", "en": "Extract Flavor and Color (10 mins)" },
       "desc": {
         "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 10 นาที พร้อมระบบวนน้ำและกวน",
@@ -223,10 +149,104 @@
       "target_value": 40,
       "unit": "°C",
       "duration": 0,
+      "scalable": false,
       "title": { "th": "ทำให้เย็นและบรรจุขวด", "en": "Cool Down and Bottle" },
       "desc": {
         "th": "ระบบจะลดอุณหภูมิเหลือ 40°C และแจ้งเตือนให้ยกตะกร้าออกและบรรจุขวด",
         "en": "System cools to 40°C and alerts to remove basket and bottle."
+      }
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "title": { "th": "เตรียมน้ำและหม้อต้ม", "en": "Prepare pot and water" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด 10 ลิตร ใส่หม้อต้มขนาดใหญ่ (ควรใช้หม้อสแตนเลส ขนาดอย่างน้อย 12 ลิตร) เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด",
+        "en": "Prepare 10 liters of clean water in a large pot (stainless steel, at least 12L capacity). Heat on medium-high until it starts to boil."
+      },
+      "image": "images/herbal/roselle_10L/step_1.jpg",
+      "tips": {
+        "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมวัตถุดิบอื่นๆ ได้ เช่น ชั่งน้ำตาลทราย และล้างดอกกระเจี๊ยบผ่านกระชอน 1 รอบ",
+        "en": "💡 While waiting, you can prepare other ingredients like weighing sugar and rinsing roselle calyxes."
+      }
+    },
+    {
+      "step": 2,
+      "title": { "th": "ต้มน้ำให้เดือดจัด", "en": "Boil the water" },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+      },
+      "image": "images/herbal/roselle_10L/step_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "title": { "th": "เติมน้ำตาลและคนให้ละลาย", "en": "Add sugar and stir" },
+      "desc": {
+        "th": "ใส่น้ำตาลทราย 1 กิโลกรัม ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีจนน้ำตาลละลายหมด",
+        "en": "Add 1kg of sugar into the hot water. Stir continuously with a ladle until completely dissolved."
+      },
+      "image": "images/herbal/roselle_10L/step_3.jpg",
+      "tips": {
+        "th": "💡 ใช้ทัพพีด้ามยาวเพื่อป้องกันไอน้ำร้อนลวกมือ",
+        "en": " Use a long-handled ladle to avoid steam burns."
+      }
+    },
+    {
+      "step": 4,
+      "title": { "th": "ตรวจสอบการละลายของน้ำตาล", "en": "Check sugar dissolution" },
+      "desc": {
+        "th": "คนต่อไปอีก 2-3 นาที เพื่อให้แน่ใจว่าไม่มีเกล็ดน้ำตาลหลงเหลืออยู่ที่ก้นหม้อ ก่อนที่จะใส่กระเจี๊ยบ",
+        "en": "Stir for another 2-3 minutes to ensure no sugar granules remain at the bottom before adding roselle."
+      },
+      "image": "images/herbal/roselle_10L/step_4.jpg",
+      "tips": {
+        "th": " ลองตักมาชิมเล็กน้อย (ระวังร้อน) เพื่อเช็กระดับความหวานก่อนใส่กระเจี๊ยบ",
+        "en": "💡 Taste a small amount (carefully) to check sweetness balance before adding roselle."
+      }
+    },
+    {
+      "step": 5,
+      "title": { "th": "ใส่กลีบกระเจี๊ยบ", "en": "Add roselle calyxes" },
+      "desc": {
+        "th": "นำกลีบกระเจี๊ยบแห้ง 120 กรัม ที่ใส่ในถุงกรองหรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน",
+        "en": "Place 120g of dried roselle into a filter bag or basket, then submerge it in the hot water."
+      },
+      "image": "images/herbal/roselle_10L/step_5.jpg",
+      "tips": {
+        "th": "💡 ควรใส่ในถุงกรองเสมอ จะทำให้ขั้นตอนการแยกกากออกในตอนท้ายง่ายและสะอาดขึ้นมาก",
+        "en": " Always use a filter bag to make removing the residue at the end much easier and cleaner."
+      }
+    },
+    {
+      "step": 6,
+      "title": { "th": "แช่สกัดรสชาติและสี (10 นาที)", "en": "Steep for extraction (10 mins)" },
+      "desc": {
+        "th": "ปิดไฟหรือลดไฟให้อ่อนที่สุด แช่กระเจี๊ยบทิ้งไว้ Exactly 10 นาที น้ำจะเปลี่ยนเป็นสีแดงเข้มสวยงาม",
+        "en": "Turn off heat or keep it very low. Steep for exactly 10 minutes. The water will turn a beautiful deep red."
+      },
+      "image": "images/herbal/roselle_10L/step_6.jpg",
+      "tips": {
+        "th": "💡 ห้ามแช่นานเกิน 15 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสฝาดและขม",
+        "en": "💡 Do not steep for more than 15 minutes, or the drink will become astringent and bitter."
+      }
+    },
+    {
+      "step": 7,
+      "title": { "th": "ยกออกและบรรจุขวด", "en": "Remove and bottle" },
+      "desc": {
+        "th": "ครบเวลาแล้วให้ยกถุงกระเจี๊ยบออกทันที บีบเอา น้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป รอให้เย็นก่อนบรรจุขวด",
+        "en": "When time is up, remove the roselle bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
+      },
+      "image": "images/herbal/roselle_10L/step_7.jpg",
+      "tips": {
+        "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น และช่วยรักษาวิตามินซีไว้ได้นานขึ้น",
+        "en": "💡 Refrigerating enhances the refreshing taste and helps preserve Vitamin C longer."
       }
     }
   ]
