@@ -386,7 +386,31 @@
       <!-- Benefits & Warnings -->
       <div id="benefitBox" class="benefit-box"></div>
       <div id="warningBox" class="warning-box"></div>
-
+      <!-- Volume Selector (Dynamic Calculator) -->
+      <div class="volume-selector-card">
+        <h3 class="section-title-sm" id="titleVolume">📏 ปรับปริมาณที่ต้องการทำ</h3>
+        
+        <div class="volume-presets">
+          <button class="preset-btn" data-volume="1">1L</button>
+          <button class="preset-btn" data-volume="2">2L</button>
+          <button class="preset-btn" data-volume="5">5L</button>
+          <button class="preset-btn active" data-volume="10">10L</button>
+          <button class="preset-btn" data-volume="15">15L</button>
+          <button class="preset-btn" data-volume="20">20L</button>
+        </div>
+        
+        <div class="volume-slider-container">
+          <input type="range" id="volumeSlider" min="1" max="20" value="10" step="1" class="volume-slider">
+          <div class="volume-display">
+            <span id="volumeValue">10</span>
+            <span id="volumeUnit">ลิตร</span>
+          </div>
+        </div>
+        
+        <div class="volume-info">
+          <span id="volumeRange">1 - 20 ลิตร</span>
+        </div>
+      </div>
       <!-- Ingredients -->
       <div class="section-card">
         <h3 class="section-title-sm" id="titleIngredients">📝 วัตถุดิบ</h3>

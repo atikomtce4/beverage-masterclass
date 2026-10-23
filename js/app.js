@@ -462,3 +462,276 @@ document.addEventListener('DOMContentLoaded', () => {
     renderRecipePage();
   }
 });
+
+/* ==========================================================
+   🧮 DYNAMIC RECIPE CALCULATOR
+   ========================================================== */
+
+let currentVolume = 10; // ค่าเริ่มต้น
+
+// ฟังก์ชันปัดเศษตามหน่วย
+function formatAmount(amount, unit) {
+  const unitLower = unit.toLowerCase();
+  
+  // ช้อนชา/ช้อนโต๊ะ → เศษส่วน
+  if (unitLower.includes('teaspoon') || unitLower.includes('tablespoon')) {
+    const fractions = [
+      { value: 0.25, text: '¼' },
+      { value: 0.33, text: '⅓' },
+      { value: 0.5, text: '½' },
+      { value: 0.67, text: '⅔' },
+      { value: 0.75, text: '¾' }
+    ];
+    
+    for (const frac of fractions) {
+      if (Math.abs(amount - frac.value) < 0.1) {
+        return frac.text;
+      }
+    }
+    return Math.round(amount).toString();
+  }
+  
+  // ชิ้น/ใบ → จำนวนเต็ม
+  if (unitLower.includes('piece') || unitLower.includes('leaf') || unitLower.includes('ใบ') || unitLower.includes('ชิ้น')) {
+    return Math.round(amount).toString();
+  }
+  
+  // Gram/Liter → ทศนิยม 1 ตำแหน่ง
+  if (amount % 1 === 0) {
+    return amount.toString();
+  }
+  return amount.toFixed(1);
+}
+
+// ฟังก์ชันคำนวณสูตร
+function scaleRecipe(recipe, targetVolume) {
+  const baseVolume = recipe.baseVolume || 10;
+  const scaleFactor = targetVolume / baseVolume;
+  
+  const scaledIngredients = recipe.ingredients.map(ing => {
+    if (ing.scalable !== false && ing.amount) {
+      return {
+        ...ing,
+        scaledAmount: ing.amount * scaleFactor
+      };
+    }
+    return { ...ing, scaledAmount: ing.amount };
+  });
+  
+  const scaledSteps = recipe.machineSteps.map(step => {
+    if (step.scalable !== false && step.function === 'Fill Water') {
+      return {
+        ...step,
+        scaledValue: step.target_value * scaleFactor
+      };
+    }
+    return { ...step, scaledValue: step.target_value };
+  });
+  
+  return { scaledIngredients, scaledSteps };
+}
+
+// ฟังก์ชัน Render Ingredients แบบ Dynamic
+function renderIngredients(recipe, volume) {
+  const { scaledIngredients } = scaleRecipe(recipe, volume);
+  const ingList = document.getElementById('ingredientsList');
+  
+  if (!ingList) return;
+  
+  // ตรวจสอบว่าเป็นสูตรเก่า (Array ของ string) หรือสูตรใหม่ (Array ของ object)
+  const isOldFormat = Array.isArray(recipe.ingredients) && typeof recipe.ingredients[0] === 'string';
+  
+  if (isOldFormat) {
+    // สูตรเก่า: แสดงแบบเดิม ไม่ scale
+    ingList.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
+    return;
+  }
+  
+  // สูตรใหม่: แสดงแบบ scale
+  ingList.innerHTML = scaledIngredients.map(ing => {
+    const amount = formatAmount(ing.scaledAmount, ing.unit);
+    const unitText = ing.unit;
+    const name = getText(ing.name);
+    const scalableIcon = ing.scalable !== false ? '️' : '📌';
+    
+    return `<li>${scalableIcon} <strong>${name}:</strong> ${amount} ${unitText}</li>`;
+  }).join('');
+}
+
+// ฟังก์ชัน Render Machine Steps แบบ Dynamic
+function renderMachineSteps(recipe, volume) {
+  const { scaledSteps } = scaleRecipe(recipe, volume);
+  const stepsContainer = document.getElementById('stepsList');
+  
+  if (!stepsContainer) return;
+  
+  stepsContainer.innerHTML = scaledSteps.map((step) => `
+    <div class="step-item">
+      <div class="step-num">${step.step}</div>
+      <div class="step-content">
+        <h4>${getText(step.title)}</h4>
+        <p>${getText(step.desc)}</p>
+        <div class="machine-info-box">
+          <strong>️ ${step.function}</strong>
+          ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
+          ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
+          ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+  
+  // เพิ่มปุ่มดาวน์โหลด JSON
+  stepsContainer.innerHTML += `
+    <div style="margin-top: 32px; text-align: center;">
+      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
+    </div>
+  `;
+  
+  document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe, volume);
+}
+
+// ฟังก์ชันดาวน์โหลด Machine JSON (ปรับตามปริมาณ)
+function downloadRecipeJSON(recipe, volume) {
+  const { scaledSteps } = scaleRecipe(recipe, volume);
+  
+  const machineData = {
+    recipe_id: recipe.id,
+    recipe_name: getText(recipe.name),
+    volume: volume,
+    total_volume: volume,
+    total_time: scaledSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
+    target_temp: scaledSteps.find(s => s.function.includes('Heat') || s.function.includes('Hold'))?.target_value || 0,
+    steps: scaledSteps.map(s => ({
+      function: s.function,
+      target_value: s.scaledValue,
+      unit: s.unit,
+      duration: s.duration || 0
+    }))
+  };
+
+  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `FML_${recipe.id.replace('_10L', '')}_${volume}L.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  showToast(currentLang === 'th' ? `✅ ดาวน์โหลดสูตร ${volume}L สำเร็จ!` : `✅ Downloaded ${volume}L recipe!`);
+}
+
+// ฟังก์ชันจัดการ Volume Selector
+function initVolumeSelector(recipe) {
+  const slider = document.getElementById('volumeSlider');
+  const volumeValue = document.getElementById('volumeValue');
+  const volumeUnit = document.getElementById('volumeUnit');
+  const volumeRange = document.getElementById('volumeRange');
+  const presetBtns = document.querySelectorAll('.preset-btn');
+  
+  if (!slider) return;
+  
+  // ตั้งค่าเริ่มต้น
+  const baseVolume = recipe.baseVolume || 10;
+  const minVolume = recipe.minVolume || 1;
+  const maxVolume = recipe.maxVolume || 20;
+  
+  slider.min = minVolume;
+  slider.max = maxVolume;
+  slider.value = baseVolume;
+  currentVolume = baseVolume;
+  
+  volumeValue.textContent = baseVolume;
+  volumeUnit.textContent = getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liter' });
+  volumeRange.textContent = `${minVolume} - ${maxVolume} ${getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liters' })}`;
+  
+  // อัปเดตปุ่ม Preset
+  presetBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (parseInt(btn.dataset.volume) === baseVolume) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // Event: Slider
+  slider.addEventListener('input', (e) => {
+    const newVolume = parseInt(e.target.value);
+    currentVolume = newVolume;
+    volumeValue.textContent = newVolume;
+    
+    presetBtns.forEach(btn => {
+      btn.classList.remove('active');
+      if (parseInt(btn.dataset.volume) === newVolume) {
+        btn.classList.add('active');
+      }
+    });
+    
+    // Render ใหม่
+    if (currentMode === 'manual') {
+      renderIngredients(recipe, newVolume);
+    } else {
+      renderMachineSteps(recipe, newVolume);
+    }
+  });
+  
+  // Event: Preset Buttons
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newVolume = parseInt(btn.dataset.volume);
+      currentVolume = newVolume;
+      slider.value = newVolume;
+      volumeValue.textContent = newVolume;
+      
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Render ใหม่
+      if (currentMode === 'manual') {
+        renderIngredients(recipe, newVolume);
+      } else {
+        renderMachineSteps(recipe, newVolume);
+      }
+    });
+  });
+}
+
+// แก้ไขฟังก์ชัน updateLanguageUI() ให้เรียก renderIngredients
+// หาบรรทัดนี้ใน app.js:
+// const ingredientsArray = getText(currentRecipe.ingredients);
+// document.getElementById('ingredientsList').innerHTML = ingredientsArray.map(ing => `<li>${ing}</li>`).join('');
+// 
+// แล้วเปลี่ยนเป็น:
+renderIngredients(currentRecipe, currentVolume);
+
+// แก้ไขฟังก์ชัน renderSteps() ให้รองรับ Dynamic
+// หาฟังก์ชัน renderSteps() แล้วเปลี่ยนเป็น:
+function renderSteps(recipe) {
+  const stepsContainer = document.getElementById('stepsList');
+  if (!stepsContainer) return;
+  
+  if (currentMode === 'manual') {
+    const manualSteps = recipe.manualSteps || [];
+    stepsContainer.innerHTML = manualSteps.map(step => `
+      <div class="step-item">
+        <div class="step-num">${step.step}</div>
+        <div class="step-content">
+          <h4>${getText(step.title)}</h4>
+          <p>${getText(step.desc)}</p>
+          ${step.image ? `<img src="${step.image}" alt="${getText(step.title)}" class="step-image" loading="lazy">` : ''}
+          ${step.tips ? `<div class="tips-box">${getText(step.tips)}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  } else {
+    renderMachineSteps(recipe, currentVolume);
+  }
+}
+
+// แก้ไขฟังก์ชัน renderRecipePage() ให้เรียก initVolumeSelector
+// หาบรรทัดนี้ใน renderRecipePage():
+// updateLanguageUI();
+// 
+// แล้วเพิ่มบรรทัดนี้ต่อท้าย:
+initVolumeSelector(recipe);
