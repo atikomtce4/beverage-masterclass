@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web & Machine Content Builder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; color: #333; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+    
+    .header { background: #2e7d32; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .header h1 { font-size: 20px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; transition: 0.2s; }
+    .btn-primary { background: #4CAF50; color: white; }
+    .btn-primary:hover { background: #45a049; }
+    .btn-secondary { background: #2196F3; color: white; }
+    .btn-secondary:hover { background: #0b7dda; }
+    .btn-warning { background: #ff9800; color: white; }
+    .btn-warning:hover { background: #e68900; }
+    .btn-danger { background: #f44336; color: white; }
+    .btn-danger:hover { background: #da190b; }
+    
+    .tabs { display: flex; background: #e0e0e0; border-bottom: 1px solid #ccc; overflow-x: auto; }
+    .tab { padding: 15px 20px; cursor: pointer; font-weight: 600; color: #555; border-bottom: 3px solid transparent; transition: 0.2s; white-space: nowrap; }
+    .tab:hover { background: #d0d0d0; }
+    .tab.active { background: white; color: #2e7d32; border-bottom-color: #2e7d32; }
+    
+    .tab-content { display: none; padding: 24px; }
+    .tab-content.active { display: block; }
+    
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-row-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; color: #555; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; font-family: inherit;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .hint { font-size: 12px; color: #757575; margin-top: 4px; }
+    
+    .item-card { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 12px; position: relative; }
+    .item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .item-header h4 { color: #2e7d32; }
+    
+    .checkbox-group { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-top: 8px; }
+    .checkbox-item { display: flex; align-items: center; gap: 6px; }
+    .checkbox-item input[type="checkbox"] { width: auto; margin: 0; }
+    .checkbox-item label { margin: 0; font-weight: normal; font-size: 13px; cursor: pointer; }
+
+    .var-row { display: grid; grid-template-columns: 1fr 1fr 1fr auto auto; gap: 8px; align-items: end; margin-top: 8px; padding: 8px; background: #e8f5e9; border-radius: 6px; }
+    
+    .json-preview { background: #263238; color: #aed581; padding: 16px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 12px; overflow: auto; max-height: 600px; white-space: pre-wrap; }
+    input[type="file"] { display: none; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>🛠️ Beverage Masterclass Builder</h1>
+    <div class="actions">
+      <button class="btn btn-secondary" onclick="document.getElementById('jsonFileInput').click()">📥 Import JSON</button>
+      <button class="btn btn-warning" onclick="exportMachineJSON()">⚙️ Export Machine JSON</button>
+      <button class="btn btn-primary" onclick="exportWebJSON()">🌐 Export Web JSON</button>
+    </div>
+    <input type="file" id="jsonFileInput" accept=".json" onchange="importJSON(event)">
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('basic', event)">1. ข้อมูลทั่วไป & เครื่อง</div>
+    <div class="tab" onclick="switchTab('details', event)">2. รายละเอียดสูตร (Web)</div>
+    <div class="tab" onclick="switchTab('ingredients', event)">3. วัตถุดิบ</div>
+    <div class="tab" onclick="switchTab('manual', event)">4. ขั้นตอนทำเอง</div>
+    <div class="tab" onclick="switchTab('machine', event)">5. ขั้นตอนเครื่อง</div>
+    <div class="tab" onclick="switchTab('preview', event)">📄 JSON Preview</div>
+  </div>
+
+  <!-- Tab 1: Basic & Machine Info -->
+  <div id="basic" class="tab-content active">
+    <h3 style="margin-bottom: 16px; color: #2e7d32;">ข้อมูลพื้นฐาน</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Recipe ID (เช่น roselle_10L)</label>
+        <input type="text" id="id" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <select id="category" onchange="updatePreview()">
+          <option value="herbal">herbal (สมุนไพร)</option>
+          <option value="tea">tea (ชา)</option>
+          <option value="milk">milk (นม)</option>
+          <option value="ferment">ferment (หมัก)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>ไอคอน (Icon)</label>
+        <input type="text" id="icon" value="🌺" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>คำอธิบายสั้น (Description สำหรับเครื่อง)</label>
+        <input type="text" id="description" placeholder="กระเจี๊ยบ 120g + น้ำตาล 1kg สกัด 95°C 10 นาที" oninput="updatePreview()">
+      </div>
+    </div>
+    
+    <h3 style="margin: 24px 0 16px; color: #2e7d32;">ข้อมูลสำหรับเครื่อง (Machine Summary)</h3>
+    <div class="form-row-4">
+      <div class="form-group">
+        <label>Base Volume (ลิตร)</label>
+        <input type="number" id="baseVolume" value="10" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>Min Volume</label>
+        <input type="number" id="minVolume" value="1" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>Max Volume</label>
+        <input type="number" id="maxVolume" value="20" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>Machine File Name</label>
+        <input type="text" id="machineFile" placeholder="FML_roselle_10L.json" oninput="updatePreview()">
+      </div>
+    </div>
+    <div class="form-row-3">
+      <div class="form-group">
+        <label>เวลารวม (total_time นาที)</label>
+        <input type="number" id="total_time" value="163" oninput="updatePreview()">
+      </div>
+      <div class="form-group">
+        <label>อุณหภูมิเป้าหมาย (target_temp °C)</label>
+        <input type="number" id="target_temp" value="95" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <h3 style="margin: 24px 0 16px; color: #2e7d32;">สื่อประกอบ (Web)</h3>
+    <div class="form-group">
+      <label>Images (URL หรือ Path, คั่นด้วย comma)</label>
+      <textarea id="images" placeholder="images/herbal/roselle/main_1.jpg, images/herbal/roselle/main_2.jpg" oninput="updatePreview()"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Video URL (Embed Link)</label>
+      <input type="text" id="videoUrl" placeholder="https://www.youtube.com/embed/..." oninput="updatePreview()">
+    </div>
+  </div>
+
+  <!-- Tab 2: Details (Bilingual) -->
+  <div id="details" class="tab-content">
+    <div class="form-row">
+      <div class="form-group"><label>ชื่อสูตร (TH)</label><input type="text" id="name_th" oninput="updatePreview()"></div>
+      <div class="form-group"><label>ชื่อสูตร (EN)</label><input type="text" id="name_en" oninput="updatePreview()"></div>
+    </div>
+    <div class="form-group"><label>คำนำ / Intro (TH)</label><textarea id="intro_th" oninput="updatePreview()"></textarea></div>
+    <div class="form-group"><label>คำนำ / Intro (EN)</label><textarea id="intro_en" oninput="updatePreview()"></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label>สรรพคุณ (TH)</label><input type="text" id="benefits_th" oninput="updatePreview()"></div>
+      <div class="form-group"><label>สรรพคุณ (EN)</label><input type="text" id="benefits_en" oninput="updatePreview()"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>คำเตือน (TH)</label><input type="text" id="warnings_th" oninput="updatePreview()"></div>
+      <div class="form-group"><label>คำเตือน (EN)</label><input type="text" id="warnings_en" oninput="updatePreview()"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Prep Time (TH / EN)</label><input type="text" id="prepTime" placeholder="10 นาที / 10 mins" oninput="updatePreview()"></div>
+      <div class="form-group"><label>Cook Time (TH / EN)</label><input type="text" id="cookTime" placeholder="15 นาที / 15 mins" oninput="updatePreview()"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Servings (TH / EN)</label><input type="text" id="servings" placeholder="10 ลิตร / 10 Liters" oninput="updatePreview()"></div>
+      <div class="form-group"><label>Rating</label><input type="text" id="rating" value="4.8" oninput="updatePreview()"></div>
+    </div>
+    <h3 style="margin: 20px 0 10px;">ข้อมูลโภชนาการ (ต่อ 100 มล.)</h3>
+    <div class="form-row">
+      <div class="form-group"><label>Calories</label><input type="text" id="nut_cal" value="45 kcal" oninput="updatePreview()"></div>
+      <div class="form-group"><label>Carbs</label><input type="text" id="nut_carbs" value="11 g" oninput="updatePreview()"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Sugar</label><input type="text" id="nut_sugar" value="8 g" oninput="updatePreview()"></div>
+      <div class="form-group"><label>Protein</label><input type="text" id="nut_protein" value="0.2 g" oninput="updatePreview()"></div>
+    </div>
+  </div>
+
+  <!-- Tab 3: Ingredients -->
+  <div id="ingredients" class="tab-content">
+    <button class="btn btn-primary" onclick="addIngredient()" style="margin-bottom: 16px;">+ เพิ่มวัตถุดิบ</button>
+    <div id="ingredientsList"></div>
+  </div>
+
+  <!-- Tab 4: Manual Steps -->
+  <div id="manual" class="tab-content">
+    <button class="btn btn-primary" onclick="addManualStep()" style="margin-bottom: 16px;">+ เพิ่มขั้นตอนทำเอง</button>
+    <div id="manualStepsList"></div>
+  </div>
+
+  <!-- Tab 5: Machine Steps -->
+  <div id="machine" class="tab-content">
+    <div class="hint" style="margin-bottom: 16px; background: #e3f2fd; padding: 12px; border-radius: 6px;">
+      💡 แนะนำ: ใช้ปุ่ม "Import Machine JSON" ด้านบนเพื่อดึงข้อมูลขั้นตอนเครื่องมาอัตโนมัติ แล้วค่อยมาเติมข้อความ TH/EN และตรวจสอบค่าต่างๆ ที่นี่
+    </div>
+    <button class="btn btn-primary" onclick="addMachineStep()" style="margin-bottom: 16px;">+ เพิ่มขั้นตอนเครื่อง</button>
+    <div id="machineStepsList"></div>
+  </div>
+
+  <!-- Tab 6: Preview -->
+  <div id="preview" class="tab-content">
+    <pre class="json-preview" id="jsonPreview"></pre>
+  </div>
+</div>
+
+<script>
+  // ✅ 1. สร้างตารางจับคู่ (Dictionary) ไว้ด้านบนสุดของ Script หรือในฟังก์ชัน
+  const INGREDIENT_MAPPING = {
+    'น้ำตาล': { th: 'น้ำตาลทราย', en: 'Sugar' },
+    'น้ำตาลทราย': { th: 'น้ำตาลทราย', en: 'Sugar' },
+    'กระเจี๊ยบ': { th: 'กลีบกระเจี๊ยบแห้ง', en: 'Dried Roselle Calyxes' },
+    'เกลือ': { th: 'เกลือป่น', en: 'Salt' },
+    'น้ำสะอาด': { th: 'น้ำสะอาด', en: 'Clean Water' },
+    'น้ำ': { th: 'น้ำสะอาด', en: 'Clean Water' },
+    'นม': { th: 'นมสด', en: 'Fresh Milk' },
+    'นมถั่วเหลือง': { th: 'นมถั่วเหลือง', en: 'Soy Milk' },
+    'ชา': { th: 'ใบชา', en: 'Tea Leaves' },
+    'กาแฟ': { th: 'ผงกาแฟ', en: 'Coffee Powder' },
+    'ยีสต์': { th: 'ยีสต์', en: 'Yeast' }
+    // 💡 คุณสามารถเพิ่มรายการใหม่ๆ เข้ามาที่นี่ได้เรื่อยๆ
+  };
+
+  const AVAILABLE_OUTPUTS = [
+    'Heater', 'Heater (Hold)', 'Valve_IN', 'Valve_OUT', 
+    'Valve_CIRC', 'Stir', 'Buzzer', 'Pump', 'Chiller', 'Ferment'
+  ];
+
+  // ✅ ตารางจับคู่ Function กับ Outputs เริ่มต้น
+  const FUNCTION_OUTPUTS_MAPPING = {
+    'Fill Water': ['Valve_IN'],
+    'Heat Water': ['Heater', 'Valve_CIRC', 'Pump'],
+    'Hold Temp': ['Heater (Hold)', 'Valve_CIRC', 'Pump', 'Stir'],
+    'Add Ingredient': ['Heater (Hold)', 'Valve_CIRC', 'Pump', 'Stir', 'Buzzer'],
+    'Cool Down': ['Valve_CIRC', 'Pump', 'Stir'],
+    'Chill': ['Chiller', 'Valve_CIRC', 'Pump', 'Stir'],
+    'Transfer': ['Valve_OUT'],
+    'Ferment': ['Heater (Hold)', 'Valve_CIRC', 'Pump', 'Stir'],
+    'Cold Settle': ['Chiller', 'Valve_CIRC', 'Pump', 'Stir'],
+    'User Alert': ['Buzzer'],
+    'Done': ['Buzzer']
+  };
+
+  // ✅ ฟังก์ชันจัดการเมื่อเปลี่ยน Function (เฉพาะการพิมพ์/เลือกด้วยตัวเอง)
+  function changeMachineFunction(stepIdx, newFunction) {
+    // 1. อัปเดตชื่อ Function
+    data.machineSteps[stepIdx].function = newFunction;
+    
+    // 2. อัปเดต Outputs ตาม Mapping (ทับค่าเดิมเพื่อความสะดวกในการสร้างใหม่)
+    // หมายเหตุ: การ Import จากไฟล์จะไม่ผ่านฟังก์ชันนี้ จึงยังคงค่าเดิมจากไฟล์ไว้ได้
+    const defaultOutputs = FUNCTION_OUTPUTS_MAPPING[newFunction] || [];
+    data.machineSteps[stepIdx].outputs = [...defaultOutputs];
+    
+    // 3. Render ใหม่และอัปเดต Preview
+    renderMachineSteps();
+    updatePreview();
+  }
+
+  let data = {
+    id: "", icon: "🌺", category: "herbal", description: "", total_time: 163, target_temp: 95,
+    baseVolume: 10, minVolume: 1, maxVolume: 20, machineFile: "",
+    volumeUnit: { th: "ลิตร", en: "Liter" },
+    name: { th: "", en: "" }, images: [], videoUrl: "",
+    prepTime: { th: "", en: "" }, cookTime: { th: "", en: "" }, servings: { th: "", en: "" }, rating: "4.8",
+    intro: { th: "", en: "" }, benefits: { th: "", en: "" }, warnings: { th: "", en: "" },
+    nutrition: { calories: "", carbs: "", sugar: "", protein: "" },
+    ingredients: [], machineSteps: [], manualSteps: []
+  };
+
+  function switchTab(tabId, event) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    
+    // ✅ แก้ไข: เช็ค event ก่อนใช้
+    if (event && event.target) {
+      event.target.classList.add('active');
+    } else {
+      // Fallback: หา tab ที่ตรงกับ tabId
+      document.querySelectorAll('.tab').forEach(t => {
+        if (t.getAttribute('onclick').includes(tabId)) {
+          t.classList.add('active');
+        }
+      });
+    }
+    
+    document.getElementById(tabId).classList.add('active');
+    if(tabId === 'preview') updatePreview();
+  }
+
+  function getVal(id) { return document.getElementById(id).value; }
+  
+  function parseBilingualTime(text) {
+    const parts = text.split('/').map(s => s.trim());
+    return { th: parts[0] || text, en: parts[1] || text };
+  }
+
+  function updatePreview() {
+    data.id = getVal('id');
+    data.icon = getVal('icon');
+    data.category = getVal('category');
+    data.description = getVal('description');
+    data.total_time = parseInt(getVal('total_time')) || 0;
+    data.target_temp = parseInt(getVal('target_temp')) || 0;
+    data.baseVolume = parseInt(getVal('baseVolume')) || 10;
+    data.minVolume = parseInt(getVal('minVolume')) || 1;
+    data.maxVolume = parseInt(getVal('maxVolume')) || 20;
+    data.machineFile = getVal('machineFile');
+    data.images = getVal('images').split(',').map(s => s.trim()).filter(s => s);
+    data.videoUrl = getVal('videoUrl');
+    
+    data.name = { th: getVal('name_th'), en: getVal('name_en') };
+    data.intro = { th: getVal('intro_th'), en: getVal('intro_en') };
+    data.benefits = { th: getVal('benefits_th'), en: getVal('benefits_en') };
+    data.warnings = { th: getVal('warnings_th'), en: getVal('warnings_en') };
+    
+    data.prepTime = parseBilingualTime(getVal('prepTime'));
+    data.cookTime = parseBilingualTime(getVal('cookTime'));
+    data.servings = parseBilingualTime(getVal('servings'));
+    data.rating = getVal('rating');
+    
+    data.nutrition = {
+      calories: getVal('nut_cal'), carbs: getVal('nut_carbs'),
+      sugar: getVal('nut_sugar'), protein: getVal('nut_protein')
+    };
+
+    document.getElementById('jsonPreview').textContent = JSON.stringify(data, null, 2);
+  }
+
+  // --- Ingredients Logic ---
+  function addIngredient(ing = null) {
+    const item = ing || { name: { th: "", en: "" }, amount: 0, unit: "Gram", scalable: true };
+    data.ingredients.push(item);
+    renderIngredients();
+    updatePreview();
+  }
+  function removeIngredient(idx) { data.ingredients.splice(idx, 1); renderIngredients(); updatePreview(); }
+  function renderIngredients() {
+    const container = document.getElementById('ingredientsList');
+    container.innerHTML = data.ingredients.map((ing, i) => `
+      <div class="item-card">
+        <div class="item-header">
+          <h4>วัตถุดิบ #${i + 1}</h4>
+          <button class="btn btn-danger" onclick="removeIngredient(${i})">ลบ</button>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>ชื่อ (TH)</label><input value="${ing.name.th}" oninput="data.ingredients[${i}].name.th=this.value; updatePreview()"></div>
+          <div class="form-group"><label>ชื่อ (EN)</label><input value="${ing.name.en}" oninput="data.ingredients[${i}].name.en=this.value; updatePreview()"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>ปริมาณ</label><input type="number" value="${ing.amount}" oninput="data.ingredients[${i}].amount=parseFloat(this.value); updatePreview()"></div>
+          <div class="form-group"><label>หน่วย</label>
+            <select onchange="data.ingredients[${i}].unit=this.value; updatePreview()">
+              <option value="Gram" ${ing.unit==='Gram'?'selected':''}>Gram</option>
+              <option value="Kg" ${ing.unit==='Kg'?'selected':''}>Kg</option>
+              <option value="Liter" ${ing.unit==='Liter'?'selected':''}>Liter</option>
+              <option value="ml" ${ing.unit==='ml'?'selected':''}>ml</option>
+              <option value="Teaspoon" ${ing.unit==='Teaspoon'?'selected':''}>Teaspoon</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" ${ing.scalable ? 'checked' : ''} onchange="data.ingredients[${i}].scalable=this.checked; updatePreview()"> ปรับปริมาณได้ตามสูตร (Scalable)</label>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // --- Machine Steps Logic ---
+  function addMachineStep(step = null) {
+    const item = step || {
+      step: data.machineSteps.length + 1, function: "Fill Water", target_value: 0, unit: "Liter", 
+      duration: 0, duration_unit: "minute", timeout: 0, timeout_unit: "minute", 
+      outputs: [], scalable: true,
+      title: { th: "", en: "" }, desc: { th: "", en: "" }, descVariables: {}
+    };
+    data.machineSteps.push(item);
+    renderMachineSteps();
+    updatePreview();
+  }
+  
+  function removeMachineStep(idx) { data.machineSteps.splice(idx, 1); renderMachineSteps(); updatePreview(); }
+  
+  function toggleOutput(stepIdx, output) {
+    const step = data.machineSteps[stepIdx];
+    const idx = step.outputs.indexOf(output);
+    if (idx > -1) step.outputs.splice(idx, 1);
+    else step.outputs.push(output);
+    updatePreview();
+  }
+
+  function renderMachineSteps() {
+    const container = document.getElementById('machineStepsList');
+    container.innerHTML = data.machineSteps.map((step, i) => `
+      <div class="item-card">
+        <div class="item-header">
+          <h4>Step ${step.step}: ${step.function}</h4>
+          <button class="btn btn-danger" onclick="removeMachineStep(${i})">ลบ</button>
+        </div>
+        
+        <div class="form-row-3">
+          <div class="form-group">
+            <label>Function</label>
+             <select onchange="changeMachineFunction(${i}, this.value)">
+              <option ${step.function==='Fill Water'?'selected':''}>Fill Water</option>
+              <option ${step.function==='Heat Water'?'selected':''}>Heat Water</option>
+              <option ${step.function==='Hold Temp'?'selected':''}>Hold Temp</option>
+              <option ${step.function==='Add Ingredient'?'selected':''}>Add Ingredient</option>
+              <option ${step.function==='Cool Down'?'selected':''}>Cool Down</option>
+              <option ${step.function==='Chill'?'selected':''}>Chill</option>
+              <option ${step.function==='Transfer'?'selected':''}>Transfer</option>
+              <option ${step.function==='Ferment'?'selected':''}>Ferment</option>
+              <option ${step.function==='Cold Settle'?'selected':''}>Cold Settle</option>
+              <option ${step.function==='User Alert'?'selected':''}>User Alert</option>
+              <option ${step.function==='Done'?'selected':''}>Done</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Scalable?</label>
+            <select onchange="data.machineSteps[${i}].scalable=(this.value==='true'); updatePreview()">
+              <option value="true" ${step.scalable?'selected':''}>Yes (ปรับตามปริมาณ)</option>
+              <option value="false" ${!step.scalable?'selected':''}>No (คงที่)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group"><label>Target Value</label><input type="number" value="${step.target_value}" oninput="data.machineSteps[${i}].target_value=parseFloat(this.value); updatePreview()"></div>
+          <div class="form-group"><label>Unit</label><input value="${step.unit}" oninput="data.machineSteps[${i}].unit=this.value; updatePreview()"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Duration</label>
+            <div style="display:flex; gap:8px;">
+              <input type="number" value="${step.duration}" oninput="data.machineSteps[${i}].duration=parseFloat(this.value); updatePreview()" style="flex:2;">
+              <select onchange="data.machineSteps[${i}].duration_unit=this.value; updatePreview()" style="flex:1;">
+                <option value="minute" ${step.duration_unit==='minute'?'selected':''}>minute</option>
+                <option value="second" ${step.duration_unit==='second'?'selected':''}>second</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Timeout</label>
+            <div style="display:flex; gap:8px;">
+              <input type="number" value="${step.timeout}" oninput="data.machineSteps[${i}].timeout=parseFloat(this.value); updatePreview()" style="flex:2;">
+              <select onchange="data.machineSteps[${i}].timeout_unit=this.value; updatePreview()" style="flex:1;">
+                <option value="minute" ${step.timeout_unit==='minute'?'selected':''}>minute</option>
+                <option value="second" ${step.timeout_unit==='second'?'selected':''}>second</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Outputs (เลือกอุปกรณ์ที่จะทำงาน)</label>
+          <div class="checkbox-group">
+            ${AVAILABLE_OUTPUTS.map(output => `
+              <div class="checkbox-item">
+                <input type="checkbox" id="out_${i}_${output.replace(/\s/g, '_')}" 
+                  ${step.outputs && step.outputs.includes(output) ? 'checked' : ''} 
+                  onchange="toggleOutput(${i}, '${output}')">
+                <label for="out_${i}_${output.replace(/\s/g, '_')}">${output}</label>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group"><label>Title / Sub_name (TH)</label><input value="${step.title ? step.title.th : ''}" oninput="if(!data.machineSteps[${i}].title) data.machineSteps[${i}].title={th:'',en:''}; data.machineSteps[${i}].title.th=this.value; updatePreview()"></div>
+          <div class="form-group"><label>Title (EN)</label><input value="${step.title ? step.title.en : ''}" oninput="if(!data.machineSteps[${i}].title) data.machineSteps[${i}].title={th:'',en:''}; data.machineSteps[${i}].title.en=this.value; updatePreview()"></div>
+        </div>
+        <div class="form-group">
+          <label>Description (TH) <span class="hint">ใช้ {key} แทนค่าตัวแปร</span></label>
+          <textarea oninput="if(!data.machineSteps[${i}].desc) data.machineSteps[${i}].desc={th:'',en:''}; data.machineSteps[${i}].desc.th=this.value; updatePreview()">${step.desc ? step.desc.th : ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label>Description (EN)</label>
+          <textarea oninput="if(!data.machineSteps[${i}].desc) data.machineSteps[${i}].desc={th:'',en:''}; data.machineSteps[${i}].desc.en=this.value; updatePreview()">${step.desc ? step.desc.en : ''}</textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Desc Variables (สำหรับแทนที่ {key} ในข้อความ)</label>
+          <div id="vars_${i}">
+            ${step.descVariables && Object.keys(step.descVariables).length > 0 
+              ? Object.entries(step.descVariables).map(([key, val]) => `
+              <div class="var-row">
+                <!-- ✅ เปลี่ยนเป็น onchange เพื่อให้พิมพ์เสร็จก่อนแล้วค่อยอัปเดต -->
+                <input placeholder="Key (เช่น water)" value="${key}" onchange="updateVar(${i}, '${key}', 'key', this.value)">
+                <input type="number" placeholder="Amount" value="${val.amount !== undefined ? val.amount : 0}" onchange="updateVar(${i}, '${key}', 'amount', this.value)">
+                <input placeholder="Unit" value="${val.unit || ''}" onchange="updateVar(${i}, '${key}', 'unit', this.value)">
+                <label style="margin:0; font-size:12px; display:flex; align-items:center; gap:4px;">
+                  <input type="checkbox" ${val.scalable ? 'checked' : ''} onchange="updateVar(${i}, '${key}', 'scalable', this.checked)"> Scalable
+                </label>
+                <button class="btn btn-danger" style="padding:4px 8px;" onclick="removeVar(${i}, '${key}')">X</button>
+              </div>
+            `).join('') 
+              : '<div class="hint" style="padding:8px; background:#f5f5f5; border-radius:4px;">ยังไม่มีตัวแปร กดปุ่มด้านล่างเพื่อเพิ่ม</div>'}
+          </div>
+          <button class="btn btn-secondary" style="margin-top:8px; font-size:12px;" onclick="addVar(${i})">+ เพิ่ม Variable</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+    // ✅ 1. แก้ไขฟังก์ชันเพิ่มตัวแปร ให้ตั้งชื่อเริ่มต้นที่อ่านง่าย
+  function addVar(stepIdx) {
+    if (!data.machineSteps[stepIdx].descVariables) {
+      data.machineSteps[stepIdx].descVariables = {};
+    }
+    // สร้าง key เริ่มต้น เช่น var_1, var_2 แทน timestamp ที่อ่านยาก
+    const count = Object.keys(data.machineSteps[stepIdx].descVariables).length + 1;
+    const newKey = "var_" + count;
+    
+    data.machineSteps[stepIdx].descVariables[newKey] = { 
+      amount: 0, 
+      unit: "", 
+      scalable: true 
+    };
+    renderMachineSteps();
+    updatePreview();
+  }
+
+  // ✅ 2. แก้ไขฟังก์ชันลบตัวแปร ให้เช็คความปลอดภัย
+  function removeVar(stepIdx, key) {
+    const step = data.machineSteps[stepIdx];
+    if (step && step.descVariables) {
+      delete step.descVariables[key];
+    }
+    renderMachineSteps();
+    updatePreview();
+  }
+
+  // ✅ 3. แก้ไขฟังก์ชันอัปเดตตัวแปร (หัวใจหลักที่แก้ปัญหา JSON Preview ผิด)
+  function updateVar(stepIdx, oldKey, field, value) {
+    const step = data.machineSteps[stepIdx];
+    if (!step || !step.descVariables || !step.descVariables[oldKey]) return;
+
+    if (field === 'key') {
+      const newKey = value.trim();
+      // เปลี่ยนชื่อ Key เฉื่อเมื่อมีการพิมพ์เสร็จ (onchange) และชื่อไม่ซ้ำ
+      if (newKey && newKey !== oldKey && !step.descVariables[newKey]) {
+        step.descVariables[newKey] = step.descVariables[oldKey];
+        delete step.descVariables[oldKey];
+        renderMachineSteps(); // ต้อง render ใหม่เฉพาะตอนเปลี่ยนชื่อ Key
+      }
+    } else if (field === 'amount') {
+      const numVal = parseFloat(value);
+      step.descVariables[oldKey][field] = isNaN(numVal) ? 0 : numVal;
+      // ไม่ต้อง render ใหม่ แค่อัปเดต Preview ก็พอ (พิมพ์ลื่นไหล)
+    } else {
+      step.descVariables[oldKey][field] = value;
+      // ไม่ต้อง render ใหม่ แค่อัปเดต Preview ก็พอ
+    }
+    
+    updatePreview();
+  }
+
+  // --- Manual Steps Logic ---
+
+  function addManualStep() {
+    data.manualSteps.push({
+      step: data.manualSteps.length + 1,
+      scalable: true,
+      title: { th: "", en: "" },
+      desc: { th: "", en: "" },
+      descVariables: {},  // ✅ เพิ่มฟิลด์นี้
+      image: "",
+      tips: { th: "", en: "" }
+    });
+    renderManualSteps();
+    updatePreview();
+  }
+  function removeManualStep(idx) { data.manualSteps.splice(idx, 1); renderManualSteps(); updatePreview(); }
+    function renderManualSteps() {
+    const container = document.getElementById('manualStepsList');
+    container.innerHTML = data.manualSteps.map((step, i) => `
+      <div class="item-card">
+        <div class="item-header">
+          <h4>Manual Step ${step.step}</h4>
+          <button class="btn btn-danger" onclick="removeManualStep(${i})">ลบ</button>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Title (TH)</label>
+            <input value="${step.title.th}" oninput="data.manualSteps[${i}].title.th=this.value; updatePreview()">
+          </div>
+          <div class="form-group">
+            <label>Title (EN)</label>
+            <input value="${step.title.en}" oninput="data.manualSteps[${i}].title.en=this.value; updatePreview()">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Description (TH) <span class="hint">ใช้ {key} แทนค่าตัวแปร</span></label>
+          <textarea oninput="data.manualSteps[${i}].desc.th=this.value; updatePreview()">${step.desc.th}</textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Description (EN)</label>
+          <textarea oninput="data.manualSteps[${i}].desc.en=this.value; updatePreview()">${step.desc.en}</textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Image Path</label>
+          <input value="${step.image}" oninput="data.manualSteps[${i}].image=this.value; updatePreview()">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tips (TH)</label>
+            <input value="${step.tips.th}" oninput="data.manualSteps[${i}].tips.th=this.value; updatePreview()">
+          </div>
+          <div class="form-group">
+            <label>Tips (EN)</label>
+            <input value="${step.tips.en}" oninput="data.manualSteps[${i}].tips.en=this.value; updatePreview()">
+          </div>
+        </div>
+
+        <!-- ✅ เพิ่มส่วน Desc Variables -->
+        <div class="form-group">
+          <label>Desc Variables (สำหรับแทนที่ {key} ในข้อความ)</label>
+          <div id="manual_vars_${i}">
+            ${step.descVariables && Object.keys(step.descVariables).length > 0 
+              ? Object.entries(step.descVariables).map(([key, val]) => `
+              <div class="var-row">
+                <input placeholder="Key (เช่น water)" value="${key}" onchange="updateManualVar(${i}, '${key}', 'key', this.value)">
+                <input type="number" placeholder="Amount" value="${val.amount !== undefined ? val.amount : 0}" onchange="updateManualVar(${i}, '${key}', 'amount', this.value)">
+                <input placeholder="Unit" value="${val.unit || ''}" onchange="updateManualVar(${i}, '${key}', 'unit', this.value)">
+                <label style="margin:0; font-size:12px; display:flex; align-items:center; gap:4px;">
+                  <input type="checkbox" ${val.scalable ? 'checked' : ''} onchange="updateManualVar(${i}, '${key}', 'scalable', this.checked)"> Scalable
+                </label>
+                <button class="btn btn-danger" style="padding:4px 8px;" onclick="removeManualVar(${i}, '${key}')">X</button>
+              </div>
+            `).join('') 
+              : '<div class="hint" style="padding:8px; background:#f5f5f5; border-radius:4px;">ยังไม่มีตัวแปร กดปุ่มด้านล่างเพื่อเพิ่ม</div>'}
+          </div>
+          <button class="btn btn-secondary" style="margin-top:8px; font-size:12px;" onclick="addManualVar(${i})">+ เพิ่ม Variable</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function importJSON(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const jsonData = JSON.parse(e.target.result);
+        
+        // ✅ Auto-Detect: ตรวจสอบโครงสร้างไฟล์
+        const isMachineJSON = jsonData.steps && jsonData.recipe_id && jsonData.total_time;
+        const isWebJSON = jsonData.machineSteps && jsonData.name && jsonData.manualSteps;
+        
+        if (isMachineJSON) {
+          // ยืนยันก่อน Import
+          const confirmImport = confirm(
+            `🔍 ตรวจพบไฟล์: Machine JSON (FML)\n\n` +
+            `📋 ชื่อ: ${jsonData.recipe_name || 'ไม่ระบุ'}\n` +
+            `🔢 จำนวนขั้นตอน: ${jsonData.steps.length}\n` +
+            `⏱️ เวลารวม: ${jsonData.total_time} นาที\n` +
+            `🌡️ อุณหภูมิ: ${jsonData.target_temp}°C\n\n` +
+            `ต้องการ Import เป็น Machine JSON ใช่หรือไม่?`
+          );
+          
+          if (confirmImport) {
+            importAsMachine(jsonData, file.name);
+          }
+        } 
+        else if (isWebJSON) {
+          // ยืนยันก่อน Import
+          const stepCount = jsonData.machineSteps ? jsonData.machineSteps.length : 0;
+          const manualCount = jsonData.manualSteps ? jsonData.manualSteps.length : 0;
+          
+          const confirmImport = confirm(
+            `🔍 ตรวจพบไฟล์: Web JSON (Content)\n\n` +
+            `📋 ชื่อ: ${jsonData.name.th || 'ไม่ระบุ'}\n` +
+            `🔢 ขั้นตอนเครื่อง: ${stepCount}\n` +
+            `🖐️ ขั้นตอนทำเอง: ${manualCount}\n` +
+            `🥬 วัตถุดิบ: ${jsonData.ingredients ? jsonData.ingredients.length : 0}\n\n` +
+            `ต้องการ Import เป็น Web JSON ใช่หรือไม่?`
+          );
+          
+          if (confirmImport) {
+            importAsWeb(jsonData, file.name);
+          }
+        } 
+        else {
+          alert(
+            '❌ ไม่สามารถระบุประเภทไฟล์ได้\n\n' +
+            'กรุณาตรวจสอบว่าเป็น JSON ที่ถูกต้อง:\n' +
+            '• Machine JSON: มี fields "steps", "recipe_id", "total_time"\n' +
+            '• Web JSON: มี fields "machineSteps", "name", "manualSteps"'
+          );
+        }
+        
+        // รีเซ็ต input เพื่อให้เลือกไฟล์เดิมได้อีก
+        event.target.value = '';
+        
+      } catch (err) {
+        alert('❌ ไฟล์ JSON ไม่ถูกต้อง: ' + err.message);
+        console.error('Import error:', err);
+        event.target.value = '';
+      }
+    };
+    reader.readAsText(file);
+  }
+  // ✅ Import as Machine JSON (FML_xxx.json)
+  function importAsMachine(machineData, fileName) {
+    // Reset data
+    data.ingredients = [];
+    data.machineSteps = [];
+    data.manualSteps = [];
+    
+    // Auto-fill basic & machine info
+    if(machineData.recipe_id) document.getElementById('id').value = machineData.recipe_id.replace('FML_', '').replace(/_\d+L$/, '') + '_10L';
+    if(machineData.recipe_name) document.getElementById('name_th').value = machineData.recipe_name;
+    if(machineData.icon) document.getElementById('icon').value = machineData.icon;
+    if(machineData.category) document.getElementById('category').value = machineData.category;
+    if(machineData.description) document.getElementById('description').value = machineData.description;
+    if(machineData.total_time) document.getElementById('total_time').value = machineData.total_time;
+    if(machineData.target_temp) document.getElementById('target_temp').value = machineData.target_temp;
+    if(machineData.total_volume) document.getElementById('baseVolume').value = machineData.total_volume;
+    document.getElementById('machineFile').value = fileName;
+
+    // Auto-generate Ingredients using Mapping Dictionary
+    const INGREDIENT_MAPPING = {
+      'น้ำตาล': { th: 'น้ำตาลทราย', en: 'Sugar' },
+      'น้ำตาลทราย': { th: 'น้ำตาลทราย', en: 'Sugar' },
+      'กระเจี๊ยบ': { th: 'กลีบกระเจี๊ยบแห้ง', en: 'Dried Roselle Calyxes' },
+      'เกลือ': { th: 'เกลือป่น', en: 'Salt' },
+      'น้ำสะอาด': { th: 'น้ำสะอาด', en: 'Clean Water' },
+      'น้ำ': { th: 'น้ำสะอาด', en: 'Clean Water' },
+      'นม': { th: 'นมสด', en: 'Fresh Milk' },
+      'นมถั่วเหลือง': { th: 'นมถั่วเหลือง', en: 'Soy Milk' },
+      'ชา': { th: 'ใบชา', en: 'Tea Leaves' },
+      'กาแฟ': { th: 'ผงกาแฟ', en: 'Coffee Powder' },
+      'ยีสต์': { th: 'ยีสต์', en: 'Yeast' }
+    };
+
+    machineData.steps.forEach(step => {
+      if (step.function === 'Add Ingredient') {
+        let matchedName = { th: 'วัตถุดิบเพิ่มเติม (กรุณาแก้ไข)', en: 'Additional Ingredient (Please edit)' };
+        
+        if (step.sub_name) {
+          for (const [keyword, names] of Object.entries(INGREDIENT_MAPPING)) {
+            if (step.sub_name.includes(keyword)) {
+              matchedName = names;
+              break;
+            }
+          }
+        }
+
+        data.ingredients.push({
+          name: matchedName,
+          amount: step.target_value || 0,
+          unit: step.unit || 'Gram',
+          scalable: true
+        });
+      }
+    });
+
+    // Auto-generate Machine Steps skeleton
+    data.machineSteps = machineData.steps.map((step, idx) => ({
+      step: step.step_id || step.step || (idx + 1),
+      function: step.function || 'Fill Water',
+      target_value: step.target_value || 0,
+      unit: step.unit || 'Liter',
+      duration: step.duration || 0,
+      duration_unit: step.duration_unit || "minute",
+      timeout: step.timeout || 0,
+      timeout_unit: step.timeout_unit || "minute",
+      outputs: step.outputs_csv ? step.outputs_csv.split(',').map(s => s.trim()).filter(s => s) : [],
+      scalable: step.function !== 'Hold Temp' && step.function !== 'Heat Water',
+      title: { th: step.sub_name || "", en: "" },
+      desc: { th: "", en: "" },
+      descVariables: {}
+    }));
+
+    renderIngredients();
+    renderMachineSteps();
+    updatePreview();
+    
+    alert(`✅ Import Machine JSON สำเร็จ!\n\nพบ ${machineData.steps.length} ขั้นตอน\nสร้างวัตถุดิบ ${data.ingredients.length} รายการ\n\nกรุณาเติมข้อความภาษาไทย/อังกฤษในแท็บที่เกี่ยวข้อง`);
+    switchTab('details', { target: document.querySelectorAll('.tab')[1] });
+  }
+  // ✅ Import as Web JSON (roselle_10L.json) - โหลดทุกอย่าง
+  function importAsWeb(webData, fileName) {
+    // Reset data
+    data.ingredients = [];
+    data.machineSteps = [];
+    data.manualSteps = [];
+    
+    // Auto-fill basic info
+    if(webData.id) document.getElementById('id').value = webData.id;
+    if(webData.category) document.getElementById('category').value = webData.category;
+    if(webData.baseVolume) document.getElementById('baseVolume').value = webData.baseVolume;
+    if(webData.minVolume) document.getElementById('minVolume').value = webData.minVolume;
+    if(webData.maxVolume) document.getElementById('maxVolume').value = webData.maxVolume;
+    if(webData.machineFile) document.getElementById('machineFile').value = webData.machineFile;
+    
+    // Images
+    if(webData.images && Array.isArray(webData.images)) {
+      document.getElementById('images').value = webData.images.join(', ');
+    }
+    
+    // Video
+    if(webData.videoUrl) document.getElementById('videoUrl').value = webData.videoUrl;
+    
+    // Bilingual fields
+    if(webData.name) {
+      if(webData.name.th) document.getElementById('name_th').value = webData.name.th;
+      if(webData.name.en) document.getElementById('name_en').value = webData.name.en;
+    }
+    
+    if(webData.intro) {
+      if(webData.intro.th) document.getElementById('intro_th').value = webData.intro.th;
+      if(webData.intro.en) document.getElementById('intro_en').value = webData.intro.en;
+    }
+    
+    if(webData.benefits) {
+      if(webData.benefits.th) document.getElementById('benefits_th').value = webData.benefits.th;
+      if(webData.benefits.en) document.getElementById('benefits_en').value = webData.benefits.en;
+    }
+    
+    if(webData.warnings) {
+      if(webData.warnings.th) document.getElementById('warnings_th').value = webData.warnings.th;
+      if(webData.warnings.en) document.getElementById('warnings_en').value = webData.warnings.en;
+    }
+    
+    // Time fields
+    if(webData.prepTime) {
+      const prepTH = webData.prepTime.th || '';
+      const prepEN = webData.prepTime.en || '';
+      document.getElementById('prepTime').value = `${prepTH} / ${prepEN}`;
+    }
+    
+    if(webData.cookTime) {
+      const cookTH = webData.cookTime.th || '';
+      const cookEN = webData.cookTime.en || '';
+      document.getElementById('cookTime').value = `${cookTH} / ${cookEN}`;
+    }
+    
+    if(webData.servings) {
+      const servTH = webData.servings.th || '';
+      const servEN = webData.servings.en || '';
+      document.getElementById('servings').value = `${servTH} / ${servEN}`;
+    }
+    
+    if(webData.rating) document.getElementById('rating').value = webData.rating;
+    
+    // Nutrition
+    if(webData.nutrition) {
+      if(webData.nutrition.calories) document.getElementById('nut_cal').value = webData.nutrition.calories;
+      if(webData.nutrition.carbs) document.getElementById('nut_carbs').value = webData.nutrition.carbs;
+      if(webData.nutrition.sugar) document.getElementById('nut_sugar').value = webData.nutrition.sugar;
+      if(webData.nutrition.protein) document.getElementById('nut_protein').value = webData.nutrition.protein;
+    }
+    
+    // Ingredients
+    if(webData.ingredients && Array.isArray(webData.ingredients)) {
+      data.ingredients = webData.ingredients.map(ing => ({
+        name: { th: ing.name.th || '', en: ing.name.en || '' },
+        amount: ing.amount || 0,
+        unit: ing.unit || 'Gram',
+        scalable: ing.scalable !== false
+      }));
+    }
+    
+    // Machine Steps
+    if(webData.machineSteps && Array.isArray(webData.machineSteps)) {
+      data.machineSteps = webData.machineSteps.map((step, idx) => ({
+        step: step.step || (idx + 1),
+        function: step.function || 'Fill Water',
+        target_value: step.target_value || 0,
+        unit: step.unit || 'Liter',
+        duration: step.duration || 0,
+        duration_unit: step.duration_unit || "minute",
+        timeout: step.timeout || 0,
+        timeout_unit: step.timeout_unit || "minute",
+        outputs: step.outputs_csv ? step.outputs_csv.split(',').map(s => s.trim()).filter(s => s) : [],
+        scalable: step.scalable !== false,
+        title: { th: step.title?.th || '', en: step.title?.en || '' },
+        desc: { th: step.desc?.th || '', en: step.desc?.en || '' },
+        descVariables: step.descVariables || {}
+      }));
+    }
+    
+    // Manual Steps
+    if(webData.manualSteps && Array.isArray(webData.manualSteps)) {
+      data.manualSteps = webData.manualSteps.map((step, idx) => ({
+        step: step.step || (idx + 1),
+        scalable: step.scalable !== false,
+        title: { th: step.title?.th || '', en: step.title?.en || '' },
+        desc: { th: step.desc?.th || '', en: step.desc?.en || '' },
+        descVariables: step.descVariables || {},
+        image: step.image || '',
+        tips: { th: step.tips?.th || '', en: step.tips?.en || '' }
+      }));
+    }
+    
+    renderIngredients();
+    renderMachineSteps();
+    renderManualSteps();
+    updatePreview();
+    
+    const totalSteps = (data.machineSteps.length + data.manualSteps.length);
+    alert(`✅ Import Web JSON สำเร็จ!\n\n📋 ชื่อ: ${webData.name?.th || 'ไม่ระบุ'}\n🔢 ขั้นตอนเครื่อง: ${data.machineSteps.length}\n🖐️ ขั้นตอนทำเอง: ${data.manualSteps.length}\n🥬 วัตถุดิบ: ${data.ingredients.length}\n\nพร้อมแก้ไขและ Export ต่อได้เลย!`);
+  }
+  // ✅ NEW: Export specifically for Machine (FML_xxx.json)
+  function exportMachineJSON() {
+    const machineData = {
+      recipe_id: getVal('id') || "unknown_recipe",
+      recipe_name: getVal('name_th') || "Unknown Recipe",
+      icon: getVal('icon') || "🌺",
+      category: getVal('category'),
+      description: getVal('description') || getVal('intro_th'),
+      total_time: parseInt(getVal('total_time')) || 0,
+      target_temp: parseInt(getVal('target_temp')) || 0,
+      total_volume: parseInt(getVal('baseVolume')) || 10,
+      steps: data.machineSteps.map(step => ({
+        step_id: step.step,
+        function: step.function,
+        sub_name: (step.title && step.title.th) ? step.title.th : "",
+        target_value: step.target_value,
+        unit: step.unit,
+        duration: step.duration,
+        duration_unit: step.duration_unit || "minute",
+        timeout: step.timeout,
+        timeout_unit: step.timeout_unit || "minute",
+        outputs_csv: step.outputs ? step.outputs.join(',') : ""
+      }))
+    };
+
+    const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    // Naming convention: FML_[id]_[volume]L.json
+    const vol = machineData.total_volume;
+    const cleanId = machineData.recipe_id.replace(/_\d+L$/, '').replace('FML_', '');
+    a.download = `FML_${cleanId}_${vol}L.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // ✅ Export for Web Content
+  function exportWebJSON() {
+    const exportData = JSON.parse(JSON.stringify(data));
+    // Clean up machine steps for web export (convert outputs array back to string if needed, or keep as is)
+    exportData.machineSteps = exportData.machineSteps.map(step => ({
+      ...step,
+      outputs_csv: step.outputs ? step.outputs.join(',') : ""
+    }));
+    exportData.machineSteps.forEach(step => delete step.outputs);
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${exportData.id || 'recipe'}_web.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+    // ✅ Manual Steps Variables Management
+  function addManualVar(stepIdx) {
+    if (!data.manualSteps[stepIdx].descVariables) {
+      data.manualSteps[stepIdx].descVariables = {};
+    }
+    const count = Object.keys(data.manualSteps[stepIdx].descVariables).length + 1;
+    const newKey = "var_" + count;
+    
+    data.manualSteps[stepIdx].descVariables[newKey] = { 
+      amount: 0, 
+      unit: "", 
+      scalable: true 
+    };
+    renderManualSteps();
+    updatePreview();
+  }
+
+  function removeManualVar(stepIdx, key) {
+    const step = data.manualSteps[stepIdx];
+    if (step && step.descVariables) {
+      delete step.descVariables[key];
+    }
+    renderManualSteps();
+    updatePreview();
+  }
+
+  function updateManualVar(stepIdx, oldKey, field, value) {
+    const step = data.manualSteps[stepIdx];
+    if (!step || !step.descVariables || !step.descVariables[oldKey]) return;
+
+    if (field === 'key') {
+      const newKey = value.trim();
+      if (newKey && newKey !== oldKey && !step.descVariables[newKey]) {
+        step.descVariables[newKey] = step.descVariables[oldKey];
+        delete step.descVariables[oldKey];
+        renderManualSteps();
+      }
+    } else if (field === 'amount') {
+      const numVal = parseFloat(value);
+      step.descVariables[oldKey][field] = isNaN(numVal) ? 0 : numVal;
+    } else {
+      step.descVariables[oldKey][field] = value;
+    }
+    updatePreview();
+  }
+
+  // Init
+  updatePreview();
+
+</script>
+</body>
+</html>

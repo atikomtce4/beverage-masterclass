@@ -215,13 +215,27 @@
     .step-item { display: flex; gap: 16px; margin-bottom: 20px; }
     .step-item:last-child { margin-bottom: 0; }
     .step-num { width: 32px; height: 32px; background: #4CAF50; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    /* ✅ Step Content - ปรับให้ title/desc อยู่ด้านล่าง */
     .step-content {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .step-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: #212121; }
-    .step-content p { font-size: 14px; color: #616161; line-height: 1.6; margin: 0; }
+
+    .step-content h4 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #2e7d32;
+      line-height: 1.4;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: #616161;
+      line-height: 1.7;
+      margin: 0;
+    }
 
     .step-image {
       width: 100%;
@@ -257,13 +271,51 @@
     .btn-copy-link { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .btn-back { background: white; color: #4CAF50; border: 2px solid #4CAF50; padding: 16px; border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; }
 
+    /* ✅ Machine Info Box - เวอร์ชันใหม่ (ใหญ่ขึ้น, เด่นขึ้น) */
     .machine-info-box {
-      margin-top: 8px;
-      padding: 8px;
-      background: #f0f9ff;
-      border-radius: 6px;
-      font-size: 13px;
-      color: #0369a1;
+      margin-bottom: 16px;  /* เปลี่ยนจาก margin-top เป็น margin-bottom */
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 12px;
+      border-left: 5px solid #2196F3;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+      font-size: 15px;
+      font-weight: 600;
+      color: #1565c0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .machine-info-box .function-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0d47a1;
+    }
+
+    .machine-info-box .info-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: white;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .machine-info-box .info-item .label {
+      color: #757575;
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    .machine-info-box .info-item .value {
+      color: #1565c0;
+      font-weight: 700;
+      font-size: 16px;
     }
 
     /* ===== Toast Notification ===== */
@@ -324,18 +376,7 @@
         <p id="recipeIntro" class="recipe-intro">คำอธิบายสั้นๆ</p>
       </div>
 
-      <!-- Mode Toggle -->
-      <div class="mode-toggle-container">
-        <div class="mode-toggle">
-           <!-- เพิ่ม id="btnModeManual" และ id="btnModeMachine" -->
-          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')" id="btnModeManual">
-            🖐️ <span class="mode-text">ทำเอง</span>
-          </button>
-          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')" id="btnModeMachine">
-            🤖 <span class="mode-text">ใช้เครื่อง</span>
-          </button>
-        </div>
-      </div>
+     
 
       <!-- Media Container (Gallery + Video) -->
       <div class="media-container">
@@ -362,8 +403,20 @@
           </div>
         </div>
       </div>
-
+ <!-- Mode Toggle -->
+      <div class="mode-toggle-container">
+        <div class="mode-toggle">
+           <!-- เพิ่ม id="btnModeManual" และ id="btnModeMachine" -->
+          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')" id="btnModeManual">
+            🖐️ <span class="mode-text">ทำเอง</span>
+          </button>
+          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')" id="btnModeMachine">
+            🤖 <span class="mode-text">ใช้เครื่อง</span>
+          </button>
+        </div>
+      </div>
       <!-- Meta Info Grid -->
+      <!-- 
       <div class="info-grid">
         <div class="info-box">
           <div class="label" id="labelPrepTime">เวลาเตรียม</div>
@@ -382,7 +435,7 @@
           <div id="rating" class="value">- / 5</div>
         </div>
       </div>
-
+      -->
       <!-- Benefits & Warnings -->
       <div id="benefitBox" class="benefit-box"></div>
       <div id="warningBox" class="warning-box"></div>
@@ -431,9 +484,6 @@
 
       <!-- Action Buttons -->
       <div class="action-buttons" id="actionButtons">
-        <button id="copyLinkBtn" class="btn-copy-link">
-          📋 คัดลอกลิงก์สูตรสำหรับเครื่อง
-        </button>
         <a href="index.html" class="btn-back" id="btnBackToHome">ดูสูตรอื่นๆ</a>
       </div>
 
