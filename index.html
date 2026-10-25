@@ -5,146 +5,793 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Beverage Masterclass</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/mobile-style.css">
+  
+  <style>
+    /* ===== CSS Variables (Design System) ===== */
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #2e7d32;
+      --primary-light: #e8f5e9;
+      --secondary: #FF9800;
+      --secondary-dark: #e65100;
+      --accent: #2196F3;
+      --text: #212121;
+      --text-light: #757575;
+      --bg: #FAFAFA;
+      --white: #ffffff;
+      --border: #e0e0e0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== Header ===== */
+    .header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon { font-size: 24px; }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* ===== Language Toggle ===== */
+    .lang-toggle {
+      display: flex;
+      background: var(--bg);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border: none;
+      background: transparent;
+      color: var(--text-light);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: var(--primary-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .btn-nav {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .btn-nav:hover { background: var(--primary-dark); }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary-dark);
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: transparent;
+      color: white;
+    }
+
+    /* ===== Section Title ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      font-size: 15px;
+      color: var(--text-light);
+    }
+
+    /* ===== Featured Recipes ===== */
+    .featured { padding: 60px 0; background: var(--white); }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .recipe-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .recipe-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .recipe-card-body { padding: 20px; }
+
+    .recipe-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .recipe-card-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-light);
+      flex-wrap: wrap;
+    }
+
+    .recipe-card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ===== Categories ===== */
+    .categories { padding: 60px 0; background: var(--bg); }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .category-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .category-icon { font-size: 48px; margin-bottom: 16px; }
+
+    .category-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .category-desc {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .cat-herbal { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+    .cat-tea { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); }
+    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
+    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
+
+    /* ===== Features ===== */
+    .features { padding: 60px 0; background: var(--white); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card { text-align: center; padding: 24px; }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 20px;
+    }
+
+    .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 16px;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--secondary-dark);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: var(--text);
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+
+    .footer-section ul { list-style: none; }
+    .footer-section li { margin-bottom: 8px; }
+    .footer-section a {
+      font-size: 14px;
+      color: #b0b0b0;
+      transition: color 0.2s;
+    }
+    .footer-section a:hover { color: white; }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #424242;
+      font-size: 13px;
+      color: #757575;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .section-title h2 { font-size: 24px; }
+      .recipe-grid, .category-grid, .features-grid { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr; text-align: center; }
+      .header-content { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 28px; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="mobile-header">
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <h1 class="logo">Beverage Masterclass</h1>
-    <button class="search-icon" onclick="showSearch()">🔍</button>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">🍹</span>
+        <span>Beverage Masterclass</span>
+      </div>
+      <div class="header-actions">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="th" onclick="setLanguage('th')">TH</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <nav class="nav-links">
+          <a href="categories.html" data-i18n="nav_categories">หมวดหมู่</a>
+          <a href="https://beveragesystem.com" class="btn-nav" data-i18n="nav_shop"> ซื้อเครื่อง</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <!-- Side Menu (Overlay) -->
-  <div class="side-menu" id="sideMenu">
-    <div class="menu-header">
-      <h2>เมนู</h2>
-      <button class="close-menu" onclick="toggleMenu()"></button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="hero_title">Beverage Masterclass</h1>
+      <p data-i18n="hero_subtitle">รวมสูตรเครื่องดื่มสมุนไพร ชา และเครื่องดื่มหมัก พร้อมระบบปรับปริมาณอัตโนมัติ</p>
+      <div class="hero-buttons">
+        <a href="categories.html" class="btn btn-primary" data-i18n="hero_btn_recipes">📖 ดูสูตรทั้งหมด</a>
+        <a href="https://beveragesystem.com" class="btn btn-secondary" data-i18n="hero_btn_machine">🤖 ดูเครื่อง Beverage System</a>
+      </div>
     </div>
-    <nav class="menu-nav">
-      <a href="index.html" class="menu-item active"> หน้าแรก</a>
-      <a href="#" class="menu-item" onclick="navigateTo('categories')">📂 หมวดหมู่</a>
-      <a href="#" class="menu-item" onclick="navigateTo('products')"> สินค้า & อุปกรณ์</a>
-      <a href="#" class="menu-item" onclick="navigateTo('news')">📰 ข่าวสาร</a>
-      <a href="#" class="menu-item" onclick="navigateTo('about')">ℹ️ เกี่ยวกับเรา</a>
-      <a href="https://atikomtce4.github.io/bevarageSystem/" class="menu-item">🔧 Beverage System</a>
-    </nav>
-  </div>
-  <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+  </section>
 
-  <!-- Search Modal -->
-  <div class="search-modal" id="searchModal">
-    <div class="search-header">
-      <button onclick="hideSearch()">✕</button>
-      <input type="text" placeholder="What are you looking for?" class="search-input">
-      <button class="search-btn">🔍</button>
+  <!-- Featured Recipes -->
+  <section class="featured">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="featured_title">🌟 สูตรแนะนำ</h2>
+        <p data-i18n="featured_subtitle">สูตรยอดนิยมที่ผ่านการทดสอบแล้ว</p>
+      </div>
+      <div class="recipe-grid">
+        <a href="recipe.html?id=herbal/roselle_10L" class="recipe-card">
+          <div class="recipe-card-img">🌺</div>
+          <div class="recipe-card-body">
+            <h3 class="recipe-card-title" data-i18n="recipe1_title">น้ำกระเจี๊ยบสกัดเย็น</h3>
+            <div class="recipe-card-meta">
+              <span>⭐ 4.8</span>
+              <span data-i18n="recipe1_time">⏱️ 25 นาที</span>
+              <span data-i18n="recipe1_volume"> 10 ลิตร</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="recipe.html?id=herbal/chrysanthemum_10L" class="recipe-card">
+          <div class="recipe-card-img">🌼</div>
+          <div class="recipe-card-body">
+            <h3 class="recipe-card-title" data-i18n="recipe2_title">น้ำเก๊กฮวยดอกใหญ่</h3>
+            <div class="recipe-card-meta">
+              <span>⭐ 4.9</span>
+              <span data-i18n="recipe2_time">⏱️ 20 นาที</span>
+              <span data-i18n="recipe2_volume">📏 10 ลิตร</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="categories.html" class="recipe-card">
+          <div class="recipe-card-img">🍵</div>
+          <div class="recipe-card-body">
+            <h3 class="recipe-card-title" data-i18n="recipe3_title">ชาไทยสูตรดั้งเดิม</h3>
+            <div class="recipe-card-meta">
+              <span>⭐ 4.7</span>
+              <span data-i18n="recipe3_time">⏱️ 15 นาที</span>
+              <span data-i18n="recipe3_volume">📏 10 ลิตร</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Main Content -->
-  <main class="mobile-content">
-    
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-icon">🟢</span>
-          <div>
-            <div class="stat-number">4</div>
-            <div class="stat-label">Beverage Recipes</div>
-          </div>
+  <!-- Categories -->
+  <section class="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="cat_title">📂 หมวดหมู่เครื่องดื่ม</h2>
+        <p data-i18n="cat_subtitle">เลือกหมวดหมู่ที่คุณสนใจ</p>
+      </div>
+      <div class="category-grid">
+        <a href="category.html?id=herbal" class="category-card cat-herbal">
+          <div class="category-icon">🌿</div>
+          <h3 class="category-name" data-i18n="cat_herbal">สมุนไพรไทย</h3>
+          <p class="category-desc" data-i18n="cat_herbal_desc">กระเจี๊ยบ, เก๊กฮวย, ใบเตย</p>
+        </a>
+
+        <a href="category.html?id=tea" class="category-card cat-tea">
+          <div class="category-icon">🍵</div>
+          <h3 class="category-name" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</h3>
+          <p class="category-desc" data-i18n="cat_tea_desc">ชาไทย, ชาเขียว, โกโก้</p>
+        </a>
+
+        <a href="category.html?id=milk" class="category-card cat-milk">
+          <div class="category-icon">🥛</div>
+          <h3 class="category-name" data-i18n="cat_milk">นม & ธัญพืช</h3>
+          <p class="category-desc" data-i18n="cat_milk_desc">นมถั่วเหลือง, นมข้าวโพด</p>
+        </a>
+
+        <a href="category.html?id=ferment" class="category-card cat-ferment">
+          <div class="category-icon">🍺</div>
+          <h3 class="category-name" data-i18n="cat_ferment">เครื่องดื่มหมัก</h3>
+          <p class="category-desc" data-i18n="cat_ferment_desc">คอมบูชา, โยเกิร์ต</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="feat_title">✨ จุดเด่นของระบบ</h2>
+        <p data-i18n="feat_subtitle">ออกแบบมาเพื่อการทำเครื่องดื่มที่ง่ายขึ้น</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚖️</div>
+          <h3 class="feature-title" data-i18n="feat1_title">ปรับปริมาณอัตโนมัติ</h3>
+          <p class="feature-desc" data-i18n="feat1_desc">ปรับได้ตั้งแต่ 1-20 ลิตร สูตรไม่เพี้ยน วัตถุดิบและขั้นตอนคำนวณให้ทันที</p>
         </div>
-        <div class="stat-item">
-          <span class="stat-icon">🟡</span>
-          <div>
-            <div class="stat-number">10</div>
-            <div class="stat-label">Rating & Reviews</div>
-          </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3 class="feature-title" data-i18n="feat2_title">2 โหมดการใช้งาน</h3>
+          <p class="feature-desc" data-i18n="feat2_desc">โหมดทำเอง (Manual) สำหรับทำที่บ้าน และโหมดใช้เครื่อง (Machine) สำหรับธุรกิจ</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title" data-i18n="feat3_title">ส่งสูตรเข้าเครื่องในคลิกเดียว</h3>
+          <p class="feature-desc" data-i18n="feat3_desc">คัดลอกสูตรแล้ววางลงในเครื่อง Beverage System พร้อมใช้งานทันที</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Featured Images -->
-    <section class="featured-images">
-      <div class="image-grid">
-        <img src="https://via.placeholder.com/150x150/4CAF50/FFFFFF?text=Herbs" alt="Herbs">
-        <img src="https://via.placeholder.com/150x150/2196F3/FFFFFF?text=Tea" alt="Tea">
-        <img src="https://via.placeholder.com/150x150/FF9800/FFFFFF?text=Machine" alt="Machine">
-      </div>
-    </section>
-
-    <!-- Category Section -->
-    <section class="content-section">
-      <h2 class="section-title">HERBAL RECIPES</h2>
-      <div class="recipe-card" onclick="navigateTo('recipe-detail')">
-        <h3 class="recipe-title">Roselle Juice</h3>
-        <p class="recipe-desc">These easy recipes juice with easy drink it very fresh and healthy</p>
-      </div>
-    </section>
-
-    <!-- The Latest Section -->
-    <section class="content-section">
-      <h2 class="section-title with-border">The Latest</h2>
-      
-      <!-- News Item 1 -->
-      <article class="news-item">
-        <img src="https://via.placeholder.com/100x100/FFC107/FFFFFF?text=Juice" alt="News" class="news-thumb">
-        <div class="news-content">
-          <div class="news-meta">
-            <span class="news-category">JUICE</span>
-            <span class="news-time">29 MINUTES AGO</span>
-          </div>
-          <h3 class="news-title">Mango Juice from Thailand New Taste</h3>
-        </div>
-      </article>
-
-      <!-- News Item 2 -->
-      <article class="news-item">
-        <img src="https://via.placeholder.com/100x100/9C27B0/FFFFFF?text=News" alt="News" class="news-thumb">
-        <div class="news-content">
-          <div class="news-meta">
-            <span class="news-category">Business & Marketing News</span>
-            <span class="news-time">2 HOURS AGO</span>
-          </div>
-          <h3 class="news-title">Top 10 Best-Selling Herbal Drinks in 2026</h3>
-          <p class="news-excerpt">Do you know which herbal drinks are dominating the market this year?</p>
-        </div>
-      </article>
-
-      <!-- News Item 3 -->
-      <article class="news-item">
-        <img src="https://via.placeholder.com/100x100/607D8B/FFFFFF?text=STC" alt="News" class="news-thumb">
-        <div class="news-content">
-          <div class="news-meta">
-            <span class="news-category">Product Overview</span>
-            <span class="news-time">4 HOURS AGO</span>
-          </div>
-          <h3 class="news-title">The STC-1000 comes pre-assembled in an enclosure</h3>
-          <p class="news-excerpt">Complete with an AC power cord,</p>
-        </div>
-      </article>
-
-      <button class="see-more-btn">See More</button>
-    </section>
-
-  </main>
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2 data-i18n="cta_title">พร้อมเริ่มทำเครื่องดื่มระดับมืออาชีพ?</h2>
+      <p data-i18n="cta_subtitle">ดูเครื่อง Beverage System ที่รองรับสูตรทั้งหมดในระบบ</p>
+      <a href="https://beveragesystem.com" class="btn" data-i18n="cta_btn">🤖 ดูเครื่อง Beverage System</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="mobile-footer">
-    <div class="footer-links">
-      <a href="#">About Us</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Contact</a>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Beverage Masterclass</h3>
+        <p style="font-size: 14px; color: #b0b0b0; line-height: 1.6;" data-i18n="footer_desc">
+          ระบบจัดการสูตรเครื่องดื่ม สำหรับการทำเครื่องดื่มสมุนไพร ชา และเครื่องดื่มหมัก
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_menu">เมนูหลัก</h3>
+        <ul>
+          <li><a href="index.html" data-i18n="footer_home">หน้าแรก</a></li>
+          <li><a href="categories.html" data-i18n="footer_categories">หมวดหมู่</a></li>
+          <li><a href="https://beveragesystem.com" data-i18n="footer_shop">ซื้อเครื่อง</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_cats">หมวดหมู่</h3>
+        <ul>
+          <li><a href="category.html?id=herbal" data-i18n="cat_herbal">สมุนไพรไทย</a></li>
+          <li><a href="category.html?id=tea" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</a></li>
+          <li><a href="category.html?id=milk" data-i18n="cat_milk">นม & ธัญพืช</a></li>
+          <li><a href="category.html?id=ferment" data-i18n="cat_ferment">เครื่องดื่มหมัก</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_contact">ติดต่อเรา</h3>
+        <ul>
+          <li><a href="https://github.com/atikomtce4/beverage-masterclass">GitHub</a></li>
+          <li><a href="mailto:info@beveragesystem.com">info@beveragesystem.com</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="footer-copy">© 2026 Beverage Masterclass</p>
+
+    <div class="footer-bottom">
+      <p>© 2026 Beverage Masterclass. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="js/mobile-app.js"></script>
+  <script>
+    // ===== i18n Translations =====
+    const i18n = {
+      th: {
+        nav_categories: "หมวดหมู่",
+        nav_shop: "🤖 ซื้อเครื่อง",
+        hero_title: "Beverage Masterclass",
+        hero_subtitle: "รวมสูตรเครื่องดื่มสมุนไพร ชา และเครื่องดื่มหมัก พร้อมระบบปรับปริมาณอัตโนมัติ",
+        hero_btn_recipes: "📖 ดูสูตรทั้งหมด",
+        hero_btn_machine: "🤖 ดูเครื่อง Beverage System",
+        featured_title: "🌟 สูตรแนะนำ",
+        featured_subtitle: "สูตรยอดนิยมที่ผ่านการทดสอบแล้ว",
+        recipe1_title: "น้ำกระเจี๊ยบสกัดเย็น",
+        recipe1_time: "⏱️ 25 นาที",
+        recipe1_volume: "📏 10 ลิตร",
+        recipe2_title: "น้ำเก๊กฮวยดอกใหญ่",
+        recipe2_time: "⏱️ 20 นาที",
+        recipe2_volume: "📏 10 ลิตร",
+        recipe3_title: "ชาไทยสูตรดั้งเดิม",
+        recipe3_time: "⏱️ 15 นาที",
+        recipe3_volume: "📏 10 ลิตร",
+        cat_title: "📂 หมวดหมู่เครื่องดื่ม",
+        cat_subtitle: "เลือกหมวดหมู่ที่คุณสนใจ",
+        cat_herbal: "สมุนไพรไทย",
+        cat_herbal_desc: "กระเจี๊ยบ, เก๊กฮวย, ใบเตย",
+        cat_tea: "ชา & เครื่องดื่มร้อน",
+        cat_tea_desc: "ชาไทย, ชาเขียว, โกโก้",
+        cat_milk: "นม & ธัญพืช",
+        cat_milk_desc: "นมถั่วเหลือง, นมข้าวโพด",
+        cat_ferment: "เครื่องดื่มหมัก",
+        cat_ferment_desc: "คอมบูชา, โยเกิร์ต",
+        feat_title: "✨ จุดเด่นของระบบ",
+        feat_subtitle: "ออกแบบมาเพื่อการทำเครื่องดื่มที่ง่ายขึ้น",
+        feat1_title: "ปรับปริมาณอัตโนมัติ",
+        feat1_desc: "ปรับได้ตั้งแต่ 1-20 ลิตร สูตรไม่เพี้ยน วัตถุดิบและขั้นตอนคำนวณให้ทันที",
+        feat2_title: "2 โหมดการใช้งาน",
+        feat2_desc: "โหมดทำเอง (Manual) สำหรับทำที่บ้าน และโหมดใช้เครื่อง (Machine) สำหรับธุรกิจ",
+        feat3_title: "ส่งสูตรเข้าเครื่องในคลิกเดียว",
+        feat3_desc: "คัดลอกสูตรแล้ววางลงในเครื่อง Beverage System พร้อมใช้งานทันที",
+        cta_title: "พร้อมเริ่มทำเครื่องดื่มระดับมืออาชีพ?",
+        cta_subtitle: "ดูเครื่อง Beverage System ที่รองรับสูตรทั้งหมดในระบบ",
+        cta_btn: "🤖 ดูเครื่อง Beverage System",
+        footer_desc: "ระบบจัดการสูตรเครื่องดื่ม สำหรับการทำเครื่องดื่มสมุนไพร ชา และเครื่องดื่มหมัก",
+        footer_menu: "เมนูหลัก",
+        footer_home: "หน้าแรก",
+        footer_categories: "หมวดหมู่",
+        footer_shop: "ซื้อเครื่อง",
+        footer_cats: "หมวดหมู่",
+        footer_contact: "ติดต่อเรา"
+      },
+      en: {
+        nav_categories: "Categories",
+        nav_shop: "🤖 Shop",
+        hero_title: "Beverage Masterclass",
+        hero_subtitle: "A collection of herbal, tea, and fermented drink recipes with automatic scaling",
+        hero_btn_recipes: "📖 Browse Recipes",
+        hero_btn_machine: "🤖 View Beverage System",
+        featured_title: "🌟 Featured Recipes",
+        featured_subtitle: "Popular recipes that have been tested and perfected",
+        recipe1_title: "Cold-Extract Roselle Juice",
+        recipe1_time: "⏱️ 25 mins",
+        recipe1_volume: "📏 10 Liters",
+        recipe2_title: "Premium Chrysanthemum Tea",
+        recipe2_time: "⏱️ 20 mins",
+        recipe2_volume: "📏 10 Liters",
+        recipe3_title: "Classic Thai Tea",
+        recipe3_time: "️ 15 mins",
+        recipe3_volume: "📏 10 Liters",
+        cat_title: "📂 Beverage Categories",
+        cat_subtitle: "Choose a category to explore",
+        cat_herbal: "Thai Herbs",
+        cat_herbal_desc: "Roselle, Chrysanthemum, Pandan",
+        cat_tea: "Tea & Hot Drinks",
+        cat_tea_desc: "Thai Tea, Green Tea, Cocoa",
+        cat_milk: "Milk & Cereals",
+        cat_milk_desc: "Soy Milk, Corn Milk",
+        cat_ferment: "Fermented Drinks",
+        cat_ferment_desc: "Kombucha, Yogurt",
+        feat_title: "✨ Key Features",
+        feat_subtitle: "Designed to make beverage making easier",
+        feat1_title: "Auto Scaling",
+        feat1_desc: "Scale from 1-20 liters with perfect ratios. Ingredients and steps calculated automatically",
+        feat2_title: "Dual Mode",
+        feat2_desc: "Manual mode for home use and Machine mode for business operations",
+        feat3_title: "One-Click Machine Transfer",
+        feat3_desc: "Copy recipe and paste into Beverage System machine, ready to use instantly",
+        cta_title: "Ready to make professional beverages?",
+        cta_subtitle: "Explore the Beverage System machine that supports all recipes",
+        cta_btn: "🤖 View Beverage System",
+        footer_desc: "Beverage recipe management system for herbal drinks, tea, and fermented beverages",
+        footer_menu: "Main Menu",
+        footer_home: "Home",
+        footer_categories: "Categories",
+        footer_shop: "Shop",
+        footer_cats: "Categories",
+        footer_contact: "Contact"
+      }
+    };
+
+    let currentLang = localStorage.getItem('preferredLang') || 'th';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('preferredLang', lang);
+      
+      // Update lang buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+      });
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+    }
+
+    // Initialize language on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+
 </body>
 </html>

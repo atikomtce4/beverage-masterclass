@@ -3,94 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>หมวดหมู่ | Beverage Masterclass</title>
+  <title data-i18n="page_title">หมวดหมู่ | Beverage Masterclass</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/mobile-style.css">
+  
   <style>
-    .page-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: #212121; }
-    .page-subtitle { font-size: 14px; color: #757575; margin-bottom: 24px; }
-    
-    /* ✅ ปรับเป็น 1 คอลัมน์ */
-    .category-grid { 
-      display: grid; 
-      grid-template-columns: 1fr; /* 1 คอลัมน์เต็มความกว้าง */
-      gap: 20px; 
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #2e7d32;
+      --primary-light: #e8f5e9;
+      --text: #212121;
+      --text-light: #757575;
+      --bg: #FAFAFA;
+      --white: #ffffff;
+      --shadow: 0 2px 8px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius: 12px;
     }
-    
-    .category-card {
-      background: white; 
-      border-radius: 16px; 
-      overflow: hidden;
-      border: 1px solid #f0f0f0; 
-      text-decoration: none; 
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
-    
-    .category-card:active { 
-      transform: scale(0.98); 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== Header ===== */
+    .mobile-header {
+      background: var(--white);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    
-    /* ✅ รูปใหญ่เต็มความกว้าง อัตราส่วน 16:9 */
-    .category-card-img { 
-      width: 100%; 
-      aspect-ratio: 16/9; 
-      object-fit: cover; 
+
+    .back-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text);
+      padding: 4px 8px;
     }
-    
-    .category-card-body { 
-      padding: 16px; 
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
     }
-    
-    .category-card-title { 
-      font-size: 18px; 
-      font-weight: 700; 
-      margin-bottom: 6px; 
-      color: #212121; 
+
+    .header-spacer { width: 40px; }
+
+    /* ===== Language Toggle ===== */
+    .lang-toggle {
+      position: fixed;
+      top: 70px;
+      right: 12px;
+      z-index: 1000;
+      display: flex;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border: 2px solid var(--primary);
     }
-    
-    .category-card-desc { 
-      font-size: 13px; 
-      color: #757575; 
-      line-height: 1.5; 
-      margin-bottom: 10px; 
-    }
-    
-    .category-card-count { 
-      font-size: 12px; 
-      color: #4CAF50; 
+
+    .lang-btn {
+      padding: 8px 16px;
+      border: none;
+      background: white;
+      color: var(--text-light);
+      font-family: inherit;
+      font-size: 14px;
       font-weight: 600;
-      display: inline-block;
-      padding: 4px 10px;
-      background: #E8F5E9;
-      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) { background: var(--primary-light); }
+
+    /* ===== Main Content ===== */
+    .mobile-content {
+      flex: 1;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .page-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: var(--text-light);
+    }
+
+    /* ===== Category Grid ===== */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .category-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .category-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .category-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .category-desc {
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .category-count {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Category Colors */
+    .cat-herbal { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+    .cat-tea { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); }
+    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
+    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
+
+    /* ===== Footer ===== */
+    .mobile-footer {
+      background: var(--white);
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-light);
+      border-top: 1px solid var(--shadow);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 24px; }
+      .category-grid { gap: 12px; }
+      .category-card { padding: 20px 16px; }
+      .category-icon { font-size: 40px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header class="mobile-header">
     <button class="back-btn" onclick="window.history.back()">←</button>
-    <h1 class="logo" id="pageTitle">หมวดหมู่</h1>
-    <div style="width: 40px;"></div>
+    <h1 class="logo">Beverage Masterclass</h1>
+    <div class="header-spacer"></div>
   </header>
 
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="th" onclick="setLanguage('th')">TH</button>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <!-- Main Content -->
   <main class="mobile-content">
-    <h2 class="page-title" id="pageHeading">หมวดหมู่เครื่องดื่ม</h2>
-    <p class="page-subtitle" id="pageSubheading">เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม</p>
-    
-    <div class="category-grid" id="categoryGrid">
-      <!-- JS จะ Render ตรงนี้ -->
+    <div class="page-header">
+      <h1 data-i18n="page_heading">หมวดหมู่เครื่องดื่ม</h1>
+      <p data-i18n="page_subheading">เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม</p>
+    </div>
+
+    <div class="category-grid">
+      <a href="category.html?id=herbal" class="category-card cat-herbal">
+        <div class="category-icon">🌿</div>
+        <h3 class="category-name" data-i18n="cat_herbal">สมุนไพรไทย</h3>
+        <p class="category-desc" data-i18n="cat_herbal_desc">กระเจี๊ยบ, เก๊กฮวย, ใบเตย และอื่นๆ</p>
+        <div class="category-count" data-i18n="cat_count">2 สูตร</div>
+      </a>
+
+      <a href="category.html?id=tea" class="category-card cat-tea">
+        <div class="category-icon">🍵</div>
+        <h3 class="category-name" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</h3>
+        <p class="category-desc" data-i18n="cat_tea_desc">ชาไทย, ชาเขียว, โกโก้ และอื่นๆ</p>
+        <div class="category-count" data-i18n="cat_count">0 สูตร</div>
+      </a>
+
+      <a href="category.html?id=milk" class="category-card cat-milk">
+        <div class="category-icon"></div>
+        <h3 class="category-name" data-i18n="cat_milk">นม & ธัญพืช</h3>
+        <p class="category-desc" data-i18n="cat_milk_desc">นมถั่วเหลือง, นมข้าวโพด, งาดำ</p>
+        <div class="category-count" data-i18n="cat_count">0 สูตร</div>
+      </a>
+
+      <a href="category.html?id=ferment" class="category-card cat-ferment">
+        <div class="category-icon">🍺</div>
+        <h3 class="category-name" data-i18n="cat_ferment">เครื่องดื่มหมัก</h3>
+        <p class="category-desc" data-i18n="cat_ferment_desc">คอมบูชา, โยเกิร์ต, เบียร์คราฟต์</p>
+        <div class="category-count" data-i18n="cat_count">0 สูตร</div>
+      </a>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="mobile-footer">
     <p>© 2026 Beverage Masterclass</p>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script>
+    // ===== i18n Translations =====
+    const i18n = {
+      th: {
+        page_title: "หมวดหมู่ | Beverage Masterclass",
+        page_heading: "หมวดหมู่เครื่องดื่ม",
+        page_subheading: "เลือกหมวดหมู่เพื่อสำรวจสูตรเครื่องดื่ม",
+        cat_herbal: "สมุนไพรไทย",
+        cat_herbal_desc: "กระเจี๊ยบ, เก๊กฮวย, ใบเตย และอื่นๆ",
+        cat_tea: "ชา & เครื่องดื่มร้อน",
+        cat_tea_desc: "ชาไทย, ชาเขียว, โกโก้ และอื่นๆ",
+        cat_milk: "นม & ธัญพืช",
+        cat_milk_desc: "นมถั่วเหลือง, นมข้าวโพด, งาดำ",
+        cat_ferment: "เครื่องดื่มหมัก",
+        cat_ferment_desc: "คอมบูชา, โยเกิร์ต, เบียร์คราฟต์",
+        cat_count: "สูตร"
+      },
+      en: {
+        page_title: "Categories | Beverage Masterclass",
+        page_heading: "Beverage Categories",
+        page_subheading: "Choose a category to explore recipes",
+        cat_herbal: "Thai Herbs",
+        cat_herbal_desc: "Roselle, Chrysanthemum, Pandan and more",
+        cat_tea: "Tea & Hot Drinks",
+        cat_tea_desc: "Thai Tea, Green Tea, Cocoa and more",
+        cat_milk: "Milk & Cereals",
+        cat_milk_desc: "Soy Milk, Corn Milk, Black Sesame",
+        cat_ferment: "Fermented Drinks",
+        cat_ferment_desc: "Kombucha, Yogurt, Craft Beer",
+        cat_count: "recipes"
+      }
+    };
+
+    let currentLang = localStorage.getItem('preferredLang') || 'th';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('preferredLang', lang);
+      
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          // สำหรับ cat_count ต้องแสดงตัวเลขข้างหน้าด้วย
+          if (key === 'cat_count') {
+            const count = el.textContent.match(/\d+/)?.[0] || '0';
+            el.textContent = `${count} ${i18n[lang][key]}`;
+          } else {
+            el.textContent = i18n[lang][key];
+          }
+        }
+      });
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+
 </body>
 </html>
