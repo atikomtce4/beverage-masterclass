@@ -17,6 +17,7 @@ const CATEGORY_NAMES = {
 
 const UI_LABELS = {
   headerTitle: { 'th': 'สูตรเครื่องดื่ม', 'en': 'Beverage Recipes' },
+  titleVolume: { 'th': 'ปรับปริมาณที่ต้องการทำ', 'en': 'Adjust the desired quantity' },
   modeManual: { 'th': 'ทำเอง', 'en': 'Manual' },
   modeMachine: { 'th': 'ใช้เครื่อง', 'en': 'Machine' },
   tabGallery: { 'th': ' รูปภาพ', 'en': '📷 Gallery' },
@@ -30,7 +31,7 @@ const UI_LABELS = {
   nutrition: { 'th': ' ข้อมูลโภชนาการ (ต่อ 100 มล.)', 'en': '📊 Nutrition Facts (per 100ml)' },
   backToHome: { 'th': 'ดูสูตรอื่นๆ', 'en': 'Browse More Recipes' },
   copyLink: { 'th': '📋 คัดลอกลิงก์สูตรสำหรับเครื่อง', 'en': '📋 Copy Machine Recipe Link' },
-  downloadBtn: { 'th': '⬇ ดาวน์โหลดสูตรเข้าเครื่อง (.json)', 'en': ' Download Recipe for Machine (.json)' },
+  downloadBtn: { 'th': '📋 คัดลอกสูตรเข้าเครื่อง', 'en': '📋 Copy Recipe for Machine' },
   benefits: { 'th': 'สรรพคุณ', 'en': 'Benefits' },
   calories: { 'th': 'พลังงาน', 'en': 'Calories' },
   carbs: { 'th': 'คาร์โบไฮเดรต', 'en': 'Carbs' },
@@ -86,12 +87,37 @@ function switchLanguage(lang) {
 
 function switchMode(mode) {
   currentMode = mode;
+  
+  // 1. จัดการสถานะปุ่ม (Active / Inactive)
   document.querySelectorAll('.mode-btn').forEach(btn => {
     btn.classList.remove('active');
-    if (btn.dataset.mode === mode) btn.classList.add('active');
+    if (btn.dataset.mode === mode) {
+      btn.classList.add('active');
+    }
   });
+
   if (currentRecipe) {
-    renderSteps(currentRecipe);
+    // 2. ✅ แก้ปัญหาหลัก: บังคับเปลี่ยนหัวข้อ "titleIngredients" ตามโหมดที่เลือก
+    const titleIng = document.getElementById('titleIngredients');
+    if (titleIng) {
+      if (mode === 'machine') {
+        titleIng.textContent = currentLang === 'th' ? '⚙️ การตั้งค่าเครื่อง' : '⚙️ Machine Setup';
+      } else {
+        titleIng.textContent = getText(UI_LABELS.ingredients); // กลับไปใช้ "📝 วัตถุดิบ" เมื่อเป็น Manual
+      }
+    }
+
+    // 3. อัปเดตรายการวัตถุดิบให้คำนวณตาม Volume ปัจจุบันเสมอ (ป้องกัน bug ปริมาณไม่เปลี่ยน)
+    renderIngredients(currentRecipe, currentVolume);
+
+    // 4. อัปเดตขั้นตอนการทำ (แยกตามโหมด)
+    if (mode === 'machine') {
+      renderMachineSteps(currentRecipe, currentVolume);
+    } else {
+      renderSteps(currentRecipe); // โหมด Manual
+    }
+
+    // 5. อัปเดตปุ่ม Action ด้านล่าง (Download / Copy Link)
     updateActionButtons();
   }
 }
@@ -150,23 +176,64 @@ function formatAmount(amount, unit) {
   return amount % 1 === 0 ? amount.toString() : amount.toFixed(1);
 }
 
+// ✅ หาหน่วยที่ถูกต้อง (กรณี target_value ไปอยู่ descVariables)
+function getStepUnit(step) {
+  if (step.unit && step.unit !== '-') return step.unit;
+  const vars = Object.values(step.descVariables || {});
+  return vars.length ? vars[0].unit : '';
+}
+
+// ✅ หาค่าตั้งต้น: ใช้ target_value ก่อน ถ้าเป็น 0 ให้ดึงจาก descVariables
+function getStepBaseValue(step) {
+  if (step.target_value > 0) return step.target_value;
+  const vars = Object.values(step.descVariables || {});
+  if (vars.length) return vars[0].amount || 0;
+  return 0;
+}
+
+// ✅ ตัดสินใจว่า "ขั้นตอนนี้ควร Scale ไหม"
+function isStepScalable(step) {
+  if (step.scalable === false) return false;
+  const unit = getStepUnit(step);
+  // อุณหภูมิ และ งานที่ไม่มีหน่วย (User Alert) ไม่scale
+  if (unit === '°C' || unit === '-' || unit === '') return false;
+  return true;
+}
+
 function scaleRecipe(recipe, targetVolume) {
   if (!recipe) return { scaledIngredients: [], scaledSteps: [] };
+
   const baseVolume = recipe.baseVolume || 10;
   const scaleFactor = targetVolume / baseVolume;
 
-  const scaledIngredients = (recipe.ingredients || []).map(ing => {
-    if (ing.scalable !== false && ing.amount) {
-      return { ...ing, scaledAmount: ing.amount * scaleFactor };
-    }
-    return { ...ing, scaledAmount: ing.amount };
-  });
+  const scaledIngredients = (recipe.ingredients || []).map(ing => ({
+    ...ing,
+    scaledAmount: ing.scalable !== false && ing.amount
+      ? ing.amount * scaleFactor
+      : ing.amount
+  }));
 
   const scaledSteps = (recipe.machineSteps || []).map(step => {
-    if (step.scalable !== false && step.function === 'Fill Water') {
-      return { ...step, scaledValue: step.target_value * scaleFactor };
-    }
-    return { ...step, scaledValue: step.target_value };
+    const baseValue = getStepBaseValue(step);
+    const canScale = isStepScalable(step);
+
+    // ⏱️ เวลา: Scale เฉพาะเมื่อระบุชัดว่า durationScalable: true
+    // (เวลาต้ม/สกัด ไม่ควรคูณตามปริมาณน้ำ)
+    const scaleTime = step.durationScalable === true;
+    const baseDuration = step.duration || 0;
+    const baseTimeout = step.timeout !== undefined ? step.timeout : baseDuration;
+
+    return {
+      ...step,
+      scaledValue: canScale ? baseValue * scaleFactor : baseValue,
+      scaledUnit: getStepUnit(step),
+      scaledDuration: scaleTime
+        ? parseFloat((baseDuration * scaleFactor).toFixed(2))
+        : baseDuration,
+      scaledTimeout: scaleTime
+        ? parseFloat((baseTimeout * scaleFactor).toFixed(2))
+        : baseTimeout
+    };
   });
 
   return { scaledIngredients, scaledSteps };
@@ -200,21 +267,52 @@ function renderMachineSteps(recipe, volume) {
   const scaleFactor = volume / baseVolume;
   
   stepsContainer.innerHTML = scaledSteps.map((step) => {
-    // ประมวลผลข้อความแบบ Dynamic
     const processedDesc = processDesc(step.desc, step.descVariables, scaleFactor);
+    const unit = step.scaledUnit || step.unit;
+    
+    // สร้าง HTML สำหรับ machine-info-box (ด้านบน)
+    let infoBoxHTML = `<div class="machine-info-box">`;
+    infoBoxHTML += `<span class="function-name">⚙️ ${step.function}</span>`;
+    
+    // Target Value (ไม่แสดงสำหรับอุณหภูมิ และงานที่ไม่มีหน่วย)
+    if (step.scaledValue > 0 && unit !== '°C' && unit !== '-') {
+      infoBoxHTML += `
+        <div class="info-item">
+          <span class="label">Target:</span>
+          <span class="value">${formatAmount(step.scaledValue, unit)} ${unit}</span>
+        </div>
+      `;
+    }
+    
+    // Temperature (แสดงแยกต่างหาก)
+    if (step.target_value > 0 && unit === '°C') {
+      infoBoxHTML += `
+        <div class="info-item">
+          <span class="label">Temp:</span>
+          <span class="value">${step.target_value} ${unit}</span>
+        </div>
+      `;
+    }
+    
+    // Duration
+    if (step.scaledDuration > 0) {
+      infoBoxHTML += `
+        <div class="info-item">
+          <span class="label">Duration:</span>
+          <span class="value">${step.scaledDuration} min</span>
+        </div>
+      `;
+    }
+    
+    infoBoxHTML += `</div>`;
     
     return `
       <div class="step-item">
         <div class="step-num">${step.step}</div>
         <div class="step-content">
+          ${infoBoxHTML}
           <h4>${getText(step.title)}</h4>
           <p>${processedDesc}</p>
-          <div class="machine-info-box">
-            <strong>️ ${step.function}</strong>
-            ${step.scaledValue > 0 && step.unit !== '°C' && step.unit !== '-' ? ` | Target: ${step.scaledValue} ${step.unit}` : ''}
-            ${step.target_value > 0 && step.unit === '°C' ? ` | Target: ${step.target_value} ${step.unit}` : ''}
-            ${step.duration > 0 ? ` | Duration: ${step.duration} min` : ''}
-          </div>
         </div>
       </div>
     `;
@@ -222,39 +320,115 @@ function renderMachineSteps(recipe, volume) {
 
   stepsContainer.innerHTML += `
     <div style="margin-top: 32px; text-align: center;">
-      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
+      <button id="copyRecipeBtn2" class="btn-download">📋 ${currentLang === 'th' ? 'คัดลอกสูตรเข้าเครื่อง (' + volume + 'L)' : 'Copy Recipe for Machine (' + volume + 'L)'}</button>
     </div>
   `;
-  document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(recipe, volume);
+  document.getElementById('copyRecipeBtn2').onclick = () => copyMachineRecipeToClipboard(recipe, volume);
 }
 
-function downloadRecipeJSON(recipe, volume) {
-  const { scaledSteps } = scaleRecipe(recipe, volume);
+// ✅ ใหม่: คัดลอกสูตรสำหรับเครื่องลง Clipboard (แทนการดาวน์โหลดไฟล์)
+function copyMachineRecipeToClipboard(recipe, volume) {
+  if (!recipe || !recipe.machineSteps) {
+    showToast(currentLang === 'th' ? '❌ ไม่มีข้อมูลขั้นตอนเครื่อง' : '❌ No machine steps available');
+    return;
+  }
+
+  const baseVolume = recipe.baseVolume || 10;
+  const scaleFactor = volume / baseVolume;
+
+  // คำนวณ total_time และ target_temp จาก steps ที่ scale แล้ว
+  let totalTime = 0;
+  let targetTemp = 0;
+
+  const scaledSteps = recipe.machineSteps.map((step, idx) => {
+    const isScalable = step.scalable !== false;
+    const scaledValue = isScalable ? step.target_value * scaleFactor : step.target_value;
+    const scaledDuration = isScalable ? (step.duration || 0) * scaleFactor : (step.duration || 0);
+    
+    // คำนวณ timeout (ถ้าไม่มีให้ใช้ duration + 1)
+    const baseTimeout = step.timeout !== undefined ? step.timeout : (step.duration || 0) + 1;
+    const scaledTimeout = isScalable ? baseTimeout * scaleFactor : baseTimeout;
+
+    totalTime += scaledDuration;
+
+    // หา target_temp จาก step ที่เป็น Heat หรือ Hold
+    if ((step.function === 'Heat Water' || step.function === 'Hold Temp') && step.target_value > targetTemp) {
+      targetTemp = step.target_value;
+    }
+
+    // แทนที่ placeholder ใน sub_name (ถ้ามี)
+    let subName = getText(step.title) || "";
+    if (step.descVariables) {
+      for (const [key, varInfo] of Object.entries(step.descVariables)) {
+        const scaledAmount = varInfo.scalable !== false ? varInfo.amount * scaleFactor : varInfo.amount;
+        const formatted = formatAmount(scaledAmount, varInfo.unit);
+        const regex = new RegExp(`\\{${key}\\}`, 'g');
+        subName = subName.replace(regex, `${formatted} ${varInfo.unit}`);
+      }
+    }
+
+    return {
+      step_id: idx + 1,
+      function: step.function,
+      sub_name: subName,
+      target_value: parseFloat(scaledValue.toFixed(2)),
+      unit: step.unit,
+      duration: parseFloat(scaledDuration.toFixed(2)),
+      duration_unit: step.duration_unit || "minute",
+      timeout: parseFloat(scaledTimeout.toFixed(2)),
+      timeout_unit: step.timeout_unit || "minute",
+      outputs_csv: step.outputs_csv || ""
+    };
+  });
+
+  // สร้างโครงสร้าง JSON ตามรูปแบบ FML
   const machineData = {
-    recipe_id: recipe.id,
-    recipe_name: getText(recipe.name),
-    volume: volume,
+    recipe_id: recipe.id || "unknown_recipe",
+    recipe_name: getText(recipe.name) || "Unknown Recipe",
+    icon: recipe.icon || "🌺",
+    category: recipe.category || "herbal",
+    description: getText(recipe.intro) || getText(recipe.description) || "",
+    total_time: Math.round(totalTime),
+    target_temp: targetTemp,
     total_volume: volume,
-    total_time: scaledSteps.reduce((acc, curr) => acc + (curr.duration || 0), 0),
-    target_temp: scaledSteps.find(s => s.function.includes('Heat') || s.function.includes('Hold'))?.target_value || 0,
-    steps: scaledSteps.map(s => ({
-      function: s.function,
-      target_value: s.scaledValue,
-      unit: s.unit,
-      duration: s.duration || 0
-    }))
+    steps: scaledSteps
   };
 
-  const blob = new Blob([JSON.stringify(machineData, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  // เปลี่ยนชื่อไฟล์ตามปริมาณที่เลือก
-  a.download = `FML_${recipe.id.replace(/_\d+L$/, '')}_${volume}L.json`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  
-  showToast(currentLang === 'th' ? `✅ ดาวน์โหลดสูตร ${volume}L สำเร็จ!` : `✅ Downloaded ${volume}L recipe!`);
+  const jsonString = JSON.stringify(machineData, null, 2);
+
+  // ✅ คัดลอกลง Clipboard
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(jsonString).then(() => {
+      showToast(currentLang === 'th' 
+        ? `✅ คัดลอกสูตร ${volume}L ลงคลิปบอร์ดแล้ว! (${scaledSteps.length} ขั้นตอน)` 
+        : `✅ Copied ${volume}L recipe to clipboard! (${scaledSteps.length} steps)`);
+      console.log('📋 FML JSON copied to clipboard:', machineData);
+    }).catch(err => {
+      console.error('Clipboard error:', err);
+      fallbackCopy(jsonString, volume, scaledSteps.length);
+    });
+  } else {
+    fallbackCopy(jsonString, volume, scaledSteps.length);
+  }
+}
+
+// ✅ Fallback สำหรับเบราว์เซอร์เก่า
+function fallbackCopy(text, volume, stepCount) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    showToast(currentLang === 'th' 
+      ? `✅ คัดลอกสูตร ${volume}L ลงคลิปบอร์ดแล้ว! (${stepCount} ขั้นตอน)` 
+      : `✅ Copied ${volume}L recipe to clipboard! (${stepCount} steps)`);
+  } catch (err) {
+    showToast(currentLang === 'th' ? '❌ คัดลอกไม่สำเร็จ' : '❌ Copy failed');
+  }
+  document.body.removeChild(textarea);
 }
 
 function initVolumeSelector(recipe) {
@@ -262,6 +436,7 @@ function initVolumeSelector(recipe) {
   const volumeValue = document.getElementById('volumeValue');
   const volumeUnit = document.getElementById('volumeUnit');
   const volumeRange = document.getElementById('volumeRange');
+  const servingsDisplay = document.getElementById('servings'); // ✅ เพิ่มตัวแปรนี้
   const presetBtns = document.querySelectorAll('.preset-btn');
   
   if (!slider) return;
@@ -269,6 +444,7 @@ function initVolumeSelector(recipe) {
   const baseVolume = recipe.baseVolume || 10;
   const minVolume = recipe.minVolume || 1;
   const maxVolume = recipe.maxVolume || 20;
+  const unitText = getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liter' }); // ดึงหน่วยภาษา
   
   slider.min = minVolume;
   slider.max = maxVolume;
@@ -276,7 +452,11 @@ function initVolumeSelector(recipe) {
   currentVolume = baseVolume;
   
   volumeValue.textContent = baseVolume;
-  volumeUnit.textContent = getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liter' });
+  volumeUnit.textContent = unitText;
+  
+  // ✅ 1. อัปเดตกล่อง "ปริมาณ" ใน info-grid ตอนโหลดครั้งแรก
+  if (servingsDisplay) servingsDisplay.textContent = `${baseVolume} ${unitText}`;
+  
   volumeRange.textContent = `${minVolume} - ${maxVolume} ${getText(recipe.volumeUnit || { th: 'ลิตร', en: 'Liters' })}`;
   
   presetBtns.forEach(btn => {
@@ -284,28 +464,50 @@ function initVolumeSelector(recipe) {
     if (parseInt(btn.dataset.volume) === baseVolume) btn.classList.add('active');
   });
   
+  // ✅ 2. เมื่อเลื่อน Slider
   slider.oninput = (e) => {
     const newVolume = parseInt(e.target.value);
     currentVolume = newVolume;
     volumeValue.textContent = newVolume;
+    
+    // ✅ อัปเดตกล่อง "ปริมาณ" ใน info-grid ทันที
+    if (servingsDisplay) servingsDisplay.textContent = `${newVolume} ${unitText}`;
+    
     presetBtns.forEach(btn => {
       btn.classList.remove('active');
       if (parseInt(btn.dataset.volume) === newVolume) btn.classList.add('active');
     });
-    if (currentMode === 'manual') renderIngredients(recipe, newVolume);
-    else renderMachineSteps(recipe, newVolume);
+    
+    // อัปเดตวัตถุดิบและขั้นตอนตามโหมด
+    renderIngredients(recipe, newVolume);
+    if (currentMode === 'machine') {
+      renderMachineSteps(recipe, newVolume);
+    } else {
+      renderSteps(recipe);
+    }
   };
   
+  // ✅ 3. เมื่อกดปุ่ม Preset
   presetBtns.forEach(btn => {
     btn.onclick = () => {
       const newVolume = parseInt(btn.dataset.volume);
       currentVolume = newVolume;
       slider.value = newVolume;
       volumeValue.textContent = newVolume;
+      
+      // ✅ อัปเดตกล่อง "ปริมาณ" ใน info-grid ทันที
+      if (servingsDisplay) servingsDisplay.textContent = `${newVolume} ${unitText}`;
+      
       presetBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      if (currentMode === 'manual') renderIngredients(recipe, newVolume);
-      else renderMachineSteps(recipe, newVolume);
+      
+      // อัปเดตวัตถุดิบและขั้นตอนตามโหมด
+      renderIngredients(recipe, newVolume);
+      if (currentMode === 'machine') {
+        renderMachineSteps(recipe, newVolume);
+      } else {
+        renderSteps(recipe);
+      }
     };
   });
 }
@@ -369,19 +571,11 @@ function updateActionButtons() {
   const container = document.getElementById('actionButtons');
   if (!container) return;
   
-  if (currentMode === 'manual') {
-    container.innerHTML = `
-      <button id="copyLinkBtn" class="btn-copy-link">📋 ${getText(UI_LABELS.copyLink)}</button>
-      <a href="index.html" class="btn-back">${getText(UI_LABELS.backToHome)}</a>
-    `;
-    document.getElementById('copyLinkBtn').onclick = () => copyMachineLink();
-  } else {
-    container.innerHTML = `
-      <button id="downloadBtn" class="btn-download">${getText(UI_LABELS.downloadBtn)}</button>
-      <a href="index.html" class="btn-back">${getText(UI_LABELS.backToHome)}</a>
-    `;
-    document.getElementById('downloadBtn').onclick = () => downloadRecipeJSON(currentRecipe, currentVolume);
-  }
+  // ✅ ปรับเหลือเฉพาะปุ่ม "ดูสูตรอื่นๆ" 
+  // (เนื่องจากปุ่มคัดลอกสูตรเข้าเครื่อง ถูกย้ายไปอยู่ใน renderMachineSteps แล้ว)
+  container.innerHTML = `
+    <a href="index.html" class="btn-back" id="btnBackToHome">${getText(UI_LABELS.backToHome)}</a>
+  `;
 }
 
 function updateLanguageUI() {
@@ -390,8 +584,9 @@ function updateLanguageUI() {
   const setTxt = (id, labelKey) => { const el = document.getElementById(id); if (el) el.textContent = getText(UI_LABELS[labelKey]); };
 
   setTxt('headerTitle', 'headerTitle');
-  setTxt('labelPrepTime', 'prepTime'); setTxt('labelCookTime', 'cookTime');
-  setTxt('labelServings', 'servings'); setTxt('labelRating', 'rating');
+  setTxt('titleVolume', 'titleVolume');
+  //setTxt('labelPrepTime', 'prepTime'); setTxt('labelCookTime', 'cookTime');
+  //setTxt('labelServings', 'servings'); setTxt('labelRating', 'rating');
   setTxt('titleIngredients', 'ingredients'); setTxt('titleSteps', 'steps');
   setTxt('titleNutrition', 'nutrition'); setTxt('btnBackToHome', 'backToHome');
 
@@ -405,10 +600,10 @@ function updateLanguageUI() {
   document.getElementById('recipeCategory').textContent = getText(CATEGORY_NAMES[currentRecipe.category] || { th: 'สูตรทั่วไป', en: 'General Recipe' });
   document.getElementById('recipeTitle').textContent = getText(currentRecipe.name);
   document.getElementById('recipeIntro').textContent = getText(currentRecipe.intro);
-  document.getElementById('prepTime').textContent = getText(currentRecipe.prepTime);
-  document.getElementById('cookTime').textContent = getText(currentRecipe.cookTime);
-  document.getElementById('servings').textContent = getText(currentRecipe.servings);
-  document.getElementById('rating').textContent = `${currentRecipe.rating} / 5`;
+  //document.getElementById('prepTime').textContent = getText(currentRecipe.prepTime);
+  //document.getElementById('cookTime').textContent = getText(currentRecipe.cookTime);
+  //document.getElementById('servings').textContent = getText(currentRecipe.servings);
+  //document.getElementById('rating').textContent = `${currentRecipe.rating} / 5`;
   
   document.getElementById('benefitBox').innerHTML = `<strong>${getText(UI_LABELS.benefits)}:</strong> ${getText(currentRecipe.benefits)}`;
   document.getElementById('warningBox').innerHTML = getText(currentRecipe.warnings);
