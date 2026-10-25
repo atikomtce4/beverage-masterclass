@@ -1,5 +1,5 @@
 {
-  "id": "roselle_10L",
+  "id": "chrysanthemum_10L",
   "icon": "🌺",
   "category": "herbal",
   "description": "",
@@ -8,21 +8,21 @@
   "baseVolume": 10,
   "minVolume": 1,
   "maxVolume": 20,
-  "machineFile": "FML_roselle_10L.json",
+  "machineFile": "FML_chrysanthemum_10L.json",
   "volumeUnit": {
     "th": "ลิตร",
     "en": "Liter"
   },
   "name": {
-    "th": "น้ำกระเจี๊ยบสกัดเย็น (ลดความดัน)",
-    "en": "Cold-Extract Roselle Juice (Blood Pressure Support)"
+    "th": "น้ำเก๊กฮวยดอกใหญ่ (สูตรแก้ร้อนใน)",
+    "en": "Premium Chrysanthemum Tea (Cooling Effect)"
   },
   "images": [
-    "images/herbal/roselle_10L/main_1.jpg",
-    "images/herbal/roselle_10L/main_2.jpg",
-    "images/herbal/roselle_10L/main_3.jpg"
+    "images/herbal/chrysanthemum/main_1.png",
+    "images/herbal/chrysanthemum/main_2.png",
+    "images/herbal/chrysanthemum/main_3.png"
   ],
-  "videoUrl": "https://www.youtube.com/embed/FhP7ooYzprc",
+  "videoUrl": "https://www.youtube.com/embed/placeholder_chrysanthemum",
   "prepTime": {
     "th": "10 นาที",
     "en": "10 mins"
@@ -35,24 +35,24 @@
     "th": "10 ลิตร",
     "en": "10 Liters"
   },
-  "rating": "4.8",
+  "rating": "4.9",
   "intro": {
-    "th": "สัมผัสความสดชื่นและคุณประโยชน์เต็มถ้วยกับ น้ำกระเจี๊ยบสกัดเย็นสูตรลดความดัน ปริมาณ 10 ลิตร สูตรนี้ผ่านการคำนวณสัดส่วนที่ลงตัวระหว่างกลีบกระเจี๊ยบแห้ง 120 กรัม และน้ำตาลทราย 1 กิโลกรัม เพื่อให้ได้รสชาติที่กลมกล่อม หอมลึก ไม่ฝาดคอ จุดเด่นของสูตรนี้คือการใช้ความร้อนคงที่ 95°C เป็นเวลา 10 นาที ซึ่งเป็นอุณหภูมิทองคำที่ช่วยสกัดสารแอนโทไซยานิน (Anthocyanin) และวิตามินซีออกมาได้สูงสุด โดยไม่ทำลายคุณค่าทางอาหาร",
-    "en": "Experience the refreshing taste and full benefits of our Cold-Extract Roselle Juice for Blood Pressure Support in a 10-liter batch. This recipe features a perfectly balanced ratio of 120g dried roselle calyxes and 1kg sugar, delivering a smooth, aromatic flavor without any astringency. The key highlight is maintaining a precise temperature of 95°C for 10 minutes to maximize Anthocyanin and Vitamin C extraction."
+    "th": "สัมผัสความหอมเย็นสดชื่นกับ น้ำเก๊กฮวยดอกใหญ่สูตรดั้งเดิม ปริมาณ 10 ลิตร คัดสรรดอกเก๊กฮวยเกรดพรีเมียม 150 กรัม ต้มคู่กับน้ำตาลกรวด 800 กรัม จุดเด่นของสูตรนี้คือการควบคุมอุณหภูมิที่ 90°C (ไม่เดือดจัด) เพื่อดึงกลิ่นหอมและสรรพคุณการแก้ร้อนในออกมาอย่างเต็มที่ โดยไม่ทำให้เครื่องดื่มมีรสขม",
+    "en": "Experience the refreshing and aromatic taste of our Premium Chrysanthemum Tea in a 10-liter batch. We use 150g of high-grade dried chrysanthemum flowers and 800g of rock sugar. The key is maintaining a precise temperature of 90°C to extract the cooling benefits and aroma without any bitterness."
   },
   "benefits": {
-    "th": "ช่วยลดความดันโลหิต ขับปัสสาวะ และอุดมด้วยแอนโทไซยานินต้านอนุมูลอิสระ",
-    "en": "Helps lower blood pressure, acts as a diuretic, and rich in antioxidant Anthocyanin"
+    "th": "ช่วยลดอาการร้อนใน กระหายน้ำ บรรเทาอาการปวดหัว และช่วยบำรุงสายตา",
+    "en": "Helps reduce internal heat, relieves thirst, soothes headaches, and supports eye health."
   },
   "warnings": {
-    "th": "⚠️ ผู้ที่มีภาวะความดันโลหิตต่ำหรือโรคกระเพาะควรดื่มในปริมาณน้อย",
-    "en": "⚠️ People with low blood pressure or stomach ulcers should consume in moderation"
+    "th": "⚠️ เก๊กฮวยมีฤทธิ์เย็น ผู้ที่มีร่างกายเย็นง่าย หรือความดันโลหิตต่ำ ควรดื่มในปริมาณที่พอเหมาะ",
+    "en": "️ Chrysanthemum has a cooling effect. People with a 'cold' constitution or low blood pressure should consume in moderation."
   },
   "nutrition": {
-    "calories": "45 kcal",
-    "carbs": "11 g",
+    "calories": "35 kcal",
+    "carbs": "9 g",
     "sugar": "8 g",
-    "protein": "0.2 g"
+    "protein": "0 g"
   },
   "ingredients": [
     {
@@ -66,19 +66,19 @@
     },
     {
       "name": {
-        "th": "กลีบกระเจี๊ยบแห้ง",
-        "en": "Dried roselle calyxes"
+        "th": "ดอกเก๊กฮวยแห้ง",
+        "en": "Dried Chrysanthemum flowers"
       },
-      "amount": 120,
+      "amount": 150,
       "unit": "Gram",
       "scalable": true
     },
     {
       "name": {
-        "th": "น้ำตาลทราย",
-        "en": "Sugar"
+        "th": "น้ำตาลกรวด",
+        "en": "Rock sugar"
       },
-      "amount": 1000,
+      "amount": 800,
       "unit": "Gram",
       "scalable": true
     }
@@ -109,12 +109,12 @@
           "scalable": true
         }
       },
-      "outputs_csv": ""
+      "outputs_csv": "Valve_IN"
     },
     {
       "step": 2,
       "function": "Heat Water",
-      "target_value": 95,
+      "target_value": 90,
       "unit": "°C",
       "duration": 0,
       "duration_unit": "minute",
@@ -122,15 +122,15 @@
       "timeout_unit": "minute",
       "scalable": false,
       "title": {
-        "th": "ต้มน้ำพร้อมระบบวน",
-        "en": "Heat Water with Circulation"
+        "th": "ต้มน้ำพร้อมระบบวน (90°C)",
+        "en": "Heat Water to 90°C with Circulation"
       },
       "desc": {
-        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
-        "en": "The machine will start heating while activating circulation for rapid, precise heating to 95°C."
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 90°C (ไม่เดือดจัด) เพื่อรักษากลิ่นหอมของเก๊กฮวย",
+        "en": "The machine heats water to 90°C (not boiling) to preserve the delicate aroma of chrysanthemum."
       },
       "descVariables": {},
-      "outputs_csv": "Heater,Stir,Valve_CIRC,Pump"
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
     },
     {
       "step": 3,
@@ -143,28 +143,28 @@
       "timeout_unit": "minute",
       "scalable": true,
       "title": {
-        "th": "เติมความหวานจากธรรมชาติ",
-        "en": "Add Natural Sweetness"
+        "th": "เติมน้ำตาลกรวด",
+        "en": "Add Rock Sugar"
       },
       "desc": {
-        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลทราย {ingredient}  ลงไป พร้อมเปิดระบบกวน",
-        "en": "System alerts to add {ingredient}  of sugar, while activating the stirrer."
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลกรวด {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of rock sugar, while activating the stirrer."
       },
       "descVariables": {
         "ingredient": {
-          "amount": 1000,
+          "amount": 800,
           "unit": "Gram",
           "scalable": true
         }
       },
-      "outputs_csv": ""
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
     },
     {
       "step": 4,
       "function": "Hold Temp",
-      "target_value": 95,
+      "target_value": 90,
       "unit": "°C",
-      "duration": 3,
+      "duration": 2,
       "duration_unit": "minute",
       "timeout": 0,
       "timeout_unit": "minute",
@@ -174,11 +174,11 @@
         "en": "Maintain Temp for Dissolution"
       },
       "desc": {
-        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
-        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 90°C ต่อเนื่องเป็นเวลา 2 นาที",
+        "en": "The machine will maintain 90°C for 2 minutes to ensure complete dissolution."
       },
       "descVariables": {},
-      "outputs_csv": ""
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
     },
     {
       "step": 5,
@@ -191,42 +191,42 @@
       "timeout_unit": "minute",
       "scalable": true,
       "title": {
-        "th": "ใส่กระเจี๊ยบในตะกร้า",
-        "en": "Add Roselle in Basket"
+        "th": "ใส่ดอกเก๊กฮวยในตะกร้า",
+        "en": "Add Chrysanthemum in Basket"
       },
       "desc": {
-        "th": "ระบบจะแจ้งเตือนให้ใส่กลีบกระเจี๊ยบแห้ง {ingredient} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
-        "en": "System alerts to add {ingredient} of dried roselle (in a basket) into the hot water."
+        "th": "ระบบจะแจ้งเตือนให้ใส่ดอกเก๊กฮวยแห้ง {ingredient} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of dried chrysanthemum (in a basket) into the hot water."
       },
       "descVariables": {
         "ingredient": {
-          "amount": 120,
+          "amount": 150,
           "unit": "Gram",
           "scalable": true
         }
       },
-      "outputs_csv": ""
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
     },
     {
       "step": 6,
       "function": "Hold Temp",
-      "target_value": 95,
+      "target_value": 90,
       "unit": "°C",
-      "duration": 10,
+      "duration": 5,
       "duration_unit": "minute",
       "timeout": 0,
       "timeout_unit": "minute",
       "scalable": false,
       "title": {
-        "th": "สกัดรสชาติและสี (10 นาที)",
-        "en": "Extract Flavor and Color (10 mins)"
+        "th": "สกัดรสชาติและสี (5 นาที)",
+        "en": "Extract Flavor and Color (5 mins)"
       },
       "desc": {
-        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 10 นาที พร้อมระบบวนน้ำและกวน",
-        "en": "Machine precisely maintains 95°C for 10 mins with circulation and stirring."
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C อย่างแม่นยำเป็นเวลา 5 นาที (ห้ามเกินนี้เพื่อป้องกันรสขม)",
+        "en": "Machine precisely maintains 90°C for 5 mins (do not exceed to avoid bitterness)."
       },
       "descVariables": {},
-      "outputs_csv": ""
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
     },
     {
       "step": 7,
@@ -247,7 +247,7 @@
         "en": "System cools to 40°C and alerts to remove basket and bottle."
       },
       "descVariables": {},
-      "outputs_csv": ""
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
     }
   ],
   "manualSteps": [
@@ -259,7 +259,7 @@
         "en": "Prepare pot and water"
       },
       "desc": {
-        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่  เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด",
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด",
         "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil."
       },
       "descVariables": {
@@ -269,130 +269,112 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/roselle/man_1.png",
+      "image": "images/herbal/chrysanthemum/man_1.png",
       "tips": {
-        "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมวัตถุดิบอื่นๆ ได้ เช่น ชั่งน้ำตาลทราย และล้างดอกกระเจี๊ยบผ่านกระชอน 1 รอบ",
-        "en": "💡 While waiting, you can prepare other ingredients like weighing sugar and rinsing roselle calyxes."
+        "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมดอกเก๊กฮวยโดยใส่ในถุงกรองผ้าขาวบางเตรียมไว้",
+        "en": "💡 While waiting, place dried chrysanthemum into a filter bag."
       }
     },
     {
       "step": 2,
       "scalable": true,
       "title": {
-        "th": "ต้มน้ำให้เดือดจัด",
-        "en": "Boil the water"
+        "th": "ต้มน้ำและลดไฟ (สำคัญ)",
+        "en": "Boil and reduce heat"
       },
       "desc": {
-        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
-        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+        "th": "เมื่อน้ำเดือดจัด ให้ปิดไฟหรือลดไฟให้อ่อนที่สุด รอให้อุณหภูมิลดลงเหลือประมาณ 90°C (น้ำนิ่ง ไม่เดือดปุด)",
+        "en": "When water boils, turn off heat or reduce to very low. Wait until temp drops to ~90°C (water is calm, not bubbling)."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_2.png",
+      "image": "images/herbal/chrysanthemum/man_2.png",
       "tips": {
-        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
-        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+        "th": "💡 ห้ามใส่ดอกเก๊กฮวยตอนน้ำเดือดจัด 100°C เพราะจะทำให้มีรสขมและกลิ่นหาย",
+        "en": "💡 Never add flowers at 100°C boiling, or it will become bitter."
       }
     },
     {
       "step": 3,
       "scalable": true,
       "title": {
-        "th": "เติมน้ำตาลและคนให้ละลาย",
-        "en": "Add sugar and stir"
+        "th": "เติมน้ำตาลกรวดและคนให้ละลาย",
+        "en": "Add rock sugar and stir"
       },
       "desc": {
-        "th": "ใส่น้ำตาลทราย {ingredient} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีจนน้ำตาลละลายหมด",
-        "en": "Add {ingredient} of sugar into the hot water. Stir continuously with a ladle until completely dissolved."
+        "th": "ใส่น้ำตาลกรวด {ingredient} ลงไปในน้ำร้อน คนอย่างต่อเนื่องจนน้ำตาลละลายหมด",
+        "en": "Add {ingredient} of rock sugar into the hot water. Stir continuously until completely dissolved."
       },
       "descVariables": {
         "ingredient": {
-          "amount": 1000,
+          "amount": 800,
           "unit": "Gram",
           "scalable": true
         }
       },
-      "image": "images/herbal/roselle/man_3.png",
+      "image": "images/herbal/chrysanthemum/man_3.png",
       "tips": {
-        "th": "💡 ใช้ทัพพีด้ามยาวเพื่อป้องกันไอน้ำร้อนลวกมือ",
-        "en": " Use a long-handled ladle to avoid steam burns."
+        "th": "💡 น้ำตาลกรวดจะทำให้น้ำเก๊กฮวยใสและรสชาติกลมกล่อมกว่าน้ำตาลทรายขาว",
+        "en": "💡 Rock sugar gives a clearer broth and smoother taste than white sugar."
       }
     },
     {
       "step": 4,
       "scalable": true,
       "title": {
-        "th": "ตรวจสอบการละลายของน้ำตาล",
-        "en": "Check sugar dissolution"
+        "th": "ใส่ดอกเก๊กฮวย",
+        "en": "Add Chrysanthemum flowers"
       },
       "desc": {
-        "th": "คนต่อไปอีก 2-3 นาที เพื่อให้แน่ใจว่าไม่มีเกล็ดน้ำตาลหลงเหลืออยู่ที่ก้นหม้อ ก่อนที่จะใส่กระเจี๊ยบ",
-        "en": "Stir for another 2-3 minutes to ensure no sugar granules remain at the bottom before adding roselle."
+        "th": "นำถุงดอกเก๊กฮวยแห้ง {ingredient} หย่อนลงไปแช่ในน้ำร้อน คนเบาๆ 1 รอบ",
+        "en": "Submerge the bag of {ingredient} dried chrysanthemum into the hot water. Stir gently once."
       },
-      "descVariables": {},
-      "image": "images/herbal/roselle/man_4.png",
+      "descVariables": {
+        "ingredient": {
+          "amount": 150,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/chrysanthemum/man_4.png",
       "tips": {
-        "th": " ลองตักมาชิมเล็กน้อย (ระวังร้อน) เพื่อเช็กระดับความหวานก่อนใส่กระเจี๊ยบ",
-        "en": "💡 Taste a small amount (carefully) to check sweetness balance before adding roselle."
+        "th": "💡 สามารถใส่เก๋ากี้ (Goji berries) ลงไปพร้อมกันเพื่อเพิ่มสรรพคุณทางยาได้",
+        "en": "💡 You can add Goji berries at this step for extra health benefits."
       }
     },
     {
       "step": 5,
       "scalable": true,
       "title": {
-        "th": "ใส่กลีบกระเจี๊ยบ",
-        "en": "Add roselle calyxes"
+        "th": "แช่สกัดรสชาติ (5 นาที)",
+        "en": "Steep for extraction (5 mins)"
       },
       "desc": {
-        "th": "นำกลีบกระเจี๊ยบแห้ง {ingredient} ที่ใส่ในถุงกรองหรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน",
-        "en": "Place {ingredient} of dried roselle into a filter bag or basket, then submerge it in the hot water."
+        "th": "ปิดฝาหม้อ แช่เก๊กฮวยทิ้งไว้ Exactly 5 นาที น้ำจะเปลี่ยนเป็นสีเหลืองทองสวยงาม",
+        "en": "Cover the pot. Steep for exactly 5 minutes. The water will turn a beautiful golden yellow."
       },
-      "descVariables": {
-        "ingredient": {
-          "amount": 120,
-          "unit": "Gram",
-          "scalable": true
-        }
-      },
-      "image": "images/herbal/roselle/man_5.png",
+      "descVariables": {},
+      "image": "images/herbal/chrysanthemum/man_5.png",
       "tips": {
-        "th": "💡 ควรใส่ในถุงกรองเสมอ จะทำให้ขั้นตอนการแยกกากออกในตอนท้ายง่ายและสะอาดขึ้นมาก",
-        "en": " Always use a filter bag to make removing the residue at the end much easier and cleaner."
+        "th": "💡 ห้ามแช่นานเกิน 8 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสขมและฝาด",
+        "en": "💡 Do not steep for more than 8 minutes, or the drink will become bitter."
       }
     },
     {
       "step": 6,
       "scalable": true,
       "title": {
-        "th": "แช่สกัดรสชาติและสี (10 นาที)",
-        "en": "Steep for extraction (10 mins)"
-      },
-      "desc": {
-        "th": "ปิดไฟหรือลดไฟให้อ่อนที่สุด แช่กระเจี๊ยบทิ้งไว้ Exactly 10 นาที น้ำจะเปลี่ยนเป็นสีแดงเข้มสวยงาม",
-        "en": "Turn off heat or keep it very low. Steep for exactly 10 minutes. The water will turn a beautiful deep red."
-      },
-      "descVariables": {},
-      "image": "images/herbal/roselle/man_6.png",
-      "tips": {
-        "th": "💡 ห้ามแช่นานเกิน 15 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสฝาดและขม",
-        "en": "💡 Do not steep for more than 15 minutes, or the drink will become astringent and bitter."
-      }
-    },
-    {
-      "step": 7,
-      "scalable": true,
-      "title": {
         "th": "ยกออกและบรรจุขวด",
         "en": "Remove and bottle"
       },
       "desc": {
-        "th": "ครบเวลาแล้วให้ยกถุงกระเจี๊ยบออกทันที บีบเอา น้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป รอให้เย็นก่อนบรรจุขวด",
-        "en": "When time is up, remove the roselle bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
+        "th": "ครบเวลาแล้วให้ยกถุงเก๊กฮวยออกทันที บีบเอา น้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป รอให้เย็นก่อนบรรจุขวด",
+        "en": "When time is up, remove the bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_7.png",
+      "image": "images/herbal/chrysanthemum/man_6.png",
       "tips": {
-        "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น และช่วยรักษาวิตามินซีไว้ได้นานขึ้น",
-        "en": "💡 Refrigerating enhances the refreshing taste and helps preserve Vitamin C longer."
+        "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น ดื่มแล้วชื่นใจมาก",
+        "en": " Refrigerating enhances the refreshing taste. Best served cold!"
       }
     }
   ]
