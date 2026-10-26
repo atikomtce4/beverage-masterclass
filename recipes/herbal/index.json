@@ -20,5 +20,16 @@
       "th": ["แก้ร้อนใน", "หอมสดชื่น"], 
       "en": ["Cooling", "Aromatic"] 
     }
+  },
+  {
+    "id": "samkler_10L",
+    "name": { "th": "น้ำสามเกลอ 10 ลิตร", "en": "10L Samkler Herbal Tea" },
+    "image": "images/herbal/samkler/main_1.png",
+    "prepTime": { "th": "15 นาที", "en": "15 mins" },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["สูตรโบราณ", "ไม่ใช้น้ำตาล", "บำรุงร่างกาย"], 
+      "en": ["Traditional", "No Sugar", "Nourishing"] 
+    }
   }
 ]
