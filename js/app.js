@@ -39,6 +39,21 @@ const UI_LABELS = {
   protein: { 'th': 'โปรตีน', 'en': 'Protein' }
 };
 
+// ===== i18n Data (สำหรับหน้า category.html) =====
+const i18nData = {
+  th: {
+    categoryTitle: "หมวดหมู่",
+    errorTitle: "ไม่พบหมวดหมู่",
+    errorMsg: "หมวดหมู่นี้อาจยังไม่มีข้อมูล",
+    btnBack: "← กลับไปหน้าหมวดหมู่"
+  },
+  en: {
+    categoryTitle: "Categories",
+    errorTitle: "Category Not Found",
+    errorMsg: "This category might not have data yet.",
+    btnBack: "← Back to Categories"
+  }
+};
 // ===== Helper Functions =====
 
 function getText(obj) {
