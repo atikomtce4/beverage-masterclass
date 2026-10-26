@@ -99,11 +99,18 @@
     }
 
     @media (max-width: 480px) {
-      .mode-text {
+      /* .mode-text {
         display: none;
+      } */
+      
+      /* ✅ ปรับให้เล็กลงแทนการซ่อน */
+      .mode-text {
+        font-size: 12px;  /* ลดขนาดฟอนต์ในมือถือ */
       }
+      
       .mode-btn {
-        padding: 10px 16px;
+        padding: 8px 12px;  /* ลด padding */
+        font-size: 13px;    /* ลดขนาดฟอนต์ปุ่ม */
       }
     }
 
@@ -403,18 +410,7 @@
           </div>
         </div>
       </div>
- <!-- Mode Toggle -->
-      <div class="mode-toggle-container">
-        <div class="mode-toggle">
-           <!-- เพิ่ม id="btnModeManual" และ id="btnModeMachine" -->
-          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')" id="btnModeManual">
-            🖐️ <span class="mode-text">ทำเอง</span>
-          </button>
-          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')" id="btnModeMachine">
-            🤖 <span class="mode-text">ใช้เครื่อง</span>
-          </button>
-        </div>
-      </div>
+      
       <!-- Meta Info Grid -->
       <!-- 
       <div class="info-grid">
@@ -462,6 +458,18 @@
         
         <div class="volume-info">
           <span id="volumeRange">1 - 20 ลิตร</span>
+        </div>
+      </div>
+      <!-- Mode Toggle -->
+      <div class="mode-toggle-container">
+        <div class="mode-toggle">
+           <!-- เพิ่ม id="btnModeManual" และ id="btnModeMachine" -->
+          <button class="mode-btn active" data-mode="manual" onclick="switchMode('manual')" id="btnModeManual">
+            🖐️ <span class="mode-text">ทำเอง</span>
+          </button>
+          <button class="mode-btn" data-mode="machine" onclick="switchMode('machine')" id="btnModeMachine">
+            🤖 <span class="mode-text">ใช้เครื่อง</span>
+          </button>
         </div>
       </div>
       <!-- Ingredients -->
