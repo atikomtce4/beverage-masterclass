@@ -1,0 +1,68 @@
+[
+  {
+    "id": "thai_tea_10L",
+    "name": { "th": "ชาไทยต้นตำรับ 10 ลิตร", "en": "10L Classic Thai Milk Tea" },
+    "image": "images/tea/thai_tea/main_1.jpg",
+    "prepTime": { "th": "10 นาที", "en": "10 mins" },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["สูตรเข้มข้น", "หอมเครื่องเทศ", "ต้นตำรับ"], 
+      "en": ["Authentic", "Spice Aroma", "Concentrated"] 
+    }
+  },
+  {
+    "id": "green_tea_10L",
+    "name": { "th": "ชาเขียวมะลิ 10 ลิตร", "en": "10L Jasmine Green Tea" },
+    "image": "images/tea/green_tea/main_1.jpg",
+    "prepTime": { "th": "8 นาที", "en": "8 mins" },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["หอมมะลิ", "ต้านอนุมูลอิสระ", "สดชื่น"], 
+      "en": ["Jasmine Aroma", "Antioxidant", "Refreshing"] 
+    }
+  },
+  {
+    "id": "cocoa_10L",
+    "name": { "th": "โกโก้ร้อนเข้มข้น 10 ลิตร", "en": "10L Rich Hot Cocoa" },
+    "image": "images/tea/cocoa/main_1.jpg",
+    "prepTime": { "th": "12 นาที", "en": "12 mins" },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["โกโก้แท้", "ละลายสนิท", "หอมมัน"], 
+      "en": ["Real Cocoa", "Smooth", "Creamy"] 
+    }
+  },
+  {
+    "id": "ginger_tea_10L",
+    "name": { "th": "น้ำขิงสูตรเข้มข้น 10 ลิตร", "en": "10L Concentrated Ginger Tea" },
+    "image": "images/tea/ginger_tea/main_1.jpg",
+    "prepTime": { "th": "15 นาที", "en": "15 mins" },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["แก้หวัด", "ขับลม", "เผ็ดร้อน"], 
+      "en": ["Cold Relief", "Digestive", "Warming"] 
+    }
+  },
+  {
+    "id": "lemongrass_pandan_10L",
+    "name": { "th": "น้ำตะไคร้ใบเตย 10 ลิตร", "en": "10L Lemongrass Pandan Tea" },
+    "image": "images/tea/lemongrass_pandan/main_1.jpg",
+    "prepTime": { "th": "10 นาที", "en": "10 mins" },
+    "rating": "4.7",
+    "badges": { 
+      "th": ["หอมเย็น", "ขับลม", "ช่วยนอนหลับ"], 
+      "en": ["Cooling Aroma", "Carminative", "Sleep Aid"] 
+    }
+  },
+  {
+    "id": "honey_lemon_10L",
+    "name": { "th": "น้ำผึ้งมะนาว 10 ลิตร", "en": "10L Honey Lemon Tea" },
+    "image": "images/tea/honey_lemon/main_1.jpg",
+    "prepTime": { "th": "10 นาที", "en": "10 mins" },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["วิตามินซีสูง", "แก้เจ็บคอ", "สดชื่น"], 
+      "en": ["High Vitamin C", "Sore Throat", "Refreshing"] 
+    }
+  }
+]

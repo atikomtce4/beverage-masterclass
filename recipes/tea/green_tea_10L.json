@@ -1,0 +1,303 @@
+{
+  "id": "green_tea_10L",
+  "icon": "🍵",
+  "category": "tea",
+  "description": "ชาเขียวมะลิ 200g + น้ำตาล 800g สกัด 80°C 5 นาที หอมกลิ่นมะลิ ละมุนละไม ไม่ขมฝาด",
+  "total_time": 95,
+  "target_temp": 80,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_green_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาเขียวมะลิ (สูตรหอมละมุน)",
+    "en": "Jasmine Green Tea (Aromatic & Smooth)"
+  },
+  "images": [
+    "images/tea/green_tea/main_1.jpg",
+    "images/tea/green_tea/main_2.jpg",
+    "images/tea/green_tea/main_3.jpg",
+    "images/tea/green_tea/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_green_tea",
+  "prepTime": {
+    "th": "8 นาที",
+    "en": "8 mins"
+  },
+  "cookTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสความหอมละมุนของชาเขียวมะลิแท้ๆ ที่คัดสรรใบชาเขียวคุณภาพสูงผสมกลิ่นดอกมะลิธรรมชาติ สูตรนี้ใช้ชาเขียวมะลิ 200 กรัม สกัดที่อุณหภูมิ 80°C (ต่ำชาไทย) เป็นเวลาเพียง 5 นาที เพื่อคงความหอมของมะลิและป้องกันความขมฝาด ผสมน้ำตาลในสัดส่วนที่พอดี ได้รสชาติสดชื่น ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience the delicate aroma of authentic Jasmine Green Tea made from premium green tea leaves infused with natural jasmine scent. This recipe uses 200g of jasmine green tea, steeped at 80°C (lower than Thai tea) for only 5 minutes to preserve the floral aroma and prevent bitterness. Sweetened perfectly for a refreshing taste, ideal for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "อุดมด้วยสารต้านอนุมูลอิสระจากชาเขียว ช่วยผ่อนคลายจากความหอมของมะลิ และกระตุ้นสมาธิ",
+    "en": "Rich in antioxidants from green tea, promotes relaxation through jasmine aroma, and boosts focus."
+  },
+  "warnings": {
+    "th": "️ มีคาเฟอีน ผู้ที่ไวต่อคาเฟอีนหรือหญิงตั้งครรภ์ควรดื่มในปริมาณน้อย",
+    "en": "️ Contains caffeine. Those sensitive to caffeine or pregnant women should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "35 kcal",
+    "carbs": "9 g",
+    "sugar": "8 g",
+    "protein": "0.3 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ชาเขียวมะลิแห้ง", "en": "Dried jasmine green tea" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ดอกมะลิแห้ง (สำหรับเพิ่มกลิ่น)", "en": "Dried jasmine flowers (for extra aroma)" },
+      "amount": 30,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (80°C)", "en": "Heat Water to 80°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 80°C (ต่ำกว่าชาไทย) เพื่อรักษาความหอมของมะลิ",
+        "en": "The machine heats water to 80°C (lower than Thai tea) to preserve jasmine aroma."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ชาเขียวมะลิและดอกมะลิ", "en": "Add Jasmine Green Tea & Jasmine Flowers" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ชาเขียวมะลิ {tea} และดอกมะลิแห้ง {jasmine} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {tea} of jasmine green tea and {jasmine} of dried jasmine flowers (in basket) into hot water."
+      },
+      "descVariables": {
+        "tea": { "amount": 200, "unit": "Gram", "scalable": true },
+        "jasmine": { "amount": 30, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "สกัดชา (5 นาที)", "en": "Steep Tea (5 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 80°C อย่างแม่นยำเป็นเวลา 5 นาที (ห้ามเกินนี้เพื่อป้องกันรสขม)",
+        "en": "Machine precisely maintains 80°C for 5 mins (do not exceed to avoid bitterness)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาล", "en": "Add Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวนอย่างแรง",
+        "en": "System alerts to add {sugar} of sugar, activating strong stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "ชาเขียวมะลิพร้อมเสิร์ฟแล้ว! ยกตะกร้ากากชาออก หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็ง",
+        "en": "Jasmine green tea is ready! Remove the tea basket. For iced version, pour over ice."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (ไม่ต้องเดือด)", "en": "Heat water (not boiling)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลาง รอจนน้ำร้อนประมาณ 80°C (มีไอน้ำขึ้นแต่ไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 80°C (steam rising but not boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/green_tea/man_1.jpg",
+      "tips": {
+        "th": "💡 ห้ามใช้น้ำเดือดจัด 100°C เพราะจะทำให้ชาเขียวขมและกลิ่นมะลิหาย",
+        "en": "💡 Never use boiling water at 100°C, or the green tea will become bitter and jasmine aroma will be lost."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ใส่ชาเขียวมะลิและสกัด (5 นาที)", "en": "Add jasmine green tea and steep (5 mins)" },
+      "desc": {
+        "th": "ใส่ชาเขียวมะลิ {tea} และดอกมะลิแห้ง {jasmine} ลงไปในน้ำร้อน ปิดฝาหม้อ ทิ้งไว้ Exactly 5 นาที",
+        "en": "Add {tea} of jasmine green tea and {jasmine} of dried jasmine flowers into hot water. Cover and steep for exactly 5 minutes."
+      },
+      "descVariables": {
+        "tea": { "amount": 200, "unit": "Gram", "scalable": true },
+        "jasmine": { "amount": 30, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/green_tea/man_2.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บกลิ่นหอมของมะลิไว้ได้อย่างเต็มที่",
+        "en": "💡 Covering the pot traps the delicate jasmine aroma perfectly."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "กรองกากชาออก", "en": "Filter the tea leaves" },
+      "desc": {
+        "th": "ใช้ถุงกรองผ้าขาวบางหรือตะแกรงละเอียด กรองเอากากชาและดอกมะลิออกให้หมด จะได้เนื้อชาที่เนียนละเอียด",
+        "en": "Use a fine cloth filter bag or fine mesh strainer to filter out all tea leaves and jasmine flowers for a smooth texture."
+      },
+      "descVariables": {},
+      "image": "images/tea/green_tea/man_3.jpg",
+      "tips": {
+        "th": "💡 บีบถุงชาเบาๆ ตอนท้ายเพื่อเอาน้ำชาออกมาให้หมด แต่อย่าบีบแรงเพราะอาจได้รสฝาด",
+        "en": "💡 Squeeze the tea bag gently at the end to extract all liquid, but don't squeeze too hard to avoid astringency."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาลและคนให้ละลาย", "en": "Add sugar and stir" },
+      "desc": {
+        "th": "ขณะที่ยังร้อนอยู่ ใส่น้ำตาลทราย {sugar} ลงไป คนอย่างต่อเนื่องจนน้ำตาลละลายหมด",
+        "en": "While still hot, add {sugar} of sugar. Stir continuously until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/green_tea/man_4.jpg",
+      "tips": {
+        "th": "💡 ต้องคนตอนร้อนเท่านั้น น้ำตาลถึงจะละลายสนิท",
+        "en": "💡 You must stir while hot, otherwise sugar won't dissolve completely."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "เสิร์ฟร้อน หรือ ใส่แก้วน้ำแข็ง", "en": "Serve hot or over ice" },
+      "desc": {
+        "th": "พร้อมเสิร์ฟ! หากต้องการแบบเย็น ให้ตักชาใส่แก้วที่เต็มไปด้วยน้ำแข็ง จะหอมสดชื่นยิ่งขึ้น",
+        "en": "Ready to serve! For iced version, pour tea into a glass filled with ice for extra refreshment."
+      },
+      "descVariables": {},
+      "image": "images/tea/green_tea/man_5.jpg",
+      "tips": {
+        "th": "💡 ชาเขียวมะลิเย็นจะหอมและสดชื่นกว่าแบบร้อน เหมาะกับอากาศเมืองไทย",
+        "en": "💡 Iced jasmine green tea is more aromatic and refreshing than hot version, perfect for Thai weather."
+      }
+    }
+  ]
+}

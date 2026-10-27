@@ -1,0 +1,297 @@
+{
+  "id": "ginger_tea_10L",
+  "icon": "🫚",
+  "category": "tea",
+  "description": "ขิงแก่หั่นแว่น 500g + น้ำตาลกรวด 800g ต้ม 95°C 20 นาที เผ็ดร้อน หอมกลิ่นขิงแท้ บำรุงร่างกาย",
+  "total_time": 150,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_ginger_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำขิงสูตรเข้มข้น (10 ลิตร)",
+    "en": "Concentrated Ginger Tea (10L)"
+  },
+  "images": [
+    "images/tea/ginger_tea/main_1.jpg",
+    "images/tea/ginger_tea/main_2.jpg",
+    "images/tea/ginger_tea/main_3.jpg",
+    "images/tea/ginger_tea/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_ginger_tea",
+  "prepTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "cookTime": {
+    "th": "25 นาที",
+    "en": "25 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสน้ำขิงแท้สูตรเข้มข้นที่คัดสรรขิงแก่อายุ 6 เดือนขึ้นไป หั่นแว่นบาง 500 กรัม ต้มสกัดที่อุณหภูมิ 95°C นาน 20 นาที เพื่อดึงสาร Gingerol และ Shogaol ออกมาอย่างเต็มที่ ให้รสเผ็ดร้อน หอมกลิ่นขิงแท้ ช่วยแก้หวัด ขับลม บำรุงร่างกาย ผสมน้ำตาลกรวด 800 กรัม ให้รสชาติกลมกล่อม หวานละมุน ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience authentic concentrated ginger tea made from 6-month-old mature ginger, sliced thin (500g), boiled at 95°C for 20 minutes to extract maximum Gingerol and Shogaol. Delivers a spicy, aromatic flavor that relieves colds, aids digestion, and nourishes the body. Sweetened with 800g rock sugar for a smooth, mellow taste, perfect for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "ช่วยแก้หวัด คัดจมูก ขับลม บรรเทาอาการท้องอืด บำรุงระบบย่อยอาหาร และกระตุ้นการไหลเวียนโลหิต",
+    "en": "Helps relieve colds and congestion, aids digestion, reduces bloating, supports digestive health, and stimulates blood circulation."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคกระเพาะอาหารหรือกรดไหลย้อนควรดื่มในปริมาณน้อย และไม่ควรดื่มตอนท้องว่าง",
+    "en": "⚠️ People with stomach ulcers or acid reflux should consume in moderation and avoid drinking on an empty stomach."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "10 g",
+    "sugar": "8 g",
+    "protein": "0.2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขิงแก่หั่นแว่น", "en": "Sliced mature ginger" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (95°C)", "en": "Heat Water to 95°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 95°C (เดือดจัด) เพื่อเตรียมสกัดขิง",
+        "en": "The machine heats water to 95°C (near boiling) to prepare for ginger extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ขิงแก่หั่นแว่น", "en": "Add Sliced Mature Ginger" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ขิงแก่หั่นแว่น {ginger} (ในตะกร้า) ลงไปต้มในน้ำร้อน",
+        "en": "System alerts to add {ginger} of sliced mature ginger (in basket) into the hot water."
+      },
+      "descVariables": {
+        "ginger": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 20,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มสกัดขิง (20 นาที)", "en": "Boil and Extract Ginger (20 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C และต้มต่อเนื่อง 20 นาที เพื่อดึงสาร Gingerol และ Shogaol จากขิงออกมาอย่างเต็มที่",
+        "en": "Machine maintains 95°C and boils for 20 mins to fully extract Gingerol and Shogaol from ginger."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลกรวด", "en": "Add Rock Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลกรวด {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of rock sugar, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "น้ำขิงพร้อมเสิร์ฟแล้ว! ยกตะกร้าขิงออก หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็ง สามารถบีบมะนาวเพิ่มเพื่อเพิ่มวิตามินซี",
+        "en": "Ginger tea is ready! Remove the ginger basket. For iced version, pour over ice. Squeeze fresh lemon for extra Vitamin C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมขิงแก่", "en": "Prepare mature ginger" },
+      "desc": {
+        "th": "ล้างขิงแก่ {ginger} ให้สะอาด ปอกเปลือกบางๆ แล้วหั่นเป็นแว่นบางๆ ประมาณ 0.3 ซม. ยิ่งบางยิ่งสกัดรสได้ดี",
+        "en": "Wash {ginger} of mature ginger thoroughly, peel thinly, and slice into thin rounds (~0.3cm). Thinner slices extract flavor better."
+      },
+      "descVariables": {
+        "ginger": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/ginger_tea/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกขิงแก่ (อายุ 6 เดือนขึ้นไป) ผิวจะขรุขระ สีเข้ม ให้รสเผ็ดร้อนและสรรพคุณดีกว่าขิงอ่อน",
+        "en": "💡 Choose mature ginger (6+ months old) with rough, dark skin for spicier flavor and better health benefits."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้เดือดจัด", "en": "Boil water vigorously" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟแรงจนน้ำเดือดจัด (100°C) เห็นฟองใหญ่เดือดปุดๆ",
+        "en": "Prepare {water} of clean water in a large pot. Heat on high until water reaches a rolling boil (100°C) with large, vigorous bubbles."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/ginger_tea/man_2.jpg",
+      "tips": {
+        "th": "💡 ขิงต้องต้มในน้ำเดือดจัดเท่านั้น จึงจะดึงสาร Gingerol ออกมาได้ดี",
+        "en": "💡 Ginger must be boiled in vigorously boiling water to properly extract Gingerol."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ขิงและต้ม 20 นาที", "en": "Add ginger and boil 20 mins" },
+      "desc": {
+        "th": "ใส่ขิงหั่นแว่น {ginger} ลงไปในน้ำเดือด ลดไฟลงเล็กน้อยให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ปิดฝาต้ม Exactly 20 นาที น้ำจะเปลี่ยนเป็นสีเหลืองทองเข้ม",
+        "en": "Add {ginger} of sliced ginger into boiling water. Reduce heat slightly to maintain steady simmer. Cover and boil for exactly 20 minutes. Water will turn deep golden yellow."
+      },
+      "descVariables": {
+        "ginger": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/ginger_tea/man_3.jpg",
+      "tips": {
+        "th": "💡 ห้ามต้มน้อยกว่า 15 นาที เพราะขิงจะยังไม่สกัดสรรพคุณออกมาเต็มที่",
+        "en": "💡 Do not boil for less than 15 minutes, or the ginger won't fully release its benefits."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาลกรวดและคนให้ละลาย", "en": "Add rock sugar and stir" },
+      "desc": {
+        "th": "ใส่น้ำตาลกรวด {sugar} ลงไปในน้ำขิงร้อน คนอย่างต่อเนื่องจนน้ำตาลละลายหมด น้ำขิงจะใสและรสชาติกลมกล่อม",
+        "en": "Add {sugar} of rock sugar into hot ginger tea. Stir continuously until completely dissolved. The tea will become clear and smoothly flavored."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/ginger_tea/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดจะทำให้น้ำขิงใสและรสชาติละมุนกว่าน้ำตาลทรายขาว",
+        "en": "💡 Rock sugar gives ginger tea a clearer appearance and smoother taste than white sugar."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "กรองและเสิร์ฟ", "en": "Strain and serve" },
+      "desc": {
+        "th": "ใช้ตะแกรงหรือผ้าขาวบางกรองกากขิงออกให้หมด พร้อมเสิร์ฟแบบร้อน หรือตักใส่แก้วน้ำแข็งสำหรับแบบเย็น สามารถบีบมะนาวสดเพิ่มเพื่อเพิ่มวิตามินซี",
+        "en": "Use a strainer or cheesecloth to filter out all ginger residue. Serve hot, or pour over ice for iced version. Squeeze fresh lemon for extra Vitamin C."
+      },
+      "descVariables": {},
+      "image": "images/tea/ginger_tea/man_5.jpg",
+      "tips": {
+        "th": "💡 การบีบมะนาวสดตอนเสิร์ฟจะเพิ่มวิตามินซีและทำให้รสชาติสดชื่นขึ้น แต่อย่าบีบตอนต้มเพราะจะขม",
+        "en": "💡 Squeezing fresh lemon at serving adds Vitamin C and refreshes the taste, but don't add during boiling or it will become bitter."
+      }
+    }
+  ]
+}

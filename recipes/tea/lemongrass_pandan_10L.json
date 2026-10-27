@@ -1,0 +1,306 @@
+{
+  "id": "lemongrass_pandan_10L",
+  "icon": "🌿",
+  "category": "tea",
+  "description": "ตะไคร้สด 350g + ใบเตย 250g + น้ำตาลกรวด 750g ต้ม 95°C 15 นาที หอมเย็น สดชื่น ช่วยขับลม",
+  "total_time": 135,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_lemongrass_pandan_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำตะไคร้ใบเตย (สูตรหอมเย็น)",
+    "en": "Lemongrass Pandan Tea (Cooling & Aromatic)"
+  },
+  "images": [
+    "images/tea/lemongrass_pandan/main_1.jpg",
+    "images/tea/lemongrass_pandan/main_2.jpg",
+    "images/tea/lemongrass_pandan/main_3.jpg",
+    "images/tea/lemongrass_pandan/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_lemongrass_pandan",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "สัมผัสน้ำตะไคร้ใบเตยสูตรหอมเย็นที่คัดสรรตะไคร้สด 350 กรัม และใบเตยหอม 250 กรัม ต้มสกัดที่อุณหภูมิ 95°C นาน 15 นาที เพื่อดึงน้ำมันหอมระเหยและสรรพคุณออกมาอย่างเต็มที่ ให้รสหอมเย็น สดชื่น ช่วยขับลมและทำให้หลับสบาย ผสมน้ำตาลกรวด 750 กรัม ให้รสชาติกลมกล่อม หวานละมุน ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience the cooling and aromatic Lemongrass Pandan Tea made from 350g fresh lemongrass and 250g pandan leaves, boiled at 95°C for 15 minutes to extract essential oils and health benefits. Delivers a refreshing, cooling flavor that aids digestion and promotes sleep. Sweetened with 750g rock sugar for a smooth, mellow taste, perfect for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "ช่วยขับลม บรรเทาอาการท้องอืด ทำให้หลับสบาย ลดความเครียด และสดชื่น",
+    "en": "Helps relieve bloating, promotes sleep, reduces stress, and provides a refreshing feeling."
+  },
+  "warnings": {
+    "th": "⚠️ สตรีมีครรภ์ควรดื่มในปริมาณน้อย เพราะตะไคร้มีฤทธิ์กระตุ้นมดลูก",
+    "en": "⚠️ Pregnant women should consume in moderation, as lemongrass may stimulate uterine contractions."
+  },
+  "nutrition": {
+    "calories": "30 kcal",
+    "carbs": "8 g",
+    "sugar": "7 g",
+    "protein": "0.1 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ตะไคร้สด (หั่นท่อน)", "en": "Fresh lemongrass (cut into pieces)" },
+      "amount": 350,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบเตยหอม (มัดเป็นมัด)", "en": "Pandan leaves (tied in bundles)" },
+      "amount": 250,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 750,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (95°C)", "en": "Heat Water to 95°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 95°C (เดือดจัด) เพื่อเตรียมสกัดตะไคร้และใบเตย",
+        "en": "The machine heats water to 95°C (near boiling) to prepare for lemongrass and pandan extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ตะไคร้และใบเตย", "en": "Add Lemongrass and Pandan" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ตะไคร้หั่นท่อน {lemongrass} และใบเตยมัด {pandan} (ในตะกร้า) ลงไปต้มในน้ำร้อน",
+        "en": "System alerts to add {lemongrass} of cut lemongrass and {pandan} of pandan bundles (in basket) into hot water."
+      },
+      "descVariables": {
+        "lemongrass": { "amount": 350, "unit": "Gram", "scalable": true },
+        "pandan": { "amount": 250, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มสกัดสมุนไพร (15 นาที)", "en": "Boil and Extract Herbs (15 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C และต้มต่อเนื่อง 15 นาที เพื่อดึงน้ำมันหอมระเหยและสรรพคุณจากตะไคร้และใบเตยออกมาอย่างเต็มที่",
+        "en": "Machine maintains 95°C and boils for 15 mins to fully extract essential oils and benefits from lemongrass and pandan."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลกรวด", "en": "Add Rock Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลกรวด {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of rock sugar, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 750, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "น้ำตะไคร้ใบเตยพร้อมเสิร์ฟแล้ว! ยกตะกร้าสมุนไพรออก หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็ง",
+        "en": "Lemongrass pandan tea is ready! Remove the herb basket. For iced version, pour over ice."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมตะไคร้และใบเตย", "en": "Prepare lemongrass and pandan" },
+      "desc": {
+        "th": "ล้างตะไคร้ {lemongrass} ให้สะอาด หั่นเป็นท่อนยาวประมาณ 2-3 นิ้ว แล้วบุบให้แตกเล็กน้อย ส่วนใบเตย {pandan} ล้างให้สะอาด มัดเป็นมัดใหญ่",
+        "en": "Wash {lemongrass} of lemongrass thoroughly, cut into 2-3 inch pieces, and bruise slightly. Wash {pandan} of pandan leaves and tie into large bundles."
+      },
+      "descVariables": {
+        "lemongrass": { "amount": 350, "unit": "Gram", "scalable": true },
+        "pandan": { "amount": 250, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/lemongrass_pandan/man_1.jpg",
+      "tips": {
+        "th": "💡 การบุบตะไคร้จะช่วยให้น้ำมันหอมระเหยออกมาได้ดีขึ้น ส่วนใบเตยควรเลือกใบสีเขียวเข้มจะหอมกว่า",
+        "en": " Bruising lemongrass helps release essential oils. Choose dark green pandan leaves for stronger aroma."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้เดือดจัด", "en": "Boil water vigorously" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟแรงจนน้ำเดือดจัด (100°C) เห็นฟองใหญ่เดือดปุดๆ",
+        "en": "Prepare {water} of clean water in a large pot. Heat on high until water reaches a rolling boil (100°C) with large, vigorous bubbles."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/lemongrass_pandan/man_2.jpg",
+      "tips": {
+        "th": "💡 ตะไคร้และใบเตยต้องต้มในน้ำเดือดจัด จึงจะดึงน้ำมันหอมระเหยออกมาได้ดี",
+        "en": "💡 Lemongrass and pandan must be boiled in vigorously boiling water to properly extract essential oils."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ตะไคร้และใบเตย ต้ม 15 นาที", "en": "Add lemongrass and pandan, boil 15 mins" },
+      "desc": {
+        "th": "ใส่ตะไคร้หั่นท่อน {lemongrass} และใบเตยมัด {pandan} ลงไปในน้ำเดือด ลดไฟลงเล็กน้อยให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ปิดฝาต้ม Exactly 15 นาที น้ำจะเปลี่ยนเป็นสีเขียวอ่อนเหลืองหอม",
+        "en": "Add {lemongrass} of cut lemongrass and {pandan} of pandan bundles into boiling water. Reduce heat slightly to maintain steady simmer. Cover and boil for exactly 15 minutes. Water will turn a fragrant pale yellow-green."
+      },
+      "descVariables": {
+        "lemongrass": { "amount": 350, "unit": "Gram", "scalable": true },
+        "pandan": { "amount": 250, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/lemongrass_pandan/man_3.jpg",
+      "tips": {
+        "th": "💡 ห้ามต้มน้อยกว่า 10 นาที เพราะสมุนไพรจะยังไม่สกัดสรรพคุณออกมาเต็มที่",
+        "en": "💡 Do not boil for less than 10 minutes, or the herbs won't fully release their benefits."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาลกรวดและคนให้ละลาย", "en": "Add rock sugar and stir" },
+      "desc": {
+        "th": "ใส่น้ำตาลกรวด {sugar} ลงไปในน้ำตะไคร้ใบเตยร้อน คนอย่างต่อเนื่องจนน้ำตาลละลายหมด น้ำจะใสและรสชาติกลมกล่อม",
+        "en": "Add {sugar} of rock sugar into hot lemongrass pandan tea. Stir continuously until completely dissolved. The tea will become clear and smoothly flavored."
+      },
+      "descVariables": {
+        "sugar": { "amount": 750, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/lemongrass_pandan/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดจะทำให้น้ำตะไคร้ใบเตยใสและรสชาติละมุนกว่าน้ำตาลทรายขาว",
+        "en": "💡 Rock sugar gives lemongrass pandan tea a clearer appearance and smoother taste than white sugar."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "กรองและเสิร์ฟ", "en": "Strain and serve" },
+      "desc": {
+        "th": "ใช้ตะแกรงหรือผ้าขาวบางกรองกากตะไคร้และใบเตยออกให้หมด พร้อมเสิร์ฟแบบร้อน หรือตักใส่แก้วน้ำแข็งสำหรับแบบเย็น จะหอมสดชื่นยิ่งขึ้น",
+        "en": "Use a strainer or cheesecloth to filter out all lemongrass and pandan residue. Serve hot, or pour over ice for iced version for extra refreshment."
+      },
+      "descVariables": {},
+      "image": "images/tea/lemongrass_pandan/man_5.jpg",
+      "tips": {
+        "th": " น้ำตะไคร้ใบเตยเย็นจะหอมและสดชื่นกว่าแบบร้อน เหมาะกับอากาศเมืองไทย",
+        "en": "💡 Iced lemongrass pandan tea is more aromatic and refreshing than hot version, perfect for Thai weather."
+      }
+    }
+  ]
+}

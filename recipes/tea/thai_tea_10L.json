@@ -1,0 +1,310 @@
+{
+  "id": "thai_tea_10L",
+  "icon": "🧋",
+  "category": "tea",
+  "description": "ผงชาไทย 350g + น้ำตาล 1kg + นมข้นหวาน 1kg สกัด 95°C 15 นาที หอมเครื่องเทศ เข้มข้นถึงใจ",
+  "total_time": 140,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_thai_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาไทยต้นตำรับ (สูตรเข้มข้น)",
+    "en": "Classic Thai Milk Tea (Authentic Recipe)"
+  },
+  "images": [
+    "images/tea/thai_tea/main_1.jpg",
+    "images/tea/thai_tea/main_2.jpg",
+    "images/tea/thai_tea/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_thai_tea",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสรสชาติชาไทยแท้ๆ ที่หอมกลิ่นเครื่องเทศและมีความเข้มข้นถึงใจ สูตรนี้ใช้ผงชาไทยเกรดพรีเมียม 350 กรัม ต้มสกัดที่อุณหภูมิ 95°C (ไม่เดือดจัด) เป็นเวลา 15 นาที เพื่อป้องกันความขมฝาด จากนั้นผสมกับน้ำตาลและนมข้นหวานสัดส่วนทองคำ 1:1 ให้รสชาติกลมกล่อม หวานมัน ลงตัว ทั้งแบบร้อนและใส่น้ำแข็ง",
+    "en": "Experience the authentic taste of Thai Milk Tea, rich in spice aroma and bold flavor. This recipe uses 350g of premium Thai tea mix, steeped at 95°C (not boiling) for 15 minutes to prevent bitterness. It is then blended with a golden 1:1 ratio of sugar and sweetened condensed milk for a perfectly smooth, creamy taste, ideal for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "ให้ความสดชื่น กระปรี้กระเปร่าจากคาเฟอีน และความร้อนช่วยขับลมในท้อง",
+    "en": "Provides refreshing energy from caffeine, and the warmth helps relieve bloating."
+  },
+  "warnings": {
+    "th": "⚠️ มีคาเฟอีนและน้ำตาลสูง ผู้ที่เป็นโรคเบาหวานหรือแพ้คาเฟอีนควรปรับลดปริมาณหรือเลือกสูตรหวานน้อย",
+    "en": "⚠️ Contains high caffeine and sugar. Diabetics or those sensitive to caffeine should reduce the amount or choose a less sweet version."
+  },
+  "nutrition": {
+    "calories": "85 kcal",
+    "carbs": "18 g",
+    "sugar": "16 g",
+    "protein": "1.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผงชาไทย (ตรามือหรือเทียบเท่า)", "en": "Thai Tea Mix (e.g., Cha Tra Mue)" },
+      "amount": 350,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นหวาน", "en": "Sweetened condensed milk" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นจืด (สำหรับราดหน้า)", "en": "Evaporated milk (for topping)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (95°C)", "en": "Heat Water to 95°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 95°C (ไม่เดือดจัด) เพื่อเตรียมสกัดชา",
+        "en": "The machine heats water to 95°C (not boiling) to prepare for tea extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ผงชาไทยในตะกร้า", "en": "Add Thai Tea Mix in Basket" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ผงชาไทย {tea} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {tea} of Thai tea mix (in a basket) into the hot water."
+      },
+      "descVariables": {
+        "tea": { "amount": 350, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "สกัดชา (15 นาที)", "en": "Steep Tea (15 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 15 นาที พร้อมระบบวนน้ำเพื่อให้ได้สีและกลิ่นที่เข้มข้น",
+        "en": "Machine precisely maintains 95°C for 15 mins with circulation to extract bold color and aroma."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลและนมข้นหวาน", "en": "Add Sugar and Condensed Milk" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} และนมข้นหวาน {milk} ลงไป พร้อมเปิดระบบกวนอย่างแรง",
+        "en": "System alerts to add {sugar} of sugar and {milk} of condensed milk, activating strong stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "milk": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 5 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟแบบร้อน",
+        "en": "Machine cools to 60°C and stirs for 5 mins to blend perfectly, ready for hot serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "ชาไทยพร้อมเสิร์ฟแล้ว! ยกตะกร้ากากชาออก หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็งและราดด้วยนมข้นจืด",
+        "en": "Thai tea is ready! Remove the tea basket. For iced version, pour over ice and top with evaporated milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้เดือดแล้วปิดไฟ", "en": "Boil water and turn off heat" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟจนน้ำเดือดจัด จากนั้น **ปิดไฟทันที**",
+        "en": "Prepare {water} of clean water in a large pot. Bring to a rolling boil, then **turn off the heat immediately**."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/thai_tea/man_1.jpg",
+      "tips": {
+        "th": "💡 ห้ามใส่ผงชาตอนน้ำกำลังเดือดพล่าน เพราะจะทำให้ชาขมและเสียกลิ่นหอม",
+        "en": "💡 Never add tea mix while water is vigorously boiling, or it will become bitter and lose its aroma."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ใส่ผงชาและสกัด (15 นาที)", "en": "Add tea mix and steep (15 mins)" },
+      "desc": {
+        "th": "ใส่ผงชาไทย {tea} ลงไปในน้ำร้อน ปิดฝาหม้อ ทิ้งไว้ Exactly 15 นาที",
+        "en": "Add {tea} of Thai tea mix into the hot water. Cover the pot and steep for exactly 15 minutes."
+      },
+      "descVariables": {
+        "tea": { "amount": 350, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/thai_tea/man_2.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บกลิ่นเครื่องเทศ (เช่น โป๊ยกั๊ก) ไว้ในน้ำชาได้อย่างเต็มที่",
+        "en": "💡 Covering the pot traps the spice aromas (like star anise) perfectly in the tea."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "กรองกากชาออก", "en": "Filter the tea leaves" },
+      "desc": {
+        "th": "ใช้ถุงกรองผ้าขาวบางหรือตะแกรงละเอียด กรองเอากากชาออกให้หมด จะได้เนื้อชาที่เนียนละเอียด",
+        "en": "Use a fine cloth filter bag or fine mesh strainer to filter out all tea leaves for a smooth texture."
+      },
+      "descVariables": {},
+      "image": "images/tea/thai_tea/man_3.jpg",
+      "tips": {
+        "th": "💡 บีบถุงชาเบาๆ ตอนท้ายเพื่อเอาน้ำชาออกมาให้หมด แต่อย่าบีบแรงเกินไปเพราะอาจได้รสฝาด",
+        "en": "💡 Squeeze the tea bag gently at the end to extract all liquid, but don't squeeze too hard to avoid astringency."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ปรุงรสชาติขณะชาร้อน", "en": "Season while tea is hot" },
+      "desc": {
+        "th": "ขณะที่ยังร้อนอยู่ ใส่น้ำตาล {sugar} และนมข้นหวาน {milk} ลงไป คนอย่างต่อเนื่องจนละลายเข้ากันดี",
+        "en": "While still hot, add {sugar} of sugar and {milk} of condensed milk. Stir continuously until well blended."
+      },
+      "descVariables": {
+        "sugar": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "milk": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/thai_tea/man_4.jpg",
+      "tips": {
+        "th": "💡 ต้องคนตอนร้อนเท่านั้น นมข้นหวานถึงจะละลายสนิทและไม่จับตัวเป็นก้อน",
+        "en": "💡 You must stir while hot, otherwise the condensed milk will not dissolve completely and may clump."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "เสิร์ฟร้อน หรือ ใส่แก้วน้ำแข็ง", "en": "Serve hot or over ice" },
+      "desc": {
+        "th": "พร้อมเสิร์ฟ! หากต้องการแบบเย็น ให้ตักชาใส่แก้วที่เต็มไปด้วยน้ำแข็ง แล้วราดด้วยนมข้นจืด {evap_milk} ด้านบน",
+        "en": "Ready to serve! For iced version, pour tea into a glass filled with ice, and top with {evap_milk} of evaporated milk."
+      },
+      "descVariables": {
+        "evap_milk": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/thai_tea/man_5.jpg",
+      "tips": {
+        "th": "💡 การราดนมข้นจืดตอนท้ายจะช่วยให้ชาไทยมีชั้นสีสวยงามและหอมมันยิ่งขึ้น",
+        "en": "💡 Topping with evaporated milk at the end creates a beautiful layered look and extra creaminess."
+      }
+    }
+  ]
+}

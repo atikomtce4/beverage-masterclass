@@ -1,0 +1,279 @@
+{
+  "id": "honey_lemon_10L",
+  "icon": "🍋",
+  "category": "tea",
+  "description": "น้ำผึ้งแท้ 1kg + มะนาวสด 500g ผสมน้ำอุ่น 60°C สดชื่น วิตามินซีสูง ไม่ขมฝาด",
+  "total_time": 40,
+  "target_temp": 60,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_honey_lemon_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำผึ้งมะนาวสด (สูตรวิตามินซี)",
+    "en": "Fresh Honey Lemon Tea (Vitamin C Boost)"
+  },
+  "images": [
+    "images/tea/honey_lemon/main_1.jpg",
+    "images/tea/honey_lemon/main_2.jpg",
+    "images/tea/honey_lemon/main_3.jpg",
+    "images/tea/honey_lemon/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_honey_lemon",
+  "prepTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "cookTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสความสดชื่นและคุณประโยชน์เต็มแก้วกับน้ำผึ้งมะนาวสดสูตรพรีเมียม ปริมาณ 10 ลิตร ใช้มะนาวสดแท้ 500 กรัม และน้ำผึ้งธรรมชาติ 1 กิโลกรัม จุดเด่นที่สำคัญที่สุดของสูตรนี้คือการควบคุมอุณหภูมิไม่เกิน 60°C ซึ่งช่วยรักษาเอนไซม์และวิตามินซีในน้ำผึ้งไว้ได้ครบถ้วน พร้อมป้องกันไม่ให้เปลือกมะนาวปล่อยรสขมออกมา ได้รสชาติที่กลมกล่อม หอมสดชื่น ดื่มได้ทั้งแบบอุ่นและแบบเย็น",
+    "en": "Experience the refreshing taste and full benefits of premium Fresh Honey Lemon Tea in a 10-liter batch. Made with 500g of fresh lemons and 1kg of pure natural honey. The key highlight is maintaining the temperature at a maximum of 60°C, which preserves the enzymes and Vitamin C in the honey while preventing the lemon peel from releasing bitterness. Perfectly balanced, aromatic, and refreshing, ideal for both warm and iced servings."
+  },
+  "benefits": {
+    "th": "อุดมด้วยวิตามินซีสูง ช่วยบรรเทาอาการเจ็บคอ เสริมสร้างภูมิคุ้มกัน และช่วยให้ระบบย่อยอาหารทำงานได้ดี",
+    "en": "Rich in Vitamin C, helps soothe sore throats, boosts the immune system, and aids digestion."
+  },
+  "warnings": {
+    "th": "⚠️ ห้ามใช้น้ำเดือดจัดผสมเด็ดขาด! เพราะจะทำลายคุณค่าทางอาหารของน้ำผึ้งและทำให้มะนาวขม ผู้ที่เป็นโรคกระเพาะควรดื่มหลังอาหาร",
+    "en": "⚠️ Never use boiling water! It destroys honey's nutrients and makes the lemon bitter. People with stomach ulcers should consume after meals."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "0.2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะนาวสด (หั่นแว่น/คั้นน้ำ)", "en": "Fresh lemons (sliced/juiced)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้งแท้ 100%", "en": "100% Pure honey" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (ห้ามเกิน 60°C)", "en": "Warm Water (Max 60°C)" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 60°C เท่านั้น (ห้ามเดือด) เพื่อรักษาสรรพคุณน้ำผึ้ง",
+        "en": "The machine warms water to exactly 60°C (no boiling) to preserve honey's benefits."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำผึ้งแท้", "en": "Add Pure Honey" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำผึ้งแท้ {honey} ลงไป พร้อมเปิดระบบกวนเบาๆ ให้ละลาย",
+        "en": "System alerts to add {honey} of pure honey, activating gentle stirring for dissolution."
+      },
+      "descVariables": {
+        "honey": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่มะนาวสด", "en": "Add Fresh Lemons" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่มะนาวสดหั่นแว่น {lemon} ลงไป พร้อมเปิดระบบกวนเบาๆ",
+        "en": "System alerts to add {lemon} of sliced fresh lemons, activating gentle stirring."
+      },
+      "descVariables": {
+        "lemon": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 5,
+      "function": "Hold Temp",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "พักให้รสชาติเข้ากัน (5 นาที)", "en": "Rest and Blend Flavors (5 mins)" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 50°C และกวนเบาๆ 5 นาที เพื่อให้รสชาติน้ำผึ้งและมะนาวผสมผสานกัน",
+        "en": "Machine cools to 50°C and stirs gently for 5 mins to blend honey and lemon flavors perfectly."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 6,
+      "function": "Cool Down",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ทำให้เย็นพร้อมเสิร์ฟ", "en": "Cool Down and Ready to Serve" },
+      "desc": {
+        "th": "ระบบจะลดอุณหภูมิเหลือ 10°C เพื่อให้พร้อมเสิร์ฟแบบเย็นสดชื่น (หรือสามารถตักเสิร์ฟแบบอุ่นได้เลย)",
+        "en": "System cools to 10°C for refreshing iced serving (or can be served warm immediately)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมมะนาวสด", "en": "Prepare fresh lemons" },
+      "desc": {
+        "th": "ล้างมะนาว {lemon} ให้สะอาด ขูดผิวด้วยเกลือเล็กน้อยเพื่อเอายางออก หั่นเป็นแว่นบาง และ **เอาเมล็ดออกให้หมด** เพื่อป้องกันรสขม",
+        "en": "Wash {lemon} of fresh lemons thoroughly, scrub with salt to remove wax, slice thinly, and **remove all seeds** to prevent bitterness."
+      },
+      "descVariables": {
+        "lemon": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/honey_lemon/man_1.jpg",
+      "tips": {
+        "th": "💡 การเอาเมล็ดออกคือขั้นตอนที่สำคัญที่สุด ถ้ามีเมล็ดติดอยู่ น้ำจะขมทันทีเมื่อโดนความร้อน",
+        "en": "💡 Removing seeds is the most crucial step. If seeds remain, the drink will become bitter when exposed to heat."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำอุ่น (ห้ามเดือด!)", "en": "Prepare warm water (No boiling!)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} อุ่นให้ร้อนประมาณ 60°C (แค่พออุ่นมือ ไม่มีความร้อนจัดหรือเดือด)",
+        "en": "Prepare {water} of clean water and warm it to about 60°C (warm to the touch, not hot or boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/honey_lemon/man_2.jpg",
+      "tips": {
+        "th": "💡 กฎเหล็ก: อุณหภูมิต้องไม่เกิน 60°C มิฉะนั้นเอนไซม์ในน้ำผึ้งจะถูกทำลายและมะนาวจะขม",
+        "en": "💡 Golden Rule: Temperature must not exceed 60°C, or honey enzymes will be destroyed and lemon will turn bitter."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ละลายน้ำผึ้งในน้ำอุ่น", "en": "Dissolve honey in warm water" },
+      "desc": {
+        "th": "ค่อยๆ เทน้ำผึ้งแท้ {honey} ลงในน้ำอุ่น คนอย่างต่อเนื่องด้วยทัพพีจนน้ำผึ้งละลายเข้ากับน้ำจนหมด",
+        "en": "Slowly pour {honey} of pure honey into the warm water. Stir continuously with a ladle until completely dissolved."
+      },
+      "descVariables": {
+        "honey": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/honey_lemon/man_3.jpg",
+      "tips": {
+        "th": "💡 ควรละลายน้ำผึ้งให้หมดก่อนใส่มะนาว จะทำให้คนง่ายขึ้นและรสชาติกระจายตัวดีกว่า",
+        "en": "💡 Dissolve honey completely before adding lemons for easier mixing and better flavor distribution."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่มะนาวและคนเบาๆ", "en": "Add lemons and stir gently" },
+      "desc": {
+        "th": "ใส่มะนาวหั่นแว่น {lemon} ลงไปในหม้อ คนเบาๆ 1-2 รอบ แล้วปิดฝาพักไว้ 5-10 นาที",
+        "en": "Add {lemon} of sliced lemons into the pot. Stir gently 1-2 times, then cover and rest for 5-10 minutes."
+      },
+      "descVariables": {
+        "lemon": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/honey_lemon/man_4.jpg",
+      "tips": {
+        "th": "💡 ห้ามคนแรงหรือขยี้มะนาว เพราะจะทำให้เปลือกปล่อยรสขมออกมา",
+        "en": "💡 Do not stir vigorously or crush the lemons, as the peel will release bitterness."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "กรองและเสิร์ฟ", "en": "Strain and serve" },
+      "desc": {
+        "th": "สามารถเสิร์ฟแบบอุ่นได้ทันที หรือกรองเอาแต่น้ำแล้วแช่เย็นเพื่อเสิร์ฟแบบเย็นสดชื่น จะหอมและอร่อยยิ่งขึ้น",
+        "en": "Can be served warm immediately, or strained and chilled for a refreshing iced version, which enhances the aroma and taste."
+      },
+      "descVariables": {},
+      "image": "images/tea/honey_lemon/man_5.jpg",
+      "tips": {
+        "th": "💡 หากต้องการเก็บไว้ดื่มหลายวัน แนะนำให้กรองกากมะนาวออกก่อนแช่ตู้เย็น เพื่อป้องกันไม่ให้ขมเมื่อทิ้งไว้นาน",
+        "en": "💡 If storing for multiple days, strain out the lemon solids before refrigerating to prevent bitterness over time."
+      }
+    }
+  ]
+}

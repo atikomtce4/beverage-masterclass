@@ -1,0 +1,311 @@
+{
+  "id": "cocoa_10L",
+  "icon": "🍫",
+  "category": "tea",
+  "description": "ผงโกโก้แท้ 250g + น้ำตาล 900g + นมข้นหวาน 700g สกัด 85°C 10 นาที หอมมัน ละลายสนิท ไม่มีก้อน",
+  "total_time": 125,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_cocoa_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "โกโก้ร้อนเข้มข้น (สูตรพรีเมียม)",
+    "en": "Rich Hot Cocoa (Premium Recipe)"
+  },
+  "images": [
+    "images/tea/cocoa/main_1.jpg",
+    "images/tea/cocoa/main_2.jpg",
+    "images/tea/cocoa/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_cocoa",
+  "prepTime": {
+    "th": "12 นาที",
+    "en": "12 mins"
+  },
+  "cookTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสความหอมมันของโกโก้แท้ 100% ที่ละลายสนิทไม่มีก้อน สูตรนี้ใช้ผงโกโก้พรีเมียม 250 กรัม ผสมกับน้ำตาลและนมข้นหวานในสัดส่วนที่ลงตัว ควบคุมอุณหภูมิที่ 85°C (ไม่ร้อนจัด) เพื่อป้องกันไม่ให้โกโก้ไหม้และขม จุดเด่นคือระบบกวนอัตโนมัติที่ทำให้ผงโกโก้ละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์แบบ ทั้งแบบร้อนและใส่น้ำแข็ง",
+    "en": "Experience the rich, creamy taste of 100% pure cocoa that dissolves perfectly without lumps. This recipe uses 250g of premium cocoa powder blended with sugar and condensed milk in perfect proportions. Maintained at 85°C (not too hot) to prevent burning and bitterness. The automatic stirring system ensures perfect emulsion, ideal for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "อุดมด้วยสารต้านอนุมูลอิสระจากโกโก้แท้ ให้ความรู้สึกผ่อนคลาย และกระตุ้นอารมณ์ดี",
+    "en": "Rich in antioxidants from pure cocoa, promotes relaxation and boosts mood."
+  },
+  "warnings": {
+    "th": "️ มีคาเฟอีนและน้ำตาลสูง ผู้ที่เป็นโรคเบาหวานหรือแพ้คาเฟอีนควรดื่มในปริมาณน้อย",
+    "en": "️ Contains caffeine and high sugar. Diabetics or those sensitive to caffeine should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "95 kcal",
+    "carbs": "20 g",
+    "sugar": "18 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผงโกโก้แท้ 100%", "en": "Pure cocoa powder 100%" },
+      "amount": 250,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 900,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นหวาน", "en": "Sweetened condensed milk" },
+      "amount": 700,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นจืด (สำหรับราดหน้า)", "en": "Evaporated milk (for topping)" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (85°C)", "en": "Heat Water to 85°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 85°C (ไม่ร้อนจัด) เพื่อเตรียมผสมโกโก้",
+        "en": "The machine heats water to 85°C (not too hot) to prepare for cocoa mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ผงโกโก้แท้", "en": "Add Pure Cocoa Powder" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ผงโกโก้แท้ {cocoa} ลงไป พร้อมเปิดระบบกวนอย่างแรงเพื่อละลายให้สนิท",
+        "en": "System alerts to add {cocoa} of pure cocoa powder, activating strong stirring for complete dissolution."
+      },
+      "descVariables": {
+        "cocoa": { "amount": 250, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "กวนและสกัดโกโก้ (10 นาที)", "en": "Stir and Extract Cocoa (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C และกวนต่อเนื่อง 10 นาที เพื่อให้ผงโกโก้ละลายสนิทเป็นเนื้อเดียวกัน",
+        "en": "Machine maintains 85°C and stirs for 10 mins to ensure cocoa powder dissolves completely into smooth emulsion."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลและนมข้นหวาน", "en": "Add Sugar and Condensed Milk" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} และนมข้นหวาน {milk} ลงไป พร้อมเปิดระบบกวนอย่างแรง",
+        "en": "System alerts to add {sugar} of sugar and {milk} of condensed milk, activating strong stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 900, "unit": "Gram", "scalable": true },
+        "milk": { "amount": 700, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 5 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟแบบร้อน",
+        "en": "Machine cools to 60°C and stirs for 5 mins to blend perfectly, ready for hot serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "โกโก้ร้อนพร้อมเสิร์ฟแล้ว! หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็งและราดด้วยนมข้นจืด",
+        "en": "Hot cocoa is ready! For iced version, pour over ice and top with evaporated milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (ไม่ต้องเดือด)", "en": "Heat water (not boiling)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลาง รอจนน้ำร้อนประมาณ 85°C (มีไอน้ำขึ้นแต่ไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 85°C (steam rising but not boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/cocoa/man_1.jpg",
+      "tips": {
+        "th": "💡 ห้ามใช้น้ำเดือดจัด 100°C เพราะจะทำให้โกโก้ไหม้และขม",
+        "en": "💡 Never use boiling water at 100°C, or the cocoa will burn and become bitter."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ใส่ผงโกโก้และคนให้ละลาย", "en": "Add cocoa powder and stir" },
+      "desc": {
+        "th": "ใส่ผงโกโก้แท้ {cocoa} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยตะกร้อมือหรือเครื่องปั่นจนละลายสนิท ไม่มีก้อน",
+        "en": "Add {cocoa} of pure cocoa powder into hot water. Stir continuously with a whisk or blender until completely dissolved, no lumps."
+      },
+      "descVariables": {
+        "cocoa": { "amount": 250, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/cocoa/man_2.jpg",
+      "tips": {
+        "th": "💡 ใช้ตะกร้อมือจะช่วยให้โกโก้ละลายได้ดีกว่าทัพพี เพราะตีอากาศเข้าไปทำให้เนื้อเนียน",
+        "en": "💡 Using a whisk helps cocoa dissolve better than a ladle, as it incorporates air for smoother texture."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลและคนให้ละลาย", "en": "Add sugar and stir" },
+      "desc": {
+        "th": "ใส่น้ำตาลทราย {sugar} ลงไป คนอย่างต่อเนื่องจนน้ำตาลละลายหมด",
+        "en": "Add {sugar} of sugar. Stir continuously until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": { "amount": 900, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/cocoa/man_3.jpg",
+      "tips": {
+        "th": "💡 คนตอนน้ำยังร้อนอยู่เท่านั้น น้ำตาลถึงจะละลายสนิท",
+        "en": "💡 Stir while water is still hot, otherwise sugar won't dissolve completely."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่นมข้นหวานและคนให้เข้ากัน", "en": "Add condensed milk and mix" },
+      "desc": {
+        "th": "ใส่นมข้นหวาน {milk} ลงไป คนอย่างต่อเนื่องจนเข้ากันดี เนื้อโกโก้จะเนียนนุ่มและหอมมัน",
+        "en": "Add {milk} of condensed milk. Stir continuously until well blended. The cocoa will become smooth, creamy, and aromatic."
+      },
+      "descVariables": {
+        "milk": { "amount": 700, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/cocoa/man_4.jpg",
+      "tips": {
+        "th": "💡 นมข้นหวานจะช่วยให้โกโก้มีเนื้อสัมผัสที่นุ่มนวลและรสชาติกลมกล่อมขึ้น",
+        "en": "💡 Condensed milk gives cocoa a smoother texture and more rounded flavor."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "เสิร์ฟร้อน หรือ ใส่แก้วน้ำแข็ง", "en": "Serve hot or over ice" },
+      "desc": {
+        "th": "พร้อมเสิร์ฟ! หากต้องการแบบเย็น ให้ตักโกโก้ใส่แก้วที่เต็มไปด้วยน้ำแข็ง แล้วราดด้วยนมข้นจืด {evap_milk} ด้านบน",
+        "en": "Ready to serve! For iced version, pour cocoa into a glass filled with ice, and top with {evap_milk} of evaporated milk."
+      },
+      "descVariables": {
+        "evap_milk": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/cocoa/man_5.jpg",
+      "tips": {
+        "th": "💡 การราดนมข้นจืดตอนท้ายจะช่วยให้โกโก้เย็นมีชั้นสีสวยงามและหอมมันยิ่งขึ้น",
+        "en": "💡 Topping with evaporated milk creates a beautiful layered look and extra creaminess for iced cocoa."
+      }
+    }
+  ]
+}
