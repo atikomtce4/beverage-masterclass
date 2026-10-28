@@ -29,7 +29,7 @@
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* สำคัญ: เพื่อให้ Footer ดันลงล่างสุด */
     }
 
     a { text-decoration: none; color: inherit; }
@@ -48,17 +48,25 @@
       gap: 12px;
     }
 
+    /* ✅ แก้ไข: ใช้ <a> แทน <button> เพื่อให้ลิงก์ไป index.html ได้แน่นอน */
     .back-btn {
-      background: none;
-      border: none;
-      font-size: 22px;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--bg);
+      border-radius: 50%;
+      font-size: 20px;
       color: var(--text);
-      padding: 4px 8px;
       flex-shrink: 0;
+      transition: all 0.2s;
     }
 
-    .back-btn:hover { color: var(--primary); }
+    .back-btn:hover { 
+      background: var(--primary-light); 
+      color: var(--primary-dark); 
+    }
 
     .logo {
       font-size: 16px;
@@ -102,7 +110,7 @@
 
     /* ===== Main Content ===== */
     .mobile-content {
-      flex: 1;
+      flex: 1; /* ดัน Footer ลงล่างสุด */
       max-width: 800px;
       width: 100%;
       margin: 0 auto;
@@ -142,7 +150,7 @@
       transition: all 0.3s ease;
       cursor: pointer;
       border: 1px solid rgba(0,0,0,0.05);
-      overflow: hidden; /* ป้องกันภาพล้นขอบมุมโค้ง */
+      overflow: hidden;
     }
 
     .category-card:hover {
@@ -151,11 +159,10 @@
       border-color: var(--primary);
     }
 
-    /* ✅ สไตล์ใหม่สำหรับรูปภาพแทน Icon */
     .category-img {
       width: 100%;
-      height: 120px; /* ความสูงคงที่เพื่อให้ทุกการ์ดเท่ากัน */
-      object-fit: cover; /* ตัดส่วนเกินของภาพออกโดยไม่ทำให้ภาพเบี้ยว */
+      height: 120px;
+      object-fit: cover;
       border-radius: 8px;
       margin-bottom: 16px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -163,7 +170,7 @@
     }
 
     .category-card:hover .category-img {
-      transform: scale(1.05); /* เอฟเฟกต์ซูมภาพเล็กน้อยเมื่อ Hover */
+      transform: scale(1.05);
     }
 
     .category-name {
@@ -190,20 +197,64 @@
       border-radius: 20px;
     }
 
-    /* ✅ ปรับพื้นหลังให้อ่อนลงเล็กน้อย เพื่อให้รูปภาพ JPG โดดเด่นและไม่กลืนกัน */
     .cat-herbal { background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%); }
     .cat-tea { background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%); }
     .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); }
     .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%); }
 
-    /* ===== Footer ===== */
+    /* ===== ✅ Footer แบบใหม่ (สวยงามและใช้งานได้จริง) ===== */
     .mobile-footer {
       background: var(--white);
-      padding: 20px;
+      padding: 32px 20px 24px;
       text-align: center;
-      font-size: 13px;
-      color: var(--text-light);
       border-top: 1px solid rgba(0,0,0,0.05);
+      margin-top: auto; /* ดัน Footer ลงล่างสุดเสมอ */
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .footer-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .footer-home-link:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--text-light);
+      font-style: italic;
+      margin: 0;
+      opacity: 0.8;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      color: var(--text-light);
+      opacity: 0.6;
+      margin: 0;
     }
 
     /* ===== Responsive ===== */
@@ -211,7 +262,7 @@
       .page-header h1 { font-size: 22px; }
       .category-grid { gap: 12px; }
       .category-card { padding: 16px 12px; }
-      .category-img { height: 100px; } /* ลดขนาดภาพลงเล็กน้อยในมือถือ */
+      .category-img { height: 100px; }
       .logo { font-size: 14px; }
       .lang-btn { padding: 3px 8px; font-size: 10px; }
     }
@@ -221,7 +272,8 @@
 
   <!-- Header -->
   <header class="mobile-header">
-    <button class="back-btn" onclick="window.history.back()" aria-label="Back">←</button>
+    <!-- ✅ แก้ไข: ใช้ href="index.html" แทน window.history.back() -->
+    <a href="index.html" class="back-btn" aria-label="Back to Home">←</a>
     <h1 class="logo">Beverage Masterclass</h1>
     <div class="lang-toggle">
       <button class="lang-btn active" data-lang="th" onclick="setLanguage('th')">TH</button>
@@ -237,7 +289,6 @@
     </div>
 
     <div class="category-grid">
-      <!-- Herbal -->
       <a href="category.html?id=herbal" class="category-card cat-herbal">
         <img src="images/categories/herbal.jpg" alt="Thai Herbs" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_herbal">สมุนไพรไทย</h3>
@@ -245,7 +296,6 @@
         <div class="category-count" data-i18n="cat_count">6 สูตร</div>
       </a>
 
-      <!-- Tea -->
       <a href="category.html?id=tea" class="category-card cat-tea">
         <img src="images/categories/tea.jpg" alt="Tea & Hot Drinks" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</h3>
@@ -253,7 +303,6 @@
         <div class="category-count" data-i18n="cat_count">6 สูตร</div>
       </a>
 
-      <!-- Milk -->
       <a href="category.html?id=milk" class="category-card cat-milk">
         <img src="images/categories/milk.jpg" alt="Milk & Cereals" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_milk">นม & ธัญพืช</h3>
@@ -261,7 +310,6 @@
         <div class="category-count" data-i18n="cat_count">5 สูตร</div>
       </a>
 
-      <!-- Ferment -->
       <a href="category.html?id=ferment" class="category-card cat-ferment">
         <img src="images/categories/ferment.jpg" alt="Fermented Drinks" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_ferment">เครื่องดื่มหมัก</h3>
@@ -271,9 +319,17 @@
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ✅ Footer แบบใหม่ -->
   <footer class="mobile-footer">
-    <p>© 2026 Beverage Masterclass</p>
+    <div class="footer-content">
+      <!-- ปุ่มกลับหน้าหลักใน Footer (สำหรับผู้ใช้ที่เลื่อนลงมาจนสุด) -->
+      <a href="index.html" class="footer-home-link">
+        <span>🏠</span> <span data-i18n="footer_home">กลับสู่หน้าหลัก</span>
+      </a>
+      
+      <p class="footer-tagline" data-i18n="footer_tagline">Crafting Perfect Beverages, One Recipe at a Time</p>
+      <p class="footer-copyright">© 2026 Beverage Masterclass. All rights reserved.</p>
+    </div
   </footer>
 
   <script>
@@ -290,7 +346,9 @@
         cat_milk_desc: "นมถั่วเหลือง, นมข้าวโพด, งาดำ",
         cat_ferment: "เครื่องดื่มหมัก",
         cat_ferment_desc: "คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก",
-        cat_count: "สูตร"
+        cat_count: "สูตร",
+        footer_home: "กลับสู่หน้าหลัก",
+        footer_tagline: "สร้างสรรค์เครื่องดื่มที่สมบูรณ์แบบ ในทุกสูตร"
       },
       en: {
         page_title: "Categories | Beverage Masterclass",
@@ -304,7 +362,9 @@
         cat_milk_desc: "Soy Milk, Corn Milk, Black Sesame",
         cat_ferment: "Fermented Drinks",
         cat_ferment_desc: "Kombucha, Yogurt, Fermented Rice",
-        cat_count: "recipes"
+        cat_count: "recipes",
+        footer_home: "Back to Home",
+        footer_tagline: "Crafting Perfect Beverages, One Recipe at a Time"
       }
     };
 

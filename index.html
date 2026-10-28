@@ -261,6 +261,8 @@
       box-shadow: var(--shadow);
       transition: all 0.3s;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
     }
 
     .recipe-card:hover {
@@ -268,18 +270,20 @@
       box-shadow: var(--shadow-lg);
     }
 
+    /* ✅ ปรับ CSS สำหรับรูปภาพในสูตรแนะนำ */
     .recipe-card-img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 64px;
     }
 
-    .recipe-card-body { padding: 20px; }
+    .recipe-card-body { 
+      padding: 20px; 
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
     .recipe-card-title {
       font-size: 18px;
@@ -288,18 +292,12 @@
       color: var(--text);
     }
 
-    .recipe-card-meta {
-      display: flex;
-      gap: 16px;
-      font-size: 13px;
+    /* ✅ CSS ใหม่สำหรับคำอธิบายสูตรแทนที่ Meta เดิม */
+    .recipe-card-desc {
+      font-size: 14px;
       color: var(--text-light);
-      flex-wrap: wrap;
-    }
-
-    .recipe-card-meta span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+      line-height: 1.6;
+      margin-top: auto; /* ดันข้อความลงด้านล่างให้เท่ากัน */
     }
 
     /* ===== Categories ===== */
@@ -314,12 +312,13 @@
     .category-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 32px 24px;
+      padding: 24px 20px;
       text-align: center;
       box-shadow: var(--shadow);
       transition: all 0.3s;
       cursor: pointer;
       border: 2px solid transparent;
+      overflow: hidden;
     }
 
     .category-card:hover {
@@ -328,7 +327,19 @@
       border-color: var(--primary);
     }
 
-    .category-icon { font-size: 48px; margin-bottom: 16px; }
+    .category-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover .category-img {
+      transform: scale(1.05);
+    }
 
     .category-name {
       font-size: 18px;
@@ -342,10 +353,10 @@
       color: var(--text-light);
     }
 
-    .cat-herbal { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
-    .cat-tea { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); }
-    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
-    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
+    .cat-herbal { background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%); }
+    .cat-tea { background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%); }
+    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); }
+    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%); }
 
     /* ===== Features ===== */
     .features { padding: 60px 0; background: var(--white); }
@@ -463,6 +474,7 @@
       .hero h1 { font-size: 28px; }
       .hero-buttons { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
+      .category-img { height: 120px; }
     }
   </style>
 </head>
@@ -509,41 +521,34 @@
         <p data-i18n="featured_subtitle">สูตรยอดนิยมที่ผ่านการทดสอบแล้ว</p>
       </div>
       <div class="recipe-grid">
+        
+        <!-- ✅ Recipe 1: Roselle (เปลี่ยนเป็นรูปภาพ + คำอธิบาย) -->
         <a href="recipe.html?id=herbal/roselle_10L" class="recipe-card">
-          <div class="recipe-card-img">🌺</div>
+          <img src="images/herbal/roselle/main_1.jpg" alt="Roselle Juice" class="recipe-card-img" loading="lazy">
           <div class="recipe-card-body">
             <h3 class="recipe-card-title" data-i18n="recipe1_title">น้ำกระเจี๊ยบสกัดเย็น</h3>
-            <div class="recipe-card-meta">
-              <span>⭐ 4.8</span>
-              <span data-i18n="recipe1_time">⏱️ 25 นาที</span>
-              <span data-i18n="recipe1_volume"> 10 ลิตร</span>
-            </div>
+            <p class="recipe-card-desc" data-i18n="recipe1_desc">สูตรต้นตำรับสกัดเย็น หอมหวานอมเปรี้ยว อุดมไปด้วยวิตามินซีและสารต้านอนุมูลอิสระ ดื่มแล้วสดชื่น แก้กระหาย</p>
           </div>
         </a>
 
-        <a href="recipe.html?id=herbal/chrysanthemum_10L" class="recipe-card">
-          <div class="recipe-card-img">🌼</div>
+        <!-- ✅ Recipe 2: Cocoa (เปลี่ยนเป็นรูปภาพ + คำอธิบาย) -->
+        <a href="recipe.html?id=tea/cocoa_10L" class="recipe-card">
+          <img src="images/tea/cocoa/main_1.jpg" alt="Rich Hot Cocoa" class="recipe-card-img" loading="lazy">
           <div class="recipe-card-body">
-            <h3 class="recipe-card-title" data-i18n="recipe2_title">น้ำเก๊กฮวยดอกใหญ่</h3>
-            <div class="recipe-card-meta">
-              <span>⭐ 4.9</span>
-              <span data-i18n="recipe2_time">⏱️ 20 นาที</span>
-              <span data-i18n="recipe2_volume">📏 10 ลิตร</span>
-            </div>
+            <h3 class="recipe-card-title" data-i18n="recipe2_title">โกโก้ร้อนเข้มข้น</h3>
+            <p class="recipe-card-desc" data-i18n="recipe2_desc">ใช้ผงโกโก้แท้ 100% ผสมนมข้นหวานในสัดส่วนที่ลงตัว หอมมัน ละลายสนิท ไม่เป็นก้อน อร่อยทั้งแบบร้อนและเย็น</p>
           </div>
         </a>
 
-        <a href="categories.html" class="recipe-card">
-          <div class="recipe-card-img">🍵</div>
+        <!-- ✅ Recipe 3: Soy Milk (เปลี่ยนเป็นรูปภาพ + คำอธิบาย) -->
+        <a href="recipe.html?id=milk/soy_milk_10L" class="recipe-card">
+          <img src="images/milk/soy_milk/main_1.jpg" alt="Traditional Soy Milk" class="recipe-card-img" loading="lazy">
           <div class="recipe-card-body">
-            <h3 class="recipe-card-title" data-i18n="recipe3_title">ชาไทยสูตรดั้งเดิม</h3>
-            <div class="recipe-card-meta">
-              <span>⭐ 4.7</span>
-              <span data-i18n="recipe3_time">⏱️ 15 นาที</span>
-              <span data-i18n="recipe3_volume">📏 10 ลิตร</span>
-            </div>
+            <h3 class="recipe-card-title" data-i18n="recipe3_title">นมถั่วเหลืองสูตรดั้งเดิม</h3>
+            <p class="recipe-card-desc" data-i18n="recipe3_desc">คัดสรรถั่วเหลืองคุณภาพดี ต้มและกวนอย่างต่อเนื่องที่อุณหภูมิเหมาะสม หอม มัน ย่อยง่าย และไม่มีกลิ่นเหม็นหืน</p>
           </div>
         </a>
+
       </div>
     </div>
   </section>
@@ -557,25 +562,25 @@
       </div>
       <div class="category-grid">
         <a href="category.html?id=herbal" class="category-card cat-herbal">
-          <div class="category-icon">🌿</div>
+          <img src="images/categories/herbal.jpg" alt="Thai Herbs" class="category-img" loading="lazy">
           <h3 class="category-name" data-i18n="cat_herbal">สมุนไพรไทย</h3>
           <p class="category-desc" data-i18n="cat_herbal_desc">กระเจี๊ยบ, เก๊กฮวย, ใบเตย</p>
         </a>
 
         <a href="category.html?id=tea" class="category-card cat-tea">
-          <div class="category-icon">🍵</div>
+          <img src="images/categories/tea.jpg" alt="Tea & Hot Drinks" class="category-img" loading="lazy">
           <h3 class="category-name" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</h3>
           <p class="category-desc" data-i18n="cat_tea_desc">ชาไทย, ชาเขียว, โกโก้</p>
         </a>
 
         <a href="category.html?id=milk" class="category-card cat-milk">
-          <div class="category-icon">🥛</div>
+          <img src="images/categories/milk.jpg" alt="Milk & Cereals" class="category-img" loading="lazy">
           <h3 class="category-name" data-i18n="cat_milk">นม & ธัญพืช</h3>
           <p class="category-desc" data-i18n="cat_milk_desc">นมถั่วเหลือง, นมข้าวโพด</p>
         </a>
 
         <a href="category.html?id=ferment" class="category-card cat-ferment">
-          <div class="category-icon">🍺</div>
+          <img src="images/categories/ferment.jpg" alt="Fermented Drinks" class="category-img" loading="lazy">
           <h3 class="category-name" data-i18n="cat_ferment">เครื่องดื่มหมัก</h3>
           <p class="category-desc" data-i18n="cat_ferment_desc">คอมบูชา, โยเกิร์ต</p>
         </a>
@@ -676,15 +681,17 @@
         hero_btn_machine: "🤖 ดูเครื่อง Beverage System",
         featured_title: "🌟 สูตรแนะนำ",
         featured_subtitle: "สูตรยอดนิยมที่ผ่านการทดสอบแล้ว",
+        
+        // ✅ อัปเดตข้อมูลสูตรแนะนำใหม่ (ลบ time/volume ออก เพิ่ม desc)
         recipe1_title: "น้ำกระเจี๊ยบสกัดเย็น",
-        recipe1_time: "⏱️ 25 นาที",
-        recipe1_volume: "📏 10 ลิตร",
-        recipe2_title: "น้ำเก๊กฮวยดอกใหญ่",
-        recipe2_time: "⏱️ 20 นาที",
-        recipe2_volume: "📏 10 ลิตร",
-        recipe3_title: "ชาไทยสูตรดั้งเดิม",
-        recipe3_time: "⏱️ 15 นาที",
-        recipe3_volume: "📏 10 ลิตร",
+        recipe1_desc: "สูตรต้นตำรับสกัดเย็น หอมหวานอมเปรี้ยว อุดมไปด้วยวิตามินซีและสารต้านอนุมูลอิสระ ดื่มแล้วสดชื่น แก้กระหาย",
+        
+        recipe2_title: "โกโก้ร้อนเข้มข้น",
+        recipe2_desc: "ใช้ผงโกโก้แท้ 100% ผสมนมข้นหวานในสัดส่วนที่ลงตัว หอมมัน ละลายสนิท ไม่เป็นก้อน อร่อยทั้งแบบร้อนและเย็น",
+        
+        recipe3_title: "นมถั่วเหลืองสูตรดั้งเดิม",
+        recipe3_desc: "คัดสรรถั่วเหลืองคุณภาพดี ต้มและกวนอย่างต่อเนื่องที่อุณหภูมิเหมาะสม หอม มัน ย่อยง่าย และไม่มีกลิ่นเหม็นหืน",
+
         cat_title: "📂 หมวดหมู่เครื่องดื่ม",
         cat_subtitle: "เลือกหมวดหมู่ที่คุณสนใจ",
         cat_herbal: "สมุนไพรไทย",
@@ -723,15 +730,17 @@
         hero_btn_machine: "🤖 View Beverage System",
         featured_title: "🌟 Featured Recipes",
         featured_subtitle: "Popular recipes that have been tested and perfected",
+        
+        // ✅ Updated Featured Recipes (Removed time/volume, added description)
         recipe1_title: "Cold-Extract Roselle Juice",
-        recipe1_time: "⏱️ 25 mins",
-        recipe1_volume: "📏 10 Liters",
-        recipe2_title: "Premium Chrysanthemum Tea",
-        recipe2_time: "⏱️ 20 mins",
-        recipe2_volume: "📏 10 Liters",
-        recipe3_title: "Classic Thai Tea",
-        recipe3_time: "️ 15 mins",
-        recipe3_volume: "📏 10 Liters",
+        recipe1_desc: "Authentic cold-extracted recipe, sweet and tangy. Rich in Vitamin C and antioxidants for a refreshing, thirst-quenching drink.",
+        
+        recipe2_title: "Rich Hot Cocoa",
+        recipe2_desc: "Made with 100% pure cocoa powder and perfectly balanced condensed milk. Rich, creamy, and perfectly smooth for hot or iced servings.",
+        
+        recipe3_title: "Traditional Soy Milk",
+        recipe3_desc: "Made from premium soybeans, continuously stirred at the optimal temperature. Creamy, easy to digest, and free from any raw beany smell.",
+
         cat_title: "📂 Beverage Categories",
         cat_subtitle: "Choose a category to explore",
         cat_herbal: "Thai Herbs",
