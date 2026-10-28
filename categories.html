@@ -15,8 +15,8 @@
       --text-light: #757575;
       --bg: #FAFAFA;
       --white: #ffffff;
-      --shadow: 0 2px 8px rgba(0,0,0,0.1);
-      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
       --radius: 12px;
     }
 
@@ -48,7 +48,6 @@
       gap: 12px;
     }
 
-    /* ✅ ปุ่มย้อนกลับ - ชิดซ้าย */
     .back-btn {
       background: none;
       border: none;
@@ -61,7 +60,6 @@
 
     .back-btn:hover { color: var(--primary); }
 
-    /* ✅ Logo - อยู่ตรงกลาง (flex: 1 เพื่อดันปุ่ม TH/EN ไปขวา) */
     .logo {
       font-size: 16px;
       font-weight: 700;
@@ -73,7 +71,6 @@
       text-overflow: ellipsis;
     }
 
-    /* ✅ Language Toggle - ชิดขวา */
     .lang-toggle {
       display: flex;
       background: var(--bg);
@@ -139,12 +136,13 @@
     .category-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px 20px;
+      padding: 20px 16px;
       text-align: center;
       box-shadow: var(--shadow);
-      transition: all 0.3s;
+      transition: all 0.3s ease;
       cursor: pointer;
-      border: 2px solid transparent;
+      border: 1px solid rgba(0,0,0,0.05);
+      overflow: hidden; /* ป้องกันภาพล้นขอบมุมโค้ง */
     }
 
     .category-card:hover {
@@ -153,9 +151,19 @@
       border-color: var(--primary);
     }
 
-    .category-icon {
-      font-size: 44px;
-      margin-bottom: 12px;
+    /* ✅ สไตล์ใหม่สำหรับรูปภาพแทน Icon */
+    .category-img {
+      width: 100%;
+      height: 120px; /* ความสูงคงที่เพื่อให้ทุกการ์ดเท่ากัน */
+      object-fit: cover; /* ตัดส่วนเกินของภาพออกโดยไม่ทำให้ภาพเบี้ยว */
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover .category-img {
+      transform: scale(1.05); /* เอฟเฟกต์ซูมภาพเล็กน้อยเมื่อ Hover */
     }
 
     .category-name {
@@ -169,20 +177,24 @@
       font-size: 12px;
       color: var(--text-light);
       line-height: 1.4;
+      margin-bottom: 12px;
     }
 
     .category-count {
-      margin-top: 12px;
       font-size: 12px;
       color: var(--primary);
       font-weight: 600;
+      background: var(--primary-light);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
     }
 
-    /* Category Colors */
-    .cat-herbal { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
-    .cat-tea { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); }
-    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
-    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
+    /* ✅ ปรับพื้นหลังให้อ่อนลงเล็กน้อย เพื่อให้รูปภาพ JPG โดดเด่นและไม่กลืนกัน */
+    .cat-herbal { background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%); }
+    .cat-tea { background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%); }
+    .cat-milk { background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); }
+    .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%); }
 
     /* ===== Footer ===== */
     .mobile-footer {
@@ -191,15 +203,15 @@
       text-align: center;
       font-size: 13px;
       color: var(--text-light);
-      border-top: 1px solid var(--shadow);
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
 
     /* ===== Responsive ===== */
     @media (max-width: 480px) {
       .page-header h1 { font-size: 22px; }
       .category-grid { gap: 12px; }
-      .category-card { padding: 20px 16px; }
-      .category-icon { font-size: 38px; }
+      .category-card { padding: 16px 12px; }
+      .category-img { height: 100px; } /* ลดขนาดภาพลงเล็กน้อยในมือถือ */
       .logo { font-size: 14px; }
       .lang-btn { padding: 3px 8px; font-size: 10px; }
     }
@@ -225,31 +237,35 @@
     </div>
 
     <div class="category-grid">
+      <!-- Herbal -->
       <a href="category.html?id=herbal" class="category-card cat-herbal">
-        <div class="category-icon">🌿</div>
+        <img src="images/categories/herbal.jpg" alt="Thai Herbs" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_herbal">สมุนไพรไทย</h3>
         <p class="category-desc" data-i18n="cat_herbal_desc">กระเจี๊ยบ, เก๊กฮวย, ใบเตย และอื่นๆ</p>
-        <div class="category-count" data-i18n="cat_count">3 สูตร</div>
+        <div class="category-count" data-i18n="cat_count">6 สูตร</div>
       </a>
 
+      <!-- Tea -->
       <a href="category.html?id=tea" class="category-card cat-tea">
-        <div class="category-icon">🍵</div>
+        <img src="images/categories/tea.jpg" alt="Tea & Hot Drinks" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_tea">ชา & เครื่องดื่มร้อน</h3>
         <p class="category-desc" data-i18n="cat_tea_desc">ชาไทย, ชาเขียว, โกโก้ และอื่นๆ</p>
         <div class="category-count" data-i18n="cat_count">6 สูตร</div>
       </a>
 
+      <!-- Milk -->
       <a href="category.html?id=milk" class="category-card cat-milk">
-        <div class="category-icon">🥛</div>
+        <img src="images/categories/milk.jpg" alt="Milk & Cereals" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_milk">นม & ธัญพืช</h3>
         <p class="category-desc" data-i18n="cat_milk_desc">นมถั่วเหลือง, นมข้าวโพด, งาดำ</p>
         <div class="category-count" data-i18n="cat_count">5 สูตร</div>
       </a>
 
+      <!-- Ferment -->
       <a href="category.html?id=ferment" class="category-card cat-ferment">
-        <div class="category-icon"></div>
+        <img src="images/categories/ferment.jpg" alt="Fermented Drinks" class="category-img" loading="lazy">
         <h3 class="category-name" data-i18n="cat_ferment">เครื่องดื่มหมัก</h3>
-        <p class="category-desc" data-i18n="cat_ferment_desc">คอมบูชา, โยเกิร์ต, เบียร์คราฟต์</p>
+        <p class="category-desc" data-i18n="cat_ferment_desc">คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก</p>
         <div class="category-count" data-i18n="cat_count">5 สูตร</div>
       </a>
     </div>
@@ -273,7 +289,7 @@
         cat_milk: "นม & ธัญพืช",
         cat_milk_desc: "นมถั่วเหลือง, นมข้าวโพด, งาดำ",
         cat_ferment: "เครื่องดื่มหมัก",
-        cat_ferment_desc: "คอมบูชา, โยเกิร์ต, เบียร์คราฟต์",
+        cat_ferment_desc: "คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก",
         cat_count: "สูตร"
       },
       en: {
@@ -287,7 +303,7 @@
         cat_milk: "Milk & Cereals",
         cat_milk_desc: "Soy Milk, Corn Milk, Black Sesame",
         cat_ferment: "Fermented Drinks",
-        cat_ferment_desc: "Kombucha, Yogurt, Craft Beer",
+        cat_ferment_desc: "Kombucha, Yogurt, Fermented Rice",
         cat_count: "recipes"
       }
     };
