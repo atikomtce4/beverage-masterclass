@@ -1,0 +1,376 @@
+{
+  "id": "samkler_10L",
+  "icon": "🌺",
+  "category": "herbal",
+  "description": "",
+  "total_time": 163,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_samkler_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำสามเกลอ (สูตรโบราณ)",
+    "en": "Samkler Herbal Tea (Traditional Recipe)"
+  },
+  "images": [
+    "images/herbal/samkler/main_1.jpg",
+    "images/herbal/samkler/main_2.jpg",
+    "images/herbal/samkler/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_samkler",
+  "prepTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "cookTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสความหอมหวานธรรมชาติกับ น้ำสามเกลอสูตรโบราณ ปริมาณ 10 ลิตร รวมสมุนไพร 5 ชนิด ได้แก่ มะตูม ใบเตย หญ้าหวาน กระเจี๊ยบ และพุทราจีน สัดส่วนลงตัว มะตูม 120g ใบเตย 60g หญ้าหวาน 25g กระเจี๊ยบ 100g พุทราจีน 100g จุดเด่นของสูตรนี้คือการสกัดที่อุณหภูมิ 95°C เป็นเวลา 15 นาที เพื่อดึงสรรพคุณบำรุงร่างกาย ความหอมหวานจากธรรมชาติ โดยไม่เติมน้ำตาล",
+    "en": "Experience the natural sweetness of our traditional Samkler Herbal Tea in a 10-liter batch. This recipe combines 5 premium herbs: 120g dried bael fruit, 60g pandan leaves, 25g stevia, 100g roselle, and 100g Chinese dates. The key is extracting at 95°C for 15 minutes to maximize health benefits and natural sweetness without added sugar."
+  },
+  "benefits": {
+    "th": "ช่วยบำรุงร่างกาย แก้กระหาย ช่วยระบบย่อยอาหาร และให้ความหวานจากธรรมชาติ",
+    "en": "Helps nourish the body, relieves thirst, aids digestion, and provides natural sweetness"
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรปรึกษาแพทย์ก่อนดื่ม เนื่องจากมีสมุนไพรที่มีรสหวาน",
+    "en": "⚠️ People with diabetes should consult a doctor before consuming due to naturally sweet herbs"
+  },
+  "nutrition": {
+    "calories": "25 kcal",
+    "carbs": "6 g",
+    "sugar": "4 g",
+    "protein": "0.3 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "มะตูมแห้ง",
+        "en": "Dried bael fruit"
+      },
+      "amount": 120,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบเตย",
+        "en": "Pandan leaves"
+      },
+      "amount": 60,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "หญ้าหวาน",
+        "en": "Stevia"
+      },
+      "amount": 25,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "กระเจี๊ยบแห้ง",
+        "en": "Dried roselle"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "พุทราจีนแห้ง",
+        "en": "Dried Chinese dates"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำพร้อมระบบวน (95°C)",
+        "en": "Heat Water to 95°C with Circulation"
+      },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 95°C พร้อมระบบวนน้ำ",
+        "en": "The machine heats water to 95°C with circulation system."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่สมุนไพรทั้งหมดในตะกร้า",
+        "en": "Add All Herbs in Basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่สมุนไพรทั้งหมด (มะตูม {bael}, ใบเตย {pandan}, หญ้าหวาน {stevia}, กระเจี๊ยบ {roselle}, พุทราจีน {jujube}) ในตะกร้า แล้วแช่ในน้ำร้อน",
+        "en": "System alerts to add all herbs (bael {bael}, pandan {pandan}, stevia {stevia}, roselle {roselle}, jujube {jujube}) in basket into hot water."
+      },
+      "descVariables": {
+        "bael": {
+          "amount": 120,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "pandan": {
+          "amount": 60,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "stevia": {
+          "amount": 25,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "roselle": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "jujube": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดสมุนไพร (15 นาที)",
+        "en": "Extract Herbs (15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 15 นาที พร้อมระบบวนน้ำและกวน",
+        "en": "Machine precisely maintains 95°C for 15 mins with circulation and stirring."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นและบรรจุขวด",
+        "en": "Cool Down and Bottle"
+      },
+      "desc": {
+        "th": "ระบบจะลดอุณหภูมิเหลือ 40°C และแจ้งเตือนให้ยกตะกร้าออกและบรรจุขวด",
+        "en": "System cools to 40°C and alerts to remove basket and bottle."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและหม้อต้ม",
+        "en": "Prepare pot and water"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด",
+        "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/samkler/man_1.jpg",
+      "tips": {
+        "th": "💡 ระหว่างรอน้ำเดือด เตรียมสมุนไพรทั้งหมดโดยใส่ในถุงกรองผ้าขาวบางรวมกัน",
+        "en": "💡 While waiting, place all herbs together in a filter bag."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือดจัด",
+        "en": "Boil the water"
+      },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer."
+      },
+      "descVariables": {},
+      "image": "images/herbal/samkler/man_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ใส่สมุนไพรทั้งหมด",
+        "en": "Add all herbs"
+      },
+      "desc": {
+        "th": "นำถุงสมุนไพร (มะตูม {bael}, ใบเตย {pandan}, หญ้าหวาน {stevia}, กระเจี๊ยบ {roselle}, พุทราจีน {jujube}) หย่อนลงไปแช่ในน้ำร้อน",
+        "en": "Place the bag of all herbs (bael {bael}, pandan {pandan}, stevia {stevia}, roselle {roselle}, jujube {jujube}) into the hot water."
+      },
+      "descVariables": {
+        "bael": {
+          "amount": 120,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "pandan": {
+          "amount": 60,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "stevia": {
+          "amount": 25,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "roselle": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "jujube": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/samkler/man_3.jpg",
+      "tips": {
+        "th": " ควรใส่สมุนไพรทั้งหมดในถุงกรองเดียวกัน จะทำให้สะดวกตอนยกออก",
+        "en": "💡 Put all herbs in one filter bag for easy removal later."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "แช่สกัดรสชาติ (15 นาที)",
+        "en": "Steep for extraction (15 mins)"
+      },
+      "desc": {
+        "th": "ปิดฝาหม้อ แช่สมุนไพรทิ้งไว้ Exactly 15 นาที น้ำจะเปลี่ยนเป็นสีแดงอมชมพูสวยงาม มีกลิ่นหอม",
+        "en": "Cover the pot. Steep for exactly 15 minutes. The water will turn a beautiful pinkish-red with aromatic scent."
+      },
+      "descVariables": {},
+      "image": "images/herbal/samkler/man_4.jpg",
+      "tips": {
+        "th": "💡 ห้ามแช่นานเกิน 20 นาที เพราะอาจทำให้มีรสขมจากสมุนไพรบางชนิด",
+        "en": "💡 Do not steep for more than 20 minutes, or it may become bitter."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ยกออกและบรรจุขวด",
+        "en": "Remove and bottle"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้วให้ยกถุงสมุนไพรออกทันที บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป รอให้เย็นก่อนบรรจุขวด",
+        "en": "When time is up, remove the herb bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
+      },
+      "descVariables": {},
+      "image": "images/herbal/samkler/man_5.jpg",
+      "tips": {
+        "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น ดื่มแล้วชื่นใจ",
+        "en": "💡 Refrigerating enhances the refreshing taste. Best served cold!"
+      }
+    }
+  ]
+}

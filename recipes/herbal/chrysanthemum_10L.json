@@ -18,9 +18,9 @@
     "en": "Premium Chrysanthemum Tea (Cooling Effect)"
   },
   "images": [
-    "images/herbal/chrysanthemum/main_1.png",
-    "images/herbal/chrysanthemum/main_2.png",
-    "images/herbal/chrysanthemum/main_3.png"
+    "images/herbal/chrysanthemum/main_1.jpg",
+    "images/herbal/chrysanthemum/main_2.jpg",
+    "images/herbal/chrysanthemum/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_chrysanthemum",
   "prepTime": {
@@ -269,7 +269,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/chrysanthemum/man_1.png",
+      "image": "images/herbal/chrysanthemum/man_1.jpg",
       "tips": {
         "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมดอกเก๊กฮวยโดยใส่ในถุงกรองผ้าขาวบางเตรียมไว้",
         "en": "💡 While waiting, place dried chrysanthemum into a filter bag."
@@ -287,7 +287,7 @@
         "en": "When water boils, turn off heat or reduce to very low. Wait until temp drops to ~90°C (water is calm, not bubbling)."
       },
       "descVariables": {},
-      "image": "images/herbal/chrysanthemum/man_2.png",
+      "image": "images/herbal/chrysanthemum/man_2.jpg",
       "tips": {
         "th": "💡 ห้ามใส่ดอกเก๊กฮวยตอนน้ำเดือดจัด 100°C เพราะจะทำให้มีรสขมและกลิ่นหาย",
         "en": "💡 Never add flowers at 100°C boiling, or it will become bitter."
@@ -311,7 +311,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/chrysanthemum/man_3.png",
+      "image": "images/herbal/chrysanthemum/man_3.jpg",
       "tips": {
         "th": "💡 น้ำตาลกรวดจะทำให้น้ำเก๊กฮวยใสและรสชาติกลมกล่อมกว่าน้ำตาลทรายขาว",
         "en": "💡 Rock sugar gives a clearer broth and smoother taste than white sugar."
@@ -335,7 +335,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/chrysanthemum/man_4.png",
+      "image": "images/herbal/chrysanthemum/man_4.jpg",
       "tips": {
         "th": "💡 สามารถใส่เก๋ากี้ (Goji berries) ลงไปพร้อมกันเพื่อเพิ่มสรรพคุณทางยาได้",
         "en": "💡 You can add Goji berries at this step for extra health benefits."
@@ -353,7 +353,7 @@
         "en": "Cover the pot. Steep for exactly 5 minutes. The water will turn a beautiful golden yellow."
       },
       "descVariables": {},
-      "image": "images/herbal/chrysanthemum/man_5.png",
+      "image": "images/herbal/chrysanthemum/man_5.jpg",
       "tips": {
         "th": "💡 ห้ามแช่นานเกิน 8 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสขมและฝาด",
         "en": "💡 Do not steep for more than 8 minutes, or the drink will become bitter."
@@ -371,7 +371,7 @@
         "en": "When time is up, remove the bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
       },
       "descVariables": {},
-      "image": "images/herbal/chrysanthemum/man_6.png",
+      "image": "images/herbal/chrysanthemum/man_6.jpg",
       "tips": {
         "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น ดื่มแล้วชื่นใจมาก",
         "en": " Refrigerating enhances the refreshing taste. Best served cold!"

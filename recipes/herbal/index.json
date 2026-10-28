@@ -13,7 +13,7 @@
   {
     "id": "chrysanthemum_10L",
     "name": { "th": "น้ำเก๊กฮวย 10 ลิตร", "en": "10L Chrysanthemum Tea" },
-    "image": "images/herbal/chrysanthemum/main_1.png",
+    "image": "images/herbal/chrysanthemum/main_1.jpg",
     "prepTime": { "th": "10 นาที", "en": "10 mins" },
     "rating": "4.9",
     "badges": { 
@@ -24,7 +24,7 @@
   {
     "id": "samkler_10L",
     "name": { "th": "น้ำสามเกลอ 10 ลิตร", "en": "10L Samkler Herbal Tea" },
-    "image": "images/herbal/samkler/main_1.png",
+    "image": "images/herbal/samkler/main_1.jpg",
     "prepTime": { "th": "15 นาที", "en": "15 mins" },
     "rating": "4.9",
     "badges": { 

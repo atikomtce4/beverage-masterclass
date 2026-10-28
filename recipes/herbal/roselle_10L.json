@@ -18,9 +18,9 @@
     "en": "Cold-Extract Roselle Juice (Blood Pressure Support)"
   },
   "images": [
-    "images/herbal/roselle_10L/main_1.jpg",
-    "images/herbal/roselle_10L/main_2.jpg",
-    "images/herbal/roselle_10L/main_3.jpg"
+    "images/herbal/roselle/main_1.jpg",
+    "images/herbal/roselle/main_2.jpg",
+    "images/herbal/roselle/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/FhP7ooYzprc",
   "prepTime": {
@@ -269,7 +269,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/roselle/man_1.png",
+      "image": "images/herbal/roselle/man_1.jpg",
       "tips": {
         "th": "💡 ระหว่างรอน้ำเดือด สามารถเตรียมวัตถุดิบอื่นๆ ได้ เช่น ชั่งน้ำตาลทราย และล้างดอกกระเจี๊ยบผ่านกระชอน 1 รอบ",
         "en": "💡 While waiting, you can prepare other ingredients like weighing sugar and rinsing roselle calyxes."
@@ -287,7 +287,7 @@
         "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_2.png",
+      "image": "images/herbal/roselle/man_2.jpg",
       "tips": {
         "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
         "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
@@ -311,7 +311,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/roselle/man_3.png",
+      "image": "images/herbal/roselle/man_3.jpg",
       "tips": {
         "th": "💡 ใช้ทัพพีด้ามยาวเพื่อป้องกันไอน้ำร้อนลวกมือ",
         "en": " Use a long-handled ladle to avoid steam burns."
@@ -329,7 +329,7 @@
         "en": "Stir for another 2-3 minutes to ensure no sugar granules remain at the bottom before adding roselle."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_4.png",
+      "image": "images/herbal/roselle/man_4.jpg",
       "tips": {
         "th": " ลองตักมาชิมเล็กน้อย (ระวังร้อน) เพื่อเช็กระดับความหวานก่อนใส่กระเจี๊ยบ",
         "en": "💡 Taste a small amount (carefully) to check sweetness balance before adding roselle."
@@ -353,7 +353,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/roselle/man_5.png",
+      "image": "images/herbal/roselle/man_5.jpg",
       "tips": {
         "th": "💡 ควรใส่ในถุงกรองเสมอ จะทำให้ขั้นตอนการแยกกากออกในตอนท้ายง่ายและสะอาดขึ้นมาก",
         "en": " Always use a filter bag to make removing the residue at the end much easier and cleaner."
@@ -371,7 +371,7 @@
         "en": "Turn off heat or keep it very low. Steep for exactly 10 minutes. The water will turn a beautiful deep red."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_6.png",
+      "image": "images/herbal/roselle/man_6.jpg",
       "tips": {
         "th": "💡 ห้ามแช่นานเกิน 15 นาทีเด็ดขาด! เพราะจะทำให้เครื่องดื่มมีรสฝาดและขม",
         "en": "💡 Do not steep for more than 15 minutes, or the drink will become astringent and bitter."
@@ -389,7 +389,7 @@
         "en": "When time is up, remove the roselle bag immediately. Squeeze out remaining liquid, discard residue, and let cool before bottling."
       },
       "descVariables": {},
-      "image": "images/herbal/roselle/man_7.png",
+      "image": "images/herbal/roselle/man_7.jpg",
       "tips": {
         "th": "💡 การแช่เย็นจะทำให้รสชาติกลมกล่อมและสดชื่นยิ่งขึ้น และช่วยรักษาวิตามินซีไว้ได้นานขึ้น",
         "en": "💡 Refrigerating enhances the refreshing taste and helps preserve Vitamin C longer."
