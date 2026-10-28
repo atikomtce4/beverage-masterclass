@@ -1,0 +1,313 @@
+{
+  "id": "mung_bean_milk_10L",
+  "icon": "🫘",
+  "category": "milk",
+  "description": "ถั่วเขียวเลาะเปลือก 700g + ใบเตยหอม 50g + น้ำตาล 500g + เกลือ 3g ต้ม 90°C 20 นาที หอมใบเตย แก้ร้อนใน โปรตีนพืชสูง",
+  "total_time": 140,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_mung_bean_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมถั่วเขียวร้อน (สูตรใบเตยหอม)",
+    "en": "Hot Mung Bean Milk with Pandan (10L)"
+  },
+  "images": [
+    "images/milk/mung_bean_milk/main_1.jpg",
+    "images/milk/mung_bean_milk/main_2.jpg",
+    "images/milk/mung_bean_milk/main_3.jpg",
+    "images/milk/mung_bean_milk/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_mung_bean_milk",
+  "prepTime": {
+    "th": "20 นาที (ไม่รวมเวลาแช่ถั่ว)",
+    "en": "20 mins (excluding soaking time)"
+  },
+  "cookTime": {
+    "th": "25 นาที",
+    "en": "25 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสนมถั่วเขียวร้อนสูตรดั้งเดิมที่หอมใบเตยเป็นเอกลักษณ์ ปริมาณ 10 ลิตร ใช้ถั่วเขียวเลาะเปลือก 700 กรัม แช่น้ำให้นุ่มแล้วปั่นละเอียด ต้มที่อุณหภูมิ 90°C นาน 20 นาที พร้อมใบเตยหอม 50 กรัม เพื่อดึงกลิ่นหอมสดชื่นและสรรพคุณแก้ร้อนในออกมาอย่างสมบูรณ์แบบ ผสมน้ำตาลและเกลือเล็กน้อยให้รสชาติกลมกล่อม ดื่มอุ่นๆ ช่วยผ่อนคลายและบำรุงร่างกาย",
+    "en": "Experience traditional hot mung bean milk with the signature aroma of pandan leaves in a 10-liter batch. Made with 700g of peeled mung beans, soaked and blended fine, then simmered at 90°C for 20 minutes with 50g of fragrant pandan leaves to extract cooling benefits and fresh aroma. Sweetened with sugar and a pinch of salt for a perfectly balanced flavor, perfect for a warm, relaxing drink."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรตีนจากพืช ช่วยแก้ร้อนใน บำรุงระบบย่อยอาหาร และให้พลังงานสูง",
+    "en": "Rich in plant-based protein, helps relieve internal heat, supports digestion, and provides high energy."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้ถั่วควรหลีกเลี่ยง ต้องต้มให้สุกเต็มที่ (90°C ขึ้นไป) เสมอ เพื่อทำลายสารพิษตามธรรมชาติในถั่วดิบ",
+    "en": "⚠️ Avoid if allergic to beans. Must be fully cooked (above 90°C) to destroy natural toxins in raw beans."
+  },
+  "nutrition": {
+    "calories": "60 kcal",
+    "carbs": "9 g",
+    "sugar": "6 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ถั่วเขียวเลาะเปลือก (แช่น้ำ 4-6 ชม. แล้วปั่นละเอียด)", "en": "Peeled mung beans (soaked 4-6 hrs, finely blended)" },
+      "amount": 700,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบเตยหอม (ล้างสะอาด มัดเป็นมัด)", "en": "Pandan leaves (washed, tied in bundles)" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรส)", "en": "Salt (to enhance flavor)" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (90°C)", "en": "Warm Water to 90°C" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 90°C เพื่อเตรียมผสมถั่วเขียวและใบเตย",
+        "en": "The machine warms water to 90°C to prepare for mung bean and pandan mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ถั่วเขียวปั่นและใบเตย", "en": "Add Blended Mung Beans and Pandan" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ถั่วเขียวปั่นละเอียด {mung_bean} และใบเตยมัด {pandan} ลงไป พร้อมเปิดระบบกวนอย่างแรง",
+        "en": "System alerts to add {mung_bean} of blended mung beans and {pandan} of pandan bundles, activating strong stirring."
+      },
+      "descVariables": {
+        "mung_bean": { "amount": 700, "unit": "Gram", "scalable": true },
+        "pandan": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 20,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและกวนต่อเนื่อง (20 นาที)", "en": "Simmer and Stir Continuously (20 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C และกวนต่อเนื่อง 20 นาที เพื่อให้ถั่วเขียวสุกนุ่มและดึงกลิ่นใบเตยออกมา",
+        "en": "Machine maintains 90°C and stirs continuously for 20 mins to soften mung beans and extract pandan aroma."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ปรุงรสด้วยน้ำตาลและเกลือ", "en": "Season with Sugar and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of sugar and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้รสชาติเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend flavors perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ (ควรกรองก่อน)", "en": "Done, Ready to Serve (Strain Recommended)" },
+      "desc": {
+        "th": "นมถั่วเขียวพร้อมเสิร์ฟแล้ว! ยกตะกร้าใบเตยออก และแนะนำให้กรองผ่านผ้าขาวบางอีกครั้งเพื่อความเนียนละเอียด",
+        "en": "Mung bean milk is ready! Remove the pandan basket. It is recommended to strain through a cheesecloth for extra smoothness."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมถั่วเขียวและใบเตย", "en": "Prepare mung beans and pandan" },
+      "desc": {
+        "th": "นำถั่วเขียวเลาะเปลือก {mung_bean} ไปแช่น้ำสะอาดทิ้งไว้ 4-6 ชั่วโมงจนพองตัว ล้างให้สะอาดแล้วปั่นรวมกับน้ำบางส่วนให้ละเอียดที่สุด ส่วนใบเตย {pandan} ล้างให้สะอาด มัดเป็นมัดใหญ่",
+        "en": "Soak {mung_bean} of peeled mung beans in clean water for 4-6 hours until expanded. Wash thoroughly, then blend with some water until very fine. Wash {pandan} of pandan leaves and tie into large bundles."
+      },
+      "descVariables": {
+        "mung_bean": { "amount": 700, "unit": "Gram", "scalable": true },
+        "pandan": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/mung_bean_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การบุบใบเตยเบาๆ ก่อนมัดจะช่วยให้น้ำมันหอมระเหยออกมาได้ดีขึ้น",
+        "en": "💡 Bruising pandan leaves slightly before tying helps release essential oils better."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (ห้ามเดือดพล่าน)", "en": "Heat water (no vigorous boiling)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางจนน้ำร้อนประมาณ 90°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 90°C (steam rising, but not vigorously boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/mung_bean_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 ถั่วเขียวจะไหม้ติดก้นหม้อได้ง่ายหากน้ำเดือดจัดเกินไป",
+        "en": "💡 Mung beans can easily scorch at the bottom if the water is boiling too vigorously."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ถั่วเขียว ใบเตย และคนตลอดเวลา", "en": "Add mung beans, pandan and stir constantly" },
+      "desc": {
+        "th": "ค่อยๆ เทถั่วเขียวปั่นและมัดใบเตย {pandan} ลงไปในน้ำร้อน **ต้องคนอย่างต่อเนื่องด้วยทัพพี** เพื่อไม่ให้โปรตีนจับตัวเป็นก้อนหรือไหม้ติดก้นหม้อ",
+        "en": "Slowly pour the blended mung beans and pandan bundles {pandan} into the hot water. **You must stir continuously with a ladle** to prevent protein from clumping or scorching."
+      },
+      "descVariables": {
+        "pandan": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/mung_bean_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 ใบเตยจะช่วยให้กลิ่นหอมของนมถั่วเขียวเป็นเอกลักษณ์และลดกลิ่นเหม็นเขียวของถั่ว",
+        "en": "💡 Pandan leaves give the milk a unique aroma and help reduce the raw beany smell."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เคี่ยวต่อ 20 นาที", "en": "Simmer for 20 minutes" },
+      "desc": {
+        "th": "เมื่อน้ำเริ่มเดือดปุดเล็กๆ ให้ลดไฟลงเล็กน้อย เคี่ยวต่อ Exactly 20 นาที โดยคนเป็นระยะ เพื่อให้ถั่วเขียวสุกนุ่มและดึงกลิ่นใบเตยออกมา",
+        "en": "When it starts to simmer slightly, reduce heat slightly. Simmer for exactly 20 minutes, stirring occasionally, to soften mung beans and extract pandan aroma."
+      },
+      "descVariables": {},
+      "image": "images/milk/mung_bean_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 หากต้มไม่สุกเต็มที่ อาจทำให้ปวดท้องหรือท้องอืดได้ และกลิ่นใบเตยจะไม่หอมเต็มที่",
+        "en": "💡 Undercooking may cause stomach ache or bloating, and pandan aroma won't be fully released."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ปรุงรส กรอง และเสิร์ฟ", "en": "Season, strain and serve" },
+      "desc": {
+        "th": "ยกมัดใบเตยออก ใส่น้ำตาล {sugar} และเกลือ {salt} คนให้ละลาย ปิดไฟ แล้วกรองผ่านผ้าขาวบาง 2-3 ชั้น เพื่อกากออกให้หมด พร้อมเสิร์ฟทั้งร้อนและเย็น",
+        "en": "Remove pandan bundles. Add {sugar} of sugar and {salt} of salt, stir until dissolved. Turn off heat, then strain through 2-3 layers of cheesecloth to remove all residue. Serve hot or cold."
+      },
+      "descVariables": {
+        "sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/mung_bean_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมถั่วเขียวเย็นจะหอมและสดชื่นกว่าแบบร้อน เหมาะกับอากาศเมืองไทย และช่วยแก้ร้อนในได้ดี",
+        "en": "💡 Iced mung bean milk is more aromatic and refreshing than hot version, perfect for Thai weather and great for relieving internal heat."
+      }
+    }
+  ]
+}

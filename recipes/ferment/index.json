@@ -1,0 +1,87 @@
+[
+  {
+    "id": "yogurt_drink_10L",
+    "name": { 
+      "th": "โยเกิร์ตพร้อมดื่ม สูตรสตรอว์เบอร์รี 10 ลิตร", 
+      "en": "10L Strawberry Drinking Yogurt" 
+    },
+    "image": "images/ferment/yogurt_drink/main_1.jpg",
+    "prepTime": { 
+      "th": "30 นาที + หมัก 6-8 ชม.", 
+      "en": "30 mins + 6-8 hrs fermentation" 
+    },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["โปรไบโอติกสูง", "เปรี้ยวหวานสดชื่น", "สูตรสตรอว์เบอร์รี"], 
+      "en": ["High Probiotics", "Sweet & Tangy", "Strawberry"] 
+    }
+  },
+  {
+    "id": "kombucha_10L",
+    "name": { 
+      "th": "คอมบูชาสูตรดั้งเดิม 10 ลิตร", 
+      "en": "10L Original Kombucha" 
+    },
+    "image": "images/ferment/kombucha/main_1.jpg",
+    "prepTime": { 
+      "th": "30 นาที + หมัก 7-14 วัน", 
+      "en": "30 mins + 7-14 days fermentation" 
+    },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["ดีท็อกซ์", "โปรไบโอติก", "สดชื่น"], 
+      "en": ["Detox", "Probiotics", "Refreshing"] 
+    }
+  },
+  {
+    "id": "lacto_drink_10L",
+    "name": { 
+      "th": "นมเปรี้ยวแลคโตบาซิลลัส สูตรแบบยากูลท์ 10 ลิตร", 
+      "en": "10L Lactobacillus Probiotic Drink (Yakult Style)" 
+    },
+    "image": "images/ferment/lacto_drink/main_1.jpg",
+    "prepTime": { 
+      "th": "30 นาที + หมัก 8-12 ชม.", 
+      "en": "30 mins + 8-12 hrs fermentation" 
+    },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["เสริมภูมิคุ้มกัน", "ย่อยง่าย", "โปรไบโอติก L. casei"], 
+      "en": ["Boosts Immunity", "Easy Digestion", "L. casei Probiotics"] 
+    }
+  },
+  {
+    "id": "water_kefir_fruit_10L",
+    "name": { 
+      "th": "น้ำเคฟียร์ผลไม้ สูตรโซดาโปรไบโอติก 10 ลิตร", 
+      "en": "10L Fruit Water Kefir - Probiotic Soda" 
+    },
+    "image": "images/ferment/water_kefir/main_1.jpg",
+    "prepTime": { 
+      "th": "30 นาที + หมัก F1 24-48 ชม. + F2 12-24 ชม.", 
+      "en": "30 mins + F1 24-48 hrs + F2 12-24 hrs" 
+    },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["โปรไบโอติกหลากหลาย", "ไม่มีนม (Vegan)", "โซดาธรรมชาติ"], 
+      "en": ["Diverse Probiotics", "Dairy-Free (Vegan)", "Natural Soda"] 
+    }
+  },
+  {
+    "id": "rice_wine_10L",
+    "name": { 
+      "th": "น้ำข้าวหมากสด สูตรดั้งเดิม 10 ลิตร", 
+      "en": "10L Fresh Fermented Rice Drink (Traditional)" 
+    },
+    "image": "images/ferment/rice_wine/main_1.jpg",
+    "prepTime": { 
+      "th": "45 นาที (เครื่อง) + หมัก 2-3 วัน", 
+      "en": "45 mins (Machine) + 2-3 days fermentation" 
+    },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["โปรไบโอติกไทย", "ช่วยนอนหลับ", "หวานหอมธรรมชาติ"], 
+      "en": ["Thai Probiotics", "Sleep Aid", "Natural Sweetness"] 
+    }
+  }
+]

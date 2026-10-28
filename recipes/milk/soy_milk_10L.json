@@ -1,0 +1,303 @@
+{
+  "id": "soy_milk_10L",
+  "icon": "🥛",
+  "category": "milk",
+  "description": "ถั่วเหลืองบด/แช่น้ำ 800g + น้ำตาล 600g + เกลือ 5g ต้ม 85°C 15 นาที หอมมัน ย่อยง่าย ไม่เหม็นหืน",
+  "total_time": 120,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_soy_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมถั่วเหลืองสูตรดั้งเดิม (10 ลิตร)",
+    "en": "Traditional Soy Milk (10L)"
+  },
+  "images": [
+    "images/milk/soy_milk/main_1.jpg",
+    "images/milk/soy_milk/main_2.jpg",
+    "images/milk/soy_milk/main_3.jpg",
+    "images/milk/soy_milk/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_soy_milk",
+  "prepTime": {
+    "th": "20 นาที (ไม่รวมเวลาแช่ถั่ว)",
+    "en": "20 mins (excluding soaking time)"
+  },
+  "cookTime": {
+    "th": "25 นาที",
+    "en": "25 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสนมถั่วเหลืองสูตรดั้งเดิมที่หอม มัน และย่อยง่าย ปริมาณ 10 ลิตร ใช้ถั่วเหลืองคุณภาพดี 800 กรัม จุดเด่นของสูตรนี้คือการควบคุมอุณหภูมิที่ 85°C พร้อมระบบกวนต่อเนื่อง ซึ่งช่วยทำลายสารยับยั้งเอนไซม์ที่ทำให้ปวดท้อง ป้องกันการไหม้ติดก้นหม้อ และกำจัดกลิ่นเหม็นหืนของถั่วได้อย่างสมบูรณ์แบบ ผสมน้ำตาลและเกลือเล็กน้อยเพื่อรสชาติที่กลมกล่อม",
+    "en": "Experience traditional, creamy, and easily digestible soy milk in a 10-liter batch. Made with 800g of premium soybeans. The key highlight is maintaining 85°C with continuous stirring, which destroys trypsin inhibitors (preventing stomach upset), prevents scorching, and eliminates the raw beany smell. Sweetened with sugar and a pinch of salt for a perfectly balanced flavor."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรตีนจากพืชสูง ไขมันต่ำ ไม่มีคอเลสเตอรอล และช่วยเสริมสร้างกระดูก",
+    "en": "Rich in plant-based protein, low in fat, cholesterol-free, and supports bone health."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้ถั่วเหลืองควรหลีกเลี่ยง ต้องต้มให้สุกเต็มที่ (85°C ขึ้นไป) เสมอ เพื่อทำลายสารพิษตามธรรมชาติในถั่วดิบ",
+    "en": "⚠️ Avoid if allergic to soy. Must be fully cooked (above 85°C) to destroy natural toxins in raw soybeans."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "5 g",
+    "sugar": "4 g",
+    "protein": "3.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ถั่วเหลือง (แช่น้ำ 6-8 ชม. แล้วปั่นละเอียด)", "en": "Soybeans (soaked 6-8 hrs, finely blended)" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรสและเพิ่มความกลมกล่อม)", "en": "Salt (to enhance flavor)" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (85°C)", "en": "Warm Water to 85°C" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 85°C (ห้ามเดือดจัด) เพื่อเตรียมผสมถั่วเหลือง",
+        "en": "The machine warms water to 85°C (no boiling) to prepare for soy milk mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ถั่วเหลืองปั่นละเอียด", "en": "Add Blended Soybeans" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ถั่วเหลืองปั่นละเอียด {soybean} ลงไป พร้อมเปิดระบบกวนอย่างแรงเพื่อป้องกันการจับตัวเป็นก้อน",
+        "en": "System alerts to add {soybean} of blended soybeans, activating strong stirring to prevent clumping."
+      },
+      "descVariables": {
+        "soybean": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและกวนต่อเนื่อง (15 นาที)", "en": "Boil and Stir Continuously (15 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C และกวนต่อเนื่อง 15 นาที เพื่อทำลายสารยับยั้งเอนไซม์และกำจัดกลิ่นเหม็นหืน",
+        "en": "Machine maintains 85°C and stirs continuously for 15 mins to destroy enzyme inhibitors and remove raw beany smell."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ปรุงรสด้วยน้ำตาลและเกลือ", "en": "Season with Sugar and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of sugar and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 600, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้รสชาติเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend flavors perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ (ควรกรองก่อน)", "en": "Done, Ready to Serve (Strain Recommended)" },
+      "desc": {
+        "th": "นมถั่วเหลืองพร้อมเสิร์ฟแล้ว! แนะนำให้กรองผ่านผ้าขาวบางอีกครั้งเพื่อความเนียนละเอียด ก่อนบรรจุขวดหรือเสิร์ฟ",
+        "en": "Soy milk is ready! It is recommended to strain through a cheesecloth for extra smoothness before bottling or serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมถั่วเหลือง", "en": "Prepare soybeans" },
+      "desc": {
+        "th": "นำถั่วเหลือง {soybean} ไปแช่น้ำสะอาดทิ้งไว้ 6-8 ชั่วโมงจนพองตัวเต็มที่ ล้างให้สะอาด แล้วปั่นรวมกับน้ำบางส่วนให้ละเอียดที่สุด",
+        "en": "Soak {soybean} of soybeans in clean water for 6-8 hours until fully expanded. Wash thoroughly, then blend with some water until very fine."
+      },
+      "descVariables": {
+        "soybean": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/soy_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การปั่นให้ละเอียดจะช่วยให้นมออกมาเนียน และไม่เหลือกากมากตอนกรอง",
+        "en": "💡 Blending until very fine ensures smooth milk and less residue when straining."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (ห้ามเดือดพล่าน)", "en": "Heat water (no vigorous boiling)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางจนน้ำร้อนประมาณ 85°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 85°C (steam rising, but not vigorously boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/soy_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 ถั่วเหลืองจะไหม้ติดก้นหม้อได้ง่ายมากหากน้ำเดือดจัดเกินไป",
+        "en": "💡 Soybeans can easily scorch at the bottom if the water is boiling too vigorously."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ถั่วเหลืองปั่นและคนตลอดเวลา", "en": "Add blended soybeans and stir constantly" },
+      "desc": {
+        "th": "ค่อยๆ เทถั่วเหลืองปั่นลงไปในน้ำร้อน **ต้องคนอย่างต่อเนื่องด้วยทัพพี** เพื่อไม่ให้โปรตีนจับตัวเป็นก้อนหรือไหม้ติดก้นหม้อ",
+        "en": "Slowly pour the blended soybeans into the hot water. **You must stir continuously with a ladle** to prevent protein from clumping or scorching."
+      },
+      "descVariables": {},
+      "image": "images/milk/soy_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 ขั้นตอนนี้สำคัญที่สุด! ห้ามหยุดคนจนกว่าน้ำจะเริ่มเดือดปุดเล็กๆ",
+        "en": "💡 This is the most crucial step! Do not stop stirring until the liquid starts to simmer slightly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เคี่ยวต่อ 15 นาที", "en": "Simmer for 15 minutes" },
+      "desc": {
+        "th": "เมื่อน้ำเริ่มเดือดปุดเล็กๆ ให้ลดไฟลงเล็กน้อย เคี่ยวต่อ Exactly 15 นาที โดยคนเป็นระยะ เพื่อทำลายสารยับยั้งเอนไซม์",
+        "en": "When it starts to simmer slightly, reduce heat slightly. Simmer for exactly 15 minutes, stirring occasionally, to destroy enzyme inhibitors."
+      },
+      "descVariables": {},
+      "image": "images/milk/soy_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 หากต้มไม่สุกเต็มที่ อาจทำให้ปวดท้องหรือท้องอืดได้",
+        "en": "💡 Undercooking may cause stomach ache or bloating."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ปรุงรสและกรอง", "en": "Season and strain" },
+      "desc": {
+        "th": "ใส่น้ำตาล {sugar} และเกลือ {salt} คนให้ละลาย ปิดไฟ แล้วกรองผ่านผ้าขาวบาง 2-3 ชั้น เพื่อกากออกให้หมด พร้อมเสิร์ฟทั้งร้อนและเย็น",
+        "en": "Add {sugar} of sugar and {salt} of salt, stir until dissolved. Turn off heat, then strain through 2-3 layers of cheesecloth to remove all residue. Serve hot or cold."
+      },
+      "descVariables": {
+        "sugar": { "amount": 600, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/soy_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อยจะช่วยตัดรสและทำให้นมถั่วเหลืองหอมมันยิ่งขึ้นอย่างน่าประหลาดใจ",
+        "en": "💡 A tiny pinch of salt surprisingly enhances the creaminess and balances the flavor of soy milk."
+      }
+    }
+  ]
+}

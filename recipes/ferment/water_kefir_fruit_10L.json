@@ -1,0 +1,337 @@
+{
+  "id": "water_kefir_fruit_10L",
+  "icon": "🍋",
+  "category": "ferment",
+  "description": "น้ำสะอาด 9.5L + น้ำตาล 500g + เคฟียร์น้ำ 200g + น้ำผลไม้ 500g หมักอุณหภูมิห้อง 24-48 ชม. โซดาโปรไบโอติกธรรมชาติ สดชื่น ไม่มีนม (Vegan)",
+  "total_time": 2880,
+  "target_temp": 25,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_water_kefir_fruit_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำเคฟียร์ผลไม้ สูตรโซดาโปรไบโอติก (10 ลิตร)",
+    "en": "Fruit Water Kefir - Probiotic Soda (10L)"
+  },
+  "images": [
+    "images/ferment/water_kefir/main_1.jpg",
+    "images/ferment/water_kefir/main_2.jpg",
+    "images/ferment/water_kefir/main_3.jpg",
+    "images/ferment/water_kefir/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_water_kefir",
+  "prepTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน)",
+    "en": "30 mins (Machine Prep)"
+  },
+  "cookTime": {
+    "th": "30 นาที (เครื่อง) + หมัก F1 24-48 ชม. + หมัก F2 12-24 ชม.",
+    "en": "30 mins (Machine) + F1 24-48 hrs + F2 12-24 hrs"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "เครื่อง Beverage System ช่วยคุณทำขั้นตอนที่สำคัญที่สุดของการทำน้ำเคฟียร์: การเตรียมน้ำหวานที่ผ่านการฆ่าเชื้อ และการลดอุณหภูมิลงมาที่ 25°C อย่างแม่นยำ! (หากอุณหภูมิเกิน 30°C เคฟียร์เกรนส์จะตาย) หลังจากเครื่องผสมเกรนส์และโอนถ่ายลงโหลแก้วให้คุณแล้ว คุณเพียงแค่วางไว้ในอุณหภูมิห้อง 24-48 ชม. (F1) จากนั้นกรองเกรนส์ออก เติมน้ำผลไม้ และหมักต่อในขวดปิดสนิท 12-24 ชม. (F2) เพื่อสร้างฟองซ่าธรรมชาติ ได้เครื่องดื่มโปรไบโอติกสไตล์ Vegan ที่สดชื่นและดีต่อลำไส้",
+    "en": "The Beverage System handles the most critical part of making water kefir: preparing sterilized sugar water and precisely chilling it to 25°C! (Above 30°C kills kefir grains). After the machine adds grains and transfers to your glass jar, simply leave it at room temp for 24-48 hrs (F1). Then strain grains, add fruit juice, and bottle tightly for 12-24 hrs (F2) to build natural fizz. A refreshing, vegan-friendly probiotic soda."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรไบโอติกหลากหลายสายพันธุ์, ไม่มีนม (Vegan/Lactose-free), น้ำตาลต่ำหลังการหมัก, และช่วยปรับสมดุลลำไส้",
+    "en": "Rich in diverse probiotic strains, dairy-free (Vegan/Lactose-free), low sugar after fermentation, and supports gut health."
+  },
+  "warnings": {
+    "th": "⚠️ ห้ามใช้ภาชนะหรืออุปกรณ์โลหะเด็ดขาด (กรดจะทำปฏิกิริยากับโลหะ) ต้องรักษาความสะอาดอย่างเคร่งครัด ระหว่างหมัก F1 ห้ามปิดฝาแน่น (ต้องให้ก๊าซระบายออกได้) เพื่อป้องกันการระเบิด",
+    "en": "⚠️ Never use metal containers or utensils (acid reacts with metal). Maintain strict hygiene. During F1, never seal tightly (gas must escape) to prevent explosion."
+  },
+  "nutrition": {
+    "calories": "15 kcal",
+    "carbs": "3 g",
+    "sugar": "2 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 9.5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาวหรือน้ำตาลมะพร้าว (อาหารของเกรนส์)", "en": "White or coconut sugar (food for grains)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "หัวเชื้อ Water Kefir Grains", "en": "Water Kefir Grains" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผลไม้เข้มข้นหรือผลไม้สดหั่นเต๋า (สำหรับ F2)", "en": "Concentrated fruit juice or diced fresh fruit (for F2)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 9.5,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 9.5, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำและฆ่าเชื้อฐาน (85°C)", "en": "Heat Water and Sterilize Base (85°C)" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 85°C เพื่อฆ่าเชื้อแบคทีเรียที่ไม่ดีและเตรียมสภาพแวดล้อมที่สะอาดสำหรับเคฟียร์",
+        "en": "The machine heats water to 85°C to sterilize harmful bacteria and prepare a clean environment for kefir."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาล", "en": "Add Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวนเพื่อละลายให้หมด",
+        "en": "System alerts to add {sugar} of sugar, activating stirring for complete dissolution."
+      },
+      "descVariables": {
+        "sugar": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "คงอุณหภูมิฆ่าเชื้อ (5 นาที)", "en": "Hold Sterilization (5 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C ต่อเนื่อง 5 นาที เพื่อฆ่าเชื้อฐานน้ำหวานอย่างสมบูรณ์",
+        "en": "Machine maintains 85°C for 5 mins for complete sterilization of the sugar base."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 40°C)", "en": "Cool Down Pot (Wait until 40°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 40°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 40°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 25,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิน้ำอย่างรวดเร็ว (เหลือ 25°C)", "en": "Rapidly Chill Water (to 25°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิน้ำหวานจาก 40°C ลงเหลือ 25°C อย่างรวดเร็ว (อุณหภูมิที่ปลอดภัยสำหรับเคฟียร์เกรนส์)",
+        "en": "Activate copper coil and submersible pump to rapidly cool sugar water from 40°C to 25°C (safe temp for kefir grains)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมเคฟียร์เกรนส์และโหลแก้ว", "en": "Prepare Kefir Grains and Glass Jar" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 25°C พร้อมแล้ว! กรุณาเตรียม Water Kefir Grains {grains} และโหลแก้วที่ฆ่าเชื้อแล้ว เมื่อพร้อมแล้วกด OK เครื่องจะใส่เกรนส์และโอนถ่ายออกให้",
+        "en": "✅ Temperature is ready at 25°C! Please prepare {grains} of Water Kefir Grains and a sterilized glass jar. Press OK when ready."
+      },
+      "descVariables": {
+        "grains": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ Water Kefir Grains", "en": "Add Water Kefir Grains" },
+      "desc": {
+        "th": "ระบบจะใส่ Water Kefir Grains {grains} ลงไป พร้อมเปิดระบบกวนเบาๆ เป็นเวลา 10 วินาทีเพื่อกระจายตัว",
+        "en": "System gently adds {grains} of Water Kefir Grains, activating gentle stirring for 10 seconds to distribute."
+      },
+      "descVariables": {
+        "grains": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำเคฟียร์พร้อมเกรนส์ออกสู่โหลแก้ว", "en": "Transfer Kefir with Grains to Glass Jar" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำหวานพร้อมเคฟียร์เกรนส์ออกจากหม้อต้มไปยังโหลแก้ว กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring sugar water with kefir grains from the pot to the glass jar. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมอุปกรณ์ (ห้ามใช้โลหะ!)", "en": "Prepare equipment (No metal!)" },
+      "desc": {
+        "th": "ล้างและฆ่าเชื้อโหลแก้ว ทัพพีพลาสติก/ไม้ และผ้าขาวบางด้วยน้ำเดือด **ห้ามใช้ภาชนะโลหะเด็ดขาด** เพราะกรดจากเคฟียร์จะทำปฏิกิริยากับโลหะ",
+        "en": "Sterilize glass jars, plastic/wooden ladles, and cheesecloth with boiling water. **Never use metal containers**, as kefir acid reacts with metal."
+      },
+      "descVariables": {},
+      "image": "images/ferment/water_kefir/man_1.jpg",
+      "tips": {
+        "th": "💡 ใช้โหลแก้วปากกว้างจะช่วยให้ใส่และหยิบเคฟียร์เกรนส์ออกได้ง่ายในภายหลัง",
+        "en": "💡 Wide-mouth glass jars make it easier to add and remove kefir grains later."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ให้เครื่องเตรียมฐานและโอนถ่าย", "en": "Let machine prepare base and transfer" },
+      "desc": {
+        "th": "เลือกสูตรนี้ในเครื่อง เครื่องจะฆ่าเชื้อน้ำหวานที่ 85°C และลดอุณหภูมิเหลือ 25°C อย่างแม่นยำ เมื่อเครื่องแจ้งเตือน (Step 7) ให้เตรียมโหลแก้วและเคฟียร์เกรนส์ {grains} เครื่องจะผสมและโอนถ่ายออกให้",
+        "en": "Select this recipe. The machine will sterilize sugar water at 85°C and precisely chill to 25°C. When alerted (Step 7), prepare your glass jar and {grains} of grains. The machine will mix and transfer."
+      },
+      "descVariables": {
+        "grains": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/water_kefir/man_2.jpg",
+      "tips": {
+        "th": "💡 นี่คือจุดแข็งของเครื่อง: การควบคุมอุณหภูมิ 25°C แบบเป๊ะๆ ซึ่งสำคัญมากต่อชีวิตของเคฟียร์เกรนส์ (ร้อนเกิน 30°C = เกรนส์ตาย)",
+        "en": "💡 This is the machine's strength: precise 25°C control, crucial for kefir grain survival (above 30°C = grains die)."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "หมัก F1: 24-48 ชั่วโมง (อุณหภูมิห้อง)", "en": "Ferment F1: 24-48 hours (Room Temp)" },
+      "desc": {
+        "th": "ปิดปากโหลแก้วด้วยผ้าขาวบางหรือกระดาษกรองกาแฟที่ยึดด้วยยางรัด (ห้ามปิดฝาแน่น!) วางไว้ในที่อุณหภูมิห้อง 20-25°C ห่างจากแสงแดดโดยตรง ทิ้งไว้ 24-48 ชั่วโมง",
+        "en": "Cover the jar mouth with cheesecloth or coffee filter secured with a rubber band (never seal tightly!). Place in a room temp area 20-25°C away from direct sunlight. Leave for 24-48 hours."
+      },
+      "descVariables": {},
+      "image": "images/ferment/water_kefir/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องให้เกรนส์ 'หายใจ' ได้ ห้ามปิดฝาแน่น เพราะกระบวนการหมักสร้างก๊าซ หากปิดแน่น โหลอาจระเบิดได้!",
+        "en": "💡 Grains need to 'breathe'. Never seal tightly, as fermentation produces gas. A sealed jar could explode!"
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "กรองเกรนส์และเตรียม F2 (ใส่ผลไม้)", "en": "Strain grains and prepare F2 (Add fruit)" },
+      "desc": {
+        "th": "เมื่อครบเวลา ใช้ตะแกรงพลาสติกกรองเคฟียร์เกรนส์ออก (เก็บเกรนส์ไว้ทำรอบถัดไป) เติมน้ำผลไม้เข้มข้นหรือผลไม้สดหั่นเต๋า {fruit} ลงไปในน้ำเคฟียร์ที่กรองแล้ว คนเบาๆ",
+        "en": "When time is up, use a plastic strainer to filter out kefir grains (save grains for next batch). Add {fruit} of concentrated fruit juice or diced fresh fruit into the strained kefir. Stir gently."
+      },
+      "descVariables": {
+        "fruit": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/water_kefir/man_4.jpg",
+      "tips": {
+        "th": "💡 การเติมผลไม้ในขั้นตอนนี้ (F2) คือเคล็ดลับของการสร้าง 'ฟองซ่า' ตามธรรมชาติ และรสชาติที่หอมอร่อย",
+        "en": "💡 Adding fruit at this stage (F2) is the secret to building natural 'fizz' and delicious flavor."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "หมัก F2: สร้างฟองในขวดปิดสนิท 12-24 ชม.", "en": "Ferment F2: Build fizz in sealed bottles 12-24 hrs" },
+      "desc": {
+        "th": "บรรจุน้ำเคฟียร์ผสมผลไม้ลงขวดแก้วที่ปิดสนิทได้ (เช่น ขวดน้ำอัดลมเก่า) ทิ้งไว้ที่อุณหภูมิห้อง 12-24 ชั่วโมงเพื่อสร้างคาร์บอเนชั่น จากนั้น **นำเข้าตู้เย็นทันที** เพื่อหยุดการหมัก พร้อมเสิร์ฟ!",
+        "en": "Bottle the fruit kefir into sealable glass bottles (e.g., old soda bottles). Leave at room temp for 12-24 hours to build carbonation. Then **refrigerate immediately** to stop fermentation. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/ferment/water_kefir/man_5.jpg",
+      "tips": {
+        "th": "💡 ระวัง! F2 ที่หมักนานเกินไปในขวดปิดแน่นอาจทำให้ขวดระเบิดได้ ควร 'burp' (เปิดฝาปล่อยก๊าซเบาๆ) วันละครั้งเพื่อความปลอดภัย",
+        "en": "💡 Caution! F2 fermented too long in sealed bottles may cause explosions. Should 'burp' (open lid slightly to release gas) daily for safety."
+      }
+    }
+  ]
+}

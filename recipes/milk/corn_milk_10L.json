@@ -1,0 +1,311 @@
+{
+  "id": "corn_milk_10L",
+  "icon": "🌽",
+  "category": "milk",
+  "description": "ข้าวโพดหวานบด 1.5kg + น้ำตาล 400g + นมข้นหวาน 300g + เกลือ 5g ต้ม 90°C 20 นาที หอมมัน เข้มข้น บำรุงสายตา",
+  "total_time": 130,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_corn_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมข้าวโพดสูตรเข้มข้น (10 ลิตร)",
+    "en": "Rich Corn Milk (10L)"
+  },
+  "images": [
+    "images/milk/corn_milk/main_1.jpg",
+    "images/milk/corn_milk/main_2.jpg",
+    "images/milk/corn_milk/main_3.jpg",
+    "images/milk/corn_milk/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_corn_milk",
+  "prepTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "cookTime": {
+    "th": "25 นาที",
+    "en": "25 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสนมข้าวโพดสีเหลืองทองหอมมัน เข้มข้นถึงใจ ปริมาณ 10 ลิตร ใช้ข้าวโพดหวานแท้ 1.5 กิโลกรัม ปั่นละเอียดและต้มสกัดที่ 90°C นาน 20 นาที จุดเด่นของสูตรนี้คือการเติมเกลือเล็กน้อยและนมข้นหวาน 300 กรัม ซึ่งช่วยดึงความหวานธรรมชาติของข้าวโพดให้โดดเด่นขึ้น โดยไม่ต้องพึ่งสีหรือกลิ่นสังเคราะห์ เนื้อเนียนละเอียด ดื่มอุ่นๆ หรือแช่เย็นก็อร่อย",
+    "en": "Experience rich, creamy, and golden Rich Corn Milk in a 10-liter batch. Made with 1.5kg of pure sweet corn, blended fine and simmered at 90°C for 20 minutes. The secret is adding a pinch of salt and 300g of condensed milk to enhance the natural sweetness of the corn without artificial colors or flavors. Smooth texture, perfect for both warm and iced servings."
+  },
+  "benefits": {
+    "th": "อุดมด้วยวิตามินเอและลูทีน บำรุงสายตา ให้พลังงานสูง และช่วยระบบขับถ่าย",
+    "en": "Rich in Vitamin A and Lutein for eye health, provides high energy, and aids digestion."
+  },
+  "warnings": {
+    "th": "️ มีคาร์โบไฮเดรตและน้ำตาลจากธรรมชาติสูง ผู้ป่วยเบาหวานควรปรึกษาแพทย์ก่อนดื่ม",
+    "en": "⚠️ Contains high natural carbohydrates and sugars. Diabetics should consult a doctor before consuming."
+  },
+  "nutrition": {
+    "calories": "75 kcal",
+    "carbs": "14 g",
+    "sugar": "10 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวโพดหวาน (ฝานเม็ดและปั่นละเอียด)", "en": "Sweet corn (kernels, finely blended)" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นหวาน", "en": "Sweetened condensed milk" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรสและเพิ่มความหวาน)", "en": "Salt (to enhance sweetness)" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (90°C)", "en": "Warm Water to 90°C" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 90°C เพื่อเตรียมผสมข้าวโพด",
+        "en": "The machine warms water to 90°C to prepare for corn mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ข้าวโพดปั่นละเอียด", "en": "Add Blended Corn" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ข้าวโพดปั่นละเอียด {corn} ลงไป พร้อมเปิดระบบกวนอย่างแรงเพื่อป้องกันการจับตัวเป็นก้อน",
+        "en": "System alerts to add {corn} of blended corn, activating strong stirring to prevent clumping."
+      },
+      "descVariables": {
+        "corn": { "amount": 1500, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 20,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและกวนต่อเนื่อง (20 นาที)", "en": "Simmer and Stir Continuously (20 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C และกวนต่อเนื่อง 20 นาที เพื่อสกัดความหอมมันและทำลายกลิ่นดิบของข้าวโพด",
+        "en": "Machine maintains 90°C and stirs continuously for 20 mins to extract creaminess and remove raw corn smell."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ปรุงรสด้วยน้ำตาล นมข้นหวาน และเกลือ", "en": "Season with Sugar, Condensed Milk, and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar}, นมข้นหวาน {milk}, และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of sugar, {milk} of condensed milk, and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "milk": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้รสชาติเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend flavors perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ (ควรกรองก่อน)", "en": "Done, Ready to Serve (Strain Recommended)" },
+      "desc": {
+        "th": "นมข้าวโพดพร้อมเสิร์ฟแล้ว! แนะนำให้กรองผ่านผ้าขาวบางอีกครั้งเพื่อความเนียนละเอียด ก่อนบรรจุขวดหรือเสิร์ฟ",
+        "en": "Corn milk is ready! It is recommended to strain through a cheesecloth for extra smoothness before bottling or serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมข้าวโพดหวาน", "en": "Prepare sweet corn" },
+      "desc": {
+        "th": "ฝานเม็ดข้าวโพดหวาน {corn} ออกจากซัง แล้วนำไปปั่นรวมกับน้ำสะอาดบางส่วนให้ละเอียดที่สุด (ยิ่งละเอียดยิ่งสกัดความมันได้ดี)",
+        "en": "Cut {corn} of sweet corn kernels off the cob, then blend with some clean water until extremely fine (finer blend extracts more creaminess)."
+      },
+      "descVariables": {
+        "corn": { "amount": 1500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/corn_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 ใช้ข้าวโพดหวานฝักใหญ่สีเหลืองเข้ม จะได้น้ำนมสีสวยและหอมกว่าข้าวโพดข้าวเหนียว",
+        "en": "💡 Use large, dark yellow sweet corn for better color and aroma than waxy corn."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (90°C)", "en": "Heat water to 90°C" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางจนน้ำร้อนประมาณ 90°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 90°C (steam rising, but not vigorously boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/corn_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 แป้งจากข้าวโพดจะไหม้ติดก้นหม้อได้ง่ายหากใช้ไฟแรงเกินไป",
+        "en": " Corn starch can easily scorch at the bottom if the heat is too high."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ข้าวโพดปั่นและคนตลอดเวลา", "en": "Add blended corn and stir constantly" },
+      "desc": {
+        "th": "ค่อยๆ เทข้าวโพดปั่นลงไปในน้ำร้อน **ต้องคนอย่างต่อเนื่องด้วยทัพพี** เพื่อไม่ให้แป้งจับตัวเป็นก้อนหรือไหม้ติดก้นหม้อ",
+        "en": "Slowly pour the blended corn into the hot water. **You must stir continuously with a ladle** to prevent starch from clumping or scorching."
+      },
+      "descVariables": {},
+      "image": "images/milk/corn_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 ขั้นตอนนี้สำคัญที่สุด! ห้ามหยุดคนจนกว่าน้ำจะเริ่มเดือดปุดเล็กๆ",
+        "en": "💡 This is the most crucial step! Do not stop stirring until the liquid starts to simmer slightly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เคี่ยวต่อ 20 นาที", "en": "Simmer for 20 minutes" },
+      "desc": {
+        "th": "เมื่อน้ำเริ่มเดือดปุดเล็กๆ ให้ลดไฟลงเล็กน้อย เคี่ยวต่อ Exactly 20 นาที โดยคนเป็นระยะ เพื่อทำลายกลิ่นดิบและสกัดความมัน",
+        "en": "When it starts to simmer slightly, reduce heat slightly. Simmer for exactly 20 minutes, stirring occasionally, to remove raw smell and extract creaminess."
+      },
+      "descVariables": {},
+      "image": "images/milk/corn_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 การเคี่ยวนานพอจะทำให้นมข้าวโพดมีสีเหลืองทองสวยงามและหอมขึ้น",
+        "en": " Simmering long enough gives the corn milk a beautiful golden color and richer aroma."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ปรุงรสและกรอง", "en": "Season and strain" },
+      "desc": {
+        "th": "ใส่น้ำตาล {sugar}, นมข้นหวาน {milk}, และเกลือ {salt} คนให้ละลาย ปิดไฟ แล้วกรองผ่านผ้าขาวบาง 2-3 ชั้น เพื่อกากออกให้หมด พร้อมเสิร์ฟ",
+        "en": "Add {sugar} of sugar, {milk} of condensed milk, and {salt} of salt, stir until dissolved. Turn off heat, then strain through 2-3 layers of cheesecloth to remove all residue. Serve."
+      },
+      "descVariables": {
+        "sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "milk": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/corn_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงปลายช้อนชาจะช่วย 'ตัดรส' และทำให้นมข้าวโพดหวานมันยิ่งขึ้นอย่างน่าประหลาดใจ",
+        "en": "💡 A tiny pinch of salt surprisingly 'cuts' the flavor and makes the corn milk much creamier and sweeter."
+      }
+    }
+  ]
+}

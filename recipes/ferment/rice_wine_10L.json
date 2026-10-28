@@ -1,0 +1,339 @@
+{
+  "id": "rice_wine_10L",
+  "icon": "🍚",
+  "category": "ferment",
+  "description": "ข้าวเหนียว 2kg + ลูกแป้งข้าวหมาก 40g + น้ำสะอาด 10L หมัก 2-3 วัน หวานหอมธรรมชาติ ช่วยการนอนหลับ",
+  "total_time": 4320,
+  "target_temp": 30,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_rice_wine_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำข้าวหมากสด (สูตรดั้งเดิม) 10 ลิตร",
+    "en": "Fresh Fermented Rice Drink (Traditional) 10L"
+  },
+  "images": [
+    "images/ferment/rice_wine/main_1.jpg",
+    "images/ferment/rice_wine/main_2.jpg",
+    "images/ferment/rice_wine/main_3.jpg",
+    "images/ferment/rice_wine/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_rice_wine",
+  "prepTime": {
+    "th": "45 นาที (เครื่องหุงและเตรียมฐาน)",
+    "en": "45 mins (Machine cooking and prep)"
+  },
+  "cookTime": {
+    "th": "45 นาที (เครื่อง) + หมัก 2-3 วัน + สกัดน้ำ",
+    "en": "45 mins (Machine) + 2-3 days fermentation + extraction"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "เครื่อง Beverage System ช่วยคุณทำขั้นตอนที่ยากที่สุดของการทำน้ำข้าวหมาก: การหุงข้าวเหนียวให้สุกนุ่มพอดี และการลดอุณหภูมิลงมาที่ 30°C อย่างแม่นยำ! (หากร้อนเกิน 35°C เชื้อยีสต์จะตาย) หลังจากเครื่องผสมลูกแป้งและโอนถ่ายลงภาชนะให้คุณแล้ว คุณเพียงแค่วางไว้ในอุณหภูมิห้อง 28-30°C เป็นเวลา 2-3 วัน จากนั้นเติมน้ำและกรอง ก็จะได้เครื่องดื่มโปรไบโอติกสไตล์ไทย หวานหอม ช่วยผ่อนคลายและบำรุงร่างกาย",
+    "en": "The Beverage System handles the hardest part of making fermented rice drink: cooking glutinous rice perfectly and precisely chilling it to 30°C! (Above 35°C kills the yeast). After the machine mixes the yeast ball and transfers it to your container, simply leave it at 28-30°C for 2-3 days. Then add water and strain to get a sweet, aromatic Thai probiotic drink that promotes relaxation."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรไบโอติกและเอนไซม์จากกระบวนการหมัก ช่วยระบบย่อยอาหาร บำรุงเลือด และช่วยให้หลับสบาย",
+    "en": "Rich in probiotics and enzymes from fermentation, aids digestion, nourishes blood, and promotes better sleep."
+  },
+  "warnings": {
+    "th": "⚠️ มีแอลกอฮอล์ปริมาณเล็กน้อยตามธรรมชาติจากกระบวนการหมัก เด็ก สตรีมีครรภ์ และผู้ที่ไม่ควรบริโภคแอลกอฮอล์ควรหลีกเลี่ยง ต้องรักษาความสะอาดเพื่อป้องกันการขึ้นรา",
+    "en": "⚠️ Contains trace amounts of natural alcohol from fermentation. Children, pregnant women, and those avoiding alcohol should not consume. Maintain strict hygiene to prevent mold."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "10 g",
+    "sugar": "6 g",
+    "protein": "0.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับหุงข้าว)", "en": "Clean water (for cooking rice)" },
+      "amount": 3,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวเหนียว (แช่น้ำ 4-6 ชม.)", "en": "Glutinous rice (soaked 4-6 hrs)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ลูกแป้งข้าวหมาก (บดละเอียด)", "en": "Rice yeast ball (finely crushed)" },
+      "amount": 40,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับสกัดน้ำข้าวหมากภายหลัง)", "en": "Clean water (for later extraction)" },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 3,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำสำหรับหุงข้าว", "en": "Prepare Water for Cooking Rice" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water_cook} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water_cook} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water_cook": { "amount": 3, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้เดือด (100°C)", "en": "Boil Water (100°C)" },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำให้เดือดจัดเพื่อเตรียมหุงข้าวเหนียว",
+        "en": "The machine boils water to prepare for cooking glutinous rice."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ข้าวเหนียวแช่น้ำ", "en": "Add Soaked Glutinous Rice" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ข้าวเหนียวที่แช่น้ำแล้ว {rice} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {rice} of soaked glutinous rice, activating stirring."
+      },
+      "descVariables": {
+        "rice": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 40,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "หุงข้าวให้สุก (40 นาที)", "en": "Cook Rice (40 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิและกวนเป็นระยะเป็นเวลา 40 นาที เพื่อให้ข้าวเหนียวสุกนุ่มทั่วถึง",
+        "en": "Machine maintains temperature and stirs periodically for 40 mins to cook rice until soft."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 30,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิข้าวอย่างรวดเร็ว (เหลือ 30°C)", "en": "Rapidly Chill Rice (to 30°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิข้าวจาก 100°C ลงเหลือ 30°C อย่างรวดเร็ว (อุณหภูมิที่ปลอดภัยสำหรับเชื้อยีสต์)",
+        "en": "Activate copper coil and submersible pump to rapidly cool rice from 100°C to 30°C (safe temp for yeast)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมลูกแป้งข้าวหมาก", "en": "Prepare Rice Yeast Ball" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 30°C พร้อมแล้ว! กรุณาเตรียมลูกแป้งข้าวหมากบดละเอียด {yeast} เมื่อพร้อมแล้วกด OK เครื่องจะใส่ลูกแป้งให้",
+        "en": "✅ Temperature is ready at 30°C! Please prepare {yeast} of finely crushed rice yeast ball. Press OK when ready."
+      },
+      "descVariables": {
+        "yeast": { "amount": 40, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ลูกแป้งข้าวหมาก", "en": "Add Rice Yeast Ball" },
+      "desc": {
+        "th": "ระบบจะใส่ลูกแป้งข้าวหมาก {yeast} ลงไป พร้อมเปิดระบบกวนเบาๆ เป็นเวลา 15 วินาทีเพื่อกระจายเชื้อให้ทั่วถึง",
+        "en": "System gently adds {yeast} of rice yeast ball, activating gentle stirring for 15 seconds to distribute evenly."
+      },
+      "descVariables": {
+        "yeast": { "amount": 40, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมภาชนะเพื่อรับข้าวหมัก", "en": "Prepare Container to Receive Fermented Rice" },
+      "desc": {
+        "th": "✅ กรุณาวางโถแก้วหรือภาชนะที่ฆ่าเชื้อแล้วรองรับ เครื่องจะโอนถ่ายข้าวที่ผสมเชื้อแล้วออกให้ ท่านนำไปหมักต่อที่อุณหภูมิห้อง 28-30°C เป็นเวลา 2-3 วัน",
+        "en": "✅ Please place a sterilized glass jar. The machine will transfer the inoculated rice out. Ferment at room temp 28-30°C for 2-3 days."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนข้าวหมักออกสู่ภาชนะ", "en": "Transfer Inoculated Rice to Container" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายข้าวหมักออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring fermented rice out of the boiling pot. Please wait until the process is complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมข้าวเหนียวและอุปกรณ์", "en": "Prepare glutinous rice and equipment" },
+      "desc": {
+        "th": "แช่ข้าวเหนียว {rice} ในน้ำสะอาด 4-6 ชั่วโมงจนเม็ดข้าวอมน้ำเต็มที่ ล้างให้สะอาด สะเด็ดน้ำ เตรียมโถแก้วปากกว้างที่ลวกน้ำร้อนฆ่าเชื้อแล้ว",
+        "en": "Soak {rice} of glutinous rice in clean water for 4-6 hours until fully hydrated. Wash thoroughly, drain, and prepare a wide-mouth sterilized glass jar."
+      },
+      "descVariables": {
+        "rice": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/rice_wine/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ข้าวให้นานพอจะทำให้ข้าวสุกนุ่มเร็วขึ้นและเครื่องทำงานได้มีประสิทธิภาพ",
+        "en": "💡 Soaking rice long enough ensures it cooks faster and the machine operates efficiently."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ให้เครื่องหุงและเตรียมฐานข้าวหมาก", "en": "Let machine cook and prepare rice base" },
+      "desc": {
+        "th": "เลือกสูตรนี้ในเครื่อง เครื่องจะหุงข้าวที่ 100°C นาน 40 นาที และลดอุณหภูมิเหลือ 30°C อย่างแม่นยำ เมื่อเครื่องแจ้งเตือน (Step 8) ให้เตรียมโถแก้วรองรับ เครื่องจะใส่ลูกแป้ง {yeast} และโอนถ่ายออกมาให้",
+        "en": "Select this recipe. The machine will cook rice at 100°C for 40 mins and precisely chill to 30°C. When alerted (Step 8), prepare your glass jar. The machine will add {yeast} of yeast and transfer it out."
+      },
+      "descVariables": {
+        "yeast": { "amount": 40, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/rice_wine/man_2.jpg",
+      "tips": {
+        "th": "💡 นี่คือจุดแข็งของเครื่อง: การควบคุมอุณหภูมิ 30°C แบบเป๊ะๆ หลังหุงเสร็จ ซึ่งสำคัญมากต่อชีวิตของเชื้อยีสต์ (ร้อนเกิน = เชื้อตาย, เย็นเกิน = เชื้อไม่ทำงาน)",
+        "en": "💡 This is the machine's strength: precise 30°C control after cooking, crucial for yeast survival (too hot = yeast dies, too cold = yeast inactive)."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "หมักข้าว 2-3 วัน (อุณหภูมิห้อง)", "en": "Ferment rice for 2-3 days (Room Temp)" },
+      "desc": {
+        "th": "ปิดฝาโถแก้ว (ไม่ต้องปิดแน่นมาก) วางไว้ในที่อุณหภูมิห้อง 28-30°C ห่างจากแสงแดด ทิ้งไว้ 2-3 วัน จนข้าวมีน้ำหวานซึมออกมาและหอมกลิ่นแอลกอฮอล์อ่อนๆ",
+        "en": "Cover the jar loosely. Place in a room temp area 28-30°C away from sunlight. Leave for 2-3 days until sweet liquid seeps out and it smells mildly alcoholic."
+      },
+      "descVariables": {},
+      "image": "images/ferment/rice_wine/man_3.jpg",
+      "tips": {
+        "th": "💡 หากอากาศเย็นมาก ให้หาผ้าหนาๆ ห่อหุ้มโถไว้เพื่อรักษาอุณหภูมิ ถ้าขึ้นราสีเขียว/ดำ ให้ทิ้งทันที (เชื้อรา)",
+        "en": "💡 If the weather is cold, wrap the jar in a thick cloth to maintain temperature. If green/black mold appears, discard immediately."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เติมน้ำเพื่อสกัดน้ำข้าวหมาก", "en": "Add water to extract rice wine" },
+      "desc": {
+        "th": "เมื่อหมักได้ที่แล้ว ให้เติมน้ำสะอาด {water_extract} ลงไปในโถข้าวหมาก คนเบาๆ ให้เข้ากัน ทิ้งไว้ 1-2 ชั่วโมงเพื่อให้รสชาติและสารอาหารละลายออกมาในน้ำ",
+        "en": "Once fermented, add {water_extract} of clean water into the jar. Stir gently and leave for 1-2 hours to let flavors and nutrients dissolve into the water."
+      },
+      "descVariables": {
+        "water_extract": { "amount": 7, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/ferment/rice_wine/man_4.jpg",
+      "tips": {
+        "th": "💡 การเติมน้ำเย็นจะช่วยให้กระบวนการสกัดหยุดการหมักต่อ และทำให้น้ำข้าวหมากใสขึ้น",
+        "en": "💡 Adding cold water helps stop further fermentation and makes the rice wine clearer."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "กรองและบรรจุขวด", "en": "Strain and bottle" },
+      "desc": {
+        "th": "ใช้กระชอนหรือผ้าขาวบางกรองแยกกากข้าวออก ให้ได้น้ำข้าวหมากใสๆ บรรจุใส่ขวดที่ฆ่าเชื้อแล้ว แช่เย็นก่อนเสิร์ฟ จะได้รสชาติหวานหอม สดชื่นที่สุด",
+        "en": "Use a strainer or cheesecloth to separate the rice residue, obtaining clear rice wine. Bottle into sterilized containers and chill before serving for the best sweet, refreshing taste."
+      },
+      "descVariables": {},
+      "image": "images/ferment/rice_wine/man_5.jpg",
+      "tips": {
+        "th": "💡 กากข้าวที่กรองออกสามารถนำไปทำปุ๋ยหมักหรือเลี้ยงสัตว์ได้ ไม่ควรทิ้งให้เสียดายของ",
+        "en": "💡 The strained rice residue can be used as compost or animal feed, avoiding waste."
+      }
+    }
+  ]
+}

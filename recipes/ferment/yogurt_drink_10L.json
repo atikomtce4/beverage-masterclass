@@ -1,0 +1,338 @@
+{
+  "id": "yogurt_drink_10L",
+  "icon": "🍓",
+  "category": "ferment",
+  "description": "นมสด 9L + นมผง 200g + หัวเชื้อ 200g + น้ำตาล 400g เครื่องเตรียมฐานที่ 42°C เป๊ะ โอนถ่ายออกเพื่อหมักต่อ 6 ชม.",
+  "total_time": 480,
+  "target_temp": 42,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_yogurt_drink_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "โยเกิร์ตพร้อมดื่ม สูตรสตรอว์เบอร์รี (10 ลิตร)",
+    "en": "Drinking Yogurt - Strawberry (10L)"
+  },
+  "images": [
+    "images/ferment/yogurt_drink/main_1.jpg",
+    "images/ferment/yogurt_drink/main_2.jpg",
+    "images/ferment/yogurt_drink/main_3.jpg",
+    "images/ferment/yogurt_drink/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_yogurt_drink",
+  "prepTime": {
+    "th": "30 นาที",
+    "en": "30 mins"
+  },
+  "cookTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน) + หมักเอง 6-8 ชม.",
+    "en": "30 mins (Machine Prep) + 6-8 hrs external fermentation"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "เครื่อง Beverage System ช่วยคุณทำขั้นตอนที่ยากที่สุดของการทำโยเกิร์ต: การฆ่าเชื้อที่ 85°C และการลดอุณหภูมิลงมาให้เหลือ 42°C อย่างรวดเร็วและแม่นยำ! หลังจากเครื่องผสมหัวเชื้อและโอนถ่ายลงภาชนะให้คุณแล้ว คุณเพียงแค่นำไปวางในอุณหภูมิ 42°C เป็นเวลา 6-8 ชั่วโมง ก็จะได้โยเกิร์ตเนื้อเนียนพร้อมผสมน้ำสตรอว์เบอร์รี",
+    "en": "The Beverage System handles the hardest part of making yogurt: pasteurizing at 85°C and rapidly chilling to exactly 42°C! After the machine mixes the starter and transfers it to your container, simply keep it at 42°C for 6-8 hours. Finally, mix with strawberry puree for a perfect drink."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรไบโอติกช่วยระบบย่อยอาหาร, แคลเซียมสูงจากนม, และวิตามินซีจากสตรอว์เบอร์รี",
+    "en": "Rich in probiotics for digestion, high calcium from milk, and Vitamin C from strawberries."
+  },
+  "warnings": {
+    "th": "⚠️ ต้องใช้ภาชนะที่ผ่านการฆ่าเชื้อสำหรับรับน้ำนม เพื่อป้องกันการปนเปื้อนระหว่างหมัก",
+    "en": "⚠️ Use sterilized containers to receive the milk to prevent contamination during fermentation."
+  },
+  "nutrition": {
+    "calories": "70 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "นมสดพาสเจอร์ไรส์", "en": "Pasteurized fresh milk" },
+      "amount": 9,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมผงขาดมันเนย", "en": "Skim milk powder" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "หัวเชื้อโยเกิร์ต", "en": "Yogurt starter culture" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสตรอว์เบอร์รีเข้มข้น (ใส่ภายหลัง)", "en": "Concentrated strawberry puree (add later)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Milk",
+      "target_value": 9,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมนมสด", "en": "Prepare Fresh Milk" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมนมสดพาสเจอร์ไรส์ {milk} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {milk} of pasteurized fresh milk into the sterilized tank."
+      },
+      "descVariables": { "milk": { "amount": 9, "unit": "Liter", "scalable": true } },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่นมผงและน้ำตาล", "en": "Add Milk Powder and Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่นมผงขาดมันเนย {milk_powder} และน้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {milk_powder} of skim milk powder and {sugar} of sugar, activating stirring."
+      },
+      "descVariables": {
+        "milk_powder": { "amount": 200, "unit": "Gram", "scalable": true },
+        "sugar": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ฆ่าเชื้อนม (85°C)", "en": "Pasteurize Milk (85°C)" },
+      "desc": {
+        "th": "เครื่องจะอุ่นนมที่อุณหภูมิ 85°C เพื่อทำลายแบคทีเรียที่ไม่ดี",
+        "en": "The machine heats milk to 85°C to destroy harmful bacteria."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "คงอุณหภูมิฆ่าเชื้อ (10 นาที)", "en": "Hold Pasteurization (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C ต่อเนื่อง 10 นาที เพื่อฆ่าเชื้ออย่างสมบูรณ์",
+        "en": "Machine maintains 85°C for 10 mins for complete pasteurization."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 55,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 55°C)", "en": "Cool Down Pot (Wait until 55°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 55°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 55°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 42,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิน้ำอย่างรวดเร็ว (เหลือ 42°C)", "en": "Rapidly Chill Water (to 42°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมินมจาก 55°C ลงเหลือ 42°C อย่างรวดเร็ว",
+        "en": "Activate copper coil and submersible pump to rapidly cool milk from 55°C to 42°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่หัวเชื้อโยเกิร์ต", "en": "Add Yogurt Starter Culture" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่หัวเชื้อโยเกิร์ต {starter} ลงไป พร้อมเปิดระบบกวนเบาๆ เพื่อกระจายเชื้อให้ทั่วถึง",
+        "en": "System alerts to add {starter} of yogurt starter, activating gentle stirring for even distribution."
+      },
+      "descVariables": {
+        "starter": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมภาชนะเพื่อรับน้ำนม", "en": "Prepare Container to Receive Milk" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 42°C พร้อมแล้ว! กรุณาวางภาชนะที่ฆ่าเชื้อแล้วรองรับ เครื่องจะโอนถ่ายน้ำนมผสมหัวเชื้อออกให้ ท่านนำไปหมักต่อที่อุณหภูมิ 42°C เป็นเวลา 6-8 ชั่วโมง",
+        "en": "✅ Temperature is ready at 42°C! Please place a sterilized container. The machine will transfer the inoculated milk out. Ferment externally at 42°C for 6-8 hours."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำนมผสมหัวเชื้อออกสู่ภาชนะ", "en": "Transfer Inoculated Milk to Container" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำนมออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring milk out of the boiling pot. Please wait until the process is complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมเครื่องมือและวัตถุดิบ", "en": "Prepare equipment and ingredients" },
+      "desc": {
+        "th": "ล้างและฆ่าเชื้อหม้อต้ม ทัพพี และ **ภาชนะที่จะใช้หมัก** ทุกชิ้นด้วยน้ำเดือด เตรียมวัตถุดิบให้พร้อม",
+        "en": "Sterilize pot, ladle, and **fermentation containers** with boiling water. Prepare ingredients."
+      },
+      "descVariables": {},
+      "image": "images/ferment/yogurt_drink/man_1.jpg",
+      "tips": {
+        "th": "💡 การฆ่าเชื้อภาชนะที่จะใช้หมักสำคัญมาก หากมีเชื้ออื่นปนเปื้อน โยเกิร์ตจะเสีย",
+        "en": "💡 Sterilizing fermentation containers is crucial to prevent spoilage."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ให้เครื่องเตรียมฐานโยเกิร์ต", "en": "Let machine prepare the yogurt base" },
+      "desc": {
+        "th": "เลือกสูตรนี้ในเครื่อง เครื่องจะทำการฆ่าเชื้อที่ 85°C, ลดอุณหภูมิเหลือ 42°C, และใส่หัวเชื้อให้อัตโนมัติ เมื่อเครื่องแจ้งเตือน (Step 8) ให้เตรียมภาชนะรองรับ",
+        "en": "Select this recipe. The machine will pasteurize at 85°C, chill to 42°C, and add starter automatically. When alerted (Step 8), prepare your container."
+      },
+      "descVariables": {},
+      "image": "images/ferment/yogurt_drink/man_2.jpg",
+      "tips": {
+        "th": "💡 นี่คือจุดแข็งของเครื่อง: การควบคุมอุณหภูมิ 42°C แบบเป๊ะๆ ซึ่งทำด้วยมือได้ยากมาก",
+        "en": "💡 This is the machine's strength: precise 42°C control, which is very hard to do manually."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "หมักโยเกิร์ต 6-8 ชั่วโมง", "en": "Ferment yogurt for 6-8 hours" },
+      "desc": {
+        "th": "หลังจากเครื่องโอนถ่ายน้ำนมใส่ภาชนะแล้ว ให้นำไปวางในที่ที่รักษาอุณหภูมิได้ 42°C (เช่น เครื่องทำโยเกิร์ต, หรือตู้เย็นที่ตั้งโหมดหมัก) ทิ้งไว้ 6-8 ชั่วโมง",
+        "en": "After the machine transfers the milk, place it in a 42°C environment (e.g., yogurt maker, or fridge with ferment mode) for 6-8 hours."
+      },
+      "descVariables": {},
+      "image": "images/ferment/yogurt_drink/man_3.jpg",
+      "tips": {
+        "th": "💡 ห้ามเปิดฝาหรือคนระหว่างหมัก เพราะจะทำให้อุณหภูมิแกว่งและเชื้อทำงานไม่สม่ำเสมอ",
+        "en": "💡 Do not open lid or stir during fermentation to maintain stable temperature."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "หยุดการหมักและแช่เย็น", "en": "Stop fermentation and chill" },
+      "desc": {
+        "th": "เมื่อครบเวลา ให้นำโยเกิร์ตเข้าตู้เย็น (อุณหภูมิ 4-10°C) อย่างน้อย 2 ชั่วโมง เพื่อหยุดการทำงานของเชื้อและให้เนื้อโยเกิร์ตเซ็ทตัวแน่นขึ้น",
+        "en": "Once done, refrigerate the yogurt (4-10°C) for at least 2 hours to stop culture activity and firm up the texture."
+      },
+      "descVariables": {},
+      "image": "images/ferment/yogurt_drink/man_4.jpg",
+      "tips": {
+        "th": "💡 การแช่เย็นจะทำให้โยเกิร์ตหยุดเปรี้ยวเพิ่มและได้เนื้อสัมผัสที่เนียนสวย",
+        "en": "💡 Chilling stops further souring and gives a smooth, firm texture."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ผสมน้ำสตรอว์เบอร์รีและบรรจุขวด", "en": "Mix strawberry puree and bottle" },
+      "desc": {
+        "th": "เมื่อโยเกิร์ตเซ็ทตัวดีแล้ว เติมน้ำสตรอว์เบอร์รีเข้มข้น {strawberry} ลงไป คนเบาๆ ให้เข้ากัน จากนั้นบรรจุใส่ขวดที่ฆ่าเชื้อแล้ว พร้อมเสิร์ฟ",
+        "en": "Once yogurt is set, add {strawberry} of concentrated strawberry puree, stir gently to blend. Bottle into sterilized containers and serve."
+      },
+      "descVariables": {
+        "strawberry": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/yogurt_drink/man_5.jpg",
+      "tips": {
+        "th": "💡 ควรผสมรสชาติภายหลังการหมักเสมอ เพื่อไม่ให้รบกวนกระบวนการทำงานของเชื้อโยเกิร์ต",
+        "en": "💡 Always add flavorings after fermentation to avoid interfering with the culture."
+      }
+    }
+  ]
+}

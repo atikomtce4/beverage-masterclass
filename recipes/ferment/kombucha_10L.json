@@ -1,0 +1,357 @@
+{
+  "id": "kombucha_10L",
+  "icon": "🍵",
+  "category": "ferment",
+  "description": "ชาดำ 100g + น้ำตาล 800g + SCOBY 250g + Starter 1L ต้ม 95°C 10 นาที ลดเหลือ 28°C หมักต่อ 7-14 วัน",
+  "total_time": 10080,
+  "target_temp": 28,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_kombucha_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "คอมบูชาสูตรดั้งเดิม (10 ลิตร)",
+    "en": "Original Kombucha (10L)"
+  },
+  "images": [
+    "images/ferment/kombucha/main_1.jpg",
+    "images/ferment/kombucha/main_2.jpg",
+    "images/ferment/kombucha/main_3.jpg",
+    "images/ferment/kombucha/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_kombucha",
+  "prepTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน) + หมัก 7-14 วัน",
+    "en": "30 mins (Machine Prep) + 7-14 days fermentation"
+  },
+  "cookTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน) + หมักเอง 7-14 วัน",
+    "en": "30 mins (Machine Prep) + 7-14 days external fermentation"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "เครื่อง Beverage System ช่วยคุณทำขั้นตอนที่สำคัญที่สุดของการทำคอมบูชา: การต้มชาหวานฆ่าเชื้อที่ 95°C และการลดอุณหภูมิลงมาที่ 28°C อย่างแม่นยำ! หลังจากเครื่องโอนถ่ายน้ำชาพร้อม SCOBY ลงโหลแก้วให้คุณแล้ว คุณเพียงแค่วางไว้ในที่อุณหภูมิห้อง 7-14 วัน ก็จะได้คอมบูชารสเปรี้ยวสดชื่นอุดมด้วยโปรไบโอติก สามารถทำ F2 (หมักขวด) เพิ่มรสชาติผลไม้ได้ตามชอบ",
+    "en": "The Beverage System handles the most critical part of making kombucha: pasteurizing sweet tea at 95°C and rapidly chilling to exactly 28°C! After the machine transfers the tea with SCOBY to your glass jar, simply leave it at room temperature for 7-14 days. You'll get a tangy, probiotic-rich kombucha. Optional F2 (bottle fermentation) can add fruity flavors."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรไบโอติกช่วยระบบย่อยอาหาร, เอนไซม์ธรรมชาติ, กรดอินทรีย์, และสารต้านอนุมูลอิสระจากชา",
+    "en": "Rich in probiotics for digestion, natural enzymes, organic acids, and antioxidants from tea."
+  },
+  "warnings": {
+    "th": "⚠️ ห้ามใช้ภาชนะโลหะหรือพลาสติกที่ไม่ใช่ food-grade ระหว่างหมัก ต้องรักษาความสะอาดอย่างเคร่งครัดเพื่อป้องกันการปนเปื้อนของเชื้อรา สตรีมีครรภ์และผู้ที่มีภูมิคุ้มกันต่ำควรปรึกษาแพทย์ก่อนดื่ม",
+    "en": "⚠️ Never use metal or non-food-grade plastic containers during fermentation. Maintain strict hygiene to prevent mold contamination. Pregnant women and immunocompromised individuals should consult a doctor before consuming."
+  },
+  "nutrition": {
+    "calories": "20 kcal",
+    "carbs": "5 g",
+    "sugar": "4 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 9,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ชาดำ (ใบชาหรือถุงชา)", "en": "Black tea (loose or bags)" },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (อาหารของ SCOBY)", "en": "White sugar (food for SCOBY)" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "หัวเชื้อ SCOBY + Starter liquid", "en": "SCOBY + Starter liquid" },
+      "amount": 1200,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 9,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 9, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้ร้อน (95°C)", "en": "Heat Water to 95°C" },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 95°C เพื่อเตรียมต้มชาและฆ่าเชื้อ",
+        "en": "The machine heats water to 95°C to prepare for tea brewing and sterilization."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ชาดำและน้ำตาล", "en": "Add Black Tea and Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ชาดำ {tea} และน้ำตาล {sugar} ลงไป (ชาในตะกร้า) พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {tea} of black tea (in basket) and {sugar} of sugar, activating stirring."
+      },
+      "descVariables": {
+        "tea": { "amount": 100, "unit": "Gram", "scalable": true },
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มชาและฆ่าเชื้อ (10 นาที)", "en": "Brew Tea and Sterilize (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 10 นาที เพื่อดึงรสชาติชาและฆ่าเชื้อแบคทีเรียที่ไม่ดี",
+        "en": "Machine maintains 95°C for 10 mins to extract tea flavor and sterilize harmful bacteria."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 50°C)", "en": "Cool Down Pot (Wait until 50°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 50°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 50°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 28,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิน้ำอย่างรวดเร็ว (เหลือ 28°C)", "en": "Rapidly Chill Water (to 28°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิชาหวานจาก 50°C ลงเหลือ 28°C อย่างรวดเร็ว พร้อมสำหรับ SCOBY",
+        "en": "Activate copper coil and submersible pump to rapidly cool sweet tea from 50°C to 28°C, ready for SCOBY."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียม SCOBY และ Starter", "en": "Prepare SCOBY and Starter" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 28°C พร้อมแล้ว! กรุณาเตรียม SCOBY {scoby} และน้ำ starter liquid ให้พร้อม เมื่อพร้อมแล้วกด OK เครื่องจะใส่ SCOBY ให้",
+        "en": "✅ Temperature is ready at 28°C! Please prepare {scoby} of SCOBY and starter liquid. Press OK when ready, the machine will add SCOBY."
+      },
+      "descVariables": {
+        "scoby": { "amount": 1200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ SCOBY และ Starter liquid", "en": "Add SCOBY and Starter Liquid" },
+      "desc": {
+        "th": "ระบบจะใส่ SCOBY และ starter liquid {scoby} ลงไปอย่างเบามือ พร้อมเปิดระบบกวนเบาๆ เพื่อกระจายเชื้อ",
+        "en": "System gently adds {scoby} of SCOBY and starter liquid, activating gentle stirring for even distribution."
+      },
+      "descVariables": {
+        "scoby": { "amount": 1200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมโหลแก้วเพื่อรับน้ำชา", "en": "Prepare Glass Jar to Receive Tea" },
+      "desc": {
+        "th": "✅ กรุณาวางโหลแก้วที่ฆ่าเชื้อแล้วรองรับ เครื่องจะโอนถ่ายน้ำชาพร้อม SCOBY ออกให้ ท่านนำไปหมักต่อที่อุณหภูมิห้อง 25-30°C เป็นเวลา 7-14 วัน",
+        "en": "✅ Please place a sterilized glass jar. The machine will transfer the tea with SCOBY out. Ferment at room temperature 25-30°C for 7-14 days."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำชาพร้อม SCOBY ออกสู่โหลแก้ว", "en": "Transfer Tea with SCOBY to Glass Jar" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำชาพร้อม SCOBY ออกจากหม้อต้มไปยังโหลแก้ว กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring tea with SCOBY from the pot to the glass jar. Please wait until the process is complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ให้เครื่องเตรียม Sweet Tea Base", "en": "Let machine prepare Sweet Tea Base" },
+      "desc": {
+        "th": "เลือกสูตรนี้ในเครื่อง เครื่องจะทำการต้มชาดำ {tea} และน้ำตาล {sugar} ที่ 95°C นาน 10 นาที เพื่อฆ่าเชื้อและดึงรสชาติชา จากนั้นลดอุณหภูมิเหลือ 28°C อย่างแม่นยำ เมื่อเครื่องแจ้งเตือน (Step 9) ให้เตรียมโหลแก้วฆ่าเชื้อแล้วรองรับ",
+        "en": "Select this recipe. The machine will brew {tea} of black tea and {sugar} of sugar at 95°C for 10 minutes to sterilize and extract flavor, then rapidly chill to 28°C. When alerted (Step 9), prepare a sterilized glass jar to receive."
+      },
+      "descVariables": {
+        "tea": { "amount": 100, "unit": "Gram", "scalable": true },
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/kombucha/man_1.jpg",
+      "tips": {
+        "th": "💡 นี่คือจุดแข็งของเครื่อง: การควบคุมอุณหภูมิ 28°C แบบเป๊ะๆ ซึ่งสำคัญมากต่อชีวิตของ SCOBY (ร้อนเกิน 35°C = SCOBY ตาย)",
+        "en": "💡 This is the machine's strength: precise 28°C control, which is crucial for SCOBY survival (above 35°C = SCOBY dies)."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "หมักคอมบูชา 7-14 วัน", "en": "Ferment kombucha for 7-14 days" },
+      "desc": {
+        "th": "หลังจากเครื่องโอนถ่ายน้ำชาพร้อม SCOBY {scoby} ลงโหลแก้วแล้ว ให้ปิดปากโหลด้วยผ้าขาวบางหรือกระดาษกรองกาแฟที่ยึดด้วยยางรัด (ห้ามปิดฝาแน่น!) วางไว้ในที่อุณหภูมิห้อง 25-30°C ห่างจากแสงแดดโดยตรง ทิ้งไว้ 7-14 วัน",
+        "en": "After the machine transfers tea with {scoby} of SCOBY to the glass jar, cover the jar mouth with cheesecloth or coffee filter secured with a rubber band (never seal tightly!). Place in a room temperature area 25-30°C away from direct sunlight. Leave for 7-14 days."
+      },
+      "descVariables": {
+        "scoby": { "amount": 1200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/kombucha/man_2.jpg",
+      "tips": {
+        "th": "💡 ต้องให้ SCOBY 'หายใจ' ได้ ห้ามปิดฝาแน่น เพราะกระบวนการหมักสร้างก๊าซคาร์บอนไดออกไซด์ ถ้าปิดแน่น โหลอาจระเบิดได้!",
+        "en": "💡 SCOBY needs to 'breathe'. Never seal tightly, as fermentation produces CO2. A sealed jar could explode!"
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ชิมและตรวจสอบการหมัก", "en": "Taste and check fermentation" },
+      "desc": {
+        "th": "เริ่มชิมได้ตั้งแต่วันที่ 7 โดยใช้หลอดดูดชาขึ้นมาชิม (ห้ามใช้ช้อนโลหะ!) ถ้ารสชาติเปรี้ยวพอดีตามชอบ ก็พร้อมแล้ว ถ้ายังหวานไป ให้หมักต่ออีก 2-3 วัน แล้วชิมใหม่",
+        "en": "Start tasting from day 7 using a straw (never use metal spoons!). If the taste is perfectly tangy, it's ready. If still too sweet, ferment 2-3 more days and taste again."
+      },
+      "descVariables": {},
+      "image": "images/ferment/kombucha/man_3.jpg",
+      "tips": {
+        "th": "💡 ตรวจสอบเชื้อราทุกครั้ง! ถ้ามีจุดขนฟูสีเขียว/ดำ/ขาว ขึ้นบนผิว SCOBY = ทิ้งทันที (เชื้อรา) แต่ถ้าเป็นฟิล์มบางใส/ขาวนวล = SCOBY ใหม่กำลังเกิด (ปกติ)",
+        "en": "💡 Always check for mold! Fuzzy green/black/white spots = mold (discard immediately). Thin clear/cream film = new SCOBY forming (normal)."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "กรองและบรรจุขวด (F1 เสร็จสิ้น)", "en": "Strain and bottle (F1 complete)" },
+      "desc": {
+        "th": "เมื่อได้รสชาติที่ต้องการ ให้ยก SCOBY ออกอย่างเบามือ (พร้อม starter liquid 1-2 ถ้วยสำหรับรอบถัดไป) กรองน้ำคอมบูชาผ่านผ้าขาวบางเพื่อกำจัดตะกอนยีสต์ แล้วบรรจุใส่ขวดที่ฆ่าเชื้อแล้ว",
+        "en": "Once desired taste is reached, gently remove the SCOBY (reserve with 1-2 cups starter liquid for next batch). Strain kombucha through cheesecloth to remove yeast sediment, then bottle into sterilized containers."
+      },
+      "descVariables": {},
+      "image": "images/ferment/kombucha/man_4.jpg",
+      "tips": {
+        "th": "💡 เก็บ SCOBY และ starter liquid ไว้ในตู้เย็น หรือเริ่มรอบใหม่ทันที เพื่อรักษาสุขภาพของ SCOBY",
+        "en": "💡 Store SCOBY and starter liquid in the fridge, or start a new batch immediately to maintain SCOBY health."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "F2: หมักขวดเพิ่มฟองและรสชาติ (ไม่บังคับ)", "en": "F2: Bottle fermentation for fizz and flavor (optional)" },
+      "desc": {
+        "th": "สำหรับการทำคอมบูชามีฟอง: เติมน้ำผลไม้หรือผลไม้สดลงไปในขวด (ประมาณ 10% ของปริมาตรขวด) ปิดฝาแน่น ทิ้งไว้ที่อุณหภูมิห้อง 2-4 วัน เพื่อสร้างคาร์บอเนชั่นตามธรรมชาติ จากนั้นนำเข้าตู้เย็นเพื่อหยุดการหมัก พร้อมเสิร์ฟ!",
+        "en": "For fizzy kombucha: add fruit juice or fresh fruit to bottles (about 10% of bottle volume). Seal tightly and leave at room temperature for 2-4 days to build natural carbonation. Then refrigerate to stop fermentation. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/ferment/kombucha/man_5.jpg",
+      "tips": {
+        "th": "💡 ระวัง! F2 ที่หมักนานเกินไปในขวดปิดแน่นอาจทำให้ขวดระเบิดได้ ควร 'burp' (เปิดฝาปล่อยก๊าซ) วันละครั้งเพื่อความปลอดภัย",
+        "en": "💡 Caution! F2 fermented too long in sealed bottles may cause explosions. Should 'burp' (open lid to release gas) daily for safety."
+      }
+    }
+  ]
+}

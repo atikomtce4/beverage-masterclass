@@ -1,0 +1,319 @@
+{
+  "id": "multigrain_milk_10L",
+  "icon": "🌾",
+  "category": "milk",
+  "description": "ข้าวกล้องงอก 400g + ลูกเดือย 150g + เมล็ดฟักทอง 100g + น้ำตาลมะพร้าว 500g ต้ม 90°C 25 นาที หอมมัน ไฟเบอร์สูง ดีต่อลำไส้",
+  "total_time": 180,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_multigrain_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมข้าวกล้องงอกผสมธัญพืช (สูตรสุขภาพ)",
+    "en": "Germinated Brown Rice & Multigrain Milk (Healthy Blend)"
+  },
+  "images": [
+    "images/milk/multigrain_milk/main_1.jpg",
+    "images/milk/multigrain_milk/main_2.jpg",
+    "images/milk/multigrain_milk/main_3.jpg",
+    "images/milk/multigrain_milk/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_multigrain_milk",
+  "prepTime": {
+    "th": "30 นาที (ไม่รวมเวลาแช่ธัญพืช)",
+    "en": "30 mins (excluding soaking time)"
+  },
+  "cookTime": {
+    "th": "30 นาที",
+    "en": "30 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสนมธัญพืชสูตรสุขภาพที่อุดมไปด้วยคุณประโยชน์ ปริมาณ 10 ลิตร ใช้ข้าวกล้องงอก 400 กรัม ลูกเดือย 150 กรัม และเมล็ดฟักทอง 100 กรัม ปั่นละเอียดและต้มสกัดที่ 90°C นาน 25 นาที จุดเด่นของสูตรนี้คือการใช้ 'น้ำตาลมะพร้าว' ซึ่งให้รสหวานหอมละมุนและดีต่อสุขภาพมากกว่าน้ำตาลทราย ผสมเกลือเล็กน้อยเพื่อตัดรส ให้เนื้อสัมผัสที่ครีมมี่ หอมกลิ่นธัญพืชคั่ว ดื่มอุ่นๆ ได้สารอาหารเต็มๆ",
+    "en": "Experience a healthy, nutrient-packed multigrain milk in a 10-liter batch. Made with 400g germinated brown rice, 150g Job's tears, and 100g pumpkin seeds, blended fine and simmered at 90°C for 25 minutes. The highlight is using 'coconut sugar' for a mellow, natural sweetness that is healthier than white sugar. A pinch of salt enhances the creamy texture and roasted grain aroma, perfect for a warm, nutritious drink."
+  },
+  "benefits": {
+    "th": "อุดมด้วย GABA จากข้าวกล้องงอกช่วยผ่อนคลาย, ไฟเบอร์สูงจากธัญพืชช่วยระบบขับถ่าย, และวิตามินอีจากเมล็ดฟักทอง",
+    "en": "Rich in GABA from germinated rice for relaxation, high fiber from grains for digestion, and Vitamin E from pumpkin seeds."
+  },
+  "warnings": {
+    "th": "️ ผู้ที่แพ้กลูเตนหรือธัญพืชเฉพาะชนิดควรตรวจสอบส่วนผสมก่อนดื่ม เนื่องจากมีธัญพืชหลายชนิดผสมกัน",
+    "en": "⚠️ People with gluten intolerance or specific grain allergies should check ingredients, as this contains multiple grains."
+  },
+  "nutrition": {
+    "calories": "65 kcal",
+    "carbs": "12 g",
+    "sugar": "8 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวกล้องงอก (แช่น้ำและปั่นละเอียด)", "en": "Germinated brown rice (soaked and blended)" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ลูกเดือย (แช่น้ำและปั่นละเอียด)", "en": "Job's tears (soaked and blended)" },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เมล็ดฟักทอง (ปั่นละเอียด)", "en": "Pumpkin seeds (blended)" },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลมะพร้าว (หรือน้ำตาลปี๊บ)", "en": "Coconut sugar (or palm sugar)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรส)", "en": "Salt (to enhance flavor)" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (90°C)", "en": "Warm Water to 90°C" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 90°C เพื่อเตรียมผสมธัญพืช",
+        "en": "The machine warms water to 90°C to prepare for multigrain mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ธัญพืชปั่นละเอียด", "en": "Add Blended Grains" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ข้าวกล้องงอก {rice}, ลูกเดือย {job_tears}, และเมล็ดฟักทอง {pumpkin} ที่ปั่นละเอียดแล้วลงไป พร้อมเปิดระบบกวนอย่างแรง",
+        "en": "System alerts to add {rice} of germinated rice, {job_tears} of Job's tears, and {pumpkin} of pumpkin seeds (all blended), activating strong stirring."
+      },
+      "descVariables": {
+        "rice": { "amount": 400, "unit": "Gram", "scalable": true },
+        "job_tears": { "amount": 150, "unit": "Gram", "scalable": true },
+        "pumpkin": { "amount": 100, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 25,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและกวนต่อเนื่อง (25 นาที)", "en": "Simmer and Stir Continuously (25 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C และกวนต่อเนื่อง 25 นาที เพื่อให้ธัญพืชสุกนุ่มและปล่อยแป้งทำให้น้ำนมมีความครีมมี่",
+        "en": "Machine maintains 90°C and stirs continuously for 25 mins to soften grains and release starch for a creamy texture."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ปรุงรสด้วยน้ำตาลมะพร้าวและเกลือ", "en": "Season with Coconut Sugar and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลมะพร้าว {sugar} และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of coconut sugar and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้รสชาติเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend flavors perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ (ควรกรองก่อน)", "en": "Done, Ready to Serve (Strain Recommended)" },
+      "desc": {
+        "th": "นมธัญพืชพร้อมเสิร์ฟแล้ว! แนะนำให้กรองผ่านผ้าขาวบางอีกครั้งเพื่อเอาใยอาหารที่หยาบออก ก่อนบรรจุขวดหรือเสิร์ฟ",
+        "en": "Multigrain milk is ready! It is recommended to strain through a cheesecloth to remove coarse fibers before bottling or serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมธัญพืช (แช่และปั่น)", "en": "Prepare grains (Soak and Blend)" },
+      "desc": {
+        "th": "นำข้าวกล้องงอก {rice} และลูกเดือย {job_tears} ไปแช่น้ำทิ้งไว้ 4-6 ชั่วโมง ส่วนเมล็ดฟักทอง {pumpkin} แช่ 2 ชั่วโมง ล้างให้สะอาดแล้วปั่นรวมกับน้ำบางส่วนให้ละเอียดที่สุด",
+        "en": "Soak {rice} of germinated rice and {job_tears} of Job's tears for 4-6 hours. Soak {pumpkin} of pumpkin seeds for 2 hours. Wash thoroughly, then blend with some water until very fine."
+      },
+      "descVariables": {
+        "rice": { "amount": 400, "unit": "Gram", "scalable": true },
+        "job_tears": { "amount": 150, "unit": "Gram", "scalable": true },
+        "pumpkin": { "amount": 100, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/multigrain_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การปั่นธัญพืชให้ละเอียดจะช่วยให้น้ำนมเนียน ไม่สากคอ และกรองง่ายขึ้น",
+        "en": "💡 Blending grains until very fine ensures smooth milk, no gritty texture, and easier straining."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (90°C)", "en": "Heat water to 90°C" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางจนน้ำร้อนประมาณ 90°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 90°C (steam rising, but not vigorously boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/multigrain_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 แป้งจากธัญพืชจะไหม้ติดก้นหม้อได้ง่ายหากใช้ไฟแรงเกินไป",
+        "en": "💡 Grain starch can easily scorch at the bottom if the heat is too high."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ธัญพืชปั่นและคนตลอดเวลา", "en": "Add blended grains and stir constantly" },
+      "desc": {
+        "th": "ค่อยๆ เทธัญพืชปั่นลงไปในน้ำร้อน **ต้องคนอย่างต่อเนื่องด้วยทัพพี** เพื่อไม่ให้แป้งจับตัวเป็นก้อนหรือไหม้ติดก้นหม้อ",
+        "en": "Slowly pour the blended grains into the hot water. **You must stir continuously with a ladle** to prevent starch from clumping or scorching."
+      },
+      "descVariables": {},
+      "image": "images/milk/multigrain_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 ขั้นตอนนี้สำคัญที่สุด! ห้ามหยุดคนจนกว่าน้ำจะเริ่มเดือดปุดเล็กๆ",
+        "en": " This is the most crucial step! Do not stop stirring until the liquid starts to simmer slightly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เคี่ยวต่อ 25 นาที", "en": "Simmer for 25 minutes" },
+      "desc": {
+        "th": "เมื่อน้ำเริ่มเดือดปุดเล็กๆ ให้ลดไฟลงเล็กน้อย เคี่ยวต่อ Exactly 25 นาที โดยคนเป็นระยะ เพื่อให้ธัญพืชสุกนุ่มและปล่อยความมันออกมา",
+        "en": "When it starts to simmer slightly, reduce heat slightly. Simmer for exactly 25 minutes, stirring occasionally, to soften grains and release creaminess."
+      },
+      "descVariables": {},
+      "image": "images/milk/multigrain_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 การเคี่ยวนานพอจะทำให้น้ำนมมีสีนวลสวยและหอมกลิ่นธัญพืชคั่ว",
+        "en": "💡 Simmering long enough gives the milk a beautiful creamy color and a roasted grain aroma."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ปรุงรสและกรอง", "en": "Season and strain" },
+      "desc": {
+        "th": "ใส่น้ำตาลมะพร้าว {sugar} และเกลือ {salt} คนให้ละลาย ปิดไฟ แล้วกรองผ่านผ้าขาวบาง 2-3 ชั้น เพื่อกากออกให้หมด พร้อมเสิร์ฟ",
+        "en": "Add {sugar} of coconut sugar and {salt} of salt, stir until dissolved. Turn off heat, then strain through 2-3 layers of cheesecloth to remove all residue. Serve."
+      },
+      "descVariables": {
+        "sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/multigrain_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลมะพร้าวจะให้น้ำนมสีนวลสวยและรสหวานหอมละมุนกว่าน้ำตาลทรายขาวมาก",
+        "en": "💡 Coconut sugar gives the milk a beautiful creamy color and a much mellower, aromatic sweetness than white sugar."
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "id": "soy_milk_10L",
+    "name": { 
+      "th": "นมถั่วเหลืองสูตรดั้งเดิม 10 ลิตร", 
+      "en": "10L Traditional Soy Milk" 
+    },
+    "image": "images/milk/soy_milk/main_1.jpg",
+    "prepTime": { 
+      "th": "20 นาที (ไม่รวมเวลาแช่ถั่ว)", 
+      "en": "20 mins (excluding soaking)" 
+    },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["โปรตีนสูง", "ย่อยง่าย", "สูตรดั้งเดิม"], 
+      "en": ["High Protein", "Easy Digest", "Traditional"] 
+    }
+  },
+  {
+    "id": "corn_milk_10L",
+    "name": { 
+      "th": "นมข้าวโพดสูตรเข้มข้น 10 ลิตร", 
+      "en": "10L Rich Corn Milk" 
+    },
+    "image": "images/milk/corn_milk/main_1.jpg",
+    "prepTime": { 
+      "th": "15 นาที", 
+      "en": "15 mins" 
+    },
+    "rating": "4.9",
+    "badges": { 
+      "th": ["หอมมัน", "บำรุงสายตา", "ไม่มีผงชูรส"], 
+      "en": ["Creamy", "Eye Health", "No MSG"] 
+    }
+  },
+  {
+    "id": "multigrain_milk_10L",
+    "name": { 
+      "th": "นมข้าวกล้องงอกผสมธัญพืช 10 ลิตร", 
+      "en": "10L Germinated Brown Rice & Multigrain Milk" 
+    },
+    "image": "images/milk/multigrain_milk/main_1.jpg",
+    "prepTime": { 
+      "th": "25 นาที", 
+      "en": "25 mins" 
+    },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["ไฟเบอร์สูง", "ดีต่อลำไส้", "ซูเปอร์ฟู้ด"], 
+      "en": ["High Fiber", "Gut Friendly", "Superfood"] 
+    }
+  },
+  {
+    "id": "black_sesame_milk_10L",
+    "name": { 
+      "th": "นมงาดำสูตรโบราณ 10 ลิตร", 
+      "en": "10L Traditional Black Sesame Milk" 
+    },
+    "image": "images/milk/black_sesame_milk/main_1.jpg",
+    "prepTime": { 
+      "th": "20 นาที", 
+      "en": "20 mins" 
+    },
+    "rating": "4.7",
+    "badges": { 
+      "th": ["บำรุงผมและกระดูก", "ป้องกันอัลไซเมอร์", "แคลเซียมสูง"], 
+      "en": ["Hair & Bone Health", "Brain Boost", "High Calcium"] 
+    }
+  },
+  {
+    "id": "mung_bean_milk_10L",
+    "name": { 
+      "th": "นมถั่วเขียวร้อน 10 ลิตร", 
+      "en": "10L Hot Mung Bean Milk" 
+    },
+    "image": "images/milk/mung_bean_milk/main_1.jpg",
+    "prepTime": { 
+      "th": "15 นาที", 
+      "en": "15 mins" 
+    },
+    "rating": "4.8",
+    "badges": { 
+      "th": ["แก้ร้อนใน", "โปรตีนพืช", "รสชาติละมุน"], 
+      "en": ["Cooling Effect", "Plant Protein", "Smooth Taste"] 
+    }
+  }
+]

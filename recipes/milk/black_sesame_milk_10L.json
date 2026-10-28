@@ -1,0 +1,303 @@
+{
+  "id": "black_sesame_milk_10L",
+  "icon": "🖤",
+  "category": "milk",
+  "description": "งาดำคั่วบดละเอียด 700g + น้ำตาลมะพร้าว 700g + เกลือ 5g ต้ม 85°C 15 นาที หอมมัน เข้มข้น บำรุงผมและกระดูก",
+  "total_time": 125,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_black_sesame_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมงาดำสูตรโบราณ (10 ลิตร)",
+    "en": "Traditional Black Sesame Milk (10L)"
+  },
+  "images": [
+    "images/milk/black_sesame_milk/main_1.jpg",
+    "images/milk/black_sesame_milk/main_2.jpg",
+    "images/milk/black_sesame_milk/main_3.jpg",
+    "images/milk/black_sesame_milk/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_black_sesame_milk",
+  "prepTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "cookTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสนมงาดำสูตรโบราณที่หอม มัน และเข้มข้น ปริมาณ 10 ลิตร ใช้นงาดำคั่วบดละเอียด 700 กรัม ต้มที่อุณหภูมิ 85°C นาน 15 นาที พร้อมระบบกวนต่อเนื่องเพื่อป้องกันไม่ให้น้ำมันในงาไหม้ติดก้นหม้อ ผสมน้ำตาลมะพร้าว 700 กรัม และเกลือเล็กน้อย ให้รสชาติหวานละมุน หอมกลิ่นงาคั่วแท้ๆ ดื่มอุ่นๆ ได้คุณค่าทางอาหารเต็มๆ",
+    "en": "Experience traditional, rich, and creamy black sesame milk in a 10-liter batch. Made with 700g of finely ground roasted black sesame, simmered at 85°C for 15 minutes with continuous stirring to prevent scorching. Sweetened with 700g of palm sugar and a pinch of salt for a mellow, authentic roasted sesame flavor, perfect for a warm, nutritious drink."
+  },
+  "benefits": {
+    "th": "อุดมด้วยแคลเซียมและวิตามินอีสูง ช่วยบำรุงผมให้ดำเงางาม บำรุงกระดูก และต้านอนุมูลอิสระ",
+    "en": "Rich in calcium and Vitamin E, helps maintain black and shiny hair, supports bone health, and provides antioxidants."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีอาการแพ้เมล็ดงาควรหลีกเลี่ยง และเนื่องจากมีแคลอรี่จากไขมันดี ควรดื่มในปริมาณที่เหมาะสม",
+    "en": "⚠️ Avoid if allergic to sesame seeds. Due to healthy fat content, consume in moderation."
+  },
+  "nutrition": {
+    "calories": "85 kcal",
+    "carbs": "10 g",
+    "sugar": "8 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "งาดำคั่ว (บดละเอียด)", "en": "Roasted black sesame (finely ground)" },
+      "amount": 700,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลมะพร้าว (หรือน้ำตาลปี๊บ)", "en": "Palm sugar (or coconut sugar)" },
+      "amount": 700,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรส)", "en": "Salt (to enhance flavor)" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (85°C)", "en": "Warm Water to 85°C" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 85°C (ห้ามเดือดจัด) เพื่อเตรียมผสมงาดำ",
+        "en": "The machine warms water to 85°C (no boiling) to prepare for black sesame mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่งาดำคั่วบดละเอียด", "en": "Add Finely Ground Black Sesame" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่งาดำคั่วบดละเอียด {sesame} ลงไป พร้อมเปิดระบบกวนอย่างแรงเพื่อป้องกันการจับตัวเป็นก้อน",
+        "en": "System alerts to add {sesame} of finely ground black sesame, activating strong stirring to prevent clumping."
+      },
+      "descVariables": {
+        "sesame": { "amount": 700, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและกวนต่อเนื่อง (15 นาที)", "en": "Simmer and Stir Continuously (15 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C และกวนต่อเนื่อง 15 นาที เพื่อสกัดน้ำมันงาและป้องกันไม่ให้ไหม้ติดก้นหม้อ",
+        "en": "Machine maintains 85°C and stirs continuously for 15 mins to extract sesame oil and prevent scorching."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ปรุงรสด้วยน้ำตาลมะพร้าวและเกลือ", "en": "Season with Palm Sugar and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลมะพร้าว {sugar} และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of palm sugar and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 700, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้รสชาติเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend flavors perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ (ควรกรองก่อน)", "en": "Done, Ready to Serve (Strain Recommended)" },
+      "desc": {
+        "th": "นมงาดำพร้อมเสิร์ฟแล้ว! แนะนำให้กรองผ่านผ้าขาวบางอีกครั้งเพื่อความเนียนละเอียด ก่อนบรรจุขวดหรือเสิร์ฟ",
+        "en": "Black sesame milk is ready! It is recommended to strain through a cheesecloth for extra smoothness before bottling or serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมงาดำคั่ว", "en": "Prepare roasted black sesame" },
+      "desc": {
+        "th": "นำงาดำคั่ว {sesame} ไปปั่นหรือบดให้ละเอียดที่สุด ยิ่งละเอียดยิ่งสกัดความมันและรสชาติได้ดี",
+        "en": "Grind or blend {sesame} of roasted black sesame until extremely fine. Finer grind extracts more creaminess and flavor."
+      },
+      "descVariables": {
+        "sesame": { "amount": 700, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/black_sesame_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรใช้นงาดำที่คั่วใหม่ๆ จะหอมกว่างาดำที่คั่วทิ้งไว้นาน",
+        "en": "💡 Use freshly roasted black sesame for a stronger, more authentic aroma."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (85°C)", "en": "Heat water to 85°C" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางจนน้ำร้อนประมาณ 85°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Heat on medium until water reaches about 85°C (steam rising, but not vigorously boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/black_sesame_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 น้ำมันในงาดำจะไหม้และขมได้ง่ายหากใช้น้ำเดือดจัด 100°C",
+        "en": "💡 Sesame oil can easily burn and turn bitter if exposed to 100°C boiling water."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่งาดำและคนตลอดเวลา", "en": "Add black sesame and stir constantly" },
+      "desc": {
+        "th": "ค่อยๆ เทงาดำบดละเอียดลงไปในน้ำร้อน **ต้องคนอย่างต่อเนื่องด้วยทัพพี** เพื่อไม่ให้จับตัวเป็นก้อนหรือไหม้ติดก้นหม้อ",
+        "en": "Slowly pour the finely ground black sesame into the hot water. **You must stir continuously with a ladle** to prevent clumping or scorching."
+      },
+      "descVariables": {},
+      "image": "images/milk/black_sesame_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 ขั้นตอนนี้สำคัญที่สุด! ห้ามหยุดคนจนกว่าน้ำจะเริ่มเดือดปุดเล็กๆ",
+        "en": "💡 This is the most crucial step! Do not stop stirring until the liquid starts to simmer slightly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เคี่ยวต่อ 15 นาที", "en": "Simmer for 15 minutes" },
+      "desc": {
+        "th": "เมื่อน้ำเริ่มเดือดปุดเล็กๆ ให้ลดไฟลงเล็กน้อย เคี่ยวต่อ Exactly 15 นาที โดยคนเป็นระยะ เพื่อสกัดน้ำมันงาออกมาให้เต็มที่",
+        "en": "When it starts to simmer slightly, reduce heat slightly. Simmer for exactly 15 minutes, stirring occasionally, to fully extract the sesame oil."
+      },
+      "descVariables": {},
+      "image": "images/milk/black_sesame_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 การเคี่ยวนานพอจะทำให้นมงาดำมีสีดำเข้มสวยและหอมมันยิ่งขึ้น",
+        "en": "💡 Simmering long enough gives the milk a beautiful dark color and richer, creamier taste."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ปรุงรสและกรอง", "en": "Season and strain" },
+      "desc": {
+        "th": "ใส่น้ำตาลมะพร้าว {sugar} และเกลือ {salt} คนให้ละลาย ปิดไฟ แล้วกรองผ่านผ้าขาวบาง 2-3 ชั้น เพื่อกากออกให้หมด พร้อมเสิร์ฟ",
+        "en": "Add {sugar} of palm sugar and {salt} of salt, stir until dissolved. Turn off heat, then strain through 2-3 layers of cheesecloth to remove all residue. Serve."
+      },
+      "descVariables": {
+        "sugar": { "amount": 700, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/black_sesame_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลมะพร้าวจะให้นมงาดำรสหวานลึกและหอมละมุนกว่าน้ำตาลทรายขาวมาก",
+        "en": "💡 Palm sugar gives the milk a much deeper, mellower sweetness than white sugar."
+      }
+    }
+  ]
+}

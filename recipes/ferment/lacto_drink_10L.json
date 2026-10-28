@@ -1,0 +1,356 @@
+{
+  "id": "lacto_drink_10L",
+  "icon": "🧪",
+  "category": "ferment",
+  "description": "นมผงขาดมันเนย 800g + น้ำตาล 1kg + หัวเชื้อ L. casei 200g ต้ม 85°C 10 นาที ลดเหลือ 37°C หมัก 8-12 ชม. รสเปรี้ยวหวาน ดื่มง่าย",
+  "total_time": 780,
+  "target_temp": 37,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_lacto_drink_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมเปรี้ยวแลคโตบาซิลลัส สูตรแบบยากูลท์ (10 ลิตร)",
+    "en": "Lactobacillus Probiotic Drink - Yakult Style (10L)"
+  },
+  "images": [
+    "images/ferment/lacto_drink/main_1.jpg",
+    "images/ferment/lacto_drink/main_2.jpg",
+    "images/ferment/lacto_drink/main_3.jpg",
+    "images/ferment/lacto_drink/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_lacto_drink",
+  "prepTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน)",
+    "en": "30 mins (Machine Prep)"
+  },
+  "cookTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน) + หมักเอง 8-12 ชม.",
+    "en": "30 mins (Machine Prep) + 8-12 hrs external fermentation"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "เครื่อง Beverage System ช่วยคุณทำขั้นตอนที่สำคัญที่สุดของการทำนมเปรี้ยวแลคโตบาซิลลัส: การผสมนมผงและน้ำตาล การฆ่าเชื้อที่ 85°C และการลดอุณหภูมิลงมาที่ 37°C อย่างแม่นยำ! หลังจากเครื่องผสมหัวเชื้อ L. casei และโอนถ่ายลงภาชนะให้คุณแล้ว คุณเพียงแค่นำไปวางในอุณหภูมิ 37-40°C เป็นเวลา 8-12 ชั่วโมง ก็จะได้เครื่องดื่มโปรไบโอติกที่มีรสเปรี้ยวหวาน ดื่มง่าย เหมือนยากูลท์แท้ๆ",
+    "en": "The Beverage System handles the most critical part of making Lactobacillus probiotic drink: mixing milk powder and sugar, pasteurizing at 85°C, and rapidly chilling to exactly 37°C! After the machine adds L. casei culture and transfers to your container, simply keep it at 37-40°C for 8-12 hours. You'll get a sweet-tangy, easy-to-drink probiotic beverage just like authentic Yakult."
+  },
+  "benefits": {
+    "th": "อุดมด้วยโปรไบโอติก L. casei ช่วยเสริมภูมิคุ้มกัน, ปรับสมดุลลำไส้, และช่วยระบบขับถ่าย",
+    "en": "Rich in L. casei probiotics that boost immunity, balance gut flora, and aid digestion."
+  },
+  "warnings": {
+    "th": "⚠️ ต้องใช้ภาชนะที่ผ่านการฆ่าเชื้อเพื่อป้องกันการปนเปื้อน ผู้ที่แพ้นมวัวหรือแลคโตสควรหลีกเลี่ยง",
+    "en": "⚠️ Use sterilized containers to prevent contamination. Avoid if allergic to cow's milk or lactose intolerant."
+  },
+  "nutrition": {
+    "calories": "65 kcal",
+    "carbs": "14 g",
+    "sugar": "12 g",
+    "protein": "1.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมผงขาดมันเนย (Skim Milk Powder)", "en": "Skim milk powder" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (อาหารของเชื้อ L. casei)", "en": "White sugar (food for L. casei)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "หัวเชื้อ Lactobacillus casei", "en": "Lactobacillus casei starter culture" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่นมผงและน้ำตาล", "en": "Add Milk Powder and Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่นมผงขาดมันเนย {milk_powder} และน้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวนอย่างแรงเพื่อละลายให้หมด",
+        "en": "System alerts to add {milk_powder} of skim milk powder and {sugar} of sugar, activating strong stirring for complete dissolution."
+      },
+      "descVariables": {
+        "milk_powder": { "amount": 800, "unit": "Gram", "scalable": true },
+        "sugar": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ฆ่าเชื้อมันนม (85°C)", "en": "Pasteurize Milk Base (85°C)" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำนมที่อุณหภูมิ 85°C เพื่อทำลายแบคทีเรียที่ไม่ดี และเตรียมสภาพแวดล้อมให้เหมาะกับการหมัก",
+        "en": "The machine heats milk base to 85°C to destroy harmful bacteria and prepare the environment for fermentation."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "คงอุณหภูมิฆ่าเชื้อ (10 นาที)", "en": "Hold Pasteurization (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C ต่อเนื่อง 10 นาที เพื่อฆ่าเชื้ออย่างสมบูรณ์",
+        "en": "Machine maintains 85°C for 10 mins for complete pasteurization."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 50°C)", "en": "Cool Down Pot (Wait until 50°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 50°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 50°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 37,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิน้ำอย่างรวดเร็ว (เหลือ 37°C)", "en": "Rapidly Chill Water (to 37°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิน้ำนมจาก 50°C ลงเหลือ 37°C อย่างรวดเร็ว พร้อมสำหรับหัวเชื้อ L. casei",
+        "en": "Activate copper coil and submersible pump to rapidly cool milk base from 50°C to 37°C, ready for L. casei starter."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมหัวเชื้อ L. casei", "en": "Prepare L. casei Starter" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 37°C พร้อมแล้ว! กรุณาเตรียมหัวเชื้อ L. casei {starter} ให้พร้อม เมื่อพร้อมแล้วกด OK เครื่องจะใส่หัวเชื้อให้",
+        "en": "✅ Temperature is ready at 37°C! Please prepare {starter} of L. casei starter. Press OK when ready, the machine will add the starter."
+      },
+      "descVariables": {
+        "starter": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่หัวเชื้อ L. casei", "en": "Add L. casei Starter Culture" },
+      "desc": {
+        "th": "ระบบจะใส่หัวเชื้อ L. casei {starter} ลงไป พร้อมเปิดระบบกวนเบาๆ เพื่อกระจายเชื้อให้ทั่วถึง",
+        "en": "System adds {starter} of L. casei starter, activating gentle stirring for even distribution."
+      },
+      "descVariables": {
+        "starter": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมภาชนะเพื่อรับน้ำนม", "en": "Prepare Container to Receive Milk" },
+      "desc": {
+        "th": "✅ กรุณาวางภาชนะที่ฆ่าเชื้อแล้วรองรับ เครื่องจะโอนถ่ายน้ำนมผสมหัวเชื้อออกให้ ท่านนำไปหมักต่อที่อุณหภูมิ 37-40°C เป็นเวลา 8-12 ชั่วโมง",
+        "en": "✅ Please place a sterilized container. The machine will transfer the inoculated milk out. Ferment at 37-40°C for 8-12 hours."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำนมผสมหัวเชื้อออกสู่ภาชนะ", "en": "Transfer Inoculated Milk to Container" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำนมออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring milk out of the boiling pot. Please wait until the process is complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมเครื่องมือและวัตถุดิบ", "en": "Prepare equipment and ingredients" },
+      "desc": {
+        "th": "ล้างและฆ่าเชื้อหม้อต้ม ทัพพี และ **ภาชนะที่จะใช้หมัก** ทุกชิ้นด้วยน้ำเดือด เตรียมนมผง {milk_powder}, น้ำตาล {sugar}, และหัวเชื้อ L. casei {starter} ให้พร้อม",
+        "en": "Sterilize pot, ladle, and **fermentation containers** with boiling water. Prepare {milk_powder} of milk powder, {sugar} of sugar, and {starter} of L. casei starter."
+      },
+      "descVariables": {
+        "milk_powder": { "amount": 800, "unit": "Gram", "scalable": true },
+        "sugar": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "starter": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/lacto_drink/man_1.jpg",
+      "tips": {
+        "th": "💡 การฆ่าเชื้อเป็นขั้นตอนที่สำคัญที่สุด หากมีเชื้ออื่นปนเปื้อน นมเปรี้ยวจะเสีย",
+        "en": "💡 Sterilization is the most critical step. Any contamination will spoil the probiotic drink."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ให้เครื่องเตรียมฐานนมเปรี้ยว", "en": "Let machine prepare the probiotic base" },
+      "desc": {
+        "th": "เลือกสูตรนี้ในเครื่อง เครื่องจะทำการผสมนมผงและน้ำตาล ฆ่าเชื้อที่ 85°C และลดอุณหภูมิเหลือ 37°C อย่างแม่นยำ เมื่อเครื่องแจ้งเตือน (Step 9) ให้เตรียมภาชนะฆ่าเชื้อแล้วรองรับ",
+        "en": "Select this recipe. The machine will mix milk powder and sugar, pasteurize at 85°C, and precisely chill to 37°C. When alerted (Step 9), prepare a sterilized container to receive."
+      },
+      "descVariables": {},
+      "image": "images/ferment/lacto_drink/man_2.jpg",
+      "tips": {
+        "th": "💡 นี่คือจุดแข็งของเครื่อง: การควบคุมอุณหภูมิ 37°C แบบเป๊ะๆ ซึ่งสำคัญมากต่อชีวิตของเชื้อ L. casei",
+        "en": "💡 This is the machine's strength: precise 37°C control, which is crucial for L. casei survival."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "หมักนมเปรี้ยว 8-12 ชั่วโมง", "en": "Ferment probiotic drink for 8-12 hours" },
+      "desc": {
+        "th": "หลังจากเครื่องโอนถ่ายน้ำนมใส่ภาชนะแล้ว ให้นำไปวางในที่ที่รักษาอุณหภูมิได้ 37-40°C (เช่น เครื่องทำโยเกิร์ต, หรือตู้อบ) ทิ้งไว้ 8-12 ชั่วโมง (ยิ่งหมักนานยิ่งเปรี้ยว)",
+        "en": "After the machine transfers the milk, place it in a 37-40°C environment (e.g., yogurt maker, or incubator) for 8-12 hours (longer fermentation = more tangy)."
+      },
+      "descVariables": {},
+      "image": "images/ferment/lacto_drink/man_3.jpg",
+      "tips": {
+        "th": "💡 L. casei ต้องการอุณหภูมิ 37-40°C เพื่อทำงานได้ดีที่สุด ถ้าอุณหภูมิต่ำกว่า 35°C เชื้อจะทำงานช้ามาก",
+        "en": "💡 L. casei needs 37-40°C to work optimally. Below 35°C, the culture works very slowly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "หยุดการหมักและแช่เย็น", "en": "Stop fermentation and chill" },
+      "desc": {
+        "th": "เมื่อครบเวลาและได้รสเปรี้ยวตามต้องการ ให้นำนมเปรี้ยวเข้าตู้เย็น (อุณหภูมิ 4-10°C) อย่างน้อย 2 ชั่วโมง เพื่อหยุดการทำงานของเชื้อ L. casei และให้รสชาติคงที่",
+        "en": "Once the desired tanginess is reached, refrigerate the probiotic drink (4-10°C) for at least 2 hours to stop L. casei activity and stabilize the flavor."
+      },
+      "descVariables": {},
+      "image": "images/ferment/lacto_drink/man_4.jpg",
+      "tips": {
+        "th": "💡 การแช่เย็นจะทำให้นมเปรี้ยวหยุดเปรี้ยวเพิ่มและยืดอายุการเก็บได้ 7-10 วัน",
+        "en": "💡 Chilling stops further souring and extends shelf life to 7-10 days."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "บรรจุขวดและเสิร์ฟ", "en": "Bottle and serve" },
+      "desc": {
+        "th": "คนเบาๆ ให้เนื้อนมเปรี้ยวเข้ากัน (อาจแยกชั้นเล็กน้อยเป็นเรื่องปกติ) บรรจุใส่ขวดเล็กๆ ที่ฆ่าเชื้อแล้ว (ขนาด 80-100ml เหมือนยากูลท์) แช่เย็นก่อนเสิร์ฟ ดื่มวันละ 1-2 ขวดเพื่อสุขภาพลำไส้",
+        "en": "Stir gently to blend (slight separation is normal). Bottle into small sterilized containers (80-100ml like Yakult). Chill before serving. Drink 1-2 bottles daily for gut health."
+      },
+      "descVariables": {},
+      "image": "images/ferment/lacto_drink/man_5.jpg",
+      "tips": {
+        "th": "💡 นมเปรี้ยวแลคโตบาซิลลัสควรดื่มขณะเย็น จะได้รสชาติที่สดชื่นและอร่อยที่สุด",
+        "en": "💡 Lactobacillus probiotic drink is best served chilled for the most refreshing and delicious taste."
+      }
+    }
+  ]
+}
