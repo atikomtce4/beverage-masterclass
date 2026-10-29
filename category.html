@@ -3,9 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>หมวดหมู่ | Beverage Masterclass</title>
+  <title>หมวดหมู่ | AllDrinks</title>
+  <meta name="description" content="AllDrinks - หมวดหมู่เครื่องดื่มครบวงจร สมุนไพรไทย ชา นม และเครื่องดื่มหมัก พร้อมระบบคำนวณปริมาณอัตโนมัติ 1-20 ลิตร">
+  <meta name="keywords" content="AllDrinks, สูตรเครื่องดื่ม, เครื่องชงเครื่องดื่ม, Beverage System, สมุนไพรไทย, ชา, คอมบูชา">
+  <meta name="author" content="AllDrinks">
+
+  <!-- ===== Open Graph / Facebook / LINE ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alldrinks.xyz/category">
+  <meta property="og:title" content="หมวดหมู่เครื่องดื่ม | AllDrinks">
+  <meta property="og:description" content="สำรวจหมวดหมู่เครื่องดื่มครบวงจร สมุนไพรไทย ชา นม และเครื่องดื่มหมัก พร้อมระบบคำนวณปริมาณอัตโนมัติ">
+  <meta property="og:image" content="https://alldrinks.xyz/images/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AllDrinks">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://alldrinks.xyz/category">
+  <meta name="twitter:title" content="หมวดหมู่เครื่องดื่ม | AllDrinks">
+  <meta name="twitter:description" content="สำรวจหมวดหมู่เครื่องดื่มครบวงจร พร้อมระบบคำนวณปริมาณอัตโนมัติ 1-20 ลิตร">
+  <meta name="twitter:image" content="https://alldrinks.xyz/images/og-preview.jpg">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/mobile-style.css">
+  
   <style>
     :root {
       --primary: #4CAF50;
@@ -18,21 +46,94 @@
       --shadow: 0 2px 8px rgba(0,0,0,0.08);
       --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
       --radius: 12px;
+      --radius-sm: 8px;
     }
-    /* ===== Language Toggle (ขนาดเล็ก กะทัดรัด ชิดขวา) ===== */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== Header ===== */
+    .mobile-header {
+      background: var(--white);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 12px;
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--bg);
+      border-radius: 50%;
+      font-size: 20px;
+      color: var(--text);
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover { 
+      background: var(--primary-light); 
+      color: var(--primary-dark); 
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      flex: 1;
+      text-align: center;
+    }
+
+    .logo-main {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-sub {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
     .lang-toggle {
       display: flex;
-      background: #f5f5f5;
+      background: var(--bg);
       border-radius: 12px;
       overflow: hidden;
-      border: 1.5px solid #4CAF50;
+      border: 1.5px solid var(--primary);
       flex-shrink: 0;
     }
+
     .lang-btn {
       padding: 4px 10px;
       border: none;
       background: transparent;
-      color: #757575;
+      color: var(--text-light);
       font-family: inherit;
       font-size: 11px;
       font-weight: 600;
@@ -40,56 +141,165 @@
       transition: all 0.2s;
       letter-spacing: 0.3px;
     }
+
     .lang-btn.active {
-      background: #4CAF50;
+      background: var(--primary);
       color: white;
-    }
-    .lang-btn:hover:not(.active) {
-      background: #e8f5e9;
     }
 
-    /* ===== ส่วนที่เหลือคงเดิมตามต้นฉบับ ===== */
-    .hero-banner {
-      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
-      border-radius: 16px; padding: 24px 20px; margin-bottom: 24px;
-      color: white;
+    .lang-btn:hover:not(.active) { background: var(--primary-light); }
+
+    /* ===== Main Content ===== */
+    .mobile-content {
+      flex: 1;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 20px;
     }
-    .hero-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-    .hero-desc { font-size: 14px; opacity: 0.9; line-height: 1.5; }
-    
-    .recipe-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .page-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* ===== Recipe Grid ===== */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
     .recipe-card {
-      background: white; border-radius: 12px; overflow: hidden;
-      border: 1px solid #f0f0f0; text-decoration: none; color: inherit;
-      transition: transform 0.2s;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.05);
     }
-    .recipe-card:active { transform: scale(0.98); }
-    .recipe-card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-    .recipe-card-body { padding: 12px; }
-    .recipe-card-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #212121; line-height: 1.3; }
-    .recipe-card-meta { display: flex; gap: 8px; margin-bottom: 8px; font-size: 11px; color: #757575; }
-    .recipe-card-badges { display: flex; flex-wrap: wrap; gap: 4px; }
-    .badge {
-      background: #E8F5E9; color: #2E7D32; padding: 3px 8px;
-      border-radius: 10px; font-size: 10px; font-weight: 600;
+
+    .recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
     }
-    .empty-state { text-align: center; padding: 40px 20px; color: #757575; }
-    .btn-back-category {
-      display: block; width: 100%; padding: 14px; margin-top: 24px;
-      background: white; color: #4CAF50; border: 2px solid #4CAF50;
-      border-radius: 8px; font-family: inherit; font-size: 14px;
-      font-weight: 600; text-align: center; text-decoration: none;
+
+    .recipe-card-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
     }
-        /* ===== Compact Footer (สำหรับหน้าย่อย) ===== */
+
+    .recipe-card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recipe-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .recipe-card-meta {
+      display: flex;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-light);
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    .recipe-card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .recipe-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+
+    /* ===== Empty State ===== */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+    }
+
+    .empty-state-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+      opacity: 0.5;
+    }
+
+    .empty-state h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .empty-state p {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-back:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ===== Compact Footer ===== */
     .footer-compact {
-      background: var(--text); /* สีเข้มเดียวกับ index */
+      background: var(--text);
       color: white;
       padding: 40px 20px 20px;
       margin-top: auto;
     }
 
     .footer-compact-content {
-      max-width: 800px; /* แคบกว่า index เพื่อความกระชับ */
+      max-width: 800px;
       margin: 0 auto;
       text-align: center;
     }
@@ -162,7 +372,8 @@
       font-size: 12px;
       color: #757575;
     }
-        /* ===== LINE Modal Styles ===== */
+
+    /* ===== LINE Modal ===== */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -170,7 +381,7 @@
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px); /* เอฟเฟกต์เบลอพื้นหลัง */
+      backdrop-filter: blur(4px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -247,7 +458,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: #06C755; /* สีเขียวทางการของ LINE */
+      background: #06C755;
       color: white;
       text-decoration: none;
       padding: 12px 24px;
@@ -263,75 +474,73 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
     }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 22px; }
+      .recipe-grid { gap: 12px; }
+      .recipe-card-img { height: 100px; }
+      .logo-main { font-size: 14px; }
+      .logo-sub { font-size: 8px; }
+      .lang-btn { padding: 3px 8px; font-size: 10px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header class="mobile-header">
-    <button class="back-btn" onclick="window.history.back()">←</button>
-    <h1 class="logo" id="headerTitle">หมวดหมู่</h1>
-    
-    <!-- ✅ แทนที่ div ว่าง ด้วยปุ่ม TH/EN ขนาดกะทัดรัด -->
+    <a href="categories.html" class="back-btn" aria-label="Back to Categories">←</a>
+    <div class="logo">
+      <span class="logo-main">AllDrinks</span>
+      <span class="logo-sub" data-i18n="logo_sub">Masterclass</span>
+    </div>
     <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="th" onclick="switchLanguage('th')">TH</button>
-      <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')">EN</button>
+      <button class="lang-btn active" data-lang="th" onclick="setLanguage('th')">TH</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
     </div>
   </header>
 
-  <main class="mobile-content">
-    <div id="errorContainer" style="display: none; text-align: center; padding: 40px 20px;">
-      <div style="font-size: 48px; margin-bottom: 16px;">😕</div>
-      <h2 id="errorTitle">ไม่พบหมวดหมู่</h2>
-      <p style="color: #757575; margin-bottom: 20px;" id="errorMsg">หมวดหมู่นี้อาจยังไม่มีข้อมูล</p>
-      <a href="categories.html" class="btn-back-category">กลับไปหน้าหมวดหมู่</a>
+  <!-- Main Content -->
+  <main class="mobile-content" id="mainContent">
+    <div class="page-header">
+      <h1 id="categoryName" data-i18n="loading">กำลังโหลด...</h1>
+      <p id="categoryDesc" data-i18n="loading_desc">กรุณารอสักครู่</p>
     </div>
 
-    <div id="categoryContainer" style="display: none;">
-      <div class="hero-banner">
-        <h1 class="hero-title" id="heroTitle">ชื่อหมวดหมู่</h1>
-        <p class="hero-desc" id="heroDesc">คำอธิบายหมวดหมู่</p>
-      </div>
-      
-      <div class="recipe-grid" id="recipeGrid">
-        <!-- JS จะ Render ตรงนี้ -->
-      </div>
-      
-      <a href="categories.html" class="btn-back-category" id="btnBackToCategories">← กลับไปหน้าหมวดหมู่</a>
+    <div class="recipe-grid" id="recipeGrid">
+      <!-- Recipes will be loaded dynamically -->
     </div>
   </main>
 
-    <!-- Compact Footer -->
+  <!-- Compact Footer -->
   <footer class="footer-compact">
     <div class="footer-compact-content">
       
-      <!-- CTA Box: ดึงดูดให้ซื้อเครื่อง -->
+      <!-- CTA Box -->
       <div class="footer-compact-cta">
-        <h3 data-i18n="footer_cta_title">สนใจเครื่อง Beverage System?</h3>
+        <h3 data-i18n="footer_cta_title">สนใจเครื่อง AllDrinks System?</h3>
         <p data-i18n="footer_cta_desc">ดูรายละเอียดเครื่องที่รองรับสูตรทั้งหมดในระบบ พร้อมขอใบเสนอราคา</p>
-        <a href="https://beveragesystem.com" class="btn-compact" data-i18n="footer_cta_btn">🤖 ไปที่หน้าร้านค้า</a>
+        <a href="system.html" class="btn-compact" data-i18n="footer_cta_btn"> ไปที่หน้าร้านค้า</a>
       </div>
 
       <!-- Minimal Links -->
       <div class="footer-compact-links">
         <a href="index.html" data-i18n="footer_home">🏠 หน้าแรก</a>
         <a href="categories.html" data-i18n="footer_categories">📂 หมวดหมู่</a>
-        <a href="mailto:info@beveragesystem.com">✉️ ติดต่อเรา</a>
-        <li>
-          <a href="#" onclick="openLineModal(); return false;" style="display: flex; align-items: center; gap: 8px;">
-            <span style="color: #06C755; font-size: 18px;">💬</span> 
-            <span data-i18n="footer_line">ติดต่อผ่าน LINE</span>
-          </a>
-        </li>
+        <a href="mailto:info@alldrinks.xyz">✉️ info@alldrinks.xyz</a>
+        <a href="#" onclick="openLineModal(); return false;" data-i18n="footer_line">💬 ติดต่อผ่าน LINE</a>
       </div>
 
       <!-- Copyright -->
       <div class="footer-compact-bottom">
-        <p>© 2026 Beverage Masterclass. All rights reserved.</p>
+        <p>© 2026 AllDrinks. All rights reserved. | alldrinks.xyz</p>
       </div>
 
     </div>
   </footer>
-  <!-- ===== LINE QR Code Modal ===== -->
+
+  <!-- LINE QR Code Modal -->
   <div id="lineModal" class="modal-overlay" onclick="closeLineModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeLineModal()" aria-label="Close">&times;</button>
@@ -339,38 +548,259 @@
       <h3 data-i18n="modal_line_title">เพิ่มเพื่อนผ่าน LINE</h3>
       <p data-i18n="modal_line_desc" class="modal-desc">สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป</p>
       
-      <!-- ⚠️ อย่าลืมเปลี่ยน src เป็น path รูป QR Code จริงของคุณ -->
       <img src="images/line-qr-code.png" alt="LINE Official Account QR Code" class="qr-image">
       
-      <!-- ⚠️ อย่าลืมเปลี่ยน href เป็นลิงก์ LINE OA จริงของคุณ (เช่น https://line.me/ti/p/@yourlineid) -->
-      <a href="https://line.me/ti/p/~atikomtce4" target="_blank" class="btn-line-official">
+      <a href="https://line.me/ti/p/@atikomtce4" target="_blank" class="btn-line-official">
         <span>💬</span> <span data-i18n="modal_line_btn">เปิดแอป LINE</span>
       </a>
     </div>
   </div>
-  <script>
-        // ===== LINE Modal Functions =====
-    function openLineModal() {
-      document.getElementById('lineModal').classList.add('active');
-      document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าเว็บตอน Modal เปิด
-    }
 
-    function closeLineModal(event) {
-      // ปิดเมื่อคลิกที่พื้นหลัง (overlay) หรือกดปุ่ม X
-      if (!event || event.target.id === 'lineModal' || event.target.classList.contains('modal-close')) {
-        document.getElementById('lineModal').classList.remove('active');
-        document.body.style.overflow = ''; // คืนค่าการเลื่อนหน้าเว็บ
+  <script>
+    const i18n = {
+      th: {
+        logo_sub: "Masterclass",
+        loading: "กำลังโหลด...",
+        loading_desc: "กรุณารอสักครู่",
+        not_found: "ไม่พบหมวดหมู่",
+        not_found_desc: "หมวดหมู่นี้อาจยังไม่มีข้อมูล",
+        back_to_categories: "← กลับไปหน้าหมวดหมู่",
+        recipes: "สูตร",
+        mins: "นาที",
+        hours: "ชั่วโมง",
+        days: "วัน",
+        footer_cta_title: "สนใจเครื่อง AllDrinks System?",
+        footer_cta_desc: "ดูรายละเอียดเครื่องที่รองรับสูตรทั้งหมดในระบบ พร้อมขอใบเสนอราคา",
+        footer_cta_btn: "🤖 ไปที่หน้าร้านค้า",
+        footer_home: "🏠 หน้าแรก",
+        footer_categories: "📂 หมวดหมู่",
+        footer_line: "💬 ติดต่อผ่าน LINE",
+        modal_line_title: "เพิ่มเพื่อนผ่าน LINE",
+        modal_line_desc: "สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป",
+        modal_line_btn: "เปิดแอป LINE"
+      },
+      en: {
+        logo_sub: "Masterclass",
+        loading: "Loading...",
+        loading_desc: "Please wait a moment",
+        not_found: "Category Not Found",
+        not_found_desc: "This category may not have data yet",
+        back_to_categories: "← Back to Categories",
+        recipes: "recipes",
+        mins: "mins",
+        hours: "hours",
+        days: "days",
+        footer_cta_title: "Interested in AllDrinks System?",
+        footer_cta_desc: "View machine details that support all recipes and request a quote.",
+        footer_cta_btn: " Visit Shop",
+        footer_home: "🏠 Home",
+        footer_categories: " Categories",
+        footer_line: "💬 Contact via LINE",
+        modal_line_title: "Add us on LINE",
+        modal_line_desc: "Scan the QR code below or click the button to open the app",
+        modal_line_btn: "Open LINE App"
+      }
+    };
+
+    let currentLang = localStorage.getItem('preferredLang') || 'th';
+    let categoryData = null;
+    let categoryIndex = null;
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('preferredLang', lang);
+      
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      document.documentElement.lang = lang;
+      
+      // Re-render category content if loaded
+      if (categoryData && categoryIndex) {
+        renderCategory();
       }
     }
 
-    // ปิด Modal เมื่อกดปุ่ม ESC บนคีย์บอร์ด
+    function formatTime(timeStr) {
+      if (!timeStr) return '';
+      const lang = currentLang;
+      if (timeStr.includes('วัน') || timeStr.includes('days')) {
+        return timeStr.replace('วัน', ` ${i18n[lang].days}`).replace('days', ` ${i18n[lang].days}`);
+      } else if (timeStr.includes('ชม.') || timeStr.includes('hrs')) {
+        return timeStr.replace('ชม.', ` ${i18n[lang].hours}`).replace('hrs', ` ${i18n[lang].hours}`);
+      } else if (timeStr.includes('นาที') || timeStr.includes('mins')) {
+        return timeStr.replace('นาที', ` ${i18n[lang].mins}`).replace('mins', ` ${i18n[lang].mins}`);
+      }
+      return timeStr;
+    }
+
+    function renderCategory() {
+      const nameEl = document.getElementById('categoryName');
+      const descEl = document.getElementById('categoryDesc');
+      const gridEl = document.getElementById('recipeGrid');
+
+      if (!categoryData || !categoryIndex) {
+        nameEl.textContent = i18n[currentLang].not_found;
+        descEl.textContent = i18n[currentLang].not_found_desc;
+        gridEl.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <div class="empty-state-icon">😕</div>
+            <h2>${i18n[currentLang].not_found}</h2>
+            <p>${i18n[currentLang].not_found_desc}</p>
+            <a href="categories.html" class="btn-back">${i18n[currentLang].back_to_categories}</a>
+          </div>
+        `;
+        return;
+      }
+
+      nameEl.textContent = categoryData.name[currentLang] || categoryData.name.th;
+      descEl.textContent = categoryData.description || '';
+
+      gridEl.innerHTML = categoryIndex.map(recipe => {
+        const title = recipe.name[currentLang] || recipe.name.th;
+        const prepTime = recipe.prepTime[currentLang] || recipe.prepTime.th;
+        const rating = recipe.rating || '4.5';
+        const image = recipe.image || 'images/placeholder.jpg';
+        const badges = recipe.badges ? recipe.badges[currentLang] || recipe.badges.th : [];
+        const badgeHtml = badges.length > 0 
+          ? `<div class="recipe-badge">${badges[0]}</div>` 
+          : '';
+
+        return `
+          <a href="recipe.html?id=${recipe.category || getCategoryFromId(recipe.id)}/${recipe.id}" class="recipe-card">
+            <img src="${image}" alt="${title}" class="recipe-card-img" loading="lazy">
+            <div class="recipe-card-body">
+              <h3 class="recipe-card-title">${title}</h3>
+              <div class="recipe-card-meta">
+                <span>⭐ ${rating}</span>
+                <span>️ ${formatTime(prepTime)}</span>
+              </div>
+              ${badgeHtml}
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    function getCategoryFromId(id) {
+      // Extract category from recipe id (e.g., "roselle_10L" -> "herbal")
+      // This is a fallback; ideally the JSON should include category field
+      const mapping = {
+        'roselle': 'herbal', 'chrysanthemum': 'herbal', 'samkler': 'herbal',
+        'bael_fruit': 'herbal', 'pennywort': 'herbal', 'butterfly_pea': 'herbal',
+        'thai_tea': 'tea', 'green_tea': 'tea', 'cocoa': 'tea',
+        'ginger': 'tea', 'lemongrass_pandan': 'tea', 'butterfly_pea_tea': 'tea',
+        'soy_milk': 'milk', 'corn_milk': 'milk', 'black_sesame': 'milk',
+        'rice_milk': 'milk', 'oat_milk': 'milk',
+        'yogurt_drink': 'ferment', 'kombucha': 'ferment', 'lacto_drink': 'ferment',
+        'water_kefir': 'ferment', 'rice_wine': 'ferment'
+      };
+      for (const [key, cat] of Object.entries(mapping)) {
+        if (id.includes(key)) return cat;
+      }
+      return 'herbal';
+    }
+
+    async function loadCategory() {
+      const params = new URLSearchParams(window.location.search);
+      const categoryId = params.get('id');
+
+      if (!categoryId) {
+        renderCategory();
+        return;
+      }
+
+      try {
+        // Load category index
+        const indexResponse = await fetch(`recipes/${categoryId}/index.json`);
+        if (!indexResponse.ok) throw new Error('Index not found');
+        categoryIndex = await indexResponse.json();
+
+        // Load first recipe to get category name (or use a separate category.json)
+        if (categoryIndex.length > 0) {
+          const firstRecipe = categoryIndex[0];
+          const recipeResponse = await fetch(`recipes/${categoryId}/${firstRecipe.id}.json`);
+          if (recipeResponse.ok) {
+            const recipeData = await recipeResponse.json();
+            categoryData = {
+              name: {
+                th: getCategoryNameTH(categoryId),
+                en: getCategoryNameEN(categoryId)
+              },
+              description: getCategoryDesc(categoryId)
+            };
+          }
+        }
+
+        renderCategory();
+      } catch (error) {
+        console.error('Error loading category:', error);
+        renderCategory();
+      }
+    }
+
+    function getCategoryNameTH(id) {
+      const names = {
+        'herbal': 'สมุนไพรไทย',
+        'tea': 'ชา & เครื่องดื่มร้อน',
+        'milk': 'นม & ธัญพืช',
+        'ferment': 'เครื่องดื่มหมัก'
+      };
+      return names[id] || id;
+    }
+
+    function getCategoryNameEN(id) {
+      const names = {
+        'herbal': 'Thai Herbs',
+        'tea': 'Tea & Hot Drinks',
+        'milk': 'Milk & Cereals',
+        'ferment': 'Fermented Drinks'
+      };
+      return names[id] || id;
+    }
+
+    function getCategoryDesc(id) {
+      const descs = {
+        'herbal': 'กระเจี๊ยบ, เก๊กฮวย, ใบเตย และอื่นๆ',
+        'tea': 'ชาไทย, ชาเขียว, โกโก้ และอื่นๆ',
+        'milk': 'นมถั่วเหลือง, นมข้าวโพด, งาดำ',
+        'ferment': 'คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก'
+      };
+      return descs[id] || '';
+    }
+
+    function openLineModal() {
+      document.getElementById('lineModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLineModal(event) {
+      if (!event || event.target.id === 'lineModal' || event.target.classList.contains('modal-close')) {
+        document.getElementById('lineModal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeLineModal();
       }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+      loadCategory();
+    });
   </script>
-  
-  <script src="js/app.js"> </script>
+
 </body>
 </html>

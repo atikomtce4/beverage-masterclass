@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AllDrinks System | เครื่องทำเครื่องดื่มอัตโนมัติ</title>
+  <meta name="description" content="AllDrinks System - เครื่องทำเครื่องดื่มอัตโนมัติ รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ 1-20 ลิตร สำหรับธุรกิจและบ้าน">
+  <meta name="keywords" content="AllDrinks System, เครื่องชงเครื่องดื่มอัตโนมัติ, Beverage System, เครื่องทำชา, เครื่องทำนมถั่วเหลือง">
+  <meta name="author" content="AllDrinks">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alldrinks.xyz/system">
+  <meta property="og:title" content="AllDrinks System | เครื่องทำเครื่องดื่มอัตโนมัติ">
+  <meta property="og:description" content="เครื่องทำเครื่องดื่มอัตโนมัติ รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ 1-20 ลิตร">
+  <meta property="og:image" content="https://alldrinks.xyz/images/og-preview-system.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AllDrinks">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ===== Twitter ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://alldrinks.xyz/system">
+  <meta name="twitter:title" content="AllDrinks System | เครื่องทำเครื่องดื่มอัตโนมัติ">
+  <meta name="twitter:description" content="เครื่องทำเครื่องดื่มอัตโนมัติ รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ">
+  <meta name="twitter:image" content="https://alldrinks.xyz/images/og-preview-system.jpg">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #2e7d32;
+      --primary-light: #e8f5e9;
+      --secondary: #FF9800;
+      --secondary-dark: #e65100;
+      --text: #212121;
+      --text-light: #757575;
+      --bg: #FAFAFA;
+      --white: #ffffff;
+      --shadow: 0 2px 8px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== Header ===== */
+    .header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-main {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      background: var(--bg);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border: none;
+      background: transparent;
+      color: var(--text-light);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: var(--primary-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .btn-nav {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .btn-nav:hover { background: var(--primary-dark); }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-brand {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .hero-tagline {
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 16px;
+      opacity: 0.95;
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      font-weight: 300;
+      margin-bottom: 36px;
+      opacity: 0.9;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary-dark);
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: transparent;
+      color: white;
+    }
+
+    /* ===== Section Title ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      font-size: 15px;
+      color: var(--text-light);
+    }
+
+    /* ===== Features ===== */
+    .features { padding: 60px 0; background: var(--white); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card { text-align: center; padding: 24px; }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 20px;
+    }
+
+    .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== Products ===== */
+    .products { padding: 60px 0; background: var(--bg); }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    }
+
+    .product-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .product-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .product-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .btn-product {
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .btn-product:hover {
+      background: var(--primary-dark);
+    }
+
+    /* ===== Videos ===== */
+    .videos { padding: 60px 0; background: var(--white); }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .video-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-title {
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ===== Recipes Integration ===== */
+    .recipes-integration {
+      padding: 60px 0;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+    }
+
+    .recipe-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .recipe-badge {
+      background: var(--white);
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.2s;
+    }
+
+    .recipe-badge:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .recipe-badge-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .recipe-badge-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ===== CTA Section ===== */
+    .cta {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 16px;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--secondary-dark);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: var(--text);
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+
+    .footer-section ul { list-style: none; }
+    .footer-section li { margin-bottom: 8px; }
+    .footer-section a {
+      font-size: 14px;
+      color: #b0b0b0;
+      transition: color 0.2s;
+    }
+    .footer-section a:hover { color: white; }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #424242;
+      font-size: 13px;
+      color: #757575;
+    }
+
+    /* ===== LINE Modal ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: #757575;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover { color: #212121; }
+
+    .modal-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 13px;
+      color: #757575;
+      margin-bottom: 20px;
+    }
+
+    .qr-image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #FAFAFA;
+    }
+
+    .btn-line-official {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #06C755;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .btn-line-official:hover {
+      background: #05b34c;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .hero-brand { font-size: 42px; letter-spacing: -1px; }
+      .hero-tagline { font-size: 18px; }
+      .hero-subtitle { font-size: 15px; }
+      .section-title h2 { font-size: 24px; }
+      .features-grid, .product-grid, .video-grid { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr; text-align: center; }
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-section li {
+        margin-bottom: 8px;
+        width: 100%;
+      }
+      .footer-section a {
+        display: inline-flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+      .header-content { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-brand { font-size: 36px; }
+      .hero-tagline { font-size: 16px; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .logo-main { font-size: 18px; }
+      .logo-sub { font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-text">
+          <span class="logo-main">AllDrinks</span>
+          <span class="logo-sub" data-i18n="logo_sub">System</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="th" onclick="setLanguage('th')">TH</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <nav class="nav-links">
+          <a href="#products" data-i18n="nav_products">สินค้า</a>
+          <a href="#videos" data-i18n="nav_videos">วิดีโอ</a>
+          <a href="categories.html" data-i18n="nav_recipes">สูตร</a>
+          <a href="#" onclick="openLineModal(); return false;" class="btn-nav" data-i18n="nav_contact">ติดต่อ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-brand">AllDrinks System</h1>
+      <p class="hero-tagline" data-i18n="hero_tagline">เครื่องทำเครื่องดื่มอัตโนมัติ</p>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ 1-20 ลิตร สำหรับธุรกิจและบ้าน</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary" data-i18n="hero_btn_products">🤖 ดูสินค้า</a>
+        <a href="categories.html" class="btn btn-secondary" data-i18n="hero_btn_recipes">📖 ดูสูตรทั้งหมด</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="feat_title">✨ จุดเด่นของ AllDrinks System</h2>
+        <p data-i18n="feat_subtitle">ออกแบบมาเพื่อการทำเครื่องดื่มที่ง่ายขึ้น</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚖️</div>
+          <h3 class="feature-title" data-i18n="feat1_title">ปรับปริมาณอัตโนมัติ</h3>
+          <p class="feature-desc" data-i18n="feat1_desc">ปรับได้ตั้งแต่ 1-20 ลิตร สูตรไม่เพี้ยน วัตถุดิบและขั้นตอนคำนวณให้ทันที</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌡️</div>
+          <h3 class="feature-title" data-i18n="feat2_title">ควบคุมอุณหภูมิแม่นยำ</h3>
+          <p class="feature-desc" data-i18n="feat2_desc">รักษาอุณหภูมิได้ ±1°C ตลอดกระบวนการ เหมาะสำหรับชา กาแฟ นม และเครื่องดื่มหมัก</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3 class="feature-title" data-i18n="feat3_title">กวนอัตโนมัติ</h3>
+          <p class="feature-desc" data-i18n="feat3_desc">ระบบกวนอัจฉริยะ ป้องกันการไหม้และช่วยให้ส่วนผสมเข้ากันสม่ำเสมอ</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <h3 class="feature-title" data-i18n="feat4_title">เชื่อมต่อสูตรในคลิกเดียว</h3>
+          <p class="feature-desc" data-i18n="feat4_desc">คัดลอกสูตรจาก AllDrinks แล้ววางลงในเครื่อง พร้อมใช้งานทันที</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="products_title"> สินค้า & อุปกรณ์</h2>
+        <p data-i18n="products_subtitle">เครื่องทำเครื่องดื่ม ชุดสมุนไพร และอุปกรณ์เสริม พร้อมส่ง</p>
+      </div>
+      <div class="product-grid">
+        
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">🤖</div>
+          <div class="product-body">
+            <h3 class="product-title" data-i18n="product1_title">AllDrinks System Pro</h3>
+            <p class="product-desc" data-i18n="product1_desc">เครื่องทำเครื่องดื่มอัตโนมัติ ความจุ 10 ลิตร ควบคุมอุณหภูมิและเวลาแม่นยำ รองรับ 22+ สูตร</p>
+            <div class="product-price" data-i18n="product1_price">฿45,000</div>
+            <a href="#" onclick="openLineModal(); return false;" class="btn-product" data-i18n="btn_inquire">สอบถามรายละเอียด</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">🌿</div>
+          <div class="product-body">
+            <h3 class="product-title" data-i18n="product2_title">ชุดสมุนไพรไทย</h3>
+            <p class="product-desc" data-i18n="product2_desc">ชุดสมุนไพรคุณภาพสูงสำหรับทำน้ำกระเจี๊ยบ เก๊กฮวย และสมุนไพรไทยอื่นๆ</p>
+            <div class="product-price" data-i18n="product2_price">฿2,500</div>
+            <a href="#" onclick="openLineModal(); return false;" class="btn-product" data-i18n="btn_inquire">สอบถามรายละเอียด</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">🧪</div>
+          <div class="product-body">
+            <h3 class="product-title" data-i18n="product3_title">ชุดเครื่องดื่มหมัก</h3>
+            <p class="product-desc" data-i18n="product3_desc">ชุดอุปกรณ์สำหรับทำคอมบูชา โยเกิร์ต และน้ำข้าวหมาก พร้อมหัวเชื้อคุณภาพ</p>
+            <div class="product-price" data-i18n="product3_price">฿3,200</div>
+            <a href="#" onclick="openLineModal(); return false;" class="btn-product" data-i18n="btn_inquire">สอบถามรายละเอียด</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="videos" id="videos">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="videos_title">🎥 วิดีโอสาธิต</h2>
+        <p data-i18n="videos_subtitle">ดูตัวอย่างการใช้งานและเทคนิคการทำเครื่องดื่ม</p>
+      </div>
+      <div class="video-grid">
+        
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/placeholder1" allowfullscreen></iframe>
+          </div>
+          <div class="video-title" data-i18n="video1_title">สาธิตการทำชาไทยด้วย AllDrinks System</div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/placeholder2" allowfullscreen></iframe>
+          </div>
+          <div class="video-title" data-i18n="video2_title">วิธีทำนมถั่วเหลืองอัตโนมัติ</div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/placeholder3" allowfullscreen></iframe>
+          </div>
+          <div class="video-title" data-i18n="video3_title">การทำคอมบูชาด้วยเครื่อง AllDrinks</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Integration -->
+  <section class="recipes-integration">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="recipes_title">📖 สูตรที่รองรับ</h2>
+        <p data-i18n="recipes_subtitle">AllDrinks System รองรับ 22+ สูตรจาก AllDrinks Masterclass</p>
+      </div>
+      <div class="recipe-showcase">
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon">🌺</div>
+          <div class="recipe-badge-name" data-i18n="recipe1">น้ำกระเจี๊ยบ</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon"></div>
+          <div class="recipe-badge-name" data-i18n="recipe2">ชาไทย</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon">🥛</div>
+          <div class="recipe-badge-name" data-i18n="recipe3">นมถั่วเหลือง</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon">🍫</div>
+          <div class="recipe-badge-name" data-i18n="recipe4">โกโก้</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon"></div>
+          <div class="recipe-badge-name" data-i18n="recipe5">คอมบูชา</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon">🥣</div>
+          <div class="recipe-badge-name" data-i18n="recipe6">โยเกิร์ต</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon">🌱</div>
+          <div class="recipe-badge-name" data-i18n="recipe7">น้ำใบบัวบก</div>
+        </div>
+        <div class="recipe-badge">
+          <div class="recipe-badge-icon"></div>
+          <div class="recipe-badge-name" data-i18n="recipe8">น้ำอัญชัน</div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="categories.html" class="btn btn-primary" data-i18n="btn_view_all_recipes">📖 ดูสูตรทั้งหมด 22+ สูตร</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2 data-i18n="cta_title">พร้อมยกระดับธุรกิจเครื่องดื่มของคุณ?</h2>
+      <p data-i18n="cta_subtitle">ติดต่อเราเพื่อขอใบเสนอราคาและสาธิตการใช้งาน</p>
+      <a href="#" onclick="openLineModal(); return false;" class="btn" data-i18n="cta_btn"> ติดต่อผ่าน LINE</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>AllDrinks System</h3>
+        <p style="font-size: 14px; color: #b0b0b0; line-height: 1.6;" data-i18n="footer_desc">
+          เครื่องทำเครื่องดื่มอัตโนมัติ รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ สำหรับธุรกิจและบ้าน
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_menu">เมนูหลัก</h3>
+        <ul>
+          <li><a href="#products" data-i18n="footer_products">สินค้า</a></li>
+          <li><a href="#videos" data-i18n="footer_videos">วิดีโอ</a></li>
+          <li><a href="categories.html" data-i18n="footer_recipes">สูตร</a></li>
+          <li><a href="#" onclick="openLineModal(); return false;" data-i18n="footer_contact">ติดต่อ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_categories">หมวดหมู่สินค้า</h3>
+        <ul>
+          <li><a href="#" data-i18n="cat_machine">เครื่องทำเครื่องดื่ม</a></li>
+          <li><a href="#" data-i18n="cat_herbs">ชุดสมุนไพร</a></li>
+          <li><a href="#" data-i18n="cat_ferment">ชุดเครื่องดื่มหมัก</a></li>
+          <li><a href="#" data-i18n="cat_accessories">อุปกรณ์เสริม</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_contact">ติดต่อเรา</h3>
+        <ul>
+          <li>
+            <a href="#" onclick="openLineModal(); return false;" style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: #06C755; font-size: 18px;">💬</span> 
+              <span data-i18n="footer_line">ติดต่อผ่าน LINE</span>
+            </a>
+          </li>
+          <li><a href="mailto:info@alldrinks.xyz">✉️ info@alldrinks.xyz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 AllDrinks. All rights reserved. | alldrinks.xyz</p>
+    </div>
+  </footer>
+
+  <!-- LINE QR Code Modal -->
+  <div id="lineModal" class="modal-overlay" onclick="closeLineModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLineModal()" aria-label="Close">&times;</button>
+      
+      <h3 data-i18n="modal_line_title">เพิ่มเพื่อนผ่าน LINE</h3>
+      <p data-i18n="modal_line_desc" class="modal-desc">สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป</p>
+      
+      <img src="images/line-qr-code.png" alt="LINE Official Account QR Code" class="qr-image">
+      
+      <a href="https://line.me/ti/p/@atikomtce4" target="_blank" class="btn-line-official">
+        <span>💬</span> <span data-i18n="modal_line_btn">เปิดแอป LINE</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const i18n = {
+      th: {
+        logo_sub: "System",
+        nav_products: "สินค้า",
+        nav_videos: "วิดีโอ",
+        nav_recipes: "สูตร",
+        nav_contact: "ติดต่อ",
+        hero_tagline: "เครื่องทำเครื่องดื่มอัตโนมัติ",
+        hero_subtitle: "รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ 1-20 ลิตร สำหรับธุรกิจและบ้าน",
+        hero_btn_products: " ดูสินค้า",
+        hero_btn_recipes: "📖 ดูสูตรทั้งหมด",
+        feat_title: "✨ จุดเด่นของ AllDrinks System",
+        feat_subtitle: "ออกแบบมาเพื่อการทำเครื่องดื่มที่ง่ายขึ้น",
+        feat1_title: "ปรับปริมาณอัตโนมัติ",
+        feat1_desc: "ปรับได้ตั้งแต่ 1-20 ลิตร สูตรไม่เพี้ยน วัตถุดิบและขั้นตอนคำนวณให้ทันที",
+        feat2_title: "ควบคุมอุณหภูมิแม่นยำ",
+        feat2_desc: "รักษาอุณหภูมิได้ ±1°C ตลอดกระบวนการ เหมาะสำหรับชา กาแฟ นม และเครื่องดื่มหมัก",
+        feat3_title: "กวนอัตโนมัติ",
+        feat3_desc: "ระบบกวนอัจฉริยะ ป้องกันการไหม้และช่วยให้ส่วนผสมเข้ากันสม่ำเสมอ",
+        feat4_title: "เชื่อมต่อสูตรในคลิกเดียว",
+        feat4_desc: "คัดลอกสูตรจาก AllDrinks แล้ววางลงในเครื่อง พร้อมใช้งานทันที",
+        products_title: "🛒 สินค้า & อุปกรณ์",
+        products_subtitle: "เครื่องทำเครื่องดื่ม ชุดสมุนไพร และอุปกรณ์เสริม พร้อมส่ง",
+        product1_title: "AllDrinks System Pro",
+        product1_desc: "เครื่องทำเครื่องดื่มอัตโนมัติ ความจุ 10 ลิตร ควบคุมอุณหภูมิและเวลาแม่นยำ รองรับ 22+ สูตร",
+        product1_price: "฿45,000",
+        product2_title: "ชุดสมุนไพรไทย",
+        product2_desc: "ชุดสมุนไพรคุณภาพสูงสำหรับทำน้ำกระเจี๊ยบ เก๊กฮวย และสมุนไพรไทยอื่นๆ",
+        product2_price: "฿2,500",
+        product3_title: "ชุดเครื่องดื่มหมัก",
+        product3_desc: "ชุดอุปกรณ์สำหรับทำคอมบูชา โยเกิร์ต และน้ำข้าวหมาก พร้อมหัวเชื้อคุณภาพ",
+        product3_price: "฿3,200",
+        btn_inquire: "สอบถามรายละเอียด",
+        videos_title: "🎥 วิดีโอสาธิต",
+        videos_subtitle: "ดูตัวอย่างการใช้งานและเทคนิคการทำเครื่องดื่ม",
+        video1_title: "สาธิตการทำชาไทยด้วย AllDrinks System",
+        video2_title: "วิธีทำนมถั่วเหลืองอัตโนมัติ",
+        video3_title: "การทำคอมบูชาด้วยเครื่อง AllDrinks",
+        recipes_title: "📖 สูตรที่รองรับ",
+        recipes_subtitle: "AllDrinks System รองรับ 22+ สูตรจาก AllDrinks Masterclass",
+        recipe1: "น้ำกระเจี๊ยบ",
+        recipe2: "ชาไทย",
+        recipe3: "นมถั่วเหลือง",
+        recipe4: "โกโก้",
+        recipe5: "คอมบูชา",
+        recipe6: "โยเกิร์ต",
+        recipe7: "น้ำใบบัวบก",
+        recipe8: "น้ำอัญชัน",
+        btn_view_all_recipes: "📖 ดูสูตรทั้งหมด 22+ สูตร",
+        cta_title: "พร้อมยกระดับธุรกิจเครื่องดื่มของคุณ?",
+        cta_subtitle: "ติดต่อเราเพื่อขอใบเสนอราคาและสาธิตการใช้งาน",
+        cta_btn: "💬 ติดต่อผ่าน LINE",
+        footer_desc: "เครื่องทำเครื่องดื่มอัตโนมัติ รองรับ 22+ สูตร ควบคุมอุณหภูมิและปริมาณแม่นยำ สำหรับธุรกิจและบ้าน",
+        footer_menu: "เมนูหลัก",
+        footer_products: "สินค้า",
+        footer_videos: "วิดีโอ",
+        footer_recipes: "สูตร",
+        footer_contact: "ติดต่อ",
+        footer_categories: "หมวดหมู่สินค้า",
+        cat_machine: "เครื่องทำเครื่องดื่ม",
+        cat_herbs: "ชุดสมุนไพร",
+        cat_ferment: "ชุดเครื่องดื่มหมัก",
+        cat_accessories: "อุปกรณ์เสริม",
+        footer_line: "ติดต่อผ่าน LINE",
+        modal_line_title: "เพิ่มเพื่อนผ่าน LINE",
+        modal_line_desc: "สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป",
+        modal_line_btn: "เปิดแอป LINE"
+      },
+      en: {
+        logo_sub: "System",
+        nav_products: "Products",
+        nav_videos: "Videos",
+        nav_recipes: "Recipes",
+        nav_contact: "Contact",
+        hero_tagline: "Automatic Beverage Machine",
+        hero_subtitle: "Supports 22+ recipes with precise temperature and volume control 1-20 liters for business and home",
+        hero_btn_products: "🤖 View Products",
+        hero_btn_recipes: "📖 View All Recipes",
+        feat_title: "✨ AllDrinks System Features",
+        feat_subtitle: "Designed to make beverage making easier",
+        feat1_title: "Auto Scaling",
+        feat1_desc: "Scale from 1-20 liters with perfect ratios. Ingredients and steps calculated automatically",
+        feat2_title: "Precise Temperature Control",
+        feat2_desc: "Maintains temperature within ±1°C throughout the process. Perfect for tea, coffee, milk, and fermented drinks",
+        feat3_title: "Automatic Stirring",
+        feat3_desc: "Smart stirring system prevents burning and ensures consistent mixing",
+        feat4_title: "One-Click Recipe Transfer",
+        feat4_desc: "Copy recipes from AllDrinks and paste into the machine, ready to use instantly",
+        products_title: "🛒 Products & Equipment",
+        products_subtitle: "Beverage machines, herbal kits, and accessories ready to ship",
+        product1_title: "AllDrinks System Pro",
+        product1_desc: "Automatic beverage machine, 10L capacity, precise temperature and time control, supports 22+ recipes",
+        product1_price: "฿45,000",
+        product2_title: "Thai Herbal Kit",
+        product2_desc: "Premium herbal kit for making roselle, chrysanthemum, and other Thai herbal drinks",
+        product2_price: "฿2,500",
+        product3_title: "Fermented Drink Kit",
+        product3_desc: "Equipment kit for making kombucha, yogurt, and fermented rice with quality starter cultures",
+        product3_price: "฿3,200",
+        btn_inquire: "Inquire Details",
+        videos_title: "🎥 Demo Videos",
+        videos_subtitle: "Watch usage examples and beverage making techniques",
+        video1_title: "Thai Tea Making Demo with AllDrinks System",
+        video2_title: "How to Make Soy Milk Automatically",
+        video3_title: "Making Kombucha with AllDrinks Machine",
+        recipes_title: " Supported Recipes",
+        recipes_subtitle: "AllDrinks System supports 22+ recipes from AllDrinks Masterclass",
+        recipe1: "Roselle Juice",
+        recipe2: "Thai Tea",
+        recipe3: "Soy Milk",
+        recipe4: "Cocoa",
+        recipe5: "Kombucha",
+        recipe6: "Yogurt",
+        recipe7: "Pennywort Juice",
+        recipe8: "Butterfly Pea",
+        btn_view_all_recipes: "📖 View All 22+ Recipes",
+        cta_title: "Ready to elevate your beverage business?",
+        cta_subtitle: "Contact us for a quote and demonstration",
+        cta_btn: "💬 Contact via LINE",
+        footer_desc: "Automatic beverage machine supporting 22+ recipes with precise temperature and volume control for business and home",
+        footer_menu: "Main Menu",
+        footer_products: "Products",
+        footer_videos: "Videos",
+        footer_recipes: "Recipes",
+        footer_contact: "Contact",
+        footer_categories: "Product Categories",
+        cat_machine: "Beverage Machines",
+        cat_herbs: "Herbal Kits",
+        cat_ferment: "Fermented Drink Kits",
+        cat_accessories: "Accessories",
+        footer_line: "Contact via LINE",
+        modal_line_title: "Add us on LINE",
+        modal_line_desc: "Scan the QR code below or click the button to open the app",
+        modal_line_btn: "Open LINE App"
+      }
+    };
+
+    let currentLang = localStorage.getItem('preferredLang') || 'th';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('preferredLang', lang);
+      
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      document.documentElement.lang = lang;
+    }
+
+    function openLineModal() {
+      document.getElementById('lineModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLineModal(event) {
+      if (!event || event.target.id === 'lineModal' || event.target.classList.contains('modal-close')) {
+        document.getElementById('lineModal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLineModal();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+
+</body>
+</html>
