@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - Beverage Masterclass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #2e7d32;
+      --primary-light: #e8f5e9;
+      --secondary: #2196F3;
+      --warning: #ff9800;
+      --danger: #f44336;
+      --text: #212121;
+      --text-light: #757575;
+      --bg: #f5f5f5;
+      --white: #ffffff;
+      --border: #e0e0e0;
+      --code-bg: #263238;
+      --code-text: #aed581;
+    }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 32px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    .btn-white:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-list li {
+      margin-bottom: 4px;
+    }
+
+    .toc-list a {
+      display: block;
+      padding: 8px 12px;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+    }
+
+    .toc-list a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-left-color: var(--primary);
+    }
+
+    .toc-list .sub-item {
+      padding-left: 24px;
+      font-size: 13px;
+    }
+
+    /* Main Content */
+    .main-content {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .main-content h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .main-content h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 32px 0 16px;
+      padding-left: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .main-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 12px;
+    }
+
+    .main-content p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .main-content ul, .main-content ol {
+      margin: 0 0 16px 24px;
+    }
+
+    .main-content li {
+      margin-bottom: 8px;
+    }
+
+    /* Code Blocks */
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    code {
+      background: #f5f5f5;
+      color: var(--danger);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    pre:hover .copy-btn {
+      opacity: 1;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background: var(--primary-light);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 16px 0;
+      border-left: 4px solid;
+    }
+
+    .callout-tip {
+      background: #e8f5e9;
+      border-color: var(--primary);
+      color: #1b5e20;
+    }
+
+    .callout-warning {
+      background: #fff3e0;
+      border-color: var(--warning);
+      color: #e65100;
+    }
+
+    .callout-danger {
+      background: #ffebee;
+      border-color: var(--danger);
+      color: #c62828;
+    }
+
+    .callout-info {
+      background: #e3f2fd;
+      border-color: var(--secondary);
+      color: #0d47a1;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Flow Diagram */
+    .flow-diagram {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+      padding: 32px;
+      border-radius: 12px;
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+
+    .flow-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      min-width: 600px;
+    }
+
+    .flow-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      min-width: 150px;
+      border: 2px solid var(--primary);
+      transition: transform 0.2s;
+    }
+
+    .flow-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .flow-box .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .flow-box .title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .flow-box .desc {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .flow-arrow {
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* File Tree */
+    .file-tree {
+      background: #263238;
+      color: #aed581;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    .file-tree .folder {
+      color: #64b5f6;
+      font-weight: 700;
+    }
+
+    .file-tree .file {
+      color: #aed581;
+    }
+
+    .file-tree .comment {
+      color: #78909c;
+      font-style: italic;
+    }
+
+    /* Steps */
+    .step-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+
+    .step-number {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-success { background: #c8e6c9; color: #1b5e20; }
+    .badge-warning { background: #ffe0b2; color: #e65100; }
+    .badge-danger { background: #ffcdd2; color: #c62828; }
+    .badge-info { background: #bbdefb; color: #0d47a1; }
+
+    /* Score Card */
+    .score-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 24px 0;
+      box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
+    }
+
+    .score-number {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .score-label {
+      font-size: 18px;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    .score-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .score-item {
+      background: rgba(255,255,255,0.15);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 24px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin: 4px 0;
+      opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .main-content {
+        padding: 20px;
+      }
+
+      .main-content h1 {
+        font-size: 24px;
+      }
+
+      .main-content h2 {
+        font-size: 20px;
+      }
+
+      .flow-container {
+        flex-direction: column;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">🍹</span>
+        <span>Beverage Masterclass</span>
+      </div>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-white">🏠 หน้าแรก</a>
+        <a href="recipes.html" class="btn btn-white">📖 จัดการสูตร</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Sidebar / Table of Contents -->
+    <aside class="sidebar">
+      <h3>📑 สารบัญ</h3>
+      <ul class="toc-list">
+        <li><a href="#overview">1. ภาพรวมระบบ</a></li>
+        <li><a href="#builder">2. สร้างสูตรด้วย Builder</a></li>
+        <li><a href="#github">3. อัปโหลดขึ้น GitHub</a></li>
+        <li><a href="#web-viewer">4. ดูสูตรบน Web</a></li>
+        <li><a href="#esp32">5. Import ลง ESP32</a></li>
+        <li><a href="#edit">6. การแก้ไขสูตร</a></li>
+        <li><a href="#troubleshooting">7. Troubleshooting</a></li>
+        <li><a href="#faq">8. FAQ</a></li>
+        <li><a href="#architecture">9. Architecture</a></li>
+        <li><a href="#changelog">10. Changelog</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Section 1: Overview -->
+      <section id="overview">
+        <h1>📚 คู่มือการใช้งาน Beverage Masterclass</h1>
+        <p>ยินดีต้อนรับสู่คู่มือการใช้งานระบบ <strong>Beverage Masterclass</strong> อย่างครบถ้วน</p>
+
+        <h2>🔄 Workflow หลัก</h2>
+        <div class="flow-diagram">
+          <div class="flow-container">
+            <div class="flow-box">
+              <div class="icon">🛠️</div>
+              <div class="title">Builder</div>
+              <div class="desc">สร้างสูตร</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">
+              <div class="icon">📦</div>
+              <div class="title">GitHub</div>
+              <div class="desc">เก็บไฟล์</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">
+              <div class="icon">🌐</div>
+              <div class="title">Web Viewer</div>
+              <div class="desc">ดูสูตร</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">
+              <div class="icon">📋</div>
+              <div class="title">Clipboard</div>
+              <div class="desc">Copy JSON</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box">
+              <div class="icon">🤖</div>
+              <div class="title">ESP32</div>
+              <div class="desc">รันสูตร</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>📁 โครงสร้างไฟล์</h2>
+        <div class="file-tree">
+<span class="folder">BeverageSystem/</span>
+├── <span class="file">index.html</span>              <span class="comment">← หน้าแรก (เลือกหมวดหมู่)</span>
+├── <span class="file">category.html</span>           <span class="comment">← หน้าหมวดหมู่</span>
+├── <span class="file">recipe.html</span>             <span class="comment">← หน้าดูสูตร + Copy ไป ESP32</span>
+├── <span class="file">builder.html</span>            <span class="comment">← เครื่องมือสร้าง Machine JSON</span>
+├── <span class="file">web-builder.html</span>        <span class="comment">← เครื่องมือสร้าง Web Content</span>
+│
+├── <span class="folder">recipes/</span>
+│   ├── <span class="folder">herbal/</span>
+│   │   ├── <span class="file">roselle_10L.json</span>    <span class="comment">← Master JSON (ต้นฉบับ)</span>
+│   │   ├── <span class="file">lemongrass_10L.json</span>
+│   │   └── <span class="file">...</span>
+│   ├── <span class="folder">tea/</span>
+│   ├── <span class="folder">milk/</span>
+│   └── <span class="folder">ferment/</span>
+│
+├── <span class="folder">images/</span>
+│   └── <span class="folder">herbal/</span>
+│       └── <span class="folder">roselle_10L/</span>
+│           ├── <span class="file">main_1.jpg</span>
+│           └── <span class="file">step_1.jpg</span>
+│
+└── <span class="folder">css/</span>
+    └── <span class="file">mobile-style.css</span>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-title">💡 ข้อมูลสำคัญ</div>
+          <p>ระบบมีไฟล์ JSON 2 ประเภท:</p>
+          <ul>
+            <li><strong>Master JSON</strong> (เช่น <code>roselle_10L.json</code>): มีข้อมูลครบถ้วน ทั้ง TH/EN, รูปภาพ, วิดีโอ</li>
+            <li><strong>FML JSON</strong> (เช่น <code>FML_roselle_10L.json</code>): มีเฉพาะข้อมูลที่เครื่องต้องการ</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 2: Builder -->
+      <section id="builder">
+        <h2>2. 🛠️ สร้างสูตรด้วย Builder</h2>
+
+        <h3>🎯 เป้าหมาย</h3>
+        <p>สร้างไฟล์ <strong>Master JSON</strong> ที่มีข้อมูลครบถ้วน ทั้งภาษาไทย/อังกฤษ รูปภาพ และขั้นตอนการทำงาน</p>
+
+        <h3>📝 วิธีทำ</h3>
+
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <strong>เปิด Builder</strong>
+          <p style="margin: 8px 0 0 44px;">เปิดไฟล์ <code>web-builder.html</code> ใน Browser (Chrome/Edge/Firefox)</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <strong>กรอกข้อมูลพื้นฐาน (แท็บ 1)</strong>
+          <div style="margin: 8px 0 0 44px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>ฟิลด์</th>
+                  <th>คำอธิบาย</th>
+                  <th>ตัวอย่าง</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Recipe ID</td>
+                  <td>ชื่อไฟล์ (ไม่มี .json)</td>
+                  <td><code>roselle_10L</code></td>
+                </tr>
+                <tr>
+                  <td>Category</td>
+                  <td>หมวดหมู่</td>
+                  <td><code>herbal</code></td>
+                </tr>
+                <tr>
+                  <td>Icon</td>
+                  <td>ไอคอนแสดงหน้าเว็บ</td>
+                  <td><code>🌺</code></td>
+                </tr>
+                <tr>
+                  <td>Base Volume</td>
+                  <td>ปริมาณเริ่มต้น</td>
+                  <td><code>10</code> (ลิตร)</td>
+                </tr>
+                <tr>
+                  <td>Total Time</td>
+                  <td>เวลารวมทั้งหมด</td>
+                  <td><code>163</code> นาที</td>
+                </tr>
+                <tr>
+                  <td>Target Temp</td>
+                  <td>อุณหภูมิหลัก</td>
+                  <td><code>95</code> °C</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <strong>กรอกข้อมูลรายละเอียด (แท็บ 2)</strong>
+          <p style="margin: 8px 0 0 44px;">กรอกข้อมูล 2 ภาษา (TH/EN) ให้ครบ: ชื่อสูตร, คำนำ, สรรพคุณ, คำเตือน, เวลาเตรียม/ทำ, ข้อมูลโภชนาการ</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">4</span>
+          <strong>เพิ่มวัตถุดิบ (แท็บ 3)</strong>
+          <p style="margin: 8px 0 0 44px;">กด <strong>"+ เพิ่มวัตถุดิบ"</strong> แล้วกรอกชื่อ (TH/EN), ปริมาณ + หน่วย, ติ๊ก <strong>Scalable</strong> ถ้าต้องการให้ปรับตามปริมาณ</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">5</span>
+          <strong>เพิ่มขั้นตอนทำเอง (แท็บ 4)</strong>
+          <p style="margin: 8px 0 0 44px;">กด <strong>"+ เพิ่มขั้นตอนทำเอง"</strong> แล้วกรอก Title, Description (ใช้ <code>{key}</code> แทนตัวแปร), Image path, Tips, Desc Variables</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">6</span>
+          <strong>เพิ่มขั้นตอนเครื่อง (แท็บ 5)</strong>
+          <p style="margin: 8px 0 0 44px;">กด <strong>"+ เพิ่มขั้นตอนเครื่อง"</strong> แล้วกรอก Function, Target Value + Unit, Duration + Timeout, Outputs, Title/Description</p>
+        </div>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">💡 เคล็ดลับ</div>
+          <p>ใช้ปุ่ม <strong>📥 Import JSON</strong> เพื่อดึงข้อมูลจากไฟล์ FML ที่มีอยู่แล้ว แล้วค่อยแก้ไข จะประหยัดเวลามาก!</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">7</span>
+          <strong>Export ไฟล์</strong>
+          <p style="margin: 8px 0 0 44px;">กดปุ่ม <strong>🌐 Export Web JSON</strong> → ได้ไฟล์ <code>roselle_10L.json</code></p>
+        </div>
+      </section>
+
+      <!-- Section 3: GitHub -->
+      <section id="github">
+        <h2>3. 📦 อัปโหลดขึ้น GitHub</h2>
+
+        <h3>🎯 เป้าหมาย</h3>
+        <p>นำไฟล์ Master JSON ไปเก็บไว้บน GitHub Pages เพื่อให้ Web Viewer ดึงไปใช้ได้</p>
+
+        <h3>📝 วิธีทำ</h3>
+
+        <h4>วิธีที่ 1: ผ่าน GitHub Web UI</h4>
+        <ol>
+          <li>ไปที่ <code>github.com/yourusername/BeverageSystem</code></li>
+          <li>ไปที่โฟลเดอร์ <code>recipes/herbal/</code></li>
+          <li>กด <strong>"Add file" → "Upload files"</strong></li>
+          <li>ลากไฟล์ <code>roselle_10L.json</code> ลงไป</li>
+          <li>กด <strong>"Commit changes"</strong></li>
+        </ol>
+
+        <h4>วิธีที่ 2: ผ่าน Git Command Line</h4>
+        <pre><code># เพิ่มไฟล์
+git add recipes/herbal/roselle_10L.json
+
+# Commit
+git commit -m "Add roselle 10L recipe"
+
+# Push
+git push origin main</code><button class="copy-btn" onclick="copyCode(this)">📋 Copy</button></pre>
+
+        <h3>✅ ตรวจสอบ</h3>
+        <ol>
+          <li>รอ 1-2 นาทีให้ GitHub Pages deploy</li>
+          <li>เปิด <code>https://yourusername.github.io/BeverageSystem/</code></li>
+          <li>ตรวจสอบว่าสูตรปรากฏในหน้าเว็บ</li>
+        </ol>
+      </section>
+
+      <!-- Section 4: Web Viewer -->
+      <section id="web-viewer">
+        <h2>4. 🌐 ดูสูตรบน Web</h2>
+
+        <h3>🎯 เป้าหมาย</h3>
+        <p>ดูสูตรที่อัปโหลดไว้ ปรับปริมาณ และ Copy JSON ไปใช้กับ ESP32</p>
+
+        <h3>📝 วิธีทำ</h3>
+
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <strong>เปิดหน้าสูตร</strong>
+          <p style="margin: 8px 0 0 44px;">ไปที่ <code>https://yourusername.github.io/BeverageSystem/</code> → เลือกหมวดหมู่ → คลิกที่สูตร</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <strong>ปรับปริมาณ</strong>
+          <p style="margin: 8px 0 0 44px;">ใช้ <strong>Slider</strong> หรือกดปุ่ม <strong>Preset</strong> (1L, 2L, 5L, 10L, 15L, 20L)</p>
+          <ul style="margin-left: 44px;">
+            <li>✅ วัตถุดิบจะปรับตามปริมาณ</li>
+            <li>✅ ขั้นตอนเครื่องจะปรับ Target ตาม</li>
+            <li>✅ เวลาต้ม/สกัดจะไม่เปลี่ยน (คงที่)</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <strong>Copy JSON ไป ESP32</strong>
+          <div style="margin: 8px 0 0 44px;">
+            <p><strong>โหมด Machine (🤖 ใช้เครื่อง):</strong></p>
+            <ol>
+              <li>กดปุ่ม <strong>"📋 คัดลอกสูตรเข้าเครื่อง (XL)"</strong></li>
+              <li>ระบบจะ Copy JSON ที่ Scale แล้วลง Clipboard</li>
+              <li>ไปที่หน้า ESP32 → Paste → บันทึก</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: ESP32 -->
+      <section id="esp32">
+        <h2>5. 🤖 Import ลง ESP32</h2>
+
+        <h3>🎯 เป้าหมาย</h3>
+        <p>นำสูตรจาก Web ไปเก็บไว้ใน ESP32 เพื่อใช้งาน</p>
+
+        <h3>📝 วิธีทำ</h3>
+
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <strong>เข้าหน้า ESP32</strong>
+          <p style="margin: 8px 0 0 44px;">เชื่อมต่อ WiFi กับ ESP32 → เปิด Browser → เข้า <code>http://192.168.4.1/</code></p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <strong>Import สูตร</strong>
+          <div style="margin: 8px 0 0 44px;">
+            <ol>
+              <li>กดปุ่ม <strong>"➕ สร้างสูตรใหม่"</strong></li>
+              <li>กดปุ่ม <strong>"📥 Import"</strong></li>
+              <li>Paste JSON ที่ Copy จาก Web</li>
+              <li>กด <strong>"💾 บันทึกสูตร"</strong></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <strong>ตรวจสอบ</strong>
+          <p style="margin: 8px 0 0 44px;">สูตรจะปรากฏในรายการ → คลิกเพื่อดูรายละเอียด → กด <strong>"▶️ เริ่มทำงาน"</strong> เพื่อรันสูตร</p>
+        </div>
+      </section>
+
+      <!-- Section 6: Edit -->
+      <section id="edit">
+        <h2>6. ✏️ การแก้ไขสูตร</h2>
+
+        <h3>🎯 เป้าหมาย</h3>
+        <p>แก้ไข Master JSON ที่มีอยู่แล้ว</p>
+
+        <h3>📝 วิธีทำ</h3>
+
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <strong>Download ไฟล์เดิม</strong>
+          <p style="margin: 8px 0 0 44px;">ไปที่ GitHub → คลิกที่ไฟล์ → กดปุ่ม <strong>"Raw"</strong> → กด <strong>Ctrl+S</strong> เพื่อดาวน์โหลด</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <strong>Import เข้า Builder</strong>
+          <p style="margin: 8px 0 0 44px;">เปิด <code>web-builder.html</code> → กดปุ่ม <strong>"📥 Import JSON"</strong> → ระบบจะ Auto-Detect และโหลดข้อมูลทั้งหมด</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <strong>แก้ไขและ Export</strong>
+          <p style="margin: 8px 0 0 44px;">แก้ไขข้อมูลที่ต้องการ → กด <strong>"🌐 Export Web JSON"</strong> → อัปโหลดขึ้น GitHub (ทับไฟล์เดิม)</p>
+        </div>
+      </section>
+
+      <!-- Section 7: Troubleshooting -->
+      <section id="troubleshooting">
+        <h2>7. 🔧 Troubleshooting</h2>
+
+        <div class="callout callout-danger">
+          <div class="callout-title">❌ เปิด Builder แล้ว Error</div>
+          <p><strong>สาเหตุ:</strong> Browser ไม่รองรับ JavaScript บางฟีเจอร์</p>
+          <p><strong>วิธีแก้:</strong> ใช้ Chrome/Edge/Firefox เวอร์ชันล่าสุด</p>
+        </div>
+
+        <div class="callout callout-danger">
+          <div class="callout-title">❌ Import JSON แล้ว Error "Cannot read properties of undefined"</div>
+          <p><strong>สาเหตุ:</strong> ไฟล์ JSON ผิด format</p>
+          <p><strong>วิธีแก้:</strong></p>
+          <ol>
+            <li>ตรวจสอบว่าเป็น JSON ที่ถูกต้อง (ใช้ <a href="https://jsonlint.com/" target="_blank">JSON Validator</a>)</li>
+            <li>ตรวจสอบว่ามี field ที่จำเป็นครบถ้วน</li>
+            <li>ลอง Import ใหม่</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">⚠️ Web ไม่แสดงสูตรที่อัปโหลด</div>
+          <p><strong>สาเหตุ:</strong> GitHub Pages ยังไม่ deploy</p>
+          <p><strong>วิธีแก้:</strong></p>
+          <ol>
+            <li>รอ 1-2 นาที</li>
+            <li>กด <strong>Ctrl+F5</strong> เพื่อล้าง Cache</li>
+            <li>ตรวจสอบว่าไฟล์อยู่ในโฟลเดอร์ที่ถูกต้อง</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">⚠️ ESP32 Import แล้วไม่ทำงาน</div>
+          <p><strong>สาเหตุ:</strong> JSON ที่ Copy มาไม่สมบูรณ์</p>
+          <p><strong>วิธีแก้:</strong></p>
+          <ol>
+            <li>ตรวจสอบว่า Copy JSON ครบถ้วน (ไม่มีตัดขาด)</li>
+            <li>ตรวจสอบว่า ESP32 มีพื้นที่ว่างพอ</li>
+            <li>ลอง Paste ใหม่</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-title">ℹ️ ค่า Target ไม่เปลี่ยนเมื่อปรับปริมาณ</div>
+          <p><strong>สาเหตุ:</strong> Field <code>scalable</code> ตั้งค่าเป็น <code>false</code></p>
+          <p><strong>วิธีแก้:</strong> เปิด Master JSON → ตรวจสอบว่า <code>scalable: true</code> ในขั้นตอนที่ต้องการให้ปรับ → Export ใหม่</p>
+        </div>
+      </section>
+
+      <!-- Section 8: FAQ -->
+      <section id="faq">
+        <h2>8. ❓ FAQ</h2>
+
+        <h3>Q: สามารถใช้ Builder แบบ Offline ได้ไหม?</h3>
+        <p><strong>A:</strong> ได้ครับ Builder เป็น HTML ไฟล์เดียว รันบน Browser ได้เลย ไม่ต้องต่ออินเทอร์เน็ต</p>
+
+        <h3>Q: สามารถเพิ่มภาษาอื่น besides TH/EN ได้ไหม?</h3>
+        <p><strong>A:</strong> ได้ครับ แต่ต้องแก้โค้ดใน <code>app.js</code> และ <code>web-builder.html</code> ให้รองรับภาษาที่ 3</p>
+
+        <h3>Q: ESP32 สามารถเก็บสูตรได้กี่สูตร?</h3>
+        <p><strong>A:</strong> ขึ้นอยู่กับรุ่นของ ESP32 และขนาดของสูตร โดยทั่วไปเก็บได้ 20-50 สูตร</p>
+
+        <h3>Q: สามารถ Export สูตรเป็น PDF ได้ไหม?</h3>
+        <p><strong>A:</strong> ยังไม่มีฟีเจอร์นี้ในเวอร์ชันปัจจุบัน แต่สามารถเพิ่มได้ใน Phase ถัดไป</p>
+
+        <h3>Q: ถ้า GitHub ล่ม จะใช้งานไม่ได้ไหม?</h3>
+        <p><strong>A:</strong> ถ้า ESP32 มีสูตรที่ Import ไว้แล้ว ยังใช้งานได้ครับ แต่ถ้าต้องการสูตรใหม่ ต้องรอ GitHub กลับมา</p>
+
+        <h3>Q: สามารถใช้ Local Server แทน GitHub ได้ไหม?</h3>
+        <p><strong>A:</strong> ได้ครับ ใช้ Python Simple HTTP Server:</p>
+        <pre><code>cd BeverageSystem
+python -m http.server 8000</code><button class="copy-btn" onclick="copyCode(this)">📋 Copy</button></pre>
+        <p>แล้วเปิด <code>http://localhost:8000/</code></p>
+      </section>
+
+      <!-- Section 9: Architecture -->
+      <section id="architecture">
+        <h2>9. 🏗️ Architecture</h2>
+
+        <h3>📊 คะแนนรวม: 8/10</h3>
+        <div class="score-card">
+          <div class="score-number">8/10</div>
+          <div class="score-label">⭐ คะแนนภาพรวม</div>
+          <div class="score-details">
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">9/10</div>
+              <div style="font-size: 13px;">Architecture</div>
+            </div>
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">8/10</div>
+              <div style="font-size: 13px;">UX/UI</div>
+            </div>
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">8/10</div>
+              <div style="font-size: 13px;">Code Quality</div>
+            </div>
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">7/10</div>
+              <div style="font-size: 13px;">Scalability</div>
+            </div>
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">6/10</div>
+              <div style="font-size: 13px;">Reliability</div>
+            </div>
+            <div class="score-item">
+              <div style="font-size: 24px; font-weight: 700;">5/10</div>
+              <div style="font-size: 13px;">Documentation</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>✅ จุดแข็ง</h3>
+        <ul>
+          <li><span class="badge badge-success">Architecture</span> แยก Master JSON ออกจาก FML JSON ชัดเจน</li>
+          <li><span class="badge badge-success">MVP Thinking</span> ตัดฟีเจอร์ที่ไม่จำเป็นออก</li>
+          <li><span class="badge badge-success">UX</span> ลื่นไหล ใช้ Clipboard แทนการดาวน์โหลด</li>
+          <li><span class="badge badge-success">Data Structure</span> ยืดหยุ่น ด้วย <code>scalable</code> flag</li>
+        </ul>
+
+        <h3>⚠️ จุดเสี่ยง</h3>
+        <ul>
+          <li><span class="badge badge-danger">High</span> ESP32 ต้อง Fetch จาก GitHub (HTTPS, CORS, RAM)</li>
+          <li><span class="badge badge-warning">Medium</span> ไม่มี Version Control ของสูตร</li>
+          <li><span class="badge badge-warning">Medium</span> Clipboard Workflow อาจไม่สะดวกสำหรับบางคน</li>
+          <li><span class="badge badge-info">Low</span> Error Handling ยังไม่ครอบคลุม</li>
+        </ul>
+
+        <h3>🚀 Phase ถัดไป</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>ระยะเวลา</th>
+              <th>ฟีเจอร์</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge-success">Phase 2</span></td>
+              <td>1-2 สัปดาห์</td>
+              <td>JSON Validation, Version tracking, ESP32 Cache, Error handling</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-info">Phase 3</span></td>
+              <td>2-3 สัปดาห์</td>
+              <td>QR Code, Preview Modal, Search/Filter, Favorites</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-warning">Phase 4</span></td>
+              <td>1-2 เดือน</td>
+              <td>Firebase/Supabase, Backend API, User accounts, Analytics</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 10: Changelog -->
+      <section id="changelog">
+        <h2>10. 📝 Changelog</h2>
+
+        <h3>Version 1.0 (2026-10-25)</h3>
+        <ul>
+          <li>✅ สร้าง Builder สำหรับ Machine JSON</li>
+          <li>✅ สร้าง Web Builder สำหรับ Web Content</li>
+          <li>✅ Auto-Detect Import</li>
+          <li>✅ Smart Ingredient Mapping</li>
+          <li>✅ Desc Variables สำหรับ placeholder</li>
+          <li>✅ Scale อัตโนมัติตามปริมาณ</li>
+          <li>✅ Copy JSON ไป ESP32 ผ่าน Clipboard</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>Beverage Masterclass Documentation</strong></p>
+    <p>เวอร์ชัน 1.0 | วันที่ 25 ตุลาคม 2026</p>
+    <p style="margin-top: 12px; font-size: 13px;">© 2026 Beverage Masterclass. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Copy code to clipboard
+    function copyCode(button) {
+      const code = button.previousSibling.textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const originalText = button.textContent;
+        button.textContent = '✅ Copied!';
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 2000);
+      });
+    }
+
+    // Smooth scroll for TOC
+    document.querySelectorAll('.toc-list a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Highlight active section in TOC
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPos = window.scrollY + 100;
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.toc-list a[href="#${id}"]`);
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          document.querySelectorAll('.toc-list a').forEach(l => l.style.borderLeftColor = 'transparent');
+          if (link) {
+            link.style.borderLeftColor = 'var(--primary)';
+            link.style.background = 'var(--primary-light)';
+          }
+        } else if (link) {
+          link.style.background = 'transparent';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

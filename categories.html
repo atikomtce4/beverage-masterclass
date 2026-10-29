@@ -203,60 +203,88 @@
     .cat-ferment { background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%); }
 
     /* ===== ✅ Footer แบบใหม่ (สวยงามและใช้งานได้จริง) ===== */
-    .mobile-footer {
-      background: var(--white);
-      padding: 32px 20px 24px;
-      text-align: center;
-      border-top: 1px solid rgba(0,0,0,0.05);
-      margin-top: auto; /* ดัน Footer ลงล่างสุดเสมอ */
+        /* ===== Compact Footer (สำหรับหน้าย่อย) ===== */
+    .footer-compact {
+      background: var(--text); /* สีเข้มเดียวกับ index */
+      color: white;
+      padding: 40px 20px 20px;
+      margin-top: auto;
     }
 
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      max-width: 400px;
+    .footer-compact-content {
+      max-width: 800px; /* แคบกว่า index เพื่อความกระชับ */
       margin: 0 auto;
+      text-align: center;
     }
 
-    .footer-home-link {
+    .footer-compact-cta {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .footer-compact-cta h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .footer-compact-cta p {
+      font-size: 14px;
+      color: #b0b0b0;
+      margin-bottom: 16px;
+    }
+
+    .btn-compact {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      padding: 8px 20px;
-      border-radius: 24px;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .footer-home-link:hover {
+      gap: 8px;
       background: var(--primary);
       color: white;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-compact:hover {
+      background: var(--primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
     }
 
-    .footer-tagline {
+    .footer-compact-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-compact-links a {
+      font-size: 14px;
+      color: #b0b0b0;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-compact-links a:hover {
+      color: white;
+    }
+
+    .footer-compact-bottom {
+      padding-top: 20px;
+      border-top: 1px solid #424242;
       font-size: 12px;
-      color: var(--text-light);
-      font-style: italic;
-      margin: 0;
-      opacity: 0.8;
+      color: #757575;
     }
-
-    .footer-copyright {
-      font-size: 12px;
-      color: var(--text-light);
-      opacity: 0.6;
-      margin: 0;
-    }
-
     /* ===== Responsive ===== */
     @media (max-width: 480px) {
       .page-header h1 { font-size: 22px; }
@@ -265,6 +293,107 @@
       .category-img { height: 100px; }
       .logo { font-size: 14px; }
       .lang-btn { padding: 3px 8px; font-size: 10px; }
+    }
+        /* ===== LINE Modal Styles ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px); /* เอฟเฟกต์เบลอพื้นหลัง */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: #757575;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: #212121;
+    }
+
+    .modal-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 13px;
+      color: #757575;
+      margin-bottom: 20px;
+    }
+
+    .qr-image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #FAFAFA;
+    }
+
+    .btn-line-official {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #06C755; /* สีเขียวทางการของ LINE */
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .btn-line-official:hover {
+      background: #05b34c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
     }
   </style>
 </head>
@@ -320,18 +449,54 @@
   </main>
 
   <!-- ✅ Footer แบบใหม่ -->
-  <footer class="mobile-footer">
-    <div class="footer-content">
-      <!-- ปุ่มกลับหน้าหลักใน Footer (สำหรับผู้ใช้ที่เลื่อนลงมาจนสุด) -->
-      <a href="index.html" class="footer-home-link">
-        <span>🏠</span> <span data-i18n="footer_home">กลับสู่หน้าหลัก</span>
-      </a>
+  <!-- Compact Footer -->
+  <footer class="footer-compact">
+    <div class="footer-compact-content">
       
-      <p class="footer-tagline" data-i18n="footer_tagline">Crafting Perfect Beverages, One Recipe at a Time</p>
-      <p class="footer-copyright">© 2026 Beverage Masterclass. All rights reserved.</p>
-    </div
-  </footer>
+      <!-- CTA Box: ดึงดูดให้ซื้อเครื่อง -->
+      <div class="footer-compact-cta">
+        <h3 data-i18n="footer_cta_title">สนใจเครื่อง Beverage System?</h3>
+        <p data-i18n="footer_cta_desc">ดูรายละเอียดเครื่องที่รองรับสูตรทั้งหมดในระบบ พร้อมขอใบเสนอราคา</p>
+        <a href="https://beveragesystem.com" class="btn-compact" data-i18n="footer_cta_btn">🤖 ไปที่หน้าร้านค้า</a>
+      </div>
 
+      <!-- Minimal Links -->
+      <div class="footer-compact-links">
+        <a href="index.html" data-i18n="footer_home">🏠 หน้าแรก</a>
+        <a href="categories.html" data-i18n="footer_categories">📂 หมวดหมู่</a>
+        <a href="mailto:info@beveragesystem.com">✉️ ติดต่อเรา</a>
+        <li>
+            <a href="#" onclick="openLineModal(); return false;" style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: #06C755; font-size: 18px;">💬</span> 
+              <span data-i18n="footer_line">ติดต่อผ่าน LINE</span>
+            </a>
+          </li>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-compact-bottom">
+        <p>© 2026 Beverage Masterclass. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- ===== LINE QR Code Modal ===== -->
+  <div id="lineModal" class="modal-overlay" onclick="closeLineModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLineModal()" aria-label="Close">&times;</button>
+      
+      <h3 data-i18n="modal_line_title">เพิ่มเพื่อนผ่าน LINE</h3>
+      <p data-i18n="modal_line_desc" class="modal-desc">สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป</p>
+      
+      <!-- ⚠️ อย่าลืมเปลี่ยน src เป็น path รูป QR Code จริงของคุณ -->
+      <img src="images/line-qr-code.png" alt="LINE Official Account QR Code" class="qr-image">
+      
+      <!-- ⚠️ อย่าลืมเปลี่ยน href เป็นลิงก์ LINE OA จริงของคุณ (เช่น https://line.me/ti/p/@yourlineid) -->
+      <a href="https://line.me/ti/p/~atikomtce4" target="_blank" class="btn-line-official">
+        <span>💬</span> <span data-i18n="modal_line_btn">เปิดแอป LINE</span>
+      </a>
+    </div>
+  </div>
   <script>
     const i18n = {
       th: {
@@ -396,6 +561,26 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang);
+    });
+        // ===== LINE Modal Functions =====
+    function openLineModal() {
+      document.getElementById('lineModal').classList.add('active');
+      document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าเว็บตอน Modal เปิด
+    }
+
+    function closeLineModal(event) {
+      // ปิดเมื่อคลิกที่พื้นหลัง (overlay) หรือกดปุ่ม X
+      if (!event || event.target.id === 'lineModal' || event.target.classList.contains('modal-close')) {
+        document.getElementById('lineModal').classList.remove('active');
+        document.body.style.overflow = ''; // คืนค่าการเลื่อนหน้าเว็บ
+      }
+    }
+
+    // ปิด Modal เมื่อกดปุ่ม ESC บนคีย์บอร์ด
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLineModal();
+      }
     });
   </script>
 

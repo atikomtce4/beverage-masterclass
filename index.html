@@ -503,6 +503,107 @@
       .btn { width: 100%; justify-content: center; }
       .category-img { height: 120px; }
     }
+      /* ===== LINE Modal Styles ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px); /* เอฟเฟกต์เบลอพื้นหลัง */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: #757575;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: #212121;
+    }
+
+    .modal-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 13px;
+      color: #757575;
+      margin-bottom: 20px;
+    }
+
+    .qr-image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #FAFAFA;
+    }
+
+    .btn-line-official {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #06C755; /* สีเขียวทางการของ LINE */
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .btn-line-official:hover {
+      background: #05b34c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -685,7 +786,12 @@
       <div class="footer-section">
         <h3 data-i18n="footer_contact">ติดต่อเรา</h3>
         <ul>
-          <li><a href="https://github.com/atikomtce4/beverage-masterclass">GitHub</a></li>
+          <li>
+            <a href="#" onclick="openLineModal(); return false;" style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: #06C755; font-size: 18px;">💬</span> 
+              <span data-i18n="footer_line">ติดต่อผ่าน LINE</span>
+            </a>
+          </li>
           <li><a href="mailto:info@beveragesystem.com">info@beveragesystem.com</a></li>
         </ul>
       </div>
@@ -695,7 +801,23 @@
       <p>© 2026 Beverage Masterclass. All rights reserved.</p>
     </div>
   </footer>
-
+  <!-- ===== LINE QR Code Modal ===== -->
+  <div id="lineModal" class="modal-overlay" onclick="closeLineModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLineModal()" aria-label="Close">&times;</button>
+      
+      <h3 data-i18n="modal_line_title">เพิ่มเพื่อนผ่าน LINE</h3>
+      <p data-i18n="modal_line_desc" class="modal-desc">สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป</p>
+      
+      <!-- ⚠️ อย่าลืมเปลี่ยน src เป็น path รูป QR Code จริงของคุณ -->
+      <img src="images/line-qr-code.png" alt="LINE Official Account QR Code" class="qr-image">
+      
+      <!-- ⚠️ อย่าลืมเปลี่ยน href เป็นลิงก์ LINE OA จริงของคุณ (เช่น https://line.me/ti/p/@yourlineid) -->
+      <a href="https://line.me/ti/p/~atikomtce4" target="_blank" class="btn-line-official">
+        <span>💬</span> <span data-i18n="modal_line_btn">เปิดแอป LINE</span>
+      </a>
+    </div>
+  </div>
   <script>
     // ===== i18n Translations =====
     const i18n = {
@@ -746,7 +868,11 @@
         footer_categories: "หมวดหมู่",
         footer_shop: "ซื้อเครื่อง",
         footer_cats: "หมวดหมู่",
-        footer_contact: "ติดต่อเรา"
+        footer_contact: "ติดต่อเรา",
+        footer_line: "ติดต่อผ่าน LINE",
+        modal_line_title: "เพิ่มเพื่อนผ่าน LINE",
+        modal_line_desc: "สแกน QR Code ด้านล่าง หรือคลิกปุ่มเพื่อเปิดแอป",
+        modal_line_btn: "เปิดแอป LINE"
       },
       en: {
         nav_categories: "Categories",
@@ -795,7 +921,11 @@
         footer_categories: "Categories",
         footer_shop: "Shop",
         footer_cats: "Categories",
-        footer_contact: "Contact"
+        footer_contact: "Contact",
+        footer_line: "Contact via LINE",
+        modal_line_title: "Add us on LINE",
+        modal_line_desc: "Scan the QR code below or click the button to open the app",
+        modal_line_btn: "Open LINE App"
       }
     };
 
@@ -826,6 +956,26 @@
     // Initialize language on load
     document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang);
+    });
+        // ===== LINE Modal Functions =====
+    function openLineModal() {
+      document.getElementById('lineModal').classList.add('active');
+      document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าเว็บตอน Modal เปิด
+    }
+
+    function closeLineModal(event) {
+      // ปิดเมื่อคลิกที่พื้นหลัง (overlay) หรือกดปุ่ม X
+      if (!event || event.target.id === 'lineModal' || event.target.classList.contains('modal-close')) {
+        document.getElementById('lineModal').classList.remove('active');
+        document.body.style.overflow = ''; // คืนค่าการเลื่อนหน้าเว็บ
+      }
+    }
+
+    // ปิด Modal เมื่อกดปุ่ม ESC บนคีย์บอร์ด
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLineModal();
+      }
     });
   </script>
 
