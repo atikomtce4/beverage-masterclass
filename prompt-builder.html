@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AllDrinks Prompt Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #2e7d32;
+      --primary-light: #e8f5e9;
+      --text: #212121;
+      --text-light: #757575;
+      --bg: #FAFAFA;
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 20px 0;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .builder-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .form-group select,
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .form-group select:focus,
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .checkbox-group input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+    }
+
+    .checkbox-group span {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--primary-dark);
+    }
+
+    .btn-generate {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    .btn-generate:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .output-area {
+      position: relative;
+    }
+
+    .output-area textarea {
+      min-height: 150px;
+      background: #f5f5f5;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      resize: vertical;
+    }
+
+    .btn-copy {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 8px 16px;
+      background: var(--white);
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    .btn-copy:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .hidden { display: none; }
+
+    .hint {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🎨 AllDrinks Prompt Builder</h1>
+    <p>สร้างคำสั่ง (Prompt) สำหรับสร้างรูปภาพ AI (Midjourney / DALL-E) ได้ในคลิกเดียว</p>
+  </div>
+
+  <div class="builder-card">
+    <!-- ประเภทภาพ -->
+    <div class="form-group">
+      <label>ประเภทของภาพ</label>
+      <select id="imageType" onchange="toggleFields()">
+        <option value="hero">ภาพ Hero (สัดส่วน 16:9 สำหรับหน้าเว็บ)</option>
+        <option value="step">ภาพขั้นตอน Manual Step (สัดส่วน 4:3)</option>
+      </select>
+    </div>
+
+    <!-- ธีม / สไตล์ -->
+    <div class="form-group">
+      <label>ธีม / สไตล์ภาพ</label>
+      <select id="theme">
+        <option value="premium">Premium & Traditional Thai (พรีเมียม/ไทยดั้งเดิม, โทนไม้เข้ม, แสงทอง)</option>
+        <option value="fresh">Fresh & Natural (สดชื่น/ธรรมชาติ, แสงเช้า, โทนไม้สว่าง)</option>
+        <option value="cafe">Modern Cafe Minimalist (ทันสมัย/คาเฟ่, พื้นหลังขาว/หินอ่อน, คลีน)</option>
+      </select>
+    </div>
+
+    <!-- มุมกล้อง -->
+    <div class="form-group">
+      <label>มุมกล้อง (Camera Angle)</label>
+      <select id="angle">
+        <option value="45deg">มุม 45 องศา (Slightly above angle, เห็นทั้งภาชนะและเนื้อหา)</option>
+        <option value="topdown">มุมท็อปดาวน์ (Top-down / Flat lay, มองจากด้านบนตรงๆ)</option>
+        <option value="macro">มุมมาโคร (Macro / Close-up, เน้นรายละเอียดพื้นผิว/ไอน้ำ)</option>
+        <option value="eye">ระดับสายตา (Eye-level, เห็นความสูงของแก้ว/ภาชนะ)</option>
+      </select>
+    </div>
+
+    <!-- หัวข้อ / สิ่งที่ต้องการเน้น -->
+    <div class="form-group">
+      <label>สิ่งที่ต้องการให้เห็นในภาพ (ภาษาอังกฤษ หรือ ไทยก็ได้)</label>
+      <input type="text" id="subject" placeholder="เช่น: tall glass of iced roselle juice with ice cubes, หรือ: มือกำลังเทน้ำมะตูมใส่แก้ว">
+      <div class="hint">💡 พิมพ์คำหลักสั้นๆ ระบบจะนำไปประกอบเป็นประโยคที่สมบูรณ์</div>
+    </div>
+
+    <!-- วัตถุดิบ / อุปกรณ์ประกอบ -->
+    <div class="form-group">
+      <label>วัตถุดิบหรืออุปกรณ์ประกอบฉาก (Props)</label>
+      <input type="text" id="props" placeholder="เช่น: dried bael fruit slices, rock sugar, wooden ladle">
+      <div class="hint">💡 คั่นด้วยเครื่องหมายจุลภาค (,)</div>
+    </div>
+
+    <!-- Checkbox สำหรับ Manual Step -->
+    <div class="form-group hidden" id="stepRulesGroup">
+      <label class="checkbox-group">
+        <input type="checkbox" id="applyStepRules" checked>
+        <span>ใช้กฎตายตัวของ Manual Step (หม้อขาว, เตาดำ, เคาน์เตอร์ไม้โอ๊ค, กระเบื้องขาว)</span>
+      </label>
+    </div>
+
+    <button class="btn-generate" onclick="generatePrompt()">✨ สร้าง Prompt</button>
+  </div>
+
+  <div class="builder-card output-area">
+    <div class="form-group" style="margin-bottom: 8px;">
+      <label>ผลลัพธ์ (Prompt ภาษาอังกฤษ)</label>
+    </div>
+    <textarea id="outputPrompt" readonly></textarea>
+    <button class="btn-copy" onclick="copyToClipboard()" id="copyBtn">📋 Copy</button>
+  </div>
+
+  <script>
+    // ฐานข้อมูลคำศัพท์สำหรับประกอบ Prompt
+    const themes = {
+      premium: "Dark moody background with subtle bokeh, warm golden hour lighting from the side, dramatic shadows, luxurious, sophisticated, traditional Thai aesthetic, dark teak wood tray",
+      fresh: "Bright morning sunlight streaming through a window, light oak wood table, fresh, healthy, organic aesthetic, shallow depth of field, vibrant colors",
+      cafe: "White marble countertop, bright natural lighting from above creating clean shadows, modern minimalist cafe aesthetic, trendy, Instagram-worthy, clean color palette"
+    };
+
+    const angles = {
+      "45deg": "Shot from slightly above angle (45 degrees)",
+      "topdown": "Top-down view, flat lay composition",
+      "macro": "Macro photography, extreme close-up, highly detailed texture",
+      "eye": "Eye-level shot, straight on perspective"
+    };
+
+    const qualityTags = "8k resolution, photorealistic, magazine quality, professional food photography, highly detailed, sharp focus";
+    
+    // กฎตายตัวสำหรับ Manual Step
+    const lockedStepRules = "Large white enamel pot with black handles, black glass-ceramic electric stove, light oak wood countertop, white subway tile backsplash, natural warm lighting from a window. Minimalist, clean, bright aesthetic, consistent style.";
+
+    function toggleFields() {
+      const type = document.getElementById('imageType').value;
+      const stepGroup = document.getElementById('stepRulesGroup');
+      
+      if (type === 'step') {
+        stepGroup.classList.remove('hidden');
+      } else {
+        stepGroup.classList.add('hidden');
+      }
+    }
+
+    function generatePrompt() {
+      const type = document.getElementById('imageType').value;
+      const theme = document.getElementById('theme').value;
+      const angle = document.getElementById('angle').value;
+      const subject = document.getElementById('subject').value.trim();
+      const props = document.getElementById('props').value.trim();
+      const applyRules = document.getElementById('applyStepRules').checked;
+
+      let prompt = "";
+
+      if (type === 'hero') {
+        prompt = `Professional beverage photography, ${subject}. Surroundings include ${props}. ${themes[theme]}. ${qualityTags}. --ar 16:9 --style raw`;
+      } else {
+        // Manual Step Logic
+        let environment = applyRules ? lockedStepRules : `${themes[theme]}`;
+        prompt = `Professional food photography, step of making beverage recipe. ${subject}. ${props ? 'With ' + props + ' nearby.' : ''} ${environment}. ${angles[angle]}. ${qualityTags}. --ar 4:3 --style raw`;
+      }
+
+      // Clean up extra spaces
+      prompt = prompt.replace(/\s+/g, ' ').trim();
+      
+      document.getElementById('outputPrompt').value = prompt;
+    }
+
+    function copyToClipboard() {
+      const copyText = document.getElementById("outputPrompt");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+      
+      navigator.clipboard.writeText(copyText.value).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const originalText = btn.innerText;
+        btn.innerText = "✅ Copied!";
+        btn.style.background = "#4CAF50";
+        btn.style.color = "white";
+        
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.style.background = "white";
+          btn.style.color = "#212121";
+        }, 2000);
+      });
+    }
+
+    // Initialize
+    toggleFields();
+  </script>
+</body>
+</html>
