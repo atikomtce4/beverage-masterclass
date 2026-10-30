@@ -1,0 +1,365 @@
+{
+  "id": "pennywort_10L",
+  "icon": "🌱",
+  "category": "herbal",
+  "description": "ใบบัวบกสด 600g + น้ำตาล 700g + เกลือ 3g ปั่นสด+กรอง ต้ม 85°C ไม่เดือด บำรุงสมอง แก้ช้ำใน",
+  "total_time": 60,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_pennywort_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำใบบัวบกสด (สูตรบำรุงสมอง) 10 ลิตร",
+    "en": "Fresh Pennywort Juice (Brain Tonic) 10L"
+  },
+  "images": [
+    "images/herbal/pennywort/main_1.jpg",
+    "images/herbal/pennywort/main_2.jpg",
+    "images/herbal/pennywort/main_3.jpg",
+    "images/herbal/pennywort/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_pennywort",
+  "prepTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "cookTime": {
+    "th": "15 นาที",
+    "en": "15 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "สัมผัสน้ำใบบัวบกสดสีเขียวหอมที่เป็นเอกลักษณ์ไทย ปริมาณ 10 ลิตร คัดสรรใบบัวบกสด 600 กรัม ปั่นละเอียดและกรองเอาแต่น้ำ จุดเด่นของสูตรนี้คือการใช้ความร้อนเพียง 85°C (ไม่เดือดจัด) เพื่อรักษาสารสำคัญอย่างไตรเตอพีนอยด์และวิตามินไว้ครบถ้วน พร้อมป้องกันรสขมที่มักเกิดจากการต้มเดือด ผสมน้ำตาลและเกลือเล็กน้อยให้รสชาติกลมกล่อม ดื่มเย็นสดชื่นที่สุด",
+    "en": "Experience the fresh, aromatic green Pennywort Juice in a 10-liter batch. Made with 600g of fresh pennywort leaves, blended and strained. The key is using only 85°C (not boiling) to preserve triterpenoids and vitamins while preventing bitterness. Sweetened with sugar and a pinch of salt for a balanced flavor, best served chilled."
+  },
+  "benefits": {
+    "th": "ช่วยแก้ช้ำใน บำรุงสมองและระบบประสาท ลดความดันโลหิต และช่วยให้นอนหลับสบาย",
+    "en": "Helps relieve internal bruising, nourishes the brain and nervous system, lowers blood pressure, and promotes better sleep."
+  },
+  "warnings": {
+    "th": "⚠️ ใบบัวบกมีฤทธิ์เย็น ผู้ที่มีร่างกายเย็นง่ายหรือความดันโลหิตต่ำควรดื่มในปริมาณน้อย สตรีมีครรภ์ควรหลีกเลี่ยง",
+    "en": "⚠️ Pennywort has a cooling effect. People with a 'cold' constitution or low blood pressure should consume in moderation. Pregnant women should avoid."
+  },
+  "nutrition": {
+    "calories": "25 kcal",
+    "carbs": "6 g",
+    "sugar": "5 g",
+    "protein": "0.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้ม)", "en": "Clean water (for boiling)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่นใบบัวบก)", "en": "Clean water (for blending pennywort)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบบัวบกสด (ล้างสะอาด)", "en": "Fresh pennywort leaves (washed)" },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 700,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น (สำหรับตัดรส)", "en": "Salt (to enhance flavor)" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 8,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "อุ่นน้ำ (85°C ห้ามเดือด)", "en": "Warm Water (85°C, No Boiling)" },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 85°C (ห้ามเดือดจัด) เพื่อเตรียมผสมน้ำเชื่อม",
+        "en": "The machine warms water to 85°C (no boiling) to prepare for sugar syrup mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาลและเกลือ", "en": "Add Sugar and Salt" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} และเกลือ {salt} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of sugar and {salt} of salt, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 700, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ละลายน้ำตาล (3 นาที)", "en": "Dissolve Sugar (3 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 85°C และกวนต่อเนื่อง 3 นาที เพื่อละลายน้ำตาลให้หมด",
+        "en": "Machine maintains 85°C and stirs for 3 mins to completely dissolve sugar."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 40°C)", "en": "Cool Down Pot (Wait until 40°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ รอจนอุณหภูมิลดลงเหลือ 40°C เพื่อเตรียมผสมน้ำใบบัวบก",
+        "en": "Turn off heater. Let the pot cool down naturally until 40°C to prepare for pennywort juice mixing."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมน้ำใบบัวบกปั่น", "en": "Prepare Blended Pennywort Juice" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 40°C พร้อมแล้ว! กรุณาเตรียมน้ำใบบัวบกปั่น {pennywort_juice} ที่กรองแล้ว (ปั่นใบบัวบก 600g กับน้ำ 2L แล้วกรอง) เมื่อพร้อมแล้วกด OK เครื่องจะผสมให้",
+        "en": "✅ Temperature is ready at 40°C! Please prepare {pennywort_juice} of blended and strained pennywort juice (blend 600g leaves with 2L water, then strain). Press OK when ready."
+      },
+      "descVariables": {
+        "pennywort_juice": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำใบบัวบกปั่น", "en": "Add Blended Pennywort Juice" },
+      "desc": {
+        "th": "ระบบจะเติมน้ำใบบัวบกปั่น {pennywort_juice} ลงไป พร้อมเปิดระบบกวนเบาๆ ให้เข้ากัน",
+        "en": "System adds {pennywort_juice} of blended pennywort juice, activating gentle stirring to blend."
+      },
+      "descVariables": {
+        "pennywort_juice": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Hold Temp",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากัน (2 นาที)", "en": "Mix and Blend (2 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 40°C และกวนเบาๆ 2 นาที เพื่อให้ส่วนผสมเข้ากัน โดยไม่ทำลายสารสำคัญ",
+        "en": "Machine maintains 40°C and stirs gently for 2 mins to blend without destroying nutrients."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 9,
+      "function": "Cool Down",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ทำให้เย็นพร้อมเสิร์ฟ", "en": "Cool Down and Ready to Serve" },
+      "desc": {
+        "th": "ระบบจะลดอุณหภูมิเหลือ 10°C เพื่อให้พร้อมเสิร์ฟแบบเย็นสดชื่น",
+        "en": "System cools to 10°C for refreshing iced serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 10,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "น้ำใบบัวบกพร้อมเสิร์ฟแล้ว! สามารถตักเสิร์ฟแบบเย็นสดชื่นได้ทันที",
+        "en": "Pennywort juice is ready! Can be served chilled immediately."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมใบบัวบกสด", "en": "Prepare fresh pennywort leaves" },
+      "desc": {
+        "th": "ล้างใบบัวบกสด {pennywort} ให้สะอาดหลายรอบจนหมดทราย เด็ดเอาแต่ใบและก้านอ่อน ใส่เครื่องปั่นพร้อมน้ำสะอาด {water_blend} ปั่นให้ละเอียดที่สุด",
+        "en": "Wash {pennywort} of fresh pennywort leaves thoroughly until no sand remains. Pick only leaves and tender stems. Blend with {water_blend} of clean water in a blender until very fine."
+      },
+      "descVariables": {
+        "pennywort": { "amount": 600, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/herbal/pennywort/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรเลือกใบบัวบกสดสีเขียวเข้ม จะหอมและได้สารอาหารมากกว่าใบที่เหลือง",
+        "en": "💡 Choose dark green fresh pennywort leaves for better aroma and more nutrients."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "กรองน้ำใบบัวบก", "en": "Strain pennywort juice" },
+      "desc": {
+        "th": "ใช้ผ้าขาวบาง 2-3 ชั้นกรองน้ำใบบัวบกที่ปั่นแล้ว บีบเอาแต่น้ำสีเขียวเข้มออกให้หมด กากที่เหลือทิ้งไป",
+        "en": "Use 2-3 layers of cheesecloth to strain the blended pennywort. Squeeze out all the dark green juice. Discard the residue."
+      },
+      "descVariables": {},
+      "image": "images/herbal/pennywort/man_2.jpg",
+      "tips": {
+        "th": "💡 การกรองผ่านผ้าขาวบางหลายชั้นจะทำให้น้ำใบบัวบกใส ไม่ขม และไม่มีกากติดคอ",
+        "en": "💡 Straining through multiple layers of cheesecloth ensures clear, non-bitter juice with no residue."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำเชื่อม (ห้ามเดือด!)", "      en": "Prepare sugar syrup (No boiling!)" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ ใส่น้ำตาล {sugar} และเกลือ {salt} เปิดไฟกลางค่อนข้างแรง ต้มจนน้ำตาลละลายหมด อุณหภูมิประมาณ 85°C (มีไอน้ำขึ้น แต่ไม่เดือดปุด)",
+        "en": "Prepare {water} of clean water in a large pot. Add {sugar} of sugar and {salt} of salt. Heat on medium-high until sugar dissolves completely, reaching about 85°C (steam rising but not boiling)."
+      },
+      "descVariables": {
+        "water": { "amount": 8, "unit": "Liter", "scalable": true },
+        "sugar": { "amount": 700, "unit": "Gram", "scalable": true },
+        "salt": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/pennywort/man_3.jpg",
+      "tips": {
+        "th": "💡 ห้ามต้มน้ำเชื่อมเดือดจัด เพราะเมื่อนำมาผสมกับน้ำใบบัวบกจะทำให้รสขมและเสียสารอาหาร",
+        "en": "💡 Never boil the syrup vigorously, as mixing with pennywort juice will cause bitterness and nutrient loss."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ผสมน้ำเชื่อมกับน้ำใบบัวบก", "en": "Mix syrup with pennywort juice" },
+      "desc": {
+        "th": "เมื่อน้ำเชื่อมเย็นลงเหลือประมาณ 40°C (อุ่นมือ) ค่อยๆ เทน้ำใบบัวบกที่กรองแล้วลงไป คนเบาๆ ให้เข้ากัน",
+        "en": "Once the syrup cools to about 40°C (warm to the touch), slowly pour in the strained pennywort juice. Stir gently to blend."
+      },
+      "descVariables": {},
+      "image": "images/herbal/pennywort/man_4.jpg",
+      "tips": {
+        "th": "💡 การรอให้น้ำเชื่อมเย็นก่อนผสมคือเคล็ดลับสำคัญ ที่ทำให้น้ำใบบัวบกมีสีเขียวสดสวยและไม่ขม",
+        "en": "💡 Waiting for the syrup to cool before mixing is the key secret to keeping the juice bright green and non-bitter."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "แช่เย็นและเสิร์ฟ", "en": "Chill and serve" },
+      "desc": {
+        "th": "ตักน้ำใบบัวบกใส่ขวดหรือเหยือก นำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมงก่อนเสิร์ฟ จะได้รสชาติหวานหอม สดชื่นที่สุด",
+        "en": "Pour the pennywort juice into bottles or a pitcher. Refrigerate for at least 1-2 hours before serving for the best sweet, refreshing taste."
+      },
+      "descVariables": {},
+      "image": "images/herbal/pennywort/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำใบบัวบกควรดื่มเย็นเท่านั้น จะหอมและอร่อยกว่าแบบอุ่นมาก และเก็บในตู้เย็นได้ 2-3 วัน",
+        "en": "💡 Pennywort juice should only be served chilled, which is much more aromatic and delicious than warm. Can be refrigerated for 2-3 days."
+      }
+    }
+  ]
+}

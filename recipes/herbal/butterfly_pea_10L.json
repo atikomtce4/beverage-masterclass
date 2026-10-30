@@ -1,0 +1,380 @@
+{
+  "id": "butterfly_pea_10L",
+  "icon": "💜",
+  "category": "herbal",
+  "description": "ดอกอัญชันแห้ง 150g + น้ำมะนาว 300ml + น้ำตาล 800g ต้ม 90°C 5 นาที เปลี่ยนสีได้ น้ำเงิน→ม่วง บำรุงสายตา",
+  "total_time": 60,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_butterfly_pea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำอัญชันมะนาว (สูตรเปลี่ยนสีมหัศจรรย์) 10 ลิตร",
+    "en": "Butterfly Pea Lemon (Magic Color-Changing) 10L"
+  },
+  "images": [
+    "images/herbal/butterfly_pea/main_1.jpg",
+    "images/herbal/butterfly_pea/main_2.jpg",
+    "images/herbal/butterfly_pea/main_3.jpg",
+    "images/herbal/butterfly_pea/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_butterfly_pea",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสน้ำอัญชันมะนาวสูตรมหัศจรรย์ที่เปลี่ยนสีได้! ปริมาณ 10 ลิตร คัดสรรดอกอัญชันแห้งคุณภาพดี 150 กรัม ต้มสกัดที่ 90°C นาน 5 นาที ได้น้ำสีน้ำเงินเข้มสวยงาม จุดเด่นคือเมื่อเติมน้ำมะนาวสด 300ml สาร Anthocyanin จะทำปฏิกิริยากับกรด เปลี่ยนสีเป็นม่วงสดใสอย่างน่าทึ่ง! อุดมด้วยสารต้านอนุมูลอิสระ บำรุงสายตา ดื่มเย็นสดชื่น ถ่ายรูปสวย",
+    "en": "Experience the magical color-changing Butterfly Pea Lemon! Made with 150g of premium dried butterfly pea flowers, steeped at 90°C for 5 minutes to extract a beautiful deep blue color. The magic happens when 300ml of fresh lemon juice is added - Anthocyanin reacts with acid, transforming the drink into vibrant purple! Rich in antioxidants, supports eye health, and perfect for Instagram-worthy photos."
+  },
+  "benefits": {
+    "th": "อุดมด้วยสาร Anthocyanin ต้านอนุมูลอิสระ บำรุงสายตา ช่วยการไหลเวียนโลหิต และทำให้ผ่อนคลาย",
+    "en": "Rich in Anthocyanin antioxidants, supports eye health, improves blood circulation, and promotes relaxation."
+  },
+  "warnings": {
+    "th": "⚠️ อัญชันมีฤทธิ์ละลายลิ่มเลือด ผู้ที่ทานยาต้านการแข็งตัวของเลือดหรือเตรียมผ่าตัดควรปรึกษาแพทย์ก่อนดื่ม",
+    "en": "⚠️ Butterfly pea has blood-thinning properties. Those on anticoagulants or preparing for surgery should consult a doctor before consuming."
+  },
+  "nutrition": {
+    "calories": "35 kcal",
+    "carbs": "9 g",
+    "sugar": "8 g",
+    "protein": "0.2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ดอกอัญชันแห้ง", "en": "Dried butterfly pea flowers" },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "Sugar" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำมะนาวสด (คั้นใหม่)", "en": "Fresh lemon juice (freshly squeezed)" },
+      "amount": 300,
+      "unit": "Milliliter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (90°C)", "en": "Heat Water to 90°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 90°C (ไม่เดือดจัด) เพื่อเตรียมสกัดสีจากดอกอัญชัน",
+        "en": "The machine heats water to 90°C (not boiling) to prepare for butterfly pea color extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ดอกอัญชันในตะกร้า", "en": "Add Butterfly Pea Flowers in Basket" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ดอกอัญชันแห้ง {flower} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {flower} of dried butterfly pea flowers (in basket) into the hot water."
+      },
+      "descVariables": {
+        "flower": { "amount": 150, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "สกัดสีอัญชัน (5 นาที)", "en": "Extract Butterfly Pea Color (5 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C อย่างแม่นยำเป็นเวลา 5 นาที น้ำจะเปลี่ยนเป็นสีน้ำเงินเข้มสวยงาม",
+        "en": "Machine precisely maintains 90°C for 5 mins. The water will turn into a beautiful deep blue color."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาล", "en": "Add Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of sugar, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Cool Down",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 50°C)", "en": "Cool Down Pot (Wait until 50°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ รอจนอุณหภูมิลดลงเหลือ 50°C เพื่อเตรียมน้ำมะนาว (ห้ามร้อนเกินไป เพราะจะทำลายวิตามินซี)",
+        "en": "Turn off heater. Let the pot cool down naturally until 50°C to prepare for lemon juice (too hot will destroy Vitamin C)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมน้ำมะนาวสด", "en": "Prepare Fresh Lemon Juice" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 50°C พร้อมแล้ว! กรุณาเตรียมน้ำมะนาวสดคั้นใหม่ {lemon} เมื่อพร้อมแล้วกด OK เครื่องจะผสมให้",
+        "en": "✅ Temperature is ready at 50°C! Please prepare {lemon} of freshly squeezed lemon juice. Press OK when ready."
+      },
+      "descVariables": {
+        "lemon": { "amount": 300, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำมะนาว (เปลี่ยนสี!)", "en": "Add Lemon Juice (Color Change!)" },
+      "desc": {
+        "th": "ระบบจะเติมน้ำมะนาวสด {lemon} ลงไป พร้อมเปิดระบบกวนเบาๆ น้ำจะเปลี่ยนจากสีน้ำเงินเป็นสีม่วงสดใสอย่างมหัศจรรย์!",
+        "en": "System adds {lemon} of fresh lemon juice, activating gentle stirring. The water magically changes from blue to vibrant purple!"
+      },
+      "descVariables": {
+        "lemon": { "amount": 300, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Hold Temp",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากัน (2 นาที)", "en": "Mix and Blend (2 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 50°C และกวนเบาๆ 2 นาที เพื่อให้รสชาติเข้ากัน โดยไม่ทำลายวิตามินซี",
+        "en": "Machine maintains 50°C and stirs gently for 2 mins to blend flavors without destroying Vitamin C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 10,
+      "function": "Cool Down",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ทำให้เย็นพร้อมเสิร์ฟ", "en": "Cool Down and Ready to Serve" },
+      "desc": {
+        "th": "ระบบจะลดอุณหภูมิเหลือ 10°C เพื่อให้พร้อมเสิร์ฟแบบเย็นสดชื่น",
+        "en": "System cools to 10°C for refreshing iced serving."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 11,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "น้ำอัญชันมะนาวสีม่วงสดใสพร้อมเสิร์ฟแล้ว! หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็ง สามารถตกแต่งด้วยดอกอัญชันหรือใบสะระแหน่",
+        "en": "Vibrant purple butterfly pea lemon is ready! For iced version, pour over ice. Garnish with butterfly pea flowers or mint leaves."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำและดอกอัญชัน", "en": "Prepare water and butterfly pea flowers" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เตรียมดอกอัญชันแห้ง {flower} โดยใส่ในถุงกรองผ้าขาวบาง",
+        "en": "Prepare {water} of clean water in a large pot. Place {flower} of dried butterfly pea flowers into a cheesecloth filter bag."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true },
+        "flower": { "amount": 150, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/butterfly_pea/man_1.jpg",
+      "tips": {
+        "th": "💡 การใส่ดอกอัญชันในถุงกรองจะช่วยให้กรองออกง่ายในภายหลัง และน้ำจะใสสวย",
+        "en": "💡 Placing flowers in a filter bag makes straining easier later and keeps the drink clear."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน (90°C)", "en": "Heat water to 90°C" },
+      "desc": {
+        "th": "เปิดไฟกลางค่อนข้างแรง ต้มน้ำจนอุณหภูมิถึง 90°C (มีไอน้ำขึ้น แต่ยังไม่เดือดปุด)",
+        "en": "Heat on medium-high until water reaches 90°C (steam rising but not boiling)."
+      },
+      "descVariables": {},
+      "image": "images/herbal/butterfly_pea/man_2.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำร้อน 90°C ช่วยดึงสีจากดอกอัญชันได้ดีที่สุด โดยไม่ทำให้สีหม่น",
+        "en": "💡 Using 90°C water extracts the best color from butterfly pea without dulling it."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ดอกอัญชันสกัดสี (5 นาที)", "en": "Add butterfly pea and extract color (5 mins)" },
+      "desc": {
+        "th": "ใส่ถุงดอกอัญชัน {flower} ลงไปในน้ำร้อน ปิดฝาหม้อ ทิ้งไว้ Exactly 5 นาที น้ำจะเปลี่ยนเป็นสีน้ำเงินเข้มสวยงาม",
+        "en": "Submerge the bag of {flower} into hot water. Cover and steep for exactly 5 minutes. The water will turn into a beautiful deep blue color."
+      },
+      "descVariables": {
+        "flower": { "amount": 150, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/butterfly_pea/man_3.jpg",
+      "tips": {
+        "th": "💡 ห้ามแช่นานเกิน 8 นาที เพราะอาจได้รสฝาด และสีจะเข้มเกินไป",
+        "en": "💡 Do not steep for more than 8 minutes, or it may become astringent and too dark."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ยกดอกอัญชันออกและใส่น้ำตาล", "en": "Remove flowers and add sugar" },
+      "desc": {
+        "th": "ยกถุงดอกอัญชันออก บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วใส่น้ำตาล {sugar} ลงไป คนอย่างต่อเนื่องจนละลายหมด น้ำยังคงเป็นสีน้ำเงินเข้ม",
+        "en": "Remove the flower bag, squeeze out remaining liquid. Add {sugar} of sugar, stir continuously until dissolved. The water remains deep blue."
+      },
+      "descVariables": {
+        "sugar": { "amount": 800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/butterfly_pea/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลทรายจะทำให้น้ำอัญชันใสและรสชาติกลมกล่อมกว่าน้ำตาลกรวด",
+        "en": "💡 White sugar gives butterfly pea tea a clearer appearance and smoother taste than rock sugar."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "ใส่มะนาว (เปลี่ยนสี!) และเสิร์ฟ", "en": "Add lemon (Color Change!) and serve" },
+      "desc": {
+        "th": "รอให้น้ำเย็นลงเหลือประมาณ 50°C (อุ่นมือ) แล้วค่อยๆ เติมน้ำมะนาวสด {lemon} ลงไป คนเบาๆ **น้ำจะเปลี่ยนจากสีน้ำเงินเป็นสีม่วงสดใสอย่างมหัศจรรย์!** ตักใส่แก้วน้ำแข็ง พร้อมเสิร์ฟ",
+        "en": "Wait until water cools to about 50°C (warm to touch), then slowly add {lemon} of fresh lemon juice. Stir gently. **The water magically changes from blue to vibrant purple!** Pour over ice and serve."
+      },
+      "descVariables": {
+        "lemon": { "amount": 300, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/herbal/butterfly_pea/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับมหัศจรรย์: สาร Anthocyanin ในอัญชันจะทำปฏิกิริยากับกรดในมะนาว เปลี่ยนสีจากน้ำเงิน (pH 7) เป็นม่วง (pH 3-4) - นี่คือวิทยาศาสตร์ที่อร่อย!",
+        "en": "💡 Magic secret: Anthocyanin in butterfly pea reacts with lemon acid, changing color from blue (pH 7) to purple (pH 3-4) - delicious science!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "bael_fruit_10L",
+  "icon": "🍑",
+  "category": "herbal",
+  "description": "มะตูมแห้ง 350g + น้ำตาลกรวด 900g ต้ม 95°C 15 นาที หอมหวาน บำรุงร่างกาย แก้ร้อนใน",
+  "total_time": 120,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_bael_fruit_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำมะตูมหอมหวาน (สูตรดั้งเดิม) 10 ลิตร",
+    "en": "Sweet Bael Fruit Tea (Traditional Recipe) 10L"
+  },
+  "images": [
+    "images/herbal/bael_fruit/main_1.jpg",
+    "images/herbal/bael_fruit/main_2.jpg",
+    "images/herbal/bael_fruit/main_3.jpg",
+    "images/herbal/bael_fruit/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_bael_fruit",
+  "prepTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "cookTime": {
+    "th": "20 นาที",
+    "en": "20 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสน้ำมะตูมสูตรดั้งเดิมที่หอมหวานเป็นเอกลักษณ์ไทย ปริมาณ 10 ลิตร คัดสรรมะตูมแห้งคุณภาพดี 350 กรัม ต้มคู่กับน้ำตาลกรวด 900 กรัม ที่อุณหภูมิ 95°C นาน 15 นาที เพื่อดึงความหอมหวานและสรรพคุณการบำรุงร่างกายออกมาอย่างเต็มที่ รสชาติกลมกล่อม หอมละมุน ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience the sweet and aromatic traditional Bael Fruit Tea in a 10-liter batch. Made with 350g of premium dried bael fruit and 900g of rock sugar, boiled at 95°C for 15 minutes to extract the sweet aroma and nourishing benefits. Perfectly balanced, smooth, and refreshing, ideal for both hot and iced servings."
+  },
+  "benefits": {
+    "th": "ช่วยบำรุงร่างกาย แก้ร้อนใน กระหายน้ำ ช่วยระบบขับถ่าย และบำรุงธาตุ",
+    "en": "Helps nourish the body, relieve internal heat and thirst, aids digestion, and supports overall health."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรดื่มในปริมาณที่พอเหมาะ เนื่องจากมีน้ำตาล",
+    "en": "⚠️ Diabetics should consume in moderation due to sugar content."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "10 g",
+    "sugar": "9 g",
+    "protein": "0.2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะตูมแห้ง (หั่นชิ้น)", "en": "Dried bael fruit (sliced)" },
+      "amount": 350,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 900,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำพร้อมระบบวน (95°C)", "en": "Heat Water to 95°C with Circulation" },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำที่อุณหภูมิ 95°C (เดือดจัด) เพื่อเตรียมน้ำสำหรับต้มมะตูม",
+        "en": "The machine heats water to 95°C (near boiling) to prepare for bael fruit extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่มะตูมแห้งในตะกร้า", "en": "Add Dried Bael Fruit in Basket" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่มะตูมแห้ง {bael} (ในตะกร้า) ลงไปต้มในน้ำร้อน",
+        "en": "System alerts to add {bael} of dried bael fruit (in basket) into the hot water."
+      },
+      "descVariables": {
+        "bael": { "amount": 350, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มสกัดมะตูม (15 นาที)", "en": "Boil and Extract Bael Fruit (15 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C และต้มต่อเนื่อง 15 นาที เพื่อดึงความหอมหวานและสรรพคุณจากมะตูมออกมาอย่างเต็มที่",
+        "en": "Machine maintains 95°C and boils for 15 mins to fully extract sweetness and benefits from bael fruit."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลกรวด", "en": "Add Rock Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลกรวด {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {sugar} of rock sugar, activating stirring."
+      },
+      "descVariables": {
+        "sugar": { "amount": 900, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ผสมให้เข้ากันและรักษาอุณหภูมิ", "en": "Mix and Keep Warm" },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิเหลือ 60°C และกวนต่อเนื่อง 3 นาที เพื่อให้ส่วนผสมเข้ากันดี พร้อมเสิร์ฟ",
+        "en": "Machine cools to 60°C and stirs for 3 mins to blend perfectly, ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เสร็จสิ้น พร้อมเสิร์ฟ", "en": "Done, Ready to Serve" },
+      "desc": {
+        "th": "น้ำมะตูมพร้อมเสิร์ฟแล้ว! ยกตะกร้ามะตูมออก หากต้องการแบบเย็น ให้ตักใส่แก้วน้ำแข็ง",
+        "en": "Bael fruit tea is ready! Remove the bael fruit basket. For iced version, pour over ice."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำและมะตูม", "en": "Prepare water and bael fruit" },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เตรียมมะตูมแห้ง {bael} โดยล้างให้สะอาด",
+        "en": "Prepare {water} of clean water in a large pot. Wash {bael} of dried bael fruit thoroughly."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true },
+        "bael": { "amount": 350, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/bael_fruit/man_1.jpg",
+      "tips": {
+        "th": "💡 สามารถบุบมะตูมแห้งเล็กน้อยก่อนต้ม จะช่วยให้น้ำหอมและได้รสชาติดีขึ้น",
+        "en": "💡 Lightly crush the dried bael fruit before boiling for better aroma and flavor."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้เดือดจัด", "en": "Boil water vigorously" },
+      "desc": {
+        "th": "เปิดไฟแรงจนน้ำเดือดจัด (100°C) เห็นฟองใหญ่เดือดปุดๆ",
+        "en": "Heat on high until water reaches a rolling boil (100°C) with large, vigorous bubbles."
+      },
+      "descVariables": {},
+      "image": "images/herbal/bael_fruit/man_2.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำเดือดจัดจะช่วยดึงความหอมจากมะตูมได้ดีที่สุด",
+        "en": "💡 Vigorously boiling water helps extract the best aroma from bael fruit."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่มะตูมและต้ม 15 นาที", "en": "Add bael fruit and boil 15 mins" },
+      "desc": {
+        "th": "ใส่มะตูมแห้ง {bael} ลงไปในน้ำเดือด ลดไฟลงเล็กน้อยให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ปิดฝาต้ม Exactly 15 นาที น้ำจะเปลี่ยนเป็นสีน้ำตาลหอม",
+        "en": "Add {bael} of dried bael fruit into boiling water. Reduce heat slightly to maintain steady simmer. Cover and boil for exactly 15 minutes. Water will turn fragrant brown."
+      },
+      "descVariables": {
+        "bael": { "amount": 350, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/bael_fruit/man_3.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บกลิ่นหอมของมะตูมไว้ได้อย่างเต็มที่",
+        "en": "💡 Covering the pot traps the delicate bael fruit aroma perfectly."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ใส่น้ำตาลกรวดและคนให้ละลาย", "en": "Add rock sugar and stir" },
+      "desc": {
+        "th": "ใส่น้ำตาลกรวด {sugar} ลงไปในน้ำมะตูมร้อน คนอย่างต่อเนื่องจนน้ำตาลละลายหมด น้ำจะใสและรสชาติกลมกล่อม",
+        "en": "Add {sugar} of rock sugar into hot bael fruit tea. Stir continuously until completely dissolved. The tea will become clear and smoothly flavored."
+      },
+      "descVariables": {
+        "sugar": { "amount": 900, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/bael_fruit/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดจะทำให้น้ำมะตูมใสและรสชาติละมุนกว่าน้ำตาลทรายขาว",
+        "en": "💡 Rock sugar gives bael fruit tea a clearer appearance and smoother taste than white sugar."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "กรองและเสิร์ฟ", "en": "Strain and serve" },
+      "desc": {
+        "th": "ใช้ตะแกรงหรือผ้าขาวบางกรองเอากากมะตูมออกให้หมด พร้อมเสิร์ฟแบบร้อน หรือตักใส่แก้วน้ำแข็งสำหรับแบบเย็น จะหอมสดชื่นยิ่งขึ้น",
+        "en": "Use a strainer or cheesecloth to filter out all bael fruit residue. Serve hot, or pour over ice for iced version for extra refreshment."
+      },
+      "descVariables": {},
+      "image": "images/herbal/bael_fruit/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำมะตูมเย็นจะหอมและสดชื่นกว่าแบบร้อน เหมาะกับอากาศเมืองไทย",
+        "en": "💡 Iced bael fruit tea is more aromatic and refreshing than hot version, perfect for Thai weather."
+      }
+    }
+  ]
+}
