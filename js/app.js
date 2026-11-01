@@ -487,46 +487,56 @@ function copyMachineRecipeToClipboard(recipe, volume) {
   const baseVolume = recipe.baseVolume || 10;
   const scaleFactor = volume / baseVolume;
 
-  // คำนวณ total_time และ target_temp จาก steps ที่ scale แล้ว
   let totalTime = 0;
   let targetTemp = 0;
 
   const scaledSteps = recipe.machineSteps.map((step, idx) => {
     const isScalable = step.scalable !== false;
-    const scaledValue = isScalable ? step.target_value * scaleFactor : step.target_value;
-    const scaledDuration = isScalable ? (step.duration || 0) * scaleFactor : (step.duration || 0);
     
-    // คำนวณ timeout (ถ้าไม่มีให้ใช้ duration + 1)
-    const baseTimeout = step.timeout !== undefined ? step.timeout : (step.duration || 0) + 1;
-    const scaledTimeout = isScalable ? baseTimeout * scaleFactor : baseTimeout;
+    // ✅ 1. Scale เฉพาะ target_value (ปริมาณวัตถุดิบ/น้ำ)
+    const scaledValue = isScalable ? step.target_value * scaleFactor : step.target_value;
+    
+    // ❌ 2. ห้าม Scale duration และ timeout (ให้ใช้ค่าเดิมจาก JSON เสมอ ไม่ว่าจะ scalable เป็น true หรือ false)
+    const scaledDuration = step.duration || 0;
+    const baseTimeout = step.timeout !== undefined ? step.timeout : (step.duration || 0);
+    const scaledTimeout = baseTimeout; // ไม่มีการคูณ scaleFactor
 
     totalTime += scaledDuration;
 
-    // หา target_temp จาก step ที่เป็น Heat หรือ Hold
+    // หา target_temp สูงสุดจาก step ที่เป็น Heat หรือ Hold
     if ((step.function === 'Heat Water' || step.function === 'Hold Temp') && step.target_value > targetTemp) {
       targetTemp = step.target_value;
     }
 
-    // แทนที่ placeholder ใน sub_name (ถ้ามี)
-    let subName = getText(step.title) || "";
+    // จัดการตัวแปรในข้อความ (ถ้ามี)
+    let processedDesc = step.desc ? (step.desc[currentLang] || step.desc.th || "") : "";
     if (step.descVariables) {
       for (const [key, varInfo] of Object.entries(step.descVariables)) {
-        const scaledAmount = varInfo.scalable !== false ? varInfo.amount * scaleFactor : varInfo.amount;
-        const formatted = formatAmount(scaledAmount, varInfo.unit);
+        const varIsScalable = varInfo.scalable !== false;
+        const scaledAmount = varIsScalable ? varInfo.amount * scaleFactor : varInfo.amount;
+        
+        // จัดรูปแบบตัวเลข (เช่น 10.5 Gram)
+        let formattedAmount = scaledAmount;
+        if (varInfo.unit === 'Gram' || varInfo.unit === 'Milliliter') {
+            formattedAmount = Math.round(scaledAmount);
+        } else if (varInfo.unit === 'Liter') {
+            formattedAmount = scaledAmount.toFixed(1);
+        }
+        
         const regex = new RegExp(`\\{${key}\\}`, 'g');
-        subName = subName.replace(regex, `${formatted} ${varInfo.unit}`);
+        processedDesc = processedDesc.replace(regex, `${formattedAmount} ${varInfo.unit}`);
       }
     }
 
     return {
       step_id: idx + 1,
       function: step.function,
-      sub_name: subName,
+      sub_name: processedDesc, // หรือ step.title แล้วแต่โครงสร้างที่คุณใช้
       target_value: parseFloat(scaledValue.toFixed(2)),
       unit: step.unit,
-      duration: parseFloat(scaledDuration.toFixed(2)),
+      duration: parseFloat(scaledDuration.toFixed(2)), // ✅ ไม่คูณ scaleFactor
       duration_unit: step.duration_unit || "minute",
-      timeout: parseFloat(scaledTimeout.toFixed(2)),
+      timeout: parseFloat(scaledTimeout.toFixed(2)),   // ✅ ไม่คูณ scaleFactor
       timeout_unit: step.timeout_unit || "minute",
       outputs_csv: step.outputs_csv || ""
     };
@@ -534,11 +544,11 @@ function copyMachineRecipeToClipboard(recipe, volume) {
 
   // สร้างโครงสร้าง JSON ตามรูปแบบ FML
   const machineData = {
-    recipe_id: recipe.id + "_" + volume || "unknown_recipe",
+    recipe_id: recipe.id || "unknown_recipe",
     recipe_name: getText(recipe.name) || "Unknown Recipe",
-    icon: recipe.icon || "🌺",
-    category: recipe.category || "herbal",
-    description: getText(recipe.description) || "",  //description: getText(recipe.intro) || getText(recipe.description) || "",
+    icon: recipe.icon || "🍹",
+    category: recipe.category || "unknown",
+    description: getText(recipe.description) || getText(recipe.intro) || "",
     total_time: Math.round(totalTime),
     target_temp: targetTemp,
     total_volume: volume,
@@ -547,7 +557,7 @@ function copyMachineRecipeToClipboard(recipe, volume) {
 
   const jsonString = JSON.stringify(machineData, null, 2);
 
-  // ✅ คัดลอกลง Clipboard
+  // คัดลอกลง Clipboard
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(jsonString).then(() => {
       showToast(currentLang === 'th' 
@@ -563,6 +573,24 @@ function copyMachineRecipeToClipboard(recipe, volume) {
   }
 }
 
+// ฟังก์ชันสำรองถ้า Clipboard API ใช้ไม่ได้
+function fallbackCopy(text, volume, stepCount) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    showToast(currentLang === 'th' 
+      ? `✅ คัดลอกสูตร ${volume}L ลงคลิปบอร์ดแล้ว! (${stepCount} ขั้นตอน)` 
+      : `✅ Copied ${volume}L recipe to clipboard! (${stepCount} steps)`);
+  } catch (err) {
+    console.error('Fallback copy error:', err);
+    showToast('❌ คัดลอกไม่สำเร็จ กรุณาคัดลอกด้วยตนเอง');
+  }
+  document.body.removeChild(textArea);
+}
+/*
 // ✅ Fallback สำหรับเบราว์เซอร์เก่า
 function fallbackCopy(text, volume, stepCount) {
   const textarea = document.createElement('textarea');
@@ -581,7 +609,7 @@ function fallbackCopy(text, volume, stepCount) {
   }
   document.body.removeChild(textarea);
 }
-
+*/
 function initVolumeSelector(recipe) {
   const slider = document.getElementById('volumeSlider');
   const volumeValue = document.getElementById('volumeValue');
