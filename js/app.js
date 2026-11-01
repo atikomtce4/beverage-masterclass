@@ -99,8 +99,145 @@ function switchLanguage(lang) {
   
   if (currentRecipe) updateLanguageUI();
 }
-
 function switchMode(mode) {
+ // ✅ เพิ่มตรงนี้: ถ้าเลือกโหมดเครื่อง แต่สูตรนี้ไม่รองรับ ให้แจ้งเตือนและบังคับกลับเป็น Manual
+  if (mode === 'machine' && currentRecipe && currentRecipe.machineCompatible === false) {
+    showToast(currentLang === 'th' 
+      ? '⚠️ สูตรนี้ยังไม่รองรับการใช้งานกับเครื่อง (Manual Only)' 
+      : '⚠️ This recipe is not yet compatible with the machine (Manual Only)');
+    mode = 'manual'; // บังคับกลับเป็น manual
+  }
+
+  currentMode = mode;
+  
+  // 1. จัดการสถานะปุ่ม (Active / Inactive)
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.classList.remove('active');
+    
+    // ✅ เพิ่มตรงนี้: ปิดการใช้งานปุ่ม Machine ถ้าสูตรไม่รองรับ
+    if (btn.dataset.mode === 'machine' && currentRecipe && currentRecipe.machineCompatible === false) {
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      btn.style.cursor = 'not-allowed';
+      btn.title = currentLang === 'th' ? 'สูตรนี้ใช้เครื่องไม่ได้' : 'Machine not compatible';
+    } else {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+      btn.title = '';
+    }
+
+    if (btn.dataset.mode === mode) {
+      btn.classList.add('active');
+    }
+  });
+  // ✅ 2. ควบคุมการแสดงผลปุ่ม Copy Recipe ด้านบน (แสดงเฉพาะโหมด Machine)
+  const copyBtnTop = document.getElementById('copyRecipeBtnTop');
+  const copyBtnText = document.getElementById('copyBtnText');
+  
+  if (copyBtnTop && copyBtnText) {
+    if (mode === 'machine') {
+      copyBtnTop.classList.remove('hidden'); // แสดงปุ่ม
+      // อัปเดตข้อความตามภาษาปัจจุบัน
+      copyBtnText.textContent = currentLang === 'th' ? `คัดลอกสูตร (${currentVolume}L)` : `Copy Recipe (${currentVolume}L)`;
+      
+      // ผูก Event Click ที่นี่ เพื่อให้มั่นใจว่าใช้ currentRecipe และ currentVolume ล่าสุด
+      copyBtnTop.onclick = () => {
+        if (currentRecipe) {
+          copyMachineRecipeToClipboard(currentRecipe, currentVolume);
+        }
+      };
+    } else {
+      copyBtnTop.classList.add('hidden'); // ซ่อนปุ่มเมื่อเป็น Manual
+    }
+  }
+
+  if (currentRecipe) {
+    // 3. บังคับเปลี่ยนหัวข้อ "titleIngredients" ตามโหมดที่เลือก
+    const titleIng = document.getElementById('titleIngredients');
+    if (titleIng) {
+      if (mode === 'machine') {
+        titleIng.textContent = currentLang === 'th' ? '⚙️ การตั้งค่าเครื่อง' : '⚙️ Machine Setup';
+      } else {
+        titleIng.textContent = getText(UI_LABELS.ingredients); 
+      }
+    }
+
+    // 4. อัปเดตรายการวัตถุดิบ
+    renderIngredients(currentRecipe, currentVolume);
+
+    // 5. อัปเดตขั้นตอนการทำ (แยกตามโหมด)
+    if (mode === 'machine') {
+      renderMachineSteps(currentRecipe, currentVolume);
+    } else {
+      renderSteps(currentRecipe); // โหมด Manual
+    }
+
+    // 6. อัปเดตปุ่ม Action ด้านล่าง (ถ้ายังมีฟังก์ชันนี้อยู่)
+    if (typeof updateActionButtons === 'function') {
+      updateActionButtons();
+    }
+  }
+}
+function NA2switchMode(mode) {
+  // ✅ เพิ่มตรงนี้: ถ้าเลือกโหมดเครื่อง แต่สูตรนี้ไม่รองรับ ให้แจ้งเตือนและบังคับกลับเป็น Manual
+  if (mode === 'machine' && currentRecipe && currentRecipe.machineCompatible === false) {
+    showToast(currentLang === 'th' 
+      ? '⚠️ สูตรนี้ยังไม่รองรับการใช้งานกับเครื่อง (Manual Only)' 
+      : '⚠️ This recipe is not yet compatible with the machine (Manual Only)');
+    mode = 'manual'; // บังคับกลับเป็น manual
+  }
+
+  currentMode = mode;
+  
+  // 1. จัดการสถานะปุ่ม (Active / Inactive)
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.classList.remove('active');
+    
+    // ✅ เพิ่มตรงนี้: ปิดการใช้งานปุ่ม Machine ถ้าสูตรไม่รองรับ
+    if (btn.dataset.mode === 'machine' && currentRecipe && currentRecipe.machineCompatible === false) {
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      btn.style.cursor = 'not-allowed';
+      btn.title = currentLang === 'th' ? 'สูตรนี้ใช้เครื่องไม่ได้' : 'Machine not compatible';
+    } else {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+      btn.title = '';
+    }
+
+    if (btn.dataset.mode === mode) {
+      btn.classList.add('active');
+    }
+  });
+
+  if (currentRecipe) {
+    // 2. ✅ แก้ปัญหาหลัก: บังคับเปลี่ยนหัวข้อ "titleIngredients" ตามโหมดที่เลือก
+    const titleIng = document.getElementById('titleIngredients');
+    if (titleIng) {
+      if (mode === 'machine') {
+        titleIng.textContent = currentLang === 'th' ? '⚙️ การตั้งค่าเครื่อง' : '⚙️ Machine Setup';
+      } else {
+        titleIng.textContent = getText(UI_LABELS.ingredients); // กลับไปใช้ "📝 วัตถุดิบ" เมื่อเป็น Manual
+      }
+    }
+
+    // 3. อัปเดตรายการวัตถุดิบให้คำนวณตาม Volume ปัจจุบันเสมอ (ป้องกัน bug ปริมาณไม่เปลี่ยน)
+    renderIngredients(currentRecipe, currentVolume);
+
+    // 4. อัปเดตขั้นตอนการทำ (แยกตามโหมด)
+    if (mode === 'machine') {
+      renderMachineSteps(currentRecipe, currentVolume);
+    } else {
+      renderSteps(currentRecipe); // โหมด Manual
+    }
+
+    // 5. อัปเดตปุ่ม Action ด้านล่าง (Download / Copy Link)
+    updateActionButtons();
+  }
+}
+function NAswitchMode(mode) {
   currentMode = mode;
   
   // 1. จัดการสถานะปุ่ม (Active / Inactive)
@@ -335,10 +472,11 @@ function renderMachineSteps(recipe, volume) {
 
   stepsContainer.innerHTML += `
     <div style="margin-top: 32px; text-align: center;">
-      <button id="copyRecipeBtn2" class="btn-download">📋 ${currentLang === 'th' ? 'คัดลอกสูตรเข้าเครื่อง (' + volume + 'L)' : 'Copy Recipe for Machine (' + volume + 'L)'}</button>
+      <button id="copyRecipeBtn2" class="btn-download">📋 ${currentLang === 'th' ? 'คัดลอกสูตร (' + volume + 'L)' : 'Copy Recipe (' + volume + 'L)'}</button>
     </div>
   `;
   document.getElementById('copyRecipeBtn2').onclick = () => copyMachineRecipeToClipboard(recipe, volume);
+  copyBtnText.textContent = currentLang === 'th' ? `คัดลอกสูตร (${currentVolume}L)` : `Copy Recipe (${currentVolume}L)`;
 }
 
 // ✅ ใหม่: คัดลอกสูตรสำหรับเครื่องลง Clipboard (แทนการดาวน์โหลดไฟล์)
@@ -398,11 +536,11 @@ function copyMachineRecipeToClipboard(recipe, volume) {
 
   // สร้างโครงสร้าง JSON ตามรูปแบบ FML
   const machineData = {
-    recipe_id: recipe.id || "unknown_recipe",
+    recipe_id: recipe.id + "_" + volume || "unknown_recipe",
     recipe_name: getText(recipe.name) || "Unknown Recipe",
     icon: recipe.icon || "🌺",
     category: recipe.category || "herbal",
-    description: getText(recipe.intro) || getText(recipe.description) || "",
+    description: getText(recipe.description) || "",  //description: getText(recipe.intro) || getText(recipe.description) || "",
     total_time: Math.round(totalTime),
     target_temp: targetTemp,
     total_volume: volume,
@@ -701,7 +839,18 @@ const CATEGORIES_DATA = {
   herbal: { name: { th: 'สมุนไพรไทย', en: 'Thai Herbs' }, desc: { th: 'รวมสูตรเครื่องดื่มจากภูมิปัญญาไทย...', en: 'Traditional Thai herbal drinks...' }, image: 'images/categories/herbal.jpg', count: 2 },
   tea: { name: { th: 'ชา & เครื่องดื่มร้อน', en: 'Tea & Hot Drinks' }, desc: { th: 'ชาไทย ชาเขียว และเครื่องดื่มร้อนหลากสไตล์', en: 'Thai tea, green tea, and various hot beverages' }, image: 'images/categories/tea.jpg', count: 0 },
   milk: { name: { th: 'นม & ธัญพืช', en: 'Milk & Cereals' }, desc: { th: 'นมถั่วเหลือง นมข้าวโพด และเครื่องดื่มธัญพืช', en: 'Soy milk, corn milk, and cereal-based drinks' }, image: 'images/categories/milk.jpg', count: 0 },
-  ferment: { name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' }, desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' }, image: 'images/categories/ferment.jpg', count: 0 }
+  ferment: { name: { th: 'เครื่องดื่มหมัก', en: 'Fermented Beverages' }, desc: { th: 'คอมบูฉะ เบียร์คราฟต์ และโยเกิร์ต', en: 'Kombucha, craft beer, and yogurt drinks' }, image: 'images/categories/ferment.jpg', count: 0 },
+  juice: { 
+    name: { th: 'น้ำผลไม้ & สมูทตี้', en: 'Cold Juices & Smoothies' }, 
+    desc: { th: 'น้ำส้มคั้นสด น้ำเก๊กฮวยเย็น และสมูทตี้หลากชนิด', en: 'Fresh juices, cold herbal teas, and various smoothies' }, 
+    image: 'images/categories/juice.jpg', 
+    count: 7 
+  },'bubble-tea': { 
+    name: { th: 'ชานมไข่มุก', en: 'Milk Tea & Toppings' }, 
+    desc: { th: 'ชาไทยไข่มุก ชาเขียว และท็อปปิ้งหลากหลาย', en: 'Thai milk tea with pearls, green tea, and various toppings' }, 
+    image: 'images/categories/bubble-tea.jpg', 
+    count: 6 
+  }
 };
 
 function renderCategoriesPage() {
