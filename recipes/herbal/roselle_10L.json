@@ -4,7 +4,7 @@
   "category": "herbal",
   "description": "กระเจี๊ยบ 120g + น้ำตาล 1kg สกัด 95°C 10 นาที",
   "machineCompatible": true,
-  "total_time": 83,
+  "total_time": 163,
   "target_temp": 95,
   "baseVolume": 10,
   "minVolume": 1,
@@ -206,7 +206,7 @@
           "scalable": true
         }
       },
-      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir"
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
     },
     {
       "step": 6,
