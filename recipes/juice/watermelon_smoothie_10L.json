@@ -1,0 +1,217 @@
+{
+  "id": "watermelon_smoothie_10L",
+  "icon": "🍉",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการปั่นน้ำแข็งและผลไม้ กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires a blender, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "น้ำแตงโมปั่นเย็นสดชื่น 100% จากเนื้อแตงโมแท้ ผสมเกลือนิดหน่อยเพื่อตัดรส หวานธรรมชาติ ดื่มแล้วสดชื่นทันที",
+  "total_time": 20,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_watermelon_smoothie_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำแตงโมปั่น 10 ลิตร",
+    "en": "Watermelon Smoothie 10L"
+  },
+  "images": [
+    "images/juice/watermelon_smoothie/main_1.jpg",
+    "images/juice/watermelon_smoothie/main_2.jpg",
+    "images/juice/watermelon_smoothie/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_watermelon",
+  "prepTime": {
+    "th": "20 นาที (ทำเอง)",
+    "en": "20 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "20 นาที (ทำเอง)",
+    "en": "20 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.6",
+  "intro": {
+    "th": "น้ำแตงโมปั่นสูตรสดชื่น ทำได้ง่ายๆ ด้วยเครื่องปั่น: ปั่นเนื้อแตงโมกับน้ำแข็งและเกลือเล็กน้อยจนละเอียดเนียน พร้อมเสิร์ฟทันที! (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ เนื่องจากต้องใช้เครื่องปั่น)",
+    "en": "Refreshing watermelon smoothie made easily with a blender: blend watermelon flesh with ice and a pinch of salt until smooth. Serve immediately! (Note: Manual Only as it requires a blender)."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยไลโคปีนและวิตามินเอ ช่วยบำรุงผิวพรรณและสายตา มีน้ำสูงช่วยทดแทนน้ำที่สูญเสียไปและคลายร้อนได้ดี",
+    "en": "Rich in lycopene and vitamin A, supports skin and eye health. High water content helps with hydration and cooling."
+  },
+  "warnings": {
+    "th": "⚠️ ควรดื่มทันทีหลังปั่นเสร็จ เพราะน้ำแตงโมจะแยกชั้นและเสียรสชาติเร็ว ไม่ควรทิ้งไว้นาน และผู้ที่เป็นโรคไตควรระวังปริมาณโพแทสเซียม",
+    "en": "⚠️ Consume immediately after blending, as watermelon juice separates and loses flavor quickly. People with kidney issues should monitor potassium intake."
+  },
+  "nutrition": {
+    "calories": "30 kcal",
+    "carbs": "7.5 g",
+    "sugar": "6.0 g",
+    "protein": "0.6 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เนื้อแตงโมแดง (เอาเมล็ดออก)", "en": "Red watermelon flesh (seedless)" },
+      "amount": 10000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (ไม่บังคับ)", "en": "Sugar (optional)" },
+      "amount": 0,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับปั่น)", "en": "Ice (for blending)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรน้ำแตงโมปั่นต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Watermelon smoothie requires a blender, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและเตรียมแตงโม",
+        "en": "Wash and prepare watermelon"
+      },
+      "desc": {
+        "th": "ล้างเปลือกแตงโม {watermelon_amount} ด้วยน้ำสะอาด {water_wash} ให้สะอาด ผ่าครึ่ง คว้านเอาเมล็ดออก และหั่นเนื้อแตงโมเป็นก้อนขนาดพอดีคำ",
+        "en": "Wash {watermelon_amount} of watermelon with {water_wash} of clean water. Halve, remove seeds, and cut flesh into bite-sized cubes."
+      },
+      "descVariables": {
+        "watermelon_amount": { "amount": 10000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/watermelon_smoothie/man_1.jpg",
+      "tips": {
+        "th": "💡 การเลือกแตงโมที่สุกพอดี (เคาะแล้วเสียงโปร่ง) จะทำให้น้ำปั่นหวานธรรมชาติโดยไม่ต้องเติมน้ำตาล",
+        "en": "💡 Choosing a perfectly ripe watermelon (hollow sound when tapped) ensures natural sweetness without added sugar."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นแตงโมกับน้ำแข็ง",
+        "en": "Blend watermelon with ice"
+      },
+      "desc": {
+        "th": "นำเนื้อแตงโม {watermelon_amount} และน้ำแข็ง {ice_amount} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนเนื้อละเอียดเนียน",
+        "en": "Place {watermelon_amount} of watermelon and {ice_amount} of ice into a blender. Blend on high speed until smooth."
+      },
+      "descVariables": {
+        "watermelon_amount": { "amount": 10000, "unit": "Gram", "scalable": true },
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/watermelon_smoothie/man_2.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นกำลังไม่สูงมาก ให้แบ่งปั่นทีละน้อยเพื่อไม่ให้เครื่องทำงานหนักเกินไป",
+        "en": "💡 If the blender is not very powerful, blend in small batches to avoid overloading the motor."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรส",
+        "en": "Season"
+      },
+      "desc": {
+        "th": "เติมเกลือป่น {salt_amount} ลงไปปั่นรวมกันอีกครั้งเล็กน้อย เกลือจะช่วยตัดรสและดึงความหวานของแตงโมออกมาได้ชัดเจนขึ้น",
+        "en": "Add {salt_amount} of salt and blend briefly. Salt enhances the natural sweetness of the watermelon."
+      },
+      "descVariables": {
+        "salt_amount": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/watermelon_smoothie/man_3.jpg",
+      "tips": {
+        "th": "💡 ชิมรสก่อนเสิร์ฟ หากแตงโมจืดสามารถเติมน้ำตาลทรายหรือมะนาวเล็กน้อยเพื่อเพิ่มมิติรสชาติ",
+        "en": "💡 Taste before serving. If the watermelon is bland, add a little sugar or lime juice for extra flavor dimension."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "เทใส่เหยือก",
+        "en": "Pour into pitcher"
+      },
+      "desc": {
+        "th": "เทน้ำแตงโมปั่นที่ละเอียดแล้วลงในเหยือกขนาดใหญ่ คนเบาๆ ให้เข้ากัน (สามารถกรองผ่านกระชอนได้หากต้องการเนื้อสัมผัสที่เนียนละเอียดเป็นพิเศษ)",
+        "en": "Pour the blended watermelon into a large pitcher. Stir gently (strain through a sieve if an extra-smooth texture is desired)."
+      },
+      "descVariables": {},
+      "image": "images/juice/watermelon_smoothie/man_4.jpg",
+      "tips": {
+        "th": "💡 การคนเบาๆ ช่วยป้องกันไม่ให้น้ำและเนื้อแตงโมแยกชั้นเร็วเกินไป",
+        "en": "💡 Gentle stirring helps prevent the water and pulp from separating too quickly."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟทันที",
+        "en": "Serve immediately"
+      },
+      "desc": {
+        "th": "เทใส่แก้วที่แช่เย็นจัด ตกแต่งด้วยชิ้นแตงโมหรือใบมินต์ พร้อมเสิร์ฟทันทีเพื่อให้ได้รสชาติและความสดชื่นที่ดีที่สุด",
+        "en": "Pour into a chilled glass, garnish with a watermelon slice or mint leaf, and serve immediately for the best taste and freshness."
+      },
+      "descVariables": {},
+      "image": "images/juice/watermelon_smoothie/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำแตงโมปั่นไม่ควรทิ้งไว้นานเกิน 30 นาที เพราะจะเกิดฟองและแยกชั้น ทำให้รสชาติเปลี่ยน",
+        "en": "💡 Do not leave watermelon smoothie for more than 30 minutes, as it will foam and separate, altering the taste."
+      }
+    }
+  ]
+}

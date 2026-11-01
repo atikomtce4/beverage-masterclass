@@ -1,0 +1,298 @@
+{
+  "id": "chrysanthemum_cold_10L",
+  "icon": "🌼",
+  "category": "juice",
+  "machineCompatible": true,
+  "description": "ดอกเก๊กฮวยแห้ง 200g + น้ำ 10L + น้ำตาลกรวด 300g ต้มสกัดเย็น หอมหวาน ช่วยคลายร้อน บำรุงสายตา",
+  "total_time": 90,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_chrysanthemum_cold_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำเก๊กฮวยเย็น 10 ลิตร",
+    "en": "Cold Chrysanthemum Tea 10L"
+  },
+  "images": [
+    "images/juice/chrysanthemum_cold/main_1.jpg",
+    "images/juice/chrysanthemum_cold/main_2.jpg",
+    "images/juice/chrysanthemum_cold/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_chrysanthemum",
+  "prepTime": {
+    "th": "10 นาที (เตรียมวัตถุดิบ)",
+    "en": "10 mins (prep ingredients)"
+  },
+  "cookTime": {
+    "th": "80 นาที (ทำเอง) + แช่เย็น",
+    "en": "80 mins (Manual) + chilling"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "น้ำเก๊กฮวยเย็นทำเองได้ง่ายๆ ด้วยหม้อต้มทั่วไป: ต้มน้ำให้เดือด รอให้ลดอุณหภูมิเหลือ 90°C (ใช้เทอร์โมมิเตอร์วัด) ใส่ดอกเก๊กฮวยแช่ 12 นาที กรอง เติมน้ำตาลกรวด แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Easy homemade cold chrysanthemum tea: boil water, cool to 90°C (use thermometer), steep flowers 12 mins, strain, add rock sugar, and chill. Ready to serve!"
+  },
+  "benefits": {
+    "th": "ช่วยลดความร้อนในร่างกาย แก้ร้อนใน มีสารต้านอนุมูลอิสระ บำรุงสายตา และช่วยผ่อนคลายความเครียด",
+    "en": "Reduces internal body heat, rich in antioxidants, supports eye health, and helps relieve stress."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีอาการแพ้ดอกเบญจมาศควรหลีกเลี่ยง สตรีมีครรภ์ควรปรึกษาแพทย์ก่อนดื่ม ไม่ควรดื่มขณะท้องว่าง",
+    "en": "⚠️ Avoid if allergic to chrysanthemum. Pregnant women should consult a doctor. Don't drink on an empty stomach."
+  },
+  "nutrition": {
+    "calories": "12 kcal",
+    "carbs": "3 g",
+    "sugar": "2.8 g",
+    "protein": "0.1 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้ม)", "en": "Clean water (for boiling)" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ดอกเก๊กฮวยแห้ง", "en": "Dried chrysanthemum flowers" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เก๋ากี้ (ไม่บังคับ)", "en": "Goji berries (optional)" },
+      "amount": 30,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำสำหรับต้ม", "en": "Prepare Water for Boiling" },
+      "desc": { "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว", "en": "Start by adding {water} of clean water into the sterilized tank." },
+      "descVariables": { "water": { "amount": 10, "unit": "Liter", "scalable": true } },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้เดือด (100°C)", "en": "Boil Water (100°C)" },
+      "desc": { "th": "เครื่องจะต้มน้ำให้เดือดจัดเพื่อเตรียมสกัดดอกเก๊กฮวย", "en": "The machine boils water to prepare for chrysanthemum extraction." },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Chill",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิเหลือ 90°C", "en": "Cool down to 90°C" },
+      "desc": { "th": "เครื่องจะลดอุณหภูมิน้ำจาก 100°C ลงเหลือ 90°C อย่างแม่นยำ (น้ำร้อนเกินจะทำให้เก๊กฮวยขม)", "en": "The machine precisely cools water from 100°C to 90°C (too hot makes chrysanthemum bitter)." },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมดอกเก๊กฮวยและเก๋ากี้", "en": "Prepare chrysanthemum and goji berries" },
+      "desc": { "th": "✅ อุณหภูมิ 90°C พร้อมแล้ว! กรุณาเตรียมดอกเก๊กฮวยแห้ง {chrysanthemum} (ล้างแล้ว) และเก๋ากี้ {goji} (ถ้าใช้) เมื่อพร้อมแล้วกด OK", "en": "✅ Temperature is ready at 90°C! Please prepare {chrysanthemum} of rinsed dried chrysanthemum and {goji} of goji berries. Press OK when ready." },
+      "descVariables": { "chrysanthemum": { "amount": 200, "unit": "Gram", "scalable": true }, "goji": { "amount": 30, "unit": "Gram", "scalable": true } },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่ดอกเก๊กฮวยและเก๋ากี้", "en": "Add chrysanthemum and goji berries" },
+      "desc": { "th": "ระบบจะใส่ดอกเก๊กฮวย {chrysanthemum} และเก๋ากี้ {goji} ลงไป พร้อมเปิดระบบกวนเบาๆ", "en": "System adds {chrysanthemum} of chrysanthemum and {goji} of goji berries, activating gentle stirring." },
+      "descVariables": { "chrysanthemum": { "amount": 200, "unit": "Gram", "scalable": true }, "goji": { "amount": 30, "unit": "Gram", "scalable": true } },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 12,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "แช่สกัดดอกเก๊กฮวย (12 นาที)", "en": "Steep chrysanthemum for 12 minutes" },
+      "desc": { "th": "เครื่องจะรักษาอุณหภูมิ 85°C และกวนเป็นระยะเป็นเวลา 12 นาที เพื่อสกัดรสชาติและกลิ่นหอม", "en": "Machine maintains 85°C and stirs periodically for 12 mins to extract flavor and aroma." },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "กรองดอกเก๊กฮวยออก", "en": "Filter out chrysanthemum flowers" },
+      "desc": { "th": "ระบบจะกรองดอกเก๊กฮวยและเก๋ากี้ออกผ่านตะแกรงละเอียด", "en": "System filters out chrysanthemum flowers and goji berries through fine mesh." },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เติมน้ำตาลกรวด", "en": "Add rock sugar" },
+      "desc": { "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar} ลงไป พร้อมเปิดระบบกวนจนละลายหมด", "en": "System adds {rock_sugar} of rock sugar, activating stirring until fully dissolved." },
+      "descVariables": { "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true } },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ", "en": "Cool down to 4°C, ready to serve" },
+      "desc": { "th": "เครื่องจะลดอุณหภูมิน้ำเก๊กฮวยเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ", "en": "The machine cools chrysanthemum tea to 4°C, ready to serve ice-cold." },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 10,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "น้ำเก๊กฮวยเย็นพร้อมเสิร์ฟ", "en": "Cold chrysanthemum tea ready to serve" },
+      "desc": { "th": "✅ น้ำเก๊กฮวยเย็น 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้", "en": "✅ Cold chrysanthemum tea at 4°C is ready! Please prepare a container. The machine will transfer it out." },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 11,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำเก๊กฮวยออกสู่ภาชนะ", "en": "Transfer chrysanthemum tea to container" },
+      "desc": { "th": "ระบบกำลังโอนถ่ายน้ำเก๊กฮวยเย็นออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์", "en": "System is transferring cold chrysanthemum tea out of the tank. Please wait until complete." },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ล้างดอกเก๊กฮวย", "en": "Rinse chrysanthemum flowers" },
+      "desc": { "th": "นำดอกเก๊กฮวยแห้ง {chrysanthemum} ใส่กระชอน ล้างผ่านน้ำสะอาดเร็วๆ 1-2 ครั้ง เพื่อกำจัดฝุ่น อย่าแช่นานเพราะกลิ่นจะหายไป", "en": "Place {chrysanthemum} of dried flowers in a strainer, rinse quickly under running water 1-2 times. Don't soak or aroma will be lost." },
+      "descVariables": { "chrysanthemum": { "amount": 200, "unit": "Gram", "scalable": true } },
+      "image": "images/juice/chrysanthemum_cold/man_1.jpg",
+      "tips": { "th": "💡 ใช้มือคนเบาๆ ขณะล้าง อย่าขยี้แรงเพราะดอกจะช้ำ", "en": "💡 Gently stir with hands while rinsing, don't crush the flowers." }
+    },
+    {
+      "step": 2,
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้เดือดแล้วลดอุณหภูมิ", "en": "Boil water then reduce temperature" },
+      "desc": { "th": "ต้มน้ำ {water} ในหม้อใหญ่ให้เดือดจัด (100°C) แล้วปิดไฟ รอให้น้ำลดอุณหภูมิเหลือประมาณ 90°C (ใช้เทอร์โมมิเตอร์วัด หรือรอประมาณ 3-5 นาที)", "en": "Boil {water} in a large pot to 100°C, then turn off heat. Wait until temperature drops to ~90°C (use thermometer or wait 3-5 mins)." },
+      "descVariables": { "water": { "amount": 10, "unit": "Liter", "scalable": true } },
+      "image": "images/juice/chrysanthemum_cold/man_2.jpg",
+      "tips": { "th": "💡 ถ้าน้ำร้อนเกินไป ดอกเก๊กฮวยจะขมและสีเข้มเกินไป ควรมีเทอร์โมมิเตอร์ติดครัวไว้", "en": "💡 Water too hot makes tea bitter and too dark. Keep a kitchen thermometer handy." }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ใส่ดอกเก๊กฮวยและแช่สกัด", "en": "Add chrysanthemum and steep" },
+      "desc": { "th": "ใส่ดอกเก๊กฮวยที่ล้างแล้วและเก๋ากี้ {goji} (ถ้าใช้) ลงในน้ำร้อน 90°C คนเบาๆ 1-2 ครั้ง แล้วปิดฝา แช่นาน 12 นาที", "en": "Add rinsed flowers and {goji} of goji berries (if using) to 90°C water. Stir gently 1-2 times, cover, and steep for 12 mins." },
+      "descVariables": { "goji": { "amount": 30, "unit": "Gram", "scalable": true } },
+      "image": "images/juice/chrysanthemum_cold/man_3.jpg",
+      "tips": { "th": "💡 การแช่ 12 นาทีที่ 90°C เป็นจุดที่สกัดรสชาติและกลิ่นหอมได้สมบูรณ์แบบที่สุด อย่าแช่นานกว่านี้เพราะจะขม", "en": "💡 12 mins at 90°C is the sweet spot for perfect flavor. Don't exceed or tea becomes bitter." }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "กรองและเติมน้ำตาลกรวด", "en": "Strain and add rock sugar" },
+      "desc": { "th": "ใช้กระชอนหรือผ้าขาวบางกรองดอกเก๊กฮวยและเก๋ากี้ออกให้หมด ขณะน้ำยังร้อนอยู่ เติมน้ำตาลกรวด {rock_sugar} คนจนละลายหมด", "en": "Strain out all flowers and goji berries through fine mesh. While water is still hot, add {rock_sugar} of rock sugar and stir until dissolved." },
+      "descVariables": { "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true } },
+      "image": "images/juice/chrysanthemum_cold/man_4.jpg",
+      "tips": { "th": "💡 น้ำตาลกรวดให้ความหวานละมุนกว่าน้ำตาลทราย และละลายง่ายในน้ำร้อน", "en": "💡 Rock sugar gives smoother sweetness than white sugar and dissolves easily in hot water." }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": { "th": "ทำให้เย็นและเสิร์ฟ", "en": "Cool down and serve" },
+      "desc": { "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1 ชั่วโมง เสิร์ฟเย็นจัดพร้อมน้ำแข็งและดอกเก๊กฮวยแห้งตกแต่ง", "en": "Cool to room temperature, then refrigerate at least 1 hour. Serve ice-cold with ice and dried flower garnish." },
+      "descVariables": {},
+      "image": "images/juice/chrysanthemum_cold/man_5.jpg",
+      "tips": { "th": "💡 สามารถเก็บในตู้เย็นได้ 3-4 วัน รสชาติจะยังคงหอมสดชื่น", "en": "💡 Can be stored refrigerated for 3-4 days while maintaining fresh aroma." }
+    }
+  ]
+}

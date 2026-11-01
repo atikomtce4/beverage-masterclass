@@ -1,0 +1,238 @@
+{
+  "id": "orange_fresh_10L",
+  "icon": "🍊",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้การคั้นสดจากผลส้ม ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการคั้นน้ำผลไม้ กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires fresh squeezing of oranges, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "น้ำส้มคั้นสด 100% ไม่เติมน้ำตาล คั้นสดใหม่ทุกแก้ว หอม หวานธรรมชาติ อุดมไปด้วยวิตามินซีสูง",
+  "total_time": 30,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_orange_fresh_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำส้มคั้นสด 10 ลิตร",
+    "en": "Fresh Orange Juice 10L"
+  },
+  "images": [
+    "images/juice/orange_fresh/main_1.jpg",
+    "images/juice/orange_fresh/main_2.jpg",
+    "images/juice/orange_fresh/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_orange",
+  "prepTime": {
+    "th": "30 นาที (ทำเอง)",
+    "en": "30 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "30 นาที (ทำเอง)",
+    "en": "30 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "น้ำส้มคั้นสดสูตรต้นตำรับ ทำได้ง่ายๆ ด้วยตัวเอง: ล้างส้มให้สะอาด ผ่าครึ่ง และคั้นน้ำสดๆ กรองกาก เติมเกลือเล็กน้อยเพื่อตัดรส พร้อมเสิร์ฟเย็นจัด! (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ เนื่องจากต้องใช้การคั้นสด)",
+    "en": "Authentic fresh orange juice made easily by hand: wash, halve, and squeeze fresh. Strain, add a pinch of salt, and serve ice-cold! (Note: This recipe is Manual Only as it requires fresh squeezing)."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยวิตามินซีสูง ช่วยเสริมภูมิคุ้มกัน ต้านอนุมูลอิสระ และช่วยให้ผิวพรรณสดใส",
+    "en": "High in Vitamin C, boosts immunity, fights free radicals, and promotes glowing skin."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคกระเพาะควรดื่มหลังอาหารเท่านั้น ไม่ควรดื่มขณะท้องว่าง เพราะกรดในส้มอาจระคายเคืองกระเพาะอาหาร",
+    "en": "⚠️ People with stomach issues should drink after meals. Avoid drinking on an empty stomach due to citrus acidity."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "10.4 g",
+    "sugar": "9.2 g",
+    "protein": "0.7 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ส้มสด (ส้มเขียวหวานหรือส้มสายน้ำผึ้ง)", "en": "Fresh oranges (sweet variety)" },
+      "amount": 6000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (ไม่บังคับ)", "en": "Sugar (optional)" },
+      "amount": 0,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรน้ำส้มคั้นสดต้องใช้การคั้นด้วยมือหรือเครื่องคั้นน้ำผลไม้โดยเฉพาะ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Fresh orange juice requires hand-squeezing or a dedicated juicer, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างส้มให้สะอาด",
+        "en": "Wash oranges thoroughly"
+      },
+      "desc": {
+        "th": "นำส้มสด {orange_amount} ล้างน้ำสะอาด {water_wash} ขัดผิวเบาๆ เพื่อล้างสารเคมีและสิ่งสกปรกออกให้หมด",
+        "en": "Wash {orange_amount} of fresh oranges with {water_wash} of clean water, scrub gently to remove pesticides and dirt."
+      },
+      "descVariables": {
+        "orange_amount": { "amount": 6000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/orange_fresh/man_1.jpg",
+      "tips": {
+        "th": "💡 ใช้เบกกิ้งโซดาผสมน้ำล้างจะช่วยให้สะอาดขึ้น",
+        "en": "💡 Use baking soda water for better cleaning."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ผ่าครึ่งส้ม",
+        "en": "Halve the oranges"
+      },
+      "desc": {
+        "th": "ใช้มีดคมผ่าส้มตามขวางเป็น 2 ซีก เตรียมไว้สำหรับคั้น",
+        "en": "Cut oranges crosswise into halves using a sharp knife, preparing them for juicing."
+      },
+      "descVariables": {
+        "orange_amount": { "amount": 6000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/orange_fresh/man_2.jpg",
+      "tips": {
+        "th": "💡 คลึงส้มบนโต๊ะแรงๆ ก่อนผ่า จะทำให้คั้นน้ำได้ง่ายขึ้นและได้น้ำมากขึ้น",
+        "en": "💡 Roll oranges on the countertop before cutting to make juicing easier and increase yield."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "คั้นน้ำส้ม",
+        "en": "Squeeze the juice"
+      },
+      "desc": {
+        "th": "ใช้เครื่องคั้นน้ำส้มหรือที่คั้นมือ คั้นน้ำส้มจากแต่ละซีกให้หมด พยายามคั้นให้ได้น้ำมากที่สุด",
+        "en": "Use a juicer or hand press to extract maximum juice from each half."
+      },
+      "descVariables": {
+        "orange_amount": { "amount": 6000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/orange_fresh/man_3.jpg",
+      "tips": {
+        "th": "💡 ส้ม 1 กิโลกรัม โดยปกติจะคั้นได้น้ำประมาณ 500 มิลลิลิตร",
+        "en": "💡 1 kg of oranges typically yields about 500 ml of juice."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองกากส้ม",
+        "en": "Strain the pulp"
+      },
+      "desc": {
+        "th": "เทน้ำส้มผ่านกระชอนหรือผ้าขาวบางเพื่อแยกกากและเมล็ดออก (สามารถเหลือกากเล็กน้อยได้ตามความชอบ)",
+        "en": "Strain through a fine mesh sieve or cheesecloth to remove pulp and seeds (leave some pulp if preferred)."
+      },
+      "descVariables": {},
+      "image": "images/juice/orange_fresh/man_4.jpg",
+      "tips": {
+        "th": "💡 การกรองทันทีหลังคั้นจะช่วยป้องกันไม่ให้น้ำส้มมีรสขมจากเปลือก",
+        "en": "💡 Straining immediately after juicing prevents bitterness from the peel."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรส",
+        "en": "Season"
+      },
+      "desc": {
+        "th": "เติมเกลือป่น {salt_amount} คนให้ละลาย ชิมรส ถ้าเปรี้ยวมากสามารถเติมน้ำตาลทรายได้ทีละน้อย",
+        "en": "Add {salt_amount} of salt, stir well. Taste and add sugar gradually only if too sour."
+      },
+      "descVariables": {
+        "salt_amount": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/orange_fresh/man_5.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยช่วยตัดรสและดึงความหวานธรรมชาติของส้มออกมาได้ดีขึ้น",
+        "en": "💡 A pinch of salt enhances the natural sweetness of the oranges."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "เทน้ำส้มใส่เหยือก แช่ตู้เย็นอย่างน้อย 30 นาที เสิร์ฟเย็นจัดพร้อม {ice_amount} และส้มฝานตกแต่ง",
+        "en": "Pour into a pitcher, refrigerate for at least 30 mins. Serve ice-cold with {ice_amount} and orange slices."
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/juice/orange_fresh/man_6.jpg",
+      "tips": {
+        "th": "💡 น้ำส้มคั้นสดควรดื่มให้หมดภายใน 24 ชั่วโมง เพื่อรับวิตามินซีสูงสุดและป้องกันรสขม",
+        "en": "💡 Fresh orange juice should be consumed within 24 hours for maximum vitamin C and to prevent bitterness."
+      }
+    }
+  ]
+}
