@@ -528,7 +528,7 @@
       <div class="footer-compact-links">
         <a href="index.html" data-i18n="footer_home">🏠 หน้าแรก</a>
         <a href="categories.html" data-i18n="footer_categories">📂 หมวดหมู่</a>
-        <a href="mailto:info@alldrinks.xyz">✉️ info@alldrinks.xyz</a>
+        <a href="mailto:atikomtce4@gmail.com">✉️ atikomtce4@gmail.com</a>
         <a href="#" onclick="openLineModal(); return false;" data-i18n="footer_line">💬 ติดต่อผ่าน LINE</a>
       </div>
 
@@ -643,7 +643,12 @@
       return timeStr;
     }
 
+    
     function renderCategory() {
+      // ดึง categoryId จาก URL อีกครั้งเพื่อให้มั่นใจว่ามีค่า (Fallback เป็น herbal ถ้าไม่มี)
+      const params = new URLSearchParams(window.location.search);
+      const categoryId = params.get('id') || 'herbal'; 
+
       const nameEl = document.getElementById('categoryName');
       const descEl = document.getElementById('categoryDesc');
       const gridEl = document.getElementById('recipeGrid');
@@ -670,19 +675,22 @@
         const prepTime = recipe.prepTime[currentLang] || recipe.prepTime.th;
         const rating = recipe.rating || '4.5';
         const image = recipe.image || 'images/placeholder.jpg';
-        const badges = recipe.badges ? recipe.badges[currentLang] || recipe.badges.th : [];
+        const badges = recipe.badges ? (recipe.badges[currentLang] || recipe.badges.th) : [];
         const badgeHtml = badges.length > 0 
           ? `<div class="recipe-badge">${badges[0]}</div>` 
           : '';
 
+        // ✅ แก้ปัญหาหน้าจอพัง: ใช้ categoryId จาก URL โดยตรง ไม่ต้องเรียกฟังก์ชันที่ซับซ้อน
+        const targetCategory = recipe.category || categoryId;
+
         return `
-          <a href="recipe.html?id=${recipe.category || getCategoryFromId(recipe.id)}/${recipe.id}" class="recipe-card">
+          <a href="recipe.html?id=${targetCategory}/${recipe.id}" class="recipe-card">
             <img src="${image}" alt="${title}" class="recipe-card-img" loading="lazy">
             <div class="recipe-card-body">
               <h3 class="recipe-card-title">${title}</h3>
               <div class="recipe-card-meta">
                 <span>⭐ ${rating}</span>
-                <span>️ ${formatTime(prepTime)}</span>
+                <span>⏱️ ${formatTime(prepTime)}</span>
               </div>
               ${badgeHtml}
             </div>
@@ -690,19 +698,15 @@
         `;
       }).join('');
     }
-
+    
     function getCategoryFromId(id) {
       // Extract category from recipe id (e.g., "roselle_10L" -> "herbal")
       // This is a fallback; ideally the JSON should include category field
       const mapping = {
-        'roselle': 'herbal', 'chrysanthemum': 'herbal', 'samkler': 'herbal',
-        'bael_fruit': 'herbal', 'pennywort': 'herbal', 'butterfly_pea': 'herbal',
-        'thai_tea': 'tea', 'green_tea': 'tea', 'cocoa': 'tea',
-        'ginger': 'tea', 'lemongrass_pandan': 'tea', 'butterfly_pea_tea': 'tea',
-        'soy_milk': 'milk', 'corn_milk': 'milk', 'black_sesame': 'milk',
-        'rice_milk': 'milk', 'oat_milk': 'milk',
-        'yogurt_drink': 'ferment', 'kombucha': 'ferment', 'lacto_drink': 'ferment',
-        'water_kefir': 'ferment', 'rice_wine': 'ferment'
+        'roselle': 'herbal', 'chrysanthemum': 'herbal', 'samkler': 'herbal','bael_fruit': 'herbal', 'pennywort': 'herbal', 'butterfly_pea': 'herbal',
+        'thai_tea': 'tea', 'green_tea': 'tea', 'cocoa': 'tea','ginger': 'tea', 'lemongrass_pandan': 'tea', 'butterfly_pea_tea': 'tea',
+        'soy_milk': 'milk', 'corn_milk': 'milk', 'black_sesame': 'milk','rice_milk': 'milk', 'oat_milk': 'milk', 'multigrain_milk': 'milk',
+        'yogurt_drink': 'ferment', 'kombucha': 'ferment', 'lacto_drink': 'ferment','water_kefir': 'ferment', 'rice_wine': 'ferment'
       };
       for (const [key, cat] of Object.entries(mapping)) {
         if (id.includes(key)) return cat;
@@ -753,7 +757,9 @@
         'herbal': 'สมุนไพรไทย',
         'tea': 'ชา & เครื่องดื่มร้อน',
         'milk': 'นม & ธัญพืช',
-        'ferment': 'เครื่องดื่มหมัก'
+        'ferment': 'เครื่องดื่มหมัก',
+        'juice': 'น้ำผลไม้ & สมูทตี้',          // ✅ เพิ่ม
+        'bubble-tea': 'ชานมไข่มุก'             // ✅ เพิ่ม
       };
       return names[id] || id;
     }
@@ -763,7 +769,9 @@
         'herbal': 'Thai Herbs',
         'tea': 'Tea & Hot Drinks',
         'milk': 'Milk & Cereals',
-        'ferment': 'Fermented Drinks'
+        'ferment': 'Fermented Drinks',
+        'juice': 'Cold Juices & Smoothies',    // ✅ เพิ่ม
+        'bubble-tea': 'Milk Tea & Toppings'    // ✅ เพิ่ม
       };
       return names[id] || id;
     }
@@ -773,7 +781,9 @@
         'herbal': 'กระเจี๊ยบ, เก๊กฮวย, ใบเตย และอื่นๆ',
         'tea': 'ชาไทย, ชาเขียว, โกโก้ และอื่นๆ',
         'milk': 'นมถั่วเหลือง, นมข้าวโพด, งาดำ',
-        'ferment': 'คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก'
+        'ferment': 'คอมบูชา, โยเกิร์ต, น้ำข้าวหมาก',
+        'juice': 'น้ำส้มคั้นสด, น้ำเก๊กฮวยเย็น, สมูทตี้',       // ✅ เพิ่ม
+        'bubble-tea': 'ชาไทยไข่มุก, ชาเขียว, วุ้นมะพร้าว'      // ✅ เพิ่ม
       };
       return descs[id] || '';
     }
