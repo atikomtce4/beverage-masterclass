@@ -358,33 +358,31 @@ function scaleRecipe(recipe, targetVolume) {
   const baseVolume = recipe.baseVolume || 10;
   const scaleFactor = targetVolume / baseVolume;
 
+  // 1. วัตถุดิบ: คำนวณ scaledAmount ตามปกติ (ถ้า scalable !== false)
   const scaledIngredients = (recipe.ingredients || []).map(ing => ({
     ...ing,
     scaledAmount: ing.scalable !== false && ing.amount
-      ? ing.amount * scaleFactor
+      ? parseFloat((ing.amount * scaleFactor).toFixed(2))
       : ing.amount
   }));
 
+  // 2. ขั้นตอนเครื่อง: คำนวณเฉพาะ target_value เท่านั้น
   const scaledSteps = (recipe.machineSteps || []).map(step => {
-    const baseValue = getStepBaseValue(step);
-    const canScale = isStepScalable(step);
+    const baseValue = step.target_value || 0;
+    const canScale = step.scalable !== false; // เช็คว่าขั้นตอนนี้ scale ได้ไหม
 
-    // ⏱️ เวลา: Scale เฉพาะเมื่อระบุชัดว่า durationScalable: true
-    // (เวลาต้ม/สกัด ไม่ควรคูณตามปริมาณน้ำ)
-    const scaleTime = step.durationScalable === true;
     const baseDuration = step.duration || 0;
     const baseTimeout = step.timeout !== undefined ? step.timeout : baseDuration;
 
     return {
       ...step,
-      scaledValue: canScale ? baseValue * scaleFactor : baseValue,
-      scaledUnit: getStepUnit(step),
-      scaledDuration: scaleTime
-        ? parseFloat((baseDuration * scaleFactor).toFixed(2))
-        : baseDuration,
-      scaledTimeout: scaleTime
-        ? parseFloat((baseTimeout * scaleFactor).toFixed(2))
-        : baseTimeout
+      // ✅ Scale เฉพาะ target_value (ถ้า canScale เป็น true)
+      scaledValue: canScale ? parseFloat((baseValue * scaleFactor).toFixed(2)) : baseValue,
+      scaledUnit: step.unit || "-",
+      
+      // ❌ ไม่ Scale เวลา (duration และ timeout) ให้คงค่าเดิมเสมอ ไม่ว่าปริมาณจะเปลี่ยนไปแค่ไหน
+      scaledDuration: baseDuration,
+      scaledTimeout: baseTimeout
     };
   });
 
