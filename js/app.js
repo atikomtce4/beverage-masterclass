@@ -544,7 +544,7 @@ function copyMachineRecipeToClipboard(recipe, volume) {
 
   // สร้างโครงสร้าง JSON ตามรูปแบบ FML
   const machineData = {
-    recipe_id: recipe.id || "unknown_recipe",
+    recipe_id: recipe.id + "_" + volume || "unknown_recipe",
     recipe_name: getText(recipe.name) || "Unknown Recipe",
     icon: recipe.icon || "🍹",
     category: recipe.category || "unknown",
