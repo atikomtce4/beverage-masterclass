@@ -1,0 +1,227 @@
+{
+  "id": "passion_fruit_honey_10L",
+  "icon": "🟡",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้การคั้นและกรองเมล็ดเสาวรสด้วยมือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires hand-squeezing and seeding of passion fruit, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "น้ำเสาวรสผสมน้ำผึ้ง สูตรเย็นสดชื่น หอมกลิ่นดอกไม้ รสเปรี้ยวหวานกลมกล่อม อุดมไปด้วยวิตามินซีสูงและสารต้านอนุมูลอิสระ",
+  "total_time": 25,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_passion_fruit_honey_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำเสาวรสผสมน้ำผึ้ง 10 ลิตร",
+    "en": "Passion Fruit Honey 10L"
+  },
+  "images": [
+    "images/juice/passion_fruit_honey/main_1.jpg",
+    "images/juice/passion_fruit_honey/main_2.jpg",
+    "images/juice/passion_fruit_honey/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_passion_fruit",
+  "prepTime": {
+    "th": "25 นาที (ทำเอง)",
+    "en": "25 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "25 นาที (ทำเอง)",
+    "en": "25 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "น้ำเสาวรสผสมน้ำผึ้งสูตรหอมเย็นชื่นใจ: คั้นเนื้อเสาวรสสด กรองเมล็ดออกให้เรียบร้อย นำมาผสมกับน้ำผึ้งแท้และน้ำสะอาด เติมเกลือเล็กน้อยตัดรส ได้เครื่องดื่มวิตามินซีสูง ดื่มแล้วสดชื่นทันที (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ)",
+    "en": "Refreshing passion fruit honey drink: squeeze fresh passion fruit, strain the seeds, mix with pure honey and clean water. Add a pinch of salt. High in Vitamin C and instantly refreshing! (Note: Manual Only)."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยวิตามินซีสูงมาก ช่วยเสริมภูมิคุ้มกัน บำรุงผิวพรรณให้สดใส มีสารต้านอนุมูลอิสระและไฟเบอร์สูง ช่วยระบบขับถ่าย",
+    "en": "Extremely high in Vitamin C, boosts immunity, promotes glowing skin. Rich in antioxidants and fiber, aids digestion."
+  },
+  "warnings": {
+    "th": "⚠️ เสาวรสมีความเป็นกรดสูง ผู้ที่เป็นโรคกระเพาะอาหารหรือกรดไหลย้อนควรดื่มหลังอาหารเท่านั้น และไม่ควรดื่มขณะท้องว่าง",
+    "en": "⚠️ Passion fruit is highly acidic. People with stomach ulcers or acid reflux should drink only after meals. Avoid drinking on an empty stomach."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "9 g",
+    "sugar": "8 g",
+    "protein": "0.4 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เสาวรสสด (ผลสีม่วงหรือสีเหลือง)", "en": "Fresh passion fruit (purple or yellow)" },
+      "amount": 4000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้งแท้", "en": "Pure honey" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับผสม)", "en": "Clean water (for mixing)" },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรน้ำเสาวรสผสมน้ำผึ้งต้องใช้การคั้นและกรองเมล็ดด้วยมือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Passion fruit honey drink requires hand-squeezing and seeding, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและผ่าเสาวรส",
+        "en": "Wash and halve passion fruit"
+      },
+      "desc": {
+        "th": "ล้างเสาวรสสด {passion_fruit_amount} ด้วยน้ำสะอาด {water_wash} ให้สะอาด เช็ดให้แห้ง แล้วใช้มีดคมผ่าครึ่งผลตามขวาง",
+        "en": "Wash {passion_fruit_amount} of fresh passion fruit with {water_wash} of clean water. Dry and halve them crosswise with a sharp knife."
+      },
+      "descVariables": {
+        "passion_fruit_amount": { "amount": 4000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/passion_fruit_honey/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกผลที่เปลือกย่นเล็กน้อยจะหอมและหวานกว่าผลที่เปลือกตึงแข็ง และควรสวมถุงมือเพราะสีเสาวรสอาจติดมือ",
+        "en": "💡 Choose fruits with slightly wrinkled skin for better aroma and sweetness. Wear gloves as the juice can stain hands."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "คว้านเนื้อและกรองเมล็ด",
+        "en": "Scoop pulp and strain seeds"
+      },
+      "desc": {
+        "th": "ใช้ช้อนคว้านเนื้อและเมล็ดออกจากเปลือกให้หมด นำไปกรองผ่านกระชอนละเอียด แยกเฉพาะน้ำและเนื้อเสาวรส ส่วนเมล็ดให้ทิ้งไป (หรือเก็บไว้ทำพันธุ์)",
+        "en": "Scoop out all pulp and seeds. Strain through a fine mesh sieve to separate the juice and pulp from the seeds (discard seeds or save for planting)."
+      },
+      "descVariables": {
+        "passion_fruit_amount": { "amount": 4000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/passion_fruit_honey/man_2.jpg",
+      "tips": {
+        "th": "💡 การกรองเมล็ดออกจะทำให้น้ำเสาวรสดื่มง่ายและเนียนนุ่มขึ้น แต่ถ้าชอบเคี้ยวเมล็ดสามารถเก็บไว้บางส่วนได้",
+        "en": "💡 Straining seeds makes the drink smoother. If you like the crunch, you can keep a small portion of seeds."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำผึ้งและน้ำสะอาด",
+        "en": "Mix honey and water"
+      },
+      "desc": {
+        "th": "เทน้ำเสาวรสที่กรองแล้วลงในเหยือกใหญ่ เติมน้ำผึ้ง {honey_amount} และน้ำสะอาด {water_mix_amount} ลงไป คนให้เข้ากันจนน้ำผึ้งละลายหมด",
+        "en": "Pour strained passion fruit juice into a large pitcher. Add {honey_amount} of honey and {water_mix_amount} of clean water. Stir well until honey is fully dissolved."
+      },
+      "descVariables": {
+        "honey_amount": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "water_mix_amount": { "amount": 7, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/passion_fruit_honey/man_3.jpg",
+      "tips": {
+        "th": "💡 ควรใช้น้ำผึ้งแท้ 100% จะให้กลิ่นหอมที่เป็นเอกลักษณ์และดีต่อสุขภาพมากกว่าน้ำเชื่อม",
+        "en": "💡 Use 100% pure honey for unique aroma and better health benefits compared to syrup."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ชิมรสและปรุงรส",
+        "en": "Taste and season"
+      },
+      "desc": {
+        "th": "เติมเกลือป่น {salt_amount} ลงไปคนให้ละลาย ชิมรส หากเปรี้ยวไปสามารถเติมน้ำผึ้งเพิ่มได้ หรือหากหวานไปให้เติมน้ำสะอาดเล็กน้อย",
+        "en": "Add {salt_amount} of salt and stir. Taste and adjust: add more honey if too sour, or a little water if too sweet."
+      },
+      "descVariables": {
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/passion_fruit_honey/man_4.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยจะช่วยตัดรสเปรี้ยวแหลมของเสาวรสและทำให้รสหวานของน้ำผึ้งกลมกล่อมขึ้น",
+        "en": "💡 A pinch of salt cuts the sharp acidity of passion fruit and balances the sweetness of honey."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำน้ำเสาวรสผสมน้ำผึ้งเข้าแช่ตู้เย็นอย่างน้อย 1 ชั่วโมง เสิร์ฟเย็นจัดพร้อม {ice_amount} ตกแต่งด้วยเสาวรสฝานบางๆ หรือใบมินต์",
+        "en": "Refrigerate for at least 1 hour. Serve ice-cold with {ice_amount}, garnished with thin passion fruit slices or mint leaves."
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/juice/passion_fruit_honey/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำเสาวรสผสมน้ำผึ้งสามารถเก็บในตู้เย็นได้นาน 3-5 วัน โดยรสชาติยังคงสดชื่น",
+        "en": "💡 Passion fruit honey drink can be stored in the fridge for 3-5 days while maintaining freshness."
+      }
+    }
+  ]
+}

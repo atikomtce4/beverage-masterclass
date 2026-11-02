@@ -1,0 +1,218 @@
+{
+  "id": "strawberry_yogurt_10L",
+  "icon": "🍓",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการปั่นผลไม้และโยเกิร์ต กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires a blender, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "สมูทตี้สตรอว์เบอร์รี่โยเกิร์ต สดชื่น หอมมัน ได้โปรไบโอติกจากโยเกิร์ต รสเปรี้ยวหวานกลมกล่อม ดื่มแล้วสดชื่นทันที",
+  "total_time": 15,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_strawberry_yogurt_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "สมูทตี้สตรอว์เบอร์รี่โยเกิร์ต 10 ลิตร",
+    "en": "Strawberry Yogurt Smoothie 10L"
+  },
+  "images": [
+    "images/juice/strawberry_yogurt/main_1.jpg",
+    "images/juice/strawberry_yogurt/main_2.jpg",
+    "images/juice/strawberry_yogurt/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_strawberry",
+  "prepTime": {
+    "th": "15 นาที (ทำเอง)",
+    "en": "15 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "15 นาที (ทำเอง)",
+    "en": "15 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สมูทตี้สตรอว์เบอร์รี่โยเกิร์ตสูตรเข้มข้น ทำง่ายด้วยเครื่องปั่น: ปั่นสตรอว์เบอร์รี่สดกับโยเกิร์ตและน้ำแข็งจนเนียนนุ่ม ได้รสเปรี้ยวหวานกลมกล่อมและโปรไบโอติก (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ เนื่องจากต้องใช้เครื่องปั่น)",
+    "en": "Rich strawberry yogurt smoothie made easily with a blender: blend fresh strawberries with yogurt and ice until creamy. Sweet, tangy, and packed with probiotics! (Note: Manual Only as it requires a blender)."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยวิตามินซีและโปรไบโอติกจากโยเกิร์ต ช่วยระบบขับถ่าย บำรุงผิวพรรณให้สดใส และเสริมภูมิคุ้มกัน",
+    "en": "Rich in Vitamin C and probiotics from yogurt, aids digestion, promotes glowing skin, and boosts immunity."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้นมหรือแลคโตสควรใช้โยเกิร์ตปราศจากนม (Plant-based) แทน ควรดื่มทันทีหลังปั่นเสร็จเพื่อรสชาติและสารอาหารที่ดีที่สุด",
+    "en": "⚠️ Those allergic to milk or lactose should use plant-based yogurt. Consume immediately after blending for the best taste and nutrients."
+  },
+  "nutrition": {
+    "calories": "65 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "2.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "สตรอว์เบอร์รี่สด (หั่นครึ่ง)", "en": "Fresh strawberries (halved)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "โยเกิร์ตรสธรรมชาติ (ชนิดไม่หวาน)", "en": "Plain yogurt (unsweetened)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำเชื่อมหรือน้ำผึ้ง (ไม่บังคับ)", "en": "Syrup or honey (optional)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับปั่น)", "en": "Ice (for blending)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรสมูทตี้สตรอว์เบอร์รี่โยเกิร์ตต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Strawberry yogurt smoothie requires a blender, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและเตรียมสตรอว์เบอร์รี่",
+        "en": "Wash and prepare strawberries"
+      },
+      "desc": {
+        "th": "ล้างสตรอว์เบอร์รี่สด {strawberry_amount} ด้วยน้ำสะอาด {water_wash} ให้สะอาด เด็ดขั้วออกและหั่นครึ่งเตรียมไว้",
+        "en": "Wash {strawberry_amount} of fresh strawberries with {water_wash} of clean water. Remove stems and halve them."
+      },
+      "descVariables": {
+        "strawberry_amount": { "amount": 3000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/strawberry_yogurt/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรเลือกสตรอว์เบอร์รี่สีแดงจัดและหอม จะทำให้น้ำปั่นมีรสหวานธรรมชาติและสีสวยโดยไม่ต้องแต่งสี",
+        "en": "💡 Choose deep red and fragrant strawberries for natural sweetness and beautiful color without artificial coloring."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นสตรอว์เบอร์รี่ โยเกิร์ต และน้ำแข็ง",
+        "en": "Blend strawberries, yogurt, and ice"
+      },
+      "desc": {
+        "th": "นำสตรอว์เบอร์รี่ {strawberry_amount}, โยเกิร์ต {yogurt_amount} และน้ำแข็ง {ice_amount} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนเนื้อเนียนละเอียด",
+        "en": "Place {strawberry_amount} of strawberries, {yogurt_amount} of yogurt, and {ice_amount} of ice into a blender. Blend on high speed until smooth and creamy."
+      },
+      "descVariables": {
+        "strawberry_amount": { "amount": 3000, "unit": "Gram", "scalable": true },
+        "yogurt_amount": { "amount": 2000, "unit": "Gram", "scalable": true },
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/strawberry_yogurt/man_2.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นกำลังไม่สูงมาก ให้แบ่งปั่นทีละน้อย และใส่โยเกิร์ตทีหลังสุดเพื่อให้ปั่นง่ายขึ้น",
+        "en": "💡 If the blender is not very powerful, blend in small batches and add yogurt last to make blending easier."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ชิมรสและปรับความหวาน",
+        "en": "Taste and adjust sweetness"
+      },
+      "desc": {
+        "th": "หยุดเครื่องและชิมรส หากต้องการความหวานเพิ่ม ให้เติมน้ำเชื่อมหรือน้ำผึ้ง {sweetener_amount} แล้วปั่นซ้ำอีกครั้งสั้นๆ ให้เข้ากัน",
+        "en": "Stop the blender and taste. If more sweetness is desired, add {sweetener_amount} of syrup or honey, and blend briefly again to combine."
+      },
+      "descVariables": {
+        "sweetener_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/strawberry_yogurt/man_3.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำผึ้งแทนน้ำตาลทรายจะทำให้สมูทตี้มีกลิ่นหอมและดีต่อสุขภาพมากขึ้น",
+        "en": "💡 Using honey instead of sugar gives the smoothie a better aroma and is healthier."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "เทใส่เหยือก",
+        "en": "Pour into pitcher"
+      },
+      "desc": {
+        "th": "เทสมูทตี้ที่ปั่นเสร็จแล้วลงในเหยือกขนาดใหญ่ คนเบาๆ ด้วยทัพพีให้เนื้อสัมผัสเนียนสม่ำเสมอทั่วทั้งเหยือก",
+        "en": "Pour the blended smoothie into a large pitcher. Stir gently with a ladle to ensure an even, creamy texture throughout."
+      },
+      "descVariables": {},
+      "image": "images/juice/strawberry_yogurt/man_4.jpg",
+      "tips": {
+        "th": "💡 การคนเบาๆ ช่วยป้องกันไม่ให้เกิดฟองอากาศมากเกินไป ซึ่งจะทำให้สมูทตี้ดูไม่น่าดื่ม",
+        "en": "💡 Gentle stirring prevents excessive air bubbles, keeping the smoothie looking appetizing."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟทันที",
+        "en": "Serve immediately"
+      },
+      "desc": {
+        "th": "เทใส่แก้วที่แช่เย็นจัด ตกแต่งด้วยสตรอว์เบอร์รี่สดฝานบางๆ หรือใบมินต์ พร้อมเสิร์ฟทันทีเพื่อให้ได้รสชาติและความสดชื่นที่ดีที่สุด",
+        "en": "Pour into a chilled glass, garnish with fresh strawberry slices or a mint leaf, and serve immediately for the best taste and freshness."
+      },
+      "descVariables": {},
+      "image": "images/juice/strawberry_yogurt/man_5.jpg",
+      "tips": {
+        "th": "💡 สมูทตี้โยเกิร์ตไม่ควรทิ้งไว้นานเกิน 30 นาที เพราะโยเกิร์ตอาจแยกชั้นและรสเปรี้ยวจะชัดเจนขึ้น",
+        "en": "💡 Do not leave yogurt smoothie for more than 30 minutes, as the yogurt may separate and the sour taste will become more prominent."
+      }
+    }
+  ]
+}

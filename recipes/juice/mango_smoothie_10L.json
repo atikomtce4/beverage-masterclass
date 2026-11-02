@@ -1,0 +1,219 @@
+{
+  "id": "mango_smoothie_10L",
+  "icon": "🥭",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการปั่นผลไม้ กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires a blender, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "สมูทตี้มะม่วงสุกเข้มข้น หอมหวานธรรมชาติจากมะม่วงพันธุ์ดี เนื้อเนียนนุ่ม สีสันสดใส ดื่มแล้วสดชื่นและได้วิตามินเอสูง",
+  "total_time": 20,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_mango_smoothie_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "สมูทตี้มะม่วง 10 ลิตร",
+    "en": "Mango Smoothie 10L"
+  },
+  "images": [
+    "images/juice/mango_smoothie/main_1.jpg",
+    "images/juice/mango_smoothie/main_2.jpg",
+    "images/juice/mango_smoothie/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_mango",
+  "prepTime": {
+    "th": "20 นาที (ทำเอง)",
+    "en": "20 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "20 นาที (ทำเอง)",
+    "en": "20 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สมูทตี้มะม่วงสูตรเข้มข้น ทำง่ายด้วยเครื่องปั่น: ปั่นเนื้อมะม่วงสุกกับน้ำแข็งจนเนียนนุ่ม ได้รสหวานหอมธรรมชาติและวิตามินเอสูง (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ เนื่องจากต้องใช้เครื่องปั่น)",
+    "en": "Rich mango smoothie made easily with a blender: blend ripe mango flesh with ice until creamy. Sweet, aromatic, and packed with Vitamin A! (Note: Manual Only as it requires a blender)."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยวิตามินเอสูง บำรุงสายตาและผิวพรรณ มีวิตามินซีและไฟเบอร์ ช่วยระบบย่อยอาหารและเสริมภูมิคุ้มกัน",
+    "en": "High in Vitamin A for eye and skin health. Contains Vitamin C and fiber, aids digestion and boosts immunity."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณน้ำตาลธรรมชาติในมะม่วงสุก ควรดื่มในปริมาณที่เหมาะสม และผู้ที่มีอาการแพ้ยางมะม่วงควรหลีกเลี่ยง",
+    "en": "⚠️ People with diabetes should monitor natural sugar intake from ripe mangoes. Those allergic to mango sap should avoid consumption."
+  },
+  "nutrition": {
+    "calories": "70 kcal",
+    "carbs": "15 g",
+    "sugar": "13 g",
+    "protein": "0.8 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เนื้อมะม่วงสุก (ปอกเปลือกแล้ว)", "en": "Ripe mango flesh (peeled)" },
+      "amount": 10000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (ไม่บังคับ)", "en": "Sugar (optional)" },
+      "amount": 0,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับปั่น)", "en": "Ice (for blending)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรสมูทตี้มะม่วงต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Mango smoothie requires a blender, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและปอกมะม่วง",
+        "en": "Wash and peel mangoes"
+      },
+      "desc": {
+        "th": "ล้างมะม่วงสุก {mango_amount} ด้วยน้ำสะอาด {water_wash} ให้สะอาด ปอกเปลือกออกและล้างยางมะม่วงที่ติดมือให้หมด",
+        "en": "Wash {mango_amount} of ripe mangoes with {water_wash} of clean water. Peel the skin and wash off any sticky sap from your hands."
+      },
+      "descVariables": {
+        "mango_amount": { "amount": 10000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/mango_smoothie/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรสวมถุงมือขณะปอกมะม่วงเพื่อป้องกันยางมะม่วงที่อาจทำให้คันมือ และเลือกมะม่วงที่สุกจัด (เปลือกเหลืองทอง ไม่มีรอยช้ำ)",
+        "en": "💡 Wear gloves while peeling to avoid itchy mango sap. Choose fully ripe mangoes with golden-yellow skin and no bruises."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "หั่นเนื้อมะม่วง",
+        "en": "Cut mango flesh"
+      },
+      "desc": {
+        "th": "ใช้มีดคมหั่นเนื้อมะม่วงออกจากเม็ดกลาง แล้วหั่นเป็นก้อนขนาดพอดีคำ เตรียมไว้สำหรับปั่น",
+        "en": "Use a sharp knife to slice the flesh away from the flat seed, then cut into bite-sized cubes for blending."
+      },
+      "descVariables": {
+        "mango_amount": { "amount": 10000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/mango_smoothie/man_2.jpg",
+      "tips": {
+        "th": "💡 เทคนิคหั่นมะม่วง: กรีดตามยาวทั้งสองข้างของเม็ดแบน แล้วใช้ช้อนตักเนื้อออกมา จะได้เนื้อเยอะและเสียหายน้อยที่สุด",
+        "en": "💡 Pro tip: Slice along both sides of the flat seed, then scoop out the flesh with a spoon for maximum yield."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นมะม่วงกับน้ำแข็ง",
+        "en": "Blend mango with ice"
+      },
+      "desc": {
+        "th": "นำเนื้อมะม่วง {mango_amount} และน้ำแข็ง {ice_amount} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนเนื้อเนียนละเอียดเป็นสีเหลืองทอง",
+        "en": "Place {mango_amount} of mango and {ice_amount} of ice into a blender. Blend on high speed until smooth and golden yellow."
+      },
+      "descVariables": {
+        "mango_amount": { "amount": 10000, "unit": "Gram", "scalable": true },
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/mango_smoothie/man_3.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นกำลังไม่สูงมาก ให้แบ่งปั่นทีละน้อย และเติมน้ำเปล่าเล็กน้อยหากเนื้อข้นเกินไป",
+        "en": "💡 If the blender is not very powerful, blend in small batches and add a little water if the mixture is too thick."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ชิมรสและปรุงรส",
+        "en": "Taste and season"
+      },
+      "desc": {
+        "th": "หยุดเครื่องและชิมรส มะม่วงสุกมักหวานอยู่แล้ว หากต้องการตัดรสให้เติมเกลือ {salt_amount} เล็กน้อย แล้วปั่นซ้ำอีกครั้งสั้นๆ",
+        "en": "Stop the blender and taste. Ripe mangoes are usually sweet enough. If needed, add {salt_amount} of salt to enhance flavor, and blend briefly again."
+      },
+      "descVariables": {
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/mango_smoothie/man_4.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อยจะช่วยดึงความหวานธรรมชาติของมะม่วงออกมาได้ชัดเจนขึ้น โดยไม่ทำให้รู้สึกเค็ม",
+        "en": "💡 A tiny pinch of salt enhances the natural sweetness of mango without making it taste salty."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟทันที",
+        "en": "Serve immediately"
+      },
+      "desc": {
+        "th": "เทสมูทตี้มะม่วงใส่แก้วที่แช่เย็นจัด ตกแต่งด้วยเนื้อมะม่วงฝานบางๆ หรือใบมินต์ พร้อมเสิร์ฟทันทีเพื่อให้ได้รสชาติและความหอมที่ดีที่สุด",
+        "en": "Pour the mango smoothie into a chilled glass, garnish with thin mango slices or a mint leaf, and serve immediately for the best aroma and taste."
+      },
+      "descVariables": {},
+      "image": "images/juice/mango_smoothie/man_5.jpg",
+      "tips": {
+        "th": "💡 สมูทตี้มะม่วงควรดื่มทันทีหลังปั่น เพราะหากทิ้งไว้นาน สีจะคล้ำลงและรสเปรี้ยวจะเพิ่มขึ้นจากกระบวนการออกซิเดชัน",
+        "en": "💡 Consume mango smoothie immediately after blending. If left too long, it will darken and become more sour due to oxidation."
+      }
+    }
+  ]
+}
