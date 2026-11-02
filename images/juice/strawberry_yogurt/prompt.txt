@@ -1,0 +1,22 @@
+ต่อไปสูตร strawberry_yogurt_10L.json รูปแบบ JSON ผมส่งไฟล์ JSON อ้างอิงมาให้เทียบด้วย
+
+ขอ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3
+
+Professional beverage photography, a tall clear glass filled with vibrant creamy pink strawberry yogurt smoothie and crushed ice, condensation droplets on the glass. Garnished with a fresh strawberry slice and a sprig of green mint on the rim. Background features scattered fresh whole strawberries on a light oak wood table. Bright morning sunlight streaming from the side, creating warm highlights and soft shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, highly detailed, sharp focus, vibrant colors. --ar 4:3 --style raw
+
+Professional food photography, action shot of vibrant creamy pink strawberry yogurt smoothie being poured from a clear glass pitcher into a tall chilled glass. A slight dynamic splash of the smoothie showing its thick, rich texture. Background shows a clean, bright modern kitchen with a woven basket of fresh whole strawberries. Bright natural daylight, crisp focus on the pouring liquid. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, refreshing aesthetic. --ar 4:3 --style raw
+
+
+Professional beverage photography, minimalist composition. A single perfect glass of fresh strawberry yogurt smoothie with large clear ice cubes, sitting on a white marble countertop. Beside the glass are two perfectly halved fresh strawberries and a small wooden spoon with a drizzle of golden honey. Soft, diffused natural lighting creating elegant, minimal shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making strawberry yogurt smoothie. A pair of hands gently washing bright red, fresh strawberries under a gentle stream of clear running water in a clean stainless steel colander. Visible water droplets on the textured strawberry skin. Bright, clean kitchen background with natural daylight. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed. --ar 4:3 --style raw
+
+Professional food photography, step of making strawberry yogurt smoothie. Close-up of a modern glass blender in action, blending bright red fresh strawberry halves, white yogurt, and clear ice cubes into a smooth, creamy pink liquid. Bright kitchen setting, light wood surface, morning sunlight. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, vibrant colors, highly detailed, slight motion blur on the swirling liquid. --ar 4:3 --style raw
+
+Professional food photography, step of making strawberry yogurt smoothie. Close-up of a small wooden spoon drizzling golden honey into a glass blender pitcher filled with vibrant pink strawberry yogurt smoothie. Light oak countertop, bright natural lighting, clean minimalist kitchen setting. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making strawberry yogurt smoothie. Vibrant creamy pink strawberry yogurt smoothie being poured smoothly from a blender jar into a large, clear glass pitcher. Clean white kitchen background, bright natural lighting. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, vibrant pink color, highly detailed. --ar 4:3 --style raw
+
+Professional beverage photography, final presentation of fresh strawberry yogurt smoothie. A tall clear glass filled with ice-cold vibrant pink strawberry yogurt smoothie, condensation droplets on the glass, garnished with fresh strawberry slices and a sprig of mint. Served on a light wooden tray with scattered ice cubes and whole strawberries around. Bright morning sunlight, light wood table, refreshing and healthy aesthetic. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, vibrant colors. --ar 4:3 --style raw
+
+

@@ -1,0 +1,6 @@
+ต่อไปสูตร passion_fruit_honey_10L .json รูปแบบ JSON ผมส่งไฟล์ JSON อ้างอิงมาให้เทียบด้วย
+
+ขอ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3
+
+Professional beverage photography, a tall clear glass filled with vibrant golden-yellow passion fruit honey drink and crushed ice, condensation droplets on the glass. Garnished with a fresh halved passion fruit showing dark seeds and a sprig of green mint on the rim. Background features scattered fresh whole passion fruits on a light oak wood table. Bright morning sunlight streaming from the side, creating warm highlights and soft shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, highly detailed, sharp focus, vibrant colors. --ar 4:3 --style raw
+
