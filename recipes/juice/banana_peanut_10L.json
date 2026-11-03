@@ -1,0 +1,226 @@
+{
+  "id": "banana_peanut_10L",
+  "icon": "🍌",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการปั่นผลไม้และถั่วลิสง กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires a blender, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "สมูทตี้กล้วยหอมถั่วลิสง ให้พลังงานสูง อร่อยแบบ Healthy เนื้อเนียนนุ่ม หอมมันจากเนยถั่วลิสงและกล้วยหอมสุก",
+  "total_time": 15,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_banana_peanut_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "สมูทตี้กล้วยหอมถั่วลิสง 10 ลิตร",
+    "en": "Banana Peanut Smoothie 10L"
+  },
+  "images": [
+    "images/juice/banana_peanut/main_1.jpg",
+    "images/juice/banana_peanut/main_2.jpg",
+    "images/juice/banana_peanut/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_banana_peanut",
+  "prepTime": {
+    "th": "15 นาที (ทำเอง)",
+    "en": "15 mins (Manual)"
+  },
+  "cookTime": {
+    "th": "15 นาที (ทำเอง)",
+    "en": "15 mins (Manual)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.5",
+  "intro": {
+    "th": "สมูทตี้กล้วยหอมผสมเนยถั่วลิสงสูตรเข้มข้น ทำง่ายด้วยเครื่องปั่น: ปั่นกล้วยหอมสุกกับเนยถั่วลิสง นม และน้ำแข็งจนเนียนนุ่ม ได้พลังงานสูงและโปรตีนจากถั่ว (หมายเหตุ: สูตรนี้ไม่รองรับเครื่องอัตโนมัติ เนื่องจากต้องใช้เครื่องปั่น)",
+    "en": "Rich banana peanut smoothie made easily with a blender: blend ripe bananas with peanut butter, milk, and ice until creamy. High energy and packed with protein! (Note: Manual Only as it requires a blender)."
+  },
+  "benefits": {
+    "th": "ให้พลังงานสูง เหมาะสำหรับมื้อเช้าหรือหลังออกกำลังกาย อุดมไปด้วยโพแทสเซียมจากกล้วยและโปรตีนจากถั่วลิสง ช่วยสร้างกล้ามเนื้อและบำรุงหัวใจ",
+    "en": "High energy, perfect for breakfast or post-workout. Rich in potassium from bananas and protein from peanuts, aids muscle building and heart health."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้ถั่วลิสงต้องหลีกเลี่ยงสูตรนี้อย่างเด็ดขาด ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณน้ำตาลธรรมชาติในกล้วยหอมสุก",
+    "en": "⚠️ Those allergic to peanuts must avoid this recipe strictly. People with diabetes should monitor natural sugar intake from ripe bananas."
+  },
+  "nutrition": {
+    "calories": "90 kcal",
+    "carbs": "14 g",
+    "sugar": "8 g",
+    "protein": "3.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับล้าง)", "en": "Clean water (for washing)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กล้วยหอมสุก (ปอกเปลือกแล้ว)", "en": "Ripe bananas (peeled)" },
+      "amount": 6000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เนยถั่วลิสง (ชนิดไม่หวาน)", "en": "Peanut butter (unsweetened)" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดหรือน้ำสะอาด (สำหรับปั่น)", "en": "Milk or water (for blending)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้ง (ไม่บังคับ)", "en": "Honey (optional)" },
+      "amount": 0,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับปั่น)", "en": "Ice (for blending)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรสมูทตี้กล้วยหอมถั่วลิสงต้องใช้เครื่องปั่นซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณากลับไปเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Banana peanut smoothie requires a blender, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและปอกกล้วยหอม",
+        "en": "Wash and peel bananas"
+      },
+      "desc": {
+        "th": "ล้างกล้วยหอม {banana_amount} ด้วยน้ำสะอาด {water_wash} ให้สะอาด ปอกเปลือกออกและหั่นเป็นท่อนขนาดพอดีคำเตรียมไว้",
+        "en": "Wash {banana_amount} of bananas with {water_wash} of clean water. Peel and cut into bite-sized chunks."
+      },
+      "descVariables": {
+        "banana_amount": { "amount": 6000, "unit": "Gram", "scalable": true },
+        "water_wash": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/juice/banana_peanut/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรเลือกกล้วยหอมที่สุกจัด (เปลือกมีจุดดำบ้าง) จะให้ความหวานธรรมชาติและกลิ่นหอมที่เข้มข้นกว่า",
+        "en": "💡 Choose fully ripe bananas (with some black spots on the peel) for natural sweetness and stronger aroma."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นกล้วย เนยถั่ว และนม",
+        "en": "Blend bananas, peanut butter, and milk"
+      },
+      "desc": {
+        "th": "นำกล้วยหอม {banana_amount}, เนยถั่วลิสง {peanut_butter_amount} และนมสดหรือน้ำ {liquid_amount} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วปานกลางจนเข้ากัน",
+        "en": "Place {banana_amount} of bananas, {peanut_butter_amount} of peanut butter, and {liquid_amount} of milk or water into a blender. Blend on medium speed until combined."
+      },
+      "descVariables": {
+        "banana_amount": { "amount": 6000, "unit": "Gram", "scalable": true },
+        "peanut_butter_amount": { "amount": 1500, "unit": "Gram", "scalable": true },
+        "liquid_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/banana_peanut/man_2.jpg",
+      "tips": {
+        "th": "💡 หากใช้เนยถั่วลิสงแบบหยาบ (Crunchy) จะได้เนื้อสัมผัสที่เคี้ยวสนุก แต่ถ้าชอบเนียนละเอียดให้ใช้แบบละเอียด (Creamy)",
+        "en": "💡 Use crunchy peanut butter for texture, or creamy peanut butter for a perfectly smooth smoothie."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำแข็งและปั่นจนเนียน",
+        "en": "Add ice and blend until smooth"
+      },
+      "desc": {
+        "th": "เติมน้ำแข็ง {ice_amount} ลงไป ปั่นต่อด้วยความเร็วสูงจนน้ำแข็งละเอียดและสมูทตี้มีเนื้อเนียนนุ่มเป็นเนื้อเดียวกัน",
+        "en": "Add {ice_amount} of ice. Blend on high speed until the ice is crushed and the smoothie is perfectly smooth and creamy."
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/banana_peanut/man_3.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นติดขัด ให้หยุดเครื่องแล้วใช้ทัพพีกดส่วนผสมลงไปตรงกลางใบมีด แล้วปั่นต่อ",
+        "en": "💡 If the blender gets stuck, stop it and use a ladle to push the ingredients down toward the blades, then blend again."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ชิมรสและปรับความหวาน",
+        "en": "Taste and adjust sweetness"
+      },
+      "desc": {
+        "th": "หยุดเครื่องและชิมรส หากต้องการความหวานเพิ่ม ให้เติมน้ำผึ้ง {sweetener_amount} แล้วปั่นซ้ำอีกครั้งสั้นๆ ให้เข้ากัน",
+        "en": "Stop the blender and taste. If more sweetness is desired, add {sweetener_amount} of honey, and blend briefly again to combine."
+      },
+      "descVariables": {
+        "sweetener_amount": { "amount": 0, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/juice/banana_peanut/man_4.jpg",
+      "tips": {
+        "th": "💡 กล้วยหอมสุกมักมีความหวานเพียงพอแล้ว การเติมน้ำผึ้งควรชิมก่อนเพื่อไม่ให้หวานเลี่ยนเกินไป",
+        "en": "💡 Ripe bananas are usually sweet enough. Taste before adding honey to avoid making it too cloying."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟทันที",
+        "en": "Serve immediately"
+      },
+      "desc": {
+        "th": "เทสมูทตี้ใส่แก้วที่แช่เย็นจัด ตกแต่งด้วยกล้วยหอมฝานบางๆ หรือโรยถั่วลิสงคั่วบดเล็กน้อย พร้อมเสิร์ฟทันทีเพื่อให้ได้รสชาติที่ดีที่สุด",
+        "en": "Pour the smoothie into a chilled glass, garnish with thin banana slices or a sprinkle of crushed roasted peanuts, and serve immediately for the best taste."
+      },
+      "descVariables": {},
+      "image": "images/juice/banana_peanut/man_5.jpg",
+      "tips": {
+        "th": "💡 สมูทตี้กล้วยหอมควรดื่มทันทีหลังปั่น เพราะหากทิ้งไว้นาน กล้วยจะเกิดปฏิกิริยาออกซิเดชันทำให้สีคล้ำลงและรสเปลี่ยน",
+        "en": "💡 Consume banana smoothie immediately after blending. If left too long, oxidation will cause it to darken and alter the taste."
+      }
+    }
+  ]
+}
