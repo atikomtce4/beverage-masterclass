@@ -1,0 +1,366 @@
+{
+  "id": "pandan_cold_10L",
+  "icon": "🌿",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำใบเตยหอมเย็น 10 ลิตร ต้มสกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 90°C คงกลิ่นหอมธรรมชาติ หวานละมุนจากน้ำตาลกรวด ดื่มเย็นชื่นใจ",
+  "total_time": 60,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_pandan_cold_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำใบเตยหอมเย็น 10 ลิตร",
+    "en": "Cold Pandan Juice 10L"
+  },
+  "images": [
+    "images/herbal/pandan_cold/main_1.jpg",
+    "images/herbal/pandan_cold/main_2.jpg",
+    "images/herbal/pandan_cold/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_pandan",
+  "prepTime": {
+    "th": "15 นาที (เตรียมใบเตย) + 45 นาที (เครื่อง)",
+    "en": "15 mins (prep pandan) + 45 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "น้ำใบเตยหอมเย็นสูตรดั้งเดิม ทำง่ายด้วยเครื่อง AllDrinks System: ปั่นใบเตยสด กรองเอาแต่น้ำสีเขียวมรกต เครื่องจะต้มและสกัดที่อุณหภูมิ 90°C เพื่อคงกลิ่นหอม เติมน้ำตาลกรวด แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Traditional cold pandan juice made easy with AllDrinks System: blend fresh pandan, strain to get emerald green juice, machine boils and extracts at 90°C to preserve aroma, adds rock sugar, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "ช่วยบำรุงหัวใจ ลดความดันโลหิต ดับกระหาย คลายร้อน และมีกลิ่นหอมที่ช่วยให้ระบบประสาทผ่อนคลาย ลดความเครียด",
+    "en": "Supports heart health, lowers blood pressure, relieves thirst and heat, and has an aroma that helps relax the nervous system and reduce stress."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคไตควรระวังปริมาณโพแทสเซียม และควรบริโภคในปริมาณที่เหมาะสม หากมีอาการแพ้พืชตระกูลหญ้าควรหลีกเลี่ยง",
+    "en": "⚠️ People with kidney issues should monitor potassium intake. Those allergic to grass-family plants should avoid consumption."
+  },
+  "nutrition": {
+    "calories": "35 kcal",
+    "carbs": "8 g",
+    "sugar": "7 g",
+    "protein": "0.2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่น)", "en": "Clean water (for blending)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบเตยหอมสด (หั่นท่อน)", "en": "Fresh pandan leaves (chopped)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมใบเตยหอม (ปั่นและกรอง)",
+        "en": "Prepare pandan leaves (blend and strain)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมใบเตยหอมสด: ล้างให้สะอาด หั่นเป็นท่อน 1-2 นิ้ว แล้วปั่นกับน้ำสะอาด {water_blend} จนละเอียด กรองผ่านผ้าขาวบางเอาแต่น้ำสีเขียวมรกต เมื่อได้น้ำใบเตยแล้ว ให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare fresh pandan: wash, chop into 1-2 inch pieces, blend with {water_blend} of clean water until fine. Strain through cheesecloth to get emerald green juice. Pour the juice into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 8,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับน้ำใบเตยที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared pandan juice."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำใบเตยให้เดือด (100°C)",
+        "en": "Boil pandan water (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำใบเตยให้เดือดจัด เพื่อเตรียมสกัดกลิ่นหอมและฆ่าเชื้อ",
+        "en": "Machine boils pandan water to extract aroma and sterilize."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวดและเกลือ",
+        "en": "Add rock sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar and {salt_amount} of salt, activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 5,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดกลิ่นหอมใบเตย (90°C, 10 นาที)",
+        "en": "Extract pandan aroma (90°C, 10 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 90°C และกวนเป็นระยะเป็นเวลา 10 นาที เพื่อสกัดกลิ่นหอมและรสชาติจากใบเตยอย่างสมบูรณ์แบบ (ไม่ร้อนเกินจนกลิ่นหาย)",
+        "en": "Machine maintains 90°C and stirs periodically for 10 mins to perfectly extract pandan aroma (not too hot to lose fragrance)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิน้ำใบเตยหอมเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools pandan juice to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำใบเตยหอมเย็นพร้อมเสิร์ฟ",
+        "en": "Cold pandan juice ready to serve"
+      },
+      "desc": {
+        "th": "✅ น้ำใบเตยหอมเย็น 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Cold pandan juice at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนน้ำใบเตยหอมออกสู่ภาชนะ",
+        "en": "Transfer pandan juice to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำใบเตยหอมเย็นออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring cold pandan juice out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและหั่นใบเตย",
+        "en": "Wash and chop pandan leaves"
+      },
+      "desc": {
+        "th": "ล้างใบเตยหอมสด {pandan_amount} ด้วยน้ำสะอาดให้สะอาด ตัดโคนแข็งออก และหั่นเป็นท่อนสั้นๆ ขนาดประมาณ 1-2 นิ้ว",
+        "en": "Wash {pandan_amount} of fresh pandan leaves with clean water. Trim the hard ends and chop into 1-2 inch pieces."
+      },
+      "descVariables": {
+        "pandan_amount": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/pandan_cold/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกใบเตยที่มีสีเขียวเข้มและหอม จะให้สีและกลิ่นที่เข้มข้นกว่าใบอ่อน",
+        "en": "💡 Choose dark green and fragrant pandan leaves for richer color and aroma."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นใบเตยกับน้ำสะอาด",
+        "en": "Blend pandan leaves with water"
+      },
+      "desc": {
+        "th": "นำใบเตยที่หั่นแล้วและน้ำสะอาด {water_blend} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนใบเตยละเอียดเป็นเนื้อเดียวกัน",
+        "en": "Place chopped pandan leaves and {water_blend} of clean water into a blender. Blend on high speed until finely pureed."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/herbal/pandan_cold/man_2.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นกำลังไม่สูงมาก ให้แบ่งปั่นทีละน้อยเพื่อให้ใบเตยละเอียดที่สุด",
+        "en": "💡 If the blender is not very powerful, blend in small batches for the finest puree."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "กรองกากใบเตยออก",
+        "en": "Strain the pandan pulp"
+      },
+      "desc": {
+        "th": "เทส่วนผสมที่ปั่นแล้วผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่น้ำสีเขียวมรกต ส่วนกากใบเตยให้ทิ้งไป",
+        "en": "Pour the blended mixture through a cheesecloth or fine mesh sieve. Squeeze to extract the emerald green juice, and discard the pulp."
+      },
+      "descVariables": {},
+      "image": "images/herbal/pandan_cold/man_3.jpg",
+      "tips": {
+        "th": "💡 การบีบคั้นผ่านผ้าขาวบางจะได้น้ำใบเตยที่เนียนละเอียดและสีสวยกว่าการใช้กระชอน",
+        "en": "💡 Squeezing through a cheesecloth yields smoother and more beautifully colored juice than a sieve."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและปรุงรส",
+        "en": "Boil and season"
+      },
+      "desc": {
+        "th": "นำน้ำใบเตยที่กรองได้ไปต้มด้วยไฟกลางจนเดือด (เพื่อฆ่าเชื้อและคงสี) เติมน้ำตาลกรวด {sugar_amount} และเกลือ {salt_amount} คนให้ละลาย ลดไฟอ่อนแล้วต้มต่ออีก 10 นาทีที่ 90°C เพื่อสกัดกลิ่นหอม ปิดไฟ",
+        "en": "Bring the strained pandan juice to a boil (to sterilize and set the color). Add {sugar_amount} of rock sugar and {salt_amount} of salt, stir until dissolved. Reduce heat and simmer at 90°C for 10 mins to extract aroma. Turn off heat."
+      },
+      "descVariables": {
+        "sugar_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/pandan_cold/man_4.jpg",
+      "tips": {
+        "th": "💡 การต้มที่ 90°C นาน 10 นาที เป็นจุดที่สกัดกลิ่นหอมได้สมบูรณ์แบบที่สุด โดยไม่ทำให้กลิ่นหาย",
+        "en": "💡 Simmering at 90°C for 10 mins is the sweet spot for perfect aroma extraction without losing fragrance."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัดพร้อมใบเตยมัดปมตกแต่ง",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold with a knotted pandan leaf garnish."
+      },
+      "descVariables": {},
+      "image": "images/herbal/pandan_cold/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำใบเตยสามารถเก็บในตู้เย็นได้นาน 3-4 วัน โดยสีและกลิ่นหอมยังคงอยู่",
+        "en": "💡 Pandan juice can be stored in the fridge for 3-4 days while maintaining its color and aroma."
+      }
+    }
+  ]
+}

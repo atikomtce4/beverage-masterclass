@@ -1,0 +1,411 @@
+{
+  "id": "longan_cold_10L",
+  "icon": "🍑",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำลำไยเย็น 10 ลิตร ต้มสกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 85°C คงกลิ่นหอมหวานธรรมชาติจากลำไยสด หวานละมุนจากน้ำตาลกรวด ดื่มเย็นช่วยบำรุงหัวใจและช่วยให้หลับสบาย",
+  "total_time": 55,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_longan_cold_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำลำไยเย็น 10 ลิตร",
+    "en": "Cold Longan Drink 10L"
+  },
+  "images": [
+    "images/herbal/longan_cold/main_1.jpg",
+    "images/herbal/longan_cold/main_2.jpg",
+    "images/herbal/longan_cold/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_longan",
+  "prepTime": {
+    "th": "10 นาที (เตรียมลำไย) + 45 นาที (เครื่อง)",
+    "en": "10 mins (prep longan) + 45 mins (machine)"
+  },
+  "cookTime": {
+    "th": "55 นาที (รวมเตรียมและเครื่อง)",
+    "en": "55 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "น้ำลำไยเย็นสูตรดั้งเดิม ทำง่ายด้วยเครื่อง AllDrinks System: ล้างและแกะเปลือกลำไยสด เครื่องจะต้มและสกัดที่อุณหภูมิ 85°C เพื่อคงกลิ่นหอมหวาน เติมน้ำตาลกรวดและเก๋ากี้ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Traditional cold longan drink made easy with AllDrinks System: wash and peel fresh longans, machine boils and extracts at 85°C to preserve sweet aroma, adds rock sugar and goji berries, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "ช่วยบำรุงหัวใจ ช่วยให้หลับสบาย ลดความดันโลหิต มีสารต้านอนุมูลอิสระสูง และช่วยให้ผิวพรรณสดใส",
+    "en": "Supports heart health, promotes better sleep, lowers blood pressure. Rich in antioxidants and promotes glowing skin."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณน้ำตาลธรรมชาติในลำไย ลำไยมีฤทธิ์ร้อน ผู้ที่เป็นร้อนในควรดื่มในปริมาณที่เหมาะสม",
+    "en": "⚠️ People with diabetes should monitor natural sugar intake from longans. Longan has warming properties; those with internal heat should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "0.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ลำไยสด (แกะเปลือกและเอาเม็ดออกแล้ว)", "en": "Fresh longans (peeled and pitted)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เก๋ากี้ (ไม่บังคับ)", "en": "Goji berries (optional)" },
+      "amount": 30,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมลำไยสด (ล้างและแกะเปลือก)",
+        "en": "Prepare fresh longans (wash and peel)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมลำไยสด: ล้างให้สะอาด แกะเปลือกออก และเอาเม็ดออกให้หมด เหลือแต่เนื้อลำไย {longan_amount} เมื่อเตรียมเสร็จแล้ว ให้เทเนื้อลำไยลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare fresh longans: wash, peel, and remove all seeds, leaving {longan_amount} of longan flesh. Pour the flesh into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "longan_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับเนื้อลำไยที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared longan flesh."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำลำไยให้เดือด (100°C)",
+        "en": "Boil longan water (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำลำไยให้เดือดจัด เพื่อเตรียมสกัดกลิ่นหอมและฆ่าเชื้อ",
+        "en": "Machine boils longan water to extract aroma and sterilize."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 85°C",
+        "en": "Cool down to 85°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิน้ำจาก 100°C ลงเหลือ 85°C อย่างแม่นยำ (น้ำร้อนเกินจะทำให้ลำไยเสียกลิ่นหอม)",
+        "en": "The machine precisely cools water from 100°C to 85°C (too hot loses longan's sweet aroma)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวด เกลือ และเก๋ากี้",
+        "en": "Add rock sugar, salt, and goji berries"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และเก๋ากี้ {goji} (ถ้าใช้) ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar, {salt_amount} of salt, and {goji} of goji berries (if using), activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "goji": { "amount": 30, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดกลิ่นหอมลำไย (85°C, 15 นาที)",
+        "en": "Extract longan aroma (85°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 85°C และกวนเป็นระยะเป็นเวลา 15 นาที เพื่อสกัดรสชาติหวานหอมและสารอาหารจากลำไยอย่างสมบูรณ์แบบ (ไม่ร้อนเกินจนกลิ่นหาย)",
+        "en": "Machine maintains 85°C and stirs periodically for 15 mins to perfectly extract longan's sweet flavor and nutrients (not too hot to lose fragrance)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองเนื้อลำไยและเก๋ากี้ออก",
+        "en": "Filter out longan flesh and goji berries"
+      },
+      "desc": {
+        "th": "ระบบจะกรองเนื้อลำไยและเก๋ากี้ออกผ่านตะแกรงละเอียด ได้น้ำลำไยสีทองใส",
+        "en": "System filters out longan flesh and goji berries through fine mesh, yielding clear golden longan water."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิน้ำลำไยเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools longan drink to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำลำไยเย็นพร้อมเสิร์ฟ",
+        "en": "Cold longan drink ready to serve"
+      },
+      "desc": {
+        "th": "✅ น้ำลำไยเย็น 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Cold longan drink at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนน้ำลำไยออกสู่ภาชนะ",
+        "en": "Transfer longan drink to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำลำไยเย็นออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring cold longan drink out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแกะเปลือกลำไย",
+        "en": "Wash and peel longans"
+      },
+      "desc": {
+        "th": "ล้างลำไยสด {longan_amount} ด้วยน้ำสะอาดให้สะอาด แกะเปลือกออกและเอาเม็ดออก เหลือแต่เนื้อลำไย",
+        "en": "Wash {longan_amount} of fresh longans with clean water. Peel and remove seeds, keeping only the flesh."
+      },
+      "descVariables": {
+        "longan_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/longan_cold/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกลำไยสดที่ผลใหญ่และเนื้อหนา จะให้น้ำที่หวานหอมกว่าลำไยผลเล็ก",
+        "en": "💡 Choose large, thick-fleshed fresh longans for sweeter and more aromatic drink."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือด",
+        "en": "Boil water"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_amount} ในหม้อใหญ่ให้เดือดจัด (100°C) เพื่อเตรียมสกัดลำไย",
+        "en": "Boil {water_amount} of clean water in a large pot to 100°C to prepare for longan extraction."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/herbal/longan_cold/man_2.jpg",
+      "tips": {
+        "th": "💡 ควรมีเทอร์โมมิเตอร์ติดครัวไว้ เพื่อวัดอุณหภูมิน้ำได้แม่นยำ",
+        "en": "💡 Keep a kitchen thermometer handy for precise water temperature measurement."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ใส่ลำไยและเก๋ากี้ แล้วลดอุณหภูมิ",
+        "en": "Add longan and goji berries, then reduce temperature"
+      },
+      "desc": {
+        "th": "ใส่เนื้อลำไยและเก๋ากี้ {goji} (ถ้าใช้) ลงในน้ำเดือด ปิดไฟ แล้วรอให้น้ำลดอุณหภูมิเหลือประมาณ 85°C (รอประมาณ 3-5 นาที)",
+        "en": "Add longan flesh and {goji} of goji berries (if using) to boiling water. Turn off heat and wait until temperature drops to ~85°C (about 3-5 mins)."
+      },
+      "descVariables": {
+        "goji": { "amount": 30, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/longan_cold/man_3.jpg",
+      "tips": {
+        "th": "💡 การลดอุณหภูมิเหลือ 85°C ก่อนสกัด จะคงกลิ่นหอมหวานของลำไยไว้ได้ดีที่สุด ไม่ทำให้เสียกลิ่น",
+        "en": "💡 Reducing temperature to 85°C before extraction preserves longan's sweet aroma best, preventing fragrance loss."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "แช่สกัด ปรุงรส และกรอง",
+        "en": "Steep, season, and strain"
+      },
+      "desc": {
+        "th": "แช่ลำไยไว้ 15 นาทีที่ 85°C คนเบาๆ เป็นระยะ เติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} คนจนละลาย กรองเนื้อลำไยและเก๋ากี้ออกผ่านกระชอนหรือผ้าขาวบาง",
+        "en": "Steep longans for 15 mins at 85°C, stirring gently occasionally. Add {rock_sugar} of rock sugar and {salt_amount} of salt, stir until dissolved. Strain out longan flesh and goji berries through a sieve or cheesecloth."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/longan_cold/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดให้ความหวานละมุนกว่าน้ำตาลทราย และเข้ากันได้ดีกับกลิ่นลำไย",
+        "en": "💡 Rock sugar gives smoother sweetness than white sugar and pairs well with longan aroma."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัดพร้อมเนื้อลำไยสดและเก๋ากี้ตกแต่ง",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold garnished with fresh longan flesh and goji berries."
+      },
+      "descVariables": {},
+      "image": "images/herbal/longan_cold/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำลำไยสามารถเก็บในตู้เย็นได้นาน 3-4 วัน โดยรสชาติยังคงหอมหวาน",
+        "en": "💡 Longan drink can be stored in the fridge for 3-4 days while maintaining its sweet aroma."
+      }
+    }
+  ]
+}
