@@ -1,0 +1,18 @@
+ต่อไปสูตร banana_peanut_10L .json รูปแบบ JSON ผมส่งไฟล์ JSON อ้างอิงมาให้เทียบด้วย
+
+ขอ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3
+
+Professional beverage photography, a tall clear glass filled with creamy off-white homemade almond milk and clear ice cubes, condensation droplets on the glass. Garnished with a few raw whole almonds and a vanilla bean pod on the rim. Background features scattered raw almonds, a small wooden bowl of clear rock sugar, and a vanilla bean on a light oak wood table. Bright morning sunlight streaming from the side, creating warm soft highlights and gentle shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, highly detailed, sharp focus, creamy natural colors. --ar 4:3 --style raw
+
+Professional food photography, action shot of creamy off-white almond milk being poured from a clear glass pitcher into a tall chilled glass. A slight dynamic splash of the liquid showing its smooth, velvety texture. Background shows a clean, bright modern kitchen with a woven basket of raw almonds and a small bowl of soaked almonds. Bright natural daylight, crisp focus on the pouring liquid. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, refreshing and healthy aesthetic. --ar 4:3 --style raw
+
+Professional beverage photography, minimalist composition. A single perfect glass of creamy off-white almond milk with large clear ice cubes, sitting on a white marble countertop. Beside the glass is a small wooden spoon with a few raw almonds and a single vanilla bean pod. Soft, diffused natural lighting creating elegant, minimal shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade almond milk. A clear glass bowl filled with raw whole almonds submerged in clean water, soaking overnight. Visible water droplets on the smooth almond skin, some almonds slightly swollen from soaking. Bright, clean kitchen background with natural daylight. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade almond milk. A stainless steel pot on a stove with creamy white almond milk gently simmering. A digital kitchen thermometer inserted in the liquid showing 80°C. Slight steam rising, clean minimalist kitchen setting. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade almond milk. Hands pouring creamy white almond milk through a white cheesecloth stretched over a clear glass pitcher, separating the smooth milk from the almond pulp. A small wooden spoon with a tiny pinch of salt and a vanilla bean nearby. Clean white kitchen background, bright natural lighting. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, creamy color, highly detailed. --ar 4:3 --style raw
+
+Professional beverage photography, final presentation of homemade almond milk. A tall clear glass filled with ice-cold creamy off-white almond milk, condensation droplets on the glass, garnished with a few raw almonds and a vanilla bean pod. Served on a light wooden tray with scattered clear ice cubes, raw almonds, and a vanilla bean around. Bright morning sunlight, light wood table, refreshing and healthy aesthetic. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, creamy natural colors. --ar 4:3 --style raw
+

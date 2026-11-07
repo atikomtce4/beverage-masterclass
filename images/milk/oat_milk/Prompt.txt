@@ -1,0 +1,20 @@
+ต่อไปสูตร banana_peanut_10L .json รูปแบบ JSON ผมส่งไฟล์ JSON อ้างอิงมาให้เทียบด้วย
+
+ขอ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3
+
+Professional beverage photography, a tall clear glass filled with creamy off-white homemade oat milk and clear ice cubes, condensation droplets on the glass. Garnished with a small pile of raw rolled oats and a vanilla bean pod on the rim. Background features scattered rolled oats, a small wooden bowl of clear rock sugar, and a vanilla bean on a light oak wood table. Bright morning sunlight streaming from the side, creating warm soft highlights and gentle shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, highly detailed, sharp focus, creamy natural colors. --ar 4:3 --style raw
+
+Professional food photography, action shot of creamy off-white oat milk being poured from a clear glass pitcher into a tall chilled glass. A slight dynamic splash of the liquid showing its smooth, velvety texture. Background shows a clean, bright modern kitchen with a woven basket of rolled oats and a small glass bowl of water. Bright natural daylight, crisp focus on the pouring liquid. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, refreshing and healthy aesthetic. --ar 4:3 --style raw
+
+Professional beverage photography, minimalist composition. A single perfect glass of creamy off-white oat milk with large clear ice cubes, sitting on a white marble countertop. Beside the glass is a small wooden spoon with a few raw rolled oats and a single vanilla bean pod. Soft, diffused natural lighting creating elegant, minimal shadows. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade oat milk. A pair of hands holding a fine mesh stainless steel strainer filled with raw rolled oats, rinsing them quickly under a gentle stream of cold running water. Visible water droplets on the oats. Bright, clean kitchen background with natural daylight. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, highly detailed. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade oat milk. Close-up of a modern glass blender in action, blending rinsed rolled oats and cold clean water into a smooth, creamy off-white liquid. Bright kitchen setting, light wood surface, morning sunlight. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, creamy colors, highly detailed, slight motion blur on the swirling liquid. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade oat milk. A stainless steel pot on a modern stove with creamy white oat milk gently simmering. A digital kitchen thermometer inserted in the liquid showing exactly 60°C. Slight steam rising, clean minimalist kitchen setting, light wood countertop. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, highly detailed, sharp focus. --ar 4:3 --style raw
+
+Professional food photography, step of making homemade oat milk. Hands pouring creamy white oat milk through a white cheesecloth stretched over a clear glass pitcher, separating the smooth milk from the oat pulp. A small wooden spoon with clear rock sugar crystals and a vanilla bean nearby. Clean white kitchen background, bright natural lighting. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, clean aesthetic, creamy color, highly detailed. --ar 4:3 --style raw
+
+Professional beverage photography, final presentation of homemade oat milk. A tall clear glass filled with ice-cold creamy off-white oat milk, condensation droplets on the glass, garnished with a few raw rolled oats. Served on a light wooden tray with scattered clear ice cubes and a small pile of rolled oats around. Bright morning sunlight, light wood table, refreshing and healthy aesthetic. Shot from slightly above angle (45 degrees). 8k resolution, photorealistic, magazine quality, creamy natural colors. --ar 4:3 --style raw
+
