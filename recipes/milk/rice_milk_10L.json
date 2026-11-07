@@ -1,0 +1,418 @@
+{
+  "id": "rice_milk_10L",
+  "icon": "🍚",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมข้าวหอมมะลิใบเตย 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 90°C คงกลิ่นหอมละมุนจากข้าวหอมมะลิแท้และใบเตยสด ย่อยง่าย อร่อยแบบไทยดั้งเดิม",
+  "total_time": 60,
+  "target_temp": 90,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_rice_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมข้าวหอมมะลิใบเตย 10 ลิตร",
+    "en": "10L Jasmine Rice & Pandan Milk"
+  },
+  "images": [
+    "images/milk/rice_milk/main_1.jpg",
+    "images/milk/rice_milk/main_2.jpg",
+    "images/milk/rice_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_rice_milk",
+  "prepTime": {
+    "th": "15 นาที (เตรียมข้าว) + 45 นาที (เครื่อง)",
+    "en": "15 mins (prep rice) + 45 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "นมข้าวหอมมะลิใบเตยสูตรไทยดั้งเดิม ทำง่ายด้วยเครื่อง AllDrinks System: แช่ข้าวหอมมะลิ ปั่นรวมกับใบเตยสดและน้ำสะอาด เครื่องจะต้มและสกัดที่อุณหภูมิ 90°C เพื่อคงกลิ่นหอม เติมน้ำตาลกรวดและเกลือ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Traditional Thai jasmine rice and pandan milk made easy with AllDrinks System: soak jasmine rice, blend with fresh pandan and clean water, machine boils and extracts at 90°C to preserve aroma, adds rock sugar and salt, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "ย่อยง่าย ให้พลังงานจากคาร์โบไฮเดรตเชิงซ้อน อุดมไปด้วยวิตามินบี ช่วยบำรุงระบบประสาทและสมอง กลิ่นใบเตยช่วยให้ผ่อนคลาย",
+    "en": "Easy to digest, provides energy from complex carbohydrates. Rich in Vitamin B, supports nervous system and brain health. Pandan aroma helps with relaxation."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณคาร์โบไฮเดรตและน้ำตาล ควรดื่มในปริมาณที่เหมาะสม และเขย่าก่อนดื่มทุกครั้งเนื่องจากอาจมีการแยกชั้น",
+    "en": "⚠️ People with diabetes should monitor carbohydrate and sugar intake. Consume in moderation and shake well before drinking as separation may occur."
+  },
+  "nutrition": {
+    "calories": "60 kcal",
+    "carbs": "11 g",
+    "sugar": "5 g",
+    "protein": "1 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่น)", "en": "Clean water (for blending)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวหอมมะลิ (แช่น้ำแล้ว)", "en": "Jasmine rice (soaked)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบเตยหอมสด (หั่นท่อน)", "en": "Fresh pandan leaves (chopped)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมข้าวและใบเตย (แช่และปั่น)",
+        "en": "Prepare rice and pandan (soak and blend)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมข้าวหอมมะลิ: แช่น้ำสะอาด 4-6 ชั่วโมง ล้างให้สะอาด แล้วปั่นรวมกับใบเตยสด {pandan_amount} และน้ำสะอาด {water_blend} จนละเอียดเป็นน้ำนมขาวขุ่น เมื่อได้แล้วให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare jasmine rice: soak in clean water for 4-6 hours, rinse, then blend with {pandan_amount} of fresh pandan and {water_blend} of clean water until it becomes a milky white liquid. Pour into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "pandan_amount": { "amount": 200, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 8,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับน้ำนมข้าวที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared rice milk."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มนมข้าวให้เดือด (100°C)",
+        "en": "Boil rice milk (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มนมข้าวให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดกลิ่นหอม",
+        "en": "Machine boils rice milk to sterilize and prepare for aroma extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 90°C",
+        "en": "Cool down to 90°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมจาก 100°C ลงเหลือ 90°C อย่างแม่นยำ (อุณหภูมิที่เหมาะสมที่สุดในการสกัดกลิ่นข้าวและใบเตยโดยไม่ไหม้)",
+        "en": "The machine precisely cools milk from 100°C to 90°C (optimal temperature for extracting rice and pandan aroma without burning)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวดและเกลือ",
+        "en": "Add rock sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar and {salt_amount} of salt, activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดกลิ่นหอมข้าวและใบเตย (90°C, 15 นาที)",
+        "en": "Extract rice and pandan aroma (90°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 90°C และกวนเป็นระยะเป็นเวลา 15 นาที เพื่อสกัดรสชาติและกลิ่นหอมจากข้าวหอมมะลิและใบเตยอย่างสมบูรณ์แบบ",
+        "en": "Machine maintains 90°C and stirs periodically for 15 mins to perfectly extract flavor and aroma from jasmine rice and pandan."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากข้าวและใบเตยออก",
+        "en": "Filter out rice and pandan pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากข้าวและใบเตยออกผ่านตะแกรงละเอียด ได้นมข้าวสีขาวเนียนนุ่ม",
+        "en": "System filters out rice and pandan pulp through fine mesh, yielding smooth white rice milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมข้าวเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools rice milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมข้าวหอมมะลิใบเตยพร้อมเสิร์ฟ",
+        "en": "Jasmine rice & pandan milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมข้าวหอมมะลิใบเตย 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Jasmine rice & pandan milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมข้าวออกสู่ภาชนะ",
+        "en": "Transfer rice milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมข้าวออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring rice milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "แช่ข้าวหอมมะลิ",
+        "en": "Soak jasmine rice"
+      },
+      "desc": {
+        "th": "นำข้าวหอมมะลิ {rice_amount} ล้างน้ำสะอาด 2-3 ครั้ง จนน้ำใส แล้วแช่ในน้ำสะอาดอย่างน้อย 4-6 ชั่วโมง (หรือข้ามคืน) เพื่อให้ข้าวนุ่ม",
+        "en": "Wash {rice_amount} of jasmine rice with clean water 2-3 times until water runs clear. Soak in clean water for at least 4-6 hours (or overnight) to soften."
+      },
+      "descVariables": {
+        "rice_amount": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/rice_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ข้าวช่วยให้ปั่นได้ละเอียดขึ้นและสกัดรสชาติได้ดีกว่าการใช้ข้าวสารแห้งโดยตรง",
+        "en": "💡 Soaking rice makes it easier to blend and extracts flavor better than using dry rice directly."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นข้าวและใบเตยกับน้ำ",
+        "en": "Blend rice and pandan with water"
+      },
+      "desc": {
+        "th": "เทข้าวที่แช่แล้วและใบเตยสด {pandan_amount} (หั่นท่อน) ลงในเครื่องปั่น เติมน้ำสะอาด {water_blend} ปั่นด้วยความเร็วสูงจนละเอียดเป็นน้ำนมขาวขุ่น",
+        "en": "Place soaked rice and {pandan_amount} of chopped fresh pandan into a blender. Add {water_blend} of clean water. Blend on high speed until it becomes a milky white liquid."
+      },
+      "descVariables": {
+        "pandan_amount": { "amount": 200, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/rice_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 ใบเตยช่วยเพิ่มกลิ่นหอมธรรมชาติและเป็นสีเขียวอ่อนๆ ทำให้นมข้าวดูน่าดื่มและมีกลิ่นหอมแบบไทยแท้",
+        "en": "💡 Pandan adds natural aroma and a slight green tint, making the rice milk appetizing and authentically Thai."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและสกัดที่อุณหภูมิเหมาะสม",
+        "en": "Boil and extract at proper temperature"
+      },
+      "desc": {
+        "th": "เทส่วนผสมที่ปั่นได้และน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วลดไฟลง รอให้อุณหภูมิลดเหลือ 90°C แช่สกัด 15 นาที คนเบาๆ เป็นระยะ",
+        "en": "Pour the blended mixture and {water_boil} of clean water into a large pot. Boil to 100°C, then reduce heat. Wait until temperature drops to 90°C. Steep for 15 mins, stirring gently occasionally."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/rice_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 90°C นาน 15 นาที ช่วยให้กลิ่นข้าวหอมมะลิและใบเตยออกมาเต็มที่ โดยไม่ทำให้ก้นหม้อไหม้",
+        "en": "💡 Extracting at 90°C for 15 mins allows full release of jasmine rice and pandan aroma without burning the pot."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสและกรอง",
+        "en": "Season and strain"
+      },
+      "desc": {
+        "th": "เติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} คนจนละลายหมด กรองผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่น้ำนมข้าว ส่วนกากให้ทิ้งไป",
+        "en": "Add {rock_sugar} of rock sugar and {salt_amount} of salt, stir until fully dissolved. Strain through cheesecloth or fine mesh sieve, squeezing to extract the milk. Discard the pulp."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/rice_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 กากข้าวที่เหลือสามารถนำไปผสมทำขนมหรือหมักเป็นปุ๋ยพืชได้ ไม่ควรทิ้งให้เสียเปล่า",
+        "en": "💡 Leftover rice pulp can be used in baking or composted as plant fertilizer. Don't waste it!"
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด เขย่าก่อนเสิร์ฟเพราะนมข้าวอาจมีการแยกชั้น",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold. Shake before serving as rice milk may separate."
+      },
+      "descVariables": {},
+      "image": "images/milk/rice_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมข้าวหอมมะลิใบเตยสามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนดื่มทุกครั้งเพื่อให้เนื้อสัมผัสเนียนสวย",
+        "en": "💡 Jasmine rice & pandan milk can be stored in the fridge for 3-4 days. Shake well before each use for a smooth texture."
+      }
+    }
+  ]
+}

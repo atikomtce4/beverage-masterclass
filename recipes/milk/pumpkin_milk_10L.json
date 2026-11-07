@@ -1,0 +1,419 @@
+{
+  "id": "pumpkin_milk_10L",
+  "icon": "🎃",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมฟักทองสีทอง 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 85°C คงคุณค่าเบต้าแคโรทีนและวิตามินเอ หอมมันจากฟักทองนึ่งสุกและนมสด ย่อยง่าย อร่อยแบบไทยดั้งเดิม",
+  "total_time": 60,
+  "target_temp": 85,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_pumpkin_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมฟักทองสีทอง 10 ลิตร",
+    "en": "10L Golden Pumpkin Milk"
+  },
+  "images": [
+    "images/milk/pumpkin_milk/main_1.jpg",
+    "images/milk/pumpkin_milk/main_2.jpg",
+    "images/milk/pumpkin_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_pumpkin",
+  "prepTime": {
+    "th": "15 นาที (เตรียมฟักทอง) + 45 นาที (เครื่อง)",
+    "en": "15 mins (prep pumpkin) + 45 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "นมฟักทองสูตรเข้มข้น ทำง่ายด้วยเครื่อง AllDrinks System: นึ่งฟักทองจนสุกนิ่ม ปั่นรวมกับน้ำสะอาด เครื่องจะต้มและสกัดที่อุณหภูมิ 85°C เพื่อคงคุณค่าเบต้าแคโรทีน เติมนมสด น้ำตาลกรวด และเกลือ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Rich pumpkin milk made easy with AllDrinks System: steam pumpkin until soft, blend with clean water, machine boils and extracts at 85°C to preserve beta-carotene, adds fresh milk, rock sugar, and salt, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยเบต้าแคโรทีนและวิตามินเอสูง ช่วยบำรุงสายตาและผิวพรรณ มีไฟเบอร์ช่วยระบบย่อยอาหาร และให้พลังงานที่ดีต่อร่างกาย",
+    "en": "Rich in beta-carotene and Vitamin A, supports eye and skin health. Contains fiber for digestion and provides good energy for the body."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณน้ำตาลและคาร์โบไฮเดรต ควรดื่มในปริมาณที่เหมาะสม และเขย่าก่อนดื่มทุกครั้งเนื่องจากอาจมีการแยกชั้น",
+    "en": "⚠️ People with diabetes should monitor sugar and carbohydrate intake. Consume in moderation and shake well before drinking as separation may occur."
+  },
+  "nutrition": {
+    "calories": "65 kcal",
+    "carbs": "12 g",
+    "sugar": "8 g",
+    "protein": "1.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่น)", "en": "Clean water (for blending)" },
+      "amount": 1,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ฟักทองนึ่งสุก (ปอกเปลือกแล้ว)", "en": "Steamed pumpkin (peeled)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดหรือนมพืช (เช่น นมข้าว/กะทิ)", "en": "Fresh milk or plant milk (e.g., rice milk/coconut milk)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมฟักทองนึ่ง (นึ่งและปั่น)",
+        "en": "Prepare steamed pumpkin (steam and blend)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมฟักทอง: นึ่งฟักทอง {pumpkin_amount} จนสุกนิ่ม ปั่นรวมกับน้ำสะอาด {water_blend} จนละเอียดเป็นเนื้อครีม เมื่อได้แล้วให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare pumpkin: steam {pumpkin_amount} of pumpkin until soft, blend with {water_blend} of clean water until smooth and creamy. Pour into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "pumpkin_amount": { "amount": 3000, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 7,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับเนื้อฟักทองที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared pumpkin."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 7, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มนมฟักทองให้เดือด (100°C)",
+        "en": "Boil pumpkin milk (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มนมฟักทองให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดคุณค่าสารอาหาร",
+        "en": "Machine boils pumpkin milk to sterilize and prepare for nutrient extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 85°C",
+        "en": "Cool down to 85°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมจาก 100°C ลงเหลือ 85°C อย่างแม่นยำ (อุณหภูมิที่เหมาะสมที่สุดในการคงคุณค่าเบต้าแคโรทีนโดยไม่เสียรสชาติ)",
+        "en": "The machine precisely cools milk from 100°C to 85°C (optimal temperature for preserving beta-carotene without losing flavor)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมนมสด น้ำตาลกรวด และเกลือ",
+        "en": "Add fresh milk, rock sugar, and salt"
+      },
+      "desc": {
+        "th": "ระบบจะเติมนมสดหรือนมพืช {milk_amount}, น้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {milk_amount} of fresh/plant milk, {rock_sugar} of rock sugar, and {salt_amount} of salt, activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 2, "unit": "Liter", "scalable": true },
+        "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 85,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดคุณค่าสารอาหาร (85°C, 15 นาที)",
+        "en": "Extract nutrients (85°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 85°C และกวนเป็นระยะเป็นเวลา 15 นาที เพื่อสกัดรสชาติหอมมันและเบต้าแคโรทีนจากฟักทองอย่างสมบูรณ์แบบ",
+        "en": "Machine maintains 85°C and stirs periodically for 15 mins to perfectly extract creamy flavor and beta-carotene from pumpkin."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากฟักทองออก",
+        "en": "Filter out pumpkin pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากฟักทองออกผ่านตะแกรงละเอียด ได้นมฟักทองสีทองเนียนนุ่ม",
+        "en": "System filters out pumpkin pulp through fine mesh, yielding smooth golden pumpkin milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมฟักทองเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools pumpkin milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมฟักทองพร้อมเสิร์ฟ",
+        "en": "Pumpkin milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมฟักทอง 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Pumpkin milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมฟักทองออกสู่ภาชนะ",
+        "en": "Transfer pumpkin milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมฟักทองออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring pumpkin milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "นึ่งฟักทองให้สุก",
+        "en": "Steam the pumpkin"
+      },
+      "desc": {
+        "th": "ล้างฟักทอง {pumpkin_amount} ปอกเปลือก คว้านเมล็ดออก หั่นเป็นชิ้นพอดีคำ แล้วนำไปนึ่งจนสุกนิ่ม (ใช้ส้อมจิ้มแล้วยุบง่าย)",
+        "en": "Wash {pumpkin_amount} of pumpkin, peel, remove seeds, cut into bite-sized pieces, and steam until very soft (easily pierced with a fork)."
+      },
+      "descVariables": {
+        "pumpkin_amount": { "amount": 3000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/pumpkin_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การนึ่งฟักทองให้สุกนิ่มก่อนปั่น จะทำให้ได้เนื้อนมที่เนียนละเอียดและหอมหวานกว่าการใช้ฟักทองดิบ",
+        "en": "💡 Steaming pumpkin until soft before blending yields a smoother and sweeter milk than using raw pumpkin."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นฟักทองกับน้ำ",
+        "en": "Blend pumpkin with water"
+      },
+      "desc": {
+        "th": "นำฟักทองนึ่งที่สุกนิ่มแล้วและน้ำสะอาด {water_blend} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนละเอียดเป็นเนื้อครีมสีส้มทอง",
+        "en": "Place the soft steamed pumpkin and {water_blend} of clean water into a blender. Blend on high speed until it becomes a smooth golden-orange cream."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/pumpkin_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 หากเนื้อฟักทองข้นเกินไป สามารถเติมน้ำสะอาดเพิ่มทีละน้อยขณะปั่นได้",
+        "en": "💡 If the pumpkin mixture is too thick, add a little more clean water gradually while blending."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและสกัดที่อุณหภูมิเหมาะสม",
+        "en": "Boil and extract at proper temperature"
+      },
+      "desc": {
+        "th": "เทส่วนผสมที่ปั่นได้และน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วลดไฟลง รอให้อุณหภูมิลดเหลือ 85°C แช่สกัด 15 นาที คนเบาๆ เป็นระยะ",
+        "en": "Pour the blended mixture and {water_boil} of clean water into a large pot. Boil to 100°C, then reduce heat. Wait until temperature drops to 85°C. Steep for 15 mins, stirring gently occasionally."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 7, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/pumpkin_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 85°C นาน 15 นาที ช่วยให้เบต้าแคโรทีนและรสชาติหอมมันออกมาเต็มที่ โดยไม่ทำให้ก้นหม้อไหม้",
+        "en": "💡 Extracting at 85°C for 15 mins allows full release of beta-carotene and creamy flavor without burning the pot."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสและกรอง",
+        "en": "Season and strain"
+      },
+      "desc": {
+        "th": "เติมนมสดหรือนมพืช {milk_amount}, น้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} คนจนละลายหมด กรองผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่นมฟักทอง",
+        "en": "Add {milk_amount} of fresh/plant milk, {rock_sugar} of rock sugar, and {salt_amount} of salt, stir until fully dissolved. Strain through cheesecloth or fine mesh sieve, squeezing to extract the milk."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 2, "unit": "Liter", "scalable": true },
+        "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/pumpkin_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 กากฟักทองที่เหลือมีความหวานและไฟเบอร์สูง สามารถนำไปผสมทำแพนเค้กหรือขนมปังได้ อย่าทิ้งให้เสียเปล่า",
+        "en": "💡 Leftover pumpkin pulp is sweet and high in fiber. It can be used in pancakes or bread. Don't waste it!"
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด เขย่าก่อนเสิร์ฟเพราะนมฟักทองอาจมีการแยกชั้น",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold. Shake before serving as pumpkin milk may separate."
+      },
+      "descVariables": {},
+      "image": "images/milk/pumpkin_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมฟักทองสามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนดื่มทุกครั้งเพื่อให้เนื้อสัมผัสเนียนสวย",
+        "en": "💡 Pumpkin milk can be stored in the fridge for 3-4 days. Shake well before each use for a smooth texture."
+      }
+    }
+  ]
+}

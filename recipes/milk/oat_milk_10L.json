@@ -1,0 +1,420 @@
+{
+  "id": "oat_milk_10L",
+  "icon": "🌾",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมโอ๊ตโฮมเมด 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 60°C ป้องกันความเหนียวเป็นเมือก ได้เนื้อครีมมี่ธรรมชาติ ไฟเบอร์สูง ไขมันต่ำ ดีต่อหัวใจ",
+  "total_time": 45,
+  "target_temp": 60,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_oat_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมโอ๊ตโฮมเมด 10 ลิตร",
+    "en": "Homemade Oat Milk 10L"
+  },
+  "images": [
+    "images/milk/oat_milk/main_1.jpg",
+    "images/milk/oat_milk/main_2.jpg",
+    "images/milk/oat_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_oat",
+  "prepTime": {
+    "th": "5 นาที (เตรียมข้าวโอ๊ต) + 40 นาที (เครื่อง)",
+    "en": "5 mins (prep oats) + 40 mins (machine)"
+  },
+  "cookTime": {
+    "th": "45 นาที (รวมเตรียมและเครื่อง)",
+    "en": "45 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "นมโอ๊ตโฮมเมดสูตรครีมมี่ ทำง่ายด้วยเครื่อง AllDrinks System: ล้างข้าวโอ๊ตแล้วปั่นกับน้ำเย็น เครื่องจะต้มและสกัดที่อุณหภูมิ 60°C เพื่อป้องกันความเหนียวเป็นเมือก เติมน้ำตาลกรวด เกลือ และวานิลลา กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Creamy homemade oat milk made easy with AllDrinks System: rinse oats and blend with cold water, machine boils and extracts at 60°C to prevent slimy texture, adds rock sugar, salt, and vanilla, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยเบต้ากลูแคน (Beta-glucan) ไฟเบอร์สูง ช่วยลดคอเลสเตอรอล ไขมันต่ำ ดีต่อหัวใจ เหมาะสำหรับผู้แพ้นมวัวและถั่ว ใช้ผสมกาแฟได้ดีเยี่ยม",
+    "en": "Rich in beta-glucan and high fiber, helps lower cholesterol. Low fat, heart-healthy, perfect for those allergic to milk and nuts. Excellent for coffee mixing."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคเบาหวานควรระวังปริมาณแป้งจากข้าวโอ๊ต ผู้ที่แพ้กลูเตนควรเลือกข้าวโอ๊ตแบบ Gluten-Certified เท่านั้น",
+    "en": "⚠️ People with diabetes should monitor starch intake from oats. Those with gluten sensitivity should use only Gluten-Certified oats."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "7 g",
+    "sugar": "4 g",
+    "protein": "1 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาดเย็น (สำหรับปั่น)", "en": "Cold clean water (for blending)" },
+      "amount": 1,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 9,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวโอ๊ตบดหยาบ (Rolled Oats)", "en": "Rolled oats" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 250,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด (ไม่บังคับ)", "en": "Vanilla extract (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมข้าวโอ๊ต (ล้างและปั่น)",
+        "en": "Prepare oats (rinse and blend)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมข้าวโอ๊ต: ล้างข้าวโอ๊ต {oat_amount} ด้วยน้ำสะอาดเย็น {water_blend} เพื่อล้างแป้งส่วนเกินออก แล้วปั่นจนละเอียดเป็นน้ำนมขาวขุ่น เมื่อได้นมโอ๊ตดิบแล้ว ให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare oats: rinse {oat_amount} of oats with {water_blend} of cold clean water to remove excess starch, then blend until it becomes a milky white liquid. Pour the raw oat milk into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "oat_amount": { "amount": 800, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 9,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับนมโอ๊ตที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared oat milk."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 9, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มนมโอ๊ตให้เดือด (100°C)",
+        "en": "Boil oat milk (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มนมโอ๊ตให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดคุณค่าสารอาหาร",
+        "en": "Machine boils oat milk to sterilize and prepare for nutrient extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 60°C",
+        "en": "Cool down to 60°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมจาก 100°C ลงเหลือ 60°C อย่างแม่นยำ (สำคัญมาก! อุณหภูมิสูงเกินไปจะทำให้ข้าวโอ๊ตเหนียวเป็นเมือก)",
+        "en": "The machine precisely cools milk from 100°C to 60°C (critical! Too hot makes oats slimy and sticky)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวด เกลือ และวานิลลา",
+        "en": "Add rock sugar, salt, and vanilla"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 250, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 8,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดคุณค่าสารอาหาร (60°C, 8 นาที)",
+        "en": "Extract nutrients (60°C, 8 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 60°C และกวนเป็นระยะเป็นเวลา 8 นาที เพื่อสกัดรสชาติครีมมี่และเบต้ากลูแคนจากข้าวโอ๊ตอย่างสมบูรณ์แบบ (ไม่ร้อนเกินจนเหนียวเป็นเมือก)",
+        "en": "Machine maintains 60°C and stirs periodically for 8 mins to perfectly extract creamy texture and beta-glucan from oats (not too hot to become slimy)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากข้าวโอ๊ตออก",
+        "en": "Filter out oat pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากข้าวโอ๊ตออกผ่านตะแกรงละเอียด ได้นมโอ๊ตสีขาวครีมมี่เนียนนุ่ม",
+        "en": "System filters out oat pulp through fine mesh, yielding smooth creamy white oat milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมโอ๊ตเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools oat milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมโอ๊ตพร้อมเสิร์ฟ",
+        "en": "Oat milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมโอ๊ต 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Oat milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมโอ๊ตออกสู่ภาชนะ",
+        "en": "Transfer oat milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมโอ๊ตออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring oat milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างข้าวโอ๊ต",
+        "en": "Rinse oats"
+      },
+      "desc": {
+        "th": "นำข้าวโอ๊ต {oat_amount} ใส่กระชอน ล้างผ่านน้ำสะอาดเย็น {water_blend} เร็วๆ 1-2 ครั้ง เพื่อล้างแป้งส่วนเกินออก (อย่าแช่นาน เพราะจะเหนียว)",
+        "en": "Place {oat_amount} of oats in a strainer, rinse quickly under cold clean water {water_blend} 1-2 times to remove excess starch (don't soak or it becomes slimy)."
+      },
+      "descVariables": {
+        "oat_amount": { "amount": 800, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/oat_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การล้างข้าวโอ๊ตด้วยน้ำเย็นช่วยลดเอนไซม์ที่ทำให้เกิดเมือก เป็นเคล็ดลับสำคัญที่ทำให้นมโอ๊ตเนียนนุ่ม",
+        "en": "💡 Rinsing oats with cold water reduces enzymes that cause sliminess, a key trick for smooth oat milk."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นข้าวโอ๊ตกับน้ำเย็น",
+        "en": "Blend oats with cold water"
+      },
+      "desc": {
+        "th": "นำข้าวโอ๊ตที่ล้างแล้วและน้ำสะอาดเย็น {water_blend} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงประมาณ 20-30 วินาที (อย่าปั่นนานเกินไป เพราะจะเหนียว)",
+        "en": "Place rinsed oats and {water_blend} of cold clean water into a blender. Blend on high speed for only 20-30 seconds (don't over-blend or it becomes slimy)."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/oat_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 ปั่นสั้นๆ เพียง 20-30 วินาทีก็เพียงพอ การปั่นนานเกินไปจะทำให้ข้าวโอ๊ตปล่อยแป้งออกมามากและเหนียวเป็นเมือก",
+        "en": "💡 Short blending of 20-30 seconds is enough. Over-blending releases too much starch and creates slimy texture."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและลดอุณหภูมิอย่างแม่นยำ",
+        "en": "Boil and reduce temperature precisely"
+      },
+      "desc": {
+        "th": "เทนมโอ๊ตดิบและน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วปิดไฟ รอให้อุณหภูมิลดเหลือ 60°C (ใช้เทอร์โมมิเตอร์วัด) สำคัญมาก! ถ้าร้อนเกินไปนมจะเหนียว",
+        "en": "Pour raw oat milk and {water_boil} of clean water into a large pot. Boil to 100°C, then turn off heat. Wait until temperature drops to 60°C (use thermometer). Critical! Too hot makes milk slimy."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 9, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/oat_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 60°C เป็นจุดที่สมบูรณ์แบบสำหรับข้าวโอ๊ต ได้เนื้อครีมมี่โดยไม่มีเมือก อุณหภูมิที่สูงกว่า 70°C จะทำให้เหนียวทันที",
+        "en": "💡 Extracting at 60°C is the sweet spot for oats, yielding creamy texture without sliminess. Above 70°C makes it sticky immediately."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรส แช่สกัด และกรอง",
+        "en": "Season, steep, and strain"
+      },
+      "desc": {
+        "th": "เติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) คนจนละลาย แช่สกัด 8 นาทีที่ 60°C คนเบาๆ เป็นระยะ กรองกากข้าวโอ๊ตออกผ่านผ้าขาวบางหรือกระชอนตาถี่",
+        "en": "Add {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), stir until dissolved. Steep for 8 mins at 60°C, stirring gently occasionally. Strain out oat pulp through cheesecloth or fine mesh sieve."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 250, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/milk/oat_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 อย่าบีบหรือกดกากข้าวโอ๊ตแรงๆ ตอนกรอง เพราะจะทำให้เมือกออกมา แค่ปล่อยให้ไหลผ่านเองก็พอ",
+        "en": "💡 Don't squeeze or press oat pulp hard during straining, or slime will come out. Just let it flow through naturally."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด เขย่าก่อนเสิร์ฟเพราะนมโอ๊ตอาจแยกชั้น ใช้ผสมกาแฟหรือดื่มเปล่าๆ ก็ได้",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold. Shake before serving as oat milk may separate. Perfect for coffee mixing or drinking plain."
+      },
+      "descVariables": {},
+      "image": "images/milk/oat_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมโอ๊ตโฮมเมดสามารถเก็บในตู้เย็นได้นาน 4-5 วัน เขย่าก่อนดื่มทุกครั้ง และเหมาะมากสำหรับทำ Latte หรือ Cappuccino",
+        "en": "💡 Homemade oat milk can be stored in the fridge for 4-5 days. Shake well before each use. Perfect for making Latte or Cappuccino."
+      }
+    }
+  ]
+}

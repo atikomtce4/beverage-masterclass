@@ -1,0 +1,418 @@
+{
+  "id": "almond_milk_10L",
+  "icon": "🌰",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมอัลมอนด์โฮมเมด 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 80°C คงคุณค่าสารอาหารสูงสุด หอมมันจากอัลมอนด์แท้ 100% แคลเซียมสูง ไขมันดี",
+  "total_time": 50,
+  "target_temp": 80,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_almond_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมอัลมอนด์โฮมเมด 10 ลิตร",
+    "en": "Homemade Almond Milk 10L"
+  },
+  "images": [
+    "images/milk/almond_milk/main_1.jpg",
+    "images/milk/almond_milk/main_2.jpg",
+    "images/milk/almond_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_almond",
+  "prepTime": {
+    "th": "10 นาที (เตรียมอัลมอนด์) + 40 นาที (เครื่อง)",
+    "en": "10 mins (prep almonds) + 40 mins (machine)"
+  },
+  "cookTime": {
+    "th": "50 นาที (รวมเตรียมและเครื่อง)",
+    "en": "50 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "นมอัลมอนด์โฮมเมดสูตรเข้มข้น ทำง่ายด้วยเครื่อง AllDrinks System: แช่อัลมอนด์ดิบ 8-12 ชั่วโมง ปั่นกับน้ำสะอาด เครื่องจะต้มและสกัดที่อุณหภูมิ 80°C เพื่อคงคุณค่าสารอาหาร เติมน้ำตาลกรวดและเกลือ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Rich homemade almond milk made easy with AllDrinks System: soak raw almonds 8-12 hours, blend with clean water, machine boils and extracts at 80°C to preserve nutrients, adds rock sugar and salt, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยแคลเซียมสูง ไขมันดี (MCT) วิตามินอี และโปรตีนพืช ช่วยบำรุงหัวใจ บำรุงผิวพรรณ ลดคอเลสเตอรอล และเหมาะสำหรับผู้ที่ไม่บริโภคนมวัว",
+    "en": "High in calcium, good fats (MCT), Vitamin E, and plant protein. Supports heart health, nourishes skin, lowers cholesterol, and perfect for those avoiding cow's milk."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้อัลมอนด์หรือถั่ว-tree nuts ต้องหลีกเลี่ยงสูตรนี้อย่างเด็ดขาด ผู้ที่เป็นโรคไตควรปรึกษาแพทย์ก่อนดื่มเนื่องจากมีโพแทสเซียมสูง",
+    "en": "⚠️ Those allergic to almonds or tree nuts must avoid this recipe strictly. People with kidney issues should consult a doctor due to high potassium content."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "4 g",
+    "sugar": "3 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่น)", "en": "Clean water (for blending)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "อัลมอนด์ดิบ (แช่น้ำแล้ว)", "en": "Raw almonds (soaked)" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด (ไม่บังคับ)", "en": "Vanilla extract (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมอัลมอนด์ (แช่น้ำและปั่น)",
+        "en": "Prepare almonds (soak and blend)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมอัลมอนด์ดิบ: แช่น้ำสะอาด 8-12 ชั่วโมง (หรือข้ามคืน) ล้างให้สะอาด แล้วปั่นกับน้ำสะอาด {water_blend} จนละเอียดเป็นน้ำนมขาวขุ่น เมื่อได้นมอัลมอนด์ดิบแล้ว ให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare raw almonds: soak in clean water for 8-12 hours (or overnight), rinse, then blend with {water_blend} of clean water until it becomes a milky white liquid. Pour the raw almond milk into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 8,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับนมอัลมอนด์ที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared almond milk."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มนมอัลมอนด์ให้เดือด (100°C)",
+        "en": "Boil almond milk (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มนมอัลมอนด์ให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดคุณค่าสารอาหาร",
+        "en": "Machine boils almond milk to sterilize and prepare for nutrient extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 80°C",
+        "en": "Cool down to 80°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมจาก 100°C ลงเหลือ 80°C อย่างแม่นยำ (น้ำร้อนเกินจะทำลายวิตามินอีและไขมันดีในอัลมอนด์)",
+        "en": "The machine precisely cools milk from 100°C to 80°C (too hot destroys Vitamin E and good fats in almonds)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวด เกลือ และวานิลลา",
+        "en": "Add rock sugar, salt, and vanilla"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดคุณค่าสารอาหาร (80°C, 10 นาที)",
+        "en": "Extract nutrients (80°C, 10 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 80°C และกวนเป็นระยะเป็นเวลา 10 นาที เพื่อสกัดรสชาติและสารอาหารจากอัลมอนด์อย่างสมบูรณ์แบบ (ไม่ร้อนเกินจนเสียคุณค่า)",
+        "en": "Machine maintains 80°C and stirs periodically for 10 mins to perfectly extract almond flavor and nutrients (not too hot to lose value)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากอัลมอนด์ออก",
+        "en": "Filter out almond pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากอัลมอนด์ออกผ่านตะแกรงละเอียด ได้นมอัลมอนด์สีขาวเนียนนุ่ม",
+        "en": "System filters out almond pulp through fine mesh, yielding smooth white almond milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมอัลมอนด์เหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools almond milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมอัลมอนด์พร้อมเสิร์ฟ",
+        "en": "Almond milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมอัลมอนด์ 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Almond milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมอัลมอนด์ออกสู่ภาชนะ",
+        "en": "Transfer almond milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมอัลมอนด์ออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring almond milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "แช่อัลมอนด์ดิบ",
+        "en": "Soak raw almonds"
+      },
+      "desc": {
+        "th": "นำอัลมอนด์ดิบ {almond_amount} ล้างน้ำสะอาด แล้วแช่ในน้ำสะอาดอย่างน้อย 8-12 ชั่วโมง (หรือข้ามคืน) เพื่อให้_ALMOND นุ่มและลด phytic acid",
+        "en": "Wash {almond_amount} of raw almonds with clean water, then soak in clean water for at least 8-12 hours (or overnight) to soften and reduce phytic acid."
+      },
+      "descVariables": {
+        "almond_amount": { "amount": 1500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/almond_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่อัลมอนด์ช่วยลด phytic acid ที่ขัดขวางการดูดซึมแร่ธาตุ และทำให้ปั่นได้ง่ายขึ้น",
+        "en": "💡 Soaking almonds reduces phytic acid (which blocks mineral absorption) and makes blending easier."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นอัลมอนด์กับน้ำสะอาด",
+        "en": "Blend almonds with water"
+      },
+      "desc": {
+        "th": "ล้างอัลมอนด์ที่แช่แล้วให้สะอาด นำไปปั่นกับน้ำสะอาด {water_blend} ด้วยความเร็วสูงจนละเอียดเป็นน้ำนมสีขาว",
+        "en": "Rinse soaked almonds, then blend with {water_blend} of clean water on high speed until it becomes white milk."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/almond_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 หากเครื่องปั่นกำลังไม่สูงมาก ให้แบ่งปั่นทีละน้อย และใช้น้ำอุ่นเล็กน้อยจะช่วยสกัดได้ดีขึ้น",
+        "en": "💡 If the blender is not powerful, blend in small batches. Using slightly warm water helps extraction."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและสกัดที่อุณหภูมิเหมาะสม",
+        "en": "Boil and extract at proper temperature"
+      },
+      "desc": {
+        "th": "เทนมอัลมอนด์ดิบและน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วลดไฟลง รอให้อุณหภูมิลดเหลือ 80°C (ใช้เทอร์โมมิเตอร์วัด) แช่สกัด 10 นาที คนเบาๆ เป็นระยะ",
+        "en": "Pour raw almond milk and {water_boil} of clean water into a large pot. Boil to 100°C, then reduce heat. Wait until temperature drops to 80°C (use thermometer). Steep for 10 mins, stirring gently occasionally."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/almond_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 80°C นาน 10 นาที เป็นจุดที่คงคุณค่าสารอาหารได้ดีที่สุด ไม่ร้อนเกินจนทำลายวิตามินอี",
+        "en": "💡 Extracting at 80°C for 10 mins is the sweet spot for preserving nutrients, not too hot to destroy Vitamin E."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสและกรอง",
+        "en": "Season and strain"
+      },
+      "desc": {
+        "th": "เติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) คนจนละลาย กรองกากอัลมอนด์ออกผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่นม",
+        "en": "Add {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), stir until dissolved. Strain out almond pulp through cheesecloth or fine mesh sieve, squeezing to extract milk."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/milk/almond_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 กากอัลมอนด์ที่กรองได้สามารถนำไปทำขนมหรือผสมในสมูทตี้ได้ อย่าทิ้งให้เสียเปล่า",
+        "en": "💡 Leftover almond pulp can be used in baking or added to smoothies. Don't waste it!"
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด เขย่าก่อนเสิร์ฟเพราะนมอัลมอนด์อาจแยกชั้น",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold. Shake before serving as almond milk may separate."
+      },
+      "descVariables": {},
+      "image": "images/milk/almond_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมอัลมอนด์โฮมเมดสามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนดื่มทุกครั้ง",
+        "en": "💡 Homemade almond milk can be stored in the fridge for 3-4 days. Shake well before each use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "id": "coconut_milk_10L",
+  "icon": "🥥",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมมะพร้าวหอมมัน 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 80°C คงคุณค่าไขมันดี MCT และกลิ่นหอมธรรมชาติจากมะพร้าวทึนทึก หวานมันละมุน ใช้ผสมกาแฟหรือดื่มเปล่าๆ ก็ได้",
+  "total_time": 55,
+  "target_temp": 80,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_coconut_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมมะพร้าวหอมมัน 10 ลิตร",
+    "en": "Aromatic Coconut Milk 10L"
+  },
+  "images": [
+    "images/milk/coconut_milk/main_1.jpg",
+    "images/milk/coconut_milk/main_2.jpg",
+    "images/milk/coconut_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_coconut",
+  "prepTime": {
+    "th": "10 นาที (เตรียมมะพร้าว) + 45 นาที (เครื่อง)",
+    "en": "10 mins (prep coconut) + 45 mins (machine)"
+  },
+  "cookTime": {
+    "th": "55 นาที (รวมเตรียมและเครื่อง)",
+    "en": "55 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "นมมะพร้าวหอมมันสูตรเข้มข้น ทำง่ายด้วยเครื่อง AllDrinks System: ปั่นมะพร้าวขูดขาวกับน้ำร้อน เครื่องจะต้มและสกัดที่อุณหภูมิ 80°C เพื่อคงคุณค่าไขมันดี MCT เติมน้ำตาลกรวดและเกลือ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Rich aromatic coconut milk made easy with AllDrinks System: blend grated white coconut with hot water, machine boils and extracts at 80°C to preserve MCT good fats, adds rock sugar and salt, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยไขมันดี MCT (Medium-Chain Triglycerides) ช่วยเร่งการเผาผลาญพลังงาน บำรุงผิวพรรณให้ชุ่มชื้น ให้พลังงานเร็ว เหมาะสำหรับสาย Keto และใช้ผสมกาแฟได้ดีเยี่ยม",
+    "en": "Rich in MCT (Medium-Chain Triglycerides) good fats that boost metabolism. Nourishes and moisturizes skin. Provides quick energy, perfect for Keto diet and excellent for coffee mixing."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีคอเลสเตอรอลสูงควรดื่มในปริมาณที่เหมาะสม นมมะพร้าวมีไขมันสูงและอาจแยกชั้นง่าย ควรเขย่าก่อนดื่มทุกครั้ง และเก็บในตู้เย็นไม่เกิน 2-3 วัน",
+    "en": "⚠️ People with high cholesterol should consume in moderation. Coconut milk is high in fat and may separate easily. Shake well before each use and refrigerate for no more than 2-3 days."
+  },
+  "nutrition": {
+    "calories": "75 kcal",
+    "carbs": "3 g",
+    "sugar": "2 g",
+    "protein": "0.8 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาดร้อน (สำหรับปั่น)", "en": "Hot clean water (for blending)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะพร้าวขูดขาว (ทึนทึก)", "en": "Grated white coconut (mature)" },
+      "amount": 2500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด (ไม่บังคับ)", "en": "Vanilla extract (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมมะพร้าวขูด (ปั่นกับน้ำร้อน)",
+        "en": "Prepare grated coconut (blend with hot water)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมมะพร้าวขูดขาว: นำมะพร้าวขูด {coconut_amount} ปั่นรวมกับน้ำสะอาดร้อน {water_blend} จนละเอียดเป็นน้ำนมขาวขุ่น เมื่อได้นมมะพร้าวดิบแล้ว ให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare grated white coconut: blend {coconut_amount} of grated coconut with {water_blend} of hot clean water until it becomes a milky white liquid. Pour the raw coconut milk into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "coconut_amount": { "amount": 2500, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 8,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับนมมะพร้าวที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared coconut milk."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มนมมะพร้าวให้เดือด (100°C)",
+        "en": "Boil coconut milk (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มนมมะพร้าวให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดไขมันดี MCT",
+        "en": "Machine boils coconut milk to sterilize and prepare for MCT good fat extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 80°C",
+        "en": "Cool down to 80°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมจาก 100°C ลงเหลือ 80°C อย่างแม่นยำ (อุณหภูมิที่เหมาะสมที่สุดในการสกัดไขมันดีโดยไม่เสียคุณค่า)",
+        "en": "The machine precisely cools milk from 100°C to 80°C (optimal temperature for extracting good fats without losing nutrients)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวด เกลือ และวานิลลา",
+        "en": "Add rock sugar, salt, and vanilla"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 200, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดไขมันดี MCT (80°C, 15 นาที)",
+        "en": "Extract MCT good fats (80°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 80°C และกวนเป็นระยะเป็นเวลา 15 นาที เพื่อสกัดไขมันดี MCT และรสชาติหอมมันจากมะพร้าวอย่างสมบูรณ์แบบ",
+        "en": "Machine maintains 80°C and stirs periodically for 15 mins to perfectly extract MCT good fats and aromatic creamy flavor from coconut."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากมะพร้าวออก",
+        "en": "Filter out coconut pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากมะพร้าวออกผ่านตะแกรงละเอียด ได้นมมะพร้าวสีขาวครีมมี่เนียนนุ่ม",
+        "en": "System filters out coconut pulp through fine mesh, yielding smooth creamy white coconut milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมมะพร้าวเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools coconut milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมมะพร้าวพร้อมเสิร์ฟ",
+        "en": "Coconut milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมมะพร้าว 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Coconut milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมมะพร้าวออกสู่ภาชนะ",
+        "en": "Transfer coconut milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมมะพร้าวออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring coconut milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมมะพร้าวขูด",
+        "en": "Prepare grated coconut"
+      },
+      "desc": {
+        "th": "นำมะพร้าวทึนทึก {coconut_amount} มาขูดเอาแต่เนื้อขาว (หรือใช้มะพร้าวขูดสำเร็จรูป) ล้างน้ำสะอาด 1 ครั้งเพื่อล้างสิ่งสกปรก",
+        "en": "Grate {coconut_amount} of mature coconut to get white flesh (or use pre-grated coconut). Rinse with clean water once to remove dirt."
+      },
+      "descVariables": {
+        "coconut_amount": { "amount": 2500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/coconut_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกมะพร้าวทึนทึก (มะพร้าวแก่) จะมีเนื้อเยอะและให้กะทิที่หอมมันกว่ามะพร้าวอ่อน",
+        "en": "💡 Choose mature coconut for more flesh and richer, creamier milk compared to young coconut."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นมะพร้าวกับน้ำร้อน",
+        "en": "Blend coconut with hot water"
+      },
+      "desc": {
+        "th": "นำมะพร้าวขูดและน้ำสะอาดร้อน {water_blend} (ประมาณ 80°C) ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูง 1-2 นาทีจนละเอียดเป็นน้ำนมสีขาว",
+        "en": "Place grated coconut and {water_blend} of hot clean water (about 80°C) into a blender. Blend on high speed for 1-2 minutes until it becomes white milk."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/coconut_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำร้อนช่วยสกัดไขมันดี MCT จากมะพร้าวได้ดีกว่าน้ำเย็น และให้รสหอมมันกว่า",
+        "en": "💡 Using hot water extracts MCT good fats from coconut better than cold water and gives a richer, creamier taste."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและสกัดที่อุณหภูมิเหมาะสม",
+        "en": "Boil and extract at proper temperature"
+      },
+      "desc": {
+        "th": "เทนมมะพร้าวดิบและน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วลดไฟลง รอให้อุณหภูมิลดเหลือ 80°C แช่สกัด 15 นาที คนเบาๆ เป็นระยะ",
+        "en": "Pour raw coconut milk and {water_boil} of clean water into a large pot. Boil to 100°C, then reduce heat. Wait until temperature drops to 80°C. Steep for 15 mins, stirring gently occasionally."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 8, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/coconut_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 80°C นาน 15 นาที ช่วยให้ไขมันดี MCT และกลิ่นหอมของมะพร้าวออกมาเต็มที่ โดยไม่ร้อนเกินจนเสียคุณค่า",
+        "en": "💡 Extracting at 80°C for 15 mins allows full release of MCT good fats and coconut aroma without losing nutrients from excessive heat."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสและกรองกะทิ",
+        "en": "Season and strain coconut milk"
+      },
+      "desc": {
+        "th": "เติมน้ำตาลกรวด {rock_sugar}, เกลือ {salt_amount} และวานิลลา {vanilla} (ถ้าใช้) คนจนละลาย กรองกากมะพร้าวออกผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่นมมะพร้าว",
+        "en": "Add {rock_sugar} of rock sugar, {salt_amount} of salt, and {vanilla} of vanilla (if using), stir until dissolved. Strain out coconut pulp through cheesecloth or fine mesh sieve, squeezing to extract coconut milk."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 200, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/milk/coconut_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 กากมะพร้าวที่เหลือสามารถนำไปทำขนม (เช่น ขนมโค) หรือผสมในสมูทตี้ได้ อย่าทิ้งให้เสียเปล่า",
+        "en": "💡 Leftover coconut pulp can be used in desserts (like coconut balls) or added to smoothies. Don't waste it!"
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด เขย่าก่อนเสิร์ฟเพราะนมมะพร้าวอาจแยกชั้น ใช้ผสมกาแฟหรือดื่มเปล่าๆ ก็ได้",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold. Shake before serving as coconut milk may separate. Perfect for coffee mixing or drinking plain."
+      },
+      "descVariables": {},
+      "image": "images/milk/coconut_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมมะพร้าวโฮมเมดสามารถเก็บในตู้เย็นได้นาน 2-3 วัน เขย่าก่อนดื่มทุกครั้ง และเหมาะมากสำหรับทำ Coconut Latte หรือ Pina Colada",
+        "en": "💡 Homemade coconut milk can be stored in the fridge for 2-3 days. Shake well before each use. Perfect for making Coconut Latte or Pina Colada."
+      }
+    }
+  ]
+}
