@@ -1,0 +1,308 @@
+[
+  {
+    "id": "roselle_10L",
+    "name": {
+      "th": "น้ำกระเจี๊ยบ 10 ลิตร",
+      "en": "10L Roselle Juice"
+    },
+    "image": "images/herbal/roselle/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที",
+      "en": "10 mins"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ลดความดัน", "วิตามินซี"],
+      "en": ["Blood Pressure", "Vitamin C"]
+    }
+  },
+  {
+    "id": "chrysanthemum_10L",
+    "name": {
+      "th": "น้ำเก๊กฮวย 10 ลิตร",
+      "en": "10L Chrysanthemum Tea"
+    },
+    "image": "images/herbal/chrysanthemum/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที",
+      "en": "10 mins"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["แก้ร้อนใน", "หอมสดชื่น"],
+      "en": ["Cooling", "Aromatic"]
+    }
+  },
+  {
+    "id": "samkler_10L",
+    "name": {
+      "th": "น้ำสามเกลอ 10 ลิตร",
+      "en": "10L Samkler Herbal Tea"
+    },
+    "image": "images/herbal/samkler/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที",
+      "en": "15 mins"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["สูตรโบราณ", "ไม่ใช้น้ำตาล", "บำรุงร่างกาย"],
+      "en": ["Traditional", "No Sugar", "Nourishing"]
+    }
+  },
+  {
+    "id": "bael_fruit_10L",
+    "name": {
+      "th": "น้ำมะตูมหอมหวาน 10 ลิตร",
+      "en": "10L Bael Fruit Tea (Sweet & Aromatic)"
+    },
+    "image": "images/herbal/bael_fruit/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที",
+      "en": "20 mins"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["บำรุงร่างกาย", "แก้ร้อนใน", "หอมหวาน"],
+      "en": ["Nourishing", "Cooling", "Sweet Aroma"]
+    }
+  },
+  {
+    "id": "pennywort_10L",
+    "name": {
+      "th": "น้ำใบบัวบก 10 ลิตร",
+      "en": "10L Pennywort Juice (Brain Tonic)"
+    },
+    "image": "images/herbal/pennywort/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที",
+      "en": "15 mins"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["แก้ช้ำใน", "บำรุงสมอง", "สีเขียวธรรมชาติ"],
+      "en": ["Detox", "Brain Tonic", "Natural Green"]
+    }
+  },
+  {
+    "id": "butterfly_pea_10L",
+    "name": {
+      "th": "น้ำอัญชันมะนาว 10 ลิตร",
+      "en": "10L Butterfly Pea Lemon (Color-Changing)"
+    },
+    "image": "images/herbal/butterfly_pea/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที",
+      "en": "10 mins"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["เปลี่ยนสีได้", "บำรุงสายตา", "ต้านอนุมูลอิสระ"],
+      "en": ["Color-Changing", "Eye Health", "Antioxidant"]
+    }
+  },
+  {
+    "id": "pandan_cold_10L",
+    "name": {
+      "th": "น้ำใบเตยหอมเย็น 10 ลิตร",
+      "en": "10L Cold Pandan Juice"
+    },
+    "image": "images/herbal/pandan_cold/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที",
+      "en": "15 mins"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["หอมสดชื่น", "ผ่อนคลาย", "สีเขียวธรรมชาติ"],
+      "en": ["Aromatic", "Relaxing", "Natural Green"]
+    }
+  },
+  {
+    "id": "longan_cold_10L",
+    "name": {
+      "th": "น้ำลำไยเย็น 10 ลิตร",
+      "en": "10L Cold Longan Drink"
+    },
+    "image": "images/herbal/longan_cold/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที",
+      "en": "10 mins"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["บำรุงหัวใจ", "ช่วยให้หลับสบาย", "หวานละมุน"],
+      "en": ["Heart Health", "Better Sleep", "Smooth Sweetness"]
+    }
+  },
+  {
+    "id": "citrus_sparkle_10L",
+    "name": {
+      "th": "ไซรัปมะนาวโซดาซ่า (สไตล์ Sprite) 10 ลิตร",
+      "en": "10L Citrus Sparkle Syrup (Sprite-Style)"
+    },
+    "image": "images/mocktail/citrus_sparkle/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (ทำเอง)",
+      "en": "20 mins (Manual)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ซ่าสดชื่น", "มะนาวแท้", "ผสมโซดาเอง"],
+      "en": ["Refreshing Fizz", "Real Lime", "DIY Soda"]
+    }
+  },
+  {
+    "id": "dark_caramel_cola_10L",
+    "name": {
+      "th": "ไซรัปโคล่าคลาสสิก (สไตล์ Coke) 10 ลิตร",
+      "en": "10L Dark Caramel Cola Syrup (Coke-Style)"
+    },
+    "image": "images/mocktail/dark_caramel_cola/main_1.jpg",
+    "prepTime": {
+      "th": "25 นาที (ทำเอง)",
+      "en": "25 mins (Manual)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["รสโคล่าแท้", "คาราเมลหอม", "ผสมโซดาเอง"],
+      "en": ["Authentic Cola", "Caramel Aroma", "DIY Soda"]
+    }
+  },
+  {
+    "id": "seven_citrus_10L",
+    "name": {
+      "th": "ไซรัปเลมอนใส (สไตล์ 7-Up) 10 ลิตร",
+      "en": "10L Seven Citrus Clear Syrup (7-Up Style)"
+    },
+    "image": "images/mocktail/seven_citrus/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (ทำเอง)",
+      "en": "20 mins (Manual)"
+    },
+    "rating": "4.6",
+    "badges": {
+      "th": ["ใสสะอาด", "เลมอนหอม", "ซ่าเบาๆ"],
+      "en": ["Crystal Clear", "Lemon Aroma", "Light Fizz"]
+    }
+  },
+  {
+    "id": "royal_cola_10L",
+    "name": {
+      "th": "ไซรัปโคล่าบลู (สไตล์ Pepsi) 10 ลิตร",
+      "en": "10L Royal Blue Cola Syrup (Pepsi-Style)"
+    },
+    "image": "images/mocktail/royal_cola/main_1.jpg",
+    "prepTime": {
+      "th": "25 นาที (ทำเอง)",
+      "en": "25 mins (Manual)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["หวานนำ", "โคล่าเข้มข้น", "ผสมโซดาเอง"],
+      "en": ["Sweeter Profile", "Rich Cola", "DIY Soda"]
+    }
+  },
+  {
+    "id": "orange_burst_10L",
+    "name": {
+      "th": "ไซรัปส้มซ่า (สไตล์ Fanta Orange) 10 ลิตร",
+      "en": "10L Orange Burst Syrup (Fanta-Style)"
+    },
+    "image": "images/mocktail/orange_burst/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (ทำเอง)",
+      "en": "20 mins (Manual)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ส้มแท้", "สีส้มสดใส", "หวานซ่า"],
+      "en": ["Real Orange", "Vibrant Color", "Sweet Fizz"]
+    }
+  },
+  {
+    "id": "purple_grape_fizz_10L",
+    "name": {
+      "th": "ไซรัปองุ่นม่วงซ่า (สไตล์ Fanta Grape) 10 ลิตร",
+      "en": "10L Purple Grape Fizz Syrup (Fanta-Style)"
+    },
+    "image": "images/mocktail/purple_grape_fizz/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (ทำเอง)",
+      "en": "20 mins (Manual)"
+    },
+    "rating": "4.6",
+    "badges": {
+      "th": ["องุ่นเข้มข้น", "สีม่วงสวย", "หวานหอม"],
+      "en": ["Rich Grape", "Purple Hue", "Sweet Aroma"]
+    }
+  },
+  {
+    "id": "citrus_rush_10L",
+    "name": {
+      "th": "ไซรัปซิตรัสเมาน์เทน (สไตล์ Mountain Dew) 10 ลิตร",
+      "en": "10L Citrus Rush Syrup (Mountain Dew-Style)"
+    },
+    "image": "images/mocktail/citrus_rush/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (ทำเอง)",
+      "en": "20 mins (Manual)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["ซ่าจัด", "ส้ม+มะนาว", "พลังงานสูง"],
+      "en": ["Extreme Fizz", "Orange+Lime", "Energy Boost"]
+    }
+  },
+  {
+    "id": "cherry_cola_spice_10L",
+    "name": {
+      "th": "ไซรัปเชอร์รี่โคล่าสไปซ์ (สไตล์ Dr Pepper) 10 ลิตร",
+      "en": "10L Cherry Cola Spice Syrup (Dr Pepper-Style)"
+    },
+    "image": "images/mocktail/cherry_cola_spice/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (ทำเอง)",
+      "en": "30 mins (Manual)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["23 รสชาติ", "เชอร์รี่+เครื่องเทศ", "ซับซ้อน"],
+      "en": ["23 Flavors", "Cherry+Spice", "Complex Taste"]
+    }
+  },
+  {
+    "id": "root_herbal_soda_10L",
+    "name": {
+      "th": "ไซรัปルートเบียร์สมุนไพร (สไตล์ Root Beer) 10 ลิตร",
+      "en": "10L Root Herbal Soda Syrup (Root Beer-Style)"
+    },
+    "image": "images/mocktail/root_herbal_soda/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (ทำเอง)",
+      "en": "30 mins (Manual)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["สมุนไพรหอม", "วานิลลา+อบเชย", "ไร้แอลกอฮอล์"],
+      "en": ["Herbal Aroma", "Vanilla+Cinnamon", "Non-Alcoholic"]
+    }
+  },
+  {
+    "id": "ginger_sparkle_10L",
+    "name": {
+      "th": "ไซรัปขิงซ่า (สไตล์ Ginger Ale) 10 ลิตร",
+      "en": "10L Ginger Sparkle Syrup (Ginger Ale-Style)"
+    },
+    "image": "images/mocktail/ginger_sparkle/main_1.jpg",
+    "prepTime": {
+      "th": "25 นาที (ทำเอง)",
+      "en": "25 mins (Manual)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ขิงแท้", "ซ่าเบาๆ", "ช่วยย่อย"],
+      "en": ["Real Ginger", "Light Fizz", "Digestive Aid"]
+    }
+  }
+]
