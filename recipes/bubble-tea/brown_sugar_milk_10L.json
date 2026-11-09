@@ -1,0 +1,265 @@
+{
+  "id": "brown_sugar_milk_10L",
+  "icon": "🧋",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องต้มไข่มุกแยกต่างหาก และต้องทำคาราเมลน้ำตาลทรายแดงด้วยมือเพื่อสร้างลายเสือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires boiling pearls separately and hand-making brown sugar caramel for tiger stripes, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "นมสดน้ำตาลทรายแดงไข่มุก (Tiger Style) 10 ลิตร นมสดหอมมันราดด้วยคาราเมลน้ำตาลทรายแดงเข้มข้นเป็นลายเสือสวยงาม เสิร์ฟพร้อมไข่มุกเหนียวนุ่ม รสชาติหวานหอมละมุน ไม่มีชา เหมาะสำหรับทุกวัย",
+  "total_time": 50,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_brown_sugar_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมสดน้ำตาลทรายแดงไข่มุก (Tiger Style) 10 ลิตร",
+    "en": "Brown Sugar Fresh Milk with Pearl (Tiger Style) 10L"
+  },
+  "images": [
+    "images/bubble-tea/brown_sugar_milk/main_1.jpg",
+    "images/bubble-tea/brown_sugar_milk/main_2.jpg",
+    "images/bubble-tea/brown_sugar_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_brown_sugar_milk",
+  "prepTime": {
+    "th": "30 นาที (เตรียมไข่มุก+คาราเมล) + 20 นาที (เครื่อง)",
+    "en": "30 mins (prep pearls+caramel) + 20 mins (machine)"
+  },
+  "cookTime": {
+    "th": "50 นาที (รวมแช่เย็น)",
+    "en": "50 mins (including chilling)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "นมสดน้ำตาลทรายแดงไข่มุกสูตร Tiger Style: ต้มไข่มุกให้เหนียวนุ่มแล้วแช่น้ำเชื่อม ทำคาราเมลน้ำตาลทรายแดงเข้มข้นจนหอมและหนืด ราดลงก้นแก้วเป็นลายเสือ เติมนมสดเย็นจัดและไข่มุก ได้เครื่องดื่มหวานหอมละมุน ไม่มีคาเฟอีน เหมาะสำหรับทุกวัย!",
+    "en": "Brown sugar fresh milk Tiger Style: boil chewy pearls and soak in syrup, make thick brown sugar caramel until fragrant and viscous, drizzle down the glass for tiger stripes, add ice-cold fresh milk and pearls. Sweet, fragrant, caffeine-free, perfect for all ages!"
+  },
+  "benefits": {
+    "th": "นมสดให้แคลเซียมและโปรตีนสูง น้ำตาลทรายแดงมีแร่ธาตุมากกว่าน้ำตาลขาว ไข่มุกให้พลังงานและเนื้อสัมผัสเหนียวนุ่ม ไม่มีคาเฟอีน เหมาะสำหรับเด็กและผู้ใหญ่ที่ไม่ทานชา",
+    "en": "Fresh milk provides high calcium and protein. Brown sugar has more minerals than white sugar. Pearls give energy and chewy texture. Caffeine-free, suitable for children and adults avoiding tea."
+  },
+  "warnings": {
+    "th": "⚠️ ระวังการไหม้ขณะทำคาราเมลน้ำตาลทรายแดง (ร้อนจัด!) ไข่มุกมีแป้งสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม ระวังการสำลักในเด็กเล็ก ควรเคี้ยวให้ละเอียดก่อนกลืน",
+    "en": "⚠️ Be careful of burns when making brown sugar caramel (very hot!). Pearls are high in starch; people with diabetes should consume in moderation. Choking hazard for young children. Chew thoroughly before swallowing."
+  },
+  "nutrition": {
+    "calories": "95 kcal",
+    "carbs": "17 g",
+    "sugar": "14 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มไข่มุก)", "en": "Clean water (for boiling pearls)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ไข่มุกแห้ง (สำหรับต้ม)", "en": "Dried tapioca pearls (for boiling)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (สำหรับแช่ไข่มุก)", "en": "Brown sugar (for soaking pearls)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับแช่ไข่มุก)", "en": "Clean water (for soaking pearls)" },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (สำหรับทำคาราเมล)", "en": "Brown sugar (for caramel)" },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับทำคาราเมล)", "en": "Clean water (for caramel)" },
+      "amount": 200,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดรสจืด (เย็นจัด)", "en": "Fresh milk (plain, ice-cold)" },
+      "amount": 9,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรนมสดน้ำตาลทรายแดงไข่มุกต้องต้มไข่มุกแยกต่างหาก และต้องทำคาราเมลน้ำตาลทรายแดงด้วยมือเพื่อสร้างลายเสือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Brown sugar fresh milk with pearl requires boiling pearls separately and hand-making brown sugar caramel for tiger stripes, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มไข่มุก",
+        "en": "Boil tapioca pearls"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_pearl} ให้เดือดจัดในหม้อใหญ่ ใส่ไข่มุกแห้ง {pearl_amount} ลงไป คนเบาๆ เพื่อไม่ให้ติดก้นหม้อ ต้มด้วยไฟกลาง 20-25 นาทีจนไข่มุกลอยขึ้นและเหนียวนุ่ม (ยังมีจุดขาวเล็กๆ ตรงกลาง) ปิดไฟแล้วปิดฝาแช่ต่ออีก 10 นาที",
+        "en": "Bring {water_pearl} of clean water to a rolling boil in a large pot. Add {pearl_amount} of dried tapioca pearls, stir gently to prevent sticking. Boil on medium heat for 20-25 mins until pearls float and become chewy (with a small white dot in the center). Turn off heat, cover, and steep for 10 more mins."
+      },
+      "descVariables": {
+        "water_pearl": { "amount": 5, "unit": "Liter", "scalable": true },
+        "pearl_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/brown_sugar_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ต่อ 10 นาทีหลังปิดไฟทำให้ไข่มุกสุกนุ่มทั่วถึงทั้งเม็ด อัตราส่วนน้ำ:ไข่มุก ควรเป็น 10:1 เพื่อให้ไข่มุกขยายตัวเต็มที่",
+        "en": "💡 Steeping for 10 mins after turning off heat cooks pearls evenly throughout. Water-to-pearl ratio should be 10:1 for full expansion."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ไข่มุกในน้ำเชื่อม",
+        "en": "Rinse and soak pearls in syrup"
+      },
+      "desc": {
+        "th": "กรองไข่มุกออก ล้างด้วยน้ำเย็นจัดเพื่อหยุดการต้มและให้ผิวเหนียวนุ่ม ละลายน้ำตาลทรายแดง {brown_sugar_soak} ในน้ำอุ่น {syrup_water} แล้วนำไข่มุกที่ล้างแล้วลงไปแช่อย่างน้อย 15-30 นาที",
+        "en": "Strain pearls and rinse with ice-cold water to stop cooking and firm up the texture. Dissolve {brown_sugar_soak} of brown sugar in {syrup_water} of warm water, then soak the rinsed pearls for at least 15-30 mins."
+      },
+      "descVariables": {
+        "brown_sugar_soak": { "amount": 200, "unit": "Gram", "scalable": true },
+        "syrup_water": { "amount": 500, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/brown_sugar_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลทรายแดงให้รสหวานลึกและสีน้ำตาลเข้มที่ตัดกับสีขาวของนมสดได้สวยมาก ควรใช้ไข่มุกให้หมดภายใน 4 ชั่วโมงเพื่อคงความเหนียวนุ่ม",
+        "en": "💡 Brown sugar gives deep sweetness and a dark color that contrasts beautifully with the white fresh milk. Use pearls within 4 hours to maintain chewiness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ทำคาราเมลน้ำตาลทรายแดง (Tiger Syrup)",
+        "en": "Make brown sugar caramel (Tiger Syrup)"
+      },
+      "desc": {
+        "th": "ตั้งหม้อเล็กใส่น้ำตาลทรายแดง {brown_sugar_caramel} และน้ำ {caramel_water} เปิดไฟกลางคนจนน้ำตาลละลาย พอน้ำเชื่อมเดือดให้ลดไฟอ่อน เคี่ยวต่อ 10-15 นาทีจนน้ำเชื่อมข้นเหนียวคล้ายน้ำเชื่อมเมเปิ้ล (coat the back of a spoon) ปิดไฟ ทิ้งให้เย็นลงเล็กน้อย จะได้น้ำเชื่อมคาราเมลสีน้ำตาลเข้มหอมหวาน",
+        "en": "In a small pot, combine {brown_sugar_caramel} of brown sugar and {caramel_water} of water. Stir over medium heat until sugar dissolves. Once boiling, reduce to low heat and simmer for 10-15 mins until thick and viscous like maple syrup (coats the back of a spoon). Turn off heat and let cool slightly. You'll get a dark, fragrant brown sugar caramel."
+      },
+      "descVariables": {
+        "brown_sugar_caramel": { "amount": 600, "unit": "Gram", "scalable": true },
+        "caramel_water": { "amount": 200, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/brown_sugar_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 คาราเมลน้ำตาลทรายแดงคือหัวใจของ Tiger Style! ความหนืดของคาราเมลจะทำให้มันเกาะข้างแก้วเป็นลายเสือสวยงามเมื่อเทนมสดลงไป ระวังอย่าเคี่ยวนานเกินไปเพราะจะแข็งตัวเมื่อเย็น",
+        "en": "💡 Brown sugar caramel is the heart of Tiger Style! The viscosity makes it cling to the glass, creating beautiful tiger stripes when milk is poured. Be careful not to overcook or it will harden when cooled."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมนมสดเย็นจัด",
+        "en": "Prepare ice-cold fresh milk"
+      },
+      "desc": {
+        "th": "นำนมสด {milk_amount} เข้าแช่ตู้เย็นให้เย็นจัด (ประมาณ 4°C) เติมเกลือ {salt_amount} ลงไปคนเบาๆ เพื่อดึงรสหวานของนมให้โดดเด่นขึ้น นมที่เย็นจัดจะช่วยรักษาลายเสือให้สวยและไม่ผสมกับคาราเมลเร็วเกินไป",
+        "en": "Refrigerate {milk_amount} of fresh milk until ice-cold (about 4°C). Add {salt_amount} of salt and stir gently to enhance the milk's natural sweetness. Ice-cold milk helps preserve the tiger stripes and prevents it from mixing with caramel too quickly."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 9, "unit": "Liter", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/brown_sugar_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อยจะช่วยดึงรสอูมามิและความหวานธรรมชาติของนมสดให้โดดเด่นขึ้น โดยไม่ทำให้รู้สึกเค็ม นมควรใช้รสจืด (ไม่หวาน) เพื่อให้รสคาราเมลโดดเด่น",
+        "en": "💡 A pinch of salt enhances the umami and natural sweetness of fresh milk without making it taste salty. Use plain (unsweetened) milk so the caramel flavor stands out."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ประกอบแก้วลายเสือ",
+        "en": "Assemble tiger-striped glass"
+      },
+      "desc": {
+        "th": "ใช้ช้อนตักคาราเมลน้ำตาลทรายแดงที่เตรียมไว้ ป้ายวนรอบขอบแก้วด้านในให้ทั่ว (ทำเป็นลายทางแนวตั้งไม่สม่ำเสมอ) ใส่ไข่มุกที่แช่น้ำเชื่อมไว้ 3-4 ช้อนโต๊ะลงก้นแก้ว เติมน้ำแข็ง {ice_amount} ให้เต็มแก้ว",
+        "en": "Use a spoon to drizzle the prepared brown sugar caramel around the inside of the glass in irregular vertical stripes. Add 3-4 tablespoons of soaked pearls to the bottom. Fill the glass with {ice_amount} of ice."
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/bubble-tea/brown_sugar_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 เทคนิคการป้ายคาราเมล: ใช้ช้อนตักคาราเมลแล้วป้ายจากบนลงล่างเป็นเส้นไม่สม่ำเสมอ อย่าป้ายเป็นวงกลม เพราะลายเสือต้องเป็นแนวตั้งจึงจะสวย",
+        "en": "💡 Caramel drizzling technique: Use a spoon to drizzle caramel from top to bottom in irregular lines. Don't swirl in circles—tiger stripes must be vertical to look beautiful."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "เทนมสดและเสิร์ฟทันที",
+        "en": "Pour milk and serve immediately"
+      },
+      "desc": {
+        "th": "เทนมสดเย็นจัดลงไปช้าๆ ตามขอบแก้ว (ไม่ใช่เทตรงกลาง) เพื่อให้ลายเสือคงอยู่และสวยงาม ตกแต่งด้วยไข่มุกเพิ่มเติมด้านบน พร้อมเสิร์ฟทันที! ดื่มผ่านหลอดขนาดใหญ่ (12 มม.) เพื่อจะได้ทั้งนมและไข่มุกพร้อมกัน",
+        "en": "Slowly pour ice-cold fresh milk along the edge of the glass (not in the center) to preserve the tiger stripes. Garnish with extra pearls on top. Serve immediately! Drink through a wide 12mm straw to enjoy both milk and pearls together."
+      },
+      "descVariables": {},
+      "image": "images/bubble-tea/brown_sugar_milk/man_6.jpg",
+      "tips": {
+        "th": "💡 การเทนมตามขอบแก้วช้าๆ คือเคล็ดลับที่ทำให้ลายเสืออยู่ได้นาน หากเทตรงกลาง ลายจะหายไปทันที เสิร์ฟทันทีหลังประกอบแก้ว เพราะไข่มุกจะแข็งหากแช่ในนมเย็นนานเกินไป นมสดที่ผสมแล้วควรดื่มให้หมดภายใน 2 ชั่วโมง",
+        "en": "💡 Pouring milk slowly along the edge is the secret to long-lasting tiger stripes. Pouring in the center will make stripes disappear instantly. Serve immediately after assembling—pearls will harden if soaked in cold milk too long. Consume within 2 hours."
+      }
+    }
+  ]
+}

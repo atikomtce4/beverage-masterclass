@@ -1,0 +1,272 @@
+{
+  "id": "matcha_latte_pearl_10L",
+  "icon": "🍵",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องต้มไข่มุกแยกต่างหาก และต้องร่อน/ตีผงมัทฉะด้วยแปรงหรือเครื่องตีฟองนมที่อุณหภูมิไม่เกิน 80°C ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires boiling pearls separately and sifting/whisking matcha powder at no more than 80°C, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "มัทฉะลาเต้ไข่มุก 10 ลิตร ผงมัทฉะแท้ตีกับน้ำอุ่น 75°C ผสมนมสดเย็นหอมมัน เขียวธรรมชาติ ไม่แต่งสี เสิร์ฟพร้อมไข่มุกน้ำตาลทรายแดงเหนียวนุ่ม",
+  "total_time": 50,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_matcha_latte_pearl_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "มัทฉะลาเต้ไข่มุก 10 ลิตร",
+    "en": "Matcha Latte with Pearl 10L"
+  },
+  "images": [
+    "images/bubble-tea/matcha_latte_pearl/main_1.jpg",
+    "images/bubble-tea/matcha_latte_pearl/main_2.jpg",
+    "images/bubble-tea/matcha_latte_pearl/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_matcha_latte",
+  "prepTime": {
+    "th": "35 นาที (เตรียมไข่มุก + ตีมัทฉะ)",
+    "en": "35 mins (prep pearls + whisk matcha)"
+  },
+  "cookTime": {
+    "th": "50 นาที (รวมแช่เย็น)",
+    "en": "50 mins (including chilling)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "มัทฉะลาเต้ไข่มุกสูตรพรีเมียม: ต้มไข่มุกให้เหนียวนุ่มแล้วแช่น้ำตาลทรายแดง ร่อนผงมัทฉะให้เนียน ตีกับน้ำอุ่น 75°C จนขึ้นฟองบางๆ ผสมกับนมสดเย็นและน้ำเชื่อม คนให้เข้ากันแล้วแช่เย็น เสิร์ฟเป็นชั้นสีเขียวสวยงามพร้อมไข่มุก!",
+    "en": "Premium matcha latte with pearls: boil chewy pearls and soak in brown sugar syrup. Sift matcha powder, whisk with 75°C water until lightly frothed, then combine with cold fresh milk and syrup. Chill and serve in beautiful green layers with pearls!"
+  },
+  "benefits": {
+    "th": "มัทฉะมีสารต้านอนุมูลอิสระ EGCG สูงกว่าชาเขียวทั่วไป เพราะกินทั้งใบ มี L-Theanine ช่วยให้สมองตื่นตัวแบบสงบ ไม่กระวนกระวายเหมือนกาแฟ นมสดให้แคลเซียมและโปรตีน",
+    "en": "Matcha is higher in EGCG antioxidants than regular green tea since you consume the whole leaf. L-Theanine promotes calm alertness without coffee-like jitters. Fresh milk provides calcium and protein."
+  },
+  "warnings": {
+    "th": "⚠️ มัทฉะมีคาเฟอีนสูงกว่าชาเขียวชงทั่วไป ไม่ควรดื่มช่วงเย็นก่อนนอน ผู้ที่แพ้นมหรือแลคโตสควรใช้นมพืชแทน ไข่มุกมีแป้งสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม และระวังการสำลักในเด็กเล็ก",
+    "en": "⚠️ Matcha contains more caffeine than brewed green tea; avoid drinking before bedtime. Those allergic to milk or lactose should use plant-based milk. Pearls are high in starch; people with diabetes should consume in moderation. Choking hazard for young children."
+  },
+  "nutrition": {
+    "calories": "90 kcal",
+    "carbs": "14 g",
+    "sugar": "9 g",
+    "protein": "2.8 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มไข่มุก)", "en": "Clean water (for boiling pearls)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ไข่มุกแห้ง (สำหรับต้ม)", "en": "Dried tapioca pearls (for boiling)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (สำหรับแช่ไข่มุก)", "en": "Brown sugar (for soaking pearls)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับแช่ไข่มุก)", "en": "Clean water (for soaking pearls)" },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผงมัทฉะเกรดพิธีการหรือเกรดลาเต้", "en": "Matcha powder (ceremonial or latte grade)" },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำอุ่น 75°C (สำหรับตีมัทฉะ)", "en": "Warm water 75°C (for whisking matcha)" },
+      "amount": 1,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดรสจืด (เย็นจัด)", "en": "Fresh milk (plain, ice-cold)" },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำเชื่อมหรือน้ำตาลทราย", "en": "Syrup or white sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรมัทฉะลาเต้ไข่มุกต้องต้มไข่มุกแยกต่างหาก และต้องร่อน/ตีผงมัทฉะด้วยมือที่อุณหภูมิไม่เกิน 80°C ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Matcha latte with pearls requires boiling pearls separately and hand-sifting/whisking matcha at no more than 80°C, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มไข่มุก",
+        "en": "Boil tapioca pearls"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_pearl} ให้เดือดจัดในหม้อใหญ่ ใส่ไข่มุกแห้ง {pearl_amount} ลงไป คนเบาๆ เพื่อไม่ให้ติดก้นหม้อ ต้มด้วยไฟกลาง 20-25 นาทีจนไข่มุกลอยขึ้นและเหนียวนุ่ม (ยังมีจุดขาวเล็กๆ ตรงกลาง) ปิดไฟแล้วปิดฝาแช่ต่ออีก 10 นาที",
+        "en": "Bring {water_pearl} of clean water to a rolling boil in a large pot. Add {pearl_amount} of dried tapioca pearls, stir gently to prevent sticking. Boil on medium heat for 20-25 mins until pearls float and become chewy (with a small white dot in the center). Turn off heat, cover, and steep for 10 more mins."
+      },
+      "descVariables": {
+        "water_pearl": { "amount": 5, "unit": "Liter", "scalable": true },
+        "pearl_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/matcha_latte_pearl/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ต่อ 10 นาทีหลังปิดไฟทำให้ไข่มุกสุกนุ่มทั่วถึงทั้งเม็ด อัตราส่วนน้ำ:ไข่มุก ควรเป็น 10:1 เพื่อให้ไข่มุกขยายตัวเต็มที่",
+        "en": "💡 Steeping for 10 mins after turning off heat cooks pearls evenly throughout. Water-to-pearl ratio should be 10:1 for full expansion."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ไข่มุกในน้ำเชื่อม",
+        "en": "Rinse and soak pearls in syrup"
+      },
+      "desc": {
+        "th": "กรองไข่มุกออก ล้างด้วยน้ำเย็นจัดเพื่อหยุดการต้มและให้ผิวเหนียวนุ่ม ละลายน้ำตาลทรายแดง {brown_sugar} ในน้ำอุ่น {syrup_water} แล้วนำไข่มุกที่ล้างแล้วลงไปแช่อย่างน้อย 15-30 นาที",
+        "en": "Strain pearls and rinse with ice-cold water to stop cooking and firm up the texture. Dissolve {brown_sugar} of brown sugar in {syrup_water} of warm water, then soak the rinsed pearls for at least 15-30 mins."
+      },
+      "descVariables": {
+        "brown_sugar": { "amount": 200, "unit": "Gram", "scalable": true },
+        "syrup_water": { "amount": 500, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/matcha_latte_pearl/man_2.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลทรายแดงให้รสหวานลึกและสีน้ำตาลเข้มที่ตัดกับสีเขียวมัทฉะได้สวยมาก ควรใช้ไข่มุกให้หมดภายใน 4 ชั่วโมงเพื่อคงความเหนียวนุ่ม",
+        "en": "💡 Brown sugar gives deep sweetness and a dark color that contrasts beautifully with green matcha. Use pearls within 4 hours to maintain chewiness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ร่อนผงมัทฉะและตีกับน้ำอุ่น 75°C",
+        "en": "Sift matcha and whisk with 75°C water"
+      },
+      "desc": {
+        "th": "ร่อนผงมัทฉะ {matcha_amount} ผ่านกระชอนตาถี่เพื่อไล่ก้อนออก เติมน้ำอุ่น 75°C {matcha_water} ลงไปทีละน้อย ใช้แปรงชาซวน (Chasen) หรือเครื่องตีฟองนม ตีเป็นรูปตัว W จนเนียนเป็นเนื้อเดียวและขึ้นฟองบางๆ ห้ามใช้น้ำเดือดจัด",
+        "en": "Sift {matcha_amount} of matcha powder through a fine mesh sieve to remove lumps. Gradually add {matcha_water} of 75°C warm water. Whisk in a W-motion with a bamboo chasen or milk frother until smooth with a light foam. Never use boiling water."
+      },
+      "descVariables": {
+        "matcha_amount": { "amount": 150, "unit": "Gram", "scalable": true },
+        "matcha_water": { "amount": 1, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/bubble-tea/matcha_latte_pearl/man_3.jpg",
+      "tips": {
+        "th": "💡 น้ำร้อนเกิน 80°C จะทำให้มัทฉะขมและกลิ่นหอมหายไป การร่อนผงก่อนตีเป็นขั้นตอนที่ขาดไม่ได้ ถ้าไม่ร่อนจะจับตัวเป็นก้อนสีเขียวเข้มในแก้ว",
+        "en": "💡 Water above 80°C makes matcha bitter and destroys its aroma. Sifting before whisking is essential—unsifted matcha forms dark green lumps in the drink."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมสดและปรุงรส",
+        "en": "Mix fresh milk and season"
+      },
+      "desc": {
+        "th": "เทนมสดเย็นจัด {milk_amount} ลงในเหยือกใหญ่ เติมน้ำเชื่อมหรือน้ำตาล {sugar_amount} และเกลือ {salt_amount} คนจนละลายหมด จากนั้นค่อยๆ เทมัทฉะที่ตีไว้ลงไป คนเบาๆ ให้เข้ากันเป็นสีเขียวอ่อนสม่ำเสมอ ชิมรสและปรับความหวานตามชอบ",
+        "en": "Pour {milk_amount} of ice-cold fresh milk into a large pitcher. Add {sugar_amount} of syrup or sugar and {salt_amount} of salt, stir until dissolved. Gradually pour in the whisked matcha and stir gently until evenly pale green. Taste and adjust sweetness."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 8, "unit": "Liter", "scalable": true },
+        "sugar_amount": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/matcha_latte_pearl/man_4.jpg",
+      "tips": {
+        "th": "💡 ละลายน้ำตาลในนมก่อนใส่มัทฉะ จะช่วยให้น้ำตาลละลายหมดและไม่ตกค้างที่ก้นเหยือก การใช้นมเย็นจัดช่วยล็อกสีเขียวสดของมัทฉะไม่ให้คล้ำ",
+        "en": "💡 Dissolving sugar in milk before adding matcha prevents undissolved sugar at the bottom. Ice-cold milk locks in matcha's vibrant green color."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นให้จัด",
+        "en": "Chill thoroughly"
+      },
+      "desc": {
+        "th": "นำมัทฉะลาเต้เข้าแช่ตู้เย็นอย่างน้อย 1 ชั่วโมง (หรือจนอุณหภูมิประมาณ 4°C) ปิดฝาหรือคลุมพลาสติกแรปเพื่อป้องกันกลิ่นตู้เย็นซึมเข้า เพราะนมและมัทฉะดูดกลิ่นง่ายมาก",
+        "en": "Refrigerate the matcha latte for at least 1 hour (or until about 4°C). Cover with a lid or plastic wrap to prevent fridge odors, as milk and matcha absorb smells easily."
+      },
+      "descVariables": {},
+      "image": "images/bubble-tea/matcha_latte_pearl/man_5.jpg",
+      "tips": {
+        "th": "💡 มัทฉะจะตกตะกอนและแยกชั้นได้เป็นเรื่องปกติ คนหรือเขย่าเบาๆ ก่อนเสิร์ฟทุกครั้ง อย่าแช่ทิ้งไว้นานเกิน 2 วันเพราะสีจะคล้ำลงจากออกซิเดชัน",
+        "en": "💡 Matcha naturally settles and separates—stir or shake gently before each serve. Don't store more than 2 days as oxidation darkens the color."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "ประกอบแก้วและเสิร์ฟ",
+        "en": "Assemble and serve"
+      },
+      "desc": {
+        "th": "ใส่ไข่มุกที่แช่น้ำเชื่อมไว้ 3-4 ช้อนโต๊ะลงก้นแก้ว ราดน้ำเชื่อมน้ำตาลแดงติดผนังแก้วเล็กน้อย เติมน้ำแข็ง {ice_amount} แล้วเทมัทฉะลาเต้เย็นจัดลงไปช้าๆ ให้เห็นชั้นสีเขียวตัดกับไข่มุกสีดำ พร้อมเสิร์ฟทันที!",
+        "en": "Add 3-4 tablespoons of soaked pearls to the bottom of a glass. Drizzle a little brown sugar syrup along the glass wall. Fill with {ice_amount} of ice, then slowly pour the ice-cold matcha latte to show green layers against the black pearls. Serve immediately!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/bubble-tea/matcha_latte_pearl/man_6.jpg",
+      "tips": {
+        "th": "💡 ใส่ไข่มุกตอนจะเสิร์ฟเท่านั้น หากแช่ไข่มุกในมัทฉะลาเต้เย็นนานจะแข็งและหมดความเหนียว ใช้หลอดเส้นใหญ่ (12 มม.) เพื่อ吸ไข่มุกได้สะดวก",
+        "en": "💡 Add pearls only when serving—soaking them in cold matcha latte makes them hard and lose chewiness. Use a wide 12mm straw for easy sipping."
+      }
+    }
+  ]
+}

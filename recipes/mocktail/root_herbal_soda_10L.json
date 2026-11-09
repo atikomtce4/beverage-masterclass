@@ -1,0 +1,266 @@
+{
+  "id": "root_herbal_soda_10L",
+  "icon": "🪵",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปโซดารากไม้สมุนไพร 10 ลิตร น้ำเชื่อมเข้มข้นจากขิง ชะเอมเทศ อบเชย และกานพลู ให้รสชาติเผ็ดร้อนลึกซึ้ง หวานกลมกล่อม ผสมกับโซดาเย็นจัดได้เครื่องดื่มสมุนไพรซ่าสดชื่น รสชาติซับซ้อนแบบคราฟต์โซดา",
+  "total_time": 50,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_root_herbal_soda_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปโซดารากไม้สมุนไพร (Root Herbal Soda) 10 ลิตร",
+    "en": "Root Herbal Soda Syrup 10L"
+  },
+  "images": [
+    "images/mocktail/root_herbal_soda/main_1.jpg",
+    "images/mocktail/root_herbal_soda/main_2.jpg",
+    "images/mocktail/root_herbal_soda/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_root_herbal",
+  "prepTime": {
+    "th": "50 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "50 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "50 นาที (ทำน้ำเชื่อม)",
+    "en": "50 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ไซรัปโซดารากไม้สมุนไพรทำเองง่ายๆ: ต้มน้ำเชื่อมกับขิงสด ชะเอมเทศ อบเชย และกานพลู เพื่อดึงรสและกลิ่นหอมอบอุ่นแบบรูทเบียร์ เติมกรดซิตริกและวานิลลา กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มซ่าสดชื่น รสชาติซับซ้อนเหนือกว่าน้ำอัดลมทั่วไป!",
+    "en": "Easy root herbal soda syrup: boil sugar syrup with fresh ginger, licorice root, cinnamon, and cloves to extract warm, root-beer-like aroma. Add citric acid and vanilla, strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a refreshing, complex craft soda!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับคราฟต์โซดานำเข้า รสชาติคงที่ 100% ทุกแก้ว ใช้สมุนไพรแท้ช่วยขับลม บำรุงธาตุ แก้ท้องอืด ไม่มีคาเฟอีนและสารกันเสียสังเคราะห์ ดื่มเย็นซ่าสดชื่น",
+    "en": "Very low cost compared to imported craft soda. 100% consistent taste. Real herbs help relieve bloating and aid digestion. Caffeine-free, no artificial preservatives. Refreshing and ice-cold."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะควรดื่มหลังอาหาร ผู้ที่มีความดันโลหิตสูงควรระวังการบริโภคชะเอมเทศในปริมาณมาก สตรีมีครรภ์ควรปรึกษาแพทย์ก่อนบริโภค",
+    "en": "⚠️ The syrup is highly acidic. People with stomach issues should drink after meals. Those with high blood pressure should monitor licorice root intake. Pregnant women should consult a doctor."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "11 g",
+    "sugar": "10 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (หรือกากน้ำตาล)", "en": "Brown sugar (or molasses)" },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขิงสด (หั่นแว่น)", "en": "Fresh ginger (sliced)" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ชะเอมเทศ (แบบแห้ง)", "en": "Licorice root (dried)" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "อบเชยแท่ง", "en": "Cinnamon sticks" },
+      "amount": 15,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กานพลู", "en": "Cloves" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด", "en": "Vanilla extract" },
+      "amount": 10,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 15,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปโซดารากไม้สมุนไพรเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Root herbal soda syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและเตรียมสมุนไพร",
+        "en": "Wash and prepare herbs"
+      },
+      "desc": {
+        "th": "ล้างขิงสด {ginger_amount} ให้สะอาด หั่นเป็นแว่นบางๆ เตรียมไว้ พร้อมวัดปริมาณชะเอมเทศ {licorice_amount}, อบเชย {cinnamon_amount} และกานพลู {clove_amount} ให้พร้อม",
+        "en": "Wash {ginger_amount} of fresh ginger, slice thinly, and set aside. Measure out {licorice_amount} of licorice root, {cinnamon_amount} of cinnamon, and {clove_amount} of cloves."
+      },
+      "descVariables": {
+        "ginger_amount": { "amount": 300, "unit": "Gram", "scalable": true },
+        "licorice_amount": { "amount": 50, "unit": "Gram", "scalable": true },
+        "cinnamon_amount": { "amount": 15, "unit": "Gram", "scalable": true },
+        "clove_amount": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/root_herbal_soda/man_1.jpg",
+      "tips": {
+        "th": "💡 ชะเอมเทศคือความลับของรูทเบียร์! มันให้ความหวานลึกและช่วยสร้างฟองนุ่มนวลตามธรรมชาติเมื่อผสมกับโซดา",
+        "en": "💡 Licorice root is the secret to root beer! It provides deep sweetness and helps create a natural, creamy foam when mixed with soda."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับสมุนไพร",
+        "en": "Boil sugar syrup with herbs"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount}, น้ำตาลทรายขาว {white_sugar} และน้ำตาลทรายแดง {brown_sugar} เปิดไฟกลางคนจนละลาย พอน้ำเชื่อมเดือดให้ใส่ขิง ชะเอมเทศ อบเชย และกานพลูลงไป ลดไฟอ่อน เคี่ยวต่อ 25 นาที",
+        "en": "In a pot, combine {water_amount} of clean water, {white_sugar} of white sugar, and {brown_sugar} of brown sugar. Stir until dissolved. Once boiling, add ginger, licorice, cinnamon, and cloves. Reduce heat and simmer for 25 mins."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "white_sugar": { "amount": 1200, "unit": "Gram", "scalable": true },
+        "brown_sugar": { "amount": 600, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/root_herbal_soda/man_2.jpg",
+      "tips": {
+        "th": "💡 การเคี่ยวสมุนไพรในน้ำเชื่อมเป็นเวลานานจะช่วยสกัดน้ำมันหอมระเหยและรสเผ็ดร้อนของขิงออกมาได้อย่างสมบูรณ์ ทำให้น้ำเชื่อมมีมิติ",
+        "en": "💡 Simmering herbs in the syrup for an extended time extracts essential oils and the spicy kick of ginger perfectly, giving the syrup depth."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมวานิลลา กรดซิตริก และเกลือ",
+        "en": "Add vanilla, citric acid, and salt"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) เติมวานิลลา {vanilla}, กรดซิตริก {citric_amount} และเกลือ {salt_amount} คนให้ละลายหมด",
+        "en": "Turn off heat and let syrup cool slightly (warm). Add {vanilla} of vanilla, {citric_amount} of citric acid, and {salt_amount} of salt. Stir until fully dissolved."
+      },
+      "descVariables": {
+        "vanilla": { "amount": 10, "unit": "Milliliter", "scalable": true },
+        "citric_amount": { "amount": 15, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/root_herbal_soda/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมวานิลลาและกรดซิตริก หากร้อนจัดกลิ่นวานิลลาจะระเหยหายไป และกรดซิตริกอาจให้รสขมได้",
+        "en": "💡 Wait until syrup is warm before adding vanilla and citric acid. If too hot, vanilla aroma will evaporate, and citric acid may taste bitter."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อม",
+        "en": "Strain and store the syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดสมุนไพรและตะกอนออก ได้น้ำเชื่อมสีน้ำตาลอำพันหอมสมุนไพร ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 3-4 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove herbs and sediment, yielding an amber, herb-aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 3-4 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/root_herbal_soda/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำโซดาสมุนไพรทั้งหมด ~40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท ถูกกว่าคราฟต์โซดานำเข้า 5-6 เท่า",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~40L of herbal soda at just a few baht per liter—5-6x cheaper than imported craft soda."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมสมุนไพร 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยขิงฝานบางๆ หรือใบมินต์ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part herbal syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with thin ginger slices or mint leaves. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/root_herbal_soda/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ ชะเอมเทศในสูตรนี้จะช่วยสร้างฟองนุ่มๆ (Creamy head) เหมือนรูทเบียร์แท้",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. The licorice root in this recipe helps create a creamy head like authentic root beer."
+      }
+    }
+  ]
+}

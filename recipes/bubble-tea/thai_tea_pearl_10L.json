@@ -1,0 +1,286 @@
+{
+  "id": "thai_tea_pearl_10L",
+  "icon": "🧋",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องต้มไข่มุกแยกต่างหาก และต้องใช้ถุงชงชาดึงชาด้วยมือที่อุณหภูมิน้ำเดือดจัด ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires boiling pearls separately and hand-pulling tea through a tea sock at boiling temperature, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "ชาไทยไข่มุก 10 ลิตร สูตรต้นตำรับ สีส้มเอกลักษณ์ หอมเครื่องเทศจากชาซีลอน ผสมนมข้นหวานและนมข้นจืดมันๆ เสิร์ฟพร้อมไข่มุกน้ำตาลทรายแดงเหนียวนุ่ม รสชาติแบบร้านชาไทยชั้นนำ",
+  "total_time": 55,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_thai_tea_pearl_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาไทยไข่มุก 10 ลิตร",
+    "en": "Thai Tea with Pearl 10L"
+  },
+  "images": [
+    "images/bubble-tea/thai_tea_pearl/main_1.jpg",
+    "images/bubble-tea/thai_tea_pearl/main_2.jpg",
+    "images/bubble-tea/thai_tea_pearl/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_thai_tea",
+  "prepTime": {
+    "th": "35 นาที (เตรียมไข่มุก + ชงชา)",
+    "en": "35 mins (prep pearls + brew tea)"
+  },
+  "cookTime": {
+    "th": "55 นาที (รวมแช่เย็น)",
+    "en": "55 mins (including chilling)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ชาไทยไข่มุกสูตรต้นตำรับ: ต้มไข่มุกให้เหนียวนุ่มแล้วแช่น้ำตาลทรายแดง ชงชาไทยเข้มข้นด้วยถุงชงชา (pull the tea) ผสมนมข้นหวานและนมข้นจืด คนให้เข้ากันแล้วแช่เย็น เสิร์ฟพร้อมราดนมข้นจืดบนหน้าให้ลายสวยงาม พร้อมไข่มุก!",
+    "en": "Authentic Thai tea with pearls: boil chewy pearls and soak in brown sugar syrup, brew strong Thai tea using a tea sock (pull the tea), mix with condensed milk and evaporated milk, chill, then serve with a drizzle of evaporated milk on top and pearls!"
+  },
+  "benefits": {
+    "th": "ชาซีลอนมีสารต้านอนุมูลอิสระสูง เครื่องเทศในชาไทยช่วยขับลมและบำรุงธาตุ นมให้แคลเซียมและโปรตีน เป็นเครื่องดื่มยอดนิยมที่มีเอกลักษณ์เฉพาะตัว",
+    "en": "Ceylon tea is rich in antioxidants. Spices in Thai tea aid digestion and nourish the body. Milk provides calcium and protein. A uniquely iconic beverage."
+  },
+  "warnings": {
+    "th": "⚠️ ชาไทยมีคาเฟอีนสูง ไม่ควรดื่มช่วงเย็นก่อนนอน มีน้ำตาลจากนมข้นหวานสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม ไข่มุกมีแป้งสูง ระวังการสำลักในเด็กเล็ก",
+    "en": "⚠️ Thai tea is high in caffeine; avoid drinking before bedtime. High in sugar from condensed milk; people with diabetes should consume in moderation. Pearls are high in starch; choking hazard for young children."
+  },
+  "nutrition": {
+    "calories": "95 kcal",
+    "carbs": "16 g",
+    "sugar": "13 g",
+    "protein": "2.5 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มไข่มุก)", "en": "Clean water (for boiling pearls)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ไข่มุกแห้ง (สำหรับต้ม)", "en": "Dried tapioca pearls (for boiling)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (สำหรับแช่ไข่มุก)", "en": "Brown sugar (for soaking pearls)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับแช่ไข่มุก)", "en": "Clean water (for soaking pearls)" },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผงชาไทย (Thai Tea Mix)", "en": "Thai tea mix powder" },
+      "amount": 250,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำเดือดจัด (สำหรับชงชา)", "en": "Boiling water (for brewing tea)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นหวาน", "en": "Sweetened condensed milk" },
+      "amount": 1200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมข้นจืด", "en": "Evaporated milk" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (ปรับความหวานเพิ่มเติม)", "en": "White sugar (extra sweetness)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "สีผสมอาหารสีส้ม (ไม่บังคับ)", "en": "Orange food coloring (optional)" },
+      "amount": 3,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรชาไทยไข่มุกต้องต้มไข่มุกแยกต่างหาก และต้องใช้ถุงชงชาดึงชาด้วยมือที่อุณหภูมิน้ำเดือดจัด ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Thai tea with pearls requires boiling pearls separately and hand-pulling tea through a tea sock at boiling temperature, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มไข่มุก",
+        "en": "Boil tapioca pearls"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_pearl} ให้เดือดจัดในหม้อใหญ่ ใส่ไข่มุกแห้ง {pearl_amount} ลงไป คนเบาๆ เพื่อไม่ให้ติดก้นหม้อ ต้มด้วยไฟกลาง 20-25 นาทีจนไข่มุกลอยขึ้นและเหนียวนุ่ม (ยังมีจุดขาวเล็กๆ ตรงกลาง) ปิดไฟแล้วปิดฝาแช่ต่ออีก 10 นาที",
+        "en": "Bring {water_pearl} of clean water to a rolling boil in a large pot. Add {pearl_amount} of dried tapioca pearls, stir gently to prevent sticking. Boil on medium heat for 20-25 mins until pearls float and become chewy (with a small white dot in the center). Turn off heat, cover, and steep for 10 more mins."
+      },
+      "descVariables": {
+        "water_pearl": { "amount": 5, "unit": "Liter", "scalable": true },
+        "pearl_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/thai_tea_pearl/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ต่อ 10 นาทีหลังปิดไฟทำให้ไข่มุกสุกนุ่มทั่วถึงทั้งเม็ด อัตราส่วนน้ำ:ไข่มุก ควรเป็น 10:1 เพื่อให้ไข่มุกขยายตัวเต็มที่",
+        "en": "💡 Steeping for 10 mins after turning off heat cooks pearls evenly throughout. Water-to-pearl ratio should be 10:1 for full expansion."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ไข่มุกในน้ำเชื่อม",
+        "en": "Rinse and soak pearls in syrup"
+      },
+      "desc": {
+        "th": "กรองไข่มุกออก ล้างด้วยน้ำเย็นจัดเพื่อหยุดการต้มและให้ผิวเหนียวนุ่ม ละลายน้ำตาลทรายแดง {brown_sugar} ในน้ำอุ่น {syrup_water} แล้วนำไข่มุกที่ล้างแล้วลงไปแช่อย่างน้อย 15-30 นาที",
+        "en": "Strain pearls and rinse with ice-cold water to stop cooking and firm up the texture. Dissolve {brown_sugar} of brown sugar in {syrup_water} of warm water, then soak the rinsed pearls for at least 15-30 mins."
+      },
+      "descVariables": {
+        "brown_sugar": { "amount": 200, "unit": "Gram", "scalable": true },
+        "syrup_water": { "amount": 500, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/thai_tea_pearl/man_2.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลทรายแดงให้รสหวานลึกและสีน้ำตาลเข้มที่ตัดกับสีส้มของชาไทยได้สวยมาก ควรใช้ไข่มุกให้หมดภายใน 4 ชั่วโมงเพื่อคงความเหนียวนุ่ม",
+        "en": "💡 Brown sugar gives deep sweetness and a dark color that contrasts beautifully with the orange Thai tea. Use pearls within 4 hours to maintain chewiness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ชงชาไทยเข้มข้นด้วยถุงชงชา",
+        "en": "Brew strong Thai tea with tea sock"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {tea_water} ให้เดือดจัด (100°C) ใส่ผงชาไทย {tea_amount} ลงในถุงชงชา (tea sock) จุ่มลงในน้ำเดือด ดึงชาขึ้น-ลง (pull the tea) 5-7 รอบนาน 5 นาที เพื่อให้ได้รสชาติและสีส้มเข้มข้น หากต้องการสีสดขึ้น เติมสีผสมอาหาร {food_coloring} เล็กน้อย กรองกากชาออก",
+        "en": "Boil {tea_water} of clean water to 100°C. Place {tea_amount} of Thai tea mix into a tea sock, dip into boiling water, and pull up-and-down (pull the tea) 5-7 times for 5 mins to extract strong flavor and orange color. If a brighter color is desired, add a little {food_coloring} of food coloring. Strain out tea grounds."
+      },
+      "descVariables": {
+        "tea_water": { "amount": 5, "unit": "Liter", "scalable": true },
+        "tea_amount": { "amount": 250, "unit": "Gram", "scalable": true },
+        "food_coloring": { "amount": 3, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/thai_tea_pearl/man_3.jpg",
+      "tips": {
+        "th": "💡 การ 'ดึงชา' (pull the tea) เป็นเทคนิคสำคัญที่ทำให้ชาไทยมีรสชาติเข้มข้นและกลิ่นหอม การดึงชาหลายรอบจะช่วยออกซิไดซ์ชา ทำให้สีส้มสวยและรสชาติกลมกล่อม",
+        "en": "💡 'Pulling the tea' is the key technique that gives Thai tea its strong flavor and aroma. Multiple pulls help oxidize the tea, creating a beautiful orange color and smooth taste."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมข้นหวาน นมข้นจืด และปรุงรส",
+        "en": "Mix condensed milk, evaporated milk, and season"
+      },
+      "desc": {
+        "th": "ขณะชายังร้อนอยู่ เติมนมข้นหวาน {condensed_milk} และน้ำตาลทราย {sugar_amount} ลงไป คนจนละลายหมด ตามด้วยนมข้นจืด {evap_milk} ส่วนหนึ่งและเกลือ {salt_amount} คนให้เข้ากัน ชิมรสและปรับความหวานตามชอบ (ชาไทยแท้ควรมีรสหวานมันนำ)",
+        "en": "While tea is still hot, add {condensed_milk} of condensed milk and {sugar_amount} of sugar, stir until dissolved. Add {evap_milk} of evaporated milk and {salt_amount} of salt, stir well. Taste and adjust sweetness (authentic Thai tea should be sweet and creamy)."
+      },
+      "descVariables": {
+        "condensed_milk": { "amount": 1200, "unit": "Gram", "scalable": true },
+        "evap_milk": { "amount": 1500, "unit": "Gram", "scalable": true },
+        "sugar_amount": { "amount": 200, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/thai_tea_pearl/man_4.jpg",
+      "tips": {
+        "th": "💡 เติมนมข้นหวานตอนชายังร้อนจะละลายง่ายและให้รสชาติกลมกล่อม นมข้นจืดช่วยให้ชาไทยมีความมันแบบต้นตำรับ เกลือเล็กน้อยจะช่วยดึงรสให้โดดเด่น",
+        "en": "💡 Adding condensed milk while tea is hot ensures easy dissolving and smooth flavor. Evaporated milk gives authentic Thai tea its creamy richness. A pinch of salt enhances the overall taste."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นให้จัด",
+        "en": "Chill thoroughly"
+      },
+      "desc": {
+        "th": "นำชาไทยที่ผสมแล้วเข้าแช่ตู้เย็นอย่างน้อย 1-2 ชั่วโมง (หรือจนอุณหภูมิประมาณ 4°C) ปิดฝาหรือคลุมพลาสติกแรปเพื่อป้องกันกลิ่นตู้เย็นซึมเข้า และรักษาสีส้มให้สดใส",
+        "en": "Refrigerate the mixed Thai tea for at least 1-2 hours (or until about 4°C). Cover with a lid or plastic wrap to prevent fridge odors and preserve the vibrant orange color."
+      },
+      "descVariables": {},
+      "image": "images/bubble-tea/thai_tea_pearl/man_5.jpg",
+      "tips": {
+        "th": "💡 ชาไทยที่แช่เย็นแล้วรสชาติจะกลมกล่อมขึ้น สามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนเสิร์ฟหากมีการแยกชั้น",
+        "en": "💡 Chilled Thai tea tastes even smoother. Can be stored in the fridge for 3-4 days. Shake well before serving if separation occurs."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "ประกอบแก้วและเสิร์ฟ",
+        "en": "Assemble and serve"
+      },
+      "desc": {
+        "th": "ใส่ไข่มุกที่แช่น้ำเชื่อมไว้ 3-4 ช้อนโต๊ะลงก้นแก้ว เติมน้ำแข็ง {ice_amount} ให้เต็มแก้ว เทชาไทยเย็นจัดลงไปเกือบเต็ม แล้วราดนมข้นจืดส่วนที่เหลือบนหน้าให้ลายสวยงาม ตกแต่งด้วยใบสะระแหน่หรือดอกอัญชัน พร้อมเสิร์ฟทันที!",
+        "en": "Add 3-4 tablespoons of soaked pearls to the bottom of a glass. Fill with {ice_amount} of ice, pour ice-cold Thai tea almost to the top, then drizzle the remaining evaporated milk on top for a beautiful pattern. Garnish with mint leaves or butterfly pea flowers. Serve immediately!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/bubble-tea/thai_tea_pearl/man_6.jpg",
+      "tips": {
+        "th": "💡 การราดนมข้นจืดบนหน้าเป็น signature ของชาไทย ทำให้ได้ลายสีขาวตัดกับสีส้มสวยงาม ใส่ไข่มุกตอนจะเสิร์ฟเท่านั้น หากแช่ไข่มุกในชานานจะแข็งและหมดความเหนียว ใช้หลอดเส้นใหญ่ (12 มม.) เพื่อ吸ไข่มุกได้สะดวก",
+        "en": "💡 Drizzling evaporated milk on top is the signature of Thai tea, creating a beautiful white-on-orange pattern. Add pearls only when serving—soaking them in tea too long makes them hard and lose chewiness. Use a wide 12mm straw for easy sipping."
+      }
+    }
+  ]
+}

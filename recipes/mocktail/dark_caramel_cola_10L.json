@@ -1,0 +1,245 @@
+{
+  "id": "dark_caramel_cola_10L",
+  "icon": "🥤",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปโคล่าคลาสสิก 10 ลิตร รสชาติเข้มข้น หอมกลิ่นคาราเมลและเครื่องเทศ ผสมกับน้ำโซดาเย็นจัดได้รสชาติซ่าสดชื่นคล้ายโคล่าชื่อดัง ต้นทุนต่ำ ทำเองได้ง่าย",
+  "total_time": 30,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_dark_caramel_cola_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปโคล่าคลาสสิก (สไตล์ Coke) 10 ลิตร",
+    "en": "Dark Caramel Cola Syrup (Coke-Style) 10L"
+  },
+  "images": [
+    "images/mocktail/dark_caramel_cola/main_1.jpg",
+    "images/mocktail/dark_caramel_cola/main_2.jpg",
+    "images/mocktail/dark_caramel_cola/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_dark_caramel_cola",
+  "prepTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "30 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม)",
+    "en": "30 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "ไซรัปโคล่าคลาสสิกสไตล์ Coke ทำเองง่ายๆ: ต้มน้ำเชื่อมกับน้ำตาลทรายแดงและกลิ่นคาราเมล ผสมเครื่องเทศเล็กน้อย (เช่น อบเชย, วานิลลา) และกรดซิตริกเพื่อความซ่า กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:4 ได้เครื่องดื่มซ่าสดชื่น",
+    "en": "Easy Coke-style dark caramel cola syrup: boil sugar syrup with brown sugar, caramel flavor, and a hint of spices (e.g., cinnamon, vanilla) plus citric acid for fizz. Strain and refrigerate. Mix with ice-cold soda at 1:4 ratio for a refreshing, consistent drink!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับน้ำอัดลมขวด รสชาติคงที่ 100% ทุกแก้ว ควบคุมความหวานได้เอง ไม่มีสารกันเสีย",
+    "en": "Very low cost compared to bottled soda. 100% consistent taste in every glass. Control your own sweetness, no preservatives."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการกระเด็นขณะต้มน้ำเชื่อมร้อน",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be careful of splatter when boiling hot syrup."
+  },
+  "nutrition": {
+    "calories": "60 kcal",
+    "carbs": "15 g",
+    "sugar": "14 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง", "en": "Brown sugar" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กลิ่นคาราเมล (Food Grade)", "en": "Caramel flavor (Food Grade)" },
+      "amount": 10,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กลิ่นวานิลลา", "en": "Vanilla extract" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 30,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 40,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปโคล่าเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Cola syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำตาลและเครื่องเทศ",
+        "en": "Prepare sugar and spices"
+      },
+      "desc": {
+        "th": "เตรียมน้ำตาลทรายขาว {white_sugar} และน้ำตาลทรายแดง {brown_sugar} เพื่อให้ได้สีและรสคาราเมลที่ลึกซึ้ง",
+        "en": "Prepare {white_sugar} of white sugar and {brown_sugar} of brown sugar for a deep caramel color and flavor."
+      },
+      "descVariables": {
+        "white_sugar": { "amount": 1500, "unit": "Gram", "scalable": true },
+        "brown_sugar": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/dark_caramel_cola/man_1.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลทรายแดงให้รสคาราเมลและสีเข้มที่เป็นเอกลักษณ์ของโคล่าคลาสสิก",
+        "en": "💡 Brown sugar provides the signature caramel flavor and dark color of classic cola."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อม",
+        "en": "Boil the syrup"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount} เปิดไฟกลาง ใส่น้ำตาลทั้งสองชนิดลงไป คนจนละลายหมด พอน้ำเชื่อมเดือดให้ลดไฟอ่อน ต้มต่อ 10 นาที",
+        "en": "In a pot, combine {water_amount} of clean water and both sugars. Stir over medium heat until dissolved. Once boiling, reduce heat to low and simmer for 10 mins."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/mocktail/dark_caramel_cola/man_2.jpg",
+      "tips": {
+        "th": "💡 คนเรื่อยๆ เพื่อป้องกันไม่ให้น้ำตาลไหม้ก้นหม้อ",
+        "en": "💡 Stir constantly to prevent the sugar from burning at the bottom of the pot."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมกลิ่นและกรดซิตริก",
+        "en": "Add flavor and citric acid"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) เติมกลิ่นคาราเมล {caramel_flavor}, กลิ่นวานิลลา {vanilla}, กรดซิตริก {citric_amount} และเกลือ {salt_amount} คนให้ละลายหมด",
+        "en": "Turn off heat and let syrup cool slightly (warm). Add {caramel_flavor} of caramel flavor, {vanilla} of vanilla, {citric_amount} of citric acid, and {salt_amount} of salt. Stir until fully dissolved."
+      },
+      "descVariables": {
+        "caramel_flavor": { "amount": 10, "unit": "Milliliter", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true },
+        "citric_amount": { "amount": 30, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/dark_caramel_cola/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมกลิ่นและกรดซิตริก ถ้าร้อนจัดกลิ่นจะระเหยหายไป",
+        "en": "💡 Wait until syrup is warm before adding flavor and citric acid—if too hot, the aroma will evaporate."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อม",
+        "en": "Strain and store the syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางเพื่อกรองสิ่งตกค้าง ได้น้ำเชื่อมสีน้ำตาลเข้มใส ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 1 เดือน",
+        "en": "Strain the syrup through a cheesecloth to remove any impurities, yielding a clear dark brown syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 1 month."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/dark_caramel_cola/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:4 จะได้น้ำโคล่าโซดาทั้งหมด ~40-50 ลิตร",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:4 ratio, yields ~40-50L of cola soda."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมโคล่า 1 ส่วน (ประมาณ 60-80 ml) แล้วเติมน้ำโซดาเย็นจัด 4 ส่วน คนเบาๆ 1 ครั้ง พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part cola syrup (about 60-80 ml), then add 4 parts ice-cold soda water. Stir gently once. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/dark_caramel_cola/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัดและเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ อย่าคนแรงเพราะฟองจะหาย",
+        "en": "💡 Fizz tip: Use ice-cold soda and pour along the glass edge to preserve bubbles. Don't stir hard or the fizz will disappear."
+      }
+    }
+  ]
+}

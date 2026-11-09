@@ -1,0 +1,87 @@
+[
+  {
+    "id": "classic_milk_tea_pearl_10L",
+    "name": {
+      "th": "ชานมไข่มุกคลาสสิก 10 ลิตร",
+      "en": "10L Classic Milk Tea with Pearl"
+    },
+    "image": "images/bubble-tea/classic_milk_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["ชาดำเข้มข้น", "ไข่มุกเหนียวนุ่ม", "สูตรคลาสสิก"],
+      "en": ["Strong Black Tea", "Chewy Pearls", "Classic Recipe"]
+    }
+  },
+  {
+    "id": "thai_tea_pearl_10L",
+    "name": {
+      "th": "ชาไทยไข่มุก 10 ลิตร",
+      "en": "10L Thai Tea with Pearl"
+    },
+    "image": "images/bubble-tea/thai_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["สีส้มเอกลักษณ์", "หอมเครื่องเทศ", "สูตรไทยแท้"],
+      "en": ["Iconic Orange", "Spiced Aroma", "Authentic Thai"]
+    }
+  },
+  {
+    "id": "matcha_latte_pearl_10L",
+    "name": {
+      "th": "มัทฉะลาเต้ไข่มุก 10 ลิตร",
+      "en": "10L Matcha Latte with Pearl"
+    },
+    "image": "images/bubble-tea/matcha_latte_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 30 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 30 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["มัทฉะพรีเมียม", "สีเขียวธรรมชาติ", "รสละมุน"],
+      "en": ["Premium Matcha", "Natural Green", "Smooth Taste"]
+    }
+  },
+  {
+    "id": "brown_sugar_milk_10L",
+    "name": {
+      "th": "นมสดน้ำตาลทรายแดงไข่มุก (Tiger Style) 10 ลิตร",
+      "en": "10L Brown Sugar Fresh Milk with Pearl (Tiger Style)"
+    },
+    "image": "images/bubble-tea/brown_sugar_milk/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (เตรียมไข่มุก+คาราเมล) + 20 นาที (เครื่อง)",
+      "en": "30 mins (prep pearls+caramel) + 20 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["ลายเสือสวย", "คาราเมลหอม", "หวานละมุน"],
+      "en": ["Tiger Stripes", "Caramel Aroma", "Smooth Sweet"]
+    }
+  },
+  {
+    "id": "coconut_jelly_milk_tea_10L",
+    "name": {
+      "th": "ชานมวุ้นมะพร้าว 10 ลิตร",
+      "en": "10L Milk Tea with Coconut Jelly"
+    },
+    "image": "images/bubble-tea/coconut_jelly_milk_tea/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที (เตรียมน้ำเชื่อม) + 40 นาที (เครื่อง)",
+      "en": "15 mins (prep syrup) + 40 mins (machine)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["วุ้นมะพร้าวกรอบ", "หอมมะพร้าว", "สดชื่น"],
+      "en": ["Crunchy Coconut Jelly", "Coconut Aroma", "Refreshing"]
+    }
+  }
+]

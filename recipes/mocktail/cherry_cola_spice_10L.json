@@ -1,0 +1,267 @@
+{
+  "id": "cherry_cola_spice_10L",
+  "icon": "🍒",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปเชอร์รี่โคล่าสไปซ์ 10 ลิตร น้ำเชื่อมเข้มข้นจากเชอร์รี่และเครื่องเทศ (อบเชย, กานพลู, วานิลลา) ได้รสหวานอมเปรี้ยวซับซ้อนและกลิ่นหอมอบอุ่น ผสมกับโซดาเย็นจัดได้เครื่องดื่มเชอร์รี่โคล่าซ่าสดชื่น รสชาติเหนือกว่าโคล่าขวดทั่วไป",
+  "total_time": 45,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_cherry_cola_spice_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปเชอร์รี่โคล่าสไปซ์ (Cherry Cola Spice) 10 ลิตร",
+    "en": "Cherry Cola Spice Soda Syrup 10L"
+  },
+  "images": [
+    "images/mocktail/cherry_cola_spice/main_1.jpg",
+    "images/mocktail/cherry_cola_spice/main_2.jpg",
+    "images/mocktail/cherry_cola_spice/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_cherry_cola",
+  "prepTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "45 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม)",
+    "en": "45 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ไซรัปเชอร์รี่โคล่าสไปซ์ทำเองง่ายๆ: ต้มน้ำเชื่อมกับเครื่องเทศ (อบเชย, กานพลู, วานิลลา) เพื่อสกัดกลิ่นหอมอบอุ่น เติมน้ำเชอร์รี่เข้มข้นและกรดซิตริก กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มเชอร์รี่โคล่าซ่าสดชื่น รสชาติซับซ้อนเหนือกว่าโคล่าทั่วไป!",
+    "en": "Easy cherry cola spice syrup: boil sugar syrup with spices (cinnamon, cloves, vanilla) to extract warm aroma, add concentrated cherry juice and citric acid, strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a refreshing, complex cherry cola that tastes better than store-bought!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับน้ำโคล่าขวด รสชาติคงที่ 100% ทุกแก้ว ใช้เชอร์รี่แท้และเครื่องเทศธรรมชาติ ไม่มีสีและสารกันเสียสังเคราะห์ ดื่มเย็นซ่าสดชื่น ให้กลิ่นหอมอบอุ่นแบบโฮมเมด",
+    "en": "Very low cost compared to bottled cola. 100% consistent taste in every glass. Real cherries and natural spices, no artificial colors or preservatives. Refreshing and ice-cold, with a warm homemade aroma."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการกระเด็นขณะต้มน้ำเชื่อมร้อน",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be careful of splatter when boiling hot syrup."
+  },
+  "nutrition": {
+    "calories": "48 kcal",
+    "carbs": "12 g",
+    "sugar": "11 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง", "en": "Brown sugar" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำเชอร์รี่เข้มข้น (หรือคั้นสด)", "en": "Concentrated cherry juice (or fresh)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "อบเชยแท่ง", "en": "Cinnamon sticks" },
+      "amount": 20,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กานพลู", "en": "Cloves" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด", "en": "Vanilla extract" },
+      "amount": 10,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 20,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "สีผสมอาหารสีแดง/น้ำตาล (ไม่บังคับ)", "en": "Red/brown food coloring (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปเชอร์รี่โคล่าสไปซ์เป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Cherry cola spice syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและเตรียมเครื่องเทศและน้ำเชอร์รี่",
+        "en": "Wash and prepare spices and cherry juice"
+      },
+      "desc": {
+        "th": "ล้างอบเชย {cinnamon_amount} และกานพลู {clove_amount} ด้วยน้ำสะอาด เช็ดให้แห้ง เตรียมไว้ คั้นหรือเตรียมน้ำเชอร์รี่ {cherry_juice_amount} ให้พร้อม",
+        "en": "Wash {cinnamon_amount} of cinnamon sticks and {clove_amount} of cloves with clean water. Dry them and set aside. Prepare {cherry_juice_amount} of cherry juice."
+      },
+      "descVariables": {
+        "cinnamon_amount": { "amount": 20, "unit": "Gram", "scalable": true },
+        "clove_amount": { "amount": 5, "unit": "Gram", "scalable": true },
+        "cherry_juice_amount": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/cherry_cola_spice/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกอบเชยแท่งและกานพลูคุณภาพดี จะให้กลิ่นหอมอบอุ่นแบบโคล่าคลาสสิก น้ำเชอร์รี่ควรเป็นแบบไม่เติมน้ำตาลเพื่อควบคุมความหวานได้",
+        "en": "💡 Choose high-quality cinnamon sticks and cloves for a classic, warm cola aroma. Use unsweetened cherry juice to control sweetness."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับเครื่องเทศ",
+        "en": "Boil sugar syrup with spices"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount}, น้ำตาลทรายขาว {white_sugar} และน้ำตาลทรายแดง {brown_sugar} เปิดไฟกลางคนจนน้ำตาลละลายหมด พอน้ำเชื่อมเดือดให้ใส่อบเชยและกานพลูลงไป ลดไฟอ่อน ต้มต่อ 20 นาทีเพื่อสกัดน้ำมันหอมระเหยจากเครื่องเทศ",
+        "en": "In a pot, combine {water_amount} of clean water, {white_sugar} of white sugar, and {brown_sugar} of brown sugar. Stir over medium heat until sugar dissolves. Once boiling, add cinnamon and cloves. Reduce heat to low and simmer for 20 mins to extract essential oils from spices."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "white_sugar": { "amount": 1500, "unit": "Gram", "scalable": true },
+        "brown_sugar": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/cherry_cola_spice/man_2.jpg",
+      "tips": {
+        "th": "💡 การต้มน้ำเชื่อมกับเครื่องเทศเป็นเคล็ดลับที่ทำให้น้ำโคล่าโฮมเมดมีกลิ่นหอมซับซ้อนแบบโบราณ ไม่ใช่แค่รสหวาน+กลิ่นสังเคราะห์ น้ำตาลทรายแดงช่วยให้ได้สีน้ำตาลคาราเมลธรรมชาติ",
+        "en": "💡 Boiling syrup with spices is the key trick that gives homemade cola a complex, vintage aroma—not just sweet+artificial flavor. Brown sugar adds natural caramel color."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำเชอร์รี่ กรดซิตริก และวานิลลา",
+        "en": "Add cherry juice, citric acid, and vanilla"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) เติมน้ำเชอร์รี่ {cherry_juice_amount} ลงในน้ำเชื่อม ตามด้วยกรดซิตริก {citric_amount}, เกลือ {salt_amount} และวานิลลา {vanilla} คนให้ละลายหมด (ถ้าต้องการสีเข้มขึ้น เติมสีผสมอาหาร {food_coloring} ได้)",
+        "en": "Turn off heat and let syrup cool slightly (warm). Add {cherry_juice_amount} of cherry juice to the syrup, followed by {citric_amount} of citric acid, {salt_amount} of salt, and {vanilla} of vanilla. Stir until fully dissolved (if you want a deeper color, add {food_coloring} of food coloring)."
+      },
+      "descVariables": {
+        "cherry_juice_amount": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "citric_amount": { "amount": 20, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 10, "unit": "Milliliter", "scalable": true },
+        "food_coloring": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/mocktail/cherry_cola_spice/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำเชอร์รี่ ถ้าร้อนจัดกลิ่นและรสของเชอร์รี่จะเสีย กรดซิตริกช่วยเพิ่มความเปรี้ยวซ่าแบบโคล่าแท้",
+        "en": "💡 Wait until syrup is warm before adding cherry juice—if too hot, cherry flavor and aroma will degrade. Citric acid adds authentic cola-like tartness."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อมเชอร์รี่โคล่า",
+        "en": "Strain and store the cherry cola syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดอบเชย กานพลู และตะกอนออก ได้น้ำเชื่อมสีน้ำตาลแดงหอมเครื่องเทศ ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 3-4 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove cinnamon, cloves, and sediment, yielding a reddish-brown, spice-aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 3-4 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/cherry_cola_spice/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำเชอร์รี่โคล่าทั้งหมด ~40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท ถูกกว่าน้ำโคล่าขวด 3-4 เท่า",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~40L of cherry cola at just a few baht per liter—3-4x cheaper than bottled cola."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมเชอร์รี่โคล่า 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยเชอร์รี่เชื่อมและผิวมะนาว พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part cherry cola syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with a maraschino cherry and lemon zest. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/cherry_cola_spice/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ การตกแต่งด้วยเชอร์รี่เชื่อมจะทำให้แก้วดูพรีเมียมเหมือนบาร์ชั้นนำ",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Garnishing with a maraschino cherry gives a premium bar-quality look."
+      }
+    }
+  ]
+}

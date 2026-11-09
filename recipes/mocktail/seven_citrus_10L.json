@@ -1,0 +1,252 @@
+{
+  "id": "seven_citrus_10L",
+  "icon": "🍋",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปเลมอน-ไลม์ใส 10 ลิตร สไตล์ 7-Up รสชาติหวานนุ่ม เปรี้ยวซ่าจากเลมอนและไลม์แท้ ผสมกับน้ำโซดาเย็นจัดได้เครื่องดื่มใสสะอาด ซ่าสดชื่น ต้นทุนต่ำ ทำเองได้ง่าย",
+  "total_time": 30,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_seven_citrus_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปเลมอนใส (สไตล์ 7-Up) 10 ลิตร",
+    "en": "Seven Citrus Clear Syrup (7-Up Style) 10L"
+  },
+  "images": [
+    "images/mocktail/seven_citrus/main_1.jpg",
+    "images/mocktail/seven_citrus/main_2.jpg",
+    "images/mocktail/seven_citrus/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_seven_citrus",
+  "prepTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "30 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม)",
+    "en": "30 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~30-40 ลิตร)",
+    "en": "10 Liters (yields ~30-40L with soda)"
+  },
+  "rating": "4.6",
+  "intro": {
+    "th": "ไซรัปเลมอน-ไลม์ใสสไตล์ 7-Up ทำเองง่ายๆ: ต้มน้ำเชื่อมกับผิวเลมอนและผิวไลม์เพื่อสกัดน้ำมันหอมระเหย เติมน้ำเลมอน/มะนาวสดและกรดซิตริกเพื่อความเปรี้ยวซ่า กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มใสสะอาด ซ่าสดชื่น",
+    "en": "Easy 7-Up style lemon-lime clear syrup: boil sugar syrup with lemon and lime zest to extract essential oils, add fresh lemon/lime juice and citric acid for tartness. Strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a crystal-clear, refreshing drink!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับน้ำอัดลมขวด รสชาติคงที่ 100% ทุกแก้ว ใช้เลมอนและไลม์แท้มีวิตามินซีสูง สีใสสะอาดตา ไม่มีสีสังเคราะห์",
+    "en": "Very low cost compared to bottled soda. 100% consistent taste in every glass. Real lemon and lime with high Vitamin C, crystal-clear color, no artificial colors."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการกระเด็นขณะต้มน้ำเชื่อมร้อน",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be careful of splatter when boiling hot syrup."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "13 g",
+    "sugar": "12 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เลมอน (ขูดผิวและคั้นน้ำ)", "en": "Lemons (zest and juice)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะนาว/ไลม์ (ขูดผิวและคั้นน้ำ)", "en": "Limes (zest and juice)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวเลมอนขูด (จากเลมอนข้างบน)", "en": "Lemon zest (from lemons above)" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวมะนาวขูด (จากมะนาวข้างบน)", "en": "Lime zest (from limes above)" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 25,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปเลมอนใสเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Seven citrus clear syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและขูดผิวเลมอนกับมะนาว",
+        "en": "Wash and zest lemons and limes"
+      },
+      "desc": {
+        "th": "ล้างเลมอน {lemon_amount} และมะนาว {lime_amount} ด้วยน้ำสะอาด เช็ดให้แห้ง ใช้ที่ขูดผิวขูดเอาเฉพาะผิวสีบางๆ ของเลมอน (สีเหลือง) และมะนาว (สีเขียว) แยกกัน (อย่าขูดถึงสีขาวข้างในเพราะจะขม) เตรียมผิวขูด {lemon_zest} และ {lime_zest} ไว้",
+        "en": "Wash {lemon_amount} of lemons and {lime_amount} of limes with clean water and dry. Use a zester to remove only the thin colored layer of lemons (yellow) and limes (green) separately (avoid the white pith as it's bitter). Prepare {lemon_zest} of lemon zest and {lime_zest} of lime zest."
+      },
+      "descVariables": {
+        "lemon_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "lime_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "lemon_zest": { "amount": 50, "unit": "Gram", "scalable": true },
+        "lime_zest": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/seven_citrus/man_1.jpg",
+      "tips": {
+        "th": "💡 การผสมผิวเลมอนและผิวไลม์เข้าด้วยกัน จะให้กลิ่นซิตรัสที่ซับซ้อนและหอมสดชื่นกว่าการใช้เพียงชนิดเดียว ซึ่งเป็นเคล็ดลับของ 7-Up ต้นฉบับ",
+        "en": "💡 Combining lemon and lime zest gives a more complex and refreshing citrus aroma than using just one—this is the secret of original 7-Up."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับผิวซิตรัส",
+        "en": "Boil sugar syrup with citrus zest"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount} และน้ำตาลทรายขาว {sugar_amount} เปิดไฟกลางคนจนน้ำตาลละลายหมด (ใช้เฉพาะน้ำตาลทรายขาวเพื่อให้ได้น้ำเชื่อมสีใส) พอน้ำเชื่อมเดือดให้ใส่ผิวเลมอนและผิวมะนาวขูดย่อยลงไป ลดไฟอ่อน ต้มต่อ 10 นาทีเพื่อสกัดน้ำมันหอมระเหย",
+        "en": "In a pot, combine {water_amount} of clean water and {sugar_amount} of white sugar. Stir over medium heat until dissolved (use only white sugar for a clear syrup). Once boiling, add lemon and lime zest. Reduce heat to low and simmer for 10 mins to extract essential oils."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "sugar_amount": { "amount": 1800, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/seven_citrus/man_2.jpg",
+      "tips": {
+        "th": "💡 การใช้เฉพาะน้ำตาลทรายขาว (ไม่ใช้น้ำตาลทรายแดง) เป็นหัวใจสำคัญที่ทำให้น้ำเชื่อมมีสีใสเหมือน 7-Up ต้นฉบับ ไม่ขุ่นเป็นสีน้ำตาล",
+        "en": "💡 Using only white sugar (no brown sugar) is the key to getting a crystal-clear syrup like original 7-Up—not cloudy or brown."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "คั้นน้ำเลมอน-มะนาวและเติมกรดซิตริก",
+        "en": "Juice lemons and limes, add citric acid"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) ระหว่างนี้คั้นเลมอนและมะนาวที่เตรียมไว้เอาน้ำสด เติมน้ำเลมอน-มะนาวลงในน้ำเชื่อม ตามด้วยกรดซิตริก {citric_amount} และเกลือ {salt_amount} คนให้ละลายหมด",
+        "en": "Turn off heat and let syrup cool slightly (warm). Meanwhile, juice the prepared lemons and limes. Add fresh lemon-lime juice to the syrup, followed by {citric_amount} of citric acid and {salt_amount} of salt. Stir until fully dissolved."
+      },
+      "descVariables": {
+        "citric_amount": { "amount": 25, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/seven_citrus/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำมะนาว ถ้าร้อนจัดวิตามินซีจะสลายและกลิ่นซิตรัสจะหายไป กรดซิตริกช่วยเพิ่มความเปรี้ยวซ่าแบบน้ำอัดลมแท้",
+        "en": "💡 Wait until syrup is warm before adding citrus juice—if too hot, Vitamin C will degrade and citrus aroma will vanish. Citric acid adds the authentic soda-like tartness."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อม",
+        "en": "Strain and store the syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกรองผิวซิตรัสและเนื้อออก ได้น้ำเชื่อมสีเหลืองอ่อนใสหอมเลมอน-ไลม์ ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 2-3 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove zest and pulp, yielding a clear pale yellow lemon-lime aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 2-3 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/seven_citrus/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำเลมอน-ไลม์โซดาทั้งหมด ~30-40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~30-40L of lemon-lime soda at just a few baht per liter."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมเลมอน-ไลม์ 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยฝานเลมอนและใบมินต์ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part lemon-lime syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with a lemon slice and mint leaves. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/seven_citrus/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ อย่าคนแรงเพราะฟองจะหาย",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Don't stir hard or the fizz will disappear."
+      }
+    }
+  ]
+}

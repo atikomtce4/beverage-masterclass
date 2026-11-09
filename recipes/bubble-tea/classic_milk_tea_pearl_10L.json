@@ -1,0 +1,247 @@
+{
+  "id": "classic_milk_tea_pearl_10L",
+  "icon": "🧋",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เครื่องสามารถทำชานมฐานได้ แต่ผู้ใช้ต้องต้มไข่มุกเองแยกต่างหาก เนื่องจากเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการต้มไข่มุก กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "Machine can brew the milk tea base, but pearls must be boiled separately. AllDrinks System does not yet support pearl cooking. Please use 'Manual' mode."
+  },
+  "description": "ชานมไข่มุกคลาสสิก 10 ลิตร ชาดำเข้มข้นผสมนมสดหอมมัน เสิร์ฟพร้อมไข่มุกเหนียวนุ่ม รสชาติต้นตำรับที่ทุกคนชื่นชอบ",
+  "total_time": 60,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_classic_milk_tea_pearl_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชานมไข่มุกคลาสสิก 10 ลิตร",
+    "en": "Classic Milk Tea with Pearl 10L"
+  },
+  "images": [
+    "images/bubble-tea/classic_milk_tea_pearl/main_1.jpg",
+    "images/bubble-tea/classic_milk_tea_pearl/main_2.jpg",
+    "images/bubble-tea/classic_milk_tea_pearl/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_classic_milk_tea",
+  "prepTime": {
+    "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+    "en": "20 mins (prep pearls) + 40 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ชานมไข่มุกคลาสสิกสูตรต้นตำรับ: ต้มไข่มุกให้เหนียวนุ่ม แช่น้ำเชื่อมน้ำตาลทรายแดง ต้มชาดำเข้มข้น ผสมนมสดและน้ำตาล กรอง แล้วแช่เย็น เสิร์ฟพร้อมไข่มุกในแก้ว!",
+    "en": "Classic milk tea with pearl: boil chewy pearls and soak in brown sugar syrup, brew strong black tea, mix with fresh milk and sugar, filter, then chill. Serve with pearls in a glass!"
+  },
+  "benefits": {
+    "th": "ชาดำมีสารต้านอนุมูลอิสระสูง นมสดให้แคลเซียมและโปรตีน ไข่มุกให้พลังงานและเนื้อสัมผัสเหนียวนุ่ม เป็นเครื่องดื่มที่ได้รับความนิยมทั่วโลก",
+    "en": "Black tea is rich in antioxidants. Fresh milk provides calcium and protein. Pearls give energy and chewy texture. A globally beloved beverage."
+  },
+  "warnings": {
+    "th": "⚠️ ไข่มุกมีแป้งสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม ระวังการสำลักในเด็กเล็ก ควรเคี้ยวให้ละเอียดก่อนกลืน และเครื่องดื่มมีคาเฟอีนจากชาดำ",
+    "en": "⚠️ Pearls are high in starch. People with diabetes should consume in moderation. Be cautious of choking hazard in young children. Chew thoroughly before swallowing. Contains caffeine from black tea."
+  },
+  "nutrition": {
+    "calories": "85 kcal",
+    "carbs": "15 g",
+    "sugar": "10 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มชา)", "en": "Clean water (for tea brewing)" },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ชาดำ (ใบหรือผง)", "en": "Black tea (leaves or powder)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดรสจืด", "en": "Fresh milk (plain)" },
+      "amount": 3,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "White sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ไข่มุกแห้ง (สำหรับต้ม)", "en": "Dried tapioca pearls (for boiling)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง (สำหรับแช่ไข่มุก)", "en": "Brown sugar (for soaking pearls)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับแช่ไข่มุก)", "en": "Clean water (for soaking pearls)" },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรชานมไข่มุกคลาสสิกต้องใช้การต้มไข่มุกด้วยมือแยกต่างหาก ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Classic milk tea with pearl requires hand-boiling of tapioca pearls separately, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มไข่มุก",
+        "en": "Boil tapioca pearls"
+      },
+      "desc": {
+        "th": "ต้มน้ำให้เดือดจัดในหม้อใหญ่ ใส่ไข่มุกแห้ง {pearl_amount} ลงไป คนเบาๆ เพื่อไม่ให้ติดก้นหม้อ ต้มด้วยไฟกลาง 20-25 นาทีจนไข่มุกลอยขึ้นและมีความเหนียวนุ่ม (ยังมีจุดขาวเล็กๆ ตรงกลาง) ปิดไฟ แล้ว焖ต่ออีก 10 นาทีโดยปิดฝา",
+        "en": "Bring a large pot of water to a rolling boil. Add {pearl_amount} of dried tapioca pearls, stir gently to prevent sticking. Boil on medium heat for 20-25 mins until pearls float and become chewy (with a small white dot in the center). Turn off heat and steep for 10 more mins with the lid on."
+      },
+      "descVariables": {
+        "pearl_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/classic_milk_tea_pearl/man_1.jpg",
+      "tips": {
+        "th": "💡 การ焖ต่อ 10 นาทีหลังปิดไฟเป็นเคล็ดลับสำคัญที่ทำให้ไข่มุกเหนียวนุ่มทั่วถึงทั้งเม็ด ไม่ใช่แค่ด้านนอก อัตราส่วนน้ำ:ไข่มุก ควรเป็น 10:1 เพื่อให้ไข่มุกขยายตัวเต็มที่",
+        "en": "💡 Steeping for 10 mins after turning off heat is the key trick to make pearls chewy throughout, not just on the outside. Water-to-pearl ratio should be 10:1 for full expansion."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ไข่มุกในน้ำเชื่อม",
+        "en": "Rinse and soak pearls in syrup"
+      },
+      "desc": {
+        "th": "กรองไข่มุกออก ล้างด้วยน้ำเย็นจัดเพื่อหยุดการต้มและให้ผิวเหนียวนุ่ม เตรียม nướcเชื่อมน้ำตาลทรายแดงโดยละลาย {brown_sugar} ในน้ำ {syrup_water} อุ่นๆ แล้วนำไข่มุกที่ล้างแล้วลงไปแช่อย่างน้อย 15-30 นาทีเพื่อให้ดูดซับรสหวานและสีน้ำตาลสวย",
+        "en": "Strain pearls and rinse with ice-cold water to stop cooking and firm up the texture. Prepare brown sugar syrup by dissolving {brown_sugar} in warm {syrup_water} of water, then soak the rinsed pearls for at least 15-30 mins to absorb sweetness and beautiful brown color."
+      },
+      "descVariables": {
+        "brown_sugar": { "amount": 200, "unit": "Gram", "scalable": true },
+        "syrup_water": { "amount": 500, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/bubble-tea/classic_milk_tea_pearl/man_2.jpg",
+      "tips": {
+        "th": "💡 การแช่ไข่มุกในน้ำเชื่อมน้ำตาลทรายแดงจะทำให้ได้รสหวานลึกและสีน้ำตาลสวยแบบร้านชานมชั้นนำ ไข่มุกที่แช่แล้วควรใช้ให้หมดภายใน 4 ชั่วโมง เพื่อคงความเหนียวนุ่ม",
+        "en": "💡 Soaking pearls in brown sugar syrup gives deep sweetness and beautiful brown color like premium milk tea shops. Soaked pearls should be used within 4 hours to maintain chewiness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มชาดำเข้มข้น",
+        "en": "Brew strong black tea"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_boil} ให้เดือดจัด (100°C) ปิดไฟแล้วใส่ชาดำ {tea_amount} ลงไป ปิดฝา焖 5 นาทีเพื่อสกัดรสชาติเข้มข้น กรองกากชาออกผ่านกระชอนหรือผ้าขาวบาง ได้น้ำชาสีน้ำตาลแดงเข้ม",
+        "en": "Boil {water_boil} of clean water to 100°C. Turn off heat and add {tea_amount} of black tea. Cover and steep for 5 mins to extract strong flavor. Strain out tea leaves through a sieve or cheesecloth, yielding dark reddish-brown tea."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 6, "unit": "Liter", "scalable": true },
+        "tea_amount": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/classic_milk_tea_pearl/man_3.jpg",
+      "tips": {
+        "th": "💡 ใช้ชาดำคุณภาพดี (เช่น ชาอัสสัมหรือชาซีลอน) จะให้รสชาติและกลิ่นหอมที่เข้มข้นกว่าชาผงทั่วไป การ焖ชาแทนการต้มต่อเนื่องจะช่วยไม่ให้ชามีรสขม",
+        "en": "💡 Use high-quality black tea (like Assam or Ceylon) for richer flavor and aroma than generic tea powder. Steeping instead of continuous boiling prevents bitterness."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมสดและปรุงรส",
+        "en": "Mix fresh milk and season"
+      },
+      "desc": {
+        "th": "เติมนมสด {milk_amount} ลงในชาดำที่กรองแล้ว (ขณะยังอุ่นอยู่) ตามด้วยน้ำตาล {sugar_amount} และเกลือ {salt_amount} คนจนละลายหมด ชิมรสและปรับความหวานตามชอบ ทิ้งให้เย็นที่อุณหภูมิห้อง",
+        "en": "Add {milk_amount} of fresh milk to the strained black tea (while still warm), followed by {sugar_amount} of sugar and {salt_amount} of salt. Stir until fully dissolved. Taste and adjust sweetness to preference. Let cool to room temperature."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 3, "unit": "Liter", "scalable": true },
+        "sugar_amount": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/classic_milk_tea_pearl/man_4.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยจะช่วยดึงรสชาและนมให้กลมกล่อมขึ้น ไม่ทำให้รู้สึกเค็ม แต่ทำให้รสชาตินุ่มนวลขึ้น การเติมนมตอนชายังอุ่นจะช่วยให้นมละลายเข้ากับชาได้ดี",
+        "en": "💡 A pinch of salt enhances the tea and milk flavors, making them smoother without tasting salty. Adding milk while tea is warm helps it blend better."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำชานมที่เย็นแล้วเข้าแช่ตู้เย็นอย่างน้อย 1-2 ชั่วโมง เมื่อจะเสิร์ฟ: ใส่ไข่มุกที่แช่น้ำเชื่อมไว้ประมาณ 3-4 ช้อนโต๊ะลงในแก้ว เติมน้ำแข็ง {ice_amount} แล้วเทชานมเย็นจัดลงไป ตกแต่งด้วยไข่มุกเพิ่มเติมด้านบน พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the cooled milk tea for at least 1-2 hours. When serving: add 3-4 tablespoons of soaked pearls to a glass, fill with {ice_amount} of ice, then pour ice-cold milk tea over. Garnish with extra pearls on top. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/bubble-tea/classic_milk_tea_pearl/man_5.jpg",
+      "tips": {
+        "th": "💡 ชานมที่ผสมแล้วสามารถเก็บในตู้เย็นได้นาน 2-3 วัน แต่ควรใส่ไข่มุกตอนจะเสิร์ฟเท่านั้น เพราะหากแช่ไข่มุกในชานมนานจะแข็งและไม่เหนียวนุ่ม เขย่าก่อนเสิร์ฟหากมีการแยกชั้น",
+        "en": "💡 Mixed milk tea can be stored in the fridge for 2-3 days, but add pearls only when serving—soaking pearls in tea too long makes them hard and lose chewiness. Shake well before serving if separation occurs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "royal_cola_10L",
+  "icon": "🥤",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปโคล่าพรีเมียม 10 ลิตร สไตล์ Royal Cola รสชาติเข้มข้นจากเครื่องเทศแท้ (อบเชย, กานพลู, ลูกจันทน์) ผสมกับผิวส้มและวานิลลา ได้สีน้ำตาลคาราเมลสวย ผสมกับโซดาเย็นจัดได้เครื่องดื่มซ่าสดชื่น ต้นทุนต่ำ รสชาติเหนือกว่าโคล่าทั่วไป",
+  "total_time": 45,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_royal_cola_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปโคล่าพรีเมียม (Royal Cola) 10 ลิตร",
+    "en": "Royal Cola Premium Syrup 10L"
+  },
+  "images": [
+    "images/mocktail/royal_cola/main_1.jpg",
+    "images/mocktail/royal_cola/main_2.jpg",
+    "images/mocktail/royal_cola/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_royal_cola",
+  "prepTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "45 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม)",
+    "en": "45 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~30-40 ลิตร)",
+    "en": "10 Liters (yields ~30-40L with soda)"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ไซรัปโคล่าพรีเมียมสไตล์ Royal Cola ทำเองง่ายๆ: ทำคาราเมลจากน้ำตาล ต้มกับเครื่องเทศแท้ (อบเชย, กานพลู, ลูกจันทน์, ลูกผักชี) และผิวส้มเพื่อสกัดกลิ่นหอม เติมน้ำมะนาวและกรดซิตริก กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มโคล่าซ่าเข้มข้น รสชาติเหนือกว่าโคล่าทั่วไป!",
+    "en": "Easy Royal Cola style premium syrup: make caramel from sugar, simmer with authentic spices (cinnamon, cloves, nutmeg, coriander) and orange zest for aroma, add lime juice and citric acid, strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a rich, fizzy cola that tastes better than store-bought!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับโคล่าขวด รสชาติคงที่ 100% ทุกแก้ว ใช้เครื่องเทศแท้ไม่มีกลิ่นสังเคราะห์ สีจากคาราเมลธรรมชาติ ไม่มีคาเฟอีน ดื่มได้ทั้งครอบครัว",
+    "en": "Very low cost compared to bottled cola. 100% consistent taste in every glass. Real spices with no artificial flavors. Natural caramel color, caffeine-free, suitable for the whole family."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการกระเด็นขณะทำคาราเมลร้อน (ร้อนจัดมาก!) เด็กเล็กควรดูแลขณะทำขั้นตอนคั่วน้ำตาล",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be extremely careful of splatter when making hot caramel (very hot!). Supervise children during the sugar caramelization step."
+  },
+  "nutrition": {
+    "calories": "60 kcal",
+    "carbs": "15 g",
+    "sugar": "14 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว (สำหรับทำคาราเมล)", "en": "White sugar (for caramel)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง", "en": "Brown sugar" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ส้ม (ขูดผิว)", "en": "Oranges (zested)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวส้มขูด (จากส้มข้างบน)", "en": "Orange zest (from oranges above)" },
+      "amount": 60,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะนาว/ไลม์ (คั้นน้ำ)", "en": "Limes (juiced)" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "อบเชยท่อน (Cinnamon sticks)", "en": "Cinnamon sticks" },
+      "amount": 20,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กานพลู (Cloves)", "en": "Cloves" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ลูกผักชี (Coriander seeds)", "en": "Coriander seeds" },
+      "amount": 8,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ลูกจันทน์บด (Nutmeg)", "en": "Ground nutmeg" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด", "en": "Vanilla extract" },
+      "amount": 10,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 25,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "สีผสมอาหารสีน้ำตาล (Caramel color) (ไม่บังคับ)", "en": "Brown food coloring (Caramel color) (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปโคล่าพรีเมียมเป็นน้ำเชื่อมฐานที่ต้องต้มเครื่องเทศและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Royal cola premium syrup is a soda base that requires hand-boiling spices and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมเครื่องเทศและขูดผิวส้ม",
+        "en": "Prepare spices and zest oranges"
+      },
+      "desc": {
+        "th": "ล้างส้ม {orange_amount} เช็ดให้แห้ง ใช้ที่ขูดผิวขูดเอาเฉพาะผิวสีส้มบางๆ (อย่าขูดถึงสีขาวเพราะจะขม) เตรียมผิวส้มขูด {orange_zest} ไว้ คั่วอบเชย {cinnamon}, กานพลู {cloves} และลูกผักชี {coriander} ในกระทะแห้งไฟอ่อน 2-3 นาทีจนหอม (ระวังไหม้) แล้วบุบอบเชยให้แตก",
+        "en": "Wash {orange_amount} of oranges, dry, and use a zester to remove only the thin orange layer (avoid the white pith as it's bitter). Prepare {orange_zest} of orange zest. Dry-roast {cinnamon} of cinnamon sticks, {cloves} of cloves, and {coriander} of coriander seeds in a dry pan over low heat for 2-3 mins until fragrant (don't burn), then crush the cinnamon sticks."
+      },
+      "descVariables": {
+        "orange_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "orange_zest": { "amount": 60, "unit": "Gram", "scalable": true },
+        "cinnamon": { "amount": 20, "unit": "Gram", "scalable": true },
+        "cloves": { "amount": 5, "unit": "Gram", "scalable": true },
+        "coriander": { "amount": 8, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/royal_cola/man_1.jpg",
+      "tips": {
+        "th": "💡 การคั่วเครื่องเทศเบาๆ จะช่วยปลุกน้ำมันหอมระเหยให้หอมเข้มข้นขึ้น 2-3 เท่า ซึ่งเป็นเคล็ดลับของโคล่าพรีเมียม",
+        "en": "💡 Lightly toasting spices awakens their essential oils, boosting aroma 2-3x stronger—this is the secret of premium cola."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ทำคาราเมลและต้มน้ำเชื่อมกับเครื่องเทศ",
+        "en": "Make caramel and boil syrup with spices"
+      },
+      "desc": {
+        "th": "ตั้งหม้อหนาใส่น้ำตาลทรายขาว {white_sugar} เปิดไฟกลางคั่วจนละลายเป็นคาราเมลสีน้ำตาลอำพัน (อย่าคน ปล่อยให้ละลายเอง) พอได้สีที่ต้องการ ระวัง! คาราเมลร้อนจัด ให้เติมน้ำสะอาด {water_amount} ลงไปช้าๆ (จะฟูและกระเด็น) คนให้ละลาย เติมน้ำตาลทรายแดง {brown_sugar} ผิวส้มขูด {orange_zest} และเครื่องเทศที่คั่วแล้วทั้งหมด ต้มไฟอ่อน 15 นาที",
+        "en": "In a heavy pot, add {white_sugar} of white sugar over medium heat and cook until it melts into amber caramel (don't stir, let it melt). Once the right color is reached, CAREFUL—caramel is extremely hot—slowly add {water_amount} of clean water (it will foam and splatter). Stir to dissolve, add {brown_sugar} of brown sugar, {orange_zest} of orange zest, and all toasted spices. Simmer on low heat for 15 mins."
+      },
+      "descVariables": {
+        "white_sugar": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "brown_sugar": { "amount": 800, "unit": "Gram", "scalable": true },
+        "orange_zest": { "amount": 60, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/royal_cola/man_2.jpg",
+      "tips": {
+        "th": "💡 การทำคาราเมลก่อนเป็นหัวใจของสีและรส 'โคล่า' ที่แท้จริง ถ้าไม่ทำคาราเมล น้ำเชื่อมจะใสและรสเหมือนน้ำหวานธรรมดา",
+        "en": "💡 Making caramel first is the heart of authentic cola color and flavor. Skip it and the syrup will be clear and taste like plain sweet water."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำมะนาว กรดซิตริก และวานิลลา",
+        "en": "Add lime juice, citric acid, and vanilla"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) คั้นมะนาว {lime_amount} เอาน้ำสด เติมน้ำมะนาวลงในน้ำเชื่อม ตามด้วยกรดซิตริก {citric_amount}, เกลือ {salt_amount} และวานิลลา {vanilla} คนให้ละลายหมด (ถ้าต้องการสีเข้มขึ้น เติมสีผสมอาหารสีน้ำตาล {caramel_color} ได้)",
+        "en": "Turn off heat and let syrup cool slightly (warm). Juice {lime_amount} of limes. Add fresh lime juice to the syrup, followed by {citric_amount} of citric acid, {salt_amount} of salt, and {vanilla} of vanilla. Stir until fully dissolved (if you want a darker color, add {caramel_color} of brown food coloring)."
+      },
+      "descVariables": {
+        "lime_amount": { "amount": 300, "unit": "Gram", "scalable": true },
+        "citric_amount": { "amount": 25, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 3, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 10, "unit": "Milliliter", "scalable": true },
+        "caramel_color": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/mocktail/royal_cola/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำมะนาวและวานิลลา ถ้าร้อนจัดกลิ่นหอมจะระเหยหายไปหมด",
+        "en": "💡 Wait until syrup is warm before adding lime juice and vanilla—if too hot, the aroma will evaporate completely."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อมโคล่า",
+        "en": "Strain and store the cola syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดเครื่องเทศ ผิวส้ม และตะกอนออก ได้น้ำเชื่อมสีน้ำตาลเข้มหอมเครื่องเทศ ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 3-4 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove spices, orange zest, and sediment, yielding a dark brown, spice-aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 3-4 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/royal_cola/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำโคล่าทั้งหมด ~30-40 ลิตร ต้นทุนเพียงลิตรละ 10-15 บาท (ถูกกว่าโคล่าขวด 3-4 เท่า)",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~30-40L of cola at just 10-15 baht per liter (3-4x cheaper than bottled cola)."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมโคล่า 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยฝานส้มและอบเชยท่อนเล็กๆ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part cola syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with an orange slice and a small cinnamon stick. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/royal_cola/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ การตกแต่งด้วยอบเชยท่อนจะทำให้แก้วดูพรีเมียมเหมือนบาร์ชั้นนำ",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Garnishing with a cinnamon stick gives a premium bar-quality look."
+      }
+    }
+  ]
+}

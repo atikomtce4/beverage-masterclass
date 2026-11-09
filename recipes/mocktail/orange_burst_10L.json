@@ -1,0 +1,268 @@
+{
+  "id": "orange_burst_10L",
+  "icon": "🍊",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปส้มโซดาซ่า 10 ลิตร สไตล์ Fanta/Sunkist น้ำเชื่อมเข้มข้นจากส้มสดแท้และผิวส้มหอม ได้สีส้มสดใสธรรมชาติ ผสมกับโซดาเย็นจัดได้เครื่องดื่มซ่าสดชื่น รสชาติส้มแท้เหนือกว่าน้ำส้มอัดลมขวด",
+  "total_time": 40,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_orange_burst_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปส้มโซดาซ่า (Orange Burst) 10 ลิตร",
+    "en": "Orange Burst Soda Syrup 10L"
+  },
+  "images": [
+    "images/mocktail/orange_burst/main_1.jpg",
+    "images/mocktail/orange_burst/main_2.jpg",
+    "images/mocktail/orange_burst/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_orange_burst",
+  "prepTime": {
+    "th": "40 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "40 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "40 นาที (ทำน้ำเชื่อม)",
+    "en": "40 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ไซรัปส้มโซดาซ่าสไตล์ Fanta/Sunkist ทำเองง่ายๆ: ต้มน้ำเชื่อมกับผิวส้มเพื่อสกัดน้ำมันหอมระเหย เติมน้ำส้มสดและกรดซิตริก กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มส้มซ่าสดชื่น รสชาติส้มแท้เหนือกว่าน้ำส้มอัดลมทั่วไป!",
+    "en": "Easy Fanta/Sunkist-style orange soda syrup: boil sugar syrup with orange zest to extract essential oils, add fresh orange juice and citric acid, strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a refreshing, authentic orange soda that tastes better than store-bought!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับน้ำส้มอัดลมขวด รสชาติคงที่ 100% ทุกแก้ว ใช้ส้มแท้มีวิตามินซีสูง สีจากส้มธรรมชาติ ไม่มีสีสังเคราะห์ ดื่มเย็นซ่าสดชื่น เหมาะกับทุกวัย",
+    "en": "Very low cost compared to bottled orange soda. 100% consistent taste in every glass. Real oranges with high Vitamin C, natural orange color, no artificial colors. Refreshing and ice-cold, suitable for all ages."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการกระเด็นขณะต้มน้ำเชื่อมร้อน",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be careful of splatter when boiling hot syrup."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "13 g",
+    "sugar": "12 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง", "en": "Brown sugar" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ส้ม (คั้นน้ำ)", "en": "Oranges (juiced)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ส้ม (ขูดผิว)", "en": "Oranges (zested)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวส้มขูด (จากส้มข้างบน)", "en": "Orange zest (from oranges above)" },
+      "amount": 80,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 20,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด", "en": "Vanilla extract" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "สีผสมอาหารสีส้ม (ไม่บังคับ)", "en": "Orange food coloring (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปส้มโซดาซ่าเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Orange burst syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้าง ขูดผิว และคั้นน้ำส้ม",
+        "en": "Wash, zest, and juice oranges"
+      },
+      "desc": {
+        "th": "ล้างส้ม {orange_zest_amount} (สำหรับขูดผิว) และ {orange_juice_amount} (สำหรับคั้นน้ำ) ด้วยน้ำสะอาด เช็ดให้แห้ง ใช้ที่ขูดผิวขูดเอาเฉพาะผิวสีส้มบางๆ จากส้มสำหรับขูด (อย่าขูดถึงสีขาวเพราะจะขม) เตรียมผิวส้มขูด {zest_amount} ไว้ จากนั้นคั้นส้มสำหรับคั้นน้ำเอาน้ำส้มสด {orange_juice_amount} เตรียมไว้",
+        "en": "Wash {orange_zest_amount} of oranges (for zesting) and {orange_juice_amount} of oranges (for juicing) with clean water. Dry them. Use a zester to remove only the thin orange layer from the zesting oranges (avoid the white pith as it's bitter). Prepare {zest_amount} of orange zest. Then juice the juicing oranges to get fresh orange juice {orange_juice_amount}."
+      },
+      "descVariables": {
+        "orange_zest_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "orange_juice_amount": { "amount": 2000, "unit": "Gram", "scalable": true },
+        "zest_amount": { "amount": 80, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/orange_burst/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกส้มเปลือกบาง สีส้มสด ผิวจะหอมและมีน้ำมันหอมระเหยมาก ระวังอย่าขูดลึกเกินไปเพราะส่วนสีขาวจะทำให้ไซรัปขม ควรใช้ส้ม 2 กลุ่ม: กลุ่มหนึ่งขูดผิว (3-4 ลูก) อีกกลุ่มคั้นน้ำ (10-12 ลูก)",
+        "en": "💡 Choose thin-skinned, bright orange oranges with aromatic zest and essential oils. Be careful not to zest too deep—the white pith will make the syrup bitter. Use 2 groups of oranges: one for zesting (3-4 fruits), one for juicing (10-12 fruits)."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับผิวส้ม",
+        "en": "Boil sugar syrup with orange zest"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount}, น้ำตาลทรายขาว {white_sugar} และน้ำตาลทรายแดง {brown_sugar} เปิดไฟกลางคนจนน้ำตาลละลายหมด พอน้ำเชื่อมเดือดให้ใส่ผิวส้มขูด {zest_amount} ลงไป ลดไฟอ่อน ต้มต่อ 15 นาทีเพื่อสกัดน้ำมันหอมระเหยจากผิวส้ม",
+        "en": "In a pot, combine {water_amount} of clean water, {white_sugar} of white sugar, and {brown_sugar} of brown sugar. Stir over medium heat until sugar dissolves. Once boiling, add {zest_amount} of orange zest. Reduce heat to low and simmer for 15 mins to extract essential oils from orange zest."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "white_sugar": { "amount": 1500, "unit": "Gram", "scalable": true },
+        "brown_sugar": { "amount": 500, "unit": "Gram", "scalable": true },
+        "zest_amount": { "amount": 80, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/orange_burst/man_2.jpg",
+      "tips": {
+        "th": "💡 การต้มน้ำเชื่อมกับผิวส้มเป็นเคล็ดลับสำคัญที่ทำให้น้ำส้มโซดาโฮมเมดมีกลิ่นหอมเหมือนของจริง ไม่ใช่แค่รสหวาน+เปรี้ยว น้ำตาลทรายแดงช่วยเพิ่มความลึกของรสและสีส้มธรรมชาติ",
+        "en": "💡 Boiling syrup with orange zest is the key trick that gives homemade orange soda its authentic aroma—not just sweet+sour. Brown sugar adds depth of flavor and natural orange color."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำส้มสด กรดซิตริก และวานิลลา",
+        "en": "Add fresh orange juice, citric acid, and vanilla"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) เติมน้ำส้มสด {orange_juice_amount} ลงในน้ำเชื่อม ตามด้วยกรดซิตริก {citric_amount}, เกลือ {salt_amount} และวานิลลา {vanilla} คนให้ละลายหมด (ถ้าต้องการสีส้มเข้มขึ้น เติมสีผสมอาหารสีส้ม {orange_color} ได้)",
+        "en": "Turn off heat and let syrup cool slightly (warm). Add {orange_juice_amount} of fresh orange juice to the syrup, followed by {citric_amount} of citric acid, {salt_amount} of salt, and {vanilla} of vanilla. Stir until fully dissolved (if you want a deeper orange color, add {orange_color} of orange food coloring)."
+      },
+      "descVariables": {
+        "orange_juice_amount": { "amount": 2000, "unit": "Gram", "scalable": true },
+        "citric_amount": { "amount": 20, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 3, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true },
+        "orange_color": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/mocktail/orange_burst/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำส้ม ถ้าร้อนจัดวิตามินซีจะสลายและกลิ่นส้มจะหาย กรดซิตริกช่วยเพิ่มความเปรี้ยวซ่าแบบน้ำอัดลมแท้ วานิลลาเล็กน้อยช่วยให้รสกลมกล่อม",
+        "en": "💡 Wait until syrup is warm before adding orange juice—if too hot, Vitamin C will degrade and orange aroma will vanish. Citric acid adds authentic soda-like tartness. A touch of vanilla rounds out the flavor."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อมส้ม",
+        "en": "Strain and store the orange syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดผิวส้มและเนื้อออก ได้น้ำเชื่อมสีส้มสดใสหอมส้ม ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 2-3 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove orange zest and pulp, yielding a vibrant orange, orange-aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 2-3 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/orange_burst/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำส้มโซดาทั้งหมด ~40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท ถูกกว่าน้ำส้มอัดลมขวด 3-4 เท่า",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~40L of orange soda at just a few baht per liter—3-4x cheaper than bottled orange soda."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมส้ม 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยฝานส้มและใบมินต์ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part orange syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with an orange slice and mint leaves. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/orange_burst/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ การตกแต่งด้วยฝานส้มจะทำให้แก้วดูสดชื่นเหมือนบาร์ชั้นนำ",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Garnishing with an orange slice gives a premium bar-quality look."
+      }
+    }
+  ]
+}

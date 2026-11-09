@@ -1,0 +1,239 @@
+{
+  "id": "citrus_sparkle_10L",
+  "icon": "🍋",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐาน (Soda Base) สำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a Soda Base recipe to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปมะนาวโซดาซ่า 10 ลิตร สไตล์ Sprite น้ำเชื่อมเข้มข้นจากมะนาวแท้และผิวมะนาวหอม ผสมกับโซดาเย็นจัด ได้เครื่องดื่มซ่าสดชื่น ทำต้นทุนต่ำ รสชาติคงที่ทุกแก้ว",
+  "total_time": 30,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_citrus_sparkle_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปมะนาวโซดาซ่า (สไตล์ Sprite) 10 ลิตร",
+    "en": "Citrus Sparkle Syrup (Sprite-Style) 10L"
+  },
+  "images": [
+    "images/mocktail/citrus_sparkle/main_1.jpg",
+    "images/mocktail/citrus_sparkle/main_2.jpg",
+    "images/mocktail/citrus_sparkle/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_citrus_sparkle",
+  "prepTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "30 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "30 นาที (ทำน้ำเชื่อม)",
+    "en": "30 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ไซรัปมะนาวโซดาซ่าสไตล์ Sprite ทำเองง่ายๆ: ต้มน้ำเชื่อมกับผิวมะนาวเพื่อสกัดน้ำมันหอมระเหย เติมน้ำมะนาวสดและกรดซิตริก กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มซ่าสดชื่น รสชาติคงที่ทุกแก้ว ต้นทุนต่ำ!",
+    "en": "Easy Sprite-style citrus sparkle syrup: boil sugar syrup with lime zest to extract essential oils, add fresh lime juice and citric acid, strain and refrigerate. When serving, mix with ice-cold soda at 1:3 ratio for a refreshing, consistent, low-cost drink!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับน้ำอัดลมขวด รสชาติคงที่ 100% ทุกแก้ว ใช้มะนาวแท้มีวิตามินซีสูง ไม่มีสีสังเคราะห์ ดื่มเย็นซ่าสดชื่น",
+    "en": "Very low cost compared to bottled soda. 100% consistent taste in every glass. Real lime with high Vitamin C, no artificial colors. Refreshing and ice-cold."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง ระวังการ splatter ขณะต้มน้ำเชื่อมร้อน",
+    "en": "⚠️ The syrup is highly acidic. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Be careful of splatter when boiling hot syrup."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "14 g",
+    "sugar": "13 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "มะนาว (ขูดผิวและคั้นน้ำ)", "en": "Limes (zest and juice)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวมะนาวขูด (จากมะนาวข้างบน)", "en": "Lime zest (from limes above)" },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 30,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปมะนาวโซดาซ่าเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Citrus sparkle syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและขูดผิวมะนาว",
+        "en": "Wash and zest the limes"
+      },
+      "desc": {
+        "th": "ล้างมะนาว {lime_amount} ด้วยน้ำสะอาด เช็ดให้แห้ง ใช้ที่ขูดผิวมะนาวขูดเอาเฉพาะผิวสีเขียวบางๆ (อย่าขูดถึงสีขาวข้างในเพราะจะขม) เตรียมผิวมะนาวขูด {zest_amount} ไว้",
+        "en": "Wash {lime_amount} of limes with clean water and dry. Use a zester to remove only the thin green layer (avoid the white pith as it's bitter). Prepare {zest_amount} of lime zest."
+      },
+      "descVariables": {
+        "lime_amount": { "amount": 1000, "unit": "Gram", "scalable": true },
+        "zest_amount": { "amount": 100, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/citrus_sparkle/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกมะนาวเปลือกบางสีเขียวสด ผิวจะหอมและมีน้ำมันหอมระเหยมาก ระวังอย่าขูดลึกเกินไปเพราะส่วนสีขาวจะทำให้ไซรัปขม",
+        "en": "💡 Choose thin-skinned, bright green limes with aromatic zest and essential oils. Be careful not to zest too deep—the white pith will make the syrup bitter."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับผิวมะนาว",
+        "en": "Boil sugar syrup with lime zest"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount} และน้ำตาลทราย {sugar_amount} เปิดไฟกลางคนจนน้ำตาลละลายหมด พอน้ำเชื่อมเดือดให้ใส่ผิวมะนาวขูด {zest_amount} ลงไป ลดไฟอ่อน ต้มต่อ 10 นาทีเพื่อสกัดน้ำมันหอมระเหย",
+        "en": "In a pot, combine {water_amount} of clean water and {sugar_amount} of sugar. Stir over medium heat until sugar dissolves. Once boiling, add {zest_amount} of lime zest. Reduce heat to low and simmer for 10 mins to extract essential oils."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "sugar_amount": { "amount": 2000, "unit": "Gram", "scalable": true },
+        "zest_amount": { "amount": 100, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/citrus_sparkle/man_2.jpg",
+      "tips": {
+        "th": "💡 การต้มน้ำเชื่อมกับผิวมะนาวเป็นเคล็ดลับสำคัญที่ทำให้น้ำอัดลมโฮมเมดมีกลิ่นหอมเหมือนของจริง ไม่หวานแหลมอย่างเดียว",
+        "en": "💡 Boiling syrup with lime zest is the key trick that gives homemade soda its authentic aroma—not just sharp sweetness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "คั้นน้ำมะนาวและเติมกรดซิตริก",
+        "en": "Juice limes and add citric acid"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) ระหว่างนี้คั้นมะนาวที่เตรียมไว้เอาน้ำมะนาวสด เติมน้ำมะนาวลงในน้ำเชื่อม ตามด้วยกรดซิตริก {citric_amount} และเกลือ {salt_amount} คนให้ละลายหมด",
+        "en": "Turn off heat and let syrup cool slightly (warm). Meanwhile, juice the prepared limes. Add fresh lime juice to the syrup, followed by {citric_amount} of citric acid and {salt_amount} of salt. Stir until fully dissolved."
+      },
+      "descVariables": {
+        "citric_amount": { "amount": 30, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 3, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/citrus_sparkle/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำมะนาว ถ้าร้อนจัดวิตามินซีจะสลายและกลิ่นมะนาวจะหาย กรดซิตริกช่วยเพิ่มความเปรี้ยวซ่าแบบน้ำอัดลมแท้",
+        "en": "💡 Wait until syrup is warm before adding lime juice—if too hot, Vitamin C will degrade and lime aroma will vanish. Citric acid adds the authentic soda-like tartness."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อม",
+        "en": "Strain and store the syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดผิวมะนาวและเนื้อออก ได้น้ำเชื่อมสีเหลืองอ่อนใสหอมมะนาว ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 2-3 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove zest and pulp, yielding a clear, pale yellow, lime-aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 2-3 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/citrus_sparkle/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำมะนาวโซดาทั้งหมด ~40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~40L of lime soda at just a few baht per liter."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมมะนาว 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยฝานมะนาวและใบมินต์ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part citrus syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with a lime slice and mint leaves. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/citrus_sparkle/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ อย่าคนแรงเพราะฟองจะหาย",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Don't stir hard or the fizz will disappear."
+      }
+    }
+  ]
+}

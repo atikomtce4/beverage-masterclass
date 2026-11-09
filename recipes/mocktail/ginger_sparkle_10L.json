@@ -1,0 +1,267 @@
+{
+  "id": "ginger_sparkle_10L",
+  "icon": "🫚",
+  "category": "mocktail",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นน้ำเชื่อมฐานสำหรับผสมกับน้ำโซดาเองตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a soda base syrup to be mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please use 'Manual' mode."
+  },
+  "description": "ไซรัปจินเจอร์เอลสมุนไพร 10 ลิตร น้ำเชื่อมเข้มข้นจากขิงแก่จัด ตะไคร้หอม และมะนาวสด ให้รสชาติเผ็ดร้อนสดชื่น หวานอมเปรี้ยวซับซ้อน ผสมกับโซดาเย็นจัดได้เครื่องดื่มจินเจอร์เอลซ่าสไตล์คราฟต์ ดื่มแล้วคล่องคอ หายเหนื่อย",
+  "total_time": 45,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_ginger_sparkle_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซรัปจินเจอร์เอลสมุนไพร (Ginger Sparkle) 10 ลิตร",
+    "en": "Ginger Sparkle Herbal Soda Syrup 10L"
+  },
+  "images": [
+    "images/mocktail/ginger_sparkle/main_1.jpg",
+    "images/mocktail/ginger_sparkle/main_2.jpg",
+    "images/mocktail/ginger_sparkle/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_ginger_sparkle",
+  "prepTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม) + 1 นาที (ผสมโซดา)",
+    "en": "45 mins (make syrup) + 1 min (mix with soda)"
+  },
+  "cookTime": {
+    "th": "45 นาที (ทำน้ำเชื่อม)",
+    "en": "45 mins (syrup only)"
+  },
+  "servings": {
+    "th": "10 ลิตร (ผสมโซดาได้ ~40 ลิตร)",
+    "en": "10 Liters (yields ~40L with soda)"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ไซรัปจินเจอร์เอลสมุนไพรทำเองง่ายๆ: ต้มน้ำเชื่อมกับขิงแก่จัด ตะไคร้หอม และผิวมะนาว เพื่อดึงรสเผ็ดร้อนและกลิ่นหอมสดชื่น เติมน้ำมะนาวสดและกรดซิตริก กรองแล้วเก็บในตู้เย็น เมื่อจะเสิร์ฟผสมกับโซดาเย็นจัดในอัตราส่วน 1:3 ได้เครื่องดื่มจินเจอร์เอลซ่าสดชื่น รสชาติซับซ้อนเหนือกว่าจินเจอร์เอลขวดทั่วไป!",
+    "en": "Easy ginger sparkle herbal syrup: boil sugar syrup with aged ginger, lemongrass, and lemon zest to extract spicy, fresh aroma. Add fresh lemon juice and citric acid, strain and refrigerate. Mix with ice-cold soda at 1:3 ratio for a refreshing, complex craft ginger ale!"
+  },
+  "benefits": {
+    "th": "ต้นทุนต่ำมากเมื่อเทียบกับจินเจอร์เอลนำเข้า ขิงช่วยแก้ท้องอืด คลื่นไส้ บำรุงธาตุ ไล่ลม ตะไคร้ช่วยผ่อนคลาย ไม่มีคาเฟอีนและสารกันเสียสังเคราะห์ ดื่มเย็นซ่าสดชื่น คล่องคอ",
+    "en": "Very low cost compared to imported ginger ale. Ginger helps relieve bloating, nausea, and aids digestion. Lemongrass promotes relaxation. Caffeine-free, no artificial preservatives. Refreshing and ice-cold."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำเชื่อมมีกรดสูงและรสเผ็ดจากขิง ผู้ที่เป็นโรคกระเพาะหรือกรดไหลย้อนควรดื่มหลังอาหารและผสมโซดาในอัตราส่วนที่เจือจางลง สตรีมีครรภ์ควรปรึกษาแพทย์ก่อนบริโภคขิงในปริมาณมาก",
+    "en": "⚠️ The syrup is highly acidic and spicy from ginger. People with stomach ulcers or acid reflux should drink after meals and dilute with more soda. Pregnant women should consult a doctor before consuming large amounts of ginger."
+  },
+  "nutrition": {
+    "calories": "42 kcal",
+    "carbs": "10 g",
+    "sugar": "9 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มน้ำเชื่อม)", "en": "Clean water (for syrup)" },
+      "amount": 5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายขาว", "en": "White sugar" },
+      "amount": 1200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง", "en": "Brown sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขิงแก่จัด (หั่นแว่นบาง)", "en": "Aged ginger (thinly sliced)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ตะไคร้ (หั่นท่อนบุบ)", "en": "Lemongrass (bruised, chopped)" },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำมะนาวสด", "en": "Fresh lemon juice" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ผิวมะนาวขูด (เฉพาะส่วนสีเหลือง)", "en": "Lemon zest (yellow part only)" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วานิลลาสกัด", "en": "Vanilla extract" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กรดซิตริก (Citric Acid)", "en": "Citric acid" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำโซดาเย็นจัด (สำหรับผสมเสิร์ฟ)", "en": "Ice-cold soda water (for serving)" },
+      "amount": 30,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรไซรัปจินเจอร์เอลสมุนไพรเป็นน้ำเชื่อมฐานที่ต้องต้มและกรองด้วยมือ แล้วนำไปผสมกับน้ำโซดาตอนเสิร์ฟ เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการอัดลม (Carbonation) กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Ginger sparkle herbal syrup is a soda base that requires hand-boiling and straining, then mixed with soda water when serving. The AllDrinks System does not yet support carbonation. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและเตรียมขิง ตะไคร้ และมะนาว",
+        "en": "Wash and prepare ginger, lemongrass, and lemon"
+      },
+      "desc": {
+        "th": "ล้างขิงแก่ {ginger_amount} ให้สะอาด ปอกเปลือกออกบางส่วน (เหลือเปลือกบ้างเพื่อให้รสเผ็ดจัด) แล้วหั่นเป็นแว่นบางๆ ล้างตะไคร้ {lemongrass_amount} ตัดรากและใบออก หั่นเป็นท่อน 2 นิ้วแล้วบุบให้แตก ขูดผิวมะนาว {lemon_zest} เฉพาะส่วนสีเหลือง (อย่าขูดถึงส่วนขาวเพราะจะขม) แล้วคั้นเอาน้ำมะนาว {lemon_juice} เตรียมไว้",
+        "en": "Wash {ginger_amount} of aged ginger, partially peel (leave some skin for extra spiciness), and slice thinly. Wash {lemongrass_amount} of lemongrass, trim roots and leaves, cut into 2-inch pieces and bruise them. Zest {lemon_zest} of lemon (yellow part only, avoid white pith which is bitter), then juice to get {lemon_juice} of fresh lemon juice."
+      },
+      "descVariables": {
+        "ginger_amount": { "amount": 500, "unit": "Gram", "scalable": true },
+        "lemongrass_amount": { "amount": 100, "unit": "Gram", "scalable": true },
+        "lemon_zest": { "amount": 10, "unit": "Gram", "scalable": true },
+        "lemon_juice": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/ginger_sparkle/man_1.jpg",
+      "tips": {
+        "th": "💡 เลือกขิงแก่จัด (เปลือกเหี่ยวย่น สีเข้ม) จะให้รสเผ็ดร้อนและกลิ่นหอมเข้มข้นกว่าขิงอ่อน การบุบตะไคร้ช่วยให้น้ำมันหอมระเหยออกมาเต็มที่",
+        "en": "💡 Choose aged ginger (wrinkled skin, dark color) for spicier, more aromatic flavor than young ginger. Bruising lemongrass releases its essential oils fully."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมกับขิงและตะไคร้",
+        "en": "Boil sugar syrup with ginger and lemongrass"
+      },
+      "desc": {
+        "th": "ตั้งหม้อใส่น้ำสะอาด {water_amount}, น้ำตาลทรายขาว {white_sugar} และน้ำตาลทรายแดง {brown_sugar} เปิดไฟกลางคนจนละลาย พอน้ำเชื่อมเดือดให้ใส่ขิงหั่นแว่น ตะไคร้บุบ และผิวมะนาวขูดลงไป ลดไฟอ่อน เคี่ยวต่อ 25 นาทีเพื่อสกัดรสเผ็ดและกลิ่นหอม",
+        "en": "In a pot, combine {water_amount} of clean water, {white_sugar} of white sugar, and {brown_sugar} of brown sugar. Stir until dissolved. Once boiling, add sliced ginger, bruised lemongrass, and lemon zest. Reduce heat and simmer for 25 mins to extract spicy flavor and aroma."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 5, "unit": "Liter", "scalable": true },
+        "white_sugar": { "amount": 1200, "unit": "Gram", "scalable": true },
+        "brown_sugar": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/mocktail/ginger_sparkle/man_2.jpg",
+      "tips": {
+        "th": "💡 การเคี่ยวขิงในน้ำเชื่อมเป็นเวลานานจะดึงสารจินเจอรอล (Gingerol) ออกมา ซึ่งเป็นสารที่ให้รสเผ็ดร้อนและมีสรรพคุณทางยา ผิวมะนาวช่วยเพิ่มกลิ่นหอมสดชื่นแบบซิตรัส",
+        "en": "💡 Simmering ginger in the syrup for an extended time extracts gingerol, the compound responsible for spicy flavor and medicinal benefits. Lemon zest adds a fresh citrus aroma."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำมะนาว กรดซิตริก และวานิลลา",
+        "en": "Add lemon juice, citric acid, and vanilla"
+      },
+      "desc": {
+        "th": "ปิดไฟ ทิ้งน้ำเชื่อมให้เย็นลงเล็กน้อย (อุ่นๆ) เติมน้ำมะนาวสด {lemon_juice}, กรดซิตริก {citric_amount}, เกลือ {salt_amount} และวานิลลา {vanilla} คนให้ละลายหมด",
+        "en": "Turn off heat and let syrup cool slightly (warm). Add {lemon_juice} of fresh lemon juice, {citric_amount} of citric acid, {salt_amount} of salt, and {vanilla} of vanilla. Stir until fully dissolved."
+      },
+      "descVariables": {
+        "lemon_juice": { "amount": 200, "unit": "Gram", "scalable": true },
+        "citric_amount": { "amount": 10, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "vanilla": { "amount": 5, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/mocktail/ginger_sparkle/man_3.jpg",
+      "tips": {
+        "th": "💡 ต้องรอให้น้ำเชื่อมอุ่นลงก่อนเติมน้ำมะนาวและวานิลลา หากร้อนจัดกลิ่นจะระเหยหายไปและรสเปรี้ยวอาจเปลี่ยน เกลือเล็กน้อยช่วยดึงรสขิงให้ชัดเจนขึ้น",
+        "en": "💡 Wait until syrup is warm before adding lemon juice and vanilla. If too hot, aroma will evaporate and acidity may change. A pinch of salt enhances the ginger flavor."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเก็บน้ำเชื่อมจินเจอร์",
+        "en": "Strain and store the ginger syrup"
+      },
+      "desc": {
+        "th": "กรองน้ำเชื่อมผ่านผ้าขาวบางหรือกระชอนตาถี่เพื่อกำจัดขิง ตะไคร้ และตะกอนออก ได้น้ำเชื่อมสีเหลืองทองหอมขิงและตะไคร้ ทิ้งให้เย็นสนิท แล้วบรรจุในขวดแก้วปิดสนิท แช่ตู้เย็นเก็บได้นาน 3-4 สัปดาห์",
+        "en": "Strain the syrup through a cheesecloth or fine mesh sieve to remove ginger, lemongrass, and sediment, yielding a golden, ginger-and-lemongrass aromatic syrup. Let it cool completely, then bottle in a sealed glass jar. Refrigerate and keep for 3-4 weeks."
+      },
+      "descVariables": {},
+      "image": "images/mocktail/ginger_sparkle/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำเชื่อม 10 ลิตรนี้ เมื่อผสมกับโซดาในอัตราส่วน 1:3 จะได้น้ำจินเจอร์เอลทั้งหมด ~40 ลิตร ต้นทุนเพียงลิตรละไม่กี่บาท ถูกกว่าจินเจอร์เอลนำเข้า 4-5 เท่า",
+        "en": "💡 This 10L of syrup, when mixed with soda at 1:3 ratio, yields ~40L of ginger ale at just a few baht per liter—4-5x cheaper than imported ginger ale."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ผสมโซดาและเสิร์ฟ",
+        "en": "Mix with soda and serve"
+      },
+      "desc": {
+        "th": "เมื่อจะเสิร์ฟ: เตรียมแก้วใส่น้ำแข็ง {ice_amount} เต็มแก้ว เทน้ำเชื่อมจินเจอร์ 1 ส่วน (ประมาณ 80-100 ml) แล้วเติมน้ำโซดาเย็นจัด 3 ส่วน คนเบาๆ 1 ครั้ง ตกแต่งด้วยแว่นขิงดองบางๆ ผิวมะนาว หรือใบมินต์ พร้อมเสิร์ฟ!",
+        "en": "When serving: fill a glass with {ice_amount} of ice, pour 1 part ginger syrup (about 80-100 ml), then add 3 parts ice-cold soda water. Stir gently once. Garnish with thin pickled ginger slices, lemon zest, or mint leaves. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 3000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/mocktail/ginger_sparkle/man_5.jpg",
+      "tips": {
+        "th": "💡 เคล็ดลับความซ่า: ใช้โซดาเย็นจัด (แช่ตู้เย็นก่อนใช้) และเทโซดาตามแนวขอบแก้วเพื่อรักษาฟองก๊าซ การตกแต่งด้วยแว่นขิงดองสีชมพูจะทำให้แก้วดูพรีเมียมเหมือนบาร์ชั้นนำ",
+        "en": "💡 Fizz tip: Use ice-cold soda (chilled beforehand) and pour along the glass edge to preserve bubbles. Garnishing with pink pickled ginger gives a premium bar-quality look."
+      }
+    }
+  ]
+}

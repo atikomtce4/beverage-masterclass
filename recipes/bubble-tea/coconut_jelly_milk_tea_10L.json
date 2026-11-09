@@ -1,0 +1,253 @@
+{
+  "id": "coconut_jelly_milk_tea_10L",
+  "icon": "🥥",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้การเตรียมวุ้นมะพร้าวและต้มชาด้วยมือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires hand-preparing coconut jelly and brewing tea, which the AllDrinks System does not yet support. Please use 'Manual' mode."
+  },
+  "description": "ชานมวุ้นมะพร้าว 10 ลิตร ชานมเข้มข้นหอมมัน เสิร์ฟพร้อมวุ้นมะพร้าวกรอบเด้งชุ่มน้ำเชื่อม รสชาติหอมหวานละมุน สดชื่นแบบทรอปิคอล เหมาะสำหรับทุกวัย",
+  "total_time": 45,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_coconut_jelly_milk_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชานมวุ้นมะพร้าว 10 ลิตร",
+    "en": "Milk Tea with Coconut Jelly 10L"
+  },
+  "images": [
+    "images/bubble-tea/coconut_jelly_milk_tea/main_1.jpg",
+    "images/bubble-tea/coconut_jelly_milk_tea/main_2.jpg",
+    "images/bubble-tea/coconut_jelly_milk_tea/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_coconut_jelly",
+  "prepTime": {
+    "th": "15 นาที (เตรียมน้ำเชื่อม+วุ้น) + 30 นาที (เครื่อง)",
+    "en": "15 mins (prep syrup+jelly) + 30 mins (machine)"
+  },
+  "cookTime": {
+    "th": "45 นาที (รวมแช่เย็น)",
+    "en": "45 mins (including chilling)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "ชานมวุ้นมะพร้าวสูตรทรอปิคอล: ต้มชาดำเข้มข้น ผสมนมสดหอมมัน ทำน้ำเชื่อมมะพร้าวหอมหวาน แช่วุ้นมะพร้าวให้ชุ่มรส เสิร์ฟเย็นจัดพร้อมวุ้นมะพร้าวกรอบเด้ง ได้รสชาติหอมหวานละมุนแบบเกาะสวรรค์!",
+    "en": "Tropical milk tea with coconut jelly: brew strong black tea, mix with fragrant fresh milk, make sweet coconut syrup, soak coconut jelly until flavorful. Serve ice-cold with chewy coconut jelly for a heavenly tropical taste!"
+  },
+  "benefits": {
+    "th": "ชาดำมีสารต้านอนุมูลอิสระสูง นมสดให้แคลเซียมและโปรตีน วุ้นมะพร้าวมีไฟเบอร์สูงช่วยระบบขับถ่าย ให้พลังงานและเนื้อสัมผัสกรุบกรอบ เป็นเครื่องดื่มที่สดชื่นและดีต่อลำไส้",
+    "en": "Black tea is rich in antioxidants. Fresh milk provides calcium and protein. Coconut jelly is high in fiber, aids digestion. Provides energy and crunchy texture. A refreshing and gut-friendly beverage."
+  },
+  "warnings": {
+    "th": "⚠️ ชานมมีคาเฟอีน ไม่ควรดื่มก่อนนอน วุ้นมะพร้าวมีน้ำตาลสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม ระวังการสำลักในเด็กเล็ก ควรเคี้ยวให้ละเอียดก่อนกลืน",
+    "en": "⚠️ Milk tea contains caffeine; avoid drinking before bedtime. Coconut jelly is high in sugar; people with diabetes should consume in moderation. Choking hazard for young children. Chew thoroughly before swallowing."
+  },
+  "nutrition": {
+    "calories": "75 kcal",
+    "carbs": "13 g",
+    "sugar": "11 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มชา)", "en": "Clean water (for tea brewing)" },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ชาดำ (ใบหรือผง)", "en": "Black tea (leaves or powder)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดรสจืด", "en": "Fresh milk (plain)" },
+      "amount": 3,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย", "en": "White sugar" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "วุ้นมะพร้าว (nata de coco, แบบชิ้น)", "en": "Coconut jelly (nata de coco, cubed)" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำมะพร้าว (สำหรับทำน้ำเชื่อม)", "en": "Coconut water (for syrup)" },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (สำหรับทำน้ำเชื่อม)", "en": "White sugar (for syrup)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กลิ่นมะพร้าวสกัด (ไม่บังคับ)", "en": "Coconut extract (optional)" },
+      "amount": 5,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแข็ง (สำหรับเสิร์ฟ)", "en": "Ice (for serving)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ",
+        "en": "⚠️ This recipe is not machine-compatible"
+      },
+      "desc": {
+        "th": "สูตรชานมวุ้นมะพร้าวต้องเตรียมวุ้นมะพร้าวและต้มชาด้วยมือ ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Milk tea with coconut jelly requires hand-preparing coconut jelly and brewing tea, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำเชื่อมมะพร้าวและแช่วุ้น",
+        "en": "Prepare coconut syrup and soak jelly"
+      },
+      "desc": {
+        "th": "ตั้งหม้อเล็กใส่น้ำมะพร้าว {coconut_water} และน้ำตาลทราย {sugar_syrup} เปิดไฟกลางคนจนน้ำตาลละลายหมด พอน้ำเชื่อมเดือดให้ลดไฟอ่อน เคี่ยวต่อ 5 นาที ปิดไฟ ทิ้งให้อุ่นลง เติมกลิ่นมะพร้าว {coconut_extract} (ถ้าใช้) แล้วนำวุ้นมะพร้าว {jelly_amount} ที่ล้างแล้วลงไปแช่อย่างน้อย 30 นาทีเพื่อให้วุ้นดูดซับรสหวานและกลิ่นมะพร้าว",
+        "en": "In a small pot, combine {coconut_water} of coconut water and {sugar_syrup} of sugar. Stir over medium heat until sugar dissolves. Once boiling, reduce to low and simmer for 5 mins. Turn off heat and let cool slightly. Add {coconut_extract} of coconut extract (if using), then soak {jelly_amount} of rinsed coconut jelly for at least 30 mins to absorb sweetness and coconut aroma."
+      },
+      "descVariables": {
+        "coconut_water": { "amount": 500, "unit": "Milliliter", "scalable": true },
+        "sugar_syrup": { "amount": 200, "unit": "Gram", "scalable": true },
+        "coconut_extract": { "amount": 5, "unit": "Milliliter", "scalable": true },
+        "jelly_amount": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/coconut_jelly_milk_tea/man_1.jpg",
+      "tips": {
+        "th": "💡 การล้างวุ้นมะพร้าวก่อนแช่น้ำเชื่อมจะช่วยลดรสเปรี้ยวจากการหมักเดิม และทำให้น้ำเชื่อมซึมเข้าเนื้อวุ้นได้ดีขึ้น หากใช้วุ้นมะพร้าวกระป๋อง ให้ล้างน้ำ 2-3 ครั้งก่อนใช้",
+        "en": "💡 Rinsing coconut jelly before soaking in syrup removes the sour fermentation taste and helps syrup penetrate better. If using canned nata de coco, rinse 2-3 times before use."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มชาดำเข้มข้น",
+        "en": "Brew strong black tea"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_boil} ให้เดือดจัด (100°C) ปิดไฟแล้วใส่ชาดำ {tea_amount} ลงไป ปิดฝา焖 5 นาทีเพื่อสกัดรสชาติเข้มข้น กรองกากชาออกผ่านกระชอนหรือผ้าขาวบาง ได้น้ำชาสีน้ำตาลแดงเข้ม",
+        "en": "Boil {water_boil} of clean water to 100°C. Turn off heat and add {tea_amount} of black tea. Cover and steep for 5 mins to extract strong flavor. Strain out tea leaves through a sieve or cheesecloth, yielding dark reddish-brown tea."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 6, "unit": "Liter", "scalable": true },
+        "tea_amount": { "amount": 200, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/coconut_jelly_milk_tea/man_2.jpg",
+      "tips": {
+        "th": "💡 ใช้ชาดำคุณภาพดี (เช่น ชาอัสสัมหรือชาซีลอน) จะให้รสชาติและกลิ่นหอมที่เข้มข้นกว่าชาผงทั่วไป การ焖ชาแทนการต้มต่อเนื่องจะช่วยไม่ให้ชามีรสขม",
+        "en": "💡 Use high-quality black tea (like Assam or Ceylon) for richer flavor and aroma than generic tea powder. Steeping instead of continuous boiling prevents bitterness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมสดและปรุงรส",
+        "en": "Mix fresh milk and season"
+      },
+      "desc": {
+        "th": "เติมนมสด {milk_amount} ลงในชาดำที่กรองแล้ว (ขณะยังอุ่นอยู่) ตามด้วยน้ำตาล {sugar_amount} และเกลือ {salt_amount} คนจนละลายหมด ชิมรสและปรับความหวานตามชอบ ทิ้งให้เย็นที่อุณหภูมิห้อง",
+        "en": "Add {milk_amount} of fresh milk to the strained black tea (while still warm), followed by {sugar_amount} of sugar and {salt_amount} of salt. Stir until fully dissolved. Taste and adjust sweetness to preference. Let cool to room temperature."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 3, "unit": "Liter", "scalable": true },
+        "sugar_amount": { "amount": 300, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/bubble-tea/coconut_jelly_milk_tea/man_3.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยจะช่วยดึงรสชาและนมให้กลมกล่อมขึ้น ไม่ทำให้รู้สึกเค็ม แต่ทำให้รสชาตินุ่มนวลขึ้น การเติมนมตอนชายังอุ่นจะช่วยให้นมละลายเข้ากับชาได้ดี",
+        "en": "💡 A pinch of salt enhances the tea and milk flavors, making them smoother without tasting salty. Adding milk while tea is warm helps it blend better."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นชานม",
+        "en": "Chill the milk tea"
+      },
+      "desc": {
+        "th": "นำชานมที่เย็นแล้วเข้าแช่ตู้เย็นอย่างน้อย 1-2 ชั่วโมง (หรือจนอุณหภูมิประมาณ 4°C) ปิดฝาหรือคลุมพลาสติกแรปเพื่อป้องกันกลิ่นตู้เย็นซึมเข้า",
+        "en": "Refrigerate the cooled milk tea for at least 1-2 hours (or until about 4°C). Cover with a lid or plastic wrap to prevent fridge odors from seeping in."
+      },
+      "descVariables": {},
+      "image": "images/bubble-tea/coconut_jelly_milk_tea/man_4.jpg",
+      "tips": {
+        "th": "💡 ชานมที่ผสมแล้วสามารถเก็บในตู้เย็นได้นาน 2-3 วัน เขย่าก่อนเสิร์ฟหากมีการแยกชั้น วุ้นมะพร้าวที่แช่น้ำเชื่อมแล้วสามารถเก็บในตู้เย็นได้นาน 5-7 วัน",
+        "en": "💡 Mixed milk tea can be stored in the fridge for 2-3 days. Shake well before serving if separation occurs. Coconut jelly soaked in syrup can be refrigerated for 5-7 days."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "ประกอบแก้วและเสิร์ฟ",
+        "en": "Assemble and serve"
+      },
+      "desc": {
+        "th": "ใส่ วุ้นมะพร้าวที่แช่น้ำเชื่อมไว้ 4-5 ช้อนโต๊ะลงก้นแก้ว เติมน้ำแข็ง {ice_amount} ให้เต็มแก้ว เทชานมเย็นจัดลงไปเกือบเต็ม ตกแต่งด้วยวุ้นมะพร้าวเพิ่มเติมด้านบนและใบมินต์ พร้อมเสิร์ฟทันที! ดื่มผ่านหลอดขนาดใหญ่ (12 มม.) เพื่อจะได้ทั้งนมและวุ้นมะพร้าวพร้อมกัน",
+        "en": "Add 4-5 tablespoons of soaked coconut jelly to the bottom of a glass. Fill with {ice_amount} of ice, pour ice-cold milk tea almost to the top. Garnish with extra coconut jelly on top and mint leaves. Serve immediately! Drink through a wide 12mm straw to enjoy both milk and coconut jelly together."
+      },
+      "descVariables": {
+        "ice_amount": { "amount": 2000, "unit": "Gram", "scalable": false }
+      },
+      "image": "images/bubble-tea/coconut_jelly_milk_tea/man_5.jpg",
+      "tips": {
+        "th": "💡 วุ้นมะพร้าวจะคงความกรอบเด้งได้ดีกว่าไข่มุกเมื่อแช่ในเครื่องดื่มเย็น สามารถใส่ลงไปในแก้วล่วงหน้าได้โดยไม่แข็งตัวเหมือนไข่มุก เหมาะสำหรับทำขายเป็นชุดเตรียมล่วงหน้า",
+        "en": "💡 Coconut jelly maintains its chewy texture better than pearls when soaked in cold drinks. Can be added to the glass in advance without hardening like pearls. Perfect for pre-assembled servings."
+      }
+    }
+  ]
+}
