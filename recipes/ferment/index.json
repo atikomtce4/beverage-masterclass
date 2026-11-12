@@ -1,87 +1,138 @@
 [
   {
     "id": "yogurt_drink_10L",
-    "name": { 
-      "th": "โยเกิร์ตพร้อมดื่ม สูตรสตรอว์เบอร์รี 10 ลิตร", 
-      "en": "10L Strawberry Drinking Yogurt" 
+    "name": {
+      "th": "โยเกิร์ตพร้อมดื่ม สูตรสตรอว์เบอร์รี 10 ลิตร",
+      "en": "10L Strawberry Drinking Yogurt"
     },
     "image": "images/ferment/yogurt_drink/main_1.jpg",
-    "prepTime": { 
-      "th": "30 นาที + หมัก 6-8 ชม.", 
-      "en": "30 mins + 6-8 hrs fermentation" 
+    "prepTime": {
+      "th": "30 นาที + หมัก 6-8 ชม.",
+      "en": "30 mins + 6-8 hrs fermentation"
     },
     "rating": "4.9",
-    "badges": { 
-      "th": ["โปรไบโอติกสูง", "เปรี้ยวหวานสดชื่น", "สูตรสตรอว์เบอร์รี"], 
-      "en": ["High Probiotics", "Sweet & Tangy", "Strawberry"] 
+    "badges": {
+      "th": ["โปรไบโอติกสูง", "เปรี้ยวหวานสดชื่น", "สูตรสตรอว์เบอร์รี"],
+      "en": ["High Probiotics", "Sweet & Tangy", "Strawberry"]
     }
   },
   {
     "id": "kombucha_10L",
-    "name": { 
-      "th": "คอมบูชาสูตรดั้งเดิม 10 ลิตร", 
-      "en": "10L Original Kombucha" 
+    "name": {
+      "th": "คอมบูชาสูตรดั้งเดิม 10 ลิตร",
+      "en": "10L Original Kombucha"
     },
     "image": "images/ferment/kombucha/main_1.jpg",
-    "prepTime": { 
-      "th": "30 นาที + หมัก 7-14 วัน", 
-      "en": "30 mins + 7-14 days fermentation" 
+    "prepTime": {
+      "th": "30 นาที + หมัก 7-14 วัน",
+      "en": "30 mins + 7-14 days fermentation"
     },
     "rating": "4.8",
-    "badges": { 
-      "th": ["ดีท็อกซ์", "โปรไบโอติก", "สดชื่น"], 
-      "en": ["Detox", "Probiotics", "Refreshing"] 
+    "badges": {
+      "th": ["ดีท็อกซ์", "โปรไบโอติก", "สดชื่น"],
+      "en": ["Detox", "Probiotics", "Refreshing"]
     }
   },
   {
     "id": "lacto_drink_10L",
-    "name": { 
-      "th": "นมเปรี้ยวแลคโตบาซิลลัส สูตรแบบยากูลท์ 10 ลิตร", 
-      "en": "10L Lactobacillus Probiotic Drink (Yakult Style)" 
+    "name": {
+      "th": "นมเปรี้ยวแลคโตบาซิลลัส สูตรแบบยากูลท์ 10 ลิตร",
+      "en": "10L Lactobacillus Probiotic Drink (Yakult Style)"
     },
     "image": "images/ferment/lacto_drink/main_1.jpg",
-    "prepTime": { 
-      "th": "30 นาที + หมัก 8-12 ชม.", 
-      "en": "30 mins + 8-12 hrs fermentation" 
+    "prepTime": {
+      "th": "30 นาที + หมัก 8-12 ชม.",
+      "en": "30 mins + 8-12 hrs fermentation"
     },
     "rating": "4.9",
-    "badges": { 
-      "th": ["เสริมภูมิคุ้มกัน", "ย่อยง่าย", "โปรไบโอติก L. casei"], 
-      "en": ["Boosts Immunity", "Easy Digestion", "L. casei Probiotics"] 
+    "badges": {
+      "th": ["เสริมภูมิคุ้มกัน", "ย่อยง่าย", "โปรไบโอติก L. casei"],
+      "en": ["Boosts Immunity", "Easy Digestion", "L. casei Probiotics"]
     }
   },
   {
     "id": "water_kefir_fruit_10L",
-    "name": { 
-      "th": "น้ำเคฟียร์ผลไม้ สูตรโซดาโปรไบโอติก 10 ลิตร", 
-      "en": "10L Fruit Water Kefir - Probiotic Soda" 
+    "name": {
+      "th": "น้ำเคฟียร์ผลไม้ สูตรโซดาโปรไบโอติก 10 ลิตร",
+      "en": "10L Fruit Water Kefir - Probiotic Soda"
     },
     "image": "images/ferment/water_kefir/main_1.jpg",
-    "prepTime": { 
-      "th": "30 นาที + หมัก F1 24-48 ชม. + F2 12-24 ชม.", 
-      "en": "30 mins + F1 24-48 hrs + F2 12-24 hrs" 
+    "prepTime": {
+      "th": "30 นาที + หมัก F1 24-48 ชม. + F2 12-24 ชม.",
+      "en": "30 mins + F1 24-48 hrs + F2 12-24 hrs"
     },
     "rating": "4.8",
-    "badges": { 
-      "th": ["โปรไบโอติกหลากหลาย", "ไม่มีนม (Vegan)", "โซดาธรรมชาติ"], 
-      "en": ["Diverse Probiotics", "Dairy-Free (Vegan)", "Natural Soda"] 
+    "badges": {
+      "th": ["โปรไบโอติกหลากหลาย", "ไม่มีนม (Vegan)", "โซดาธรรมชาติ"],
+      "en": ["Diverse Probiotics", "Dairy-Free (Vegan)", "Natural Soda"]
     }
   },
   {
     "id": "rice_wine_10L",
-    "name": { 
-      "th": "น้ำข้าวหมากสด สูตรดั้งเดิม 10 ลิตร", 
-      "en": "10L Fresh Fermented Rice Drink (Traditional)" 
+    "name": {
+      "th": "น้ำข้าวหมากสด สูตรดั้งเดิม 10 ลิตร",
+      "en": "10L Fresh Fermented Rice Drink (Traditional)"
     },
     "image": "images/ferment/rice_wine/main_1.jpg",
-    "prepTime": { 
-      "th": "45 นาที (เครื่อง) + หมัก 2-3 วัน", 
-      "en": "45 mins (Machine) + 2-3 days fermentation" 
+    "prepTime": {
+      "th": "45 นาที (เครื่อง) + หมัก 2-3 วัน",
+      "en": "45 mins (Machine) + 2-3 days fermentation"
     },
     "rating": "4.9",
-    "badges": { 
-      "th": ["โปรไบโอติกไทย", "ช่วยนอนหลับ", "หวานหอมธรรมชาติ"], 
-      "en": ["Thai Probiotics", "Sleep Aid", "Natural Sweetness"] 
+    "badges": {
+      "th": ["โปรไบโอติกไทย", "ช่วยนอนหลับ", "หวานหอมธรรมชาติ"],
+      "en": ["Thai Probiotics", "Sleep Aid", "Natural Sweetness"]
+    }
+  },
+  {
+    "id": "pineapple_wine_10L",
+    "name": {
+      "th": "ไวน์สัปปะรดโฮมเมด (หวานพอดี) 10 ลิตร",
+      "en": "10L Semi-Sweet Homemade Pineapple Wine"
+    },
+    "image": "images/ferment/pineapple_wine/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (เครื่อง) + หมัก 3-6 สัปดาห์",
+      "en": "30 mins (Machine) + 3-6 weeks fermentation"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~11-12%", "หอมผลไม้", "Semi-Sweet"],
+      "en": ["~11-12% ABV", "Fruity Aroma", "Semi-Sweet"]
+    }
+  },
+  {
+    "id": "lychee_wine_10L",
+    "name": {
+      "th": "ไวน์ลิ้นจี่โฮมเมด (หวานพอดี) 10 ลิตร",
+      "en": "10L Semi-Sweet Homemade Lychee Wine"
+    },
+    "image": "images/ferment/lychee_wine/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (เครื่อง) + หมัก 3-6 สัปดาห์",
+      "en": "30 mins (Machine) + 3-6 weeks fermentation"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~11-12%", "หอมลิ้นจี่", "หวานละมุน"],
+      "en": ["~11-12% ABV", "Lychee Aroma", "Smooth Sweetness"]
+    }
+  },
+  {
+    "id": "mulberry_wine_10L",
+    "name": {
+      "th": "ไวน์ลูกหม่อนโฮมเมด (หวานพอดี) 10 ลิตร",
+      "en": "10L Semi-Sweet Homemade Mulberry Wine"
+    },
+    "image": "images/ferment/mulberry_wine/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (เครื่อง) + หมัก 3-6 สัปดาห์",
+      "en": "30 mins (Machine) + 3-6 weeks fermentation"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~11-12%", "ต้านอนุมูลอิสระ", "สีม่วงธรรมชาติ"],
+      "en": ["~11-12% ABV", "Antioxidant", "Natural Purple"]
     }
   }
 ]
