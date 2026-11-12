@@ -1,0 +1,218 @@
+{
+  "id": "tepache_10L",
+  "icon": "🍍",
+  "category": "ferment",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เป็นกระบวนการหมักดั้งเดิมด้วยมือ (Wild Fermentation) ซึ่งเครื่อง AllDrinks System ยังไม่รองรับ กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This is a traditional manual wild fermentation process. AllDrinks System does not yet support this. Please use 'Manual' mode."
+  },
+  "description": "น้ำเดปาเช่ (Tepache) เครื่องดื่มหมักดั้งเดิมของประเทศเม็กซิโก ทำจากเปลือกและแกนสับปะรดหมักกับน้ำตาลทรายแดงและเครื่องเทศ ให้รสเปรี้ยวหวานสดชื่น มีฟองก๊าซธรรมชาติเล็กน้อย และอุดมไปด้วยโปรไบโอติก",
+  "total_time": 4320,
+  "target_temp": 25,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_tepache_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำเดปาเช่ (Tepache) สูตรเม็กซิกัน 10 ลิตร",
+    "en": "Mexican Tepache (Fermented Pineapple Drink) 10L"
+  },
+  "images": [
+    "images/ferment/tepache/main_1.jpg",
+    "images/ferment/tepache/main_2.jpg",
+    "images/ferment/tepache/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_tepache",
+  "prepTime": {
+    "th": "30 นาที (เตรียม) + หมัก 2-3 วัน",
+    "en": "30 mins (prep) + 2-3 days fermentation"
+  },
+  "cookTime": {
+    "th": "30 นาที (ทำเอง) + หมักเอง 2-3 วัน",
+    "en": "30 mins (Manual) + 2-3 days external fermentation"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "Tepache (เท-ปา-เช่) คือเครื่องดื่มหมักพื้นบ้านของเม็กซิโกที่ชาญฉลาดและไร้ขยะ (Zero Waste) โดยใช้เปลือกและแกนสับปะรดที่เหลือจากการกิน มาหมักกับน้ำตาลทรายแดง (Piloncillo) และเครื่องเทศอย่างอบเชย ผ่านการหมักด้วยยีสต์ธรรมชาติ (Wild Yeast) 2-3 วัน จะได้เครื่องดื่มซ่าเบาๆ หอมเครื่องเทศ และดีต่อลำไส้",
+    "en": "Tepache is a traditional Mexican zero-waste fermented drink made from pineapple peels and cores, fermented with brown sugar (Piloncillo) and spices like cinnamon. Wild yeast fermentation for 2-3 days yields a lightly fizzy, spiced, and probiotic-rich beverage."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยโปรไบโอติกจากกระบวนการหมักธรรมชาติ ช่วยระบบย่อยอาหารและลำไส้ มีเอนไซม์บรอมีเลนจากสับปะรด ช่วยลดการอักเสบ และเป็นการใช้ประโยชน์จากเปลือกสับปะรดแบบไร้ขยะ (Zero Waste)",
+    "en": "Rich in natural probiotics for gut health, contains bromelain enzyme from pineapple to reduce inflammation, and is a perfect zero-waste way to use pineapple peels."
+  },
+  "warnings": {
+    "th": "⚠️ ต้องใช้ภาชนะแก้วหรือพลาสติก Food Grade เท่านั้น ห้ามใช้โลหะ เพราะกรดจากการหมักจะทำปฏิกิริยากับโลหะ หากมีราขึ้นเป็นจุดขนฟูสีเขียว/ดำ/ขาว ให้ทิ้งทันที (แต่ฟิล์มขาวบางๆ ด้านบนคือ Kahm Yeast ซึ่งปลอดภัย) ควรปล่อยก๊าซออกวันละครั้งหากปิดฝาขวด",
+    "en": "⚠️ Use only glass or Food Grade plastic containers. Never use metal, as fermentation acids react with it. If fuzzy green/black/white mold appears, discard immediately (thin white film is safe Kahm Yeast). Burp bottles daily if sealed."
+  },
+  "nutrition": {
+    "calories": "35 kcal",
+    "carbs": "8 g",
+    "sugar": "7 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (ปราศจากคลอรีน)", "en": "Clean water (chlorine-free)" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เปลือกและแกนสับปะรด (ออร์แกนิกดีที่สุด)", "en": "Pineapple peels and cores (organic preferred)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายแดง หรือ น้ำตาลปี๊บ", "en": "Brown sugar or Piloncillo" },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "อบเชย (แบบแท่ง)", "en": "Cinnamon sticks" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กานพลู (ไม่บังคับ)", "en": "Cloves (optional)" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ทำด้วยมือทั้งหมด (Traditional Manual Ferment)",
+        "en": "⚠️ This recipe is fully manual (Traditional Manual Ferment)"
+      },
+      "desc": {
+        "th": "สูตรน้ำเดปาเช่ (Tepache) เป็นกระบวนการหมักด้วยยีสต์ธรรมชาติแบบดั้งเดิม ซึ่งต้องทำด้วยมือทั้งหมด กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง",
+        "en": "Tepache is a traditional wild yeast fermentation process that must be done manually. Please switch to 'Manual' mode for the correct preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมเปลือกสับปะรด (ห้ามขัดล้างแรง)",
+        "en": "Prepare pineapple peels (Do not scrub hard)"
+      },
+      "desc": {
+        "th": "นำสับปะรดทั้งผลมาล้างน้ำผ่านๆ เบาๆ เพื่อกำจัดสิ่งสกปรก **ห้ามใช้แปรงขัดหรือล้างด้วยน้ำยาล้างจาน** เพราะเราต้องการยีสต์ธรรมชาติ (Wild Yeast) ที่ติดอยู่ที่เปลือกสับปะรดเพื่อใช้ในการหมัก จากนั้นหั่นเอาเฉพาะเปลือกและแกนออกมา {pineapple_amount}",
+        "en": "Rinse the whole pineapple gently under water to remove dirt. **Do not scrub or use dish soap**, as we need the natural wild yeast on the peel for fermentation. Cut and collect {pineapple_amount} of peels and cores."
+      },
+      "descVariables": {
+        "pineapple_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/tepache/man_1.jpg",
+      "tips": {
+        "th": "💡 การใช้สับปะรดออร์แกนิกจะดีที่สุด เพราะไม่มีสารเคมีตกค้างที่ผิว ซึ่งจะฆ่ายีสต์ธรรมชาติทำให้หมักไม่ขึ้น",
+        "en": "💡 Organic pineapple is best, as pesticide residues on the skin can kill the wild yeast and prevent fermentation."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำเชื่อมเครื่องเทศ",
+        "en": "Boil spiced syrup"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_amount} ให้เดือด ใส่แท่งอบเชย {cinnamon_amount} และกานพลู {clove_amount} ลงไป ตามด้วยน้ำตาลทรายแดง {sugar_amount} คนจนน้ำตาลละลายหมด ยกลงจากเตา",
+        "en": "Boil {water_amount} of clean water. Add {cinnamon_amount} of cinnamon sticks and {clove_amount} of cloves, followed by {sugar_amount} of brown sugar. Stir until fully dissolved, then remove from heat."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 10, "unit": "Liter", "scalable": true },
+        "cinnamon_amount": { "amount": 10, "unit": "Gram", "scalable": true },
+        "clove_amount": { "amount": 2, "unit": "Gram", "scalable": true },
+        "sugar_amount": { "amount": 1000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/tepache/man_2.jpg",
+      "tips": {
+        "th": "💡 หากใช้น้ำประปา ควรต้มและทิ้งไว้ให้เย็นเพื่อให้คลอรีนระเหยออกก่อน เพราะคลอรีนสามารถยับยั้งการเจริญเติบโตของยีสต์ได้",
+        "en": "💡 If using tap water, boil and let it cool first to evaporate chlorine, which can inhibit yeast growth."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิให้เย็นลง (สำคัญมาก!)",
+        "en": "Cool down (Crucial!)"
+      },
+      "desc": {
+        "th": "ทิ้งน้ำเชื่อมเครื่องเทศไว้ให้เย็นลงจนเป็นอุณหภูมิห้อง (ต่ำกว่า 30°C) หากใส่เปลือกสับปะรดลงไปในน้ำที่ร้อนเกินไป ยีสต์ธรรมชาติจะตายและการหมักจะไม่เกิดขึ้น",
+        "en": "Let the spiced syrup cool down to room temperature (below 30°C). Adding pineapple peels to water that is too hot will kill the wild yeast and fermentation will not occur."
+      },
+      "descVariables": {},
+      "image": "images/ferment/tepache/man_3.jpg",
+      "tips": {
+        "th": "💡 สามารถเร่งการเย็นตัวได้โดยวางหม้อในอ่างน้ำเย็น แต่ต้องมั่นใจว่าอุณหภูมิต่ำกว่า 30°C ก่อนขั้นตอนถัดไป",
+        "en": "💡 You can speed up cooling by placing the pot in a cold water bath, but ensure the temperature is below 30°C before the next step."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "รวมส่วนผสมและเริ่มหมัก (2-3 วัน)",
+        "en": "Combine and ferment (2-3 days)"
+      },
+      "desc": {
+        "th": "ใส่เปลือกและแกนสับปะรด {pineapple_amount} ลงในโหลแก้วหรือถังพลาสติก Food Grade ขนาดใหญ่ เทน้ำเชื่อมที่เย็นแล้วลงไปให้ท่วมสับปะรด คนให้เข้ากันเล็กน้อย ปิดปากโหลด้วยผ้าขาวบางหรือกระดาษกรองกาแฟที่ยึดด้วยยางรัด (เพื่อให้ก๊าซระบายออกได้แต่แมลงเข้าไม่ได้) วางไว้ในที่อุณหภูมิห้อง (25-30°C) ห่างจากแสงแดด หมักนาน 2-3 วัน",
+        "en": "Place {pineapple_amount} of pineapple peels and cores into a large glass jar or Food Grade plastic container. Pour the cooled syrup over them, stir gently. Cover the mouth with cheesecloth or a coffee filter secured with a rubber band (to let gas escape but keep insects out). Place at room temperature (25-30°C) away from direct sunlight. Ferment for 2-3 days."
+      },
+      "descVariables": {
+        "pineapple_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/tepache/man_4.jpg",
+      "tips": {
+        "th": "💡 ในวันที่ 2-3 คุณจะเริ่มเห็นฟองก๊าซเล็กๆ ผุดขึ้นมาและมีกลิ่นหอมเปรี้ยวๆ หวานๆ แบบแอลกอฮอล์อ่อนๆ นั่นคือสัญญาณว่าการหมักกำลังดำเนินไปด้วยดี",
+        "en": "💡 On days 2-3, you'll start seeing small bubbles rising and smell a sweet-tangy, mildly alcoholic aroma. This is a sign that fermentation is going well."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "กรอง บรรจุขวด และแช่เย็น",
+        "en": "Strain, bottle, and chill"
+      },
+      "desc": {
+        "th": "เมื่อได้รสชาติที่ต้องการ (เปรี้ยวหวานพอดีและมีฟองซ่าเบาๆ) ให้กรองเอาเปลือกสับปะรดและเครื่องเทศออกให้หมด บีบเอาน้ำจากกากออกให้หมด เทน้ำเดปาเช่ที่ได้ใส่ขวดแก้วปิดฝาแน่น นำเข้าตู้เย็นทันที ความเย็นจะหยุดการหมักและทำให้ก๊าซละลายในน้ำได้ดีขึ้น พร้อมเสิร์ฟเย็นจัด!",
+        "en": "When desired taste is reached (tangy-sweet with light fizz), strain out all pineapple peels and spices, squeezing the liquid from the pulp. Pour the Tepache into glass bottles and seal tightly. Refrigerate immediately. The cold stops fermentation and helps dissolve the gas, making it perfectly fizzy. Serve ice-cold!"
+      },
+      "descVariables": {},
+      "image": "images/ferment/tepache/man_5.jpg",
+      "tips": {
+        "th": "💡 หากปิดฝาขวดแก้วแน่นและแช่ตู้เย็นต่ออีก 1-2 วัน จะเกิดคาร์บอเนชั่น (ความซ่า) ตามธรรมชาติเพิ่มขึ้น แต่ควร 'เปิดฝาปล่อยก๊าซ (Burp)' วันละครั้งเพื่อป้องกันขวดแตก",
+        "en": "💡 If sealed tightly in glass bottles and refrigerated for 1-2 more days, natural carbonation will increase. Remember to 'burp' (open slightly to release gas) daily to prevent bottle explosion."
+      }
+    }
+  ]
+}

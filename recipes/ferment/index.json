@@ -134,5 +134,22 @@
       "th": ["แอลกอฮอล์ ~11-12%", "ต้านอนุมูลอิสระ", "สีม่วงธรรมชาติ"],
       "en": ["~11-12% ABV", "Antioxidant", "Natural Purple"]
     }
+  },
+  {
+    "id": "tepache_10L",
+    "name": {
+      "th": "น้ำเดปาเช่ (Tepache) สูตรเม็กซิกัน 10 ลิตร",
+      "en": "Mexican Tepache (Fermented Pineapple Drink) 10L"
+    },
+    "image": "images/ferment/tepache/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที + หมัก 2-3 วัน",
+      "en": "30 mins + 2-3 days fermentation"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["Zero Waste", "โปรไบโอติกธรรมชาติ", "โซดาผลไม้"],
+      "en": ["Zero Waste", "Natural Probiotics", "Fruit Soda"]
+    }
   }
 ]
