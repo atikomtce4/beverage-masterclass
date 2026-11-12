@@ -1,0 +1,384 @@
+{
+  "id": "mulberry_wine_10L",
+  "icon": "🍇",
+  "category": "ferment",
+  "machineCompatible": true,
+  "description": "ไวน์ลูกหม่อนโฮมเมด 10 ลิตร แบบ Semi-Sweet ทำจากน้ำลูกหม่อนเข้มข้น ต้มฆ่าเชื้อที่ 95°C ลดอุณหภูมิเหลือ 25°C เติมยีสต์ หมัก 7-14 วัน แล้วปรับความหวานท้ายกระบวนการ ได้ไวน์สีม่วงrubyเข้ม อุดมไปด้วยสารต้านอนุมูลอิสระ แอลกอฮอล์ ~11-12%",
+  "total_time": 20160,
+  "target_temp": 25,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_mulberry_wine_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไวน์ลูกหม่อนโฮมเมด (หวานพอดี) 10 ลิตร",
+    "en": "Homemade Semi-Sweet Mulberry Wine 10L"
+  },
+  "images": [
+    "images/ferment/mulberry_wine/main_1.jpg",
+    "images/ferment/mulberry_wine/main_2.jpg",
+    "images/ferment/mulberry_wine/main_3.jpg",
+    "images/ferment/mulberry_wine/main_4.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_mulberry_wine",
+  "prepTime": {
+    "th": "30 นาที (เครื่องเตรียมฐาน) + หมัก 7-14 วัน (Primary) + 2-4 สัปดาห์ (Secondary)",
+    "en": "30 mins (Machine Prep) + 7-14 days (Primary) + 2-4 weeks (Secondary) fermentation"
+  },
+  "cookTime": {
+    "th": "30 นาที (เครื่อง) + หมักเอง 3-6 สัปดาห์",
+    "en": "30 mins (Machine) + 3-6 weeks external fermentation"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "เครื่อง AllDrinks System ช่วยคุณทำขั้นตอนที่สำคัญที่สุด: การต้มน้ำลูกหม่อนเข้มข้นกับน้ำตาลที่ 95°C เพื่อฆ่าเชื้อและการลดอุณหภูมิลงมาที่ 25°C อย่างแม่นยำ! หลังจากเครื่องโอนถ่ายลงถังหมักแล้ว คุณเพียงเติมยีสต์และหมักจนแห้ง จากนั้นค่อย 'Back-Sweetening' เพื่อให้ได้ไวน์ลูกหม่อนสีสวย หอม berry เข้มข้น แอลกอฮอล์ ~11-12%",
+    "en": "The AllDrinks System handles the most critical part: pasteurizing mulberry concentrate at 95°C to preserve deep purple anthocyanin color, and rapidly chilling to exactly 25°C! After transfer, add wine yeast and ferment until dry. Then, 'Back-Sweeten' for a beautiful, rich berry semi-sweet wine with ~11-12% ABV."
+  },
+  "benefits": {
+    "th": "ไวน์ลูกหม่อนมีสารต้านอนุมูลอิสระสูงมาก (Anthocyanins) จากสีม่วงเข้ม ช่วยบำรุงสายตา ชะลอวัย และเสริมสร้างภูมิคุ้มกัน การหมักเองควบคุมคุณภาพได้ 100%",
+    "en": "Mulberry wine is extremely high in antioxidants (Anthocyanins) from its deep purple color. Supports eye health, anti-aging, and boosts immunity. Home fermentation ensures 100% quality control."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำลูกหม่อนติดสีเสื้อผ้าและพื้นผิวได้ง่ายมาก ควรสวมผ้ากันเปื้อนและถุงมือ ห้ามใช้ภาชนะโลหะระหว่างหมัก (ยกเว้นสแตนเลส Food Grade) ระวังแรงดันก๊าซในขวดปิดแน่นอาจระเบิดได้",
+    "en": "⚠️ Mulberry juice stains clothes and surfaces easily. Wear an apron and gloves. Never use metal containers during fermentation (except Food Grade stainless steel). Sealed bottles may explode from CO2 pressure."
+  },
+  "nutrition": {
+    "calories": "85 kcal",
+    "carbs": "9 g",
+    "sugar": "7 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำลูกหม่อนเข้มข้น", "en": "Mulberry concentrate" },
+      "amount": 1500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทราย (อาหารยีสต์สำหรับหมัก)", "en": "White sugar (food for yeast fermentation)" },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ยีสต์ไวน์ (เช่น Lalvin EC-1118 หรือ 71B-1122)", "en": "Wine yeast (e.g., Lalvin EC-1118 or 71B-1122)" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ยีสต์อาหาร (Yeast Nutrient)", "en": "Yeast Nutrient" },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำเลมอนหรือกรดซิตริก (ปรับ pH - ลูกหม่อนมีความเป็นกรดอยู่แล้ว ใช้ปริมาณน้อย)", "en": "Lemon juice or citric acid (pH adjuster - Mulberry is naturally acidic, use less)" },
+      "amount": 20,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลทรายหรือน้ำเชื่อม (สำหรับปรับรสท้ายกระบวนการ / Back-sweetening)", "en": "Sugar or syrup (for Back-sweetening at the end)" },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "Campden tablet (Potassium Metabisulfite) - แนะนำสำหรับหยุดยีสต์", "en": "Campden tablet (Potassium Metabisulfite) - recommended to stabilize" },
+      "amount": 1,
+      "unit": "Piece",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 7,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 7, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้ร้อน (95°C)", "en": "Heat Water to 95°C" },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 95°C เพื่อเตรียมผสมน้ำลูกหม่อนเข้มข้นและฆ่าเชื้อ",
+        "en": "The machine heats water to 95°C to prepare for mulberry concentrate mixing and sterilization."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "ใส่น้ำลูกหม่อนเข้มข้นและน้ำตาล", "en": "Add Mulberry Concentrate and Sugar" },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำลูกหม่อนเข้มข้น {mulberry} และน้ำตาล {sugar} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {mulberry} of mulberry concentrate and {sugar} of sugar, activating stirring."
+      },
+      "descVariables": {
+        "mulberry": { "amount": 1500, "unit": "Milliliter", "scalable": true },
+        "sugar": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Valve_CIRC,Pump,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มและฆ่าเชื้อ (10 นาที)", "en": "Boil and Sterilize (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 10 นาที เพื่อฆ่าเชื้อแบคทีเรียที่ไม่ดีและละลายน้ำตาลให้หมด โดยยังคงสีม่วง Anthocyanin ไว้",
+        "en": "Machine maintains 95°C for 10 mins to sterilize harmful bacteria and fully dissolve sugar, while preserving purple Anthocyanin color."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ระบายความร้อนหม้อ (รอเย็นถึง 50°C)", "en": "Cool Down Pot (Wait until 50°C)" },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 50°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 50°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 25,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิอย่างรวดเร็ว (เหลือ 25°C)", "en": "Rapidly Chill (to 25°C)" },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิจาก 50°C ลงเหลือ 25°C อย่างรวดเร็ว พร้อมสำหรับเติมยีสต์ (ร้อนเกิน 30°C = ยีสต์ตาย)",
+        "en": "Activate copper coil and submersible pump to rapidly cool from 50°C to 25°C, ready for yeast (above 30°C = yeast dies)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เตรียมถังหมักและยีสต์", "en": "Prepare Fermentation Vessel and Yeast" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 25°C พร้อมแล้ว! กรุณาเตรียมถังหมักที่ฆ่าเชื้อแล้ว (Food Grade Plastic หรือ Glass) ยีสต์ไวน์ {yeast} และยีสต์อาหาร {nutrient} เมื่อพร้อมแล้วกด OK เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Temperature is ready at 25°C! Please prepare a sterilized fermentation vessel (Food Grade Plastic or Glass), {yeast} of wine yeast, and {nutrient} of yeast nutrient. Press OK when ready, the machine will transfer out."
+      },
+      "descVariables": {
+        "yeast": { "amount": 10, "unit": "Gram", "scalable": true },
+        "nutrient": { "amount": 5, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "โอนน้ำลูกหม่อนหวานออกสู่ถังหมัก", "en": "Transfer Sweet Mulberry Base to Fermentation Vessel" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำลูกหม่อนหวานออกจากหม้อต้มไปยังถังหมัก กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring sweet mulberry base from the pot to the fermentation vessel. Please wait until the process is complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "เตรียมหม้ออีนาเมลและวัตถุดิบ", "en": "Prepare enamel pot and ingredients" },
+      "desc": {
+        "th": "เตรียมหม้ออีนาเมลสีขาวขนาด 12-15 ลิตร วางบนเตาไฟฟ้า เติมน้ำสะอาด {water} ลงไป จุ่ม DS18B20 sensor ลงในหม้อ (ปลาย sensor จุ่มในน้ำ แต่ตัวแสดงผลอยู่ขอบหม้อ) เตรียม น้ำลูกหม่อนเข้มข้น {mulberry} และน้ำตาล {sugar} ไว้ข้างๆ",
+        "en": "Prepare a 12-15L white enamel pot on electric stove. Add {water} of clean water. Immerse DS18B20 sensor in pot (sensor tip in water, display at pot edge). Prepare {mulberry} of mulberry concentrate and {sugar} of sugar nearby."
+      },
+      "descVariables": {
+        "water": { "amount": 7, "unit": "Liter", "scalable": true },
+        "mulberry": { "amount": 1500, "unit": "Milliliter", "scalable": true },
+        "sugar": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/mulberry_wine/man_1.jpg",
+      "tips": {
+        "th": "💡 หม้ออีนาเมลสีขาวเหมาะมากเพราะไม่ทำปฏิกิริยากับกรดผลไม้ และทำความสะอาดง่าย DS18B20 sensor ต้องจุ่มลึกประมาณ 5-10 ซม. จากก้นหม้อเพื่อวัดอุณหภูมิได้แม่นยำ",
+        "en": "💡 White enamel pot is ideal as it doesn't react with fruit acids and is easy to clean. DS18B20 sensor should be immersed 5-10 cm from pot bottom for accurate temperature reading."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำลูกหม่อนเข้มข้นกับน้ำตาลที่ 95°C", "en": "Boil mulberry concentrate and sugar at 95°C" },
+      "desc": {
+        "th": "เปิดเตาไฟฟ้าไฟกลาง-แรง คนน้ำให้ร้อน เมื่อ DS18B20 แสดงอุณหภูมิ 95°C ใส่น้ำลูกหม่อนเข้มข้น {mulberry} และน้ำตาล {sugar} ลงไป คนจนน้ำตาลละลายหมด รักษาอุณหภูมิ 95°C ต่อเนื่อง 10 นาที (ดูจาก DS18B20) เพื่อฆ่าเชื้อ",
+        "en": "Turn electric stove to medium-high heat. Stir water until hot. When DS18B20 shows 95°C, add {mulberry} of mulberry concentrate and {sugar} of sugar. Stir until sugar dissolves. Maintain 95°C for 10 minutes (watch DS18B20) to sterilize."
+      },
+      "descVariables": {
+        "mulberry": { "amount": 1500, "unit": "Milliliter", "scalable": true },
+        "sugar": { "amount": 2000, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/mulberry_wine/man_2.jpg",
+      "tips": {
+        "th": "💡 การควบคุมที่ 95°C (ไม่เดือดพล่าน 100°C) จะช่วยฆ่าเชื้อแต่ยังคงสีม่วง Anthocyanin และกลิ่นหอม berry ของลูกหม่อนไว้ได้ดีที่สุด ไม่ทำให้สีเปลี่ยนเป็นน้ำตาล",
+        "en": "💡 Controlling at 95°C (not a rolling boil at 100°C) sterilizes while preserving the deep purple Anthocyanin color and berry aroma of mulberry, preventing it from turning brown."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": { "th": "ลดอุณหภูมิเหลือ 25°C (สำคัญมาก!)", "en": "Cool down to 25°C (Crucial!)" },
+      "desc": {
+        "th": "ปิดเตาไฟฟ้า ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ คนเป็นระยะ ดู DS18B20 sensor อย่างต่อเนื่อง เมื่ออุณหภูมิลดเหลือ 50°C สามารถย้ายหม้อไปวางในอ่างน้ำเย็นเพื่อเร่งการเย็นตัว เมื่อ DS18B20 แสดง 25°C พร้อมเติมยีสต์ (ร้อนเกิน 30°C = ยีสต์ตาย!)",
+        "en": "Turn off electric stove. Let pot cool naturally, stirring occasionally. Watch DS18B20 sensor continuously. When temperature drops to 50°C, can move pot to cold water bath to speed cooling. When DS18B20 shows 25°C, ready for yeast (above 30°C = yeast dies!)."
+      },
+      "descVariables": {},
+      "image": "images/ferment/mulberry_wine/man_3.jpg",
+      "tips": {
+        "th": "💡 นี่คือขั้นตอนที่สำคัญที่สุด! ยีสต์ไวน์ตายที่อุณหภูมิ >30°C และไม่ทำงานที่ <15°C ดังนั้น 25°C คือจุดที่สมบูรณ์แบบ DS18B20 จะบอกคุณได้แบบ real-time",
+        "en": "💡 This is the most crucial step! Wine yeast dies at >30°C and is inactive at <15°C. So 25°C is perfect. DS18B20 gives you real-time readings."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "เติมยีสต์และเริ่มหมัก (Primary Fermentation)", "en": "Add yeast and start Primary Fermentation" },
+      "desc": {
+        "th": "เมื่อ DS18B20 แสดง 25°C: 1) โรยยีสต์ไวน์ {yeast} บนผิวหน้า (ไม่ต้องคน) 2) เติมยีสต์อาหาร {nutrient} 3) เติมน้ำเลมอน {lemon} เพื่อปรับ pH ~3.5-4.0 (ลูกหม่อนมีความเป็นกรดอยู่แล้ว จึงใช้ปริมาณน้อยกว่าลิ้นจี่) 4) เทลงในถังหมัก Food Grade ปิดด้วย Airlock วางที่อุณหภูมิห้อง 20-25°C หมัก 7-14 วัน",
+        "en": "When DS18B20 shows 25°C: 1) Sprinkle {yeast} of wine yeast on surface (don't stir) 2) Add {nutrient} of yeast nutrient 3) Add {lemon} of lemon juice to adjust pH ~3.5-4.0 (Mulberry is naturally acidic, so use less than lychee) 4) Transfer to Food Grade fermentation vessel, seal with Airlock, place at room temperature 20-25°C. Ferment 7-14 days."
+      },
+      "descVariables": {
+        "yeast": { "amount": 10, "unit": "Gram", "scalable": true },
+        "nutrient": { "amount": 5, "unit": "Gram", "scalable": true },
+        "lemon": { "amount": 20, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/ferment/mulberry_wine/man_4.jpg",
+      "tips": {
+        "th": "💡 ลูกหม่อนมีค่า pH เริ่มต้นต่ำกว่าลิ้นจี่ (~3.5-4.5) ซึ่งเสี่ยงต่อการปนเปื้อนน้อยกว่า การเติมน้ำเลมอนเพียง 20ml ก็เพียงพอต่อการปรับสมดุลแล้ว",
+        "en": "💡 Mulberry has a lower initial pH (~3.5-4.5) than lychee, so it's less prone to contamination. Adding just 20ml of lemon juice is sufficient for balance."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": { "th": "หมักรอบสอง (Secondary Fermentation) และ Racking", "en": "Secondary Fermentation and Racking" },
+      "desc": {
+        "th": "หลังจาก Primary 7-14 วัน: ใช้สายยางดูด (Racking) น้ำไวน์ใสส่วนบนลงถังหมักใบใหม่ (ทิ้งตะกอนยีสต์ก้นถัง) ปิด Airlock ใหม่ หมักต่ออีก 2-4 สัปดาห์ ที่อุณหภูมิ 18-22°C ขั้นตอนนี้ไวน์จะใสขึ้น สีม่วงrubyจะสวยขึ้น และรสชาติเริ่มกลมกล่อม",
+        "en": "After Primary 7-14 days: Use siphon hose (Racking) to transfer clear wine from top to new vessel (leave yeast sediment at bottom). Seal with Airlock again. Ferment 2-4 more weeks at 18-22°C. Wine becomes clearer, ruby purple color deepens, and flavor smooths."
+      },
+      "descVariables": {},
+      "image": "images/ferment/mulberry_wine/man_5.jpg",
+      "tips": {
+        "th": "💡 การ Racking สำคัญมาก: ช่วยแยกไวน์ออกจากตะกอนยีสต์ที่ตายแล้ว ซึ่งถ้าทิ้งไว้นานจะทำให้ไวน์มีรสขมและกลิ่นไม่พึงประสงค์",
+        "en": "💡 Racking is crucial: separates wine from dead yeast sediment, which if left too long causes bitter taste and off-flavors."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": true,
+      "title": { "th": "ปรับรสท้ายกระบวนการ (Back-Sweetening) *ขั้นตอนสำคัญ*", "en": "Back-Sweetening *Crucial Step*" },
+      "desc": {
+        "th": "เมื่อไวน์ใสและฟองหยุดสนิท: เพื่อไม่ให้ขวดระเบิด ให้เติม Campden tablet {campden} ลงไปคนให้ละลาย ทิ้งไว้ 24 ชั่วโมง (เพื่อหยุดยีสต์) จากนั้นละลายน้ำตาล/น้ำเชื่อม {back_sugar} ในไวน์เล็กน้อย คนให้เข้ากัน ชิมรสจนได้ความหวานแบบ Semi-Sweet ที่พอใจ",
+        "en": "When wine is clear and bubbling has stopped: To prevent bottle explosions, add {campden} of Campden tablet, stir, wait 24 hours (to stabilize yeast). Then dissolve {back_sugar} of sugar/syrup into wine, stir well. Taste until desired Semi-Sweet level achieved."
+      },
+      "descVariables": {
+        "campden": { "amount": 1, "unit": "Piece", "scalable": false },
+        "back_sugar": { "amount": 300, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/ferment/mulberry_wine/man_6.jpg",
+      "tips": {
+        "th": "💡 หากไม่มี Campden tablet: ให้เติมความหวานแล้ว 'แช่ตู้เย็นทันที' และดื่มให้หมดภายใน 1-2 สัปดาห์ (ยีสต์จะทำงานช้ามากในความเย็น แต่ไม่หยุดสนิท 100%)",
+        "en": "💡 If no Campden tablet: Add sweetness and 'refrigerate immediately', consuming within 1-2 weeks (yeast slows down in cold but doesn't stop 100%)."
+      }
+    },
+    {
+      "step": 7,
+      "scalable": true,
+      "title": { "th": "บรรจุขวดและบ่มไวน์ (Aging)", "en": "Bottle and Age Wine" },
+      "desc": {
+        "th": "หลังจากปรับรสและไวน์นิ่งแล้ว กรองผ่านผ้าขาวบางอีกครั้งเพื่อกำจัดตะกอนละเอียด บรรจุใส่ขวดแก้วที่ฆ่าเชื้อแล้ว ปิดฝาให้แน่น เก็บในตู้เย็นหรือที่มืดและเย็น (10-15°C) นาน 1-3 เดือน ยิ่งบ่มนานรสชาติยิ่งนุ่มนวลและสีม่วงจะเข้มสวยขึ้น",
+        "en": "After stabilizing and sweetening, strain again to remove fine sediment. Bottle into sterilized glass bottles and seal tightly. Store in fridge or cool dark place (10-15°C) for 1-3 months. Longer aging yields smoother flavor and deeper purple color."
+      },
+      "descVariables": {},
+      "image": "images/ferment/mulberry_wine/man_7.jpg",
+      "tips": {
+        "th": "💡 ไวน์ลูกหม่อนโฮมเมดวิธีนี้จะมีแอลกอฮอล์ประมาณ 11-12% ABV และมีความหวานพอดี (Semi-Sweet) เสิร์ฟเย็นจัด 8-12°C จะอร่อยที่สุด สี ruby ม่วงเข้มจะสวยมากเมื่อแช่เย็น",
+        "en": "💡 This homemade mulberry wine will have ~11-12% ABV and pleasant Semi-Sweet profile. Serve ice-cold at 8-12°C for best taste. The deep ruby purple color looks stunning when chilled."
+      }
+    }
+  ]
+}
