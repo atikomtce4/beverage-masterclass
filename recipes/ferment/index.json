@@ -151,5 +151,22 @@
       "th": ["Zero Waste", "โปรไบโอติกธรรมชาติ", "โซดาผลไม้"],
       "en": ["Zero Waste", "Natural Probiotics", "Fruit Soda"]
     }
+  },
+  {
+    "id": "grape_wine_10L",
+    "name": {
+      "th": "ไวน์องุ่นโฮมเมด (หวานพอดี) 10 ลิตร",
+      "en": "10L Semi-Sweet Homemade Grape Wine"
+    },
+    "image": "images/ferment/grape_wine/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที (เครื่อง) + หมัก 3-6 สัปดาห์",
+      "en": "30 mins (Machine) + 3-6 weeks fermentation"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~11-12%", "สารต้านอนุมูลอิสระสูง", "Semi-Sweet"],
+      "en": ["~11-12% ABV", "High Antioxidants", "Semi-Sweet"]
+    }
   }
 ]
