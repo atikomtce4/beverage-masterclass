@@ -19,9 +19,9 @@
     "en": "Chamomile Honey Tea 10L"
   },
   "images": [
-    "images/tea/chamomile/main_1.jpg",
-    "images/tea/chamomile/main_2.jpg",
-    "images/tea/chamomile/main_3.jpg"
+    "images/tea/chamomile_honey/main_1.jpg",
+    "images/tea/chamomile_honey/main_2.jpg",
+    "images/tea/chamomile_honey/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_chamomile",
   "prepTime": {
@@ -239,7 +239,7 @@
       "descVariables": {
         "water": { "amount": 10, "unit": "Liter", "scalable": true }
       },
-      "image": "images/tea/chamomile/man_1.jpg",
+      "image": "images/tea/chamomile_honey/man_1.jpg",
       "tips": {
         "th": "💡 การใช้น้ำที่ 90°C แทนน้ำเดือด 100°C จะช่วยสกัดกลิ่นหอมดอกไม้ของคาโมมายล์โดยไม่ทำให้ชาขมหรือเสียรส",
         "en": "💡 Using 90°C water instead of 100°C boiling water extracts the floral aroma without making the tea bitter."
@@ -256,7 +256,7 @@
       "descVariables": {
         "chamomile": { "amount": 150, "unit": "Gram", "scalable": true }
       },
-      "image": "images/tea/chamomile/man_2.jpg",
+      "image": "images/tea/chamomile_honey/man_2.jpg",
       "tips": {
         "th": "💡 การปิดฝาช่วยกักเก็บน้ำมันหอมระเหย (Essential oils) ของคาโมมายล์ไว้ได้อย่างเต็มที่",
         "en": "💡 Covering the pot traps the essential oils of the chamomile perfectly."
@@ -271,7 +271,7 @@
         "en": "After 10 mins, remove the tea bag immediately (do not squeeze hard to prevent astringency). Let the tea cool down to 50°C."
       },
       "descVariables": {},
-      "image": "images/tea/chamomile/man_3.jpg",
+      "image": "images/tea/chamomile_honey/man_3.jpg",
       "tips": {
         "th": "💡 ใช้เทอร์โมมิเตอร์วัดอุณหภูมิให้แน่ใจว่าต่ำกว่า 60°C ก่อนใส่น้ำผึ้ง",
         "en": "💡 Use a thermometer to ensure the temperature is below 60°C before adding honey."
@@ -288,7 +288,7 @@
       "descVariables": {
         "honey": { "amount": 600, "unit": "Gram", "scalable": true }
       },
-      "image": "images/tea/chamomile/man_4.jpg",
+      "image": "images/tea/chamomile_honey/man_4.jpg",
       "tips": {
         "th": "💡 อุณหภูมิ 50°C คือจุดที่สมบูรณ์แบบที่สุดในการรักษาเอนไซม์และสารต้านอนุมูลอิสระในน้ำผึ้ง",
         "en": "💡 50°C is the perfect temperature to preserve enzymes and antioxidants in honey."
@@ -303,7 +303,7 @@
         "en": "Pour into a glass. Serve warm for bedtime relaxation, or chill and add ice for an afternoon drink."
       },
       "descVariables": {},
-      "image": "images/tea/chamomile/man_5.jpg",
+      "image": "images/tea/chamomile_honey/man_5.jpg",
       "tips": {
         "th": "💡 สามารถตกแต่งด้วยดอกคาโมมายล์แห้งเล็กน้อยหรือมะนาวฝานบางๆ เพื่อเพิ่มเสน่ห์ให้แก้วชา",
         "en": "💡 Garnish with a few dried chamomile flowers or a thin lemon slice for extra charm."
