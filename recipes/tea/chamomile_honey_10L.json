@@ -1,0 +1,313 @@
+{
+  "id": "chamomile_honey_10L",
+  "icon": "🌼",
+  "category": "tea",
+  "machineCompatible": true,
+  "description": "ชาคาโมมายล์น้ำผึ้ง 10 ลิตร สกัดจากดอกคาโมมายล์แห้งคุณภาพดี ผสมน้ำผึ้งแท้ ช่วยผ่อนคลายระบบประสาท ลดความเครียด และส่งเสริมการนอนหลับ",
+  "total_time": 30,
+  "target_temp": 50,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_chamomile_honey_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาคาโมมายล์น้ำผึ้ง 10 ลิตร",
+    "en": "Chamomile Honey Tea 10L"
+  },
+  "images": [
+    "images/tea/chamomile/main_1.jpg",
+    "images/tea/chamomile/main_2.jpg",
+    "images/tea/chamomile/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_chamomile",
+  "prepTime": {
+    "th": "5 นาที + 25 นาที (เครื่อง)",
+    "en": "5 mins + 25 mins (machine)"
+  },
+  "cookTime": {
+    "th": "30 นาที (รวมเตรียมและเครื่อง)",
+    "en": "30 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ชาคาโมมายล์น้ำผึ้งสูตรผ่อนคลาย ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 90°C (ไม่เดือดจัดเพื่อป้องกันรสขม) แช่ดอกคาโมมายล์ 10 นาที จากนั้นลดอุณหภูมิเหลือ 50°C อย่างแม่นยำก่อนผสมน้ำผึ้ง เพื่อรักษาสรรพคุณทางยาและเอนไซม์ธรรมชาติ",
+    "en": "Relaxing chamomile honey tea made easy with AllDrinks System: Machine heats water to 90°C (not boiling to prevent bitterness), steeps chamomile for 10 mins, precisely cools to 50°C, then mixes with honey to preserve medicinal properties and natural enzymes."
+  },
+  "benefits": {
+    "th": "มีสารอะพิจีนิน (Apigenin) ช่วยลดความวิตกกังวล ผ่อนคลายกล้ามเนื้อ บรรเทาอาการนอนไม่หลับ และดีต่อระบบย่อยอาหาร",
+    "en": "Contains Apigenin, which reduces anxiety, relaxes muscles, relieves insomnia, and is good for the digestive system."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้พืชตระกูลเดซี (ดอกเบญจมาศ/ดาวเรือง) อาจมีอาการแพ้ได้ และไม่ควรดื่มในปริมาณมากเกินไปก่อนขับรถเนื่องจากทำให้ง่วงซึม",
+    "en": "⚠️ People allergic to the daisy family (chrysanthemum/marigold) may experience allergic reactions. Avoid consuming in large amounts before driving as it may cause drowsiness."
+  },
+  "nutrition": {
+    "calories": "20 kcal",
+    "carbs": "5 g",
+    "sugar": "4 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ดอกคาโมมายล์แห้ง (เกรดชา)", "en": "Dried chamomile flowers (tea grade)" },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้งแท้", "en": "Pure honey" },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": { "th": "เตรียมน้ำบริสุทธิ์", "en": "Prepare Pure Water" },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ต้มน้ำให้ร้อน 90°C (ไม่เดือด)", "en": "Heat Water to 90°C (No boil)" },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 90°C เพื่อเตรียมสกัดชาคาโมมายล์ (อุณหภูมิที่ต่ำกว่าจุดเดือดช่วยป้องกันรสขม)",
+        "en": "The machine heats water to 90°C to prepare for chamomile extraction (sub-boiling temperature prevents bitterness)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ใส่ดอกคาโมมายล์ในตะกร้า", "en": "Add chamomile in basket" },
+      "desc": {
+        "th": "✅ กรุณาใส่ดอกคาโมมายล์แห้ง {chamomile} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มกระบวนการแช่สกัด",
+        "en": "✅ Please add {chamomile} of dried chamomile into the filter basket, submerge in pot, and press OK to start steeping."
+      },
+      "descVariables": {
+        "chamomile": { "amount": 150, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "แช่สกัดชาคาโมมายล์ (10 นาที)", "en": "Steep Chamomile Tea (10 mins)" },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C ต่อเนื่อง 10 นาที พร้อมระบบวนน้ำเพื่อดึงกลิ่นหอมและสรรพคุณทางยาออกมาอย่างเต็มที่",
+        "en": "Machine maintains 90°C for 10 mins with circulation to fully extract the aroma and medicinal benefits."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ยกตะกร้าชาออก", "en": "Remove tea basket" },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าดอกคาโมมายล์ออก แล้วกด OK",
+        "en": "Time is up. Please remove the chamomile basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ลดอุณหภูมิเหลือ 50°C (สำคัญมาก!)", "en": "Rapidly Chill to 50°C (Crucial!)" },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิชาลงเหลือ 50°C อย่างรวดเร็ว (ร้อนเกิน 60°C จะทำลายเอนไซม์และคุณค่าในน้ำผึ้ง)",
+        "en": "Activate cooling system to rapidly chill the tea to 50°C (above 60°C destroys honey enzymes and nutrients)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "เติมน้ำผึ้งแท้", "en": "Add pure honey" },
+      "desc": {
+        "th": "✅ อุณหภูมิ 50°C พร้อมแล้ว! กรุณาเติมน้ำผึ้ง {honey} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมให้เข้ากัน",
+        "en": "✅ Temperature is ready at 50°C! Please add {honey} of honey, then press OK to mix."
+      },
+      "descVariables": {
+        "honey": { "amount": 600, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": { "th": "ชาคาโมมายล์น้ำผึ้งพร้อมเสิร์ฟ", "en": "Chamomile honey tea ready to serve" },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายชาคาโมมายล์น้ำผึ้งออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring chamomile honey tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": { "th": "ต้มน้ำให้ร้อน 90°C", "en": "Heat water to 90°C" },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 90°C (สังเกตว่ามีฟองเล็กๆ ที่ก้นหม้อแต่ยังไม่เดือดพล่าน) เพื่อเตรียมชงชา",
+        "en": "Heat {water} of clean water to 90°C (small bubbles at the bottom but not rolling boil) to prepare for brewing."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/chamomile/man_1.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำที่ 90°C แทนน้ำเดือด 100°C จะช่วยสกัดกลิ่นหอมดอกไม้ของคาโมมายล์โดยไม่ทำให้ชาขมหรือเสียรส",
+        "en": "💡 Using 90°C water instead of 100°C boiling water extracts the floral aroma without making the tea bitter."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": { "th": "แช่สกัดดอกคาโมมายล์ (10 นาที)", "en": "Steep chamomile (10 mins)" },
+      "desc": {
+        "th": "ใส่ดอกคาโมมายล์ {chamomile} (ในถุงกรองหรือตะกร้า) ลงในน้ำร้อน ปิดฝาหม้อ แช่ทิ้งไว้ Exactly 10 นาที",
+        "en": "Place {chamomile} of chamomile (in a filter bag or basket) into the hot water. Cover the pot and steep for exactly 10 minutes."
+      },
+      "descVariables": {
+        "chamomile": { "amount": 150, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/chamomile/man_2.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บน้ำมันหอมระเหย (Essential oils) ของคาโมมายล์ไว้ได้อย่างเต็มที่",
+        "en": "💡 Covering the pot traps the essential oils of the chamomile perfectly."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": { "th": "ยกถุงชาออกและพักให้เย็น", "en": "Remove tea bag and cool down" },
+      "desc": {
+        "th": "ครบ 10 นาที ให้ยกถุงชาออกทันที (ห้ามบีบแรงเพื่อป้องกันรสฝาด) พักชาไว้จนอุณหภูมิลดลงเหลือ 50°C",
+        "en": "After 10 mins, remove the tea bag immediately (do not squeeze hard to prevent astringency). Let the tea cool down to 50°C."
+      },
+      "descVariables": {},
+      "image": "images/tea/chamomile/man_3.jpg",
+      "tips": {
+        "th": "💡 ใช้เทอร์โมมิเตอร์วัดอุณหภูมิให้แน่ใจว่าต่ำกว่า 60°C ก่อนใส่น้ำผึ้ง",
+        "en": "💡 Use a thermometer to ensure the temperature is below 60°C before adding honey."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": { "th": "ผสมน้ำผึ้ง", "en": "Mix with honey" },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 50°C เติมน้ำผึ้ง {honey} ลงไป คนให้เข้ากันจนละลายหมด",
+        "en": "When temperature is 50°C, add {honey} of honey. Stir well until fully dissolved."
+      },
+      "descVariables": {
+        "honey": { "amount": 600, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/chamomile/man_4.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิ 50°C คือจุดที่สมบูรณ์แบบที่สุดในการรักษาเอนไซม์และสารต้านอนุมูลอิสระในน้ำผึ้ง",
+        "en": "💡 50°C is the perfect temperature to preserve enzymes and antioxidants in honey."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": { "th": "เสิร์ฟ", "en": "Serve" },
+      "desc": {
+        "th": "เทใส่แก้ว เสิร์ฟอุ่นๆ เพื่อการผ่อนคลายก่อนนอน หรือแช่เย็นแล้วเติมน้ำแข็งสำหรับดื่มยามบ่าย",
+        "en": "Pour into a glass. Serve warm for bedtime relaxation, or chill and add ice for an afternoon drink."
+      },
+      "descVariables": {},
+      "image": "images/tea/chamomile/man_5.jpg",
+      "tips": {
+        "th": "💡 สามารถตกแต่งด้วยดอกคาโมมายล์แห้งเล็กน้อยหรือมะนาวฝานบางๆ เพื่อเพิ่มเสน่ห์ให้แก้วชา",
+        "en": "💡 Garnish with a few dried chamomile flowers or a thin lemon slice for extra charm."
+      }
+    }
+  ]
+}
