@@ -1,0 +1,432 @@
+{
+  "id": "barley_water_10L",
+  "icon": "🌾",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำข้าวบาร์เลย์ 10 ลิตร ต้มข้าวบาร์เลย์แบบมุกจนนุ่ม หอมใบเตย หวานละมุนจากน้ำตาลกรวด ช่วยขับปัสสาวะ บำรุงไต และย่อยง่าย ดื่มเย็นสดชื่น",
+  "total_time": 60,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_barley_water_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำข้าวบาร์เลย์ 10 ลิตร",
+    "en": "Barley Water 10L"
+  },
+  "images": [
+    "images/herbal/barley_water/main_1.jpg",
+    "images/herbal/barley_water/main_2.jpg",
+    "images/herbal/barley_water/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_barley_water",
+  "prepTime": {
+    "th": "แช่ข้าว 2 ชม. + 10 นาที (เตรียมใบเตย) + 40 นาที (เครื่อง)",
+    "en": "Soak 2 hrs + 10 mins (prep pandan) + 40 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.7",
+  "intro": {
+    "th": "น้ำข้าวบาร์เลย์สูตรดั้งเดิม ทำง่ายด้วยเครื่อง AllDrinks System: แช่ข้าวบาร์เลย์แบบมุก 2 ชั่วโมง ต้มที่ 95°C นาน 30 นาทีจนเมล็ดนุ่มและปล่อยสารอาหารออกมา ผสมใบเตยหอมและน้ำตาลกรวด จากนั้นลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟเย็น ได้เครื่องดื่มใส หอมใบเตย หวานละมุน ดื่มแล้วสดชื่นและสบายท้อง",
+    "en": "Traditional barley water made easy with AllDrinks System: soak pearl barley for 2 hours, boil at 95°C for 30 mins until soft and nutrients are released, mix with fragrant pandan and rock sugar, then chill to 4°C. A clear, aromatic, gently sweet drink that's refreshing and easy on the stomach."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยไฟเบอร์ช่วยระบบขับถ่าย มีฤทธิ์เย็นช่วยขับปัสสาวะและบำรุงไต ลดความร้อนในร่างกาย อุดมไปด้วยซีลีเนียมและวิตามินบี ช่วยบำรุงผิวและระบบประสาท",
+    "en": "Rich in fiber for digestion, has cooling diuretic properties to support kidney health, reduces body heat, and is rich in selenium and B vitamins for skin and nervous system support."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่แพ้กลูเตน (Gluten) ควรหลีกเลี่ยง เนื่องจากข้าวบาร์เลย์มีกลูเตน ผู้ที่เป็นโรคเบาหวานควรปรับลดน้ำตาล ผู้ที่มีอาการท้องเสียควรดื่มในปริมาณน้อย",
+    "en": "⚠️ People with gluten intolerance should avoid this, as barley contains gluten. Diabetics should reduce sugar. Those with diarrhea should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "9 g",
+    "sugar": "3 g",
+    "protein": "1 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ข้าวบาร์เลย์แบบมุก (Pearl Barley)", "en": "Pearl barley" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ใบเตยหอมสด (มัดปม)", "en": "Fresh pandan leaves (knotted)" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมข้าวบาร์เลย์ (แช่น้ำ 2 ชม.)",
+        "en": "Prepare barley (soak 2 hrs)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมข้าวบาร์เลย์: ล้าง {barley} ให้สะอาด แช่ในน้ำสะอาดอย่างน้อย 2 ชั่วโมง (หรือข้ามคืน) เพื่อให้ข้าวนุ่มและต้มสุกเร็วขึ้น เมื่อแช่ครบแล้ว ให้เทน้ำแช่ทิ้ง ล้างอีกครั้ง แล้วเทข้าวลงในหม้อต้มของเครื่อง กด OK",
+        "en": "✅ Please prepare barley: wash {barley} of pearl barley, soak in clean water for at least 2 hours (or overnight) to soften and cook faster. When soaked, drain and rinse, then pour into the machine tank. Press OK."
+      },
+      "descVariables": {
+        "barley": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water} ลงในหม้อต้ม เพื่อรวมกับข้าวบาร์เลย์ที่เตรียมไว้",
+        "en": "Machine fills {water} of clean water into the tank, combining with prepared barley."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้เดือด (100°C)",
+        "en": "Boil water (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำให้เดือดจัด เพื่อเตรียมต้มข้าวบาร์เลย์",
+        "en": "Machine boils water to prepare for barley cooking."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ใบเตยมัดปม",
+        "en": "Add knotted pandan"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ใบเตยหอมสด {pandan} ที่มัดเป็นปมลงไปในหม้อต้ม แล้วกด OK เพื่อเริ่มต้มข้าว",
+        "en": "✅ Please add {pandan} of knotted fresh pandan leaves into the tank, then press OK to start boiling barley."
+      },
+      "descVariables": {
+        "pandan": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 5,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 30,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มข้าวบาร์เลย์ (95°C, 30 นาที)",
+        "en": "Boil barley (95°C, 30 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 30 นาที พร้อมระบบกวนเป็นระยะ เพื่อให้ข้าวบาร์เลย์สุกนุ่มและปล่อยไฟเบอร์กับสารอาหารออกมาอย่างเต็มที่",
+        "en": "Machine maintains 95°C for 30 mins with periodic stirring, ensuring barley cooks soft and releases fiber and nutrients fully."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 6,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวดและเกลือ",
+        "en": "Add rock sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะเติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {rock_sugar} of rock sugar and {salt_amount} of salt, activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิให้ละลาย (5 นาที)",
+        "en": "Maintain temp for dissolution (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 5 นาที เพื่อให้แน่ใจว่าน้ำตาลกรวดละลายหมดและรสชาติเข้ากันดี",
+        "en": "Machine maintains 95°C for 5 mins to ensure rock sugar fully dissolves and flavors blend."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากข้าวและใบเตยออก",
+        "en": "Filter out barley and pandan"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากข้าวและใบเตยออกผ่านตะแกรงละเอียด ได้น้ำข้าวบาร์เลย์สีใสอ่อน หอมใบเตย",
+        "en": "System filters out barley and pandan through fine mesh, yielding clear, lightly aromatic barley water."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 9,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิน้ำข้าวบาร์เลย์เหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools barley water to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 10,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำข้าวบาร์เลย์พร้อมเสิร์ฟ",
+        "en": "Barley water ready to serve"
+      },
+      "desc": {
+        "th": "✅ น้ำข้าวบาร์เลย์ 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Barley water at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 11,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนน้ำข้าวบาร์เลย์ออกสู่ภาชนะ",
+        "en": "Transfer barley water to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำข้าวบาร์เลย์ออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring barley water out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ข้าวบาร์เลย์",
+        "en": "Wash and soak pearl barley"
+      },
+      "desc": {
+        "th": "นำข้าวบาร์เลย์แบบมุก {barley_amount} ล้างน้ำสะอาด 2-3 ครั้ง จนน้ำใส แล้วแช่ในน้ำสะอาดอย่างน้อย 2 ชั่วโมง (หรือข้ามคืน) เพื่อให้ข้าวนุ่มและต้มสุกเร็วขึ้น",
+        "en": "Wash {barley_amount} of pearl barley with clean water 2-3 times until water runs clear. Soak in clean water for at least 2 hours (or overnight) to soften and cook faster."
+      },
+      "descVariables": {
+        "barley_amount": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/barley_water/man_1.jpg",
+      "tips": {
+        "th": "💡 การแช่ข้าวบาร์เลย์ช่วยลดเวลาต้มได้กว่าครึ่ง และทำให้เมล็ดนุ่มทั่วถึง ไม่แข็งเป็นไตตรงกลาง",
+        "en": "💡 Soaking barley cuts cooking time in half and ensures even softness, avoiding hard centers."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มข้าวกับใบเตย",
+        "en": "Boil barley with pandan"
+      },
+      "desc": {
+        "th": "เทน้ำสะอาด {water_amount} ลงในหม้อใหญ่ ใส่ข้าวที่แช่แล้วและใบเตยมัดปม {pandan_amount} ต้มให้เดือด (100°C) แล้วลดไฟลงให้อุณหภูมิคงที่ 95°C ต้มนาน 30 นาที คนเป็นระยะ",
+        "en": "Pour {water_amount} of clean water into a large pot. Add soaked barley and knotted pandan {pandan_amount}. Boil to 100°C, then reduce heat to maintain 95°C. Boil for 30 mins, stirring occasionally."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 10, "unit": "Liter", "scalable": true },
+        "pandan_amount": { "amount": 50, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/barley_water/man_2.jpg",
+      "tips": {
+        "th": "💡 คนเป็นระยะเพื่อป้องกันข้าวติดก้นหม้อไหม้ และสังเกตว่าข้าวจะบานออกและนิ่มลงเมื่อสุก",
+        "en": "💡 Stir occasionally to prevent barley sticking and burning at the bottom. Barley will expand and soften as it cooks."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสด้วยน้ำตาลกรวดและเกลือ",
+        "en": "Season with rock sugar and salt"
+      },
+      "desc": {
+        "th": "เมื่อข้าวสุกนุ่มดีแล้ว เติมน้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป คนจนละลายหมด ชิมรสและปรับความหวานตามชอบ",
+        "en": "When barley is fully soft, add {rock_sugar} of rock sugar and {salt_amount} of salt. Stir until dissolved. Taste and adjust sweetness."
+      },
+      "descVariables": {
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/barley_water/man_3.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดให้ความหวานละมุนกว่าน้ำตาลทราย และเกลือเล็กน้อยช่วยดึงรสข้าวให้กลมกล่อมขึ้น",
+        "en": "💡 Rock sugar gives a gentler sweetness than white sugar, and a pinch of salt enhances the barley flavor."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "กรองและพักให้เย็น",
+        "en": "Strain and cool"
+      },
+      "desc": {
+        "th": "กรองผ่านผ้าขาวบางหรือกระชอนตาถี่ แยกกากข้าวและใบเตยออก (กากข้าวสามารถนำไปผสมทำขนมหรือหมักปุ๋ยได้) ทิ้งให้เย็นที่อุณหภูมิห้อง",
+        "en": "Strain through cheesecloth or fine mesh sieve, separating barley and pandan (barley pulp can be used in baking or composted). Cool to room temperature."
+      },
+      "descVariables": {},
+      "image": "images/herbal/barley_water/man_4.jpg",
+      "tips": {
+        "th": "💡 หากต้องการน้ำใสๆ ให้กรองซ้ำอีก 1 รอบ หรือทิ้งไว้ให้ตะกอนตกแล้วค่อยรินน้ำใสส่วนบน",
+        "en": "💡 For clearer liquid, strain twice or let sediment settle and pour off the clear top layer."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำเข้าตู้เย็นอย่างน้อย 2 ชั่วโมง เสิร์ฟเย็นจัดพร้อมน้ำแข็ง ตกแต่งด้วยใบเตยมัดปมหรือมะนาวฝานบางๆ ดื่มสดชื่น",
+        "en": "Refrigerate for at least 2 hours. Serve ice-cold with ice cubes, garnished with a knotted pandan leaf or thin lemon slice. Refreshing!"
+      },
+      "descVariables": {},
+      "image": "images/herbal/barley_water/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำข้าวบาร์เลย์สามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนดื่มทุกครั้ง",
+        "en": "💡 Barley water can be stored in the fridge for 3-4 days. Shake well before each use."
+      }
+    }
+  ]
+}

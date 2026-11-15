@@ -168,5 +168,22 @@
       "th": ["หอมเครื่องเทศ", "ต้านอนุมูลอิสระ", "อบอุ่นร่างกาย"],
       "en": ["Spiced Aroma", "Antioxidant", "Warming"]
     }
+  },
+{
+  "id": "barley_water_10L",
+  "name": {
+    "th": "น้ำข้าวบาร์เลย์ 10 ลิตร",
+    "en": "Barley Water 10L"
+  },
+  "image": "images/herbal/barley_water/main_1.jpg",
+  "prepTime": {
+    "th": "แช่ข้าว 2 ชม. + 40 นาที (เครื่อง)",
+    "en": "Soak 2 hrs + 40 mins (machine)"
+  },
+  "rating": "4.7",
+  "badges": {
+    "th": ["ขับปัสสาวะ", "บำรุงไต", "ย่อยง่าย"],
+    "en": ["Diuretic", "Kidney Support", "Easy Digestion"]
   }
+}
 ]
