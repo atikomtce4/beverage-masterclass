@@ -168,5 +168,22 @@
       "th": [ "วิตามินเอ ",  "เบต้าแคโรทีน ",  "สีธรรมชาติ "],
       "en": [ "Vitamin A ",  "Beta-Carotene ",  "Natural Color "]
     }
+  },
+  {
+    "id": "golden_milk_10L",
+    "name": {
+      "th": "นมขมิ้นชัน (Golden Milk) 10 ลิตร",
+      "en": "10L Golden Milk (Turmeric Latte)"
+    },
+    "image": "images/milk/golden_milk/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + 35 นาที (เครื่อง)",
+      "en": "15 mins + 35 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ต้านการอักเสบ", "ช่วยนอนหลับ", "เคอร์คูมินสูง"],
+      "en": ["Anti-inflammatory", "Sleep Aid", "High Curcumin"]
+    }
   }
 ]

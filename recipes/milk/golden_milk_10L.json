@@ -1,0 +1,435 @@
+{
+  "id": "golden_milk_10L",
+  "icon": "🥛",
+  "category": "milk",
+  "machineCompatible": true,
+  "description": "นมขมิ้นชัน (Golden Milk) 10 ลิตร สกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 80°C คงคุณค่าเคอร์คูมินสูงสุด หอมมันจากนมสดและเครื่องเทศอย่างขิงกับพริกไทยดำ",
+  "total_time": 50,
+  "target_temp": 80,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_golden_milk_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "นมขมิ้นชัน (Golden Milk) 10 ลิตร",
+    "en": "10L Golden Milk (Turmeric Latte)"
+  },
+  "images": [
+    "images/milk/golden_milk/main_1.jpg",
+    "images/milk/golden_milk/main_2.jpg",
+    "images/milk/golden_milk/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_golden_milk",
+  "prepTime": {
+    "th": "15 นาที (เตรียมเครื่องเทศ) + 35 นาที (เครื่อง)",
+    "en": "15 mins (prep spices) + 35 mins (machine)"
+  },
+  "cookTime": {
+    "th": "50 นาที (รวมเตรียมและเครื่อง)",
+    "en": "50 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "นมขมิ้นชันสูตรเข้มข้น ทำง่ายด้วยเครื่อง AllDrinks System: บดขมิ้นชันสด ขิง และพริกไทยดำ ปั่นกับน้ำสะอาด เครื่องจะต้มและสกัดที่อุณหภูมิ 80°C เพื่อคงคุณค่าเคอร์คูมิน เติมนมสด น้ำตาลกรวด และเกลือ กรอง แล้วแช่เย็น พร้อมเสิร์ฟ!",
+    "en": "Rich Golden Milk made easy with AllDrinks System: blend fresh turmeric, ginger, and black pepper with clean water. Machine boils and extracts at 80°C to preserve curcumin, adds fresh milk, rock sugar, and salt, filters, then chills. Ready to serve!"
+  },
+  "benefits": {
+    "th": "ขมิ้นชันมีเคอร์คูมินต้านการอักเสบสูง พริกไทยดำช่วยเพิ่มการดูดซึมเคอร์คูมินได้ถึง 2,000% นมให้แคลเซียมและโปรตีน ช่วยผ่อนคลายและส่งเสริมการนอนหลับ",
+    "en": "Turmeric contains high curcumin (anti-inflammatory). Black pepper boosts curcumin absorption by 2000%. Milk provides calcium and protein. Promotes relaxation and better sleep."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่ทานยาละลายลิ่มเลือดหรือสตรีมีครรภ์ควรปรึกษาแพทย์ก่อนดื่มในปริมาณมาก ผู้ที่แพ้นมวัวควรเปลี่ยนเป็นนมพืช (เช่น นมอัลมอนด์ หรือนมโอ๊ต)",
+    "en": "⚠️ People on blood thinners or pregnant women should consult a doctor before consuming in large amounts. Those allergic to cow's milk should switch to plant milk (e.g., almond or oat milk)."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "7 g",
+    "sugar": "5 g",
+    "protein": "2 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับปั่น)", "en": "Clean water (for blending)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำสะอาด (สำหรับต้มในเครื่อง)", "en": "Clean water (for machine boiling)" },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขมิ้นชันสด (หรือผงขมิ้นชัน 50g)", "en": "Fresh turmeric (or 50g turmeric powder)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขิงแก่ (หั่นแว่นหรือบุบ)", "en": "Old ginger (sliced or crushed)" },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "พริกไทยดำเม็ด (บุบพอแตก)", "en": "Black peppercorns (crushed)" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "นมสดหรือนมพืช (เช่น นมอัลมอนด์/โอ๊ต)", "en": "Fresh milk or plant milk (e.g., Almond/Oat)" },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำตาลกรวด", "en": "Rock sugar" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "เกลือป่น", "en": "Salt" },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เตรียมเครื่องเทศ (บดและปั่น)",
+        "en": "Prepare spices (grind and blend)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเตรียมเครื่องเทศ: บดขมิ้นชัน {turmeric}, ขิง {ginger} และพริกไทยดำ {pepper} ให้ละเอียด แล้วปั่นรวมกับน้ำสะอาด {water_blend} จนได้น้ำสีเหลืองเข้ม เมื่อได้แล้วให้เทลงในหม้อต้มของเครื่อง แล้วกด OK",
+        "en": "✅ Please prepare spices: grind {turmeric} of turmeric, {ginger} of ginger, and {pepper} of black pepper, then blend with {water_blend} of clean water until deep yellow. Pour into the machine tank, then press OK."
+      },
+      "descVariables": {
+        "turmeric": { "amount": 200, "unit": "Gram", "scalable": true },
+        "ginger": { "amount": 200, "unit": "Gram", "scalable": true },
+        "pepper": { "amount": 10, "unit": "Gram", "scalable": true },
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 2,
+      "function": "Fill Water",
+      "target_value": 6,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำสะอาดสำหรับต้ม",
+        "en": "Fill clean water for boiling"
+      },
+      "desc": {
+        "th": "เครื่องจะเติมน้ำสะอาด {water_boil} ลงในหม้อต้ม เพื่อรวมกับน้ำเครื่องเทศที่เตรียมไว้",
+        "en": "Machine fills {water_boil} of clean water into the tank, combining with prepared spice mixture."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 6, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 3,
+      "function": "Heat Water",
+      "target_value": 100,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำเครื่องเทศให้เดือด (100°C)",
+        "en": "Boil spice mixture (100°C)"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำเครื่องเทศให้เดือดจัด เพื่อฆ่าเชื้อและเตรียมสกัดคุณค่าสารอาหาร",
+        "en": "Machine boils spice mixture to sterilize and prepare for nutrient extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 80°C",
+        "en": "Cool down to 80°C"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิจาก 100°C ลงเหลือ 80°C อย่างแม่นยำ (อุณหภูมิที่เหมาะสมที่สุดในการคงคุณค่าเคอร์คูมินและไม่ทำให้นมแตกตัว)",
+        "en": "The machine precisely cools from 100°C to 80°C (optimal temperature for preserving curcumin and preventing milk from curdling)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมนมสด น้ำตาลกรวด และเกลือ",
+        "en": "Add fresh milk, rock sugar, and salt"
+      },
+      "desc": {
+        "th": "ระบบจะเติมนมสดหรือนมพืช {milk_amount}, น้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} ลงไป พร้อมเปิดระบบกวนจนละลายหมด",
+        "en": "System adds {milk_amount} of fresh/plant milk, {rock_sugar} of rock sugar, and {salt_amount} of salt, activating stirring until fully dissolved."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 2, "unit": "Liter", "scalable": true },
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 80,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดคุณค่าสารอาหาร (80°C, 15 นาที)",
+        "en": "Extract nutrients (80°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิ 80°C และกวนเป็นระยะเป็นเวลา 15 นาที เพื่อสกัดรสชาติหอมมันและเคอร์คูมินจากขมิ้นชันอย่างสมบูรณ์แบบ",
+        "en": "Machine maintains 80°C and stirs periodically for 15 mins to perfectly extract creamy flavor and curcumin from turmeric."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากเครื่องเทศออก",
+        "en": "Filter out spice pulp"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากขมิ้นและขิงออกผ่านตะแกรงละเอียด ได้นมขมิ้นชันสีทองเนียนนุ่ม",
+        "en": "System filters out turmeric and ginger pulp through fine mesh, yielding smooth golden milk."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 4,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 4°C พร้อมเสิร์ฟ",
+        "en": "Cool down to 4°C, ready to serve"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมินมขมิ้นชันเหลือ 4°C พร้อมเสิร์ฟเย็นชื่นใจ",
+        "en": "Machine cools golden milk to 4°C, ready to serve ice-cold."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "นมขมิ้นชันพร้อมเสิร์ฟ",
+        "en": "Golden milk ready to serve"
+      },
+      "desc": {
+        "th": "✅ นมขมิ้นชัน 4°C พร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Golden milk at 4°C is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนนมขมิ้นชันออกสู่ภาชนะ",
+        "en": "Transfer golden milk to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายนมขมิ้นชันออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring golden milk out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมเครื่องเทศ",
+        "en": "Prepare spices"
+      },
+      "desc": {
+        "th": "ล้างขมิ้นชันสด {turmeric_amount} และขิง {ginger_amount} ปอกเปลือก หั่นชิ้นเล็กๆ บดรวมกับพริกไทยดำ {pepper_amount} ให้ละเอียด",
+        "en": "Wash {turmeric_amount} of fresh turmeric and {ginger_amount} of ginger, peel, cut into small pieces, and grind with {pepper_amount} of black pepper until fine."
+      },
+      "descVariables": {
+        "turmeric_amount": { "amount": 200, "unit": "Gram", "scalable": true },
+        "ginger_amount": { "amount": 200, "unit": "Gram", "scalable": true },
+        "pepper_amount": { "amount": 10, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/golden_milk/man_1.jpg",
+      "tips": {
+        "th": "💡 หากใช้ผงขมิ้นชันและผงขิงแทนของสด ให้ใช้ปริมาณอย่างละ 50 กรัม จะสะดวกและให้สีที่สม่ำเสมอ",
+        "en": "💡 If using turmeric and ginger powder instead of fresh, use 50g of each for convenience and consistent color."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปั่นเครื่องเทศกับน้ำ",
+        "en": "Blend spices with water"
+      },
+      "desc": {
+        "th": "นำเครื่องเทศที่บดแล้วและน้ำสะอาด {water_blend} ใส่ลงในเครื่องปั่น ปั่นด้วยความเร็วสูงจนละเอียดเป็นน้ำสีเหลืองเข้ม",
+        "en": "Place ground spices and {water_blend} of clean water into a blender. Blend on high speed until it becomes a deep yellow liquid."
+      },
+      "descVariables": {
+        "water_blend": { "amount": 2, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/golden_milk/man_2.jpg",
+      "tips": {
+        "th": "💡 การปั่นให้ละเอียดตั้งแต่แรกจะช่วยให้น้ำมันหอมระเหยและเคอร์คูมินถูกสกัดออกมาได้ดีที่สุดในขั้นตอนถัดไป",
+        "en": "💡 Blending finely at this stage ensures essential oils and curcumin are extracted optimally in the next step."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ต้มและสกัดที่อุณหภูมิเหมาะสม",
+        "en": "Boil and extract at proper temperature"
+      },
+      "desc": {
+        "th": "เทส่วนผสมที่ปั่นได้และน้ำสะอาด {water_boil} ลงในหม้อใหญ่ ต้มให้เดือด (100°C) แล้วลดไฟลง รอให้อุณหภูมิลดเหลือ 80°C (ใช้เทอร์โมมิเตอร์วัด) แช่สกัด 15 นาที คนเบาๆ เป็นระยะ",
+        "en": "Pour the blended mixture and {water_boil} of clean water into a large pot. Boil to 100°C, then reduce heat. Wait until temperature drops to 80°C (use thermometer). Steep for 15 mins, stirring gently occasionally."
+      },
+      "descVariables": {
+        "water_boil": { "amount": 6, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/milk/golden_milk/man_3.jpg",
+      "tips": {
+        "th": "💡 การสกัดที่ 80°C นาน 15 นาที เป็นจุดที่คงคุณค่าเคอร์คูมินได้ดีที่สุด และไม่ร้อนเกินจนทำให้โปรตีนในนมเสียสภาพเมื่อเติมลงไป",
+        "en": "💡 Extracting at 80°C for 15 mins is the sweet spot for preserving curcumin, and prevents milk protein from denaturing when added later."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสและกรอง",
+        "en": "Season and strain"
+      },
+      "desc": {
+        "th": "เติมนมสดหรือนมพืช {milk_amount}, น้ำตาลกรวด {rock_sugar} และเกลือ {salt_amount} คนจนละลายหมด กรองผ่านผ้าขาวบางหรือกระชอนตาถี่ บีบคั้นเอาแต่นมขมิ้นชัน",
+        "en": "Add {milk_amount} of fresh/plant milk, {rock_sugar} of rock sugar, and {salt_amount} of salt, stir until fully dissolved. Strain through cheesecloth or fine mesh sieve, squeezing to extract the golden milk."
+      },
+      "descVariables": {
+        "milk_amount": { "amount": 2, "unit": "Liter", "scalable": true },
+        "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
+        "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/milk/golden_milk/man_4.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อยจะช่วยดึงรสหวานและรสเครื่องเทศให้กลมกล่อมขึ้น โดยไม่ทำให้รู้สึกเค็ม",
+        "en": "💡 A tiny pinch of salt enhances the sweetness and spice flavors without making it taste salty."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "ทิ้งให้เย็นที่อุณหภูมิห้องก่อน แล้วนำเข้าตู้เย็นอย่างน้อย 1-2 ชั่วโมง เสิร์ฟเย็นจัด โรยผงอบเชยหรือขมิ้นเล็กน้อยด้านบน เขย่าก่อนเสิร์ฟเพราะอาจมีการแยกชั้น",
+        "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold, optionally sprinkle with a little cinnamon or turmeric powder on top. Shake before serving as separation may occur."
+      },
+      "descVariables": {},
+      "image": "images/milk/golden_milk/man_5.jpg",
+      "tips": {
+        "th": "💡 นมขมิ้นชันสามารถเก็บในตู้เย็นได้นาน 3-4 วัน เขย่าก่อนดื่มทุกครั้งเพื่อให้เครื่องเทศกระจายตัวสม่ำเสมอ",
+        "en": "💡 Golden milk can be stored in the fridge for 3-4 days. Shake well before each use to redistribute the spices evenly."
+      }
+    }
+  ]
+}
