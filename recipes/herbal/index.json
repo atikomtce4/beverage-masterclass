@@ -135,7 +135,7 @@
       "en": ["Heart Health", "Better Sleep", "Smooth Sweetness"]
     }
   },
-{
+  {
     "id": "ginger_lemon_honey_10L",
     "name": {
       "th": "น้ำขิงมะนาวน้ำผึ้ง 10 ลิตร",
@@ -150,6 +150,23 @@
     "badges": {
       "th": ["แก้หวัด", "ขับลม", "เสริมภูมิคุ้มกัน"],
       "en": ["Soothes Cold", "Relieves Bloating", "Boosts Immunity"]
+    }
+  },
+  {
+    "id": "spiced_apple_cider_10L",
+    "name": {
+      "th": "ไซเดอร์แอปเปิ้ลอบเชย 10 ลิตร",
+      "en": "Spiced Apple Cider 10L"
+    },
+    "image": "images/tea/spiced_apple_cider/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที + 35 นาที (เครื่อง)",
+      "en": "10 mins + 35 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["หอมเครื่องเทศ", "ต้านอนุมูลอิสระ", "อบอุ่นร่างกาย"],
+      "en": ["Spiced Aroma", "Antioxidant", "Warming"]
     }
   }
 ]

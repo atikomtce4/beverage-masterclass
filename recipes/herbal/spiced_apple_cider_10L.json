@@ -1,0 +1,411 @@
+{
+  "id": "spiced_apple_cider_10L",
+  "icon": "🍎",
+  "category": "tea",
+  "machineCompatible": true,
+  "description": "ไซเดอร์แอปเปิ้ลอบเชย 10 ลิตร อุ่นที่ 75°C (ไม่เดือด) หอมเครื่องเทศจากอบเชยและกานพลู ผสมน้ำแอปเปิ้ล 100% และน้ำผึ้ง ช่วยต้านอนุมูลอิสระและให้ความอบอุ่น",
+  "total_time": 45,
+  "target_temp": 75,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_spiced_apple_cider_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ไซเดอร์แอปเปิ้ลอบเชย 10 ลิตร",
+    "en": "Spiced Apple Cider 10L"
+  },
+  "images": [
+    "images/tea/spiced_apple_cider/main_1.jpg",
+    "images/tea/spiced_apple_cider/main_2.jpg",
+    "images/tea/spiced_apple_cider/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_spiced_apple_cider",
+  "prepTime": {
+    "th": "10 นาที (เตรียมเครื่องเทศ) + 35 นาที (เครื่อง)",
+    "en": "10 mins (prep spices) + 35 mins (machine)"
+  },
+  "cookTime": {
+    "th": "45 นาที (รวมเตรียมและเครื่อง)",
+    "en": "45 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ไซเดอร์แอปเปิ้ลอบเชยสูตรหอมอุ่น ทำง่ายด้วยเครื่อง AllDrinks System: อุ่นน้ำสะอาดที่ 75°C (ไม่เดือดเพื่อรักษารสชาติสดชื่นของแอปเปิ้ล) ใส่อบเชยและกานพลูสกัด 15 นาที เติมน้ำแอปเปิ้ล 100% และน้ำผึ้งแท้ ได้เครื่องดื่มหอมเครื่องเทศ หวานละมุน ดื่มอุ่นๆ แล้วสบายตัวทันที",
+    "en": "Warm spiced apple cider made easy with AllDrinks System: heat clean water to 75°C (no boiling to preserve fresh apple taste), infuse cinnamon and cloves for 15 mins, add 100% apple juice and pure honey. Aromatic, spiced, and instantly comforting when served warm!"
+  },
+  "benefits": {
+    "th": "อบเชยช่วยควบคุมระดับน้ำตาลในเลือดและต้านการอักเสบ กานพลูมีสารยูจีนอล (Eugenol) ต้านอนุมูลอิสระสูง น้ำแอปเปิ้ลมีเพกตินช่วยระบบย่อยอาหาร และให้ความอบอุ่นแก่ร่างกาย",
+    "en": "Cinnamon helps regulate blood sugar and reduces inflammation. Cloves contain high Eugenol (antioxidant). Apple juice has pectin for digestion and provides body warmth."
+  },
+  "warnings": {
+    "th": "⚠️ สตรีมีครรภ์ควรจำกัดปริมาณอบเชย (ไม่เกิน 1 ช้อนชาต่อวัน) และผู้เป็นโรคเบาหวานควรเลือกน้ำแอปเปิ้ลแบบไม่เติมน้ำตาลเพิ่ม ผู้ที่แพ้เครื่องเทศควรหลีกเลี่ยง",
+    "en": "⚠️ Pregnant women should limit cinnamon intake (no more than 1 tsp per day). Diabetics should choose unsweetened apple juice. Those allergic to spices should avoid."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 4,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำแอปเปิ้ล 100% (ไม่เติมน้ำตาล)", "en": "100% Apple juice (unsweetened)" },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "แท่งอบเชย", "en": "Cinnamon sticks" },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "กานพลู", "en": "Cloves" },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้งแท้ (ไม่บังคับ)", "en": "Pure honey (optional)" },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 4,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 4, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 75,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นน้ำให้ร้อน 75°C (ไม่เดือด)",
+        "en": "Heat Water to 75°C (No boil)"
+      },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 75°C เพื่อเตรียมสกัดเครื่องเทศ (อุณหภูมิที่ไม่เดือดช่วยรักษารสชาติสดชื่นของแอปเปิ้ล)",
+        "en": "The machine heats water to 75°C to prepare for spice extraction (sub-boiling temperature preserves fresh apple taste)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่อบเชยและกานพลูในตะกร้า",
+        "en": "Add cinnamon and cloves in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่แท่งอบเชย {cinnamon} และกานพลู {clove} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มสกัด",
+        "en": "✅ Please add {cinnamon} of cinnamon sticks and {clove} of cloves into the filter basket, submerge in pot, and press OK to start extraction."
+      },
+      "descVariables": {
+        "cinnamon": { "amount": 50, "unit": "Gram", "scalable": true },
+        "clove": { "amount": 10, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 75,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดเครื่องเทศ (75°C, 15 นาที)",
+        "en": "Infuse spices (75°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 75°C ต่อเนื่อง 15 นาที เพื่อดึงกลิ่นหอมและสรรพคุณจากอบเชยและกานพลูออกมาอย่างเต็มที่",
+        "en": "Machine maintains 75°C for 15 mins to fully extract the aroma and benefits from cinnamon and cloves."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำแอปเปิ้ล 100%",
+        "en": "Add 100% apple juice"
+      },
+      "desc": {
+        "th": "✅ กรุณาเติมน้ำแอปเปิ้ล 100% {apple} ลงไป แล้วกด OK เพื่อให้เครื่องผสมให้เข้ากัน",
+        "en": "✅ Please add {apple} of 100% apple juice, then press OK to mix."
+      },
+      "descVariables": {
+        "apple": { "amount": 6, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 75,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นผสมให้เข้ากัน (75°C, 10 นาที)",
+        "en": "Warm and blend (75°C, 10 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 75°C ต่อเนื่อง 10 นาที เพื่อให้รสชาติเครื่องเทศและแอปเปิ้ลผสมผสานกันอย่างสมบูรณ์",
+        "en": "Machine maintains 75°C for 10 mins to perfectly blend spice and apple flavors."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าเครื่องเทศออก",
+        "en": "Remove spice basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าอบเชยและกานพลูออก แล้วกด OK",
+        "en": "Time is up. Please remove the cinnamon and clove basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำผึ้ง (ไม่บังคับ)",
+        "en": "Add honey (optional)"
+      },
+      "desc": {
+        "th": "✅ หากต้องการความหวานเพิ่ม กรุณาเติมน้ำผึ้ง {honey} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมให้เข้ากัน",
+        "en": "✅ If more sweetness is desired, please add {honey} of honey, then press OK to mix."
+      },
+      "descVariables": {
+        "honey": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ไซเดอร์แอปเปิ้ลอบเชยพร้อมเสิร์ฟ",
+        "en": "Spiced apple cider ready to serve"
+      },
+      "desc": {
+        "th": "✅ ไซเดอร์แอปเปิ้ลอบเชยพร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Spiced apple cider is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนไซเดอร์แอปเปิ้ลอบเชยออกสู่ภาชนะ",
+        "en": "Transfer spiced apple cider to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายไซเดอร์แอปเปิ้ลอบเชยออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring spiced apple cider out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและเครื่องเทศ",
+        "en": "Prepare water and spices"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้ออีนาเมลสีขาวขนาด 12-15 ลิตร วางบนเตาไฟฟ้า จุ่ม DS18B20 sensor ลงในหม้อ เตรียมแท่งอบเชย {cinnamon} และกานพลู {clove} ไว้ข้างๆ",
+        "en": "Prepare {water} of clean water in a 12-15L white enamel pot on electric stove. Immerse DS18B20 sensor in pot. Prepare {cinnamon} of cinnamon sticks and {clove} of cloves nearby."
+      },
+      "descVariables": {
+        "water": { "amount": 4, "unit": "Liter", "scalable": true },
+        "cinnamon": { "amount": 50, "unit": "Gram", "scalable": true },
+        "clove": { "amount": 10, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/spiced_apple_cider/man_1.jpg",
+      "tips": {
+        "th": "💡 ใช้แท่งอบเชยแท้ (Ceylon cinnamon) จะหอมและปลอดภัยกว่าอบเชยจีน (Cassia) ที่มี coumarin สูง ซึ่งอาจเป็นอันตรายต่อตับหากบริโภคมากเกินไป",
+        "en": "💡 Use true Ceylon cinnamon sticks, which are more aromatic and safer than Cassia cinnamon (high in coumarin, which can harm the liver in excess)."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "อุ่นน้ำถึง 75°C และใส่เครื่องเทศ",
+        "en": "Heat water to 75°C and add spices"
+      },
+      "desc": {
+        "th": "เปิดเตาไฟฟ้าไฟกลาง คนน้ำให้ร้อน เมื่อ DS18B20 แสดงอุณหภูมิ 75°C ใส่อบเชยและกานพลูที่เตรียมไว้ลงไป รักษาอุณหภูมิ 75°C ต่อเนื่อง 15 นาที (ดูจาก DS18B20) เพื่อสกัดกลิ่นหอม",
+        "en": "Turn electric stove to medium heat. Stir water until hot. When DS18B20 shows 75°C, add prepared cinnamon and cloves. Maintain 75°C for 15 minutes (watch DS18B20) to infuse aroma."
+      },
+      "descVariables": {},
+      "image": "images/tea/spiced_apple_cider/man_2.jpg",
+      "tips": {
+        "th": "💡 การควบคุมที่ 75°C (ไม่เดือด 100°C) สำคัญมาก! จะช่วยสกัดกลิ่นเครื่องเทศโดยไม่ทำลายรสชาติสดชื่นและวิตามินในน้ำแอปเปิ้ลที่จะเติมถัดไป",
+        "en": "💡 Controlling at 75°C (not boiling at 100°C) is crucial! It infuses spice aroma without destroying the fresh taste and vitamins in the apple juice to be added next."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำแอปเปิ้ลและอุ่นต่อ",
+        "en": "Add apple juice and warm further"
+      },
+      "desc": {
+        "th": "ครบ 15 นาที เติมน้ำแอปเปิ้ล 100% {apple} ลงไป คนให้เข้ากัน รักษาอุณหภูมิ 75°C ต่ออีก 10 นาที เพื่อให้รสชาติเครื่องเทศและแอปเปิ้ลผสมผสานกันอย่างสมบูรณ์",
+        "en": "After 15 mins, add {apple} of 100% apple juice. Stir well. Maintain 75°C for 10 more mins to perfectly blend spice and apple flavors."
+      },
+      "descVariables": {
+        "apple": { "amount": 6, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/tea/spiced_apple_cider/man_3.jpg",
+      "tips": {
+        "th": "💡 ใช้น้ำแอปเปิ้ล 100% แบบไม่เติมน้ำตาล (Unsweetened) จะได้รสชาติที่แท้จริงและควบคุมความหวานเองได้ด้วยน้ำผึ้ง",
+        "en": "💡 Use 100% unsweetened apple juice for authentic taste and control sweetness yourself with honey."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "กรองเครื่องเทศและปรุงรส",
+        "en": "Strain spices and season"
+      },
+      "desc": {
+        "th": "ยกตะกร้าอบเชยและกานพลูออก กรองผ่านผ้าขาวบางหากต้องการน้ำที่ใสสะอาด เติมน้ำผึ้ง {honey} (ถ้าต้องการ) คนให้เข้ากันจนละลายหมด ชิมรสและปรับตามชอบ",
+        "en": "Remove cinnamon and clove basket. Strain through cheesecloth if clearer liquid is desired. Add {honey} of honey (if desired). Stir until fully dissolved. Taste and adjust as preferred."
+      },
+      "descVariables": {
+        "honey": { "amount": 400, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/tea/spiced_apple_cider/man_4.jpg",
+      "tips": {
+        "th": "💡 สามารถเพิ่มเครื่องเทศอื่นๆ ได้ตามชอบ เช่น ลูกจันทน์เทศป่นเล็กน้อย หรือเปลือกส้มฝานบางๆ เพื่อเพิ่มมิติของรสชาติ",
+        "en": "💡 You can add other spices as preferred, like a pinch of nutmeg or thin orange peel slices, to add flavor dimensions."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟอุ่น",
+        "en": "Serve warm"
+      },
+      "desc": {
+        "th": "เทใส่แก้วหรือเหยือก เสิร์ฟอุ่นๆ (60-70°C) ตกแต่งด้วยแท่งอบเชยหรือส้มฝานบางๆ วางข้างแก้ว สามารถเก็บในตู้เย็นได้นาน 3-5 วัน อุ่นก่อนดื่มใหม่ได้",
+        "en": "Pour into glass or pitcher. Serve warm (60-70°C), garnished with a cinnamon stick or thin orange slices beside the glass. Can be stored in fridge for 3-5 days and reheated before drinking."
+      },
+      "descVariables": {},
+      "image": "images/tea/spiced_apple_cider/man_5.jpg",
+      "tips": {
+        "th": "💡 ไซเดอร์แอปเปิ้ลอบเชยเหมาะมากสำหรับดื่มในห้องแอร์หรือหน้าหนาว ให้ความอบอุ่นและสบายตัว ดื่มก่อนนอนก็ช่วยผ่อนคลาย",
+        "en": "💡 Spiced apple cider is perfect for air-conditioned rooms or cold weather. Provides warmth and comfort. Drinking before bed also helps relaxation."
+      }
+    }
+  ]
+}
