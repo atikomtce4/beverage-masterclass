@@ -134,5 +134,22 @@
       "th": ["บำรุงหัวใจ", "ช่วยให้หลับสบาย", "หวานละมุน"],
       "en": ["Heart Health", "Better Sleep", "Smooth Sweetness"]
     }
+  },
+{
+    "id": "ginger_lemon_honey_10L",
+    "name": {
+      "th": "น้ำขิงมะนาวน้ำผึ้ง 10 ลิตร",
+      "en": "Ginger Lemon Honey 10L"
+    },
+    "image": "images/herbal/ginger_lemon_honey/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที + 30 นาที (เครื่อง)",
+      "en": "10 mins + 30 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["แก้หวัด", "ขับลม", "เสริมภูมิคุ้มกัน"],
+      "en": ["Soothes Cold", "Relieves Bloating", "Boosts Immunity"]
+    }
   }
 ]

@@ -1,0 +1,402 @@
+{
+  "id": "ginger_lemon_honey_10L",
+  "icon": "🍋",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำขิงมะนาวน้ำผึ้ง 10 ลิตร ต้มขิงแก่สกัดความเผ็ดร้อน ผสมมะนาวและน้ำผึ้งที่อุณหภูมิ 60°C ช่วยขับลม แก้หวัด และเสริมภูมิคุ้มกัน โดยไม่ทำลายคุณค่าทางอาหาร",
+  "total_time": 40,
+  "target_temp": 60,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_ginger_lemon_honey_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำขิงมะนาวน้ำผึ้ง 10 ลิตร",
+    "en": "Ginger Lemon Honey 10L"
+  },
+  "images": [
+    "images/herbal/ginger_lemon_honey/main_1.jpg",
+    "images/herbal/ginger_lemon_honey/main_2.jpg",
+    "images/herbal/ginger_lemon_honey/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_ginger_lemon",
+  "prepTime": {
+    "th": "10 นาที (เตรียมขิง) + 30 นาที (เครื่อง)",
+    "en": "10 mins (prep ginger) + 30 mins (machine)"
+  },
+  "cookTime": {
+    "th": "40 นาที (รวมเตรียมและเครื่อง)",
+    "en": "40 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "น้ำขิงมะนาวน้ำผึ้งสูตรเข้มข้น ทำง่ายด้วยเครื่อง AllDrinks System: ต้มขิงแก่ที่ 95°C นาน 15 นาที เพื่อดึงความเผ็ดร้อนและสรรพคุณยาออกมา จากนั้นเครื่องจะลดอุณหภูมิเหลือ 60°C อย่างแม่นยำก่อนเติมน้ำผึ้งและมะนาว เพื่อรักษาวิตามินซีและเอนไซม์ในน้ำผึ้งไม่ให้ถูกทำลาย ได้เครื่องดื่มหอมเผ็ดร้อน เปรี้ยวหวานกลมกล่อม ดื่มอุ่นๆ แล้วสดชื่นทันที",
+    "en": "Rich ginger lemon honey drink made easy with AllDrinks System: boil old ginger at 95°C for 15 mins to extract potency and benefits, then machine precisely cools to 60°C before adding honey and lemon to preserve Vitamin C and enzymes. Aromatic, spicy, tangy-sweet, and instantly refreshing when served warm!"
+  },
+  "benefits": {
+    "th": "ขิงแก่มีจิงเจอรอล (Gingerol) ช่วยขับลม แก้ท้องอืด บรรเทาอาการหวัด คัดจมูก และต้านการอักเสบ น้ำผึ้งแท้มีเอนไซม์และสารต้านอนุมูลอิสระ มะนาวมีวิตามินซีสูงเสริมภูมิคุ้มกัน",
+    "en": "Old ginger contains Gingerol to relieve bloating, soothe cold symptoms, and reduce inflammation. Pure honey has enzymes and antioxidants. Lemon is high in Vitamin C to boost immunity."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่เป็นโรคกระเพาะอาหารหรือกรดไหลย้อนควรดื่มหลังอาหารเท่านั้น และไม่ควรดื่มขณะร้อนจัดเพราะอาจระคายเคืองคอ ผู้ที่แพ้น้ำผึ้งหรือผึ้งต่อยควรหลีกเลี่ยง",
+    "en": "⚠️ People with stomach ulcers or acid reflux should drink only after meals. Avoid drinking when too hot to prevent throat irritation. Those allergic to honey or bee stings should avoid."
+  },
+  "nutrition": {
+    "calories": "25 kcal",
+    "carbs": "6 g",
+    "sugar": "5 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": { "th": "น้ำสะอาด", "en": "Clean water" },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": { "th": "ขิงแก่ (หั่นแว่นหรือบุบ)", "en": "Old ginger (sliced or crushed)" },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำผึ้งแท้", "en": "Pure honey" },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": { "th": "น้ำมะนาวสด (คั้นใหม่)", "en": "Fresh lemon juice (freshly squeezed)" },
+      "amount": 300,
+      "unit": "Milliliter",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน (95°C)",
+        "en": "Heat Water to 95°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 95°C เพื่อเตรียมสกัดขิงแก่",
+        "en": "The machine heats water to 95°C to prepare for ginger extraction."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ขิงแก่ในตะกร้า",
+        "en": "Add old ginger in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ขิงแก่ {ginger} (หั่นแว่นหรือบุบ) ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มสกัด",
+        "en": "✅ Please add {ginger} of old ginger (sliced or crushed) into the filter basket, submerge in pot, and press OK to start extraction."
+      },
+      "descVariables": {
+        "ginger": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มสกัดขิง (95°C, 15 นาที)",
+        "en": "Boil and extract ginger (95°C, 15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 15 นาที เพื่อดึงความเผ็ดร้อนและสรรพคุณยาจากขิงแก่ออกมาอย่างเต็มที่",
+        "en": "Machine maintains 95°C for 15 mins to fully extract the spiciness and medicinal benefits from old ginger."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Cool Down",
+      "target_value": 70,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ระบายความร้อนหม้อ (รอเย็นถึง 70°C)",
+        "en": "Cool Down Pot (Wait until 70°C)"
+      },
+      "desc": {
+        "th": "ปิดระบบทำความร้อน ปล่อยให้หม้อเย็นลงเองตามธรรมชาติ พร้อมวนน้ำ รอจนอุณหภูมิลดลงเหลือ 70°C",
+        "en": "Turn off heater. Let the pot cool down naturally with water circulation until 70°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 60°C (สำคัญมาก!)",
+        "en": "Rapidly Chill (to 60°C - Crucial!)"
+      },
+      "desc": {
+        "th": "เปิดระบบขดท่อทองแดงและปั๊มจุ่มน้ำ เพื่อลดอุณหภูมิจาก 70°C ลงเหลือ 60°C อย่างรวดเร็ว (ร้อนเกิน 65°C จะทำลายเอนไซม์ในน้ำผึ้งและวิตามินซีในมะนาว)",
+        "en": "Activate copper coil and submersible pump to rapidly cool from 70°C to 60°C (above 65°C destroys honey enzymes and lemon Vitamin C)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำผึ้งและน้ำมะนาว",
+        "en": "Add honey and lemon juice"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 60°C พร้อมแล้ว! กรุณาเติมน้ำผึ้ง {honey} และน้ำมะนาวสด {lemon} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมให้เข้ากัน",
+        "en": "✅ Temperature is ready at 60°C! Please add {honey} of honey and {lemon} of fresh lemon juice, then press OK to mix."
+      },
+      "descVariables": {
+        "honey": { "amount": 800, "unit": "Gram", "scalable": true },
+        "lemon": { "amount": 300, "unit": "Milliliter", "scalable": true }
+      },
+      "outputs_csv": "Stir,Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Filter",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กรองกากขิงออก",
+        "en": "Filter out ginger residue"
+      },
+      "desc": {
+        "th": "ระบบจะกรองกากขิงออกผ่านตะแกรงละเอียด ได้น้ำขิงมะนาวน้ำผึ้งสีทองใสหอม",
+        "en": "System filters out ginger residue through fine mesh, yielding clear golden aromatic ginger lemon honey."
+      },
+      "descVariables": {},
+      "outputs_csv": "Pump,Valve_CIRC"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำขิงมะนาวน้ำผึ้งพร้อมเสิร์ฟ",
+        "en": "Ginger lemon honey ready to serve"
+      },
+      "desc": {
+        "th": "✅ น้ำขิงมะนาวน้ำผึ้งพร้อมแล้ว! กรุณาเตรียมภาชนะรองรับ เครื่องจะโอนถ่ายออกให้",
+        "en": "✅ Ginger lemon honey is ready! Please prepare a container. The machine will transfer it out."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนน้ำขิงมะนาวน้ำผึ้งออกสู่ภาชนะ",
+        "en": "Transfer ginger lemon honey to container"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำขิงมะนาวน้ำผึ้งออกจากหม้อต้ม กรุณารอจนกว่ากระบวนการจะเสร็จสมบูรณ์",
+        "en": "System is transferring ginger lemon honey out of the tank. Please wait until complete."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมขิงแก่",
+        "en": "Prepare old ginger"
+      },
+      "desc": {
+        "th": "ล้างขิงแก่ {ginger_amount} ให้สะอาด ขูดเปลือกออกเล็กน้อย แล้วหั่นเป็นแว่นบางๆ หรือบุบให้แตกเพื่อให้น้ำมันหอมระเหยและสรรพคุณยาออกมาได้ง่าย",
+        "en": "Wash {ginger_amount} of old ginger, peel slightly, then slice thinly or crush to release essential oils and medicinal benefits."
+      },
+      "descVariables": {
+        "ginger_amount": { "amount": 500, "unit": "Gram", "scalable": true }
+      },
+      "image": "images/herbal/ginger_lemon_honey/man_1.jpg",
+      "tips": {
+        "th": "💡 ขิงแก่ (อายุ 10-12 เดือน) จะมีรสเผ็ดร้อนและสรรพคุณยามากกว่าขิงอ่อน เลือกหัวที่เปลือกหนา ผิวขรุขระ และหนักมือ",
+        "en": "💡 Old ginger (10-12 months) has more spiciness and medicinal benefits than young ginger. Choose thick-skinned, rough, and heavy roots."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มขิงที่ 95°C นาน 15 นาที",
+        "en": "Boil ginger at 95°C for 15 mins"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_amount} ให้เดือด ใส่ขิงที่เตรียมไว้ ลดไฟให้อุณหภูมิคงที่ 95°C (ไม่เดือดพล่าน) ต้มนาน 15 นาที คนเป็นระยะ",
+        "en": "Boil {water_amount} of clean water, add prepared ginger, reduce heat to maintain 95°C (not rolling boil), boil for 15 mins, stirring occasionally."
+      },
+      "descVariables": {
+        "water_amount": { "amount": 10, "unit": "Liter", "scalable": true }
+      },
+      "image": "images/herbal/ginger_lemon_honey/man_2.jpg",
+      "tips": {
+        "th": "💡 การต้มที่ 95°C (ไม่เดือด 100°C) จะช่วยสกัดจิงเจอรอลออกมาได้เต็มที่ โดยไม่ทำให้น้ำมันหอมระเหยของขิงระเหยหายไป",
+        "en": "💡 Boiling at 95°C (not 100°C) fully extracts gingerol without evaporating ginger's essential oils."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 60°C (สำคัญมาก!)",
+        "en": "Cool down to 60°C (Crucial!)"
+      },
+      "desc": {
+        "th": "ปิดไฟ ยกลงจากเตา พักให้เย็นลงจนอุณหภูมิเหลือ 60°C (ใช้เทอร์โมมิเตอร์วัด) ห้ามใส่น้ำผึ้งและมะนาวตอนร้อนเกิน 65°C เด็ดขาด เพราะจะ разрушитьคุณค่าทางอาหาร",
+        "en": "Turn off heat, remove from stove, let cool until temperature reaches 60°C (use thermometer). Never add honey and lemon when above 65°C, as it destroys nutritional value."
+      },
+      "descVariables": {},
+      "image": "images/herbal/ginger_lemon_honey/man_3.jpg",
+      "tips": {
+        "th": "💡 น้ำผึ้งที่อุณหภูมิ >65°C จะสูญเสียเอนไซม์และสารต้านอนุมูลอิสระ ส่วนวิตามินซีในมะนาวจะสลายตัวที่ความร้อนสูง",
+        "en": "💡 Honey above 65°C loses enzymes and antioxidants. Vitamin C in lemon also degrades at high heat."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำผึ้งและน้ำมะนาว",
+        "en": "Add honey and lemon juice"
+      },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 60°C เติมน้ำผึ้ง {honey_amount} และน้ำมะนาวสด {lemon_amount} ลงไป คนให้เข้ากันจนน้ำผึ้งละลายหมด ชิมรสและปรับตามชอบ",
+        "en": "When temperature is 60°C, add {honey_amount} of honey and {lemon_amount} of fresh lemon juice. Stir until honey fully dissolves. Taste and adjust as preferred."
+      },
+      "descVariables": {
+        "honey_amount": { "amount": 800, "unit": "Gram", "scalable": true },
+        "lemon_amount": { "amount": 300, "unit": "Milliliter", "scalable": true }
+      },
+      "image": "images/herbal/ginger_lemon_honey/man_4.jpg",
+      "tips": {
+        "th": "💡 ใช้น้ำผึ้งแท้ 100% และมะนาวคั้นสดใหม่เท่านั้น จะให้รสชาติและสรรพคุณที่ดีที่สุด ไม่ควรใช้น้ำเชื่อมหรือน้ำมะนาวขวด",
+        "en": "💡 Use 100% pure honey and freshly squeezed lemon only for best taste and benefits. Avoid syrup or bottled lemon juice."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "กรองและเสิร์ฟ",
+        "en": "Strain and serve"
+      },
+      "desc": {
+        "th": "กรองกากขิงออกผ่านกระชอนหรือผ้าขาวบาง เทใส่เหยือกหรือแก้ว เสิร์ฟอุ่นๆ (40-50°C) จะดื่มง่ายและได้สรรพคุณยาดีที่สุด สามารถแช่เย็นไว้ดื่มเย็นก็ได้",
+        "en": "Strain out ginger residue through sieve or cheesecloth. Pour into pitcher or glass. Serve warm (40-50°C) for easiest drinking and best medicinal benefits. Can also be chilled."
+      },
+      "descVariables": {},
+      "image": "images/herbal/ginger_lemon_honey/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำขิงมะนาวน้ำผึ้งสามารถเก็บในตู้เย็นได้นาน 5-7 วัน อุ่นก่อนดื่มจะได้สรรพคุณยาดีกว่าดื่มเย็น",
+        "en": "💡 Ginger lemon honey can be stored in fridge for 5-7 days. Warm before drinking for better medicinal benefits."
+      }
+    }
+  ]
+}
