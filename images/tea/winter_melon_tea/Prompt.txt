@@ -1,0 +1,21 @@
+[green_tea_10L.json]
+ขอสูตรทำน้ำ ผึ้งมะนาว ขนาด 10 ลิตร ตามรูปแบบไฟล์ JSON อ้างอิงที่ผมส่งให้
+
+
+ขอ เฉพาะ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3   ไม่ต้องสร้างภาพให้ผมนะ แต่ต้องตรวจสอบ ความถูกต้อง ของ อุปกรณ์ใน prompt ต้องเหมือนกันทุกภาพ เช่น ต้มใช้เตาไฟฟ้า รุ่นเดียวกัน , หม้อใช้รุ่นเดียวกัน , วัสดุใส่น้ำต้องเป็นรูปแบบเดียวกัน  จะได้รู้สึกถึงความต่อเนื่องของภาพ
+
+
+Professional food photography, a tall clear glass of iced winter melon tea, pale golden translucent liquid, clear ice cubes, garnished with a small piece of candied winter melon on the rim. Placed on a clean white marble countertop. Background shows a blurred bright modern commercial kitchen with soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k, cinematic lighting.
+
+Professional food photography, angled overhead shot of a bright modern commercial kitchen, clean white marble countertop. Center: a large 12L polished stainless steel stockpot with two side handles and a matching glass lid. Surrounding it: a large 5L clear borosilicate glass measuring jug with handle and spout filled with water, a glass jar of dark winter melon syrup, and a small wooden bowl of white sugar. Soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Professional product photography, a sleek modern stainless steel automated beverage machine dispensing pale golden winter melon tea into a large clear glass pitcher. Glowing digital interface showing "Winter Melon Tea Brewing". Clean bright modern commercial kitchen background, white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Professional food photography, close-up shot of a large 12L polished stainless steel stockpot with two side handles sitting on a sleek black glass-ceramic induction cooktop with digital touch controls. Inside the pot, clear water is heating up with tiny bubbles forming at the bottom. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, dynamic action shot of dark winter melon syrup being poured from a glass jar into the clear hot water inside a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with digital touch controls. A long stainless steel paddle stirrer is actively mixing the liquid, creating beautiful swirling patterns. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, still shot of a large 12L polished stainless steel stockpot with two side handles and a matching glass lid, sitting on a sleek black glass-ceramic induction cooktop with digital touch controls (turned off). Gentle condensation is visible on the inside of the glass lid, indicating the cooling process. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, action shot of pale golden winter melon tea being poured from a large 12L polished stainless steel stockpot with two side handles into a tall clear glass filled with ice cubes. The pot is held over a clean white marble countertop. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Garnished with candied winter melon. Bright modern commercial kitchen, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+

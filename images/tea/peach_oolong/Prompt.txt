@@ -1,0 +1,22 @@
+[green_tea_10L.json]
+ขอสูตรทำน้ำ ผึ้งมะนาว ขนาด 10 ลิตร ตามรูปแบบไฟล์ JSON อ้างอิงที่ผมส่งให้
+
+
+ขอ เฉพาะ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3   ไม่ต้องสร้างภาพให้ผมนะ แต่ต้องตรวจสอบ ความถูกต้อง ของ อุปกรณ์ใน prompt ต้องเหมือนกันทุกภาพ เช่น ต้มใช้เตาไฟฟ้า รุ่นเดียวกัน , หม้อใช้รุ่นเดียวกัน , วัสดุใส่น้ำต้องเป็นรูปแบบเดียวกัน  จะได้รู้สึกถึงความต่อเนื่องของภาพ
+
+
+Professional food photography, a tall clear glass of iced peach oolong tea, golden amber liquid, condensation on glass, garnished with a fresh peach slice and mint leaf, placed on a white marble countertop. Background shows a blurred bright modern commercial kitchen. Soft natural daylight from left window, 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Professional food photography, overhead shot of a bright modern commercial kitchen, white marble countertop. Center: large 12L polished stainless steel stockpot with two side handles. Surrounding it: a large 5L clear borosilicate glass measuring jug with handle and spout filled with water, a wooden bowl of premium oolong tea leaves, and a bottle of peach syrup. Soft natural daylight from left window, 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Professional product photography, sleek modern stainless steel automated beverage machine dispensing golden peach oolong tea into a large clear glass pitcher. Glowing digital interface showing "Peach Oolong Brewing". Clean commercial kitchen background, 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Professional food photography, close-up shot of a large 12L polished stainless steel stockpot with two side handles sitting on a sleek black glass-ceramic induction cooktop with touch controls. Inside the pot, clear water is heating up with tiny bubbles forming at the bottom. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the blurred background. Bright modern commercial kitchen, white marble countertop, soft natural daylight from left window, 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, action shot of premium oolong tea leaves being poured from a wooden bowl into a large 12L polished stainless steel stockpot with two side handles on a sleek black glass-ceramic induction cooktop with touch controls. A long-handled fine-mesh stainless steel tea strainer is resting on the pot's edge. Bright modern commercial kitchen, white marble countertop, soft natural daylight from left window, 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, close-up shot of a long-handled fine-mesh stainless steel tea strainer being lifted out of a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with touch controls. Steam is gently rising from the golden tea liquid. Bright modern commercial kitchen, white marble countertop, soft natural daylight from left window, 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, action shot of a long stainless steel paddle stirrer mixing peach syrup into the golden oolong tea inside a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with touch controls. Beautiful swirling liquid motion. Bright modern commercial kitchen, white marble countertop, soft natural daylight from left window, 4:3 aspect ratio, photorealistic, 8k.
+
+Professional food photography, action shot of golden peach oolong tea being poured from a large 12L polished stainless steel stockpot with two side handles into a tall clear glass filled with ice. The pot is held over a white marble countertop. A large 5L clear borosilicate glass measuring jug with handle and spout is in the blurred background. Bright modern commercial kitchen, soft natural daylight from left window, 4:3 aspect ratio, photorealistic, 8k.
