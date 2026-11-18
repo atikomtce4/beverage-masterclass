@@ -19,9 +19,9 @@
     "en": "Winter Melon Tea 10L"
   },
   "images": [
-    "images/tea/winter_melon/main_1.jpg",
-    "images/tea/winter_melon/main_2.jpg",
-    "images/tea/winter_melon/main_3.jpg"
+    "images/tea/winter_melon_tea/main_1.jpg",
+    "images/tea/winter_melon_tea/main_2.jpg",
+    "images/tea/winter_melon_tea/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_winter_melon",
   "prepTime": {
@@ -248,7 +248,7 @@
           "scalable": true
         }
       },
-      "image": "images/tea/winter_melon/man_1.jpg",
+      "image": "images/tea/winter_melon_tea/man_1.jpg",
       "tips": {
         "th": "💡 การใช้น้ำร้อน 90°C จะช่วยให้เนื้อฟักเขียวหรือน้ำเชื่อมละลายได้เร็วและเข้ากันได้ดีกว่าน้ำอุ่น",
         "en": "💡 Using 90°C water helps the winter melon paste or syrup dissolve faster and blend more smoothly than warm water."
@@ -277,7 +277,7 @@
           "scalable": true
         }
       },
-      "image": "images/tea/winter_melon/man_2.jpg",
+      "image": "images/tea/winter_melon_tea/man_2.jpg",
       "tips": {
         "th": "💡 คนอย่างต่อเนื่องจนกว่าจะไม่มีเม็ดน้ำตาลหลงเหลืออยู่ เพื่อให้ได้รสชาติที่กลมกล่อมทั่วทั้งหม้อ",
         "en": "💡 Stir continuously until no sugar granules remain, ensuring a smooth and consistent flavor throughout the pot."
@@ -295,7 +295,7 @@
         "en": "Cover the pot and let the tea cool down to room temperature, or place in an ice bath to speed up the cooling process."
       },
       "descVariables": {},
-      "image": "images/tea/winter_melon/man_3.jpg",
+      "image": "images/tea/winter_melon_tea/man_3.jpg",
       "tips": {
         "th": "💡 การปิดฝาช่วยป้องกันกลิ่นหรือสิ่งปนเปื้อนจากภายนอกในขณะที่รอให้ชาเย็นตัวลง",
         "en": "💡 Covering the pot prevents outside odors or contaminants while waiting for the tea to cool."
@@ -313,7 +313,7 @@
         "en": "Pour into a glass filled with ice. Serve cold and refreshing. Garnish with small pieces of candied winter melon on top for extra charm."
       },
       "descVariables": {},
-      "image": "images/tea/winter_melon/man_4.jpg",
+      "image": "images/tea/winter_melon_tea/man_4.jpg",
       "tips": {
         "th": "💡 สำหรับรสชาติที่เข้มข้นขึ้น สามารถเพิ่มปริมาณน้ำเชื่อมฟักเขียวได้อีก 10-20% ตามความชอบ",
         "en": "💡 For a richer flavor, you can increase the winter melon syrup amount by 10-20% according to your preference."

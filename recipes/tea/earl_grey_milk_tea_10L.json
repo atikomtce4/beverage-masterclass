@@ -19,8 +19,8 @@
     "en": "Earl Grey Milk Tea 10L"
   },
   "images": [
-    "images/milk_tea/earl_grey/main_1.jpg",
-    "images/milk_tea/earl_grey/main_2.jpg",
+    "images/milk_tea/earl_grey_milk_tea/main_1.jpg",
+    "images/milk_tea/earl_grey_milk_tea/main_2.jpg",
     "images/milk_tea/earl_grey/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_earl_grey",
@@ -326,7 +326,7 @@
           "scalable": true
         }
       },
-      "image": "images/milk_tea/earl_grey/man_1.jpg",
+      "image": "images/milk_tea/earl_grey_milk_tea/man_1.jpg",
       "tips": {
         "th": "💡 ชาดำ (Black Tea) ต้องการน้ำร้อนเกือบเดือด (95-100°C) ในการสกัดแทนนินและคาเฟอีนให้รสชาติเข้มพอที่จะตัดกับความมันของนมได้",
         "en": "💡 Black tea requires near-boiling water (95-100°C) to extract tannins and caffeine, creating a bold flavor that cuts through the creaminess of milk."
@@ -350,7 +350,7 @@
           "scalable": true
         }
       },
-      "image": "images/milk_tea/earl_grey/man_2.jpg",
+      "image": "images/milk_tea/earl_grey_milk_tea/man_2.jpg",
       "tips": {
         "th": "💡 การปิดฝาช่วยกักเก็บน้ำมันหอมระเหยของ Bergamot (มะกรูดฝรั่ง) ซึ่งเป็นเอกลักษณ์ของเอิร์ลเกรย์ไม่ให้ระเหยหายไป",
         "en": "💡 Covering the pot traps the essential oils of Bergamot, the signature aroma of Earl Grey tea, preventing it from evaporating."
@@ -397,7 +397,7 @@
           "scalable": true
         }
       },
-      "image": "images/milk_tea/earl_grey/man_4.jpg",
+      "image": "images/milk_tea/earl_grey_milk_tea/man_4.jpg",
       "tips": {
         "th": "💡 อุณหภูมิ 65°C เป็นจุดที่นมมีความหวานธรรมชาติสูงสุด และโปรตีนในนมยังไม่เสียสภาพ ทำให้ชานมมีความเนียนนุ่มไม่แตกมัน",
         "en": "💡 65°C is the sweet spot where milk tastes naturally sweetest and its proteins remain intact, resulting in a smooth, non-curdled milk tea."
@@ -415,7 +415,7 @@
         "en": "Pour into a glass. Serve warm to enjoy the creamy milk and Bergamot aroma, or pour over ice for a cold version. Dust with a little Earl Grey powder on top for garnish."
       },
       "descVariables": {},
-      "image": "images/milk_tea/earl_grey/man_5.jpg",
+      "image": "images/milk_tea/earl_grey_milk_tea/man_5.jpg",
       "tips": {
         "th": "💡 สำหรับเมนูเย็น แนะนำให้เพิ่มความเข้มข้นของชาขึ้นอีก 10-20% (หรือเพิ่มเวลาแช่เป็น 7 นาที) เพื่อชดเชยรสชาติที่เจือจางลงเมื่อน้ำแข็งละลาย",
         "en": "💡 For iced versions, consider increasing tea concentration by 10-20% (or steep for 7 mins) to compensate for dilution when ice melts."
