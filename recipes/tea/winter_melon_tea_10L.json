@@ -1,0 +1,323 @@
+{
+  "id": "winter_melon_tea_10L",
+  "icon": "🍈",
+  "category": "tea",
+  "machineCompatible": true,
+  "description": "ชาฟักเขียว 10 ลิตร สูตรดั้งเดิม หวานหอมสดชื่น ทำง่ายด้วยเครื่อง AllDrinks System ผสมน้ำเชื่อมหรือเนื้อฟักเขียวเข้มข้นกับน้ำร้อน คนให้เข้ากันแล้วทำให้เย็น พร้อมเสิร์ฟแบบเย็นคลายร้อน",
+  "total_time": 25,
+  "target_temp": 15,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_winter_melon_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาฟักเขียว 10 ลิตร",
+    "en": "Winter Melon Tea 10L"
+  },
+  "images": [
+    "images/tea/winter_melon_tea/main_1.jpg",
+    "images/tea/winter_melon_tea/main_2.jpg",
+    "images/tea/winter_melon_tea/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_winter_melon",
+  "prepTime": {
+    "th": "5 นาที + 20 นาที (เครื่อง)",
+    "en": "5 mins + 20 mins (machine)"
+  },
+  "cookTime": {
+    "th": "25 นาที (รวมเตรียมและเครื่อง)",
+    "en": "25 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ชาฟักเขียวสูตรดั้งเดิม หวานหอมสดชื่น ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 90°C เพื่อช่วยละลายน้ำเชื่อมหรือเนื้อฟักเขียวเข้มข้นให้เข้ากันได้อย่างสมบูรณ์ จากนั้นจะลดอุณหภูมิลงเหลือ 15°C เพื่อให้ได้ชาฟักเขียวเย็นสดชื่น พร้อมเสิร์ฟทันที",
+    "en": "Classic winter melon tea, sweet and refreshing, made easy with AllDrinks System: Machine heats water to 90°C to perfectly dissolve winter melon syrup or paste, then rapidly chills to 15°C for a refreshing iced tea ready to serve."
+  },
+  "benefits": {
+    "th": "ฟักเขียวมีฤทธิ์เย็น ช่วยแก้ร้อนใน กระหายน้ำ และอุดมไปด้วยวิตามินซีและแร่ธาตุที่ช่วยเสริมสร้างภูมิคุ้มกัน",
+    "en": "Winter melon has cooling properties, helps relieve internal heat and thirst, and is rich in Vitamin C and minerals that boost the immune system."
+  },
+  "warnings": {
+    "th": "⚠️ มีปริมาณน้ำตาล ควรควบคุมการบริโภคสำหรับผู้ที่เป็นโรคเบาหวานหรือต้องการควบคุมน้ำหนัก",
+    "en": "⚠️ Contains sugar. Consumption should be controlled for individuals with diabetes or those managing their weight."
+  },
+  "nutrition": {
+    "calories": "35 kcal",
+    "carbs": "9 g",
+    "sugar": "8 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำเชื่อมฟักเขียวหรือเนื้อฟักเขียวเข้มข้น",
+        "en": "Winter melon syrup or concentrated paste"
+      },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "Sugar (adjustable sweetness)"
+      },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 90°C",
+        "en": "Heat Water to 90°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 90°C ซึ่งเป็นอุณหภูมิที่เหมาะสมในการละลายน้ำเชื่อมหรือเนื้อฟักเขียวเข้มข้นให้เข้ากันได้ดีที่สุด",
+        "en": "The machine heats water to 90°C, the optimal temperature for perfectly dissolving winter melon syrup or concentrated paste."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำเชื่อมฟักเขียวและน้ำตาล",
+        "en": "Add winter melon syrup and sugar"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 90°C พร้อมแล้ว! กรุณาเติมน้ำเชื่อมฟักเขียว {winter_melon} และน้ำตาล {sugar} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 90°C! Please add {winter_melon} of winter melon syrup and {sugar} of sugar, then press OK to mix."
+      },
+      "descVariables": {
+        "winter_melon": {
+          "amount": 1500,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 200,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้ละลายเข้ากัน (3 นาที)",
+        "en": "Mix and Dissolve (3 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C ต่อเนื่อง 3 นาที พร้อมระบบวนน้ำและกวน เพื่อให้น้ำเชื่อมฟักเขียวและน้ำตาลละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์",
+        "en": "Machine maintains 90°C for 3 mins with circulation and stirring to ensure the winter melon syrup and sugar are completely dissolved and blended."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 15,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 15°C พร้อมเสิร์ฟ",
+        "en": "Chill to 15°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 15°C พร้อมระบบกวน เพื่อให้ได้ชาฟักเขียวที่เย็นสดชื่น หวานหอม พร้อมเสิร์ฟทันที",
+        "en": "Machine chills the mixture to 15°C with stirring, ensuring a refreshing, sweet, and aromatic iced winter melon tea ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 6,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ชาฟักเขียวพร้อมเสิร์ฟ",
+        "en": "Winter Melon Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายชาฟักเขียวออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Winter Melon Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 90°C",
+        "en": "Heat water to 90°C"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 90°C (มีฟองเล็กๆ ที่ก้นหม้อแต่ยังไม่เดือดพล่าน) เพื่อเตรียมละลายส่วนผสม",
+        "en": "Heat {water} of clean water to 90°C (small bubbles at the bottom but not rolling boil) to prepare for dissolving ingredients."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/winter_melon_tea/man_1.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำร้อน 90°C จะช่วยให้เนื้อฟักเขียวหรือน้ำเชื่อมละลายได้เร็วและเข้ากันได้ดีกว่าน้ำอุ่น",
+        "en": "💡 Using 90°C water helps the winter melon paste or syrup dissolve faster and blend more smoothly than warm water."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำเชื่อมฟักเขียวและน้ำตาล",
+        "en": "Mix with winter melon syrup and sugar"
+      },
+      "desc": {
+        "th": "เติมน้ำเชื่อมฟักเขียว {winter_melon} และน้ำตาล {sugar} ลงในน้ำร้อน คนให้เข้ากันจนละลายหมด",
+        "en": "Add {winter_melon} of winter melon syrup and {sugar} of sugar into the hot water. Stir well until fully dissolved."
+      },
+      "descVariables": {
+        "winter_melon": {
+          "amount": 1500,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 200,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/winter_melon_tea/man_2.jpg",
+      "tips": {
+        "th": "💡 คนอย่างต่อเนื่องจนกว่าจะไม่มีเม็ดน้ำตาลหลงเหลืออยู่ เพื่อให้ได้รสชาติที่กลมกล่อมทั่วทั้งหม้อ",
+        "en": "💡 Stir continuously until no sugar granules remain, ensuring a smooth and consistent flavor throughout the pot."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "พักให้เย็น",
+        "en": "Cool down"
+      },
+      "desc": {
+        "th": "ปิดฝาหม้อและพักชาไว้จนอุณหภูมิลดลงเหลืออุณหภูมิห้อง หรือแช่ในอ่างน้ำแข็งเพื่อเร่งกระบวนการทำความเย็น",
+        "en": "Cover the pot and let the tea cool down to room temperature, or place in an ice bath to speed up the cooling process."
+      },
+      "descVariables": {},
+      "image": "images/tea/winter_melon_tea/man_3.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยป้องกันกลิ่นหรือสิ่งปนเปื้อนจากภายนอกในขณะที่รอให้ชาเย็นตัวลง",
+        "en": "💡 Covering the pot prevents outside odors or contaminants while waiting for the tea to cool."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทใส่แก้วที่มีน้ำแข็งเต็มแก้ว เสิร์ฟเย็นๆ คลายร้อน สามารถตกแต่งด้วยเนื้อฟักเขียวเชื่อมชิ้นเล็กๆ ด้านบนเพื่อเพิ่มเสน่ห์",
+        "en": "Pour into a glass filled with ice. Serve cold and refreshing. Garnish with small pieces of candied winter melon on top for extra charm."
+      },
+      "descVariables": {},
+      "image": "images/tea/winter_melon_tea/man_4.jpg",
+      "tips": {
+        "th": "💡 สำหรับรสชาติที่เข้มข้นขึ้น สามารถเพิ่มปริมาณน้ำเชื่อมฟักเขียวได้อีก 10-20% ตามความชอบ",
+        "en": "💡 For a richer flavor, you can increase the winter melon syrup amount by 10-20% according to your preference."
+      }
+    }
+  ]
+}
