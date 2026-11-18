@@ -1,0 +1,490 @@
+{
+  "id": "chrysanthemum_puerh_10L",
+  "icon": "🫖",
+  "category": "tea",
+  "machineCompatible": true,
+  "description": "ชาเก๊กฮวยผู่เอ๋อ 10 ลิตร สูตรตำรับจีนเพื่อสุขภาพ สกัดจากใบชาผู่เอ๋อหมักคุณภาพดีคู่กับดอกเก๊กฮวยแห้งหอมหวาน ปรุงด้วยน้ำตาลกรวดให้รสกลมกล่อม ดื่มอุ่นๆ ช่วยย่อยและบำรุงสายตา",
+  "total_time": 30,
+  "target_temp": 60,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_chrysanthemum_puerh_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาเก๊กฮวยผู่เอ๋อ 10 ลิตร",
+    "en": "Chrysanthemum Pu-erh Tea 10L"
+  },
+  "images": [
+    "images/tea/chrysanthemum_puerh/main_1.jpg",
+    "images/tea/chrysanthemum_puerh/main_2.jpg",
+    "images/tea/chrysanthemum_puerh/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_chrysanthemum_puerh",
+  "prepTime": {
+    "th": "5 นาที + 25 นาที (เครื่อง)",
+    "en": "5 mins + 25 mins (machine)"
+  },
+  "cookTime": {
+    "th": "30 นาที (รวมเตรียมและเครื่อง)",
+    "en": "30 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ชาเก๊กฮวยผู่เอ๋อสูตรตำรับจีนเพื่อสุขภาพ ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 95°C แช่ใบชาผู่เอ๋อ 5 นาทีเพื่อปลุกใบและดึงรส earthy กลมกล่อม จากนั้นลดอุณหภูมิเหลือ 90°C แล้วใส่ดอกเก๊กฮวยแช่ต่ออีก 3 นาที (ใส่ทีหลังเพื่อป้องกันรสขมเฝื่อนของดอกไม้) ผสมน้ำตาลกรวดให้รสหวานละมุน แล้วคงอุณหภูมิ 60°C พร้อมเสิร์ฟอุ่นๆ",
+    "en": "Traditional Chinese wellness Chrysanthemum Pu-erh tea made easy with AllDrinks System: Machine heats water to 95°C, steeps pu-erh leaves for 5 mins to awaken the leaves and extract the earthy depth, then precisely cools to 90°C and adds chrysanthemum for 3 mins (added last to prevent floral bitterness), blends with rock sugar for a mellow sweetness, and holds at 60°C ready to serve warm."
+  },
+  "benefits": {
+    "th": "ชาผู่เอ๋อช่วยกระตุ้นการย่อยอาหารและลดไขมันในเลือด ผสมกับเก๊กฮวยที่ช่วยบำรุงสายตา แก้ร้อนใน และบำรุงตับตามตำรับแพทย์แผนจีน ดื่มอุ่นๆ ช่วยปรับสมดุลร่างกาย",
+    "en": "Pu-erh tea aids digestion and helps lower blood lipids. Combined with chrysanthemum, which nourishes the eyes, clears internal heat, and supports the liver according to Traditional Chinese Medicine. Serving warm helps balance the body."
+  },
+  "warnings": {
+    "th": "⚠️ มีคาเฟอีนจากชาผู่เอ๋อ ควรหลีกเลี่ยงการดื่มก่อนนอน และผู้ที่แพ้พืชตระกูลเดซี (ดอกเบญจมาศ/เก๊กฮวย) อาจมีอาการแพ้ได้ สตรีมีครรภ์ควรดื่มในปริมาณพอเหมาะ",
+    "en": "⚠️ Contains caffeine from pu-erh tea. Avoid consuming before bedtime. Those allergic to the daisy family (chrysanthemum) may experience allergic reactions. Pregnant women should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "10 g",
+    "sugar": "9 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบชาผู่เอ๋อหมัก (Pu-erh)",
+        "en": "Fermented Pu-erh tea leaves"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ดอกเก๊กฮวยแห้ง (เกรดชา)",
+        "en": "Dried chrysanthemum flowers (tea grade)"
+      },
+      "amount": 80,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลกรวด (Rock Sugar)",
+        "en": "Rock sugar"
+      },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 95°C",
+        "en": "Heat Water to 95°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 95°C ซึ่งเป็นอุณหภูมิที่เหมาะสมที่สุดในการปลุกใบชาผู่เอ๋อและสกัดรสชาติ earthy ที่เข้มข้น",
+        "en": "The machine heats water to 95°C, the optimal temperature for awakening pu-erh leaves and extracting the rich earthy flavor."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ใบชาผู่เอ๋อในตะกร้า",
+        "en": "Add pu-erh tea in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ใบชาผู่เอ๋อ {puerh} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มกระบวนการแช่สกัด",
+        "en": "✅ Please add {puerh} of pu-erh tea leaves into the filter basket, submerge in pot, and press OK to start steeping."
+      },
+      "descVariables": {
+        "puerh": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "แช่สกัดชาผู่เอ๋อ (5 นาที)",
+        "en": "Steep Pu-erh Tea (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 5 นาที พร้อมระบบวนน้ำเพื่อดึงรสชาติที่เข้มและกลิ่นหอมเฉพาะตัวของชาหมัก",
+        "en": "Machine maintains 95°C for 5 mins with circulation to fully extract the bold flavor and distinct aroma of the fermented tea."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 90°C (เตรียมใส่เก๊กฮวย)",
+        "en": "Chill to 90°C (Prepare for Chrysanthemum)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 90°C (น้ำที่ร้อนจัดจะสกัดความขมเฝื่อนจากดอกเก๊กฮวย)",
+        "en": "Activate cooling system to chill the tea to 90°C (rolling boil will extract bitterness and astringency from chrysanthemum flowers)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ดอกเก๊กฮวยในตะกร้า",
+        "en": "Add chrysanthemum in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ดอกเก๊กฮวยแห้ง {chrysanthemum} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มกระบวนการสกัดดอกไม้",
+        "en": "✅ Please add {chrysanthemum} of dried chrysanthemum into the filter basket, submerge in pot, and press OK to start steeping."
+      },
+      "descVariables": {
+        "chrysanthemum": {
+          "amount": 80,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "แช่สกัดดอกเก๊กฮวย (3 นาที)",
+        "en": "Steep Chrysanthemum (3 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C ต่อเนื่อง 3 นาที พร้อมระบบวนน้ำเพื่อดึงกลิ่นหอมหวานของเก๊กฮวยโดยไม่สกัดความขมออกมา",
+        "en": "Machine maintains 90°C for 3 mins with circulation to extract the sweet floral aroma of chrysanthemum without pulling out bitterness."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าชาและดอกไม้ ออก",
+        "en": "Remove tea and flower basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าใบชาและดอกเก๊กฮวยออก แล้วกด OK",
+        "en": "Time is up. Please remove the tea and chrysanthemum basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำตาลกรวด",
+        "en": "Add rock sugar"
+      },
+      "desc": {
+        "th": "✅ กรุณาเติมน้ำตาลกรวด {rock_sugar} ลงในหม้อต้ม แล้วกด OK เพื่อให้เครื่องกวนผสมจนละลายหมด",
+        "en": "✅ Please add {rock_sugar} of rock sugar into the pot, then press OK to stir until fully dissolved."
+      },
+      "descVariables": {
+        "rock_sugar": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "กวนละลายน้ำตาลกรวด (2 นาที)",
+        "en": "Dissolve Rock Sugar (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C ต่อเนื่อง 2 นาที พร้อมระบบกวน เพื่อให้น้ำตาลกรวดละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์",
+        "en": "Machine maintains 90°C for 2 mins with stirring to ensure the rock sugar is completely dissolved and blended."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 11,
+      "function": "Chill",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 60°C พร้อมเสิร์ฟอุ่น",
+        "en": "Chill to 60°C for Warm Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 60°C พร้อมระบบกวน เพื่อให้ได้ชาเก๊กฮวยผู่เอ๋ออุ่นกลมกล่อม ดื่มได้ทันทีไม่ลวกลิ้น",
+        "en": "Machine chills the mixture to 60°C with stirring, ensuring a mellow, warm chrysanthemum pu-erh tea ready to sip without scalding."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 12,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ชาเก๊กฮวยผู่เอ๋อพร้อมเสิร์ฟ",
+        "en": "Chrysanthemum Pu-erh Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายชาเก๊กฮวยผู่เอ๋ออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Chrysanthemum Pu-erh Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 95°C",
+        "en": "Heat water to 95°C"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 95°C (มีฟองใหญ่ที่ก้นหม้อและไอน้ำเยอะ แต่ยังไม่เดือดพล่าน) เพื่อเตรียมปลุกใบชาผู่เอ๋อ",
+        "en": "Heat {water} of clean water to 95°C (large bubbles at the bottom and lots of steam, but not rolling boil) to prepare for awakening the pu-erh leaves."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/chrysanthemum_puerh/man_1.jpg",
+      "tips": {
+        "th": "💡 ชาผู่เอ๋อเป็นชาหมักที่ต้องการน้ำร้อนจัด (95-100°C) ในการล้างฝุ่นและ 'ปลุก' ใบชาให้คายรสชาติ earthy ออกมา",
+        "en": "💡 Pu-erh is a fermented tea that needs very hot water (95-100°C) to rinse off dust and 'awaken' the leaves to release their earthy flavor."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "แช่สกัดใบชาผู่เอ๋อ (5 นาที)",
+        "en": "Steep pu-erh tea (5 mins)"
+      },
+      "desc": {
+        "th": "ใส่ใบชาผู่เอ๋อ {puerh} (ในถุงกรองหรือตะกร้า) ลงในน้ำร้อน ปิดฝาหม้อ แช่ทิ้งไว้ 5 นาที",
+        "en": "Place {puerh} of pu-erh tea leaves (in a filter bag or basket) into the hot water. Cover the pot and steep for 5 minutes."
+      },
+      "descVariables": {
+        "puerh": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/chrysanthemum_puerh/man_2.jpg",
+      "tips": {
+        "th": "💡 หากต้องการรสที่นุ่มนวลขึ้น ให้ 'ล้างชา' ด้วยน้ำร้อนจัด 1 รอบ (เททิ้งภายใน 10 วินาที) ก่อนเริ่มแช่จริง",
+        "en": "💡 For a smoother taste, 'rinse' the tea with boiling water once (discard within 10 seconds) before the actual steeping."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ลดเหลือ 90°C แล้วใส่ดอกเก๊กฮวย (3 นาที)",
+        "en": "Cool to 90°C and add chrysanthemum (3 mins)"
+      },
+      "desc": {
+        "th": "พักน้ำชาให้เย็นลงเหลือ 90°C แล้วใส่ดอกเก๊กฮวยแห้ง {chrysanthemum} ลงไป แช่ต่ออีก 3 นาที (ห้ามแช่นานกว่านี้)",
+        "en": "Let the tea cool to 90°C, then add {chrysanthemum} of dried chrysanthemum. Steep for another 3 minutes (do not steep longer)."
+      },
+      "descVariables": {
+        "chrysanthemum": {
+          "amount": 80,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/chrysanthemum_puerh/man_3.jpg",
+      "tips": {
+        "th": "💡 ดอกเก๊กฮวยต้องใส่ทีหลังและแช่สั้นๆ ที่ 90°C เพราะน้ำร้อนจัดหรือแช่นานเกินไปจะทำให้ชาขมและเฝื่อน",
+        "en": "💡 Chrysanthemum must be added last and steeped briefly at 90°C, as boiling water or over-steeping makes the tea bitter and astringent."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ยกตะกร้าออกและใส่น้ำตาลกรวด",
+        "en": "Remove basket and add rock sugar"
+      },
+      "desc": {
+        "th": "ยกถุงกรองใบชาและดอกไม้ออก เติมน้ำตาลกรวด {rock_sugar} ลงไป คนให้ละลายหมดในน้ำชายังร้อน",
+        "en": "Remove the tea and flower filter bag. Add {rock_sugar} of rock sugar and stir until fully dissolved while the tea is still hot."
+      },
+      "descVariables": {
+        "rock_sugar": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/chrysanthemum_puerh/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดให้รสหวานกลมกล่อมละมุนกว่าน้ำตาลทราย จึงเข้ากับรส earthy ของผู่เอ๋อและกลิ่นหอมของเก๊กฮวยได้ดีที่สุด",
+        "en": "💡 Rock sugar provides a mellow sweetness that pairs perfectly with the earthy pu-erh and floral chrysanthemum aroma."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "พักให้เย็นลงเหลือประมาณ 60°C แล้วเทใส่แก้ว เสิร์ฟอุ่นๆ เพื่อการผ่อนคลาย หรือแช่เย็นแล้วเติมน้ำแข็งสำหรับดื่มยามบ่าย",
+        "en": "Let it cool to about 60°C, then pour into a glass. Serve warm for relaxation, or chill and add ice for an afternoon drink."
+      },
+      "descVariables": {},
+      "image": "images/tea/chrysanthemum_puerh/man_5.jpg",
+      "tips": {
+        "th": "💡 สามารถตกแต่งด้วยดอกเก๊กฮวยแห้งลอยหน้าหรือชิ้นส้มตากแห้ง (chenpi) เพื่อเพิ่มเสน่ห์และกลิ่นหอมแบบตำรับจีน",
+        "en": "💡 Garnish with a floating dried chrysanthemum flower or a piece of dried tangerine peel (chenpi) for extra charm and authentic Chinese aroma."
+      }
+    }
+  ]
+}

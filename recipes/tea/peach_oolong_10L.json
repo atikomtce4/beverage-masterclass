@@ -1,0 +1,425 @@
+{
+  "id": "peach_oolong_10L",
+  "icon": "🍑",
+  "category": "tea",
+  "machineCompatible": true,
+  "description": "ชาพีชอู่หลง 10 ลิตร สูตรหอมสดชื่น ผสมผสานชาอู่หลงเกรดพรีเมียมกับกลิ่นหอมหวานของพีชธรรมชาติ ดื่มเย็นๆ คลายร้อน หอมอร่อย ดื่มง่าย",
+  "total_time": 35,
+  "target_temp": 15,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_peach_oolong_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาพีชอู่หลง 10 ลิตร",
+    "en": "Peach Oolong Tea 10L"
+  },
+  "images": [
+    "images/tea/peach_oolong/main_1.jpg",
+    "images/tea/peach_oolong/main_2.jpg",
+    "images/tea/peach_oolong/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_peach_oolong",
+  "prepTime": {
+    "th": "5 นาที + 30 นาที (เครื่อง)",
+    "en": "5 mins + 30 mins (machine)"
+  },
+  "cookTime": {
+    "th": "35 นาที (รวมเตรียมและเครื่อง)",
+    "en": "35 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ชาพีชอู่หลงสูตรหอมสดชื่น ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 90°C แช่ชาอู่หลง 5 นาที จากนั้นลดอุณหภูมิเหลือ 40°C ก่อนผสมน้ำเชื่อมพีชและน้ำตาล เพื่อรักษากลิ่นหอมของพีชไม่ให้ระเหยหายไปจากความร้อนสูง แล้วลดอุณหภูมิเหลือ 15°C พร้อมเสิร์ฟแบบเย็น",
+    "en": "Refreshing peach oolong tea made easy with AllDrinks System: Machine heats water to 90°C, steeps oolong for 5 mins, precisely cools to 40°C to mix with peach syrup and sugar (preserving fresh peach aroma), then chills to 15°C for ready-to-serve iced tea."
+  },
+  "benefits": {
+    "th": "ชาอู่หลงมีสารต้านอนุมูลอิสระและช่วยเร่งการเผาผลาญ ผสมกับพีชที่อุดมไปด้วยวิตามินซีและวิตามินเอ ช่วยบำรุงผิวพรรณและเสริมสร้างภูมิคุ้มกัน",
+    "en": "Oolong tea contains antioxidants and boosts metabolism. Combined with peach, which is rich in Vitamin C and A, it helps nourish the skin and boost the immune system."
+  },
+  "warnings": {
+    "th": "⚠️ มีคาเฟอีนจากชาอู่หลง ควรหลีกเลี่ยงการดื่มในปริมาณมากก่อนนอน และผู้ที่แพ้ผลไม้ตระกูล stone fruits (เช่น พีช) ควรระวัง",
+    "en": "⚠️ Contains caffeine from oolong tea. Avoid consuming in large amounts before bedtime. Those allergic to stone fruits (like peaches) should be cautious."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "11 g",
+    "sugar": "10 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบชาอู่หลงเกรดพรีเมียม",
+        "en": "Premium oolong tea leaves"
+      },
+      "amount": 120,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำเชื่อมพีชหรือน้ำพีชเข้มข้น",
+        "en": "Peach syrup or concentrated peach juice"
+      },
+      "amount": 1500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "Sugar (adjustable sweetness)"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 90°C",
+        "en": "Heat Water to 90°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 90°C ซึ่งเป็นอุณหภูมิที่เหมาะสมที่สุดในการสกัดชาอู่หลงให้หอมมัน ไม่ขมฝาด",
+        "en": "The machine heats water to 90°C, the optimal temperature for extracting the rich aroma of oolong tea without bitterness."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ใบชาอู่หลงในตะกร้า",
+        "en": "Add oolong tea in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ใบชาอู่หลง {oolong} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มกระบวนการแช่สกัด",
+        "en": "✅ Please add {oolong} of oolong tea leaves into the filter basket, submerge in pot, and press OK to start steeping."
+      },
+      "descVariables": {
+        "oolong": {
+          "amount": 120,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 90,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "แช่สกัดชาอู่หลง (5 นาที)",
+        "en": "Steep Oolong Tea (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 90°C ต่อเนื่อง 5 นาที พร้อมระบบวนน้ำเพื่อดึงกลิ่นหอมและรสชาติที่กลมกล่อมของชาอู่หลง",
+        "en": "Machine maintains 90°C for 5 mins with circulation to fully extract the aroma and smooth taste of oolong tea."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าชาออก",
+        "en": "Remove tea basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าใบชาออก แล้วกด OK",
+        "en": "Time is up. Please remove the tea basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 40°C (รักษากลิ่นพีช)",
+        "en": "Chill to 40°C (Preserve Peach Aroma)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิชาลงเหลือ 40°C (ร้อนเกินนี้จะทำให้กลิ่นหอมของพีชระเหยและเสียรสชาติ)",
+        "en": "Activate cooling system to chill the tea to 40°C (higher temps will evaporate the fresh peach aroma and ruin the flavor)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำเชื่อมพีชและน้ำตาล",
+        "en": "Add peach syrup and sugar"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 40°C พร้อมแล้ว! กรุณาเติมน้ำเชื่อมพีช {peach} และน้ำตาล {sugar} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 40°C! Please add {peach} of peach syrup and {sugar} of sugar, then press OK to mix."
+      },
+      "descVariables": {
+        "peach": {
+          "amount": 1500,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 15,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 15°C พร้อมเสิร์ฟ",
+        "en": "Chill to 15°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 15°C พร้อมระบบกวน เพื่อให้ได้ชาพีชอู่หลงที่เย็นสดชื่น พร้อมเสิร์ฟทันที",
+        "en": "Machine chills the mixture to 15°C with stirring, ensuring a refreshing iced peach oolong tea ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ชาพีชอู่หลงพร้อมเสิร์ฟ",
+        "en": "Peach Oolong Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายชาพีชอู่หลงออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Peach Oolong Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 90°C",
+        "en": "Heat water to 90°C"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 90°C (มีฟองเล็กๆ ที่ก้นหม้อแต่ยังไม่เดือดพล่าน) เพื่อเตรียมชงชา",
+        "en": "Heat {water} of clean water to 90°C (small bubbles at the bottom but not rolling boil) to prepare for brewing."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/peach_oolong/man_1.jpg",
+      "tips": {
+        "th": "💡 ชาอู่หลงต้องการน้ำร้อน 90°C ในการสกัดกลิ่นหอมและรสอูมามิ น้ำเดือด 100°C อาจทำให้ชาขมและเสียกลิ่นหอม",
+        "en": "💡 Oolong tea requires 90°C water to extract aroma and umami. 100°C boiling water may make it bitter and lose its fragrance."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "แช่สกัดชาอู่หลง (5 นาที)",
+        "en": "Steep oolong tea (5 mins)"
+      },
+      "desc": {
+        "th": "ใส่ใบชาอู่หลง {oolong} (ในถุงกรองหรือตะกร้า) ลงในน้ำร้อน ปิดฝาหม้อ แช่ทิ้งไว้ 5 นาที",
+        "en": "Place {oolong} of oolong tea leaves (in a filter bag or basket) into the hot water. Cover the pot and steep for 5 minutes."
+      },
+      "descVariables": {
+        "oolong": {
+          "amount": 120,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/peach_oolong/man_2.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บน้ำมันหอมระเหยของชาอู่หลงไว้ได้อย่างเต็มที่",
+        "en": "💡 Covering the pot traps the essential oils and aroma of the oolong tea perfectly."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "ยกถุงชาออกและพักให้เย็น",
+        "en": "Remove tea bag and cool down"
+      },
+      "desc": {
+        "th": "ครบ 5 นาที ให้ยกถุงชาออกทันที (ห้ามบีบแรงเพื่อป้องกันรสฝาด) พักชาไว้จนอุณหภูมิลดลงเหลือ 40°C",
+        "en": "After 5 mins, remove the tea bag immediately (do not squeeze hard to prevent astringency). Let the tea cool down to 40°C."
+      },
+      "descVariables": {},
+      "image": "images/tea/peach_oolong/man_3.jpg",
+      "tips": {
+        "th": "💡 ใช้เทอร์โมมิเตอร์วัดอุณหภูมิให้แน่ใจว่าต่ำกว่า 45°C ก่อนใส่ส่วนผสมพีช",
+        "en": "💡 Use a thermometer to ensure the temperature is below 45°C before adding peach ingredients."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำเชื่อมพีชและน้ำตาล",
+        "en": "Mix with peach syrup and sugar"
+      },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 40°C เติมน้ำเชื่อมพีช {peach} และน้ำตาล {sugar} ลงไป คนให้เข้ากันจนละลายหมด",
+        "en": "When temperature is 40°C, add {peach} of peach syrup and {sugar} of sugar. Stir well until fully dissolved."
+      },
+      "descVariables": {
+        "peach": {
+          "amount": 1500,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/tea/peach_oolong/man_4.jpg",
+      "tips": {
+        "th": "💡 การผสมพีชที่อุณหภูมิ 40°C จะรักษากลิ่นหอมสดชื่น (Top notes) ของพีชไว้ได้ดีที่สุด ไม่ทำให้กลิ่นเหม็นหืนหรือเหมือนพีชกระป๋อง",
+        "en": "💡 Mixing peach at 40°C perfectly preserves the fresh top notes of the peach, preventing a cooked or canned peach smell."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทใส่แก้วที่มีน้ำแข็งเต็มแก้ว เสิร์ฟเย็นๆ คลายร้อน สามารถตกแต่งด้วยลูกพีชสดหั่นเต๋าหรือใบสะระแหน่เพื่อเพิ่มเสน่ห์",
+        "en": "Pour into a glass filled with ice. Serve cold and refreshing. Garnish with diced fresh peach or mint leaves for extra charm."
+      },
+      "descVariables": {},
+      "image": "images/tea/peach_oolong/man_5.jpg",
+      "tips": {
+        "th": "💡 หากต้องการเสิร์ฟแบบร้อน ให้ข้ามขั้นตอนการแช่เย็น และผสมส่วนผสมพีชขณะน้ำชาอุ่น 50°C แทน",
+        "en": "💡 For a hot version, skip the chilling step and mix the peach ingredients when the tea is warm at 50°C instead."
+      }
+    }
+  ]
+}

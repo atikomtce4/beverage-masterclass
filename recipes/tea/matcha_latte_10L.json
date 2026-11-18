@@ -1,0 +1,386 @@
+{
+  "id": "matcha_latte_10L",
+  "icon": "🍵",
+  "category": "latte",
+  "machineCompatible": true,
+  "description": "มัทฉะลาเต้ 10 ลิตร สูตรเข้มข้น หอมกลมกล่อม ทำง่ายด้วยเครื่อง AllDrinks System ผสมผงมัทฉะเกรดพรีเมียมกับนมสดแท้ ให้รสชาติที่เนียนนุ่ม ดื่มร้อนหรือเย็นก็อร่อย",
+  "total_time": 25,
+  "target_temp": 65,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_matcha_latte_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "มัทฉะลาเต้ 10 ลิตร",
+    "en": "Matcha Latte 10L"
+  },
+  "images": [
+    "images/latte/matcha_latte/main_1.jpg",
+    "images/latte/matcha_latte/main_2.jpg",
+    "images/latte/matcha_latte/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_matcha",
+  "prepTime": {
+    "th": "5 นาที + 20 นาที (เครื่อง)",
+    "en": "5 mins + 20 mins (machine)"
+  },
+  "cookTime": {
+    "th": "25 นาที (รวมเตรียมและเครื่อง)",
+    "en": "25 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "มัทฉะลาเต้สูตรพรีเมียม ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 70°C (อุณหภูมิที่เหมาะสมในการละลายมัทฉะโดยไม่ทำให้ขม) ผสมกับผงมัทฉะและน้ำตาลจนเนียนเป็นเนื้อเดียวกัน จากนั้นเติมนมสดและอุ่นที่ 65°C อย่างแม่นยำ เพื่อรักษารสชาติและความหอมมันของนม ไม่ให้โปรตีนในนมเสียสภาพจากความร้อนสูง",
+    "en": "Premium matcha latte made easy with AllDrinks System: Machine heats water to 70°C (optimal for dissolving matcha without bitterness), mixes with matcha powder and sugar until smooth, then adds fresh milk and warms to 65°C to preserve the creamy taste and prevent milk protein denaturation."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยสารต้านอนุมูลอิสระ (EGCG) และ L-theanine ช่วยเพิ่มสมาธิ ผ่อนคลายความเครียด และให้พลังงานอย่างยั่งยืนโดยไม่ทำให้ใจสั่น",
+    "en": "Rich in antioxidants (EGCG) and L-theanine, which improve focus, reduce stress, and provide sustained energy without jitters."
+  },
+  "warnings": {
+    "th": "⚠️ มีคาเฟอีน ควรหลีกเลี่ยงการดื่มในปริมาณมากก่อนนอน หรือสำหรับผู้ที่มีความไวต่อคาเฟอีนและสตรีมีครรภ์",
+    "en": "⚠️ Contains caffeine. Avoid consuming in large amounts before bedtime, or for those sensitive to caffeine and pregnant women."
+  },
+  "nutrition": {
+    "calories": "120 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "6 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมสดรสจืด (Full Cream Milk)",
+        "en": "Fresh full cream milk"
+      },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ผงมัทฉะเกรดพรีเมียม",
+        "en": "Premium matcha powder"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทรายหรือน้ำเชื่อม",
+        "en": "Sugar or simple syrup"
+      },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 2,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 2,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 70,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 70°C",
+        "en": "Heat Water to 70°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 70°C ซึ่งเป็นอุณหภูมิที่เหมาะสมที่สุดในการละลายผงมัทฉะโดยไม่ทำให้ชาขม",
+        "en": "The machine heats water to 70°C, the optimal temperature for dissolving matcha without making it bitter."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ผงมัทฉะและน้ำตาล",
+        "en": "Add matcha and sugar"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ผงมัทฉะ {matcha} และน้ำตาล {sugar} ลงในถัง แล้วกด OK เพื่อเริ่มกระบวนการผสม",
+        "en": "✅ Please add {matcha} of matcha powder and {sugar} of sugar into the tank, then press OK to start mixing."
+      },
+      "descVariables": {
+        "matcha": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 600,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 70,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมมัทฉะให้เข้ากัน (3 นาที)",
+        "en": "Mix Matcha Paste (3 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 70°C ต่อเนื่อง 3 นาที พร้อมระบบวนน้ำและกวนเพื่อดึงรสชาติและละลายผงมัทฉะให้เนียนเป็นเนื้อเดียวกัน",
+        "en": "Machine maintains 70°C for 3 mins with circulation and stirring to fully dissolve matcha into a smooth paste."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมนมสด",
+        "en": "Add fresh milk"
+      },
+      "desc": {
+        "th": "✅ กรุณาเติมนมสด {milk} ลงไปในถัง แล้วกด OK เพื่อให้เครื่องทำการอุ่นและผสมให้เข้ากัน",
+        "en": "✅ Please pour {milk} of fresh milk into the tank, then press OK to warm and mix."
+      },
+      "descVariables": {
+        "milk": {
+          "amount": 8,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 65,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นนมและผสมให้เข้ากัน (5 นาที)",
+        "en": "Warm and Mix Milk (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะปรับอุณหภูมิและคงที่ที่ 65°C เป็นเวลา 5 นาที พร้อมระบบกวน เพื่อให้ได้ลาเต้ที่เนียนนุ่ม โดยไม่ทำให้โปรตีนในนมเสียสภาพจากความร้อนสูง",
+        "en": "Machine gently warms and mixes the latte to 65°C for 5 mins, ensuring a creamy texture without scorching the milk proteins."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "มัทฉะลาเต้พร้อมเสิร์ฟ",
+        "en": "Matcha Latte ready to serve"
+      },
+      "desc": {
+        "th": "กระบวนการเสร็จสิ้น! กรุณาเตรียมภาชนะรองรับ แล้วกด OK เพื่อเริ่มการโอนถ่าย",
+        "en": "Process complete! Please prepare a container and press OK to begin transfer."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนถ่ายมัทฉะลาเต้",
+        "en": "Transfer Matcha Latte"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายมัทฉะลาเต้ออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Matcha Latte out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 70°C",
+        "en": "Heat water to 70°C"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 70°C (มีไอร้อนแต่ไม่เดือดพล่าน) เพื่อเตรียมละลายมัทฉะ",
+        "en": "Heat {water} of clean water to 70°C (steaming but not rolling boil) to prepare for dissolving matcha."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 2,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/latte/matcha_latte/man_1.jpg",
+      "tips": {
+        "th": "💡 การใช้น้ำที่ 70°C แทนน้ำเดือด 100°C จะช่วยสกัดความหอมและรสอูมามิของมัทฉะโดยไม่ทำให้ชาขมหรือฝาด",
+        "en": "💡 Using 70°C water instead of 100°C boiling water extracts the umami and aroma of matcha without making it bitter or astringent."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ละลายมัทฉะและน้ำตาล",
+        "en": "Dissolve matcha and sugar"
+      },
+      "desc": {
+        "th": "ใส่ผงมัทฉะ {matcha} และน้ำตาล {sugar} ลงในน้ำร้อน ใช้ที่ตีฟองนมหรือแปรงชงชา (Chasen) คนให้เข้ากันจนเนียนเป็นเนื้อเดียวกัน ไม่มีก้อนแป้ง",
+        "en": "Add {matcha} of matcha powder and {sugar} of sugar into the hot water. Use a milk frother or bamboo whisk (Chasen) to mix until smooth and lump-free."
+      },
+      "descVariables": {
+        "matcha": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 600,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/latte/matcha_latte/man_2.jpg",
+      "tips": {
+        "th": "💡 การละลายมัทฉะกับน้ำร้อนเล็กน้อยก่อนจะช่วยป้องกันการจับตัวเป็นก้อนเมื่อเติมนมลงไปทีหลัง",
+        "en": "💡 Dissolving matcha in a small amount of hot water first prevents clumping when milk is added later."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมนมสดและอุ่น",
+        "en": "Add fresh milk and warm"
+      },
+      "desc": {
+        "th": "เติมนมสด {milk} ลงในส่วนผสมมัทฉะ คนให้เข้ากัน แล้วอุ่นบนเตาที่ไฟอ่อนจนอุณหภูมิประมาณ 65°C (ห้ามต้มจนเดือด)",
+        "en": "Pour {milk} of fresh milk into the matcha mixture. Stir well and warm over low heat until it reaches about 65°C (do not boil)."
+      },
+      "descVariables": {
+        "milk": {
+          "amount": 8,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/latte/matcha_latte/man_3.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิ 65°C เป็นจุดที่นมมีความหวานธรรมชาติสูงสุด และไม่ให้โปรตีนในนมเสียสภาพ",
+        "en": "💡 65°C is the sweet spot where milk tastes naturally sweetest without denaturing its proteins."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทใส่แก้ว เสิร์ฟอุ่นๆ เพื่อสัมผัสความหอมมัน หรือเทลงบนน้ำแข็งสำหรับเมนูเย็น สามารถโรยผงมัทฉะบางๆ ด้านบนเพื่อตกแต่ง",
+        "en": "Pour into a glass. Serve warm for a creamy experience, or pour over ice for a cold version. Dust with a little matcha powder on top for garnish."
+      },
+      "descVariables": {},
+      "image": "images/latte/matcha_latte/man_4.jpg",
+      "tips": {
+        "th": "💡 สำหรับเมนูเย็น แนะนำให้เพิ่มความเข้มข้นของมัทฉะขึ้นอีก 10-20% เพื่อชดเชยรสชาติที่เจือจางลงเมื่อน้ำแข็งละลาย",
+        "en": "💡 For iced versions, consider increasing matcha concentration by 10-20% to compensate for dilution when ice melts."
+      }
+    }
+  ]
+}

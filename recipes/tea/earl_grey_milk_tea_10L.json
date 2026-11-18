@@ -1,0 +1,425 @@
+{
+  "id": "earl_grey_milk_tea_10L",
+  "icon": "☕",
+  "category": "milk_tea",
+  "machineCompatible": true,
+  "description": "ชาเอิร์ลเกรย์นมสด 10 ลิตร สูตรคลาสสิก หอมกลิ่นมะกรูด (Bergamot) เข้มข้นกลมกล่อม ผสมผสานชาดำเกรดพรีเมียมกับนมสดแท้ ให้รสชาติที่นุ่มนวล ดื่มอุ่นๆ หรือเย็นก็ฟิน",
+  "total_time": 30,
+  "target_temp": 65,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_earl_grey_milk_tea_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาเอิร์ลเกรย์นมสด 10 ลิตร",
+    "en": "Earl Grey Milk Tea 10L"
+  },
+  "images": [
+    "images/milk_tea/earl_grey/main_1.jpg",
+    "images/milk_tea/earl_grey/main_2.jpg",
+    "images/milk_tea/earl_grey/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_earl_grey",
+  "prepTime": {
+    "th": "5 นาที + 25 นาที (เครื่อง)",
+    "en": "5 mins + 25 mins (machine)"
+  },
+  "cookTime": {
+    "th": "30 นาที (รวมเตรียมและเครื่อง)",
+    "en": "30 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ชาเอิร์ลเกรย์นมสดสูตรหอมเข้ม ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำให้ร้อน 95°C แช่ชาดำเอิร์ลเกรย์ 6 นาทีเพื่อดึงรสชาติและกลิ่นหอมของ Bergamot ออกมาอย่างเต็มที่ จากนั้นลดอุณหภูมิเหลือ 65°C ก่อนผสมนมสดและน้ำตาล เพื่อรักษารสชาติความมันของนมและป้องกันโปรตีนนมเสียสภาพ",
+    "en": "Classic Earl Grey Milk Tea made easy with AllDrinks System: Machine heats water to 95°C, steeps black tea for 6 mins to extract rich flavor and Bergamot aroma, precisely cools to 65°C, then mixes with fresh milk and sugar to preserve creamy taste and prevent milk protein denaturation."
+  },
+  "benefits": {
+    "th": "ชาดำมีสารต้านอนุมูลอิสระและคาเฟอีนที่ช่วยเพิ่มสมาธิ ผสมกับนมสดที่ให้แคลเซียมและโปรตีนสูง กลิ่นหอมของ Bergamot ในเอิร์ลเกรย์ยังช่วยลดความเครียดและผ่อนคลาย",
+    "en": "Black tea contains antioxidants and caffeine for focus. Combined with fresh milk rich in calcium and protein. The Bergamot aroma in Earl Grey also helps reduce stress and relax."
+  },
+  "warnings": {
+    "th": "⚠️ มีคาเฟอีนจากชาดำ ควรหลีกเลี่ยงการดื่มในปริมาณมากก่อนนอน และผู้ที่แพ้ผลิตภัณฑ์นม (Lactose Intolerance) ควรระวัง",
+    "en": "⚠️ Contains caffeine from black tea. Avoid consuming in large amounts before bedtime. Those with lactose intolerance should be cautious."
+  },
+  "nutrition": {
+    "calories": "130 kcal",
+    "carbs": "14 g",
+    "sugar": "12 g",
+    "protein": "5 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 3,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมสดรสจืด (Full Cream Milk)",
+        "en": "Fresh full cream milk"
+      },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบชาเอิร์ลเกรย์เกรดพรีเมียม",
+        "en": "Premium Earl Grey tea leaves"
+      },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "Sugar (adjustable sweetness)"
+      },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 3,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 3,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 95°C",
+        "en": "Heat Water to 95°C"
+      },
+      "desc": {
+        "th": "เครื่องจะต้มน้ำที่อุณหภูมิ 95°C ซึ่งเป็นอุณหภูมิที่เหมาะสมที่สุดในการสกัดชาดำ (Earl Grey) ให้ได้สีและรสชาติที่เข้มเต็มที่มาพร้อมกลิ่นหอมของ Bergamot",
+        "en": "The machine heats water to 95°C, the optimal temperature for extracting the rich color, bold flavor, and Bergamot aroma of black tea (Earl Grey)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ใส่ใบชาเอิร์ลเกรย์ในตะกร้า",
+        "en": "Add Earl Grey tea in basket"
+      },
+      "desc": {
+        "th": "✅ กรุณาใส่ใบชาเอิร์ลเกรย์ {tea} ลงในตะกร้ากรอง แล้วหย่อนลงในหม้อต้ม กด OK เพื่อเริ่มกระบวนการแช่สกัด",
+        "en": "✅ Please add {tea} of Earl Grey tea leaves into the filter basket, submerge in pot, and press OK to start steeping."
+      },
+      "descVariables": {
+        "tea": {
+          "amount": 150,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 6,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "แช่สกัดชาเอิร์ลเกรย์ (6 นาที)",
+        "en": "Steep Earl Grey Tea (6 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C ต่อเนื่อง 6 นาที พร้อมระบบวนน้ำเพื่อดึงรสชาติที่เข้มและกลิ่นหอมเฉพาะตัวของชาดำ",
+        "en": "Machine maintains 95°C for 6 mins with circulation to fully extract the bold flavor and distinct aroma of the black tea."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าชาออก",
+        "en": "Remove tea basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าใบชาออก แล้วกด OK",
+        "en": "Time is up. Please remove the tea basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Chill",
+      "target_value": 65,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 65°C (เตรียมผสมนม)",
+        "en": "Chill to 65°C (Prepare for Milk)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิชาลงเหลือ 65°C (ร้อนเกินนี้จะทำให้โปรตีนในนมเสียสภาพและเกิดรสไหม้)",
+        "en": "Activate cooling system to chill the tea to 65°C (higher temps will denature milk proteins and cause a scorched taste)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมนมสดและน้ำตาล",
+        "en": "Add fresh milk and sugar"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 65°C พร้อมแล้ว! กรุณาเติมนมสด {milk} และน้ำตาล {sugar} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 65°C! Please add {milk} of fresh milk and {sugar} of sugar, then press OK to mix."
+      },
+      "descVariables": {
+        "milk": {
+          "amount": 7,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 800,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Hold Temp",
+      "target_value": 65,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นนมและผสมให้เข้ากัน (5 นาที)",
+        "en": "Warm and Mix Milk (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 65°C เป็นเวลา 5 นาที พร้อมระบบกวน เพื่อให้ได้ชานมที่เนียนนุ่ม หอมมัน โดยไม่ทำให้โปรตีนในนมเสียสภาพ",
+        "en": "Machine maintains 65°C for 5 mins with stirring, ensuring a creamy and smooth milk tea without scorching the milk proteins."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ชาเอิร์ลเกรย์นมสดพร้อมเสิร์ฟ",
+        "en": "Earl Grey Milk Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายชาเอิร์ลเกรย์นมสดออกจากหม้อต้ม กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Earl Grey Milk Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 95°C",
+        "en": "Heat water to 95°C"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water} ให้ร้อนถึง 95°C (มีฟองใหญ่ที่ก้นหม้อและไอน้ำเยอะ แต่ยังไม่เดือดพล่าน) เพื่อเตรียมชงชาดำ",
+        "en": "Heat {water} of clean water to 95°C (large bubbles at the bottom and lots of steam, but not rolling boil) to prepare for brewing black tea."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 3,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/milk_tea/earl_grey/man_1.jpg",
+      "tips": {
+        "th": "💡 ชาดำ (Black Tea) ต้องการน้ำร้อนเกือบเดือด (95-100°C) ในการสกัดแทนนินและคาเฟอีนให้รสชาติเข้มพอที่จะตัดกับความมันของนมได้",
+        "en": "💡 Black tea requires near-boiling water (95-100°C) to extract tannins and caffeine, creating a bold flavor that cuts through the creaminess of milk."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "แช่สกัดชาเอิร์ลเกรย์ (6 นาที)",
+        "en": "Steep Earl Grey tea (6 mins)"
+      },
+      "desc": {
+        "th": "ใส่ใบชาเอิร์ลเกรย์ {tea} (ในถุงกรองหรือตะกร้า) ลงในน้ำร้อน ปิดฝาหม้อ แช่ทิ้งไว้ 6 นาที",
+        "en": "Place {tea} of Earl Grey tea leaves (in a filter bag or basket) into the hot water. Cover the pot and steep for 6 minutes."
+      },
+      "descVariables": {
+        "tea": {
+          "amount": 150,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/milk_tea/earl_grey/man_2.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บน้ำมันหอมระเหยของ Bergamot (มะกรูดฝรั่ง) ซึ่งเป็นเอกลักษณ์ของเอิร์ลเกรย์ไม่ให้ระเหยหายไป",
+        "en": "💡 Covering the pot traps the essential oils of Bergamot, the signature aroma of Earl Grey tea, preventing it from evaporating."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "ยกถุงชาออกและพักให้เย็น",
+        "en": "Remove tea bag and cool down"
+      },
+      "desc": {
+        "th": "ครบ 6 นาที ให้ยกถุงชาออกทันที (ห้ามบีบแรงเพื่อป้องกันรสฝาด) พักชาไว้จนอุณหภูมิลดลงเหลือ 65°C",
+        "en": "After 6 mins, remove the tea bag immediately (do not squeeze hard to prevent astringency). Let the tea cool down to 65°C."
+      },
+      "descVariables": {},
+      "image": "images/milk_tea/earl_grey/man_3.jpg",
+      "tips": {
+        "th": "💡 ใช้เทอร์โมมิเตอร์วัดอุณหภูมิให้แน่ใจว่าไม่เกิน 70°C ก่อนใส่นมสด เพื่อป้องกันไม่ให้นมตกตะกอนหรือเกิดรสไหม้",
+        "en": "💡 Use a thermometer to ensure the temperature is below 70°C before adding fresh milk to prevent curdling or a scorched taste."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมสดและน้ำตาล",
+        "en": "Mix with fresh milk and sugar"
+      },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 65°C เติมนมสด {milk} และน้ำตาล {sugar} ลงไป คนให้เข้ากันจนน้ำตาลละลายหมด",
+        "en": "When temperature is 65°C, add {milk} of fresh milk and {sugar} of sugar. Stir well until the sugar is fully dissolved."
+      },
+      "descVariables": {
+        "milk": {
+          "amount": 7,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 800,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/milk_tea/earl_grey/man_4.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิ 65°C เป็นจุดที่นมมีความหวานธรรมชาติสูงสุด และโปรตีนในนมยังไม่เสียสภาพ ทำให้ชานมมีความเนียนนุ่มไม่แตกมัน",
+        "en": "💡 65°C is the sweet spot where milk tastes naturally sweetest and its proteins remain intact, resulting in a smooth, non-curdled milk tea."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทใส่แก้ว เสิร์ฟอุ่นๆ เพื่อสัมผัสความหอมมันของนมและกลิ่น Bergamot หรือเทลงบนน้ำแข็งสำหรับเมนูเย็น สามารถโรยผงชาเอิร์ลเกรย์บางๆ ด้านบนเพื่อตกแต่ง",
+        "en": "Pour into a glass. Serve warm to enjoy the creamy milk and Bergamot aroma, or pour over ice for a cold version. Dust with a little Earl Grey powder on top for garnish."
+      },
+      "descVariables": {},
+      "image": "images/milk_tea/earl_grey/man_5.jpg",
+      "tips": {
+        "th": "💡 สำหรับเมนูเย็น แนะนำให้เพิ่มความเข้มข้นของชาขึ้นอีก 10-20% (หรือเพิ่มเวลาแช่เป็น 7 นาที) เพื่อชดเชยรสชาติที่เจือจางลงเมื่อน้ำแข็งละลาย",
+        "en": "💡 For iced versions, consider increasing tea concentration by 10-20% (or steep for 7 mins) to compensate for dilution when ice melts."
+      }
+    }
+  ]
+}
