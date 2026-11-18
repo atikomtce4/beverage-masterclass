@@ -83,5 +83,91 @@
       "th": ["วุ้นมะพร้าวกรอบ", "หอมมะพร้าว", "สดชื่น"],
       "en": ["Crunchy Coconut Jelly", "Coconut Aroma", "Refreshing"]
     }
+  },
+
+  {
+    "id": "taro_milk_tea_pearl_10L",
+    "name": {
+      "th": "ชานมเผือกไข่มุก 10 ลิตร",
+      "en": "10L Taro Milk Tea with Pearl"
+    },
+    "image": "images/bubble-tea/taro_milk_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["สีม่วงสวย", "หอมมันเผือก", "สูตรยอดนิยม"],
+      "en": ["Beautiful Purple", "Creamy Taro", "Best Seller"]
+    }
+  },
+  {
+    "id": "thai_green_tea_pearl_10L",
+    "name": {
+      "th": "ชาเขียวไทยไข่มุก 10 ลิตร",
+      "en": "10L Thai Green Tea with Pearl"
+    },
+    "image": "images/bubble-tea/thai_green_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["สีเขียวสด", "หอมชาเขียว", "หวานมัน"],
+      "en": ["Vibrant Green", "Green Tea Aroma", "Sweet & Creamy"]
+    }
+  },
+  {
+    "id": "jasmine_milk_tea_pearl_10L",
+    "name": {
+      "th": "ชานมมะลิไข่มุก 10 ลิตร",
+      "en": "10L Jasmine Milk Tea with Pearl"
+    },
+    "image": "images/bubble-tea/jasmine_milk_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["หอมมะลิ", "สดชื่น", "รสละมุน"],
+      "en": ["Jasmine Aroma", "Refreshing", "Smooth Taste"]
+    }
+  },
+  {
+    "id": "hokkaido_milk_tea_pearl_10L",
+    "name": {
+      "th": "ชานมฮอกไกโดไข่มุก 10 ลิตร",
+      "en": "10L Hokkaido Milk Tea with Pearl"
+    },
+    "image": "images/bubble-tea/hokkaido_milk_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 45 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 45 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["คาราเมลหอม", "นมเข้มข้น", "รสพรีเมียม"],
+      "en": ["Caramel Aroma", "Rich Milk", "Premium Taste"]
+    }
+  },
+  {
+    "id": "chocolate_milk_tea_pearl_10L",
+    "name": {
+      "th": "ชานมช็อกโกแลตไข่มุก 10 ลิตร",
+      "en": "10L Chocolate Milk Tea with Pearl"
+    },
+    "image": "images/bubble-tea/chocolate_milk_tea_pearl/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+      "en": "20 mins (prep pearls) + 40 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ช็อกโกแลตเข้มข้น", "หวานมัน", "เด็กๆ ชอบ"],
+      "en": ["Rich Chocolate", "Sweet & Creamy", "Kids Favorite"]
+    }
   }
 ]
