@@ -1,0 +1,338 @@
+{
+  "id": "thai_green_tea_pearl_10L",
+  "icon": "🍵",
+  "category": "bubble-tea",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้เครื่องสามารถทำชาเขียวไทยฐานได้ แต่ผู้ใช้ต้องต้มไข่มุกเองแยกต่างหาก เนื่องจากเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการต้มไข่มุก กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "Machine can brew the Thai green tea base, but pearls must be boiled separately. AllDrinks System does not yet support pearl cooking. Please use 'Manual' mode."
+  },
+  "description": "ชาเขียวไทยไข่มุก 10 ลิตร หอมมันต้นตำรับ สกัดจากใบชาเขียวไทยคุณภาพดี ผสมนมข้นหวานและนมข้นจืดตามสูตรชาไทยแท้ ให้รสหวานมันเข้มข้น สีเขียวอ่อนนวลตา เสิร์ฟพร้อมไข่มุกเหนียวนุ่ม เมนูยอดนิยมที่ขาดไม่ได้",
+  "total_time": 60,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_thai_green_tea_pearl_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ชาเขียวไทยไข่มุก 10 ลิตร",
+    "en": "Thai Green Tea with Pearl 10L"
+  },
+  "images": [
+    "images/bubble-tea/thai_green_tea_pearl/main_1.jpg",
+    "images/bubble-tea/thai_green_tea_pearl/main_2.jpg",
+    "images/bubble-tea/thai_green_tea_pearl/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_thai_green_tea",
+  "prepTime": {
+    "th": "20 นาที (เตรียมไข่มุก) + 40 นาที (เครื่อง)",
+    "en": "20 mins (prep pearls) + 40 mins (machine)"
+  },
+  "cookTime": {
+    "th": "60 นาที (รวมเตรียมและเครื่อง)",
+    "en": "60 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "ชาเขียวไทยไข่มุกสูตรต้นตำรับ: ต้มไข่มุกให้เหนียวนุ่มและแช่น้ำเชื่อมน้ำตาลทรายแดง สกัดใบชาเขียวไทยเข้มข้นด้วยน้ำเดือดแล้ว焖 กรอง ผสมกับนมข้นหวาน นมข้นจืด และนมสด คนให้เข้ากันจนได้สีเขียวอ่อนนวลตา แช่เย็น เสิร์ฟพร้อมไข่มุก!",
+    "en": "Authentic Thai green tea with pearl: boil chewy pearls and soak in brown sugar syrup, steep Thai green tea leaves in boiling water and strain, mix with sweetened condensed milk, evaporated milk, and fresh milk until smooth and pale green. Chill and serve with pearls!"
+  },
+  "benefits": {
+    "th": "ชาเขียวไทยอุดมไปด้วยสารต้านอนุมูลอิสระ (Catechins/EGCG) ช่วยเพิ่มการเผาผลาญและบำรุงผิวพรรณ นมให้แคลเซียมและโปรตีน ไข่มุกให้พลังงานและเนื้อสัมผัสเหนียวนุ่ม เป็นเครื่องดื่มที่หอมมันถูกใจคนไทย",
+    "en": "Thai green tea is rich in antioxidants (Catechins/EGCG) that boost metabolism and nourish the skin. Milk provides calcium and protein. Pearls give energy and chewy texture. A creamy, beloved Thai-style beverage."
+  },
+  "warnings": {
+    "th": "⚠️ ไข่มุกมีแป้งสูง ผู้ที่เป็นโรคเบาหวานควรบริโภคในปริมาณที่เหมาะสม ระวังการสำลักในเด็กเล็ก ควรเคี้ยวให้ละเอียดก่อนกลืน เครื่องดื่มมีคาเฟอีนจากชาเขียว และนมข้นหวานมีน้ำตาลสูง",
+    "en": "⚠️ Pearls are high in starch. People with diabetes should consume in moderation. Be cautious of choking hazard in young children. Chew thoroughly before swallowing. Contains caffeine from green tea and high sugar from condensed milk."
+  },
+  "nutrition": {
+    "calories": "110 kcal",
+    "carbs": "20 g",
+    "sugar": "16 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด (สำหรับต้มชา)",
+        "en": "Clean water (for tea brewing)"
+      },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบชาเขียวไทย (ชาเขียวป่นสำเร็จรูป)",
+        "en": "Thai green tea leaves (pre-mixed)"
+      },
+      "amount": 150,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมข้นหวาน",
+        "en": "Sweetened condensed milk"
+      },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมข้นจืด",
+        "en": "Evaporated milk"
+      },
+      "amount": 1.5,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมสดรสจืด",
+        "en": "Fresh milk (plain)"
+      },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "White sugar (adjustable sweetness)"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น",
+        "en": "Salt"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ไข่มุกแห้ง (สำหรับต้ม)",
+        "en": "Dried tapioca pearls (for boiling)"
+      },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทรายแดง (สำหรับแช่ไข่มุก)",
+        "en": "Brown sugar (for soaking pearls)"
+      },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำสะอาด (สำหรับแช่ไข่มุก)",
+        "en": "Clean water (for soaking pearls)"
+      },
+      "amount": 500,
+      "unit": "Milliliter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำแข็ง (สำหรับเสิร์ฟ)",
+        "en": "Ice (for serving)"
+      },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ไม่รองรับเครื่องอัตโนมัติ (เฉพาะส่วนไข่มุก)",
+        "en": "⚠️ This recipe is not fully machine-compatible (Pearls section)"
+      },
+      "desc": {
+        "th": "สูตรชาเขียวไทยไข่มุกต้องใช้การต้มไข่มุกด้วยมือแยกต่างหาก ซึ่งเครื่อง AllDrinks System ยังไม่รองรับขั้นตอนดังกล่าว กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำที่ถูกต้อง ส่วนฐานชาเขียวไทยสามารถเตรียมล่วงหน้าได้",
+        "en": "Thai green tea with pearl requires hand-boiling of tapioca pearls separately, which the AllDrinks System does not support. Please switch to 'Manual' mode for the correct preparation steps. The Thai green tea base can be prepped in advance."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "ต้มไข่มุก",
+        "en": "Boil tapioca pearls"
+      },
+      "desc": {
+        "th": "ต้มน้ำให้เดือดจัดในหม้อใหญ่ ใส่ไข่มุกแห้ง {pearl_amount} ลงไป คนเบาๆ เพื่อไม่ให้ติดก้นหม้อ ต้มด้วยไฟกลาง 20-25 นาทีจนไข่มุกลอยขึ้นและมีความเหนียวนุ่ม (ยังมีจุดขาวเล็กๆ ตรงกลาง) ปิดไฟ แล้ว焖ต่ออีก 10 นาทีโดยปิดฝา",
+        "en": "Bring a large pot of water to a rolling boil. Add {pearl_amount} of dried tapioca pearls, stir gently to prevent sticking. Boil on medium heat for 20-25 mins until pearls float and become chewy (with a small white dot in the center). Turn off heat and steep for 10 more mins with the lid on."
+      },
+      "descVariables": {
+        "pearl_amount": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/bubble-tea/thai_green_tea_pearl/man_1.jpg",
+      "tips": {
+        "th": "💡 การ焖ต่อ 10 นาทีหลังปิดไฟเป็นเคล็ดลับสำคัญที่ทำให้ไข่มุกเหนียวนุ่มทั่วถึงทั้งเม็ด ไม่ใช่แค่ด้านนอก อัตราส่วนน้ำ:ไข่มุก ควรเป็น 10:1 เพื่อให้ไข่มุกขยายตัวเต็มที่",
+        "en": "💡 Steeping for 10 mins after turning off heat is the key trick to make pearls chewy throughout, not just on the outside. Water-to-pearl ratio should be 10:1 for full expansion."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ล้างและแช่ไข่มุกในน้ำเชื่อม",
+        "en": "Rinse and soak pearls in syrup"
+      },
+      "desc": {
+        "th": "กรองไข่มุกออก ล้างด้วยน้ำเย็นจัดเพื่อหยุดการต้มและให้ผิวเหนียวนุ่ม เตรียมน้ำเชื่อมน้ำตาลทรายแดงโดยละลาย {brown_sugar} ในน้ำ {syrup_water} อุ่นๆ แล้วนำไข่มุกที่ล้างแล้วลงไปแช่อย่างน้อย 15-30 นาทีเพื่อให้ดูดซับรสหวานและสีน้ำตาลสวย",
+        "en": "Strain pearls and rinse with ice-cold water to stop cooking and firm up the texture. Prepare brown sugar syrup by dissolving {brown_sugar} in warm {syrup_water} of water, then soak the rinsed pearls for at least 15-30 mins to absorb sweetness and beautiful brown color."
+      },
+      "descVariables": {
+        "brown_sugar": {
+          "amount": 200,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "syrup_water": {
+          "amount": 500,
+          "unit": "Milliliter",
+          "scalable": true
+        }
+      },
+      "image": "images/bubble-tea/thai_green_tea_pearl/man_2.jpg",
+      "tips": {
+        "th": "💡 การแช่ไข่มุกในน้ำเชื่อมน้ำตาลทรายแดงจะทำให้ได้รสหวานลึกและสีน้ำตาลสวยแบบร้านชานมชั้นนำ ไข่มุกที่แช่แล้วควรใช้ให้หมดภายใน 4 ชั่วโมง เพื่อคงความเหนียวนุ่ม",
+        "en": "💡 Soaking pearls in brown sugar syrup gives deep sweetness and beautiful brown color like premium milk tea shops. Soaked pearls should be used within 4 hours to maintain chewiness."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "สกัดชาเขียวไทยเข้มข้น",
+        "en": "Brew strong Thai green tea"
+      },
+      "desc": {
+        "th": "ต้มน้ำสะอาด {water_boil} ให้เดือดจัด (100°C) ปิดไฟแล้วใส่ใบชาเขียวไทย {tea_amount} ลงไป ปิดฝา焖 5-7 นาทีเพื่อสกัดสีและกลิ่นหอม กรองกากชาออกผ่านกระชอนหรือผ้าขาวบาง ได้น้ำชาสีเขียวอ่อนนวลหอมกลิ่นมะลิ",
+        "en": "Boil {water_boil} of clean water to 100°C. Turn off heat and add {tea_amount} of Thai green tea leaves. Cover and steep for 5-7 mins to extract color and aroma. Strain out tea leaves through a sieve or cheesecloth, yielding pale green tea with jasmine fragrance."
+      },
+      "descVariables": {
+        "water_boil": {
+          "amount": 6,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "tea_amount": {
+          "amount": 150,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/bubble-tea/thai_green_tea_pearl/man_3.jpg",
+      "tips": {
+        "th": "💡 ใบชาเขียวไทยสำเร็จรูปมักผสมสีและกลิ่นมะลิมาในตัว การ焖ด้วยน้ำเดือดแล้วกรองทันทีจะช่วยสกัดสีสวยและกลิ่นหอมโดยไม่ทำให้ชาขมหรือฝาด",
+        "en": "💡 Pre-mixed Thai green tea often contains color and jasmine aroma. Steeping in boiling water then straining immediately extracts beautiful color and fragrance without bitterness."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ผสมนมข้นหวาน นมข้นจืด และปรุงรส",
+        "en": "Mix condensed milk, evaporated milk, and season"
+      },
+      "desc": {
+        "th": "เติมนมข้นหวาน {condensed_milk} ลงในชาเขียวที่กรองแล้ว (ขณะยังอุ่นอยู่) คนให้ละลายเข้ากันก่อน จากนั้นเติมนมข้นจืด {evaporated_milk} และนมสด {milk_amount} ตามด้วยน้ำตาล {sugar_amount} และเกลือ {salt_amount} คนจนละลายหมดและได้สีเขียวอ่อนนวล ทิ้งให้เย็นที่อุณหภูมิห้อง",
+        "en": "Add {condensed_milk} of sweetened condensed milk into the strained tea (while still warm) and stir until dissolved first. Then add {evaporated_milk} of evaporated milk and {milk_amount} of fresh milk, followed by {sugar_amount} of sugar and {salt_amount} of salt. Stir until fully blended and pale green. Let cool to room temperature."
+      },
+      "descVariables": {
+        "condensed_milk": {
+          "amount": 800,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "evaporated_milk": {
+          "amount": 1.5,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "milk_amount": {
+          "amount": 2,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "sugar_amount": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt_amount": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/bubble-tea/thai_green_tea_pearl/man_4.jpg",
+      "tips": {
+        "th": "💡 นมข้นหวานคือหัวใจของชาไทย ให้รสหวานมันเฉพาะตัวที่น้ำตาลทรายธรรมดาให้ไม่ได้ การเติมนมข้นหวานตอนชายังอุ่นจะช่วยให้ละลายเข้ากันเนียน ส่วนเกลือเล็กน้อยช่วยตัดเลี่ยนและดึงรสชาให้เด่นขึ้น",
+        "en": "💡 Sweetened condensed milk is the soul of Thai tea, providing a unique sweetness regular sugar cannot. Adding it while tea is warm ensures smooth blending. A pinch of salt cuts richness and highlights the tea flavor."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำชาเขียวไทยที่เย็นแล้วเข้าแช่ตู้เย็นอย่างน้อย 1-2 ชั่วโมง เมื่อจะเสิร์ฟ: ใส่ไข่มุกที่แช่น้ำเชื่อมไว้ประมาณ 3-4 ช้อนโต๊ะลงในแก้ว เติมน้ำแข็ง {ice_amount} แล้วเทชาเขียวไทยเย็นจัดลงไป ราดนมข้นจืดด้านบนเล็กน้อย ตกแต่งด้วยไข่มุกเพิ่มเติม พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the cooled Thai green tea for at least 1-2 hours. When serving: add 3-4 tablespoons of soaked pearls to a glass, fill with {ice_amount} of ice, then pour ice-cold Thai green tea over. Drizzle a little evaporated milk on top, garnish with extra pearls. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": {
+          "amount": 2000,
+          "unit": "Gram",
+          "scalable": false
+        }
+      },
+      "image": "images/bubble-tea/thai_green_tea_pearl/man_5.jpg",
+      "tips": {
+        "th": "💡 ชาเขียวไทยที่ผสมแล้วสามารถเก็บในตู้เย็นได้นาน 2-3 วัน (คนให้เข้ากันก่อนเสิร์ฟหากมีการแยกชั้น) แต่ควรใส่ไข่มุกตอนจะเสิร์ฟเท่านั้น เพื่อคงความเหนียวนุ่ม และราดนมข้นจืดบางๆ ตอนเสิร์ฟจะได้ลายสวยเหมือนร้านดัง",
+        "en": "💡 Mixed Thai green tea can be stored in the fridge for 2-3 days (stir well before serving if separation occurs), but add pearls only when serving to maintain chewiness. A light drizzle of evaporated milk on top creates beautiful layers like famous shops."
+      }
+    }
+  ]
+}
