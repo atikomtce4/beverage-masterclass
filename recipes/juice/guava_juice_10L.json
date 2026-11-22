@@ -1,0 +1,427 @@
+{
+  "id": "guava_juice_10L",
+  "icon": "🍈",
+  "category": "juice",
+  "machineCompatible": true,
+  "description": "น้ำฝรั่งสด 10 ลิตร หอมหวาน สดชื่น อุดมไปด้วยวิตามินซีสูง ทำง่ายด้วยเครื่อง AllDrinks System ผสมน้ำฝรั่งคั้นสด (กรองเมล็ดออกแล้ว) กับน้ำตาลและเกลือเล็กน้อย เพื่อให้รสชาติกลมกล่อม ดื่มเย็นๆ ช่วยเสริมสร้างภูมิคุ้มกัน",
+  "total_time": 30,
+  "target_temp": 5,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_guava_juice_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำฝรั่งสด 10 ลิตร",
+    "en": "Fresh Guava Juice 10L"
+  },
+  "images": [
+    "images/juice/guava_juice/main_1.jpg",
+    "images/juice/guava_juice/main_2.jpg",
+    "images/juice/guava_juice/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_guava_juice",
+  "prepTime": {
+    "th": "20 นาที (เตรียม/คั้นฝรั่ง) + 10 นาที (เครื่อง)",
+    "en": "20 mins (prep/extract guava) + 10 mins (machine)"
+  },
+  "cookTime": {
+    "th": "30 นาที (รวมเตรียมและเครื่อง)",
+    "en": "30 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "น้ำฝรั่งสดสูตรหอมหวานเพื่อสุขภาพ ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะเตรียมน้ำและละลายน้ำตาลกับเกลือที่อุณหภูมิ 40°C จากนั้นลดอุณหภูมิลงเหลือ 15°C ก่อนผสมน้ำฝรั่งคั้นสด (กรองเมล็ดออกแล้ว) เพื่อรักษากลิ่นหอมและวิตามินซีไม่ให้ถูกทำลายจากความร้อน สุดท้ายลดอุณหภูมิเหลือ 5°C พร้อมเสิร์ฟแบบเย็นสดชื่น",
+    "en": "Healthy and sweet fresh guava juice made easy with AllDrinks System: Machine prepares water and dissolves sugar and salt at 40°C, then chills to 15°C before adding pre-strained fresh guava juice to preserve aroma and Vitamin C. Finally, chills to 5°C for a refreshing iced serving."
+  },
+  "benefits": {
+    "th": "ฝรั่งเป็นราชาแห่งวิตามินซี ช่วยเสริมสร้างภูมิคุ้มกัน ต้านอนุมูลอิสระ และบำรุงผิวพรรณให้สดใส มีไฟเบอร์สูงช่วยในระบบขับถ่าย",
+    "en": "Guava is the king of Vitamin C, boosting immunity, fighting free radicals, and nourishing the skin. High in fiber, it also aids in digestion."
+  },
+  "warnings": {
+    "th": "⚠️ ต้องกรองเมล็ดฝรั่งออกให้หมดก่อนนำมาทำในเครื่อง เพื่อป้องกันความเสียหายต่อระบบปั๊มและวาล์ว ผู้ที่เป็นโรคกระเพาะควรหลีกเลี่ยงการดื่มขณะท้องว่างเนื่องจากมีความเป็นกรด",
+    "en": "⚠️ Guava seeds must be completely strained out before using in the machine to prevent damage to pumps and valves. Those with gastric issues should avoid drinking on an empty stomach due to acidity."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "11 g",
+    "sugar": "9 g",
+    "protein": "1 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 6,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำฝรั่งคั้นสด (กรองเมล็ดออกหมดแล้ว) หรือ น้ำฝรั่งเข้มข้น",
+        "en": "Freshly squeezed guava juice (fully strained of seeds) or guava concentrate"
+      },
+      "amount": 4,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "White sugar (adjustable sweetness)"
+      },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (สำคัญมาก! ช่วยดึงรสหวาน)",
+        "en": "Salt (Crucial! Enhances sweetness)"
+      },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำแข็ง (สำหรับเสิร์ฟ)",
+        "en": "Ice (for serving)"
+      },
+      "amount": 2000,
+      "unit": "Gram",
+      "scalable": false
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 6,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 6,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นน้ำที่ 40°C (สำหรับละลายน้ำตาล)",
+        "en": "Warm water to 40°C (for dissolving sugar)"
+      },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 40°C ซึ่งเป็นอุณหภูมิที่ปลอดภัยและเหมาะสมที่สุดในการละลายน้ำตาลและเกลือ โดยไม่ทำลายคุณค่าทางอาหาร",
+        "en": "The machine warms water to 40°C, the safest and optimal temperature for dissolving sugar and salt without destroying nutritional value."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำตาลและเกลือ",
+        "en": "Add sugar and salt"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 40°C พร้อมแล้ว! กรุณาเติมน้ำตาล {sugar} และเกลือ {salt} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 40°C! Please add {sugar} of sugar and {salt} of salt, then press OK to mix."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 3,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้ละลายเข้ากัน (2 นาที)",
+        "en": "Mix and Dissolve (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 40°C ต่อเนื่อง 2 นาที พร้อมระบบวนน้ำและกวน เพื่อให้น้ำตาลและเกลือละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์",
+        "en": "Machine maintains 40°C for 2 mins with circulation and stirring to ensure sugar and salt are completely dissolved and blended."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 15,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 15°C (เตรียมผสมน้ำฝรั่ง)",
+        "en": "Chill to 15°C (Prepare for guava juice)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 15°C (การผสมน้ำฝรั่งที่อุณหภูมิต่ำจะช่วยรักษากลิ่นหอมและวิตามินซีไว้ได้ดีที่สุด)",
+        "en": "Activate cooling system to chill the mixture to 15°C (mixing guava juice at lower temperatures best preserves its fresh aroma and Vitamin C)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำฝรั่งคั้นสด (กรองเมล็ดออกแล้ว)",
+        "en": "Add fresh guava juice (fully strained)"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 15°C พร้อมแล้ว! กรุณาเติมน้ำฝรั่ง {guava} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมเบาๆ",
+        "en": "✅ Temperature is ready at 15°C! Please add {guava} of fresh guava juice, then press OK for gentle mixing."
+      },
+      "descVariables": {
+        "guava": {
+          "amount": 4,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 15,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้เข้ากัน (2 นาที)",
+        "en": "Mix gently (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 15°C และกวนผสมเบาๆ 2 นาที เพื่อให้รสชาติกลมกล่อมโดยไม่ทำลายความสดของน้ำฝรั่ง",
+        "en": "Machine maintains 15°C and stirs gently for 2 mins to blend flavors smoothly without compromising the freshness of the guava juice."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 5,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 5°C พร้อมเสิร์ฟ",
+        "en": "Chill to 5°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 5°C อย่างรวดเร็ว พร้อมระบบกวน เพื่อให้ได้น้ำฝรั่งที่เย็นสดชื่นที่สุด",
+        "en": "Machine rapidly chills the mixture to 5°C with stirring, ensuring the most refreshing iced guava juice ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำฝรั่งสดพร้อมเสิร์ฟ",
+        "en": "Fresh Guava Juice ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำฝรั่งสดออกจากถัง กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Fresh Guava Juice out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมและคั้นน้ำฝรั่ง",
+        "en": "Prepare and extract guava juice"
+      },
+      "desc": {
+        "th": "ล้างฝรั่งให้สะอาด หั่นเป็นชิ้นเล็กๆ นำไปปั่นกับน้ำสะอาดเล็กน้อย จากนั้นกรองผ่านผ้าขาวบางหรือตะแกรงตาถี่มากๆ อย่างน้อย 2 รอบ เพื่อให้แน่ใจว่าไม่มีเมล็ดหรือเศษเนื้อฝรั่งหลงเหลืออยู่ (จะได้ปริมาณน้ำฝรั่ง {guava_amount})",
+        "en": "Wash guavas thoroughly, cut into small pieces, and blend with a little clean water. Then strain through a cheesecloth or very fine sieve at least twice to ensure no seeds or flesh remain (yielding {guava_amount} of juice)."
+      },
+      "descVariables": {
+        "guava_amount": {
+          "amount": 4,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/guava_juice/man_1.jpg",
+      "tips": {
+        "th": "💡 การกรองเมล็ดออกให้หมดเป็นขั้นตอนที่สำคัญที่สุด เพื่อป้องกันไม่ให้เครื่องเสียหายและเพื่อให้ได้เนื้อสัมผัสน้ำที่เนียนลื่น",
+        "en": "💡 Straining out all seeds is the most crucial step to prevent machine damage and ensure a smooth liquid texture."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ละลายน้ำตาลและเกลือ",
+        "en": "Dissolve sugar and salt"
+      },
+      "desc": {
+        "th": "ในหม้อแยก ใส่น้ำสะอาด {water_amount} อุ่นเล็กน้อย (ประมาณ 40°C) เติมน้ำตาล {sugar} และเกลือ {salt} คนให้ละลายจนหมด",
+        "en": "In a separate pot, warm {water_amount} of clean water to about 40°C. Add {sugar} of sugar and {salt} of salt, stirring until completely dissolved."
+      },
+      "descVariables": {
+        "water_amount": {
+          "amount": 6,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 3,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/guava_juice/man_2.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อยคือ 'เคล็ดลับลับ' ที่ช่วยตัดรสฝาดและดึงรสหวานตามธรรมชาติของฝรั่งให้โดดเด่นขึ้นอย่างเห็นได้ชัด โดยไม่ทำให้รู้สึกเค็ม",
+        "en": "💡 A tiny pinch of salt is the 'secret trick' that cuts astringency and enhances the natural sweetness of guava remarkably, without tasting salty."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำฝรั่ง",
+        "en": "Mix guava juice"
+      },
+      "desc": {
+        "th": "เมื่อส่วนผสมน้ำเชื่อมเย็นลงจนถึงอุณหภูมิห้องหรือเย็นกว่านั้น ให้ค่อยๆ เทน้ำฝรั่งที่กรองแล้ว {guava_amount} ลงไป คนให้เข้ากันเบาๆ",
+        "en": "Once the sugar mixture cools down to room temperature or colder, slowly pour in the strained guava juice {guava_amount}. Stir gently to combine."
+      },
+      "descVariables": {
+        "guava_amount": {
+          "amount": 4,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/guava_juice/man_3.jpg",
+      "tips": {
+        "th": "💡 การใส่น้ำฝรั่งตอนน้ำเย็นจะช่วยรักษากลิ่นหอมระเหยและวิตามินซีไว้ได้เต็มที่ ไม่ทำให้สีคล้ำหรือเสียรส",
+        "en": "💡 Adding guava juice when the water is cold preserves volatile aromas and Vitamin C perfectly, preventing browning or flavor loss."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำน้ำฝรั่งเข้าแช่ตู้เย็นจนเย็นจัด เมื่อจะเสิร์ฟ: เติมน้ำแข็ง {ice_amount} ลงในแก้ว เทน้ำฝรั่งลงไป ตกแต่งด้วยฝรั่งหั่นแว่นบางๆ พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the guava juice until ice-cold. When serving: fill a glass with {ice_amount} of ice, pour the guava juice over, and garnish with thin guava slices. Ready to serve!"
+      },
+      "descVariables": {
+        "ice_amount": {
+          "amount": 2000,
+          "unit": "Gram",
+          "scalable": false
+        }
+      },
+      "image": "images/juice/guava_juice/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำฝรั่งสดควรดื่มให้หมดภายใน 24 ชั่วโมงหลังเตรียมเสร็จ เพื่อรักษาคุณค่าทางวิตามินซีสูงสุด เขย่าเบาๆ ก่อนเสิร์ฟหากมีการแยกชั้น",
+        "en": "💡 Fresh guava juice should be consumed within 24 hours after preparation to preserve maximum Vitamin C. Shake gently before serving if separation occurs."
+      }
+    }
+  ]
+}

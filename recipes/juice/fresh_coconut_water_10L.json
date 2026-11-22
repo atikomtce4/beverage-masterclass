@@ -1,0 +1,284 @@
+{
+  "id": "fresh_coconut_water_10L",
+  "icon": "🥥",
+  "category": "juice",
+  "machineCompatible": true,
+  "description": "น้ำมะพร้าวสด 10 ลิตร คั้นสดจากมะพร้าวอ่อนธรรมชาติ อุดมไปด้วยอิเล็กโทรไลต์ ดื่มเย็นๆ ชื่นใจ บำรุงผิวพรรณและฟื้นฟูร่างกาย",
+  "total_time": 30,
+  "target_temp": 5,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_fresh_coconut_water_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำมะพร้าวสด 10 ลิตร",
+    "en": "Fresh Coconut Water 10L"
+  },
+  "images": [
+    "images/juice/fresh_coconut_water/main_1.jpg",
+    "images/juice/fresh_coconut_water/main_2.jpg",
+    "images/juice/fresh_coconut_water/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_fresh_coconut",
+  "prepTime": {
+    "th": "25 นาที (เตรียมน้ำมะพร้าว) + 5 นาที (เครื่อง)",
+    "en": "25 mins (prep coconut water) + 5 mins (machine)"
+  },
+  "cookTime": {
+    "th": "30 นาที (รวมเตรียมและเครื่อง)",
+    "en": "30 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "น้ำมะพร้าวสดสูตรธรรมชาติ ทำง่ายด้วยเครื่อง AllDrinks System: เตรียมน้ำมะพร้าวอ่อนคั้นสด 10 ลิตร เทลงในเครื่อง ระบบจะผสมเกลือเล็กน้อยเพื่อเสริมอิเล็กโทรไลต์ และลดอุณหภูมิลงเหลือ 5°C อย่างรวดเร็ว เพื่อให้ได้น้ำมะพร้าวที่เย็นสดชื่น พร้อมเสิร์ฟทันที",
+    "en": "Natural fresh coconut water made easy with AllDrinks System: Pour 10L of freshly extracted young coconut water into the machine. The system adds a pinch of salt to enhance electrolytes and rapidly chills to 5°C for a refreshing, ready-to-serve drink."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยโพแทสเซียม แมกนีเซียม และอิเล็กโทรไลต์ธรรมชาติ ช่วยฟื้นฟูร่างกายหลังออกกำลังกาย บำรุงผิวพรรณให้สดใส และช่วยปรับสมดุลความดันโลหิต",
+    "en": "Rich in potassium, magnesium, and natural electrolytes. Helps rehydrate the body after exercise, nourishes the skin, and helps balance blood pressure."
+  },
+  "warnings": {
+    "th": "⚠️ น้ำมะพร้าวมีฤทธิ์เย็น ผู้ที่มีอาการมือเท้าเย็นหรือความดันต่ำควรดื่มในปริมาณที่เหมาะสม และควรดื่มให้หมดภายใน 24 ชั่วโมงหลังเปิดเพื่อรักษาคุณค่าทางอาหาร",
+    "en": "⚠️ Coconut water has cooling properties. Those with cold hands/feet or low blood pressure should consume in moderation. Consume within 24 hours after opening to preserve nutritional value."
+  },
+  "nutrition": {
+    "calories": "19 kcal",
+    "carbs": "4 g",
+    "sugar": "3 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำมะพร้าวอ่อนสด (คั้นและกรองแล้ว)",
+        "en": "Fresh young coconut water (extracted and filtered)"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ใส่เฉพาะถ้ามะพร้าวไม่หวาน)",
+        "en": "White sugar (optional, if coconut is not sweet enough)"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เสริมอิเล็กโทรไลต์และตัดรส)",
+        "en": "Salt (to enhance electrolytes and balance flavor)"
+      },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำมะพร้าวสด",
+        "en": "Prepare Fresh Coconut Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำมะพร้าวอ่อนสดที่กรองแล้ว {coconut_water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {coconut_water} of filtered fresh young coconut water into the sterilized tank."
+      },
+      "descVariables": {
+        "coconut_water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมเกลือและน้ำตาล (ถ้าต้องการ)",
+        "en": "Add salt and sugar (if needed)"
+      },
+      "desc": {
+        "th": "✅ กรุณาเติมเกลือ {salt} และน้ำตาล {sugar} (หากมะพร้าวไม่หวาน) ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Please add {salt} of salt and {sugar} of sugar (if coconut is not sweet enough), then press OK to mix."
+      },
+      "descVariables": {
+        "salt": {
+          "amount": 3,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 3,
+      "function": "Hold Temp",
+      "target_value": 20,
+      "unit": "°C",
+      "duration": 1,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้เข้ากัน (1 นาที)",
+        "en": "Mix gently (1 min)"
+      },
+      "desc": {
+        "th": "เครื่องจะกวนผสมเบาๆ 1 นาที เพื่อให้เกลือและน้ำตาลละลายเป็นเนื้อเดียวกันกับน้ำมะพร้าว",
+        "en": "Machine stirs gently for 1 min to ensure salt and sugar are completely dissolved and blended with the coconut water."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 4,
+      "function": "Chill",
+      "target_value": 5,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 5°C พร้อมเสิร์ฟ",
+        "en": "Chill to 5°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 5°C อย่างรวดเร็ว พร้อมระบบกวน เพื่อให้ได้น้ำมะพร้าวที่เย็นสดชื่นที่สุด",
+        "en": "Machine rapidly chills the mixture to 5°C with stirring, ensuring the most refreshing iced coconut water ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำมะพร้าวสดพร้อมเสิร์ฟ",
+        "en": "Fresh Coconut Water ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำมะพร้าวสดออกจากถัง กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Fresh Coconut Water out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำมะพร้าวสด",
+        "en": "Prepare fresh coconut water"
+      },
+      "desc": {
+        "th": "เปิดมะพร้าวอ่อนและคั้นน้ำให้ได้ {coconut_water} กรองผ่านผ้าขาวบางหรือกระชอนละเอียดเพื่อเอาเศษเนื้อหรือสิ่งสกปรกออก",
+        "en": "Open young coconuts and extract {coconut_water} of water. Filter through a cheesecloth or fine sieve to remove any coconut flesh or debris."
+      },
+      "descVariables": {
+        "coconut_water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/fresh_coconut_water/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรเลือกมะพร้าวอ่อนที่สดใหม่ (เปลือกยังเขียวหรือขาวนวล) จะได้น้ำที่หอมหวานและมีกลิ่นหอมเฉพาะตัว ไม่เหม็นเปรี้ยว",
+        "en": "💡 Choose fresh young coconuts (green or pale white husk) for sweet, fragrant water without any sour or fermented smell."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ปรุงรสด้วยเกลือและน้ำตาล",
+        "en": "Season with salt and sugar"
+      },
+      "desc": {
+        "th": "เติมเกลือ {salt} ลงไปคนให้ละลาย (เกลือจะช่วยดึงรสหวานธรรมชาติและเสริมอิเล็กโทรไลต์) หากมะพร้าวจืดเกินไป สามารถเติมน้ำตาล {sugar} เพิ่มได้เล็กน้อย",
+        "en": "Add {salt} of salt and stir until dissolved (salt enhances natural sweetness and boosts electrolytes). If the coconut water is too bland, you can add {sugar} of sugar."
+      },
+      "descVariables": {
+        "salt": {
+          "amount": 3,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 100,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/fresh_coconut_water/man_2.jpg",
+      "tips": {
+        "th": "💡 เกลือเพียงเล็กน้อย (ปลายช้อนชา) คือเคล็ดลับที่ทำให้รสชาติของน้ำมะพร้าว 'นัว' และกลมกล่อมขึ้นอย่างเห็นได้ชัด โดยไม่ทำให้รู้สึกเค็ม",
+        "en": "💡 A tiny pinch of salt is the secret trick that makes coconut water taste remarkably smoother and more balanced, without tasting salty."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำน้ำมะพร้าวเข้าแช่ตู้เย็นจนเย็นจัด หรือใส่เครื่อง AllDrinks System เพื่อลดอุณหภูมิ เมื่อจะเสิร์ฟ: เทใส่แก้วที่มีน้ำแข็ง ตกแต่งด้วยเนื้อมะพร้าวอ่อนขูดฝอยด้านบน พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the coconut water until ice-cold, or use the AllDrinks System to chill. When serving: pour into a glass with ice, garnish with shredded young coconut meat on top. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/juice/fresh_coconut_water/man_3.jpg",
+      "tips": {
+        "th": "💡 น้ำมะพร้าวสดควรดื่มให้หมดภายใน 24 ชั่วโมงหลังเปิด เพราะจะเกิดปฏิกิริยาออกซิเดชันทำให้สีเปลี่ยนเป็นสีชมพูและรสเปรี้ยวได้ (ซึ่งยังดื่มได้แต่รสชาติไม่สดใหม่)",
+        "en": "💡 Fresh coconut water should be consumed within 24 hours after opening, as oxidation can turn it pink and slightly sour (still safe to drink, but less fresh)."
+      }
+    }
+  ]
+}

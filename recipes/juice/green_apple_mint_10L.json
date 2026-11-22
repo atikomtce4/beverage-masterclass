@@ -1,0 +1,445 @@
+{
+  "id": "green_apple_mint_10L",
+  "icon": "🍏",
+  "category": "juice",
+  "machineCompatible": true,
+  "description": "น้ำแอปเปิ้ลเขียวมินต์ 10 ลิตร เปรี้ยวหวานสดชื่น หอมกลิ่นมินต์ธรรมชาติ ทำง่ายด้วยเครื่อง AllDrinks System ผสมน้ำแอปเปิ้ลเขียวคั้นสดกับใบมินต์และมะนาวเล็กน้อย ให้รสชาติที่ตื่นตัว ดื่มเย็นๆ ช่วยดีท็อกซ์และคลายร้อน",
+  "total_time": 25,
+  "target_temp": 5,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_green_apple_mint_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำแอปเปิ้ลเขียวมินต์ 10 ลิตร",
+    "en": "Green Apple Mint Cooler 10L"
+  },
+  "images": [
+    "images/juice/green_apple_mint/main_1.jpg",
+    "images/juice/green_apple_mint/main_2.jpg",
+    "images/juice/green_apple_mint/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_green_apple_mint",
+  "prepTime": {
+    "th": "15 นาที (เตรียม) + 10 นาที (เครื่อง)",
+    "en": "15 mins (prep) + 10 mins (machine)"
+  },
+  "cookTime": {
+    "th": "25 นาที (รวมเตรียมและเครื่อง)",
+    "en": "25 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "น้ำแอปเปิ้ลเขียวมินต์สูตรสดชื่นเพื่อสุขภาพ ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะเตรียมน้ำและละลายน้ำตาลที่อุณหภูมิ 40°C จากนั้นลดอุณหภูมิลงเหลือ 10°C อย่างแม่นยำ ก่อนผสมน้ำแอปเปิ้ลเขียว ใบมินต์สด และน้ำมะนาว เพื่อรักษากลิ่นหอมระเหยของมินต์และวิตามินซีไม่ให้ถูกทำลายจากความร้อนหรือทำให้ขม",
+    "en": "Refreshing and healthy green apple mint cooler made easy with AllDrinks System: Machine prepares water and dissolves sugar at 40°C, then precisely chills to 10°C before adding green apple juice, fresh mint leaves, and lime juice to preserve the mint's volatile aroma and Vitamin C without bitterness or heat damage."
+  },
+  "benefits": {
+    "th": "แอปเปิ้ลเขียวมีไฟเบอร์และวิตามินซีช่วยในการขับถ่ายและภูมิคุ้มกัน ใบมินต์มีสรรพคุณช่วยย่อยอาหาร ลดอาการท้องอืด และให้ความรู้สึกสดชื่นตื่นตัว",
+    "en": "Green apple is rich in fiber and Vitamin C, aiding digestion and immunity. Mint leaves help soothe the digestive system, reduce bloating, and provide a refreshing, awakening sensation."
+  },
+  "warnings": {
+    "th": "⚠️ ความเป็นกรดจากแอปเปิ้ลเขียวและมะนาวอาจระคายเคืองกระเพาะอาหารหากดื่มขณะท้องว่าง ผู้ที่เป็นโรคกระเพาะควรระวัง",
+    "en": "⚠️ The acidity from green apple and lime may irritate the stomach if consumed on an empty stomach. Those with gastric issues should be cautious."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "11 g",
+    "sugar": "9 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 7,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำแอปเปิ้ลเขียวคั้นสด (หรือแบบเข้มข้น)",
+        "en": "Freshly squeezed green apple juice (or concentrate)"
+      },
+      "amount": 3,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ใบมินต์สด (ล้างสะอาด)",
+        "en": "Fresh mint leaves (washed)"
+      },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำมะนาวหรือเลมอนสด",
+        "en": "Fresh lime or lemon juice"
+      },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "White sugar (adjustable sweetness)"
+      },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรส)",
+        "en": "Salt (a pinch to enhance flavor)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 7,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 7,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นน้ำที่ 40°C (สำหรับละลายน้ำตาล)",
+        "en": "Warm water to 40°C (for dissolving sugar)"
+      },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 40°C ซึ่งเป็นอุณหภูมิที่ปลอดภัยและเหมาะสมที่สุดในการละลายน้ำตาล โดยไม่ทำลายคุณค่าทางอาหาร",
+        "en": "The machine warms water to 40°C, the safest and optimal temperature for dissolving sugar without destroying nutritional value."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำตาลและเกลือ",
+        "en": "Add sugar and salt"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 40°C พร้อมแล้ว! กรุณาเติมน้ำตาล {sugar} และเกลือ {salt} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 40°C! Please add {sugar} of sugar and {salt} of salt, then press OK to mix."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้ละลายเข้ากัน (2 นาที)",
+        "en": "Mix and Dissolve (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 40°C ต่อเนื่อง 2 นาที พร้อมระบบวนน้ำและกวน เพื่อให้น้ำตาลและเกลือละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์",
+        "en": "Machine maintains 40°C for 2 mins with circulation and stirring to ensure sugar and salt are completely dissolved and blended."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 10°C (เตรียมผสมแอปเปิ้ลและมินต์)",
+        "en": "Chill to 10°C (Prepare for apple and mint)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 10°C (การผสมผลไม้และสมุนไพรที่อุณหภูมิต่ำจะช่วยรักษากลิ่นหอมและป้องกันการขม)",
+        "en": "Activate cooling system to chill the mixture to 10°C (mixing fruits and herbs at low temperatures best preserves aroma and prevents bitterness)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำแอปเปิ้ลเขียว มินต์สด และน้ำมะนาว",
+        "en": "Add green apple juice, fresh mint, and lime juice"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 10°C พร้อมแล้ว! กรุณาเติมน้ำแอปเปิ้ลเขียว {apple_juice} ใบมินต์สด {mint} และน้ำมะนาว {lime} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมเบาๆ",
+        "en": "✅ Temperature is ready at 10°C! Please add {apple_juice} of green apple juice, {mint} of fresh mint, and {lime} of lime juice, then press OK for gentle mixing."
+      },
+      "descVariables": {
+        "apple_juice": {
+          "amount": 3,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "mint": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "lime": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้เข้ากัน (2 นาที)",
+        "en": "Mix gently (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 10°C และกวนผสมเบาๆ 2 นาที เพื่อให้รสชาติกลมกล่อมและกลิ่นมินต์กระจายตัวโดยไม่ทำลายความสด",
+        "en": "Machine maintains 10°C and stirs gently for 2 mins to blend flavors smoothly and distribute mint aroma without compromising freshness."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 5,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 5°C พร้อมเสิร์ฟ",
+        "en": "Chill to 5°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 5°C อย่างรวดเร็ว พร้อมระบบกวน เพื่อให้ได้น้ำแอปเปิ้ลเขียวมินต์ที่เย็นสดชื่นที่สุด",
+        "en": "Machine rapidly chills the mixture to 5°C with stirring, ensuring the most refreshing iced green apple mint cooler ready to serve."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำแอปเปิ้ลเขียวมินต์พร้อมเสิร์ฟ",
+        "en": "Green Apple Mint Cooler ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำแอปเปิ้ลเขียวมินต์ออกจากถัง กรุณาเตรียมภาชนะรองรับ (อาจมีใบมินต์ติดออกมาเล็กน้อยซึ่งเป็นปกติ)",
+        "en": "System is transferring Green Apple Mint Cooler out of the tank. Please prepare a container (a few mint leaves may pass through, which is normal)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและปรับอุณหภูมิ",
+        "en": "Prepare water and adjust temperature"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} และปรับอุณหภูมิลดลงเหลือประมาณ 40°C (อุ่นเล็กน้อย) เพื่อเตรียมผสมน้ำตาล",
+        "en": "Prepare {water} of clean water and adjust temperature down to about 40°C (slightly warm) to prepare for mixing sugar."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 7,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/green_apple_mint/man_1.jpg",
+      "tips": {
+        "th": "💡 หากไม่มีเครื่องวัดอุณหภูมิ ให้ใช้น้ำที่ผสมระหว่างน้ำร้อนและน้ำเย็นในอัตราส่วนที่เมื่อแตะแล้วรู้สึกอุ่นสบายมือ",
+        "en": "💡 If no thermometer is available, mix hot and cold water until it feels comfortably warm to the touch."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำตาลและเกลือ",
+        "en": "Mix sugar and salt"
+      },
+      "desc": {
+        "th": "เติมน้ำตาล {sugar} และเกลือ {salt} ลงในน้ำอุ่น 40°C คนให้เข้ากันจนน้ำตาลละลายหมด",
+        "en": "Add {sugar} of sugar and {salt} of salt into the 40°C warm water. Stir well until the sugar is fully dissolved."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/green_apple_mint/man_2.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยคือเคล็ดลับที่ช่วยดึงรสเปรี้ยวหวานของแอปเปิ้ลและกลิ่นมินต์ให้เด่นชัดขึ้น (Balance) โดยไม่ทำให้รู้สึกเค็ม",
+        "en": "💡 A pinch of salt is the secret trick that enhances the sweet-sour balance of the apple and the mint aroma, without tasting salty."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำแอปเปิ้ลเขียว มินต์สด และน้ำมะนาว",
+        "en": "Add green apple juice, fresh mint, and lime juice"
+      },
+      "desc": {
+        "th": "เมื่อส่วนผสมเย็นลงจนถึงอุณหภูมิห้องหรือเย็นกว่านั้น ให้เติมน้ำแอปเปิ้ลเขียว {apple_juice} น้ำมะนาว {lime} และใบมินต์สด {mint} (ขยี้ใบมินต์เบาๆ ก่อนใส่เพื่อปล่อยกลิ่นหอม) คนให้เข้ากัน",
+        "en": "Once the mixture cools down to room temperature or colder, add {apple_juice} of green apple juice, {lime} of lime juice, and {mint} of fresh mint leaves (gently bruise mint leaves before adding to release aroma). Stir well to combine."
+      },
+      "descVariables": {
+        "apple_juice": {
+          "amount": 3,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "lime": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "mint": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/green_apple_mint/man_3.jpg",
+      "tips": {
+        "th": "💡 การใส่มินต์และผลไม้ตอนน้ำเย็นจะช่วยรักษากลิ่นหอมระเหย (Volatile oils) และวิตามินซีไว้ได้เต็มที่ ไม่ทำให้ขมหรือสีคล้ำ",
+        "en": "💡 Adding mint and fruit when the water is cold preserves volatile oils and Vitamin C perfectly, preventing bitterness or browning."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำน้ำแอปเปิ้ลเขียวมินต์เข้าแช่ตู้เย็นจนเย็นจัด เมื่อจะเสิร์ฟ: เติมน้ำแข็งลงในแก้ว เทเครื่องดื่มลงไป กรองใบมินต์ออกหรือตกแต่งด้วยยอดมินต์สดด้านบน พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the green apple mint cooler until ice-cold. When serving: fill a glass with ice, pour the drink over, strain out mint leaves or garnish with fresh mint sprigs on top. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/juice/green_apple_mint/man_4.jpg",
+      "tips": {
+        "th": "💡 สามารถเก็บในตู้เย็นได้นาน 1-2 วัน แต่รสชาติจะสดชื่นที่สุดเมื่อรับประทานภายใน 24 ชั่วโมงแรก เขย่าก่อนเสิร์ฟหากมีการแยกชั้น",
+        "en": "💡 Can be stored in the fridge for 1-2 days, but tastes freshest within the first 24 hours. Shake well before serving if separation occurs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "id": "avocado_smoothie_10L",
+  "icon": "🥑",
+  "category": "juice",
+  "machineCompatible": false,
+  "machineNote": {
+    "th": "สูตรนี้ต้องใช้เครื่องปั่นสมูทตี้ (Commercial Blender) เพื่อให้ได้เนื้อสัมผัสที่เนียนละเอียด เครื่อง AllDrinks System ยังไม่รองรับขั้นตอนการปั่นน้ำแข็ง กรุณาใช้โหมด 'ทำเอง' (Manual)",
+    "en": "This recipe requires a commercial blender to achieve a smooth texture. The AllDrinks System does not yet support ice blending. Please use 'Manual' mode."
+  },
+  "description": "สมูทตี้อะโวคาโด 10 ลิตร เนื้อเนียนละเอียด ครีมมี่ หอมมันจากอะโวคาโดสุกเกรดพรีเมียม ผสมกับนมสดและนมข้นหวาน ให้รสชาติที่กลมกล่อม อุดมไปด้วยไขมันดีและพลังงาน",
+  "total_time": 40,
+  "target_temp": 4,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_avocado_smoothie_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "สมูทตี้อะโวคาโด 10 ลิตร",
+    "en": "Avocado Smoothie 10L"
+  },
+  "images": [
+    "images/juice/avocado_smoothie/main_1.jpg",
+    "images/juice/avocado_smoothie/main_2.jpg",
+    "images/juice/avocado_smoothie/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_avocado_smoothie",
+  "prepTime": {
+    "th": "20 นาที (เตรียมอะโวคาโด) + 20 นาที (ปั่น)",
+    "en": "20 mins (prep avocado) + 20 mins (blending)"
+  },
+  "cookTime": {
+    "th": "40 นาที (รวมเตรียมและปั่น)",
+    "en": "40 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สมูทตี้อะโวคาโดสูตรครีมมี่ต้นตำรับ: ปอกและคว้านเนื้ออะโวคาโดสุก ปั่นรวมกับนมสด นมข้นหวาน น้ำตาล และน้ำมะนาวเล็กน้อย (เพื่อป้องกันสีคล้ำ) ตามด้วยน้ำแข็ง ปั่นจนเนียนละเอียด เสิร์ฟเย็นสดชื่น ตกแต่งด้วยเนื้ออะโวคาโดหั่นเต๋า",
+    "en": "Authentic creamy avocado smoothie: peel and scoop ripe avocado, blend with fresh milk, sweetened condensed milk, sugar, and a splash of lemon juice (to prevent browning), followed by ice. Blend until smooth. Serve chilled, garnished with diced avocado."
+  },
+  "benefits": {
+    "th": "อะโวคาโดอุดมไปด้วยไขมันดี (Monounsaturated fats) ที่ช่วยลดคอเลสเตอรอลไม่ดี บำรุงสมองและผิวพรรณ มีไฟเบอร์สูงช่วยในการขับถ่าย และเป็นแหล่งพลังงานที่ดี",
+    "en": "Avocado is rich in monounsaturated fats that help lower bad cholesterol, nourish the brain and skin. High in fiber for digestion and a great source of energy."
+  },
+  "warnings": {
+    "th": "⚠️ อะโวคาโดมีแคลอรี่และไขมันค่อนข้างสูง ผู้ที่ควบคุมน้ำหนักควรบริโภคในปริมาณที่เหมาะสม และควรบริโภคทันทีหลังปั่นเพื่อป้องกันเนื้อสมูทตี้แยกชั้นหรือสีคล้ำ",
+    "en": "⚠️ Avocado is relatively high in calories and fat. Those managing weight should consume in moderation. Consume immediately after blending to prevent separation or browning."
+  },
+  "nutrition": {
+    "calories": "145 kcal",
+    "carbs": "15 g",
+    "sugar": "12 g",
+    "protein": "3 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "เนื้ออะโวคาโดสุก (ปอกและคว้านแล้ว)",
+        "en": "Ripe avocado flesh (peeled and pitted)"
+      },
+      "amount": 3000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมสดรสจืด",
+        "en": "Fresh milk (plain)"
+      },
+      "amount": 4,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "นมข้นหวาน",
+        "en": "Sweetened condensed milk"
+      },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (ปรับความหวานได้)",
+        "en": "White sugar (adjustable sweetness)"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำมะนาวหรือเลมอนสด",
+        "en": "Fresh lemon or lime juice"
+      },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น",
+        "en": "Salt"
+      },
+      "amount": 3,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำแข็งบละเอียด",
+        "en": "Crushed ice"
+      },
+      "amount": 2500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "⚠️ สูตรนี้ต้องใช้เครื่องปั่น (Manual Only)",
+        "en": "⚠️ This recipe requires a blender (Manual Only)"
+      },
+      "desc": {
+        "th": "สมูทตี้อะโวคาโดจำเป็นต้องใช้เครื่องปั่นสมูทตี้กำลังสูงเพื่อให้ได้น้ำแข็งที่ละเอียดและเนื้อสัมผัสที่เนียนนุ่ม ซึ่งเครื่อง AllDrinks System ยังไม่รองรับ กรุณาเลือกโหมด 'ทำเอง' (Manual) เพื่อดูขั้นตอนการทำ",
+        "en": "Avocado smoothie requires a high-powered blender to achieve finely crushed ice and a smooth texture, which the AllDrinks System does not support. Please switch to 'Manual' mode for preparation steps."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมเนื้ออะโวคาโด",
+        "en": "Prepare avocado flesh"
+      },
+      "desc": {
+        "th": "เลือกอะโวคาโดที่สุกพอดี (เนื้อนิ่มแต่ไม่ช้ำ) ผ่าครึ่ง คว้านเมล็ดออก และใช้ช้อนตักเนื้อ {avocado_amount} ใส่ลงในชามผสม บดหยาบๆ ด้วยส้อมเพื่อให้ปั่นได้ง่ายขึ้น",
+        "en": "Choose perfectly ripe avocados (soft but not bruised). Cut in half, remove the pit, and scoop {avocado_amount} of flesh into a mixing bowl. Mash lightly with a fork to make blending easier."
+      },
+      "descVariables": {
+        "avocado_amount": {
+          "amount": 3000,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/avocado_smoothie/man_1.jpg",
+      "tips": {
+        "th": "💡 การเลือกอะโวคาโดที่สุกพอดีจะทำให้สมูทตี้มีรสหวานมันตามธรรมชาติ ไม่ต้องเติมน้ำตาลมากเกินไป และเนื้อจะเนียนไม่ติดก้อน",
+        "en": "💡 Choosing perfectly ripe avocados ensures natural creaminess and sweetness, reducing the need for extra sugar and preventing lumpy texture."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ผสมส่วนผสมเหลวและปรุงรส",
+        "en": "Mix liquid ingredients and season"
+      },
+      "desc": {
+        "th": "เติมนมสด {milk_amount} นมข้นหวาน {condensed_milk} น้ำตาล {sugar} เกลือ {salt} และน้ำมะนาว {lemon} ลงในโถปั่น ตามด้วยเนื้ออะโวคาโดที่เตรียมไว้",
+        "en": "Add {milk_amount} of fresh milk, {condensed_milk} of sweetened condensed milk, {sugar} of sugar, {salt} of salt, and {lemon} of lemon juice into the blender, followed by the prepared avocado."
+      },
+      "descVariables": {
+        "milk_amount": {
+          "amount": 4,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "condensed_milk": {
+          "amount": 800,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "sugar": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 3,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "lemon": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/avocado_smoothie/man_2.jpg",
+      "tips": {
+        "th": "💡 น้ำมะนาวปริมาณเล็กน้อยคือเคล็ดลับสำคัญที่ช่วยป้องกันไม่ให้อะโวคาโดออกซิไดซ์จนเป็นสีน้ำตาลคล้ำ โดยไม่ทำให้รสชาติเปลี่ยนไป",
+        "en": "💡 A small amount of lemon juice is the key trick to prevent avocado from oxidizing and turning brown, without altering the taste."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำแข็งและปั่นจนเนียน",
+        "en": "Add ice and blend until smooth"
+      },
+      "desc": {
+        "th": "เติมน้ำแข็งบละเอียด {ice_amount} ลงในโถปั่น ปั่นด้วยความเร็วสูงเป็นเวลา 1-2 นาที จนกระทั่งเนื้อสมูทตี้เนียนละเอียดเป็นเนื้อเดียวกัน ไม่มีเกล็ดน้ำแข็งเหลืออยู่",
+        "en": "Add {ice_amount} of crushed ice into the blender. Blend on high speed for 1-2 minutes until the smoothie is completely smooth and uniform, with no ice chunks remaining."
+      },
+      "descVariables": {
+        "ice_amount": {
+          "amount": 2500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/avocado_smoothie/man_3.jpg",
+      "tips": {
+        "th": "💡 หากเนื้อสมูทตี้ข้นเกินไป สามารถเติมนมสดเพิ่มทีละน้อยได้ แต่หากเหลวเกินไป ให้เติมน้ำแข็งหรืออะโวคาโดเพิ่ม",
+        "en": "💡 If the smoothie is too thick, add a little more fresh milk. If too thin, add more ice or avocado."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทสมูทตี้อะโวคาโดที่ปั่นเสร็จแล้วลงในแก้วทันที ตกแต่งด้านบนด้วยเนื้ออะโวคาโดหั่นเต๋าเล็กๆ หรือราดนมข้นหวานบางๆ เพื่อเพิ่มเสน่ห์ พร้อมเสิร์ฟ!",
+        "en": "Pour the freshly blended avocado smoothie into a glass immediately. Garnish the top with small diced avocado or a light drizzle of sweetened condensed milk for extra charm. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/juice/avocado_smoothie/man_4.jpg",
+      "tips": {
+        "th": "💡 สมูทตี้อะโวคาโดควรเสิร์ฟทันทีหลังปั่นเพื่อให้ได้เนื้อสัมผัสที่เย็นและเนียนที่สุด หากทิ้งไว้นานอาจเกิดการแยกชั้นของน้ำและเนื้อได้ (คนให้เข้ากันก่อนดื่มหากทิ้งไว้)",
+        "en": "💡 Avocado smoothie should be served immediately after blending for the coldest and smoothest texture. If left standing, separation may occur (stir well before drinking if stored)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "id": "lemon_honey_iced_10L",
+  "icon": "🍋",
+  "category": "juice",
+  "machineCompatible": true,
+  "description": "น้ำมะนาวน้ำผึ้งเย็น 10 ลิตร สูตรสดชื่น ผสมน้ำมะนาวคั้นสดกับน้ำผึ้งแท้และน้ำสะอาด ให้รสเปรี้ยวหวานกลมกล่อม ดื่มเย็นๆ คลายร้อน บำรุงร่างกายและดีต่อสุขภาพ",
+  "total_time": 25,
+  "target_temp": 10,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_lemon_honey_iced_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำมะนาวน้ำผึ้งเย็น 10 ลิตร",
+    "en": "Iced Lemon Honey 10L"
+  },
+  "images": [
+    "images/juice/lemon_honey_iced/main_1.jpg",
+    "images/juice/lemon_honey_iced/main_2.jpg",
+    "images/juice/lemon_honey_iced/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_lemon_honey",
+  "prepTime": {
+    "th": "15 นาที (เตรียม) + 10 นาที (เครื่อง)",
+    "en": "15 mins (prep) + 10 mins (machine)"
+  },
+  "cookTime": {
+    "th": "25 นาที (รวมเตรียมและเครื่อง)",
+    "en": "25 mins (total)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "น้ำมะนาวน้ำผึ้งสูตรสดชื่นเพื่อสุขภาพ ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะเตรียมน้ำและควบคุมอุณหภูมิที่ 40°C อย่างแม่นยำเพื่อผสมน้ำผึ้ง (รักษาสรรพคุณทางยา) จากนั้นลดอุณหภูมิลงเหลือ 10°C ก่อนผสมน้ำมะนาวคั้นสด เพื่อรักษากลิ่นหอมและวิตามินซีไม่ให้ถูกทำลายจากความร้อน",
+    "en": "Refreshing and healthy lemon honey drink made easy with AllDrinks System: Machine precisely controls water temperature at 40°C to mix honey (preserving medicinal properties), then chills to 10°C before adding fresh lemon juice to protect Vitamin C and fresh aroma from heat damage."
+  },
+  "benefits": {
+    "th": "มะนาวอุดมไปด้วยวิตามินซีสูงช่วยเสริมสร้างภูมิคุ้มกันและกระตุ้นการเผาผลาญ น้ำผึ้งแท้มีสรรพคุณทางยาช่วยบรรเทาอาการไอ บำรุงลำไส้ และให้พลังงานธรรมชาติ",
+    "en": "Lemon is rich in Vitamin C, boosting immunity and metabolism. Pure honey has medicinal properties to soothe coughs, nourish the gut, and provide natural energy."
+  },
+  "warnings": {
+    "th": "⚠️ ความเป็นกรดของมะนาวอาจระคายเคืองกระเพาะอาหารหากดื่มขณะท้องว่าง ผู้ที่เป็นโรคกระเพาะควรระวัง และห้ามให้น้ำผึ้งแก่เด็กอายุต่ำกว่า 1 ปี",
+    "en": "⚠️ The acidity of lemon may irritate the stomach if consumed on an empty stomach. Those with gastric issues should be cautious. Do not give honey to children under 1 year old."
+  },
+  "nutrition": {
+    "calories": "40 kcal",
+    "carbs": "10 g",
+    "sugar": "9 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำมะนาวคั้นสด (หรือมะนาวสดบดละเอียด)",
+        "en": "Freshly squeezed lemon juice (or finely mashed fresh lemon)"
+      },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำผึ้งแท้",
+        "en": "Pure honey"
+      },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรส)",
+        "en": "Salt (a pinch to enhance flavor)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Chill",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ปรับอุณหภูมิน้ำเหลือ 40°C (เตรียมผสมน้ำผึ้ง)",
+        "en": "Adjust water temperature to 40°C (Prepare for honey)"
+      },
+      "desc": {
+        "th": "ระบบจะปรับอุณหภูมิน้ำลงเหลือ 40°C อย่างรวดเร็ว (อุณหภูมิที่ปลอดภัยสำหรับการผสมน้ำผึ้งโดยไม่ทำลายเอนไซม์)",
+        "en": "System rapidly adjusts water temperature to 40°C (a safe temperature for mixing honey without destroying enzymes)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำผึ้งและเกลือ",
+        "en": "Add honey and salt"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 40°C พร้อมแล้ว! กรุณาเติมน้ำผึ้ง {honey} และเกลือ {salt} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสม",
+        "en": "✅ Temperature is ready at 40°C! Please add {honey} of honey and {salt} of salt, then press OK to mix."
+      },
+      "descVariables": {
+        "honey": {
+          "amount": 600,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมน้ำผึ้งให้ละลาย (2 นาที)",
+        "en": "Stir to dissolve honey (2 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 40°C ต่อเนื่อง 2 นาที พร้อมระบบวนน้ำและกวน เพื่อให้น้ำผึ้งละลายเป็นเนื้อเดียวกันอย่างสมบูรณ์",
+        "en": "Machine maintains 40°C for 2 mins with circulation and stirring to ensure the honey is completely dissolved and blended."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 10°C (เตรียมผสมมะนาว)",
+        "en": "Chill to 10°C (Prepare for lemon)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 10°C (การผสมมะนาวตอนเย็นจัดจะช่วยรักษากลิ่นหอมและวิตามินซีไว้ได้ดีที่สุด)",
+        "en": "Activate cooling system to chill the mixture to 10°C (mixing lemon at cold temperatures best preserves its fresh aroma and Vitamin C)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "เติมน้ำมะนาวคั้นสด",
+        "en": "Add fresh lemon juice"
+      },
+      "desc": {
+        "th": "✅ อุณหภูมิ 10°C พร้อมแล้ว! กรุณาเติมน้ำมะนาวคั้นสด {lemon} ลงไป แล้วกด OK เพื่อให้เครื่องกวนผสมเบาๆ",
+        "en": "✅ Temperature is ready at 10°C! Please add {lemon} of fresh lemon juice, then press OK for gentle mixing."
+      },
+      "descVariables": {
+        "lemon": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 1,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้เข้ากัน (1 นาที)",
+        "en": "Mix gently (1 min)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 10°C และกวนผสมเบาๆ 1 นาที เพื่อให้รสชาติกลมกล่อมโดยไม่ทำลายความสดของมะนาว",
+        "en": "Machine maintains 10°C and stirs gently for 1 min to blend flavors smoothly without compromising the freshness of the lemon."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำมะนาวน้ำผึ้งพร้อมเสิร์ฟ",
+        "en": "Lemon Honey ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำมะนาวน้ำผึ้งออกจากถัง กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Lemon Honey out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและปรับอุณหภูมิ",
+        "en": "Prepare water and adjust temperature"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} และปรับอุณหภูมิลดลงเหลือประมาณ 40°C (อุ่นเล็กน้อยแต่ไม่ร้อน) เพื่อเตรียมผสมน้ำผึ้ง",
+        "en": "Prepare {water} of clean water and adjust temperature down to about 40°C (slightly warm, not hot) to prepare for mixing honey."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/lemon_honey_iced/man_1.jpg",
+      "tips": {
+        "th": "💡 หากไม่มีเครื่องวัดอุณหภูมิ ให้ใช้น้ำที่ผสมระหว่างน้ำร้อนและน้ำเย็นในอัตราส่วนที่เมื่อแตะแล้วรู้สึกอุ่นสบายมือ (ไม่ร้อน)",
+        "en": "💡 If no thermometer is available, mix hot and cold water until it feels comfortably warm to the touch (not hot)."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำผึ้งและเกลือ",
+        "en": "Mix honey and salt"
+      },
+      "desc": {
+        "th": "เติมน้ำผึ้ง {honey} และเกลือ {salt} ลงในน้ำอุ่น 40°C คนให้เข้ากันจนน้ำผึ้งละลายหมด",
+        "en": "Add {honey} of honey and {salt} of salt into the 40°C warm water. Stir well until the honey is fully dissolved."
+      },
+      "descVariables": {
+        "honey": {
+          "amount": 600,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/lemon_honey_iced/man_2.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิที่สูงกว่า 60°C จะทำลายเอนไซม์และสารอาหารในน้ำผึ้ง การผสมที่ 40°C จึงเป็นจุดที่สมบูรณ์แบบที่สุด",
+        "en": "💡 Temperatures above 60°C destroy enzymes and nutrients in honey. Mixing at 40°C is the perfect sweet spot."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำมะนาวคั้นสด",
+        "en": "Add fresh lemon juice"
+      },
+      "desc": {
+        "th": "เมื่อส่วนผสมน้ำผึ้งเย็นลงจนถึงอุณหภูมิห้องหรือเย็นกว่านั้น ให้เติมน้ำมะนาวคั้นสด {lemon} ลงไป คนให้เข้ากัน",
+        "en": "Once the honey mixture cools down to room temperature or colder, add {lemon} of fresh lemon juice. Stir well to combine."
+      },
+      "descVariables": {
+        "lemon": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/juice/lemon_honey_iced/man_3.jpg",
+      "tips": {
+        "th": "💡 การใส่มะนาวตอนน้ำเย็นจะช่วยรักษากลิ่นหอมระเหย (Volatile oils) และวิตามินซีไว้ได้เต็มที่ ไม่ทำให้ขมหรือเสียรส",
+        "en": "💡 Adding lemon when the water is cold preserves volatile oils and Vitamin C perfectly, preventing bitterness or flavor loss."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "แช่เย็นและเสิร์ฟ",
+        "en": "Chill and serve"
+      },
+      "desc": {
+        "th": "นำน้ำมะนาวน้ำผึ้งเข้าแช่ตู้เย็นจนเย็นจัด เมื่อจะเสิร์ฟ: เติมน้ำแข็งลงในแก้ว เทน้ำมะนาวน้ำผึ้งลงไป ตกแต่งด้วยมะนาวฝานแว่นหรือใบสะระแหน่ พร้อมเสิร์ฟ!",
+        "en": "Refrigerate the lemon honey until ice-cold. When serving: fill a glass with ice, pour the lemon honey over, and garnish with lemon slices or mint leaves. Ready to serve!"
+      },
+      "descVariables": {},
+      "image": "images/juice/lemon_honey_iced/man_4.jpg",
+      "tips": {
+        "th": "💡 สามารถเก็บในตู้เย็นได้นาน 2-3 วัน แต่รสชาติจะสดชื่นที่สุดเมื่อรับประทานภายใน 24 ชั่วโมงแรก เขย่าก่อนเสิร์ฟหากมีการแยกชั้น",
+        "en": "💡 Can be stored in the fridge for 2-3 days, but tastes freshest within the first 24 hours. Shake well before serving if separation occurs."
+      }
+    }
+  ]
+}
