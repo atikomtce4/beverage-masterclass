@@ -1,0 +1,18 @@
+[green_tea_10L.json]
+ขอสูตรทำน้ำ ผึ้งมะนาว ขนาด 10 ลิตร ตามรูปแบบไฟล์ JSON อ้างอิงที่ผมส่งให้
+
+
+ขอ เฉพาะ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3   ไม่ต้องสร้างภาพให้ผมนะ แต่ต้องตรวจสอบ ความถูกต้อง ของ อุปกรณ์ใน prompt ต้องเหมือนกันทุกภาพ เช่น ต้มใช้เตาไฟฟ้า รุ่นเดียวกัน , หม้อใช้รุ่นเดียวกัน , วัสดุใส่น้ำต้องเป็นรูปแบบเดียวกัน  จะได้รู้สึกถึงความต่อเนื่องของภาพ
+
+Prompt: Professional food photography, a tall clear glass of iced fresh coconut water, crystal clear translucent liquid, clear ice cubes, garnished with a generous topping of shredded young coconut meat. Condensation on the glass. Placed on a clean white marble countertop. Background shows a blurred bright modern commercial kitchen with soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k, cinematic lighting.
+
+Prompt: Professional food photography, angled overhead shot of a bright modern commercial kitchen, clean white marble countertop. Center: a large 12L polished stainless steel stockpot with two side handles and a matching glass lid. Surrounding it: a large 5L clear borosilicate glass measuring jug with handle and spout filled with clear coconut water, a small glass bowl of fresh young green coconuts, and a small ceramic dish of sea salt. Soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Prompt: Professional product photography, a sleek modern stainless steel automated beverage station dispensing crystal clear fresh coconut water into a large clear glass pitcher. Glowing digital interface showing "Fresh Coconut Water". Clean bright modern commercial kitchen background, white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+
+Prompt: Professional food photography, action shot of crystal clear fresh coconut water being poured from a large glass container into a large 12L polished stainless steel stockpot with two side handles. The pot is sitting on a sleek black glass-ceramic induction cooktop with digital touch controls. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Prompt: Professional food photography, close-up action shot of a pinch of sea salt being sprinkled into the clear coconut water inside a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with digital touch controls. A long stainless steel paddle stirrer is gently mixing the liquid, creating subtle ripples. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Prompt: Professional food photography, action shot of finished chilled crystal clear coconut water being poured from a large 12L polished stainless steel stockpot with two side handles into a tall clear glass filled with ice cubes and topped with shredded young coconut meat. The pot is held over a clean white marble countertop. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Bright modern commercial kitchen, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.

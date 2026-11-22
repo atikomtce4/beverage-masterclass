@@ -1,0 +1,20 @@
+[green_tea_10L.json]
+ขอสูตรทำน้ำ ผึ้งมะนาว ขนาด 10 ลิตร ตามรูปแบบไฟล์ JSON อ้างอิงที่ผมส่งให้
+
+
+ขอ เฉพาะ Prompt ภาพ Hero 3 ภาพ และ ภาพ Manual Step ทุก step  ทั้งคู่ขอขนาด 4:3   ไม่ต้องสร้างภาพให้ผมนะ แต่ต้องตรวจสอบ ความถูกต้อง ของ อุปกรณ์ใน prompt ต้องเหมือนกันทุกภาพ เช่น ต้มใช้เตาไฟฟ้า รุ่นเดียวกัน , หม้อใช้รุ่นเดียวกัน , วัสดุใส่น้ำต้องเป็นรูปแบบเดียวกัน  จะได้รู้สึกถึงความต่อเนื่องของภาพ
+
+Prompt: Professional food photography, a tall clear glass of iced lemon honey drink, pale golden translucent liquid, clear ice cubes, garnished with a fresh lemon slice and a sprig of mint. Condensation on the glass. Placed on a clean white marble countertop. Background shows a blurred bright modern commercial kitchen with soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k, cinematic lighting.
+
+Prompt: Professional food photography, angled overhead shot of a bright modern commercial kitchen, clean white marble countertop. Center: a large 12L polished stainless steel stockpot with two side handles and a matching glass lid. Surrounding it: a large 5L clear borosilicate glass measuring jug with handle and spout filled with water, a glass jar of golden pure honey with a wooden dipper, a small glass bowl of fresh lemons, and a small dish of salt. Soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+Prompt: Professional product photography, a sleek modern stainless steel automated beverage station dispensing pale golden lemon honey drink into a large clear glass pitcher. Glowing digital interface showing "Lemon Honey Brewing". Clean bright modern commercial kitchen background, white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, highly detailed, photorealistic, 8k.
+
+
+Prompt: Professional food photography, close-up shot of a large 12L polished stainless steel stockpot with two side handles sitting on a sleek black glass-ceramic induction cooktop with digital touch controls. Inside the pot, clear water is gently heating up. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Prompt: Professional food photography, dynamic action shot of golden pure honey being poured from a glass jar into the warm clear water inside a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with digital touch controls. A long stainless steel paddle stirrer is actively mixing the liquid, creating gentle swirling patterns. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Prompt: Professional food photography, close-up action shot of fresh lemon juice being squeezed from a halved lemon into the pale golden honey-water mixture inside a large 12L polished stainless steel stockpot with two side handles. The pot is on a sleek black glass-ceramic induction cooktop with digital touch controls. Bright modern commercial kitchen, clean white marble countertop, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
+
+Prompt: Professional food photography, action shot of finished pale golden iced lemon honey drink being poured from a large 12L polished stainless steel stockpot with two side handles into a tall clear glass filled with ice cubes and garnished with a fresh lemon slice. The pot is held over a clean white marble countertop. A large 5L clear borosilicate glass measuring jug with handle and spout is visible in the softly blurred background. Bright modern commercial kitchen, soft natural daylight from a left-side window. 4:3 aspect ratio, photorealistic, 8k.
