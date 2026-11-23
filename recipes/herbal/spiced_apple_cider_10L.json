@@ -1,7 +1,7 @@
 {
   "id": "spiced_apple_cider_10L",
   "icon": "🍎",
-  "category": "tea",
+  "category": "herbal",
   "machineCompatible": true,
   "description": "ไซเดอร์แอปเปิ้ลอบเชย 10 ลิตร อุ่นที่ 75°C (ไม่เดือด) หอมเครื่องเทศจากอบเชยและกานพลู ผสมน้ำแอปเปิ้ล 100% และน้ำผึ้ง ช่วยต้านอนุมูลอิสระและให้ความอบอุ่น",
   "total_time": 45,
@@ -19,9 +19,9 @@
     "en": "Spiced Apple Cider 10L"
   },
   "images": [
-    "images/tea/spiced_apple_cider/main_1.jpg",
-    "images/tea/spiced_apple_cider/main_2.jpg",
-    "images/tea/spiced_apple_cider/main_3.jpg"
+    "images/herbal/spiced_apple_cider/main_1.jpg",
+    "images/herbal/spiced_apple_cider/main_2.jpg",
+    "images/herbal/spiced_apple_cider/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_spiced_apple_cider",
   "prepTime": {
@@ -325,7 +325,7 @@
         "cinnamon": { "amount": 50, "unit": "Gram", "scalable": true },
         "clove": { "amount": 10, "unit": "Gram", "scalable": true }
       },
-      "image": "images/tea/spiced_apple_cider/man_1.jpg",
+      "image": "images/herbal/spiced_apple_cider/man_1.jpg",
       "tips": {
         "th": "💡 ใช้แท่งอบเชยแท้ (Ceylon cinnamon) จะหอมและปลอดภัยกว่าอบเชยจีน (Cassia) ที่มี coumarin สูง ซึ่งอาจเป็นอันตรายต่อตับหากบริโภคมากเกินไป",
         "en": "💡 Use true Ceylon cinnamon sticks, which are more aromatic and safer than Cassia cinnamon (high in coumarin, which can harm the liver in excess)."
@@ -343,7 +343,7 @@
         "en": "Turn electric stove to medium heat. Stir water until hot. When DS18B20 shows 75°C, add prepared cinnamon and cloves. Maintain 75°C for 15 minutes (watch DS18B20) to infuse aroma."
       },
       "descVariables": {},
-      "image": "images/tea/spiced_apple_cider/man_2.jpg",
+      "image": "images/herbal/spiced_apple_cider/man_2.jpg",
       "tips": {
         "th": "💡 การควบคุมที่ 75°C (ไม่เดือด 100°C) สำคัญมาก! จะช่วยสกัดกลิ่นเครื่องเทศโดยไม่ทำลายรสชาติสดชื่นและวิตามินในน้ำแอปเปิ้ลที่จะเติมถัดไป",
         "en": "💡 Controlling at 75°C (not boiling at 100°C) is crucial! It infuses spice aroma without destroying the fresh taste and vitamins in the apple juice to be added next."
@@ -363,7 +363,7 @@
       "descVariables": {
         "apple": { "amount": 6, "unit": "Liter", "scalable": true }
       },
-      "image": "images/tea/spiced_apple_cider/man_3.jpg",
+      "image": "images/herbal/spiced_apple_cider/man_3.jpg",
       "tips": {
         "th": "💡 ใช้น้ำแอปเปิ้ล 100% แบบไม่เติมน้ำตาล (Unsweetened) จะได้รสชาติที่แท้จริงและควบคุมความหวานเองได้ด้วยน้ำผึ้ง",
         "en": "💡 Use 100% unsweetened apple juice for authentic taste and control sweetness yourself with honey."
@@ -383,7 +383,7 @@
       "descVariables": {
         "honey": { "amount": 400, "unit": "Gram", "scalable": true }
       },
-      "image": "images/tea/spiced_apple_cider/man_4.jpg",
+      "image": "images/herbal/spiced_apple_cider/man_4.jpg",
       "tips": {
         "th": "💡 สามารถเพิ่มเครื่องเทศอื่นๆ ได้ตามชอบ เช่น ลูกจันทน์เทศป่นเล็กน้อย หรือเปลือกส้มฝานบางๆ เพื่อเพิ่มมิติของรสชาติ",
         "en": "💡 You can add other spices as preferred, like a pinch of nutmeg or thin orange peel slices, to add flavor dimensions."
@@ -401,7 +401,7 @@
         "en": "Pour into glass or pitcher. Serve warm (60-70°C), garnished with a cinnamon stick or thin orange slices beside the glass. Can be stored in fridge for 3-5 days and reheated before drinking."
       },
       "descVariables": {},
-      "image": "images/tea/spiced_apple_cider/man_5.jpg",
+      "image": "images/herbal/spiced_apple_cider/man_5.jpg",
       "tips": {
         "th": "💡 ไซเดอร์แอปเปิ้ลอบเชยเหมาะมากสำหรับดื่มในห้องแอร์หรือหน้าหนาว ให้ความอบอุ่นและสบายตัว ดื่มก่อนนอนก็ช่วยผ่อนคลาย",
         "en": "💡 Spiced apple cider is perfect for air-conditioned rooms or cold weather. Provides warmth and comfort. Drinking before bed also helps relaxation."
