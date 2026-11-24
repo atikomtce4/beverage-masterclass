@@ -22,17 +22,6 @@
     }
   },
   {
-    "id": "cocoa_10L",
-    "name": { "th": "โกโก้ร้อนเข้มข้น 10 ลิตร", "en": "10L Rich Hot Cocoa" },
-    "image": "images/tea/cocoa/main_1.jpg",
-    "prepTime": { "th": "12 นาที", "en": "12 mins" },
-    "rating": "4.9",
-    "badges": {
-      "th": ["โกโก้แท้", "ละลายสนิท", "หอมมัน"],
-      "en": ["Real Cocoa", "Smooth", "Creamy"]
-    }
-  },
-  {
     "id": "ginger_tea_10L",
     "name": { "th": "น้ำขิงสูตรเข้มข้น 10 ลิตร", "en": "10L Concentrated Ginger Tea" },
     "image": "images/tea/ginger_tea/main_1.jpg",
