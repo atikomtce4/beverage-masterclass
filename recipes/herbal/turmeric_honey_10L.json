@@ -1,0 +1,533 @@
+{
+  "id": "turmeric_honey_10L",
+  "icon": "✨",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำขมิ้นน้ำผึ้ง 10 ลิตร สูตร Golden Tonic สีทองสวยงาม สกัดจากขมิ้นสดคุณภาพดี ผสมน้ำผึ้งแท้และพริกไทยดำเล็กน้อยเพื่อเพิ่มการดูดซึม ดื่มอุ่นๆ ช่วยต้านอักเสบ บำรุงผิวพรรณ และเสริมภูมิคุ้มกัน",
+  "total_time": 45,
+  "target_temp": 50,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_turmeric_honey_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำขมิ้นน้ำผึ้ง (ต้านอักเสบ/บำรุงผิว)",
+    "en": "Turmeric Honey Tonic (Anti-Inflammatory/Skin Health)"
+  },
+  "images": [
+    "images/herbal/turmeric_honey/main_1.jpg",
+    "images/herbal/turmeric_honey/main_2.jpg",
+    "images/herbal/turmeric_honey/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_turmeric_honey",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "35 นาที",
+    "en": "35 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสความหอมละมุนและสรรพคุณต้านอักเสบของ น้ำขมิ้นน้ำผึ้งสูตร Golden Tonic ปริมาณ 10 ลิตร สูตรนี้ใช้ขมิ้นสดหั่นแว่น 300 กรัม ต้มสกัดที่ 95°C นาน 20 นาที เพื่อดึงสารเคอร์คูมิน (Curcumin) ออกมาอย่างเต็มที่ ผสมน้ำผึ้งแท้ 600 กรัม ที่อุณหภูมิ 50°C เพื่อรักษาเอนไซม์ และเพิ่มพริกไทยดำป่น 5 กรัม ซึ่งช่วยเพิ่มการดูดซึม Curcumin ได้ถึง 2000% ให้สีทองสวยงาม รสชาติกลมกล่อม ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience the soothing aroma and anti-inflammatory benefits of our Turmeric Honey Golden Tonic in a 10-liter batch. This recipe uses 300g of sliced fresh turmeric, extracted at 95°C for 20 minutes to maximize Curcumin. Blended with 600g of pure honey at 50°C to preserve enzymes, plus 5g of black pepper to boost Curcumin absorption by 2000%. Beautiful golden color, smooth taste, enjoyable hot or iced."
+  },
+  "benefits": {
+    "th": "สารเคอร์คูมินในขมิ้นมีฤทธิ์ต้านอักเสบ ต้านอนุมูลอิสระ บำรุงผิวพรรณให้สดใส เสริมภูมิคุ้มกัน และช่วยระบบย่อยอาหาร น้ำผึ้งช่วยบรรเทาอาการไอและให้พลังงานธรรมชาติ",
+    "en": "Curcumin in turmeric has anti-inflammatory and antioxidant properties, nourishes the skin, boosts immunity, and aids digestion. Honey soothes coughs and provides natural energy."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีนิ่วในถุงน้ำดี ท่อน้ำดีอุดตัน หรือกำลังรับประทานยาละลายลิ่มเลือดควรปรึกษาแพทย์ก่อนดื่ม ขมิ้นอาจทำให้ท้องเสียในบางคนที่ไวต่อเครื่องเทศ สตรีมีครรภ์ควรดื่มในปริมาณน้อย",
+    "en": "⚠️ People with gallstones, bile duct obstruction, or taking blood thinners should consult a doctor. Turmeric may cause diarrhea in sensitive individuals. Pregnant women should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ขมิ้นสด (ล้างสะอาด หั่นแว่นบาง)",
+        "en": "Fresh turmeric (washed, thinly sliced)"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย",
+        "en": "Sugar"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรสเฝื่อน)",
+        "en": "Salt (a pinch to balance earthiness)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำผึ้งแท้",
+        "en": "Pure honey"
+      },
+      "amount": 600,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "พริกไทยดำป่น (สำคัญมาก! เพิ่มการดูดซึม Curcumin)",
+        "en": "Ground black pepper (Crucial! Boosts Curcumin absorption)"
+      },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 15,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 50,
+      "duration_unit": "minute",
+      "timeout": 100,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำพร้อมระบบวน",
+        "en": "Heat Water with Circulation"
+      },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
+        "en": "The machine will start heating while activating circulation for rapid, precise heating to 95°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Stir,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 302,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลและเกลือ",
+        "en": "Add sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลทรายและเกลือรวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of sugar and salt, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 302,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลายน้ำตาล",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 300,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่ขมิ้นสดในตะกร้า",
+        "en": "Add fresh turmeric in basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ขมิ้นสดหั่นแว่น {ingredient} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of sliced fresh turmeric (in a basket) into the hot water."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 20,
+      "duration_unit": "minute",
+      "timeout": 30,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดเคอร์คูมินและสีทอง (20 นาที)",
+        "en": "Extract Curcumin and Golden Color (20 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 20 นาที พร้อมระบบวนน้ำและกวน เพื่อสกัดสารเคอร์คูมินและสีทองจากขมิ้นออกมาอย่างเต็มที่",
+        "en": "Machine precisely maintains 95°C for 20 mins with circulation and stirring to fully extract Curcumin and golden color from turmeric."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Pump,Stir,Valve_CIRC"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าขมิ้นออก",
+        "en": "Remove turmeric basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าขมิ้นออก แล้วกด OK (การแช่นานเกินไปอาจทำให้รสเฝื่อนเพิ่มขึ้น)",
+        "en": "Time is up. Please remove the turmeric basket and press OK (over-steeping may increase earthiness)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 50°C (เตรียมผสมน้ำผึ้ง)",
+        "en": "Rapidly Chill to 50°C (Prepare for honey)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 50°C อย่างรวดเร็ว (ร้อนเกิน 60°C จะทำลายเอนไซม์และคุณค่าในน้ำผึ้ง)",
+        "en": "Activate cooling system to rapidly chill to 50°C (above 60°C destroys honey enzymes and nutrients)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "Add Ingredient",
+      "target_value": 605,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำผึ้งและพริกไทยดำ",
+        "en": "Add honey and black pepper"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำผึ้งและพริกไทยดำป่นรวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of honey and ground black pepper, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 605,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Hold Temp",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อผสมน้ำผึ้ง",
+        "en": "Maintain Temp for Honey Blending"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 50°C ต่อเนื่องเป็นเวลา 3 นาที เพื่อให้ส่วนผสมละลายเข้ากันอย่างสมบูรณ์ โดยไม่ทำลายคุณค่าของน้ำผึ้ง",
+        "en": "The machine will maintain 50°C for 3 minutes to ensure complete blending without destroying honey's nutritional value."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 11,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำขมิ้นน้ำผึ้งพร้อมเสิร์ฟ",
+        "en": "Turmeric Honey Tonic ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำขมิ้นน้ำผึ้งออกจากถัง กรุณาเตรียมภาชนะรองรับ (ระวังคราบสีทองที่อาจติดภาชนะ)",
+        "en": "System is transferring Turmeric Honey Tonic out of the tank. Please prepare a container (be careful of golden stains)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและขมิ้น",
+        "en": "Prepare water and turmeric"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด ระหว่างนี้ให้ล้างขมิ้นสดให้สะอาด (สวมถุงมือเพื่อป้องกันสีติดมือ) แล้วหั่นเป็นแว่นบางๆ",
+        "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil. Meanwhile, wash fresh turmeric thoroughly (wear gloves to prevent staining) and slice thinly."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/turmeric_honey/man_1.jpg",
+      "tips": {
+        "th": "💡 การหั่นขมิ้นเป็นแว่นบางๆ จะช่วยเพิ่มพื้นที่ผิว ทำให้สกัดสารเคอร์คูมินออกมาได้ดีขึ้น สวมถุงมือยางเสมอเพราะสีขมิ้นติดมือและเสื้อผ้าล้างออกยาก",
+        "en": "💡 Slicing turmeric thinly increases surface area for better Curcumin extraction. Always wear rubber gloves as turmeric stains are hard to remove from skin and clothes."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือดจัด",
+        "en": "Boil the water"
+      },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+      },
+      "descVariables": {},
+      "image": "images/herbal/turmeric_honey/man_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาล เกลือ และคนให้ละลาย",
+        "en": "Add sugar, salt, and stir"
+      },
+      "desc": {
+        "th": "ใส่น้ำตาลทราย {sugar} และเกลือ {salt} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีด้ามยาวจนละลายหมด",
+        "en": "Add {sugar} of sugar and {salt} of salt into the hot water. Stir continuously with a long-handled ladle until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/turmeric_honey/man_3.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยช่วยตัดรสเฝื่อนตามธรรมชาติของขมิ้น และดึงรสหวานให้กลมกล่อมขึ้น",
+        "en": "💡 A pinch of salt cuts the natural earthiness of turmeric and enhances the sweetness balance."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ใส่ขมิ้นและสกัด (20 นาที)",
+        "en": "Add turmeric and extract (20 mins)"
+      },
+      "desc": {
+        "th": "นำขมิ้นสดหั่นแว่น {turmeric} ที่ใส่ในถุงกรองหรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน ปิดฝาหม้อ ลดไฟให้อ่อนที่สุด แช่ทิ้งไว้ Exactly 20 นาที น้ำจะเปลี่ยนเป็นสีทองสวยงาม",
+        "en": "Place {turmeric} of sliced fresh turmeric (in a filter bag or basket) into the hot water. Cover the pot, reduce heat to the lowest setting, and steep for exactly 20 minutes. The water will turn a beautiful golden color."
+      },
+      "descVariables": {
+        "turmeric": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/turmeric_honey/man_4.jpg",
+      "tips": {
+        "th": "💡 ขมิ้นต้องการเวลานานกว่าดอกไม้ (เช่น กระเจี๊ยบ) ในการสกัดสารเคอร์คูมิน แต่ไม่ควรเกิน 25 นาทีเพื่อป้องกันรสเฝื่อนที่มากเกินไป",
+        "en": "💡 Turmeric needs longer extraction time than floral herbs (like roselle) to release Curcumin, but do not exceed 25 minutes to avoid excessive earthiness."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ยกถุงขมิ้นออกและพักให้เย็น",
+        "en": "Remove turmeric bag and cool down"
+      },
+      "desc": {
+        "th": "ครบ 20 นาที ให้ยกถุงขมิ้นออกทันที บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป พักน้ำขมิ้นไว้จนอุณหภูมิลดลงเหลือ 50°C (ใช้เทอร์โมมิเตอร์วัด)",
+        "en": "After 20 mins, remove the turmeric bag immediately. Squeeze out remaining liquid gently, discard residue, and let cool until temperature reaches 50°C (use a thermometer)."
+      },
+      "descVariables": {},
+      "image": "images/herbal/turmeric_honey/man_5.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิ 50°C คือจุดที่สมบูรณ์แบบที่สุดในการรักษาเอนไซม์และสารต้านอนุมูลอิสระในน้ำผึ้ง ห้ามใส่น้ำผึ้งตอนน้ำร้อนเด็ดขาด",
+        "en": "💡 50°C is the perfect temperature to preserve enzymes and antioxidants in honey. Never add honey to hot water."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำผึ้งและพริกไทยดำ",
+        "en": "Mix honey and black pepper"
+      },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 50°C เติมน้ำผึ้ง {honey} และพริกไทยดำป่น {pepper} ลงไป คนให้เข้ากันจนละลายหมด",
+        "en": "When temperature is 50°C, add {honey} of honey and {pepper} of ground black pepper. Stir well until fully dissolved."
+      },
+      "descVariables": {
+        "honey": {
+          "amount": 600,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "pepper": {
+          "amount": 5,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/turmeric_honey/man_6.jpg",
+      "tips": {
+        "th": "💡 พริกไทยดำมีสาร Piperine ที่ช่วยเพิ่มการดูดซึม Curcumin เข้าสู่ร่างกายได้ถึง 2000% เป็นเคล็ดลับระดับมืออาชีพที่ทำให้สูตรนี้ได้ผลจริง ไม่ใช่แค่สีสวย",
+        "en": "💡 Black pepper contains Piperine, which boosts Curcumin absorption by up to 2000%. This is the professional secret that makes this recipe truly effective, not just beautiful in color."
+      }
+    },
+    {
+      "step": 7,
+      "scalable": false,
+      "title": {
+        "th": "บรรจุขวดและเสิร์ฟ",
+        "en": "Bottle and serve"
+      },
+      "desc": {
+        "th": "คนให้เข้ากันอีกครั้ง แล้วบรรจุขวดขณะยังอุ่น (สีทองจะสวยที่สุดตอนอุ่น) หรือรอให้เย็นแล้วแช่ตู้เย็น เสิร์ฟอุ่นๆ ก่อนนอนเพื่อผ่อนคลาย หรือแช่เย็นดื่มระหว่างวัน",
+        "en": "Stir once more, then bottle while still warm (golden color is most beautiful when warm) or let cool and refrigerate. Serve warm before bedtime for relaxation, or chill for daytime drinking."
+      },
+      "descVariables": {},
+      "image": "images/herbal/turmeric_honey/man_7.jpg",
+      "tips": {
+        "th": "💡 น้ำขมิ้นน้ำผึ้งสามารถเก็บในตู้เย็นได้นาน 5-7 วัน เขย่าก่อนดื่มทุกครั้งเพราะขมิ้นอาจตกตะกอนได้ สามารถอุ่นเล็กน้อยก่อนดื่มเพื่อรสชาติที่ดีที่สุด ระวังคราบขมิ้นติดภาชนะพลาสติก ควรใช้ขวดแก้ว",
+        "en": "💡 Turmeric honey tonic can be stored in the fridge for 5-7 days. Shake well before drinking as turmeric may settle. Warm slightly before drinking for best taste. Be careful of turmeric stains on plastic—use glass bottles."
+      }
+    }
+  ]
+}
