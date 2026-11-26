@@ -152,21 +152,107 @@
       "en": ["Spiced Aroma", "Antioxidant", "Warming"]
     }
   },
-{
-  "id": "barley_water_10L",
-  "name": {
-    "th": "น้ำข้าวบาร์เลย์ 10 ลิตร",
-    "en": "Barley Water 10L"
+  {
+    "id": "barley_water_10L",
+    "name": {
+      "th": "น้ำข้าวบาร์เลย์ 10 ลิตร",
+      "en": "Barley Water 10L"
+    },
+    "image": "images/herbal/barley_water/main_1.jpg",
+    "prepTime": {
+      "th": "แช่ข้าว 2 ชม. + 40 นาที (เครื่อง)",
+      "en": "Soak 2 hrs + 40 mins (machine)"
+    },
+    "rating": "4.7",
+    "badges": {
+      "th": ["ขับปัสสาวะ", "บำรุงไต", "ย่อยง่าย"],
+      "en": ["Diuretic", "Kidney Support", "Easy Digestion"]
+    }
   },
-  "image": "images/herbal/barley_water/main_1.jpg",
-  "prepTime": {
-    "th": "แช่ข้าว 2 ชม. + 40 นาที (เครื่อง)",
-    "en": "Soak 2 hrs + 40 mins (machine)"
+
+  {
+    "id": "lemongrass_10L",
+    "name": {
+      "th": "น้ำตะไคร้หอม 10 ลิตร",
+      "en": "10L Lemongrass Tea"
+    },
+    "image": "images/herbal/lemongrass/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + 30 นาที (เครื่อง)",
+      "en": "15 mins + 30 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["หอมสดชื่น", "แก้ท้องอืด", "คลายเครียด"],
+      "en": ["Aromatic", "Relieves Bloating", "Stress Relief"]
+    }
   },
-  "rating": "4.7",
-  "badges": {
-    "th": ["ขับปัสสาวะ", "บำรุงไต", "ย่อยง่าย"],
-    "en": ["Diuretic", "Kidney Support", "Easy Digestion"]
+  {
+    "id": "turmeric_honey_10L",
+    "name": {
+      "th": "น้ำขมิ้นน้ำผึ้ง 10 ลิตร",
+      "en": "10L Turmeric Honey (Golden Milk)"
+    },
+    "image": "images/herbal/turmeric_honey/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที + 35 นาที (เครื่อง)",
+      "en": "10 mins + 35 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["ต้านอักเสบ", "บำรุงผิว", "สีทองสวยงาม"],
+      "en": ["Anti-Inflammatory", "Skin Health", "Golden Color"]
+    }
+  },
+  {
+    "id": "mulberry_10L",
+    "name": {
+      "th": "น้ำมัลเบอร์รี่ 10 ลิตร",
+      "en": "10L Mulberry Juice"
+    },
+    "image": "images/herbal/mulberry/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + 30 นาที (เครื่อง)",
+      "en": "15 mins + 30 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ต้านอนุมูลอิสระ", "บำรุงเลือด", "สีม่วงสวย"],
+      "en": ["Antioxidant", "Blood Tonic", "Beautiful Purple"]
+    }
+  },
+  {
+    "id": "cinnamon_honey_10L",
+    "name": {
+      "th": "น้ำอบเชยน้ำผึ้ง 10 ลิตร",
+      "en": "10L Cinnamon Honey Tea"
+    },
+    "image": "images/herbal/cinnamon_honey/main_1.jpg",
+    "prepTime": {
+      "th": "10 นาที + 40 นาที (เครื่อง)",
+      "en": "10 mins + 40 mins (machine)"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["อบอุ่นร่างกาย", "ลดน้ำตาลในเลือด", "หอมเครื่องเทศ"],
+      "en": ["Warming", "Blood Sugar Support", "Spiced Aroma"]
+    }
+  },
+  {
+    "id": "red_date_10L",
+    "name": {
+      "th": "น้ำพุทราจีน 10 ลิตร",
+      "en": "10L Red Date (Jujube) Tea"
+    },
+    "image": "images/herbal/red_date/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + 45 นาที (เครื่อง)",
+      "en": "15 mins + 45 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["บำรุงเลือด", "บำรุงกำลัง", "หวานธรรมชาติ"],
+      "en": ["Blood Tonic", "Energy Boost", "Natural Sweetness"]
+    }
   }
-}
 ]
