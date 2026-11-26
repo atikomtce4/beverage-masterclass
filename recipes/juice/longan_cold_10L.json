@@ -1,7 +1,7 @@
 {
   "id": "longan_cold_10L",
   "icon": "🍑",
-  "category": "herbal",
+  "category": "juice",
   "machineCompatible": true,
   "description": "น้ำลำไยเย็น 10 ลิตร ต้มสกัดด้วยเครื่องอัตโนมัติ ควบคุมอุณหภูมิ 85°C คงกลิ่นหอมหวานธรรมชาติจากลำไยสด หวานละมุนจากน้ำตาลกรวด ดื่มเย็นช่วยบำรุงหัวใจและช่วยให้หลับสบาย",
   "total_time": 55,
@@ -19,9 +19,9 @@
     "en": "Cold Longan Drink 10L"
   },
   "images": [
-    "images/herbal/longan_cold/main_1.jpg",
-    "images/herbal/longan_cold/main_2.jpg",
-    "images/herbal/longan_cold/main_3.jpg"
+    "images/juice/longan_cold/main_1.jpg",
+    "images/juice/longan_cold/main_2.jpg",
+    "images/juice/longan_cold/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_longan",
   "prepTime": {
@@ -322,7 +322,7 @@
       "descVariables": {
         "longan_amount": { "amount": 2000, "unit": "Gram", "scalable": true }
       },
-      "image": "images/herbal/longan_cold/man_1.jpg",
+      "image": "images/juice/longan_cold/man_1.jpg",
       "tips": {
         "th": "💡 เลือกลำไยสดที่ผลใหญ่และเนื้อหนา จะให้น้ำที่หวานหอมกว่าลำไยผลเล็ก",
         "en": "💡 Choose large, thick-fleshed fresh longans for sweeter and more aromatic drink."
@@ -342,7 +342,7 @@
       "descVariables": {
         "water_amount": { "amount": 10, "unit": "Liter", "scalable": true }
       },
-      "image": "images/herbal/longan_cold/man_2.jpg",
+      "image": "images/juice/longan_cold/man_2.jpg",
       "tips": {
         "th": "💡 ควรมีเทอร์โมมิเตอร์ติดครัวไว้ เพื่อวัดอุณหภูมิน้ำได้แม่นยำ",
         "en": "💡 Keep a kitchen thermometer handy for precise water temperature measurement."
@@ -362,7 +362,7 @@
       "descVariables": {
         "goji": { "amount": 30, "unit": "Gram", "scalable": true }
       },
-      "image": "images/herbal/longan_cold/man_3.jpg",
+      "image": "images/juice/longan_cold/man_3.jpg",
       "tips": {
         "th": "💡 การลดอุณหภูมิเหลือ 85°C ก่อนสกัด จะคงกลิ่นหอมหวานของลำไยไว้ได้ดีที่สุด ไม่ทำให้เสียกลิ่น",
         "en": "💡 Reducing temperature to 85°C before extraction preserves longan's sweet aroma best, preventing fragrance loss."
@@ -383,7 +383,7 @@
         "rock_sugar": { "amount": 400, "unit": "Gram", "scalable": true },
         "salt_amount": { "amount": 2, "unit": "Gram", "scalable": true }
       },
-      "image": "images/herbal/longan_cold/man_4.jpg",
+      "image": "images/juice/longan_cold/man_4.jpg",
       "tips": {
         "th": "💡 น้ำตาลกรวดให้ความหวานละมุนกว่าน้ำตาลทราย และเข้ากันได้ดีกับกลิ่นลำไย",
         "en": "💡 Rock sugar gives smoother sweetness than white sugar and pairs well with longan aroma."
@@ -401,7 +401,7 @@
         "en": "Cool to room temperature, then refrigerate for at least 1-2 hours. Serve ice-cold garnished with fresh longan flesh and goji berries."
       },
       "descVariables": {},
-      "image": "images/herbal/longan_cold/man_5.jpg",
+      "image": "images/juice/longan_cold/man_5.jpg",
       "tips": {
         "th": "💡 น้ำลำไยสามารถเก็บในตู้เย็นได้นาน 3-4 วัน โดยรสชาติยังคงหอมหวาน",
         "en": "💡 Longan drink can be stored in the fridge for 3-4 days while maintaining its sweet aroma."
