@@ -1,0 +1,498 @@
+{
+  "id": "mulberry_10L",
+  "icon": "🍇",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำมัลเบอร์รี่ 10 ลิตร สีม่วงแดงสวยงาม อุดมไปด้วยสารต้านอนุมูลอิสระสูง สกัดจากผลมัลเบอร์รี่สดคุณภาพดี ผสมน้ำตาลและมะนาวเล็กน้อยเพื่อรักษาสีและรสชาติ ดื่มเย็นๆ ช่วยบำรุงสายตาและเลือด",
+  "total_time": 40,
+  "target_temp": 95,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_mulberry_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำมัลเบอร์รี่ (ต้านอนุมูลอิสระ/บำรุงเลือด)",
+    "en": "Mulberry Juice (Antioxidant/Blood Tonic)"
+  },
+  "images": [
+    "images/herbal/mulberry/main_1.jpg",
+    "images/herbal/mulberry/main_2.jpg",
+    "images/herbal/mulberry/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_mulberry",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "30 นาที",
+    "en": "30 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสรสชาติเปรี้ยวหวานกลมกล่อมและสรรพคุณต้านอนุมูลอิสระของ น้ำมัลเบอร์รี่สูตรสีม่วงสวย ปริมาณ 10 ลิตร สูตรนี้ใช้ผลมัลเบอร์รี่สด 1 กิโลกรัม สกัดที่อุณหภูมิ 95°C นาน 10 นาที เพื่อดึงสารแอนโทไซยานิน (Anthocyanin) ออกมาอย่างเต็มที่ ผสมน้ำตาลทราย 800 กรัม เกลือ 2 กรัม และน้ำมะนาว 50 กรัม ซึ่งช่วยรักษาสีม่วงให้สดใสและตัดรสให้กลมกล่อม ดื่มได้ทั้งร้อนและเย็น",
+    "en": "Experience the sweet-sour balance and antioxidant benefits of our Beautiful Purple Mulberry Juice in a 10-liter batch. This recipe uses 1kg of fresh mulberries, extracted at 95°C for 10 minutes to maximize Anthocyanin. Blended with 800g sugar, 2g salt, and 50g lemon juice to preserve the vibrant purple color and balance the flavor. Enjoyable hot or iced."
+  },
+  "benefits": {
+    "th": "อุดมไปด้วยสารแอนโทไซยานินต้านอนุมูลอิสระสูง ช่วยบำรุงสายตา บำรุงเลือด ลดการอักเสบ และเสริมสร้างภูมิคุ้มกัน",
+    "en": "Rich in Anthocyanin antioxidants, helps nourish the eyes and blood, reduces inflammation, and boosts the immune system."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีภาวะน้ำตาลในเลือดต่ำหรือแพ้ผลไม้ตระกูลเบอร์รี่ควรดื่มในปริมาณที่เหมาะสม ผลมัลเบอร์รี่อาจมีฤทธิ์เป็นยาระบายอ่อนๆ ในบางคนที่ไวต่อไฟเบอร์",
+    "en": "⚠️ People with low blood sugar or berry allergies should consume in moderation. Mulberries may have a mild laxative effect in those sensitive to fiber."
+  },
+  "nutrition": {
+    "calories": "55 kcal",
+    "carbs": "14 g",
+    "sugar": "12 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ผลมัลเบอร์รี่สด (ล้างสะอาด) หรือมัลเบอร์รี่แห้ง",
+        "en": "Fresh mulberries (washed) or dried mulberries"
+      },
+      "amount": 1000,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย",
+        "en": "Sugar"
+      },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรส)",
+        "en": "Salt (a pinch to balance flavor)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำมะนาวสด (สำคัญมาก! ช่วยรักษาสีม่วง)",
+        "en": "Fresh lemon juice (Crucial! Preserves purple color)"
+      },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 15,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 50,
+      "duration_unit": "minute",
+      "timeout": 100,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำพร้อมระบบวน",
+        "en": "Heat Water with Circulation"
+      },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
+        "en": "The machine will start heating while activating circulation for rapid, precise heating to 95°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Stir,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 802,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลและเกลือ",
+        "en": "Add sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลทรายและเกลือรวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of sugar and salt, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 802,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลายน้ำตาล",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 1000,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่มัลเบอร์รี่ในตะกร้า",
+        "en": "Add mulberries in basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ผลมัลเบอร์รี่สด {ingredient} (ในตะกร้าตาถี่) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of fresh mulberries (in a fine mesh basket) into the hot water."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 1000,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 15,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดสีม่วงและรสชาติ (10 นาที)",
+        "en": "Extract Purple Color and Flavor (10 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 10 นาที พร้อมระบบวนน้ำและกวน เพื่อดึงสารแอนโทไซยานินและรสชาติออกมา",
+        "en": "Machine precisely maintains 95°C for 10 mins with circulation and stirring to extract Anthocyanin and flavor."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Pump,Stir,Valve_CIRC"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้ามัลเบอร์รี่ออก",
+        "en": "Remove mulberry basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้ามัลเบอร์รี่ออก แล้วกด OK (การแช่นานเกินไปอาจทำให้รสเฝื่อนจากเมล็ดได้)",
+        "en": "Time is up. Please remove the mulberry basket and press OK (over-steeping may cause astringency from seeds)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Add Ingredient",
+      "target_value": 50,
+      "unit": "Gram",
+      "duration": 2,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำมะนาวสด",
+        "en": "Add fresh lemon juice"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้เติมน้ำมะนาวสด {ingredient} ลงไป พร้อมเปิดระบบกวนเบาๆ เพื่อรักษาสี",
+        "en": "System alerts to add {ingredient} of fresh lemon juice, with gentle stirring to preserve color."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 9,
+      "function": "Chill",
+      "target_value": 10,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ทำให้เย็นจัด 10°C พร้อมเสิร์ฟ",
+        "en": "Chill to 10°C for Iced Serving"
+      },
+      "desc": {
+        "th": "เครื่องจะลดอุณหภูมิลงเหลือ 10°C อย่างรวดเร็ว พร้อมระบบกวน เพื่อให้ได้น้ำมัลเบอร์รี่ที่เย็นสดชื่น สีม่วงสวย",
+        "en": "Machine rapidly chills the mixture to 10°C with stirring, ensuring a refreshing iced mulberry juice with vibrant purple color."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 10,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำมัลเบอร์รี่พร้อมเสิร์ฟ",
+        "en": "Mulberry Juice ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำมัลเบอร์รี่ออกจากถัง กรุณาเตรียมภาชนะรองรับ (ระวังคราบสีม่วงที่อาจติดภาชนะพลาสติก)",
+        "en": "System is transferring Mulberry Juice out of the tank. Please prepare a container (be careful of purple stains on plastic)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและมัลเบอร์รี่",
+        "en": "Prepare water and mulberries"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด ระหว่างนี้ให้ล้างผลมัลเบอร์รี่สดให้สะอาด (ถ้าใช้แบบแห้งให้ล้างผ่านกระชอน 1 รอบ)",
+        "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil. Meanwhile, wash fresh mulberries thoroughly (if using dried, rinse through a sieve once)."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/mulberry/man_1.jpg",
+      "tips": {
+        "th": "💡 มัลเบอร์รี่สดจะให้สีและกลิ่นหอมที่สดกว่าแบบแห้ง แต่แบบแห้งจะให้รสชาติที่เข้มข้นและเก็บได้นานกว่า",
+        "en": "💡 Fresh mulberries provide a fresher color and aroma, while dried mulberries offer a more concentrated flavor and longer shelf life."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือดจัด",
+        "en": "Boil the water"
+      },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+      },
+      "descVariables": {},
+      "image": "images/herbal/mulberry/man_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาล เกลือ และคนให้ละลาย",
+        "en": "Add sugar, salt, and stir"
+      },
+      "desc": {
+        "th": "ใส่น้ำตาลทราย {sugar} และเกลือ {salt} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีด้ามยาวจนละลายหมด",
+        "en": "Add {sugar} of sugar and {salt} of salt into the hot water. Stir continuously with a long-handled ladle until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 800,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/mulberry/man_3.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยช่วยตัดรสเปรี้ยวของมัลเบอร์รี่และดึงรสหวานให้กลมกล่อมขึ้น",
+        "en": "💡 A pinch of salt cuts the tartness of mulberries and enhances the sweetness balance."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ใส่มัลเบอร์รี่และสกัด (10 นาที)",
+        "en": "Add mulberries and extract (10 mins)"
+      },
+      "desc": {
+        "th": "นำผลมัลเบอร์รี่ {mulberry} ที่ใส่ในถุงกรองตาถี่หรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน ปิดฝาหม้อ ลดไฟให้อ่อนที่สุด แช่ทิ้งไว้ Exactly 10 นาที น้ำจะเปลี่ยนเป็นสีม่วงแดงสวยงาม",
+        "en": "Place {mulberry} of mulberries (in a fine mesh filter bag or basket) into the hot water. Cover the pot, reduce heat to the lowest setting, and steep for exactly 10 minutes. The water will turn a beautiful reddish-purple."
+      },
+      "descVariables": {
+        "mulberry": {
+          "amount": 1000,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/mulberry/man_4.jpg",
+      "tips": {
+        "th": "💡 ใช้ถุงกรองตาถี่เสมอ เพราะเมล็ดมัลเบอร์รี่มีขนาดเล็กและอาจหลุดออกมาทำให้สัมผัสไม่ดีได้",
+        "en": "💡 Always use a fine mesh filter bag, as mulberry seeds are tiny and can escape, affecting the texture."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ยกถุงมัลเบอร์รี่ออกและเติมน้ำมะนาว",
+        "en": "Remove mulberry bag and add lemon juice"
+      },
+      "desc": {
+        "th": "ครบ 10 นาที ให้ยกถุงมัลเบอร์รี่ออกทันที บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป จากนั้นเติมน้ำมะนาวสด {lemon} ลงไปคนให้เข้ากัน",
+        "en": "After 10 mins, remove the mulberry bag immediately. Squeeze out remaining liquid gently, discard residue, then add {lemon} of fresh lemon juice and stir well."
+      },
+      "descVariables": {
+        "lemon": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/mulberry/man_5.jpg",
+      "tips": {
+        "th": "💡 น้ำมะนาวมีความเป็นกรด (pH ต่ำ) ซึ่งจะช่วย 'ล็อก' สีม่วงแดงของสารแอนโทไซยานินให้สดใส ไม่เปลี่ยนเป็นสีน้ำเงินหรือสีคล้ำเมื่อทิ้งไว้",
+        "en": "💡 Lemon juice is acidic (low pH), which 'locks' the reddish-purple color of Anthocyanin, keeping it vibrant and preventing it from turning blue or dull over time."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "พักให้เย็นและบรรจุขวด",
+        "en": "Cool down and bottle"
+      },
+      "desc": {
+        "th": "คนให้เข้ากันอีกครั้ง แล้วรอให้เย็นลงจนถึงอุณหภูมิห้องก่อนบรรจุขวด หรือแช่ในอ่างน้ำแข็งเพื่อเร่งกระบวนการทำความเย็น",
+        "en": "Stir once more, then let cool to room temperature before bottling, or place in an ice bath to speed up cooling."
+      },
+      "descVariables": {},
+      "image": "images/herbal/mulberry/man_6.jpg",
+      "tips": {
+        "th": "💡 ควรใช้ขวดแก้วในการบรรจุ เพราะสีม่วงของมัลเบอร์รี่อาจติดคราบขวดพลาสติกและล้างออกยากมาก",
+        "en": "💡 Use glass bottles for storage, as the purple mulberry color can stain plastic bottles and is very hard to wash out."
+      }
+    },
+    {
+      "step": 7,
+      "scalable": false,
+      "title": {
+        "th": "เสิร์ฟ",
+        "en": "Serve"
+      },
+      "desc": {
+        "th": "เทใส่แก้วที่มีน้ำแข็งเต็มแก้ว เสิร์ฟเย็นๆ คลายร้อน สามารถตกแต่งด้วยผลมัลเบอร์รี่สดหรือมะนาวฝานแว่นบางๆ ด้านบนเพื่อเพิ่มเสน่ห์",
+        "en": "Pour into a glass filled with ice. Serve cold and refreshing. Garnish with fresh mulberries or a thin lemon slice on top for extra charm."
+      },
+      "descVariables": {},
+      "image": "images/herbal/mulberry/man_7.jpg",
+      "tips": {
+        "th": "💡 น้ำมัลเบอร์รี่ที่ผสมแล้วสามารถเก็บในตู้เย็นได้นาน 5-7 วัน เขย่าก่อนเสิร์ฟหากมีการตกตะกอนของเนื้อผลไม้เล็กน้อย",
+        "en": "💡 Mixed mulberry juice can be stored in the fridge for 5-7 days. Shake well before serving if slight fruit sedimentation occurs."
+      }
+    }
+  ]
+}
