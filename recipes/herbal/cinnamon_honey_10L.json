@@ -1,0 +1,519 @@
+{
+  "id": "cinnamon_honey_10L",
+  "icon": "🪵",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำอบเชยน้ำผึ้ง 10 ลิตร สูตรอบอุ่นร่างกาย หอมเครื่องเทศ สกัดจากอบเชยแท้น้ำตาลและน้ำผึ้งแท้ ช่วยควบคุมระดับน้ำตาลในเลือดและเสริมภูมิคุ้มกัน",
+  "total_time": 50,
+  "target_temp": 50,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_cinnamon_honey_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำอบเชยน้ำผึ้ง (อบอุ่นร่างกาย/ลดน้ำตาลในเลือด)",
+    "en": "Cinnamon Honey Tea (Warming/Blood Sugar Support)"
+  },
+  "images": [
+    "images/herbal/cinnamon_honey/main_1.jpg",
+    "images/herbal/cinnamon_honey/main_2.jpg",
+    "images/herbal/cinnamon_honey/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_cinnamon_honey",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "40 นาที",
+    "en": "40 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "สัมผัสความหอมอบอุ่นและสรรพคุณควบคุมระดับน้ำตาลของ น้ำอบเชยน้ำผึ้งสูตรพรีเมียม ปริมาณ 10 ลิตร สูตรนี้ใช้แท่งอบเชยแท้ (Ceylon Cinnamon) 200 กรัม ต้มสกัดที่ 95°C นาน 25 นาที เพื่อดึงน้ำมันซินนามัลดีไฮด์ (Cinnamaldehyde) ออกมาอย่างเต็มที่ ผสมน้ำผึ้งแท้ 500 กรัม ที่อุณหภูมิ 50°C เพื่อรักษาเอนไซม์ และน้ำตาลทราย 300 กรัม ให้รสหวานกลมกล่อม ดื่มอุ่นๆ ช่วยอบอุ่นร่างกายและเสริมภูมิคุ้มกัน",
+    "en": "Experience the warming aroma and blood sugar benefits of our Premium Cinnamon Honey Tea in a 10-liter batch. This recipe uses 200g of authentic Ceylon Cinnamon sticks, extracted at 95°C for 25 minutes to maximize Cinnamaldehyde. Blended with 500g of pure honey at 50°C to preserve enzymes, plus 300g sugar for balanced sweetness. Perfect for warming the body and boosting immunity."
+  },
+  "benefits": {
+    "th": "อบเชยมีสารซินนามัลดีไฮด์ช่วยควบคุมระดับน้ำตาลในเลือด ต้านอักเสบ และต้านอนุมูลอิสระ น้ำผึ้งช่วยบรรเทาอาการไอและเสริมภูมิคุ้มกัน ดื่มอุ่นๆ ช่วยอบอุ่นร่างกายและกระตุ้นการไหลเวียนเลือด",
+    "en": "Cinnamon contains Cinnamaldehyde, which helps regulate blood sugar, has anti-inflammatory and antioxidant properties. Honey soothes coughs and boosts immunity. Drinking warm helps warm the body and stimulate blood circulation."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีโรคตับหรือกำลังรับประทานยาละลายลิ่มเลือดควรปรึกษาแพทย์ก่อนดื่ม อบเชยชนิด Cassia มีสาร Coumarin สูงหากบริโภคมากเกินไปอาจส่งผลต่อตับ ควรเลือกอบเชยชนิด Ceylon (True Cinnamon) สตรีมีครรภ์ควรดื่มในปริมาณน้อย",
+    "en": "⚠️ People with liver disease or taking blood thinners should consult a doctor. Cassia cinnamon contains high Coumarin which may affect the liver in excess. Prefer Ceylon (True Cinnamon). Pregnant women should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "45 kcal",
+    "carbs": "11 g",
+    "sugar": "9 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "แท่งอบเชยแท้ (Ceylon Cinnamon) หักเป็นชิ้นเล็กๆ",
+        "en": "Authentic Ceylon Cinnamon sticks (broken into small pieces)"
+      },
+      "amount": 200,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย",
+        "en": "Sugar"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรส)",
+        "en": "Salt (a pinch to balance flavor)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำผึ้งแท้",
+        "en": "Pure honey"
+      },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 15,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 50,
+      "duration_unit": "minute",
+      "timeout": 100,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำพร้อมระบบวน",
+        "en": "Heat Water with Circulation"
+      },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
+        "en": "The machine will start heating while activating circulation for rapid, precise heating to 95°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Stir,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 302,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลและเกลือ",
+        "en": "Add sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลทรายและเกลือรวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of sugar and salt, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 302,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลายน้ำตาล",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 200,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่แท่งอบเชยในตะกร้า",
+        "en": "Add cinnamon sticks in basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่แท่งอบเชยที่หักเป็นชิ้นเล็กๆ {ingredient} (ในตะกร้า) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of broken cinnamon sticks (in a basket) into the hot water."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 200,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 25,
+      "duration_unit": "minute",
+      "timeout": 35,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดน้ำมันซินนามัลดีไฮด์และกลิ่นหอม (25 นาที)",
+        "en": "Extract Cinnamaldehyde and Aroma (25 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 25 นาที พร้อมระบบวนน้ำและกวน เพื่อสกัดน้ำมันซินนามัลดีไฮด์และกลิ่นหอมจากอบเชยออกมาอย่างเต็มที่",
+        "en": "Machine precisely maintains 95°C for 25 mins with circulation and stirring to fully extract Cinnamaldehyde and aroma from cinnamon."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Pump,Stir,Valve_CIRC"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าอบเชยออก",
+        "en": "Remove cinnamon basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าอบเชยออก แล้วกด OK (การแช่นานเกินไปอาจทำให้รสขมและเฝื่อนเพิ่มขึ้น)",
+        "en": "Time is up. Please remove the cinnamon basket and press OK (over-steeping may increase bitterness and astringency)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 50°C (เตรียมผสมน้ำผึ้ง)",
+        "en": "Rapidly Chill to 50°C (Prepare for honey)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 50°C อย่างรวดเร็ว (ร้อนเกิน 60°C จะทำลายเอนไซม์และคุณค่าในน้ำผึ้ง)",
+        "en": "Activate cooling system to rapidly chill to 50°C (above 60°C destroys honey enzymes and nutrients)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "Add Ingredient",
+      "target_value": 500,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำผึ้งแท้",
+        "en": "Add pure honey"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำผึ้งแท้ {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of pure honey, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Hold Temp",
+      "target_value": 50,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อผสมน้ำผึ้ง",
+        "en": "Maintain Temp for Honey Blending"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 50°C ต่อเนื่องเป็นเวลา 3 นาที เพื่อให้ส่วนผสมละลายเข้ากันอย่างสมบูรณ์ โดยไม่ทำลายคุณค่าของน้ำผึ้ง",
+        "en": "The machine will maintain 50°C for 3 minutes to ensure complete blending without destroying honey's nutritional value."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 11,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำอบเชยน้ำผึ้งพร้อมเสิร์ฟ",
+        "en": "Cinnamon Honey Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำอบเชยน้ำผึ้งออกจากถัง กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Cinnamon Honey Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและอบเชย",
+        "en": "Prepare water and cinnamon"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด ระหว่างนี้ให้หักแท่งอบเชยเป็นชิ้นเล็กๆ (ประมาณ 2-3 ซม.) เพื่อเพิ่มพื้นที่ผิวในการสกัด",
+        "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil. Meanwhile, break cinnamon sticks into small pieces (about 2-3 cm) to increase surface area for extraction."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/cinnamon_honey/man_1.jpg",
+      "tips": {
+        "th": "💡 การหักอบเชยเป็นชิ้นเล็กๆ จะช่วยให้น้ำมันซินนามัลดีไฮด์ออกมาได้ดีขึ้นมาก ควรเลือกอบเชยชนิด Ceylon (True Cinnamon) ที่มีกลิ่นหอมอ่อนและปลอดภัยต่อตับมากกว่า Cassia",
+        "en": "💡 Breaking cinnamon into small pieces significantly improves Cinnamaldehyde extraction. Prefer Ceylon (True Cinnamon) which has a milder aroma and is safer for the liver than Cassia."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือดจัด",
+        "en": "Boil the water"
+      },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+      },
+      "descVariables": {},
+      "image": "images/herbal/cinnamon_honey/man_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาล เกลือ และคนให้ละลาย",
+        "en": "Add sugar, salt, and stir"
+      },
+      "desc": {
+        "th": "ใส่น้ำตาลทราย {sugar} และเกลือ {salt} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีด้ามยาวจนละลายหมด",
+        "en": "Add {sugar} of sugar and {salt} of salt into the hot water. Stir continuously with a long-handled ladle until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/cinnamon_honey/man_3.jpg",
+      "tips": {
+        "th": "💡 เกลือเล็กน้อยช่วยตัดรสเฝื่อนตามธรรมชาติของอบเชย และดึงรสหวานให้กลมกล่อมขึ้น",
+        "en": "💡 A pinch of salt cuts the natural astringency of cinnamon and enhances the sweetness balance."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "ใส่อบเชยและสกัด (25 นาที)",
+        "en": "Add cinnamon and extract (25 mins)"
+      },
+      "desc": {
+        "th": "นำแท่งอบเชยที่หักเป็นชิ้นเล็กๆ {cinnamon} ที่ใส่ในถุงกรองหรือตะกร้าเรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน ปิดฝาหม้อ ลดไฟให้อ่อนที่สุด แช่ทิ้งไว้ Exactly 25 นาที น้ำจะเปลี่ยนเป็นสีน้ำตาลทองและหอมกลิ่นอบเชยฟุ้งกระจาย",
+        "en": "Place {cinnamon} of broken cinnamon sticks (in a filter bag or basket) into the hot water. Cover the pot, reduce heat to the lowest setting, and steep for exactly 25 minutes. The water will turn golden brown with a rich cinnamon aroma."
+      },
+      "descVariables": {
+        "cinnamon": {
+          "amount": 200,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/cinnamon_honey/man_4.jpg",
+      "tips": {
+        "th": "💡 อบเชยต้องการเวลานานกว่าดอกไม้ (เช่น กระเจี๊ยบ) ในการสกัดน้ำมันหอมระเหย แต่ไม่ควรเกิน 30 นาทีเพื่อป้องกันรสขมที่มากเกินไป",
+        "en": "💡 Cinnamon needs longer extraction time than floral herbs (like roselle) to release essential oils, but do not exceed 30 minutes to avoid excessive bitterness."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ยกถุงอบเชยออกและพักให้เย็น",
+        "en": "Remove cinnamon bag and cool down"
+      },
+      "desc": {
+        "th": "ครบ 25 นาที ให้ยกถุงอบเชยออกทันที บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป พักน้ำอบเชยไว้จนอุณหภูมิลดลงเหลือ 50°C (ใช้เทอร์โมมิเตอร์วัด)",
+        "en": "After 25 mins, remove the cinnamon bag immediately. Squeeze out remaining liquid gently, discard residue, and let cool until temperature reaches 50°C (use a thermometer)."
+      },
+      "descVariables": {},
+      "image": "images/herbal/cinnamon_honey/man_5.jpg",
+      "tips": {
+        "th": "💡 อุณหภูมิ 50°C คือจุดที่สมบูรณ์แบบที่สุดในการรักษาเอนไซม์และสารต้านอนุมูลอิสระในน้ำผึ้ง ห้ามใส่น้ำผึ้งตอนน้ำร้อนเด็ดขาด",
+        "en": "💡 50°C is the perfect temperature to preserve enzymes and antioxidants in honey. Never add honey to hot water."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": true,
+      "title": {
+        "th": "ผสมน้ำผึ้ง",
+        "en": "Mix honey"
+      },
+      "desc": {
+        "th": "เมื่ออุณหภูมิ 50°C เติมน้ำผึ้ง {honey} ลงไป คนให้เข้ากันจนละลายหมด",
+        "en": "When temperature is 50°C, add {honey} of honey. Stir well until fully dissolved."
+      },
+      "descVariables": {
+        "honey": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/cinnamon_honey/man_6.jpg",
+      "tips": {
+        "th": "💡 การผสมน้ำผึ้งที่ 50°C จะรักษาเอนไซม์ Diastase และ Invertase ที่มีประโยชน์ต่อระบบย่อยอาหารและภูมิคุ้มกัน ไม่ทำให้คุณค่าทางอาหารหายไป",
+        "en": "💡 Mixing honey at 50°C preserves beneficial enzymes like Diastase and Invertase that support digestion and immunity, without losing nutritional value."
+      }
+    },
+    {
+      "step": 7,
+      "scalable": false,
+      "title": {
+        "th": "บรรจุขวดและเสิร์ฟ",
+        "en": "Bottle and serve"
+      },
+      "desc": {
+        "th": "คนให้เข้ากันอีกครั้ง แล้วบรรจุขวดขณะยังอุ่น หรือรอให้เย็นแล้วแช่ตู้เย็น เสิร์ฟอุ่นๆ ก่อนนอนเพื่อผ่อนคลายและอบอุ่นร่างกาย หรือแช่เย็นดื่มระหว่างวัน",
+        "en": "Stir once more, then bottle while still warm or let cool and refrigerate. Serve warm before bedtime for relaxation and warming, or chill for daytime drinking."
+      },
+      "descVariables": {},
+      "image": "images/herbal/cinnamon_honey/man_7.jpg",
+      "tips": {
+        "th": "💡 น้ำอบเชยน้ำผึ้งสามารถเก็บในตู้เย็นได้นาน 5-7 วัน เขย่าก่อนดื่มทุกครั้งเพราะอบเชยอาจตกตะกอนได้ สามารถอุ่นเล็กน้อยก่อนดื่มเพื่อรสชาติที่ดีที่สุด ควรใช้ขวดแก้วเพราะสีของอบเชยอาจติดคราบขวดพลาสติก",
+        "en": "💡 Cinnamon honey tea can be stored in the fridge for 5-7 days. Shake well before drinking as cinnamon may settle. Warm slightly before drinking for best taste. Use glass bottles as cinnamon color can stain plastic."
+      }
+    }
+  ]
+}
