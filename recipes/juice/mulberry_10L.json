@@ -1,7 +1,7 @@
 {
   "id": "mulberry_10L",
   "icon": "🍇",
-  "category": "herbal",
+  "category": "juice",
   "machineCompatible": true,
   "description": "น้ำมัลเบอร์รี่ 10 ลิตร สีม่วงแดงสวยงาม อุดมไปด้วยสารต้านอนุมูลอิสระสูง สกัดจากผลมัลเบอร์รี่สดคุณภาพดี ผสมน้ำตาลและมะนาวเล็กน้อยเพื่อรักษาสีและรสชาติ ดื่มเย็นๆ ช่วยบำรุงสายตาและเลือด",
   "total_time": 40,
@@ -19,9 +19,9 @@
     "en": "Mulberry Juice (Antioxidant/Blood Tonic)"
   },
   "images": [
-    "images/herbal/mulberry/main_1.jpg",
-    "images/herbal/mulberry/main_2.jpg",
-    "images/herbal/mulberry/main_3.jpg"
+    "images/juice/mulberry/main_1.jpg",
+    "images/juice/mulberry/main_2.jpg",
+    "images/juice/mulberry/main_3.jpg"
   ],
   "videoUrl": "https://www.youtube.com/embed/placeholder_mulberry",
   "prepTime": {
@@ -357,7 +357,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/mulberry/man_1.jpg",
+      "image": "images/juice/mulberry/man_1.jpg",
       "tips": {
         "th": "💡 มัลเบอร์รี่สดจะให้สีและกลิ่นหอมที่สดกว่าแบบแห้ง แต่แบบแห้งจะให้รสชาติที่เข้มข้นและเก็บได้นานกว่า",
         "en": "💡 Fresh mulberries provide a fresher color and aroma, while dried mulberries offer a more concentrated flavor and longer shelf life."
@@ -375,7 +375,7 @@
         "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
       },
       "descVariables": {},
-      "image": "images/herbal/mulberry/man_2.jpg",
+      "image": "images/juice/mulberry/man_2.jpg",
       "tips": {
         "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
         "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
@@ -404,7 +404,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/mulberry/man_3.jpg",
+      "image": "images/juice/mulberry/man_3.jpg",
       "tips": {
         "th": "💡 เกลือเล็กน้อยช่วยตัดรสเปรี้ยวของมัลเบอร์รี่และดึงรสหวานให้กลมกล่อมขึ้น",
         "en": "💡 A pinch of salt cuts the tartness of mulberries and enhances the sweetness balance."
@@ -428,7 +428,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/mulberry/man_4.jpg",
+      "image": "images/juice/mulberry/man_4.jpg",
       "tips": {
         "th": "💡 ใช้ถุงกรองตาถี่เสมอ เพราะเมล็ดมัลเบอร์รี่มีขนาดเล็กและอาจหลุดออกมาทำให้สัมผัสไม่ดีได้",
         "en": "💡 Always use a fine mesh filter bag, as mulberry seeds are tiny and can escape, affecting the texture."
@@ -452,7 +452,7 @@
           "scalable": true
         }
       },
-      "image": "images/herbal/mulberry/man_5.jpg",
+      "image": "images/juice/mulberry/man_5.jpg",
       "tips": {
         "th": "💡 น้ำมะนาวมีความเป็นกรด (pH ต่ำ) ซึ่งจะช่วย 'ล็อก' สีม่วงแดงของสารแอนโทไซยานินให้สดใส ไม่เปลี่ยนเป็นสีน้ำเงินหรือสีคล้ำเมื่อทิ้งไว้",
         "en": "💡 Lemon juice is acidic (low pH), which 'locks' the reddish-purple color of Anthocyanin, keeping it vibrant and preventing it from turning blue or dull over time."
@@ -470,7 +470,7 @@
         "en": "Stir once more, then let cool to room temperature before bottling, or place in an ice bath to speed up cooling."
       },
       "descVariables": {},
-      "image": "images/herbal/mulberry/man_6.jpg",
+      "image": "images/juice/mulberry/man_6.jpg",
       "tips": {
         "th": "💡 ควรใช้ขวดแก้วในการบรรจุ เพราะสีม่วงของมัลเบอร์รี่อาจติดคราบขวดพลาสติกและล้างออกยากมาก",
         "en": "💡 Use glass bottles for storage, as the purple mulberry color can stain plastic bottles and is very hard to wash out."
@@ -488,7 +488,7 @@
         "en": "Pour into a glass filled with ice. Serve cold and refreshing. Garnish with fresh mulberries or a thin lemon slice on top for extra charm."
       },
       "descVariables": {},
-      "image": "images/herbal/mulberry/man_7.jpg",
+      "image": "images/juice/mulberry/man_7.jpg",
       "tips": {
         "th": "💡 น้ำมัลเบอร์รี่ที่ผสมแล้วสามารถเก็บในตู้เย็นได้นาน 5-7 วัน เขย่าก่อนเสิร์ฟหากมีการตกตะกอนของเนื้อผลไม้เล็กน้อย",
         "en": "💡 Mixed mulberry juice can be stored in the fridge for 5-7 days. Shake well before serving if slight fruit sedimentation occurs."

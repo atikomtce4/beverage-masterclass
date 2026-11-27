@@ -220,5 +220,22 @@
       "th": ["บำรุงหัวใจ", "ช่วยให้หลับสบาย", "หวานละมุน"],
       "en": ["Heart Health", "Better Sleep", "Smooth Sweetness"]
     }
+  },
+{
+    "id": "mulberry_10L",
+    "name": {
+      "th": "น้ำมัลเบอร์รี่ 10 ลิตร",
+      "en": "10L Mulberry Juice"
+    },
+    "image": "images/juice/mulberry/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + 30 นาที (เครื่อง)",
+      "en": "15 mins + 30 mins (machine)"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["ต้านอนุมูลอิสระ", "บำรุงเลือด", "สีม่วงสวย"],
+      "en": ["Antioxidant", "Blood Tonic", "Beautiful Purple"]
+    }
   }
 ]
