@@ -168,5 +168,90 @@
       "th": ["แอลกอฮอล์ ~11-12%", "สารต้านอนุมูลอิสระสูง", "Semi-Sweet"],
       "en": ["~11-12% ABV", "High Antioxidants", "Semi-Sweet"]
     }
+  },
+  {
+    "id": "apple_cider_10L",
+    "name": {
+      "th": "ฮาร์ดไซเดอร์แอปเปิ้ล (แอลกอฮอล์ ~4-5%) 10 ลิตร",
+      "en": "10L Hard Apple Cider (~4-5% ABV)"
+    },
+    "image": "images/ferment/apple_cider/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที + หมัก 2-4 สัปดาห์",
+      "en": "30 mins + 2-4 weeks fermentation"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["ซ่าสดชื่น", "กลิ่นแอปเปิ้ล", "เครื่องดื่มยอดนิยม"],
+      "en": ["Crisp & Refreshing", "Apple Aroma", "Crowd Favorite"]
+    }
+  },
+  {
+    "id": "ginger_beer_10L",
+    "name": {
+      "th": "จินเจอร์เบียร์หมักธรรมชาติ (ขิงซ่า) 10 ลิตร",
+      "en": "10L Naturally Fermented Ginger Beer"
+    },
+    "image": "images/ferment/ginger_beer/main_1.jpg",
+    "prepTime": {
+      "th": "30 นาที + หมักบ่ม 3-7 วัน",
+      "en": "30 mins + 3-7 days fermentation"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["เผ็ดร้อนสดชื่น", "โซดาธรรมชาติ", "ขับลม"],
+      "en": ["Spicy & Refreshing", "Natural Soda", "Digestive Aid"]
+    }
+  },
+  {
+    "id": "milk_kefir_10L",
+    "name": {
+      "th": "นมเปรี้ยวคีเฟอร์ (Milk Kefir) 10 ลิตร",
+      "en": "10L Milk Kefir (Probiotic Cultured Milk)"
+    },
+    "image": "images/ferment/milk_kefir/main_1.jpg",
+    "prepTime": {
+      "th": "15 นาที + หมัก 24 ชม.",
+      "en": "15 mins + 24 hrs fermentation"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["โปรไบโอติกสูงมาก", "บำรุงลำไส้", "ครีมมี่"],
+      "en": ["Ultra-High Probiotics", "Gut Health", "Creamy"]
+    }
+  },
+  {
+    "id": "makgeolli_10L",
+    "name": {
+      "th": "มักกอลลี (สุราข้าวเกาหลี) 10 ลิตร",
+      "en": "10L Makgeolli (Korean Rice Wine)"
+    },
+    "image": "images/ferment/makgeolli/main_1.jpg",
+    "prepTime": {
+      "th": "45 นาที + หมัก 5-7 วัน",
+      "en": "45 mins + 5-7 days fermentation"
+    },
+    "rating": "4.8",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~6-8%", "หอมหวานข้าว", "โปรไบโอติก"],
+      "en": ["~6-8% ABV", "Sweet Rice Aroma", "Probiotic"]
+    }
+  },
+  {
+    "id": "mead_10L",
+    "name": {
+      "th": "มีด (ไวน์น้ำผึ้ง) 10 ลิตร",
+      "en": "10L Mead (Honey Wine)"
+    },
+    "image": "images/ferment/mead/main_1.jpg",
+    "prepTime": {
+      "th": "20 นาที + หมัก 1-3 เดือน",
+      "en": "20 mins + 1-3 months fermentation"
+    },
+    "rating": "4.9",
+    "badges": {
+      "th": ["แอลกอฮอล์ ~10-14%", "น้ำผึ้งพรีเมียม", "ตำนานไวน์โบราณ"],
+      "en": ["~10-14% ABV", "Premium Honey", "Ancient Wine"]
+    }
   }
 ]

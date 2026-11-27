@@ -1,0 +1,401 @@
+{
+  "id": "apple_cider_10L",
+  "icon": "🍎",
+  "category": "ferment",
+  "machineCompatible": true,
+  "description": "ฮาร์ดไซเดอร์แอปเปิ้ล 10 ลิตร ซ่าสดชื่น หอมกลิ่นแอปเปิ้ลธรรมชาติ หมักจากน้ำแอปเปิ้ลคั้นสดและยีสต์ไซเดอร์ ให้แอลกอฮอล์ประมาณ 4-5% ดื่มเย็นๆ ชื่นใจ",
+  "total_time": 30,
+  "target_temp": 20,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_apple_cider_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "ฮาร์ดไซเดอร์แอปเปิ้ล 10 ลิตร",
+    "en": "Hard Apple Cider 10L"
+  },
+  "images": [
+    "images/ferment/apple_cider/main_1.jpg",
+    "images/ferment/apple_cider/main_2.jpg",
+    "images/ferment/apple_cider/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_apple_cider",
+  "prepTime": {
+    "th": "30 นาที (เครื่อง) + หมัก 2-4 สัปดาห์",
+    "en": "30 mins (Machine) + 2-4 weeks fermentation"
+  },
+  "cookTime": {
+    "th": "30 นาที (เตรียม) + 14-28 วัน (หมัก)",
+    "en": "30 mins (prep) + 14-28 days (ferment)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.9",
+  "intro": {
+    "th": "ฮาร์ดไซเดอร์แอปเปิ้ลสูตรคลาสสิก ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะเตรียมน้ำและละลายน้ำตาลพร้อมสารอาหารยีสต์ที่ 40°C จากนั้นลดอุณหภูมิลงเหลือ 20°C (อุณหภูมิที่เหมาะสมในการใส่ยีสต์) ผสมกับน้ำแอปเปิ้ลคั้นสดและยีสต์ไซเดอร์ จากนั้นโอนถ่ายสู่ถังหมักเพื่อกระบวนการหมัก 2-4 สัปดาห์ จนได้ไซเดอร์ซ่าสดชื่น แอลกอฮอล์ ~4-5%",
+    "en": "Classic Hard Apple Cider made easy with AllDrinks System: Machine prepares water and dissolves sugar with yeast nutrient at 40°C, then chills to 20°C (optimal yeast pitching temp), mixes with fresh apple juice and cider yeast, then transfers to a fermentation vessel for 2-4 weeks of fermentation, resulting in a crisp, refreshing ~4-5% ABV cider."
+  },
+  "benefits": {
+    "th": "ไซเดอร์มีโพลีฟีนอลจากแอปเปิ้ลซึ่งดีต่อสุขภาพหัวใจ การหมักยังสร้างโปรไบโอติกบางชนิด (หากไม่ได้พาสเจอร์ไรส์หลังหมัก) ช่วยในระบบย่อยอาหาร",
+    "en": "Cider contains polyphenols from apples which are good for heart health. Fermentation also creates some probiotics (if unpasteurized), aiding digestion."
+  },
+  "warnings": {
+    "th": "⚠️ มีแอลกอฮอล์ (~4-5%) ห้ามขับขี่ยานพาหนะหลังดื่ม ห้ามจำหน่ายหรือให้เด็กอายุต่ำกว่า 20 ปีบริโภค ต้องใช้อุปกรณ์ที่ผ่านการฆ่าเชื้ออย่างเคร่งครัดเพื่อป้องกันการปนเปื้อน",
+    "en": "⚠️ Contains alcohol (~4-5%). Do not drive after consumption. Do not sell or give to minors under 20. Strict sterilization of equipment is required to prevent contamination."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "4 g",
+    "sugar": "3 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 2,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำแอปเปิ้ลคั้นสด (ไม่ผสมสารกันเสีย)",
+        "en": "Freshly pressed apple juice (no preservatives)"
+      },
+      "amount": 8,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (เพื่อเพิ่มแอลกอฮอล์)",
+        "en": "Sugar (to boost ABV)"
+      },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "สารอาหารยีสต์ (Yeast Nutrient)",
+        "en": "Yeast nutrient"
+      },
+      "amount": 10,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ยีสต์สำหรับทำไซเดอร์ (เช่น SafCider หรือ EC-1118)",
+        "en": "Cider yeast (e.g., SafCider or EC-1118)"
+      },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 2,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 2,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "อุ่นน้ำที่ 40°C (สำหรับละลายน้ำตาล)",
+        "en": "Warm water to 40°C (for dissolving sugar)"
+      },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 40°C ซึ่งเป็นอุณหภูมิที่ปลอดภัยและเหมาะสมที่สุดในการละลายน้ำตาลและสารอาหารยีสต์",
+        "en": "The machine warms water to 40°C, the safest and optimal temperature for dissolving sugar and yeast nutrient."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 410,
+      "unit": "Gram",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลและสารอาหารยีสต์",
+        "en": "Add sugar and yeast nutrient"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลและสารอาหารยีสต์รวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of sugar and yeast nutrient, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 410,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 40,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลาย",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 40°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 40°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Chill",
+      "target_value": 20,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 20°C (อุณหภูมิใส่ยีสต์)",
+        "en": "Chill to 20°C (Yeast Pitching Temp)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 20°C (อุณหภูมิที่เหมาะสมที่สุดในการเติมยีสต์ไซเดอร์ เพื่อไม่ให้ยีสต์ตายจากความร้อน)",
+        "en": "Activate cooling system to chill to 20°C (the optimal temperature for adding cider yeast, preventing heat shock)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 6,
+      "function": "Add Ingredient",
+      "target_value": 8005,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำแอปเปิ้ลและยีสต์",
+        "en": "Add apple juice and yeast"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้เติมน้ำแอปเปิ้ล {apple_juice} และยีสต์ {yeast} ลงไป พร้อมเปิดระบบกวนเบาๆ",
+        "en": "System alerts to add {apple_juice} of apple juice and {yeast} of yeast, with gentle stirring."
+      },
+      "descVariables": {
+        "apple_juice": {
+          "amount": 8,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "yeast": {
+          "amount": 5,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 7,
+      "function": "Hold Temp",
+      "target_value": 20,
+      "unit": "°C",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้ยีสต์กระจายตัว (5 นาที)",
+        "en": "Mix to distribute yeast (5 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 20°C และกวนผสมเบาๆ 5 นาที เพื่อให้ยีสต์กระจายตัวอย่างสม่ำเสมอ",
+        "en": "Machine maintains 20°C and stirs gently for 5 mins to ensure yeast is evenly distributed."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 8,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนถ่ายสู่ถังหมัก (สิ้นสุดกระบวนการเครื่อง)",
+        "en": "Transfer to Fermentation Vessel (Machine process ends)"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำแอปเปิ้ลที่ผสมยีสต์ออกจากถัง กรุณาเตรียมถังหมักที่ผ่านการฆ่าเชื้อและติดตั้ง Airlock รองรับ",
+        "en": "System is transferring the yeast-mixed apple juice out of the tank. Please prepare a sterilized fermentation vessel with an Airlock."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมอุปกรณ์และฆ่าเชื้อ",
+        "en": "Prepare and sterilize equipment"
+      },
+      "desc": {
+        "th": "ทำความสะอาดและฆ่าเชื้อถังหมัก, Airlock, และอุปกรณ์ทั้งหมดอย่างเคร่งครัด เพื่อป้องกันการปนเปื้อนของเชื้อราหรือแบคทีเรียที่ไม่พึงประสงค์",
+        "en": "Thoroughly clean and sterilize the fermentation vessel, Airlock, and all equipment to prevent contamination from unwanted mold or bacteria."
+      },
+      "descVariables": {},
+      "image": "images/ferment/apple_cider/man_1.jpg",
+      "tips": {
+        "th": "💡 การฆ่าเชื้อคือขั้นตอนที่สำคัญที่สุดในการหมัก! ใช้สารฆ่าเชื้อสำหรับอาหาร (No-rinse sanitizer) จะสะดวกและปลอดภัยที่สุด",
+        "en": "💡 Sterilization is the most crucial step in fermentation! Using a no-rinse food-grade sanitizer is the most convenient and safest method."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมส่วนผสมด้วยเครื่อง",
+        "en": "Prepare mixture with machine"
+      },
+      "desc": {
+        "th": "ใช้เครื่อง AllDrinks System ตามขั้นตอน Machine Steps 1-7 เพื่อละลายน้ำตาลและผสมน้ำแอปเปิ้ล {apple_juice} กับยีสต์ {yeast} ที่อุณหภูมิ 20°C",
+        "en": "Use the AllDrinks System following Machine Steps 1-7 to dissolve sugar and mix {apple_juice} of apple juice with {yeast} of yeast at 20°C."
+      },
+      "descVariables": {
+        "apple_juice": {
+          "amount": 8,
+          "unit": "Liter",
+          "scalable": true
+        },
+        "yeast": {
+          "amount": 5,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/ferment/apple_cider/man_2.jpg",
+      "tips": {
+        "th": "💡 ตรวจสอบให้แน่ใจว่าน้ำแอปเปิ้ลที่ใช้ไม่มีสารกันเสีย (เช่น โซเดียมเบนโซเอต หรือ โพแทสเซียมซอร์เบต) เพราะจะฆ่ายีสต์และทำให้การหมักล้มเหลว",
+        "en": "💡 Ensure the apple juice has no preservatives (like sodium benzoate or potassium sorbate), as they will kill the yeast and cause fermentation to fail."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "หมักขั้นต้น (Primary Fermentation)",
+        "en": "Primary Fermentation"
+      },
+      "desc": {
+        "th": "โอนถ่ายส่วนผสมจากเครื่องลงในถังหมักที่เตรียมไว้ ปิดฝาและติดตั้ง Airlock ที่เติมน้ำสะอาด วางถังไว้ในที่มืดและเย็น (อุณหภูมิ 18-22°C) เป็นเวลา 7-14 วัน จนกว่าฟองอากาศใน Airlock จะหยุดหรือช้าลงมาก",
+        "en": "Transfer the mixture from the machine into the prepared fermentation vessel. Seal and install an Airlock filled with clean water. Store in a dark, cool place (18-22°C) for 7-14 days until bubbles in the Airlock stop or slow down significantly."
+      },
+      "descVariables": {},
+      "image": "images/ferment/apple_cider/man_3.jpg",
+      "tips": {
+        "th": "💡 ในช่วง 2-3 วันแรก การหมักจะรุนแรงมาก (ฟองเยอะ) อย่าปิดฝาถังแน่นสนิทโดยไม่มี Airlock เพราะแรงดันก๊าซอาจทำให้ถังระเบิดได้",
+        "en": "💡 During the first 2-3 days, fermentation will be vigorous (lots of bubbles). Never seal the vessel tightly without an Airlock, as gas pressure could cause it to explode."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "หมักขั้นที่สองและบรรจุขวด (Secondary & Bottling)",
+        "en": "Secondary Fermentation & Bottling"
+      },
+      "desc": {
+        "th": "เมื่อการหมักหลักเสร็จสิ้น (วัดค่าความถ่วงจำเพาะได้ ~1.000) ให้ดูดตะกอนก้นถังออก (Racking) แล้วบรรจุลงขวดที่ฆ่าเชื้อแล้ว หากต้องการแบบมีก๊าซ (ซ่า) ให้เติมน้ำตาล priming sugar เล็กน้อย (ประมาณ 6-8 กรัมต่อลิตร) ก่อนปิดฝา",
+        "en": "When primary fermentation is complete (specific gravity ~1.000), siphon off the sediment (Racking) and bottle into sterilized bottles. For carbonated cider, add a small amount of priming sugar (about 6-8g per liter) before capping."
+      },
+      "descVariables": {},
+      "image": "images/ferment/apple_cider/man_4.jpg",
+      "tips": {
+        "th": "💡 การดูดตะกอนออกจะช่วยให้ไซเดอร์ใสขึ้นและรสชาติสะอาดขึ้น ไม่ควรบรรจุขวดขณะที่การหมักยังไม่เสร็จสนิท เพราะอาจทำให้ขวดระเบิดจากแรงดันก๊าซได้",
+        "en": "💡 Racking removes sediment, making the cider clearer and taste cleaner. Never bottle before fermentation is completely finished, or bottles may explode from gas pressure."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "บ่มและเสิร์ฟ",
+        "en": "Condition and Serve"
+      },
+      "desc": {
+        "th": "เก็บขวดไซเดอร์ไว้ในอุณหภูมิห้องต่ออีก 1-2 สัปดาห์เพื่อให้คาร์บอนไดออกไซด์เกิดขึ้น (หากใส่น้ำตาลหมักต่อ) จากนั้นนำไปแช่เย็นอย่างน้อย 24 ชั่วโมงก่อนเปิดดื่ม เพื่อรสชาติที่ซ่าสดชื่นที่สุด",
+        "en": "Store the bottles at room temperature for another 1-2 weeks to build up carbonation (if priming sugar was added). Then refrigerate for at least 24 hours before opening for the crispest, most refreshing taste."
+      },
+      "descVariables": {},
+      "image": "images/ferment/apple_cider/man_5.jpg",
+      "tips": {
+        "th": "💡 ไซเดอร์ที่หมักสมบูรณ์จะมีแอลกอฮอล์ประมาณ 4-5% และมีรสแห้ง (Dry) หากต้องการรสหวาน สามารถเติม Non-fermentable sweetener (เช่น Xylitol หรือ Erythritol) ก่อนเสิร์ฟได้",
+        "en": "💡 Fully fermented cider will have ~4-5% ABV and a dry taste. If you prefer it sweet, you can add a non-fermentable sweetener (like Xylitol or Erythritol) just before serving."
+      }
+    }
+  ]
+}
