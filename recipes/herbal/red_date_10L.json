@@ -1,0 +1,452 @@
+{
+  "id": "red_date_10L",
+  "icon": "❤️",
+  "category": "herbal",
+  "machineCompatible": true,
+  "description": "น้ำพุทราจีน 10 ลิตร หวานละมุนจากธรรมชาติ บำรุงเลือดและกำลัง สกัดจากพุทราจีนแห้งคุณภาพดีและเก๋ากี้ ต้มเคี่ยวอย่างพิถีพิถัน ให้รสหอมหวาน ดื่มอุ่นๆ ช่วยฟื้นฟูร่างกาย",
+  "total_time": 45,
+  "target_temp": 60,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_red_date_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "น้ำพุทราจีน (บำรุงเลือด/กำลัง)",
+    "en": "Red Date (Jujube) Tea (Blood/Energy Tonic)"
+  },
+  "images": [
+    "images/herbal/red_date/main_1.jpg",
+    "images/herbal/red_date/main_2.jpg",
+    "images/herbal/red_date/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_red_date",
+  "prepTime": {
+    "th": "10 นาที",
+    "en": "10 mins"
+  },
+  "cookTime": {
+    "th": "35 นาที",
+    "en": "35 mins"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "สัมผัสความหวานละมุนและสรรพคุณบำรุงร่างกายของ น้ำพุทราจีนสูตรดั้งเดิม ปริมาณ 10 ลิตร สูตรนี้ใช้พุทราจีนแห้งหั่นแว่น 300 กรัม และเก๋ากี้ 50 กรัม ต้มสกัดที่ 95°C นาน 20 นาที เพื่อดึงความหวานธรรมชาติและสารอาหารออกมาอย่างเต็มที่ ผสมน้ำตาลกรวด 400 กรัม และเกลือเล็กน้อย ให้รสหวานกลมกล่อม ดื่มอุ่นๆ ช่วยฟื้นฟูร่างกายและบำรุงเลือด",
+    "en": "Experience the natural sweetness and nourishing benefits of our Traditional Red Date Tea in a 10-liter batch. This recipe uses 300g of sliced dried red dates and 50g of goji berries, extracted at 95°C for 20 minutes to maximize natural sweetness and nutrients. Blended with 400g of rock sugar and a pinch of salt for a smooth, balanced taste. Perfect served warm to rejuvenate the body and nourish the blood."
+  },
+  "benefits": {
+    "th": "พุทราจีนอุดมไปด้วยวิตามินซีและธาตุเหล็ก ช่วยบำรุงเลือดและเสริมสร้างภูมิคุ้มกัน เก๋ากี้ช่วยบำรุงสายตาและตับ การดื่มอุ่นๆ ช่วยปรับสมดุลร่างกายและลดความอ่อนล้า",
+    "en": "Red dates are rich in Vitamin C and iron, helping to nourish the blood and boost immunity. Goji berries support eye and liver health. Drinking warm helps balance the body and reduce fatigue."
+  },
+  "warnings": {
+    "th": "⚠️ ผู้ที่มีภาวะน้ำตาลในเลือดสูงหรือโรคเบาหวานควรลดปริมาณน้ำตาลลง และผู้ที่มีอาการท้องอืดง่ายควรดื่มในปริมาณที่เหมาะสม",
+    "en": "⚠️ People with high blood sugar or diabetes should reduce the sugar amount. Those prone to bloating should consume in moderation."
+  },
+  "nutrition": {
+    "calories": "50 kcal",
+    "carbs": "12 g",
+    "sugar": "10 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "พุทราจีนแห้ง (หั่นแว่นหรือผ่าซีก)",
+        "en": "Dried red dates (sliced or halved)"
+      },
+      "amount": 300,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เก๋ากี้ (Goji Berries)",
+        "en": "Goji berries"
+      },
+      "amount": 50,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลกรวดหรือน้ำตาลทราย",
+        "en": "Rock sugar or white sugar"
+      },
+      "amount": 400,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "เกลือป่น (เล็กน้อยเพื่อตัดรส)",
+        "en": "Salt (a pinch to balance flavor)"
+      },
+      "amount": 2,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 10,
+      "duration_unit": "minute",
+      "timeout": 15,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถัง ระบบจะทำการจ่ายน้ำอัตโนมัติ",
+        "en": "Start by adding {water} of clean water into the tank automatically."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 50,
+      "duration_unit": "minute",
+      "timeout": 100,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำพร้อมระบบวน",
+        "en": "Heat Water with Circulation"
+      },
+      "desc": {
+        "th": "เครื่องจะเริ่มต้นต้มน้ำพร้อมกับเปิดวาล์วน้ำวน เพื่อให้อุณหภูมิทั่วถึงกันอย่างรวดเร็วจนถึง 95°C",
+        "en": "The machine will start heating while activating circulation for rapid, precise heating to 95°C."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Stir,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 350,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่พุทราจีนและเก๋ากี้ในตะกร้า",
+        "en": "Add red dates and goji berries in basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่พุทราจีนแห้งและเก๋ากี้รวม {ingredient} (ในตะกร้าตาถี่) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of dried red dates and goji berries (in a fine mesh basket) into the hot water."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 350,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 20,
+      "duration_unit": "minute",
+      "timeout": 30,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดความหวานและสารอาหาร (20 นาที)",
+        "en": "Extract Natural Sweetness and Nutrients (20 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 20 นาที พร้อมระบบวนน้ำและกวน เพื่อดึงความหวานธรรมชาติและสารอาหารจากพุทราจีนออกมาอย่างเต็มที่",
+        "en": "Machine precisely maintains 95°C for 20 mins with circulation and stirring to fully extract natural sweetness and nutrients from red dates."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Pump,Stir,Valve_CIRC"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 402,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวดและเกลือ",
+        "en": "Add rock sugar and salt"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลกรวดและเกลือรวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of rock sugar and salt, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 402,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลายน้ำตาล",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าพุทราจีนออก",
+        "en": "Remove red date basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าพุทราจีนและเก๋ากี้ออก แล้วกด OK (การแช่นานเกินไปอาจทำให้รสเฝื่อนจากเมล็ดได้)",
+        "en": "Time is up. Please remove the red date and goji berry basket and press OK (over-steeping may cause astringency from seeds)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 60,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 60°C (พร้อมเสิร์ฟอุ่น)",
+        "en": "Chill to 60°C (Ready for Warm Serving)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 60°C ซึ่งเป็นอุณหภูมิที่ดื่มได้ทันทีโดยไม่ลวกลิ้น และรักษาความหอมของพุทราจีน",
+        "en": "Activate cooling system to chill to 60°C, the perfect temperature for immediate warm drinking without scalding, preserving the red date aroma."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "น้ำพุทราจีนพร้อมเสิร์ฟ",
+        "en": "Red Date Tea ready to serve"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำพุทราจีนออกจากถัง กรุณาเตรียมภาชนะรองรับ",
+        "en": "System is transferring Red Date Tea out of the tank. Please prepare a container."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำและล้างวัตถุดิบ",
+        "en": "Prepare water and wash ingredients"
+      },
+      "desc": {
+        "th": "เตรียมน้ำสะอาด {water} ใส่หม้อต้มขนาดใหญ่ เปิดไฟกลางค่อนข้างแรง รอจนน้ำเริ่มเดือด ระหว่างนี้ให้ล้างพุทราจีนแห้งและเก๋ากี้ผ่านกระชอน 1 รอบเพื่อล้างฝุ่น",
+        "en": "Prepare {water} liters of clean water in a large pot. Heat on medium-high until it starts to boil. Meanwhile, rinse dried red dates and goji berries through a sieve once to remove dust."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/red_date/man_1.jpg",
+      "tips": {
+        "th": "💡 ควรเลือกใช้พุทราจีนแห้งแบบ 'หั่นแว่น' หรือ 'ผ่าซีก' เพราะจะช่วยให้น้ำสกัดความหวานและสารอาหารออกมาได้ดีและเร็วกว่าแบบทั้งลูก",
+        "en": "💡 Prefer 'sliced' or 'halved' dried red dates, as they release natural sweetness and nutrients much faster and more effectively than whole dates."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "ต้มน้ำให้เดือดจัด",
+        "en": "Boil the water"
+      },
+      "desc": {
+        "th": "เมื่อน้ำเดือดจัด (ประมาณ 100°C) ให้ลดไฟลงเล็กน้อยเพื่อให้น้ำเดือดปุดๆ อย่างสม่ำเสมอ ไม่ให้ล้นหม้อ",
+        "en": "When water reaches a rolling boil (around 100°C), reduce heat slightly to maintain a steady simmer without overflowing."
+      },
+      "descVariables": {},
+      "image": "images/herbal/red_date/man_2.jpg",
+      "tips": {
+        "th": "💡 สังเกตฟองน้ำเดือด: ถ้าฟองใหญ่และเดือดแรง แสดงว่าอุณหภูมิพร้อมแล้ว",
+        "en": "💡 Watch the bubbles: large, vigorous bubbles indicate the water is ready."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": true,
+      "title": {
+        "th": "ใส่พุทราจีนและเก๋ากี้ (สกัด 20 นาที)",
+        "en": "Add red dates and goji berries (Extract 20 mins)"
+      },
+      "desc": {
+        "th": "นำพุทราจีน {red_date} และเก๋ากี้ {goji} ที่ใส่ในถุงกรองตาถี่เรียบร้อยแล้ว หย่อนลงไปแช่ในน้ำร้อน ปิดฝาหม้อ ลดไฟให้อ่อนที่สุด แช่ทิ้งไว้ Exactly 20 นาที น้ำจะเปลี่ยนเป็นสีน้ำตาลทองและหอมหวาน",
+        "en": "Place {red_date} of red dates and {goji} of goji berries (in a fine mesh filter bag) into the hot water. Cover the pot, reduce heat to the lowest setting, and steep for exactly 20 minutes. The water will turn golden brown and aromatic."
+      },
+      "descVariables": {
+        "red_date": {
+          "amount": 300,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "goji": {
+          "amount": 50,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/red_date/man_3.jpg",
+      "tips": {
+        "th": "💡 การปิดฝาช่วยกักเก็บความหอมและป้องกันไม่ให้น้ำระเหยมากเกินไป during the long extraction process.",
+        "en": "💡 Covering the pot traps the aroma and prevents excessive water evaporation during the long extraction process."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลกรวดและเกลือ",
+        "en": "Add rock sugar and salt"
+      },
+      "desc": {
+        "th": "ใส่น้ำตาลกรวด {sugar} และเกลือ {salt} ลงไปในน้ำร้อน คนอย่างต่อเนื่องด้วยทัพพีด้ามยาวจนละลายหมด",
+        "en": "Add {sugar} of rock sugar and {salt} of salt into the hot water. Stir continuously with a long-handled ladle until completely dissolved."
+      },
+      "descVariables": {
+        "sugar": {
+          "amount": 400,
+          "unit": "Gram",
+          "scalable": true
+        },
+        "salt": {
+          "amount": 2,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "image": "images/herbal/red_date/man_4.jpg",
+      "tips": {
+        "th": "💡 น้ำตาลกรวดจะให้รสหวานที่ 'นุ่มนวล' และกลมกล่อมกว่าน้ำตาลทรายขาวธรรมดา ซึ่งเข้ากันได้ดีกับรสชาติดั้งเดิมของพุทราจีน",
+        "en": "💡 Rock sugar provides a 'smoother' and more mellow sweetness than regular white sugar, pairing perfectly with the traditional taste of red dates."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": true,
+      "title": {
+        "th": "ยกถุงกรองออก",
+        "en": "Remove filter bag"
+      },
+      "desc": {
+        "th": "ครบ 20 นาที ให้ยกถุงกรองพุทราจีนและเก๋ากี้ออกทันที บีบเอาน้ำที่เหลือออกเล็กน้อย แล้วทิ้งกากไป",
+        "en": "After 20 mins, remove the red date and goji berry filter bag immediately. Squeeze out remaining liquid gently, then discard the residue."
+      },
+      "descVariables": {},
+      "image": "images/herbal/red_date/man_5.jpg",
+      "tips": {
+        "th": "💡 ควรแยกกากออกให้หมดก่อนบรรจุขวด เพื่อป้องกันไม่ให้เศษเมล็ดหรือเปลือกไปอุดตันวาล์วของเครื่อง หรือทำให้เนื้อสัมผัสไม่ดีตอนดื่ม",
+        "en": "💡 Remove all residue before bottling to prevent seeds or skins from clogging machine valves or affecting the drinking texture."
+      }
+    },
+    {
+      "step": 6,
+      "scalable": false,
+      "title": {
+        "th": "พักให้เย็นหรือเสิร์ฟอุ่น",
+        "en": "Cool down or serve warm"
+      },
+      "desc": {
+        "th": "คนให้เข้ากันอีกครั้ง น้ำพุทราจีนสูตรนี้เหมาะกับการดื่มอุ่นๆ (ประมาณ 60°C) เพื่อการบำรุงร่างกายสูงสุด สามารถพักไว้ที่อุณหภูมิห้องหรือแช่ตู้เย็นหากต้องการดื่มเย็น",
+        "en": "Stir once more. This red date tea is best served warm (around 60°C) for maximum nourishing benefits. Let it cool to room temperature or refrigerate if you prefer it cold."
+      },
+      "descVariables": {},
+      "image": "images/herbal/red_date/man_6.jpg",
+      "tips": {
+        "th": "💡 สามารถเก็บในตู้เย็นได้นาน 5-7 วัน เขย่าก่อนเสิร์ฟหากมีการตกตะกอนของเนื้อพุทราจีนเล็กน้อย สามารถอุ่นในไมโครเวฟหรือหม้อต้มก่อนดื่มได้",
+        "en": "💡 Can be stored in the fridge for 5-7 days. Shake well before serving if slight red date sedimentation occurs. Can be reheated in a microwave or pot before drinking."
+      }
+    }
+  ]
+}
