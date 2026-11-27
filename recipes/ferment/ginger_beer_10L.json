@@ -1,0 +1,463 @@
+{
+  "id": "ginger_beer_10L",
+  "icon": "🫚",
+  "category": "ferment",
+  "machineCompatible": true,
+  "description": "จินเจอร์เบียร์หมักธรรมชาติ 10 ลิตร รสชาติเผ็ดร้อนซ่าสดชื่น หอมกลิ่นขิงแท้ หมักด้วยยีสต์คุณภาพดี ให้ฟองก๊าซธรรมชาติ ช่วยขับลมและกระตุ้นการย่อยอาหาร",
+  "total_time": 30,
+  "target_temp": 20,
+  "baseVolume": 10,
+  "minVolume": 1,
+  "maxVolume": 20,
+  "machineFile": "FML_ginger_beer_10L.json",
+  "volumeUnit": {
+    "th": "ลิตร",
+    "en": "Liter"
+  },
+  "name": {
+    "th": "จินเจอร์เบียร์หมักธรรมชาติ 10 ลิตร",
+    "en": "Naturally Fermented Ginger Beer 10L"
+  },
+  "images": [
+    "images/ferment/ginger_beer/main_1.jpg",
+    "images/ferment/ginger_beer/main_2.jpg",
+    "images/ferment/ginger_beer/main_3.jpg"
+  ],
+  "videoUrl": "https://www.youtube.com/embed/placeholder_ginger_beer",
+  "prepTime": {
+    "th": "30 นาที (เครื่อง) + หมัก 3-7 วัน",
+    "en": "30 mins (Machine) + 3-7 days fermentation"
+  },
+  "cookTime": {
+    "th": "30 นาที (เตรียม) + 3-7 วัน (หมัก)",
+    "en": "30 mins (prep) + 3-7 days (ferment)"
+  },
+  "servings": {
+    "th": "10 ลิตร",
+    "en": "10 Liters"
+  },
+  "rating": "4.8",
+  "intro": {
+    "th": "จินเจอร์เบียร์สูตรดั้งเดิม ทำง่ายด้วยเครื่อง AllDrinks System: เครื่องจะต้มน้ำและสกัดความเผ็ดร้อนจากขิงสดที่ 95°C เป็นเวลา 15 นาที จากนั้นลดอุณหภูมิลงเหลือ 20°C (อุณหภูมิที่ปลอดภัยต่อยีสต์) ผสมน้ำมะนาวและยีสต์ จากนั้นโอนถ่ายสู่ถังหมักเพื่อสร้างฟองก๊าซธรรมชาติและรสชาติที่ซับซ้อน",
+    "en": "Traditional ginger beer made easy with AllDrinks System: Machine extracts the spicy kick from fresh ginger at 95°C for 15 mins, then chills to 20°C (yeast-safe temperature), mixes with lemon juice and yeast, and transfers to a fermentation vessel to build natural carbonation and complex flavors."
+  },
+  "benefits": {
+    "th": "ขิงมีสารจินเจอรอล (Gingerol) ช่วยต้านการอักเสบ ขับลม และบรรเทาอาการคลื่นไส้ การหมักธรรมชาติยังสร้างโปรไบโอติกและเอนไซม์ที่ช่วยในระบบย่อยอาหาร",
+    "en": "Ginger contains Gingerol, which has anti-inflammatory properties, aids digestion, and relieves nausea. Natural fermentation also creates probiotics and enzymes that support gut health."
+  },
+  "warnings": {
+    "th": "⚠️ มีแอลกอฮอล์ปริมาณน้อยมาก (ต่ำกว่า 0.5% หากควบคุมเวลาหมัก) อาจมีรสเผ็ดร้อน ผู้ที่เป็นโรคกระเพาะอาหารควรดื่มในปริมาณน้อย ห้ามปิดฝาถังหมักแน่นสนิทโดยไม่มี Airlock เพราะแรงดันก๊าซอาจทำให้ระเบิดได้",
+    "en": "⚠️ Contains trace alcohol (<0.5% if controlled). Can be spicy. Those with stomach ulcers should consume in moderation. NEVER seal the fermentation vessel tightly without an Airlock, as gas pressure could cause it to explode."
+  },
+  "nutrition": {
+    "calories": "30 kcal",
+    "carbs": "7 g",
+    "sugar": "6 g",
+    "protein": "0 g"
+  },
+  "ingredients": [
+    {
+      "name": {
+        "th": "น้ำสะอาด",
+        "en": "Clean water"
+      },
+      "amount": 10,
+      "unit": "Liter",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ขิงสด (ขูดหรือหั่นแว่นบาง)",
+        "en": "Fresh ginger (grated or thinly sliced)"
+      },
+      "amount": 500,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำตาลทราย (อาหารสำหรับยีสต์และความหวาน)",
+        "en": "Sugar (Yeast food and sweetness)"
+      },
+      "amount": 800,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "น้ำมะนาวสด",
+        "en": "Fresh lemon juice"
+      },
+      "amount": 100,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "ยีสต์สำหรับหมัก (เช่น SafAle US-05 หรือยีสต์จินเจอร์เบียร์)",
+        "en": "Brewing yeast (e.g., SafAle US-05 or Ginger Beer yeast)"
+      },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    },
+    {
+      "name": {
+        "th": "สารอาหารยีสต์ (Yeast Nutrient)",
+        "en": "Yeast nutrient"
+      },
+      "amount": 5,
+      "unit": "Gram",
+      "scalable": true
+    }
+  ],
+  "machineSteps": [
+    {
+      "step": 1,
+      "function": "Fill Water",
+      "target_value": 10,
+      "unit": "Liter",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เตรียมน้ำบริสุทธิ์",
+        "en": "Prepare Pure Water"
+      },
+      "desc": {
+        "th": "เริ่มด้วยการเติมน้ำสะอาด {water} ลงในถังที่ผ่านการฆ่าเชื้อแล้ว",
+        "en": "Start by adding {water} of clean water into the sterilized tank."
+      },
+      "descVariables": {
+        "water": {
+          "amount": 10,
+          "unit": "Liter",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Valve_IN"
+    },
+    {
+      "step": 2,
+      "function": "Heat Water",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ต้มน้ำให้ร้อน 95°C",
+        "en": "Heat Water to 95°C"
+      },
+      "desc": {
+        "th": "เครื่องจะอุ่นน้ำที่อุณหภูมิ 95°C ซึ่งเป็นอุณหภูมิที่เหมาะสมที่สุดในการสกัดสารจินเจอรอลจากขิง",
+        "en": "The machine heats water to 95°C, the optimal temperature for extracting Gingerol from fresh ginger."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater,Valve_CIRC,Pump"
+    },
+    {
+      "step": 3,
+      "function": "Add Ingredient",
+      "target_value": 805,
+      "unit": "Gram",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำตาลและสารอาหารยีสต์",
+        "en": "Add sugar and yeast nutrient"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่น้ำตาลและสารอาหารยีสต์รวม {ingredient} ลงไป พร้อมเปิดระบบกวน",
+        "en": "System alerts to add {ingredient} of sugar and yeast nutrient, while activating the stirrer."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 805,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Heater (Hold),Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 4,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คงอุณหภูมิเพื่อละลาย",
+        "en": "Maintain Temp for Dissolution"
+      },
+      "desc": {
+        "th": "เครื่องจะรักษาอุณหภูมิไว้ที่ 95°C ต่อเนื่องเป็นเวลา 3 นาที",
+        "en": "The machine will maintain 95°C for 3 minutes to ensure complete dissolution."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 5,
+      "function": "Add Ingredient",
+      "target_value": 500,
+      "unit": "Gram",
+      "duration": 5,
+      "duration_unit": "minute",
+      "timeout": 10,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "ใส่ขิงสดในตะกร้า",
+        "en": "Add fresh ginger in basket"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้ใส่ขิงสด {ingredient} (ในตะกร้าตาถี่) ลงไปแช่ในน้ำร้อน",
+        "en": "System alerts to add {ingredient} of fresh ginger (in a fine mesh basket) into the hot water."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 500,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Heater (Hold),Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 6,
+      "function": "Hold Temp",
+      "target_value": 95,
+      "unit": "°C",
+      "duration": 15,
+      "duration_unit": "minute",
+      "timeout": 20,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "สกัดความเผ็ดร้อนและกลิ่นหอม (15 นาที)",
+        "en": "Extract Spiciness and Aroma (15 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 95°C อย่างแม่นยำเป็นเวลา 15 นาที พร้อมระบบวนน้ำและกวน เพื่อดึงรสเผ็ดร้อนจากขิงออกมาอย่างเต็มที่",
+        "en": "Machine precisely maintains 95°C for 15 mins with circulation and stirring to fully extract the spicy kick from ginger."
+      },
+      "descVariables": {},
+      "outputs_csv": "Heater (Hold),Pump,Stir,Valve_CIRC"
+    },
+    {
+      "step": 7,
+      "function": "User Alert",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ยกตะกร้าขิงออก",
+        "en": "Remove ginger basket"
+      },
+      "desc": {
+        "th": "ครบเวลาแล้ว กรุณายกตะกร้าขิงออก แล้วกด OK",
+        "en": "Time is up. Please remove the ginger basket and press OK."
+      },
+      "descVariables": {},
+      "outputs_csv": "Buzzer"
+    },
+    {
+      "step": 8,
+      "function": "Chill",
+      "target_value": 20,
+      "unit": "°C",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "ลดอุณหภูมิเหลือ 20°C (อุณหภูมิใส่ยีสต์)",
+        "en": "Chill to 20°C (Yeast Pitching Temp)"
+      },
+      "desc": {
+        "th": "เปิดระบบทำความเย็นเพื่อลดอุณหภูมิลงเหลือ 20°C (อุณหภูมิที่ปลอดภัยสำหรับยีสต์ ไม่ทำให้ยีสต์ตายจากความร้อน)",
+        "en": "Activate cooling system to chill to 20°C (a safe temperature for yeast, preventing heat shock)."
+      },
+      "descVariables": {},
+      "outputs_csv": "Chiller,Valve_CIRC,Pump"
+    },
+    {
+      "step": 9,
+      "function": "Add Ingredient",
+      "target_value": 105,
+      "unit": "Gram",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": true,
+      "title": {
+        "th": "เติมน้ำมะนาวและยีสต์",
+        "en": "Add lemon juice and yeast"
+      },
+      "desc": {
+        "th": "ระบบจะแจ้งเตือนให้เติมน้ำมะนาวและยีสต์รวม {ingredient} ลงไป พร้อมเปิดระบบกวนเบาๆ",
+        "en": "System alerts to add {ingredient} of lemon juice and yeast, with gentle stirring."
+      },
+      "descVariables": {
+        "ingredient": {
+          "amount": 105,
+          "unit": "Gram",
+          "scalable": true
+        }
+      },
+      "outputs_csv": "Pump,Valve_CIRC,Stir,Buzzer"
+    },
+    {
+      "step": 10,
+      "function": "Hold Temp",
+      "target_value": 20,
+      "unit": "°C",
+      "duration": 3,
+      "duration_unit": "minute",
+      "timeout": 5,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "คนผสมให้ยีสต์กระจายตัว (3 นาที)",
+        "en": "Mix to distribute yeast (3 mins)"
+      },
+      "desc": {
+        "th": "เครื่องจะคงอุณหภูมิที่ 20°C และกวนผสมเบาๆ 3 นาที เพื่อให้ยีสต์กระจายตัวอย่างสม่ำเสมอ",
+        "en": "Machine maintains 20°C and stirs gently for 3 mins to ensure yeast is evenly distributed."
+      },
+      "descVariables": {},
+      "outputs_csv": "Valve_CIRC,Pump,Stir"
+    },
+    {
+      "step": 11,
+      "function": "Transfer",
+      "target_value": 0,
+      "unit": "-",
+      "duration": 0,
+      "duration_unit": "minute",
+      "timeout": 0,
+      "timeout_unit": "minute",
+      "scalable": false,
+      "title": {
+        "th": "โอนถ่ายสู่ถังหมัก (สิ้นสุดกระบวนการเครื่อง)",
+        "en": "Transfer to Fermentation Vessel (Machine process ends)"
+      },
+      "desc": {
+        "th": "ระบบกำลังโอนถ่ายน้ำขิงที่ผสมยีสต์ออกจากถัง กรุณาเตรียมถังหมักที่ผ่านการฆ่าเชื้อและติดตั้ง Airlock รองรับ",
+        "en": "System is transferring the yeast-mixed ginger liquid out of the tank. Please prepare a sterilized fermentation vessel with an Airlock."
+      },
+      "descVariables": {},
+      "outputs_csv": "Transfer_Pump,Valve_OUT"
+    }
+  ],
+  "manualSteps": [
+    {
+      "step": 1,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมอุปกรณ์และฆ่าเชื้อ",
+        "en": "Prepare and sterilize equipment"
+      },
+      "desc": {
+        "th": "ทำความสะอาดและฆ่าเชื้อถังหมัก, Airlock, และอุปกรณ์ทั้งหมดอย่างเคร่งครัด เพื่อป้องกันการปนเปื้อนของเชื้อราหรือแบคทีเรียที่ไม่พึงประสงค์",
+        "en": "Thoroughly clean and sterilize the fermentation vessel, Airlock, and all equipment to prevent contamination from unwanted mold or bacteria."
+      },
+      "descVariables": {},
+      "image": "images/ferment/ginger_beer/man_1.jpg",
+      "tips": {
+        "th": "💡 การฆ่าเชื้อคือขั้นตอนที่สำคัญที่สุดในการหมัก! ใช้สารฆ่าเชื้อสำหรับอาหาร (No-rinse sanitizer) จะสะดวกและปลอดภัยที่สุด",
+        "en": "💡 Sterilization is the most crucial step in fermentation! Using a no-rinse food-grade sanitizer is the most convenient and safest method."
+      }
+    },
+    {
+      "step": 2,
+      "scalable": true,
+      "title": {
+        "th": "เตรียมส่วนผสมด้วยเครื่อง",
+        "en": "Prepare mixture with machine"
+      },
+      "desc": {
+        "th": "ใช้เครื่อง AllDrinks System ตามขั้นตอน Machine Steps 1-10 เพื่อสกัดขิง ผสมน้ำตาล และเติมยีสต์ที่อุณหภูมิ 20°C",
+        "en": "Use the AllDrinks System following Machine Steps 1-10 to extract ginger, mix sugar, and add yeast at 20°C."
+      },
+      "descVariables": {},
+      "image": "images/ferment/ginger_beer/man_2.jpg",
+      "tips": {
+        "th": "💡 ยิ่งขิงสดมีปริมาณมากและถูกขูด/หั่นบาง ยิ่งให้รส 'เผ็ดร้อน' (Ginger bite) ที่ชัดเจนขึ้น",
+        "en": "💡 The more fresh ginger used, and the finer it is grated/sliced, the stronger the 'ginger bite' will be."
+      }
+    },
+    {
+      "step": 3,
+      "scalable": false,
+      "title": {
+        "th": "หมักขั้นต้น (Primary Fermentation)",
+        "en": "Primary Fermentation"
+      },
+      "desc": {
+        "th": "โอนถ่ายส่วนผสมจากเครื่องลงในถังหมักที่เตรียมไว้ ปิดฝาและติดตั้ง Airlock ที่เติมน้ำสะอาด วางถังไว้ในที่มืดและเย็น (อุณหภูมิ 18-22°C) เป็นเวลา 3-5 วัน จนกว่าฟองอากาศใน Airlock จะเริ่มช้าลง",
+        "en": "Transfer the mixture from the machine into the prepared fermentation vessel. Seal and install an Airlock filled with clean water. Store in a dark, cool place (18-22°C) for 3-5 days until bubbles in the Airlock slow down."
+      },
+      "descVariables": {},
+      "image": "images/ferment/ginger_beer/man_3.jpg",
+      "tips": {
+        "th": "💡 ในช่วง 24-48 ชั่วโมงแรก การหมักจะรุนแรงมาก (ฟองเยอะ) ห้ามปิดฝาถังแน่นสนิทโดยไม่มี Airlock เด็ดขาด เพราะแรงดันก๊าซอาจทำให้ถังระเบิดได้",
+        "en": "💡 During the first 24-48 hours, fermentation will be vigorous. NEVER seal the vessel tightly without an Airlock, as gas pressure could cause it to explode."
+      }
+    },
+    {
+      "step": 4,
+      "scalable": false,
+      "title": {
+        "th": "บรรจุขวดและสร้างก๊าซ (Bottling & Carbonation)",
+        "en": "Bottling & Carbonation"
+      },
+      "desc": {
+        "th": "เมื่อการหมักหลักเสร็จสิ้น ให้ดูดตะกอนก้นถังออก (Racking) แล้วบรรจุลงขวดพลาสติกหรือขวดแก้วที่ฆ่าเชื้อแล้ว (แนะนำขวดพลาสติกเพื่อความปลอดภัย) ปิดฝาให้แน่น",
+        "en": "When primary fermentation is complete, siphon off the sediment (Racking) and bottle into sterilized plastic or glass bottles (plastic is recommended for safety). Cap tightly."
+      },
+      "descVariables": {},
+      "image": "images/ferment/ginger_beer/man_4.jpg",
+      "tips": {
+        "th": "💡 หากต้องการความซ่าเพิ่มขึ้น สามารถเติมน้ำตาลทรายขาวประมาณ 5-8 กรัมต่อลิตร ก่อนบรรจุขวด เพื่อเป็นอาหารให้ยีสต์สร้าง CO2 ต่อในขวด",
+        "en": "💡 For extra fizz, you can add about 5-8g of sugar per liter before bottling to feed the yeast for in-bottle CO2 production."
+      }
+    },
+    {
+      "step": 5,
+      "scalable": false,
+      "title": {
+        "th": "บ่มและเสิร์ฟ",
+        "en": "Condition and Serve"
+      },
+      "desc": {
+        "th": "เก็บขวดไว้ในอุณหภูมิห้องต่ออีก 1-2 วันเพื่อให้ก๊าซสะสม (ตรวจสอบความแข็งของขวดพลาสติกเป็นระยะ) จากนั้นนำไปแช่เย็นอย่างน้อย 24 ชั่วโมงเพื่อหยุดการหมักและเสิร์ฟแบบเย็นซ่า",
+        "en": "Store bottles at room temperature for another 1-2 days to build carbonation (check plastic bottle firmness periodically). Then refrigerate for at least 24 hours to halt fermentation and serve ice-cold."
+      },
+      "descVariables": {},
+      "image": "images/ferment/ginger_beer/man_5.jpg",
+      "tips": {
+        "th": "💡 การแช่เย็นเป็นสิ่งจำเป็นก่อนเปิดขวด เพื่อลดแรงดันก๊าซและป้องกันการพุ่งกระจาย (Gusher) เมื่อเปิดฝา",
+        "en": "💡 Refrigeration is mandatory before opening to reduce gas pressure and prevent gushing when uncapped."
+      }
+    }
+  ]
+}
